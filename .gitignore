@@ -4,6 +4,9 @@ data/*.duckdb
 out/replay/
 out/robust/
 .env
+.venv/
+.local/
+web/node_modules/
 .out_backfill/
 .out_old_history/
 out/rebuilt/

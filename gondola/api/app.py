@@ -17,7 +17,7 @@ from .. import NP
 from ..agents.ask import ask as ask_fn
 from ..metrics import ROOT, Store
 from ..tools import analyst, demand, sentinel
-from . import guard_live, v3
+from . import guard_live, v3, rush
 from .runs import RUNS, new_run, stream
 
 VERSION = "3.0.0"
@@ -30,6 +30,7 @@ CLOSE_LOCK = threading.Lock()
 app = FastAPI(title="Gondola", version=VERSION)
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 app.include_router(v3.router)  # /api/live/stream, /api/metrics/intraday|items|range, /api/day/{date}
+app.include_router(rush.router)
 
 
 def out_dir() -> Path:

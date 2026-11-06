@@ -1,5 +1,11 @@
 # Gondola
 
+**Working hackathon demo:** [Rush Control](http://127.0.0.1:8000/rush) connects kitchen reservations, capacity-aware offers and real Gemini interventions/policy experiments. [Demo guide, measurements and production path](docs/development/RUSH_DEMO.md) · [recording](docs/demo/rush-demo.webm) · [local setup](docs/development/LOCAL_SETUP.md). Restaurant/campaign state is synthetic; Gemini tool calls are real. No live DoorDash connection is configured.
+
+Brainstorming: [idea-generation playbook and prompts](docs/ideas/IDEATION_PLAYBOOK.md), with a separate [exploratory idea pool](docs/ideas/IDEA_POOL.md).
+
+Selected build: station-aware demand steering connected to forecasting and kitchen scheduling, plus guarded agent policy experiments, on branch `feat/rush-control`. [Earlier research](docs/ideas/DEMAND_STEERING.md) remains context; current implementation and measured tradeoffs are in the demo guide. The legacy nightly-close product description below describes the inherited app; its adapters still depend on their configured modes.
+
 Nightly close-out agents for a delivery-heavy restaurant. The manager taps **Close shift**; agents reconcile the
 cash drawer and app payouts, update stock, forecast tomorrow, write tomorrow's prep card, send one bundled text
 and a 2-page PDF, and arm a safety net that pauses the limited item on the apps before it runs out. Ask answers

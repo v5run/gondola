@@ -12,10 +12,12 @@ import Money from "./screens/Money";
 import Reports from "./screens/Reports";
 import Ask from "./screens/Ask";
 import Alerts from "./screens/Alerts";
+import Rush from "./screens/Rush";
 
 export { useApp } from "./state";
 
 const NAV = [
+  ["/rush", "service", "Rush control"],
   ["/", "tonight", "Tonight"], ["/insights", "insights", "Insights"], ["/close", "close", "Close run"], ["/tomorrow", "tomorrow", "Tomorrow"],
   ["/service", "service", "Service"], ["/money", "money", "Money"], ["/reports", "reports", "Reports"],
   ["/ask", "ask", "Ask Gondola"], ["/alerts", "alerts", "Alerts"],
@@ -55,6 +57,7 @@ function Shell() {
       <main className="main">
         {mode === "mock" && <div className="offline" role="status"><i className="dot" />Backend offline · sample data</div>}
         <Routes>
+          <Route path="/rush" element={<Rush />} />
           <Route path="/" element={<Tonight />} />
           <Route path="/insights" element={<Insights />} />
           <Route path="/close" element={<CloseRun />} />

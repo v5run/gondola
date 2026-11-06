@@ -1,0 +1,1340 @@
+{
+  "measured_at": "2026-11-06T11:36:19.366096+00:00",
+  "source_mode": "synthetic",
+  "default_request": {
+    "scenario": "rush",
+    "seed": 7,
+    "incident": "fryer_slowdown",
+    "incident_at": 12,
+    "budget_cents": 1200,
+    "cooks": 3,
+    "forecast_pressure": 1.15,
+    "policy": {
+      "name": "Protect the rush",
+      "load_weight": 7.0,
+      "minimum_margin_cents": 350,
+      "reserve_minutes": 3,
+      "discount_cents": 100,
+      "max_station_load": 0.9
+    }
+  },
+  "default": {
+    "fifo": {
+      "accepted": 35,
+      "completed": 35,
+      "unresolved": 0,
+      "on_time": 22,
+      "late": 13,
+      "existing_orders": 27,
+      "existing_on_time": 19,
+      "visitor_orders": 8,
+      "contribution_cents": 27285,
+      "promo_spend_cents": 0,
+      "courier_wait_minutes": 163,
+      "avg_courier_wait_minutes": 7.41,
+      "worst_pickup_wait_minutes": 92,
+      "avg_wait_minutes": 18.86,
+      "food_hold_minutes": 539,
+      "worst_lateness_minutes": 92,
+      "late_minutes": 663,
+      "schedule_changes": 28,
+      "by_channel": {
+        "doordash": {
+          "accepted": 12,
+          "late": 3
+        },
+        "ubereats": {
+          "accepted": 10,
+          "late": 3
+        },
+        "pickup": {
+          "accepted": 13,
+          "late": 7
+        }
+      },
+      "service_score": -168.07
+    },
+    "deadline": {
+      "accepted": 35,
+      "completed": 35,
+      "unresolved": 0,
+      "on_time": 22,
+      "late": 13,
+      "existing_orders": 27,
+      "existing_on_time": 19,
+      "visitor_orders": 8,
+      "contribution_cents": 27285,
+      "promo_spend_cents": 0,
+      "courier_wait_minutes": 174,
+      "avg_courier_wait_minutes": 7.91,
+      "worst_pickup_wait_minutes": 93,
+      "avg_wait_minutes": 17.34,
+      "food_hold_minutes": 497,
+      "worst_lateness_minutes": 93,
+      "late_minutes": 616,
+      "schedule_changes": 86,
+      "by_channel": {
+        "doordash": {
+          "accepted": 12,
+          "late": 4
+        },
+        "ubereats": {
+          "accepted": 10,
+          "late": 4
+        },
+        "pickup": {
+          "accepted": 13,
+          "late": 5
+        }
+      },
+      "service_score": -136.51
+    },
+    "slack": {
+      "accepted": 35,
+      "completed": 35,
+      "unresolved": 0,
+      "on_time": 22,
+      "late": 13,
+      "existing_orders": 27,
+      "existing_on_time": 19,
+      "visitor_orders": 8,
+      "contribution_cents": 27285,
+      "promo_spend_cents": 0,
+      "courier_wait_minutes": 206,
+      "avg_courier_wait_minutes": 9.36,
+      "worst_pickup_wait_minutes": 93,
+      "avg_wait_minutes": 18.66,
+      "food_hold_minutes": 509,
+      "worst_lateness_minutes": 93,
+      "late_minutes": 660,
+      "schedule_changes": 66,
+      "by_channel": {
+        "doordash": {
+          "accepted": 12,
+          "late": 4
+        },
+        "ubereats": {
+          "accepted": 10,
+          "late": 3
+        },
+        "pickup": {
+          "accepted": 13,
+          "late": 6
+        }
+      },
+      "service_score": -163.87
+    },
+    "independent": {
+      "accepted": 41,
+      "completed": 41,
+      "unresolved": 0,
+      "on_time": 19,
+      "late": 22,
+      "existing_orders": 27,
+      "existing_on_time": 19,
+      "visitor_orders": 14,
+      "contribution_cents": 35736,
+      "promo_spend_cents": 1200,
+      "courier_wait_minutes": 206,
+      "avg_courier_wait_minutes": 9.36,
+      "worst_pickup_wait_minutes": 48,
+      "avg_wait_minutes": 15.93,
+      "food_hold_minutes": 485,
+      "worst_lateness_minutes": 49,
+      "late_minutes": 660,
+      "schedule_changes": 70,
+      "by_channel": {
+        "doordash": {
+          "accepted": 12,
+          "late": 4
+        },
+        "ubereats": {
+          "accepted": 10,
+          "late": 3
+        },
+        "pickup": {
+          "accepted": 19,
+          "late": 15
+        }
+      },
+      "service_score": -77.44
+    },
+    "coordinated": {
+      "accepted": 40,
+      "completed": 40,
+      "unresolved": 0,
+      "on_time": 31,
+      "late": 9,
+      "existing_orders": 27,
+      "existing_on_time": 19,
+      "visitor_orders": 13,
+      "contribution_cents": 31688,
+      "promo_spend_cents": 1200,
+      "courier_wait_minutes": 206,
+      "avg_courier_wait_minutes": 9.36,
+      "worst_pickup_wait_minutes": 83,
+      "avg_wait_minutes": 7.58,
+      "food_hold_minutes": 564,
+      "worst_lateness_minutes": 83,
+      "late_minutes": 310,
+      "schedule_changes": 72,
+      "by_channel": {
+        "doordash": {
+          "accepted": 12,
+          "late": 4
+        },
+        "ubereats": {
+          "accepted": 10,
+          "late": 3
+        },
+        "pickup": {
+          "accepted": 18,
+          "late": 2
+        }
+      },
+      "service_score": 85.76
+    }
+  },
+  "held_out_summary": {
+    "fifo": {
+      "mean_contribution_cents": 25634,
+      "mean_case_handoff_wait_minutes": 10.1,
+      "existing_promises_met": 108,
+      "existing_promises": 160,
+      "unresolved": 0
+    },
+    "deadline": {
+      "mean_contribution_cents": 25634,
+      "mean_case_handoff_wait_minutes": 7.95,
+      "existing_promises_met": 117,
+      "existing_promises": 160,
+      "unresolved": 0
+    },
+    "slack": {
+      "mean_contribution_cents": 25634,
+      "mean_case_handoff_wait_minutes": 8.64,
+      "existing_promises_met": 114,
+      "existing_promises": 160,
+      "unresolved": 0
+    },
+    "independent": {
+      "mean_contribution_cents": 34994,
+      "mean_case_handoff_wait_minutes": 15.27,
+      "existing_promises_met": 114,
+      "existing_promises": 160,
+      "unresolved": 0
+    },
+    "coordinated": {
+      "mean_contribution_cents": 29824,
+      "mean_case_handoff_wait_minutes": 6.53,
+      "existing_promises_met": 114,
+      "existing_promises": 160,
+      "unresolved": 0
+    }
+  },
+  "held_out": {
+    "source_mode": "synthetic",
+    "cases": [
+      {
+        "scenario": "rush",
+        "seed": 101,
+        "incident": "courier_delay",
+        "cooks": 3,
+        "results": {
+          "fifo": {
+            "accepted": 34,
+            "completed": 34,
+            "unresolved": 0,
+            "on_time": 27,
+            "late": 7,
+            "existing_orders": 27,
+            "existing_on_time": 24,
+            "visitor_orders": 7,
+            "contribution_cents": 28120,
+            "promo_spend_cents": 0,
+            "courier_wait_minutes": 2,
+            "avg_courier_wait_minutes": 0.09,
+            "worst_pickup_wait_minutes": 23,
+            "avg_wait_minutes": 1.06,
+            "food_hold_minutes": 760,
+            "worst_lateness_minutes": 23,
+            "late_minutes": 36,
+            "schedule_changes": 14,
+            "by_channel": {
+              "doordash": {
+                "accepted": 12,
+                "late": 1
+              },
+              "ubereats": {
+                "accepted": 10,
+                "late": 1
+              },
+              "pickup": {
+                "accepted": 12,
+                "late": 5
+              }
+            },
+            "service_score": 198.8
+          },
+          "deadline": {
+            "accepted": 34,
+            "completed": 34,
+            "unresolved": 0,
+            "on_time": 30,
+            "late": 4,
+            "existing_orders": 27,
+            "existing_on_time": 27,
+            "visitor_orders": 7,
+            "contribution_cents": 28120,
+            "promo_spend_cents": 0,
+            "courier_wait_minutes": 0,
+            "avg_courier_wait_minutes": 0.0,
+            "worst_pickup_wait_minutes": 23,
+            "avg_wait_minutes": 1.0,
+            "food_hold_minutes": 765,
+            "worst_lateness_minutes": 23,
+            "late_minutes": 34,
+            "schedule_changes": 57,
+            "by_channel": {
+              "doordash": {
+                "accepted": 12,
+                "late": 0
+              },
+              "ubereats": {
+                "accepted": 10,
+                "late": 0
+              },
+              "pickup": {
+                "accepted": 12,
+                "late": 4
+              }
+            },
+            "service_score": 199.6
+          },
+          "slack": {
+            "accepted": 34,
+            "completed": 34,
+            "unresolved": 0,
+            "on_time": 29,
+            "late": 5,
+            "existing_orders": 27,
+            "existing_on_time": 26,
+            "visitor_orders": 7,
+            "contribution_cents": 28120,
+            "promo_spend_cents": 0,
+            "courier_wait_minutes": 0,
+            "avg_courier_wait_minutes": 0.0,
+            "worst_pickup_wait_minutes": 23,
+            "avg_wait_minutes": 0.97,
+            "food_hold_minutes": 763,
+            "worst_lateness_minutes": 23,
+            "late_minutes": 34,
+            "schedule_changes": 41,
+            "by_channel": {
+              "doordash": {
+                "accepted": 12,
+                "late": 1
+              },
+              "ubereats": {
+                "accepted": 10,
+                "late": 0
+              },
+              "pickup": {
+                "accepted": 12,
+                "late": 4
+              }
+            },
+            "service_score": 199.76
+          },
+          "independent": {
+            "accepted": 41,
+            "completed": 41,
+            "unresolved": 0,
+            "on_time": 27,
+            "late": 14,
+            "existing_orders": 27,
+            "existing_on_time": 26,
+            "visitor_orders": 14,
+            "contribution_cents": 36780,
+            "promo_spend_cents": 1200,
+            "courier_wait_minutes": 0,
+            "avg_courier_wait_minutes": 0.0,
+            "worst_pickup_wait_minutes": 49,
+            "avg_wait_minutes": 10.59,
+            "food_hold_minutes": 749,
+            "worst_lateness_minutes": 49,
+            "late_minutes": 435,
+            "schedule_changes": 39,
+            "by_channel": {
+              "doordash": {
+                "accepted": 12,
+                "late": 1
+              },
+              "ubereats": {
+                "accepted": 10,
+                "late": 0
+              },
+              "pickup": {
+                "accepted": 19,
+                "late": 13
+              }
+            },
+            "service_score": 46.88
+          },
+          "coordinated": {
+            "accepted": 37,
+            "completed": 37,
+            "unresolved": 0,
+            "on_time": 34,
+            "late": 3,
+            "existing_orders": 27,
+            "existing_on_time": 26,
+            "visitor_orders": 10,
+            "contribution_cents": 30180,
+            "promo_spend_cents": 800,
+            "courier_wait_minutes": 0,
+            "avg_courier_wait_minutes": 0.0,
+            "worst_pickup_wait_minutes": 23,
+            "avg_wait_minutes": 0.65,
+            "food_hold_minutes": 778,
+            "worst_lateness_minutes": 23,
+            "late_minutes": 25,
+            "schedule_changes": 44,
+            "by_channel": {
+              "doordash": {
+                "accepted": 12,
+                "late": 1
+              },
+              "ubereats": {
+                "accepted": 10,
+                "late": 0
+              },
+              "pickup": {
+                "accepted": 15,
+                "late": 2
+              }
+            },
+            "service_score": 224.56
+          }
+        }
+      },
+      {
+        "scenario": "rush",
+        "seed": 103,
+        "incident": "station_outage",
+        "cooks": 3,
+        "results": {
+          "fifo": {
+            "accepted": 31,
+            "completed": 31,
+            "unresolved": 0,
+            "on_time": 22,
+            "late": 9,
+            "existing_orders": 27,
+            "existing_on_time": 21,
+            "visitor_orders": 4,
+            "contribution_cents": 22564,
+            "promo_spend_cents": 0,
+            "courier_wait_minutes": 19,
+            "avg_courier_wait_minutes": 0.86,
+            "worst_pickup_wait_minutes": 28,
+            "avg_wait_minutes": 4.29,
+            "food_hold_minutes": 635,
+            "worst_lateness_minutes": 28,
+            "late_minutes": 136,
+            "schedule_changes": 26,
+            "by_channel": {
+              "doordash": {
+                "accepted": 12,
+                "late": 1
+              },
+              "ubereats": {
+                "accepted": 10,
+                "late": 2
+              },
+              "pickup": {
+                "accepted": 9,
+                "late": 6
+              }
+            },
+            "service_score": 93.24
+          },
+          "deadline": {
+            "accepted": 31,
+            "completed": 31,
+            "unresolved": 0,
+            "on_time": 27,
+            "late": 4,
+            "existing_orders": 27,
+            "existing_on_time": 26,
+            "visitor_orders": 4,
+            "contribution_cents": 22564,
+            "promo_spend_cents": 0,
+            "courier_wait_minutes": 0,
+            "avg_courier_wait_minutes": 0.0,
+            "worst_pickup_wait_minutes": 21,
+            "avg_wait_minutes": 1.97,
+            "food_hold_minutes": 568,
+            "worst_lateness_minutes": 21,
+            "late_minutes": 61,
+            "schedule_changes": 79,
+            "by_channel": {
+              "doordash": {
+                "accepted": 12,
+                "late": 0
+              },
+              "ubereats": {
+                "accepted": 10,
+                "late": 0
+              },
+              "pickup": {
+                "accepted": 9,
+                "late": 4
+              }
+            },
+            "service_score": 143.6
+          },
+          "slack": {
+            "accepted": 31,
+            "completed": 31,
+            "unresolved": 0,
+            "on_time": 24,
+            "late": 7,
+            "existing_orders": 27,
+            "existing_on_time": 23,
+            "visitor_orders": 4,
+            "contribution_cents": 22564,
+            "promo_spend_cents": 0,
+            "courier_wait_minutes": 23,
+            "avg_courier_wait_minutes": 1.05,
+            "worst_pickup_wait_minutes": 21,
+            "avg_wait_minutes": 2.74,
+            "food_hold_minutes": 567,
+            "worst_lateness_minutes": 21,
+            "late_minutes": 88,
+            "schedule_changes": 69,
+            "by_channel": {
+              "doordash": {
+                "accepted": 12,
+                "late": 1
+              },
+              "ubereats": {
+                "accepted": 10,
+                "late": 2
+              },
+              "pickup": {
+                "accepted": 9,
+                "late": 4
+              }
+            },
+            "service_score": 127.48
+          },
+          "independent": {
+            "accepted": 41,
+            "completed": 41,
+            "unresolved": 0,
+            "on_time": 23,
+            "late": 18,
+            "existing_orders": 27,
+            "existing_on_time": 23,
+            "visitor_orders": 14,
+            "contribution_cents": 34833,
+            "promo_spend_cents": 1200,
+            "courier_wait_minutes": 23,
+            "avg_courier_wait_minutes": 1.05,
+            "worst_pickup_wait_minutes": 44,
+            "avg_wait_minutes": 10.12,
+            "food_hold_minutes": 573,
+            "worst_lateness_minutes": 44,
+            "late_minutes": 418,
+            "schedule_changes": 70,
+            "by_channel": {
+              "doordash": {
+                "accepted": 12,
+                "late": 1
+              },
+              "ubereats": {
+                "accepted": 10,
+                "late": 2
+              },
+              "pickup": {
+                "accepted": 19,
+                "late": 15
+              }
+            },
+            "service_score": 51.69
+          },
+          "coordinated": {
+            "accepted": 39,
+            "completed": 39,
+            "unresolved": 0,
+            "on_time": 35,
+            "late": 4,
+            "existing_orders": 27,
+            "existing_on_time": 23,
+            "visitor_orders": 12,
+            "contribution_cents": 30637,
+            "promo_spend_cents": 1100,
+            "courier_wait_minutes": 23,
+            "avg_courier_wait_minutes": 1.05,
+            "worst_pickup_wait_minutes": 5,
+            "avg_wait_minutes": 0.72,
+            "food_hold_minutes": 631,
+            "worst_lateness_minutes": 11,
+            "late_minutes": 31,
+            "schedule_changes": 72,
+            "by_channel": {
+              "doordash": {
+                "accepted": 12,
+                "late": 1
+              },
+              "ubereats": {
+                "accepted": 10,
+                "late": 2
+              },
+              "pickup": {
+                "accepted": 17,
+                "late": 1
+              }
+            },
+            "service_score": 237.29
+          }
+        }
+      },
+      {
+        "scenario": "balanced",
+        "seed": 107,
+        "incident": "none",
+        "cooks": 3,
+        "results": {
+          "fifo": {
+            "accepted": 32,
+            "completed": 32,
+            "unresolved": 0,
+            "on_time": 24,
+            "late": 8,
+            "existing_orders": 27,
+            "existing_on_time": 23,
+            "visitor_orders": 5,
+            "contribution_cents": 25016,
+            "promo_spend_cents": 0,
+            "courier_wait_minutes": 20,
+            "avg_courier_wait_minutes": 0.91,
+            "worst_pickup_wait_minutes": 32,
+            "avg_wait_minutes": 5.44,
+            "food_hold_minutes": 555,
+            "worst_lateness_minutes": 32,
+            "late_minutes": 172,
+            "schedule_changes": 7,
+            "by_channel": {
+              "doordash": {
+                "accepted": 12,
+                "late": 1
+              },
+              "ubereats": {
+                "accepted": 10,
+                "late": 0
+              },
+              "pickup": {
+                "accepted": 10,
+                "late": 7
+              }
+            },
+            "service_score": 102.56
+          },
+          "deadline": {
+            "accepted": 32,
+            "completed": 32,
+            "unresolved": 0,
+            "on_time": 25,
+            "late": 7,
+            "existing_orders": 27,
+            "existing_on_time": 24,
+            "visitor_orders": 5,
+            "contribution_cents": 25016,
+            "promo_spend_cents": 0,
+            "courier_wait_minutes": 13,
+            "avg_courier_wait_minutes": 0.59,
+            "worst_pickup_wait_minutes": 32,
+            "avg_wait_minutes": 3.56,
+            "food_hold_minutes": 497,
+            "worst_lateness_minutes": 32,
+            "late_minutes": 115,
+            "schedule_changes": 61,
+            "by_channel": {
+              "doordash": {
+                "accepted": 12,
+                "late": 2
+              },
+              "ubereats": {
+                "accepted": 10,
+                "late": 1
+              },
+              "pickup": {
+                "accepted": 10,
+                "late": 4
+              }
+            },
+            "service_score": 141.4
+          },
+          "slack": {
+            "accepted": 32,
+            "completed": 32,
+            "unresolved": 0,
+            "on_time": 25,
+            "late": 7,
+            "existing_orders": 27,
+            "existing_on_time": 24,
+            "visitor_orders": 5,
+            "contribution_cents": 25016,
+            "promo_spend_cents": 0,
+            "courier_wait_minutes": 28,
+            "avg_courier_wait_minutes": 1.27,
+            "worst_pickup_wait_minutes": 32,
+            "avg_wait_minutes": 4.03,
+            "food_hold_minutes": 493,
+            "worst_lateness_minutes": 32,
+            "late_minutes": 133,
+            "schedule_changes": 45,
+            "by_channel": {
+              "doordash": {
+                "accepted": 12,
+                "late": 2
+              },
+              "ubereats": {
+                "accepted": 10,
+                "late": 1
+              },
+              "pickup": {
+                "accepted": 10,
+                "late": 4
+              }
+            },
+            "service_score": 130.92
+          },
+          "independent": {
+            "accepted": 39,
+            "completed": 39,
+            "unresolved": 0,
+            "on_time": 24,
+            "late": 15,
+            "existing_orders": 27,
+            "existing_on_time": 24,
+            "visitor_orders": 12,
+            "contribution_cents": 33321,
+            "promo_spend_cents": 1200,
+            "courier_wait_minutes": 28,
+            "avg_courier_wait_minutes": 1.27,
+            "worst_pickup_wait_minutes": 50,
+            "avg_wait_minutes": 11.33,
+            "food_hold_minutes": 489,
+            "worst_lateness_minutes": 50,
+            "late_minutes": 446,
+            "schedule_changes": 45,
+            "by_channel": {
+              "doordash": {
+                "accepted": 12,
+                "late": 2
+              },
+              "ubereats": {
+                "accepted": 10,
+                "late": 1
+              },
+              "pickup": {
+                "accepted": 17,
+                "late": 12
+              }
+            },
+            "service_score": 26.49
+          },
+          "coordinated": {
+            "accepted": 39,
+            "completed": 39,
+            "unresolved": 0,
+            "on_time": 35,
+            "late": 4,
+            "existing_orders": 27,
+            "existing_on_time": 24,
+            "visitor_orders": 12,
+            "contribution_cents": 30620,
+            "promo_spend_cents": 1100,
+            "courier_wait_minutes": 28,
+            "avg_courier_wait_minutes": 1.27,
+            "worst_pickup_wait_minutes": 23,
+            "avg_wait_minutes": 1.31,
+            "food_hold_minutes": 552,
+            "worst_lateness_minutes": 23,
+            "late_minutes": 55,
+            "schedule_changes": 50,
+            "by_channel": {
+              "doordash": {
+                "accepted": 12,
+                "late": 2
+              },
+              "ubereats": {
+                "accepted": 10,
+                "late": 1
+              },
+              "pickup": {
+                "accepted": 17,
+                "late": 1
+              }
+            },
+            "service_score": 229.04
+          }
+        }
+      },
+      {
+        "scenario": "quiet",
+        "seed": 109,
+        "incident": "none",
+        "cooks": 3,
+        "results": {
+          "fifo": {
+            "accepted": 16,
+            "completed": 16,
+            "unresolved": 0,
+            "on_time": 16,
+            "late": 0,
+            "existing_orders": 10,
+            "existing_on_time": 10,
+            "visitor_orders": 6,
+            "contribution_cents": 14166,
+            "promo_spend_cents": 0,
+            "courier_wait_minutes": 0,
+            "avg_courier_wait_minutes": 0.0,
+            "worst_pickup_wait_minutes": 0,
+            "avg_wait_minutes": 0.0,
+            "food_hold_minutes": 365,
+            "worst_lateness_minutes": 0,
+            "late_minutes": 0,
+            "schedule_changes": 0,
+            "by_channel": {
+              "doordash": {
+                "accepted": 10,
+                "late": 0
+              },
+              "ubereats": {
+                "accepted": 0,
+                "late": 0
+              },
+              "pickup": {
+                "accepted": 6,
+                "late": 0
+              }
+            },
+            "service_score": 112.46
+          },
+          "deadline": {
+            "accepted": 16,
+            "completed": 16,
+            "unresolved": 0,
+            "on_time": 14,
+            "late": 2,
+            "existing_orders": 10,
+            "existing_on_time": 10,
+            "visitor_orders": 6,
+            "contribution_cents": 14166,
+            "promo_spend_cents": 0,
+            "courier_wait_minutes": 0,
+            "avg_courier_wait_minutes": 0.0,
+            "worst_pickup_wait_minutes": 6,
+            "avg_wait_minutes": 0.62,
+            "food_hold_minutes": 376,
+            "worst_lateness_minutes": 6,
+            "late_minutes": 10,
+            "schedule_changes": 8,
+            "by_channel": {
+              "doordash": {
+                "accepted": 10,
+                "late": 0
+              },
+              "ubereats": {
+                "accepted": 0,
+                "late": 0
+              },
+              "pickup": {
+                "accepted": 6,
+                "late": 2
+              }
+            },
+            "service_score": 105.58
+          },
+          "slack": {
+            "accepted": 16,
+            "completed": 16,
+            "unresolved": 0,
+            "on_time": 14,
+            "late": 2,
+            "existing_orders": 10,
+            "existing_on_time": 10,
+            "visitor_orders": 6,
+            "contribution_cents": 14166,
+            "promo_spend_cents": 0,
+            "courier_wait_minutes": 0,
+            "avg_courier_wait_minutes": 0.0,
+            "worst_pickup_wait_minutes": 6,
+            "avg_wait_minutes": 0.62,
+            "food_hold_minutes": 376,
+            "worst_lateness_minutes": 6,
+            "late_minutes": 10,
+            "schedule_changes": 4,
+            "by_channel": {
+              "doordash": {
+                "accepted": 10,
+                "late": 0
+              },
+              "ubereats": {
+                "accepted": 0,
+                "late": 0
+              },
+              "pickup": {
+                "accepted": 6,
+                "late": 2
+              }
+            },
+            "service_score": 105.58
+          },
+          "independent": {
+            "accepted": 20,
+            "completed": 20,
+            "unresolved": 0,
+            "on_time": 14,
+            "late": 6,
+            "existing_orders": 10,
+            "existing_on_time": 10,
+            "visitor_orders": 10,
+            "contribution_cents": 18854,
+            "promo_spend_cents": 300,
+            "courier_wait_minutes": 0,
+            "avg_courier_wait_minutes": 0.0,
+            "worst_pickup_wait_minutes": 6,
+            "avg_wait_minutes": 1.05,
+            "food_hold_minutes": 381,
+            "worst_lateness_minutes": 6,
+            "late_minutes": 21,
+            "schedule_changes": 9,
+            "by_channel": {
+              "doordash": {
+                "accepted": 10,
+                "late": 0
+              },
+              "ubereats": {
+                "accepted": 0,
+                "late": 0
+              },
+              "pickup": {
+                "accepted": 10,
+                "late": 6
+              }
+            },
+            "service_score": 145.46
+          },
+          "coordinated": {
+            "accepted": 19,
+            "completed": 19,
+            "unresolved": 0,
+            "on_time": 17,
+            "late": 2,
+            "existing_orders": 10,
+            "existing_on_time": 10,
+            "visitor_orders": 9,
+            "contribution_cents": 17344,
+            "promo_spend_cents": 300,
+            "courier_wait_minutes": 0,
+            "avg_courier_wait_minutes": 0.0,
+            "worst_pickup_wait_minutes": 6,
+            "avg_wait_minutes": 0.53,
+            "food_hold_minutes": 403,
+            "worst_lateness_minutes": 6,
+            "late_minutes": 10,
+            "schedule_changes": 5,
+            "by_channel": {
+              "doordash": {
+                "accepted": 10,
+                "late": 0
+              },
+              "ubereats": {
+                "accepted": 0,
+                "late": 0
+              },
+              "pickup": {
+                "accepted": 9,
+                "late": 2
+              }
+            },
+            "service_score": 135.2
+          }
+        }
+      },
+      {
+        "scenario": "overload",
+        "seed": 113,
+        "incident": "fryer_slowdown",
+        "cooks": 2,
+        "results": {
+          "fifo": {
+            "accepted": 45,
+            "completed": 45,
+            "unresolved": 0,
+            "on_time": 13,
+            "late": 32,
+            "existing_orders": 42,
+            "existing_on_time": 13,
+            "visitor_orders": 3,
+            "contribution_cents": 37605,
+            "promo_spend_cents": 0,
+            "courier_wait_minutes": 464,
+            "avg_courier_wait_minutes": 21.09,
+            "worst_pickup_wait_minutes": 143,
+            "avg_wait_minutes": 36.18,
+            "food_hold_minutes": 348,
+            "worst_lateness_minutes": 143,
+            "late_minutes": 1625,
+            "schedule_changes": 61,
+            "by_channel": {
+              "doordash": {
+                "accepted": 12,
+                "late": 8
+              },
+              "ubereats": {
+                "accepted": 10,
+                "late": 4
+              },
+              "pickup": {
+                "accepted": 23,
+                "late": 20
+              }
+            },
+            "service_score": -626.79
+          },
+          "deadline": {
+            "accepted": 45,
+            "completed": 45,
+            "unresolved": 0,
+            "on_time": 13,
+            "late": 32,
+            "existing_orders": 42,
+            "existing_on_time": 13,
+            "visitor_orders": 3,
+            "contribution_cents": 37605,
+            "promo_spend_cents": 0,
+            "courier_wait_minutes": 851,
+            "avg_courier_wait_minutes": 38.68,
+            "worst_pickup_wait_minutes": 136,
+            "avg_wait_minutes": 29.47,
+            "food_hold_minutes": 186,
+            "worst_lateness_minutes": 136,
+            "late_minutes": 1321,
+            "schedule_changes": 228,
+            "by_channel": {
+              "doordash": {
+                "accepted": 12,
+                "late": 10
+              },
+              "ubereats": {
+                "accepted": 10,
+                "late": 9
+              },
+              "pickup": {
+                "accepted": 23,
+                "late": 13
+              }
+            },
+            "service_score": -431.43
+          },
+          "slack": {
+            "accepted": 45,
+            "completed": 45,
+            "unresolved": 0,
+            "on_time": 14,
+            "late": 31,
+            "existing_orders": 42,
+            "existing_on_time": 14,
+            "visitor_orders": 3,
+            "contribution_cents": 37605,
+            "promo_spend_cents": 0,
+            "courier_wait_minutes": 829,
+            "avg_courier_wait_minutes": 37.68,
+            "worst_pickup_wait_minutes": 136,
+            "avg_wait_minutes": 31.04,
+            "food_hold_minutes": 181,
+            "worst_lateness_minutes": 136,
+            "late_minutes": 1392,
+            "schedule_changes": 230,
+            "by_channel": {
+              "doordash": {
+                "accepted": 12,
+                "late": 9
+              },
+              "ubereats": {
+                "accepted": 10,
+                "late": 9
+              },
+              "pickup": {
+                "accepted": 23,
+                "late": 13
+              }
+            },
+            "service_score": -473.63
+          },
+          "independent": {
+            "accepted": 55,
+            "completed": 55,
+            "unresolved": 0,
+            "on_time": 14,
+            "late": 41,
+            "existing_orders": 42,
+            "existing_on_time": 14,
+            "visitor_orders": 13,
+            "contribution_cents": 49217,
+            "promo_spend_cents": 1200,
+            "courier_wait_minutes": 829,
+            "avg_courier_wait_minutes": 37.68,
+            "worst_pickup_wait_minutes": 90,
+            "avg_wait_minutes": 38.02,
+            "food_hold_minutes": 192,
+            "worst_lateness_minutes": 112,
+            "late_minutes": 2086,
+            "schedule_changes": 244,
+            "by_channel": {
+              "doordash": {
+                "accepted": 12,
+                "late": 9
+              },
+              "ubereats": {
+                "accepted": 10,
+                "late": 9
+              },
+              "pickup": {
+                "accepted": 33,
+                "late": 23
+              }
+            },
+            "service_score": -774.79
+          },
+          "coordinated": {
+            "accepted": 45,
+            "completed": 45,
+            "unresolved": 0,
+            "on_time": 14,
+            "late": 31,
+            "existing_orders": 42,
+            "existing_on_time": 14,
+            "visitor_orders": 3,
+            "contribution_cents": 37605,
+            "promo_spend_cents": 0,
+            "courier_wait_minutes": 829,
+            "avg_courier_wait_minutes": 37.68,
+            "worst_pickup_wait_minutes": 136,
+            "avg_wait_minutes": 31.04,
+            "food_hold_minutes": 181,
+            "worst_lateness_minutes": 136,
+            "late_minutes": 1392,
+            "schedule_changes": 230,
+            "by_channel": {
+              "doordash": {
+                "accepted": 12,
+                "late": 9
+              },
+              "ubereats": {
+                "accepted": 10,
+                "late": 9
+              },
+              "pickup": {
+                "accepted": 23,
+                "late": 13
+              }
+            },
+            "service_score": -473.63
+          }
+        }
+      },
+      {
+        "scenario": "rush",
+        "seed": 127,
+        "incident": "fryer_slowdown",
+        "cooks": 4,
+        "results": {
+          "fifo": {
+            "accepted": 31,
+            "completed": 31,
+            "unresolved": 0,
+            "on_time": 18,
+            "late": 13,
+            "existing_orders": 27,
+            "existing_on_time": 17,
+            "visitor_orders": 4,
+            "contribution_cents": 26333,
+            "promo_spend_cents": 0,
+            "courier_wait_minutes": 152,
+            "avg_courier_wait_minutes": 6.91,
+            "worst_pickup_wait_minutes": 86,
+            "avg_wait_minutes": 13.65,
+            "food_hold_minutes": 482,
+            "worst_lateness_minutes": 86,
+            "late_minutes": 429,
+            "schedule_changes": 21,
+            "by_channel": {
+              "doordash": {
+                "accepted": 12,
+                "late": 3
+              },
+              "ubereats": {
+                "accepted": 10,
+                "late": 4
+              },
+              "pickup": {
+                "accepted": 9,
+                "late": 6
+              }
+            },
+            "service_score": -32.63
+          },
+          "deadline": {
+            "accepted": 31,
+            "completed": 31,
+            "unresolved": 0,
+            "on_time": 18,
+            "late": 13,
+            "existing_orders": 27,
+            "existing_on_time": 17,
+            "visitor_orders": 4,
+            "contribution_cents": 26333,
+            "promo_spend_cents": 0,
+            "courier_wait_minutes": 146,
+            "avg_courier_wait_minutes": 6.64,
+            "worst_pickup_wait_minutes": 85,
+            "avg_wait_minutes": 11.1,
+            "food_hold_minutes": 390,
+            "worst_lateness_minutes": 85,
+            "late_minutes": 349,
+            "schedule_changes": 75,
+            "by_channel": {
+              "doordash": {
+                "accepted": 12,
+                "late": 4
+              },
+              "ubereats": {
+                "accepted": 10,
+                "late": 4
+              },
+              "pickup": {
+                "accepted": 9,
+                "late": 5
+              }
+            },
+            "service_score": 22.73
+          },
+          "slack": {
+            "accepted": 31,
+            "completed": 31,
+            "unresolved": 0,
+            "on_time": 18,
+            "late": 13,
+            "existing_orders": 27,
+            "existing_on_time": 17,
+            "visitor_orders": 4,
+            "contribution_cents": 26333,
+            "promo_spend_cents": 0,
+            "courier_wait_minutes": 187,
+            "avg_courier_wait_minutes": 8.5,
+            "worst_pickup_wait_minutes": 85,
+            "avg_wait_minutes": 12.45,
+            "food_hold_minutes": 410,
+            "worst_lateness_minutes": 85,
+            "late_minutes": 387,
+            "schedule_changes": 62,
+            "by_channel": {
+              "doordash": {
+                "accepted": 12,
+                "late": 4
+              },
+              "ubereats": {
+                "accepted": 10,
+                "late": 4
+              },
+              "pickup": {
+                "accepted": 9,
+                "late": 5
+              }
+            },
+            "service_score": -1.67
+          },
+          "independent": {
+            "accepted": 40,
+            "completed": 40,
+            "unresolved": 0,
+            "on_time": 17,
+            "late": 23,
+            "existing_orders": 27,
+            "existing_on_time": 17,
+            "visitor_orders": 13,
+            "contribution_cents": 36961,
+            "promo_spend_cents": 1200,
+            "courier_wait_minutes": 187,
+            "avg_courier_wait_minutes": 8.5,
+            "worst_pickup_wait_minutes": 62,
+            "avg_wait_minutes": 20.48,
+            "food_hold_minutes": 409,
+            "worst_lateness_minutes": 62,
+            "late_minutes": 820,
+            "schedule_changes": 71,
+            "by_channel": {
+              "doordash": {
+                "accepted": 12,
+                "late": 4
+              },
+              "ubereats": {
+                "accepted": 10,
+                "late": 4
+              },
+              "pickup": {
+                "accepted": 18,
+                "late": 15
+              }
+            },
+            "service_score": -155.11
+          },
+          "coordinated": {
+            "accepted": 39,
+            "completed": 39,
+            "unresolved": 0,
+            "on_time": 29,
+            "late": 10,
+            "existing_orders": 27,
+            "existing_on_time": 17,
+            "visitor_orders": 12,
+            "contribution_cents": 32558,
+            "promo_spend_cents": 1200,
+            "courier_wait_minutes": 187,
+            "avg_courier_wait_minutes": 8.5,
+            "worst_pickup_wait_minutes": 4,
+            "avg_wait_minutes": 4.92,
+            "food_hold_minutes": 510,
+            "worst_lateness_minutes": 52,
+            "late_minutes": 193,
+            "schedule_changes": 68,
+            "by_channel": {
+              "doordash": {
+                "accepted": 12,
+                "late": 4
+              },
+              "ubereats": {
+                "accepted": 10,
+                "late": 4
+              },
+              "pickup": {
+                "accepted": 17,
+                "late": 2
+              }
+            },
+            "service_score": 168.98
+          }
+        }
+      }
+    ],
+    "scoring": "Fixed declared service proxy; no real conversion or profit claim"
+  },
+  "limits": "Small designed simulator, not merchant/conversion/ROI evidence. Unweighted case means. Controller sees estimates; evaluator alone sees physical truth. Fixed task noise and buyer utilities across controllers."
+}
