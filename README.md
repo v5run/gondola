@@ -2,6 +2,8 @@
 
 **Working hackathon demo:** [Rush Control](http://127.0.0.1:8000/rush) connects kitchen reservations, capacity-aware offers and real Gemini interventions/policy experiments. [Demo guide, measurements and production path](docs/development/RUSH_DEMO.md) · [recording](docs/demo/rush-demo.webm) · [local setup](docs/development/LOCAL_SETUP.md). Restaurant/campaign state is synthetic; Gemini tool calls are real. No live DoorDash connection is configured.
 
+[Current feature coverage and remaining build checklist](docs/development/FEATURE_COVERAGE.md) · [V's newer branch: changes, rebase and conflict report](docs/development/VARUN_REBASE.md). Current feature branch is based on `origin/varun` (`clock-layer`), including its clock-aware dashboard.
+
 Brainstorming: [idea-generation playbook and prompts](docs/ideas/IDEATION_PLAYBOOK.md), with a separate [exploratory idea pool](docs/ideas/IDEA_POOL.md).
 
 Selected build: station-aware demand steering connected to forecasting and kitchen scheduling, plus guarded agent policy experiments, on branch `feat/rush-control`. [Earlier research](docs/ideas/DEMAND_STEERING.md) remains context; current implementation and measured tradeoffs are in the demo guide. The legacy nightly-close product description below describes the inherited app; its adapters still depend on their configured modes.

@@ -1,0 +1,34 @@
+{
+  "passed": 8,
+  "checks": [
+    "Combined app exposes V store-clock API and Rush reservations/offer guards",
+    "Rush disruption and replay operate with new shared app providers",
+    "Pre-rebase real action receipts survive and reload after integration",
+    "Completed data day renders V closed-clock state and removes dashboard replay speed",
+    "Frozen open-service browser catches up to clock-filtered order count and locks close shift",
+    "New date navigation prevents going beyond the current business day",
+    "Rush remains an explicitly separate simulation during open real-clock dashboard service",
+    "No browser JavaScript errors across both clock phases and Rush"
+  ],
+  "javascript_errors": [],
+  "normal_clock": {
+    "today": "2026-11-05",
+    "now": "07:01:03",
+    "tz": "America/New_York",
+    "mapped": true,
+    "business_date": "2026-11-06",
+    "open": "11:00",
+    "close": "22:00",
+    "phase": "closed",
+    "cutoff": null
+  },
+  "test_clock": "Frozen 2026-11-05T19:30:00 on temporary offline API port 8001",
+  "new_model_calls": 0,
+  "forecast": {
+    "date": "2026-11-06",
+    "p10": 531.7,
+    "p50": 589.9,
+    "p90": 678.5,
+    "source": "Existing LightGBM forecast artifact; synthetic store history, not live weather"
+  }
+}

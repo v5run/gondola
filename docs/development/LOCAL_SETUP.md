@@ -4,6 +4,8 @@ Prepared November 5, 2026. Repository: `https://github.com/v5run/gondola`, clone
 
 **November 6 build update:** Current branch is `feat/rush-control`. [Rush Control](http://127.0.0.1:8000/rush) is implemented, with [recording, checks and production mapping](RUSH_DEMO.md). Port 8000 serves the entire demo; Vite is optional and need not be running. Google Gemini tool use is verified for the new intervention and policy lab. Merchant adapters remain simulated/unconfigured. The earlier setup results below are historical; see the latest parent progress ledger for build verification.
 
+**New upstream integrated:** `feat/rush-control` is now rebased onto V's `origin/varun` (`clock-layer`), retaining his store-clock, time-aware dashboard and stream changes. [Integration report](VARUN_REBASE.md) records source conflict checks, recovery points and 127 passing tests. [Feature coverage](FEATURE_COVERAGE.md) is the current build checklist. Normal port 8000 uses the real clock; a temporary frozen-clock test server on port 8001 was stopped after validation.
+
 ## Open the app
 
 - Full app/API: [http://127.0.0.1:8000](http://127.0.0.1:8000)

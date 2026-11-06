@@ -4,6 +4,8 @@ Built and measured November 6, 2026, before the hackathon. Branch: `feat/rush-co
 
 [Feature coverage against the full discussion](FEATURE_COVERAGE.md) distinguishes implemented, partial and unbuilt ideas. This demo is not the full earlier autonomous forecasting/staffing/stocking vision.
 
+The source is now based on V's `origin/varun` (`clock-layer`); his clock-aware main dashboard is preserved. [Rebase and integration checks](VARUN_REBASE.md) passed with zero source conflicts, 127 Python tests and eight additional browser checks. The recording and original Gemini experiments below predate that integration; the Rush engine is unchanged.
+
 ## Open it
 
 [Open Rush Control](http://127.0.0.1:8000/rush). The API serves the built web app; only port 8000 is needed. Restart from the repository root with `./scripts/dev.ps1 -Task api`. Build browser changes with `./scripts/dev.ps1 -Task build`.
