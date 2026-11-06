@@ -43,6 +43,20 @@ Notes
 - Times in generated text are 12-hour ("9:15 pm"); card fields (`pause_at`, `rush.start`) stay "HH:MM" 24-hour for code.
 - Agent mode (`GONDOLA_AGENTS=adk` + `GOOGLE_API_KEY`): the ADK graph writes the report summary and per-agent explanations; numbers still come from the pipeline and pass the guardrail twice. The SMS stays the numbered template.
 
+## V4: the store clock (real time; gondola/now.py)
+
+`GET /now` → `{today, now:"HH:MM:SS", tz:"America/New_York", mapped:bool, business_date, open:"11:00", close:"22:00"|"23:00", phase:"before_open"|"open"|"closed", cutoff:"HH:MM"|null}`.
+The business day runs until 4 a.m. If the real business date is in the data it is `today` (mapped=false) and, while
+before_open/open, its data is cut at `cutoff` (orders with created_at before the current minute; labour prorated;
+sell-out flag hidden). Otherwise `today` is the latest data day, phase "closed", no cut. The cut applies automatically
+to /overview, /metrics/intraday, /metrics/daily, /metrics/range, /metrics/items, /day, /ask; default dates mean today;
+/store `today` is this today. Today's /overview and /metrics/intraday carry `as_of` (the cutoff, null when uncut) and
+only the bins that have started (later bins are absent, not zero); before opening /overview is `closed:true,
+not_open_yet:true, opens:"11:00"`. `POST /close` for today is 409 until closing time (400 for a future date).
+`/day/{today}` has `close:null` until the night is over. `/live/stream` takes `from` as "HH:MM[:SS]" and `catchup=1`:
+everything before `from` is sent at once (events flagged `catchup:true`, plus the last tick), then the rest paced at
+`speed` (the app uses speed=1 from the current time). Test hook: env GONDOLA_NOW (+ GONDOLA_CLOCK=frozen).
+
 ## V3 additions (live feel, drill-down, history)
 
 | Method | Path | Body / query | Returns |

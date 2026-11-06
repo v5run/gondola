@@ -5,7 +5,11 @@ Usage (API must be running and web/dist built):
 
 Uses CHROME_PATH (or --chrome) if set, otherwise Playwright's bundled Chromium.
 Blocks every request that is not to the app's own origin, so it also proves the app works offline.
-Screenshots go to web/screenshots/ (v3-*.png). Exits non-zero if any step fails.
+Screenshots go to web/screenshots/ (v3-*.png, v4-*.png). Exits non-zero if any step fails.
+
+The dashboard runs on the real clock. To see live orders arrive mid-service, run the API with the test hook
+GONDOLA_NOW=<date>T19:30:00 (the clock starts there and runs in real time); Tonight then shows today so far, and
+its close is locked until closing time (the close step closes the previous night instead).
 """
 from __future__ import annotations
 
@@ -82,6 +86,8 @@ def main():
     console_errors: list[str] = []
     blocked: list[str] = []
     today = api(base, "/store")["today"]
+    clk = api(base, "/now")
+    in_service = clk["phase"] != "closed"
 
     with sync_playwright() as p:
         kw = {"headless": not a.headed, "args": ["--no-sandbox"]}
@@ -108,25 +114,47 @@ def main():
             expect(date_label).to_be_visible()
         why_title = page.get_by_test_id("why-title")
 
-        @step("Tonight: live stream ticks, KPIs count up, feed fills, no offline banner")
+        @step("Tonight: real clock, today so far, a real order arrives at its time, no speed control")
         def tonight_live():
             page.goto("/")
-            expect(page.get_by_role("button", name="Close shift")).to_be_enabled()
             assert page.locator(".offline").count() == 0, "offline banner shown against the real backend"
+            assert page.locator("header.top #speed").count() == 0, "speed control still in the top bar"
+            expect(page.locator(".hero").first).to_be_visible()
+            page.wait_for_function("document.fonts.check('16px \"Inter Variable\"')", timeout=10000)
+            lc = page.locator(".livec-clock")
+            if not in_service:  # a finished night: quiet Closed state, dot off, close available
+                expect(lc).to_have_text("Closed")
+                assert page.locator(".livedot.on").count() == 0
+                expect(page.get_by_role("button", name="Close shift")).to_be_enabled()
+                check_numbers(page, "Tonight")
+                shot(page, "tonight-live")
+                page.screenshot(path=str(SHOTS / "v4-tonight-live.png"))
+                return "closed night: Closed, dot off"
+            btn = page.get_by_role("button", name="Close shift")
+            expect(btn).to_be_disabled()
+            expect(btn).to_contain_text("unlocks")
+            expect(page.locator(".livedot.on")).to_have_count(1)
             kpi = page.locator(".kpi", has_text="Orders").locator(".v")
             feed = page.get_by_test_id("feed").locator("> div")
             expect(feed.first).to_be_visible(timeout=20000)
-            page.wait_for_timeout(600)
-            o1, c1 = num(kpi.inner_text()), page.locator(".livec-clock").inner_text()
-            page.wait_for_timeout(2200)
-            o2, c2 = num(kpi.inner_text()), page.locator(".livec-clock").inner_text()
-            assert o2 > o1, f"orders did not count up ({o1} -> {o2})"
-            assert c1 != c2, f"live clock stuck at {c1}"
-            loaded = page.evaluate("document.fonts.check('16px \"Inter Variable\"')")
-            assert loaded, "Inter not loaded"
+            page.wait_for_timeout(1500)  # the count-up tween settles on today so far
+            ov = api(base, "/overview")
+            o1, c1 = num(kpi.inner_text()), lc.inner_text()
+            assert abs(o1 - ov["kpis"]["orders"]) <= 3, f"KPI {o1} vs today so far {ov['kpis']['orders']}"
+            n1 = feed.count()
+            first1 = feed.first.inner_text()
+            t0 = time.time()
+            while time.time() - t0 < 150 and num(kpi.inner_text()) <= o1:  # real time: the next order comes at its own time
+                page.wait_for_timeout(1000)
+            o2, c2 = num(kpi.inner_text()), lc.inner_text()
+            assert o2 > o1, f"no live order arrived in {time.time() - t0:.0f}s ({o1} -> {o2})"
+            assert feed.first.inner_text() != first1 or feed.count() > n1, "feed did not take the new order"
+            waited = time.time() - t0
+            assert waited > 1.0, "orders jumped without waiting for real time"
             check_numbers(page, "Tonight")
             shot(page, "tonight-live")
-            return f"orders {o1:.0f} -> {o2:.0f}, clock {c1} -> {c2}, {feed.count()} feed rows"
+            page.screenshot(path=str(SHOTS / "v4-tonight-live.png"))
+            return f"orders {o1:.0f} -> {o2:.0f} after {waited:.0f}s real time, clock {c1} -> {c2}"
         tonight_live()
 
         @step("Tonight: hover tooltip, click a 15-min point opens its breakdown")
@@ -168,7 +196,26 @@ def main():
             expect(date_label).to_have_attribute("data-date", d1)
             page.get_by_role("button", name="Today").click()
             expect(date_label).to_have_attribute("data-date", today)
-            return f"{d0} → {d1} → {d2} → {d1} → Today"
+            # nothing after today: → stays, › disabled, later days in the picker disabled
+            page.locator("h1").click()
+            page.keyboard.press("ArrowRight")
+            page.wait_for_timeout(200)
+            expect(date_label).to_have_attribute("data-date", today)
+            expect(page.get_by_role("button", name="Next day")).to_be_disabled()
+            date_label.click()
+            pick = page.get_by_role("dialog", name="Choose a date")
+            expect(pick).to_be_visible()
+            day_n = int(today[8:])
+            later = pick.locator(".mpick-g button").filter(has_text=re.compile(rf"^{day_n + 1}$"))
+            if later.count():
+                expect(later.first).to_be_disabled()
+            expect(pick.get_by_role("button", name="Next month")).to_be_disabled()
+            if in_service:
+                expect(page.get_by_test_id("feed").locator("> div").first).to_be_visible()
+            page.wait_for_timeout(900)  # let the picker and the page settle
+            page.screenshot(path=str(SHOTS / "v4-date-limit.png"))
+            page.keyboard.press("Escape")
+            return f"{d0} → {d1} → {d2} → {d1} → Today; → stops at {today}"
         keys()
 
         @step("Insights: brush a range, breakdown shows drivers, double-click resets")
@@ -237,6 +284,13 @@ def main():
         @step("Close shift: chashu left 0, run reaches done over SSE")
         def close():
             page.get_by_role("link", name="Tonight").click()
+            night = today
+            if in_service:  # tonight's close is locked until closing time: close the previous night
+                expect(page.get_by_role("button", name="Close shift")).to_be_disabled()
+                page.locator("h1").click()
+                page.keyboard.press("ArrowLeft")
+                night = date_label.get_attribute("data-date")
+                assert night < today
             page.get_by_role("button", name="Close shift").click()
             page.locator("#cnt-Chashu").fill("0")
             page.get_by_role("button", name="Start the close").click()
@@ -246,7 +300,7 @@ def main():
             expect(page.get_by_text(re.compile(r"Finished in [\d.]+s"))).to_be_visible(timeout=60000)
             expect(page.get_by_text("8 of 8 done")).to_be_visible()
             title = page.locator("h3", has_text=re.compile(r"^(Text|No text)")).inner_text()
-            detail = api(base, f"/closes/{today}")
+            detail = api(base, f"/closes/{night}")
             urgent = [f for f in detail["findings"] if f.get("urgency") == "urgent"]
             if urgent:
                 assert "nothing urgent" not in title, f"says {title!r} with {len(urgent)} urgent findings"
@@ -258,12 +312,17 @@ def main():
             lit = page.evaluate("() => [...document.querySelectorAll('.rail [data-agent]')].filter(e => e.dataset.last).map(e => e.dataset.agent)")
             for a in ["coordinator", "books", "stock", "demand", "analyst", "plan"]:
                 assert a in lit, f"rail has no action for {a}: {lit}"
-            return f"text card: {title!r}; rail lit {len(lit)} agents"
+            if night != today:
+                page.get_by_role("link", name="Tonight").click()
+                page.get_by_role("button", name="Today").click()
+                expect(date_label).to_have_attribute("data-date", today)
+            return f"closed {night}: text card {title!r}; rail lit {len(lit)} agents"
         close()
 
         @step("Tomorrow: drag the run-out handle moves pause times, edit prep, approve")
         def tomorrow():
-            page.get_by_role("link", name="Review tomorrow's card").click()
+            rv = page.get_by_role("link", name="Review tomorrow's card")
+            (rv if rv.count() else page.get_by_role("link", name="Tomorrow", exact=True)).click()
             page.wait_for_url(re.compile(r"/tomorrow"))
             inp = page.locator("#prep-0")
             expect(inp).to_be_visible()

@@ -18,6 +18,7 @@ from fastapi.responses import StreamingResponse
 from starlette.concurrency import run_in_threadpool
 
 from .. import clock
+from .. import now as wallclock
 from ..metrics import ROOT, Store
 from ..tools import analyst, plan
 from .runs import sse_format
@@ -43,9 +44,32 @@ def _db_version() -> int:
         return 0
 
 
+UNCUT = {"timeline"}  # computed from the whole day (the live stream paces it in real time)
+
+
+def cut() -> tuple[str, str | None]:
+    """(today, cutoff) of the store clock (gondola/now.py)."""
+    return wallclock.cut(DB)
+
+
+def today() -> str:
+    return cut()[0]
+
+
+def _cut_key(name: str, args: tuple):
+    """The clock only matters for results that can see today: no date args, or a date arg on/after today."""
+    if name in UNCUT:
+        return None
+    t, hm = cut()
+    if not args or any(isinstance(a, str) and len(a) == 10 and a[4] == "-" and a >= t for a in args):
+        return (t, hm)
+    return None
+
+
 def cached(name: str, fn, *args, maxsize: int = 512):
-    """fn(*args), memoized per database version. Concurrent first calls for one key compute once."""
-    key = (name, _db_version()) + tuple(args)
+    """fn(*args), memoized per database version (and per clock minute when today is involved). Concurrent first
+    calls for one key compute once."""
+    key = (name, _db_version(), _cut_key(name, args)) + tuple(args)
     with _CLOCK:
         if key in _CACHE:
             _CACHE.move_to_end(key)
@@ -74,7 +98,8 @@ def cached(name: str, fn, *args, maxsize: int = 512):
 
 
 def store() -> Store:
-    return Store(DB)
+    """The database as of now: today cut at the current minute (see Store(cut=...))."""
+    return Store(DB, cut=cut())
 
 
 def daily_frame() -> pd.DataFrame:
@@ -84,7 +109,7 @@ def daily_frame() -> pd.DataFrame:
 
 def _date(d: str | None) -> str:
     if not d:
-        return str(daily_frame().business_date.max().date())
+        return today()
     try:
         return str(pd.Timestamp(d).date())
     except Exception:
@@ -116,11 +141,21 @@ def _slot_frame(dates: list[str]) -> pd.DataFrame:
     return store().df(q, [dates])
 
 
+def slots_for(d: str) -> tuple[range, str | None]:
+    """The 15-minute bins that exist for d: today stops at the bin in progress (later bins are absent, not zero)."""
+    t, hm = cut()
+    if d != t or hm is None:
+        return SLOTS, None
+    m = int(hm[:2]) * 60 + int(hm[3:5])
+    return range(SLOTS.start, max(SLOTS.start, min(SLOTS.stop, m // 15 + 1 if m % 15 else m // 15))), hm
+
+
 def intraday(d: str) -> dict:
     x = _slot_frame([d])
     c = x[x.status == "completed"]
     bins = []
-    for s in SLOTS:
+    slots, as_of = slots_for(d)
+    for s in slots:
         cs = c[c.slot == s]
         bins.append({"time": f"{s // 4:02d}:{s % 4 * 15:02d}", "orders": int(cs.n.sum()),
                      "by_channel": {ch: int(cs[cs.channel == ch].n.sum()) for ch in CHANNELS},
@@ -132,7 +167,7 @@ def intraday(d: str) -> dict:
         u = _slot_frame(base)
         u = u[u.status == "completed"].groupby("slot").n.sum() / len(base)
         usual = [{"time": f"{s // 4:02d}:{s % 4 * 15:02d}", "orders": round(float(u.get(s, 0.0)), 2)} for s in SLOTS]
-    return {"date": d, "closed": not len(x), "bins": bins, "usual": usual, "baseline_dates": base}
+    return {"date": d, "closed": not len(x), "bins": bins, "usual": usual, "baseline_dates": base, "as_of": as_of}
 
 
 @router.get("/metrics/intraday")
@@ -324,7 +359,9 @@ async def day_detail(date: str):
     def build():
         ov = A.overview(d)
         try:
-            close = A.close_detail(d)
+            t, hm = cut()
+            # tonight's close (e.g. from an earlier run) stays hidden until the night is over
+            close = None if (d == t and hm is not None) else A.close_detail(d)
         except HTTPException:
             close = None
         return {"date": d, "overview": ov, "close": close, "report": A.report_ref(d),
@@ -356,8 +393,9 @@ def _card_for(d: str) -> tuple[list, str | None]:
 
 
 def timeline(d: str) -> dict:
-    """Every event of the day's service, in order, from the orders table. (sim_second, priority, name, payload)."""
-    st = store()
+    """Every event of the day's service, in order, from the orders table. (sim_second, priority, name, payload).
+    Reads the whole day (not cut at now): the stream releases each event at its own time."""
+    st = Store(DB)
     o = st.df("""SELECT o.order_id AS id, o.created_at, o.channel, o.subtotal, o.status, o.cancel_reason,
                         list(l.item) FILTER (WHERE l.item IS NOT NULL) AS items, COALESCE(SUM(m.chashu_portions), 0) AS chashu
                  FROM orders o LEFT JOIN order_lines l USING(order_id) LEFT JOIN menu m ON m.item = l.item
@@ -468,23 +506,36 @@ def timeline(d: str) -> dict:
 
 def _parse_hm(s: str) -> int:
     try:
-        h, m = s.split(":")[:2]
-        h, m = int(h), int(m)
-        assert 0 <= h < 24 and 0 <= m < 60
-        return h * 3600 + m * 60
+        p = s.split(":")
+        assert 2 <= len(p) <= 3
+        h, m, sec = int(p[0]), int(p[1]), int(p[2]) if len(p) == 3 else 0
+        assert 0 <= h < 24 and 0 <= m < 60 and 0 <= sec < 60
+        return h * 3600 + m * 60 + sec
     except Exception:
-        raise HTTPException(400, f"bad time '{s}' (use HH:MM)")
+        raise HTTPException(400, f"bad time '{s}' (use HH:MM or HH:MM:SS)")
 
 
-async def _live_events(tl: dict, start: int, speed: float, request: Request):
+async def _live_events(tl: dict, start: int, speed: float, request: Request, catchup: bool = False):
     """Pace the precomputed timeline in real time (absolute schedule, so no drift). One SSE message per event; a comment
-    heartbeat during long gaps; stops when the client goes away."""
+    heartbeat during long gaps; stops when the client goes away. catchup: first send, at once, every order and event
+    before `start` (flagged "catchup": true) and the last tick before it, so a client joining mid-service has the day
+    so far without a second request."""
     loop = asyncio.get_running_loop()
     events = [e for e in tl["events"] if e[0] >= start]
     yield ": gondola live\n\n"
-    yield sse_format("start", {"date": tl["date"], "from": _hms(start)[:5], "speed": speed, "par": tl["par"],
+    yield sse_format("start", {"date": tl["date"], "from": _hms(start), "speed": speed, "par": tl["par"],
                                "open": _hms(tl["open"])[:5], "close": _hms(tl["close"])[:5], "orders_total": tl["final"]["placed"],
-                               "card_source": tl["card_source"], "rush": tl["rush"]})
+                               "card_source": tl["card_source"], "rush": tl["rush"], "catchup": catchup})
+    if catchup:
+        before = [e for e in tl["events"] if e[0] < start]
+        last_tick = next((e for e in reversed(before) if e[2] == "tick"), None)
+        for i, (_t, _p, name, payload) in enumerate(before):
+            if name != "tick":
+                yield sse_format(name, {**payload, "catchup": True})
+            if i % 200 == 0:
+                await asyncio.sleep(0)
+        if last_tick:
+            yield sse_format("tick", {**last_tick[3], "catchup": True})
     t0 = loop.time()
     sent = 0
     for sim_t, _p, name, payload in events:
@@ -509,7 +560,7 @@ async def _live_events(tl: dict, start: int, speed: float, request: Request):
 
 
 @router.get("/live/stream")
-async def live_stream(request: Request, date: str | None = None, speed: float = 60.0):
+async def live_stream(request: Request, date: str | None = None, speed: float = 60.0, catchup: bool = False):
     d = _date(date)
     frm = request.query_params.get("from", "11:00")
     start = _parse_hm(frm)
@@ -522,5 +573,5 @@ async def live_stream(request: Request, date: str | None = None, speed: float = 
             yield sse_format("done", {"status": "closed", "date": d, **tl["final"]})
         return StreamingResponse(closed(), media_type="text/event-stream",
                                  headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
-    return StreamingResponse(_live_events(tl, start, float(speed), request), media_type="text/event-stream",
+    return StreamingResponse(_live_events(tl, start, float(speed), request, catchup), media_type="text/event-stream",
                              headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no", "Connection": "keep-alive"})

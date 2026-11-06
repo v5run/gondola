@@ -91,13 +91,25 @@ templates). Fill in what you have:
 Fallbacks: the Alerts screen is the SMS fallback if Twilio is down; the bundled `web/public/sample-report.pdf`
 if the PDF can't render.
 
+### The store clock
+
+The dashboard runs on the real clock (America/New_York). The business day runs until 4 a.m. When the real business
+date is in the data, Tonight is that day so far: only orders placed before the current minute count, the curve stops
+at now, new orders arrive at their real times (no fast-forward), and Close shift unlocks at closing time (10 pm, 11 pm
+Fri/Sat). Otherwise today is the latest day in the data, shown complete and closed (live dot off, "Closed"). Nothing
+after today exists; past nights are a step back in the date control (← / the calendar). `GET /api/now` reports the clock.
+
+Test hook (not for the demo): `GONDOLA_NOW=2026-11-05T19:30:00` starts the clock at that time and lets it run;
+`GONDOLA_CLOCK=frozen` holds it there. The tests use it (`tests/conftest.py`, `tests/test_clock.py`), and so can
+`web/scripts/e2e.py` to see orders arrive mid-service.
+
 ## What's live vs demo
 
 | Live (real code, real results) | Demo / simulated |
 |---|---|
 | Every calculation, forecast + backtests, prep optimizer, coordinator, guardrail, PDF, report bucket lifecycle | The store: a generated year of Hanabi Ramen data (files instead of POS/app APIs) |
 | Twilio SMS, SendGrid email, Gemini wording, ADK agent mode (when keys are set) | Texts/emails go to the outbox when keys aren't set |
-| Square sandbox orders, DoorDash test-store pause (if Marketplace access is granted) | Uber Eats and Grubhub pauses (partner-gated), app payout reports (CSV), the live order stream (the demo night replayed from the database) |
+| Square sandbox orders, DoorDash test-store pause (if Marketplace access is granted) | Uber Eats and Grubhub pauses (partner-gated), app payout reports (CSV), the live order stream (the data's orders released at their real times of day) |
 | The Guard's rule and recount logic | "Now" is the last business date in the data (Nov 5 2026); close messages are stamped 11:10 pm that night |
 
 ## History (backfill)

@@ -170,6 +170,7 @@ export const mock = {
     const body = init?.body ? JSON.parse(String(init.body)) : {};
     if (p === "/health") return { ok: true, version: "mock" };
     if (p === "/store") return fx.store;
+    if (p === "/now") return { today: fx.store.today, now: new Date().toTimeString().slice(0, 8), tz: "America/New_York", mapped: true, open: "11:00", close: "22:00", phase: "closed", cutoff: null };
     if (p === "/integrations") return { twilio: { live: false }, sendgrid: { live: false }, llm: { live: false }, square: { live: false }, doordash: { live: false } };
     if (p === "/overview") return overviewFor(q.get("date") || fx.store.today);
     if (p === "/metrics/daily") return metricsRange(q.get("start") || "0000", q.get("end") || "9999");

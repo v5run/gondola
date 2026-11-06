@@ -1,7 +1,8 @@
 import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { api } from "../api/client";
-import type { IntradayBin, LiveOrder, LiveTick, Point } from "../api/types";
+import { useEffect } from "react";
+import type { IntradayBin, LiveOrder, Point } from "../api/types";
 import { Page } from "../components/Page";
 import { ChannelLegend, DayCurve, HBar, StackedBins } from "../components/charts";
 import {
@@ -9,22 +10,18 @@ import {
 } from "../components/ui";
 import { dowName, fmtMonthDay, fromMin, toMin } from "../lib/dates";
 import { shortEvent } from "../lib/events";
-import { useApp, useLive } from "../state";
+import { useApp, useClock, useLive } from "../state";
 import { WhySlot, useWhy, type WhyTarget } from "../why";
 import { Own } from "../agents";
 
 const bin = (t: string) => fromMin(Math.floor(toMin(t) / 15) * 15);
 
-/** Orders per 15 minutes from cumulative live ticks. */
-function curveFromTicks(ticks: LiveTick[]): Point[] {
+/** Orders placed per 15 minutes from the live order feed (every status, as the usual curve counts them). */
+function curveFromOrders(orders: LiveOrder[], nowMin: number): Point[] {
   const out = new Map<string, number>();
-  let prev = 0;
-  for (const t of ticks) {
-    const b = bin(t.t);
-    out.set(b, (out.get(b) || 0) + Math.max(0, t.orders - prev));
-    prev = t.orders;
-  }
-  return [...out].map(([time, orders]) => ({ time, orders }));
+  for (let m = 11 * 60; m + 15 <= nowMin + 1; m += 15) out.set(fromMin(m), 0); // quiet bins so far read as 0
+  for (const o of orders) { const b = bin(o.t); out.set(b, (out.get(b) || 0) + 1); }
+  return [...out].map(([time, orders]) => ({ time, orders })).sort((a, b) => a.time.localeCompare(b.time));
 }
 
 /** Channel bins from the order feed; bins before the feed began come from the day's intraday data. */
@@ -43,8 +40,9 @@ function binsFromFeed(orders: LiveOrder[], base: IntradayBin[], nowMin: number):
 }
 
 export default function Tonight() {
-  const { date, view, store } = useApp();
+  const { date, view, store, now, inService } = useApp();
   const live = useLive();
+  const t = useClock();
   const why = useWhy();
   const nav = useNavigate();
   const ov = useLoad(() => (date ? api.overview(date) : new Promise<never>(() => {})), [date]);
@@ -55,19 +53,24 @@ export default function Tonight() {
   const [open, setOpen] = useState(false);
   const o = ov.data && ov.data.date === date ? ov.data : null;
   const closed = !!o && (o.closed || !o.kpis);
-  const isLive = view === "live" && live.date === date && live.ticks.length > 0 && !closed;
-  const tick = isLive ? live.ticks[live.ticks.length - 1] : null;
-  const nowMin = tick ? toMin(tick.t) : null;
+  const isToday = !!now && date === now.today;
+  // live = today in service on the real clock; a finished night (or any earlier day) reads as the whole day
+  const isLive = view === "live" && isToday && inService && live.date === date && live.status !== "idle" && !closed && !!live.cur;
+  const tick = isLive ? live.cur : null;
+  const nowMin = isLive && t ? toMin(t.slice(0, 5)) : null;
+  // opening time arrives while the page is open: the first real order brings the day in
+  const firstIn = live.date === date && live.orders.length > 0;
+  useEffect(() => { if (o?.not_open_yet && firstIn) ov.reload(); }, [firstIn]); // eslint-disable-line
   const dow = date ? dowName(date) : "";
   const vs = (k: string): number | null => (o?.vs_usual ? o.vs_usual[`${k}_pct`] ?? o.vs_usual[k] ?? null : null);
 
   // ---- live derivations
   // the bin still in progress would read as a dip, so the line stops at the last complete 15 minutes
   const liveCurve = useMemo(() => {
-    if (!isLive) return [];
-    const c = curveFromTicks(live.ticks);
-    return live.status === "done" ? c : c.filter((p) => toMin(p.time) + 15 <= (nowMin ?? 0) + 1);
-  }, [isLive, live.ticks.length, live.status]); // eslint-disable-line
+    if (!isLive || nowMin === null) return [];
+    const c = curveFromOrders(live.orders, nowMin);
+    return live.status === "done" ? c : c.filter((p) => toMin(p.time) + 15 <= nowMin);
+  }, [isLive, live.orders.length, live.status, nowMin === null ? -1 : Math.floor(nowMin / 15)]); // eslint-disable-line
   const usualSoFar = useMemo(() => {
     if (!o || nowMin === null) return null;
     const tot = o.curve_usual.reduce((a, p) => a + p.orders, 0);
@@ -106,14 +109,18 @@ export default function Tonight() {
 
   const soldLive = isLive && (live.status === "done" || live.events.some((e) => e.kind === "sold_out") || (tick?.chashu_left ?? 1) <= 0);
   const so = !isLive || soldLive ? day.data?.close?.sold_out || null : null;
-  const startLeft = isLive ? Math.max(...live.ticks.map((t) => t.chashu_left), 1) : so?.prepped ?? null;
+  const startLeft = isLive ? Math.max(live.par ?? 0, 1) : so?.prepped ?? null;
   const left = tick ? tick.chashu_left : so ? 0 : null;
   const md = date ? fmtMonthDay(date) : "";
 
   const dayT: WhyTarget = { kind: "day", date };
   const openDay = (anchor: string) => why.open(dayT, anchor);
   const sel = why.target?.kind === "bin" && why.target.date === date ? why.target.time : null;
-  const actions = <button className="btn" onClick={() => setOpen(true)} disabled={!o || closed}>Close shift</button>;
+  // tonight's close unlocks at closing time; earlier nights can be (re)closed any time
+  const locked = isToday && inService;
+  const actions = locked
+    ? <button className="btn" disabled aria-label="Close shift" title={`Tonight's close unlocks at ${clock(now!.close)}`}>Close shift<span className="unlock"> · unlocks {clock(now!.close)}</span></button>
+    : <button className="btn" onClick={() => setOpen(true)} disabled={!o || closed}>Close shift</button>;
   return (
     <Page title="Tonight" actions={actions}>
       {ov.error && <ErrorBox error={ov.error} retry={ov.reload} />}
@@ -123,7 +130,8 @@ export default function Tonight() {
       </>}
       {o && closed && (
         <section className="hero" style={{ gridTemplateColumns: "1fr" }}>
-          <div><div className="lab">{dow}</div><div className="big">Closed</div>
+          <div><div className="lab">{dow}</div><div className="big">{o.not_open_yet ? "Not open yet" : "Closed"}</div>
+            {o.not_open_yet && o.opens && <div className="ink2" style={{ marginTop: 6 }}>Opens at {clock(o.opens)}</div>}
             <div className="drv">{(o.context?.events || []).map((e) => <div key={e}><span>{e}</span></div>)}</div></div>
         </section>
       )}

@@ -38,7 +38,8 @@ def out_dir() -> Path:
 
 
 def store() -> Store:
-    return Store(DB)
+    """The database as of now (today cut at the current minute; gondola/now.py)."""
+    return Store(DB, cut=v3.cut())
 
 
 @app.on_event("startup")
@@ -56,7 +57,7 @@ async def _http_err(request: Request, exc: HTTPException):
 
 def _date(d: str | None) -> str:
     if not d:
-        return str(store().last_date().date())
+        return v3.today()
     try:
         return str(pd.Timestamp(d).date())
     except Exception:
@@ -74,10 +75,17 @@ def health():
     return {"ok": True, "version": VERSION}
 
 
+@app.get("/api/now")
+def now_info():
+    """The store clock: real time in America/New_York mapped onto the data (gondola/now.py)."""
+    from .. import now
+    return now.info(DB)
+
+
 @app.get("/api/store")
 def store_info():
     st = store()
-    today = st.last_date()
+    today = pd.Timestamp(v3.today())
     first = pd.Timestamp(st.df("SELECT min(business_date) d FROM orders").d[0])
     return {**STORE_INFO, "today": str(today.date()), "tomorrow": str((today + pd.Timedelta(days=1)).date()),
             "first_date": str(first.date())}
@@ -101,14 +109,14 @@ def integrations():
 
 
 # ------------------------------------------------------------------ overview and metrics
-def _curve(st: Store, dates: list[str]) -> list[dict]:
+def _curve(st: Store, dates: list[str], slots=range(44, 92)) -> list[dict]:
     if not dates:
         return []
     q = """SELECT business_date, extract(hour FROM created_at)*4 + extract(minute FROM created_at)//15 AS slot, COUNT(*) n
            FROM orders WHERE business_date IN (SELECT unnest(?::DATE[])) GROUP BY 1,2"""
     x = st.df(q, [dates])
     prof = x.groupby("slot").n.sum() / len(dates)
-    prof = prof.reindex(range(44, 92), fill_value=0)
+    prof = prof.reindex(slots, fill_value=0)
     return [{"time": f"{int(s)//4:02d}:{int(s)%4*15:02d}", "orders": round(float(v), 2)} for s, v in prof.items()]
 
 
@@ -136,10 +144,13 @@ def _overview_core(d: str) -> dict:
     st = store()
     daily = v3.daily_frame()
     row = daily[daily.business_date == pd.Timestamp(d)]
+    slots, as_of = v3.slots_for(d)
     if row.empty or float(row.orders.iloc[0]) == 0:
         cal = st.df("SELECT holiday FROM calendar WHERE date = ?", [d])
         h = cal.holiday[0] if len(cal) and isinstance(cal.holiday[0], str) else None
-        return {"date": d, "closed": True, "kpis": None, "vs_usual": None, "context": {"rain": False, "events": [h] if h else []},
+        ni = now_info()
+        not_open = d == ni["today"] and ni["phase"] == "before_open"
+        return {"date": d, "closed": True, "not_open_yet": not_open, "opens": ni["open"] if not_open else None, "as_of": as_of, "kpis": None, "vs_usual": None, "context": {"rain": False, "events": [h] if h else []},
                 "curve_today": [], "curve_usual": [], "channels": []}
     r = row.iloc[0]
     cmp_ = analyst.compare_periods(st, d, daily=daily)
@@ -148,9 +159,9 @@ def _overview_core(d: str) -> dict:
             "labour_pct": round(float(r.labour_pct), 4) if r.labour_pct == r.labour_pct else None,
             "cancels": int(r.cancels), "avoidable_cancels": int(r.avoidable_cancels)}
     vs = {f"{m}_pct": (cmp_.get(m) or {}).get("change_pct") for m in ("net_sales", "orders", "avg_ticket", "labour_pct", "cancels")}
-    return {"date": d, "closed": False, "kpis": kpis, "vs_usual": vs, "baseline_dates": cmp_.get("baseline_dates", []),
+    return {"date": d, "closed": False, "as_of": as_of, "kpis": kpis, "vs_usual": vs, "baseline_dates": cmp_.get("baseline_dates", []),
             "context": {"rain": bool(ex["context"].get("rain")), "events": ex["context"].get("events", [])},
-            "curve_today": _curve(st, [d]), "curve_usual": _curve(st, cmp_.get("baseline_dates", [])),
+            "curve_today": _curve(st, [d], slots), "curve_usual": _curve(st, cmp_.get("baseline_dates", [])),
             "channels": ex.get("channel", [])}
 
 
@@ -175,8 +186,8 @@ _FC_CACHE: dict = {}
 
 @app.get("/api/forecast")
 def forecast(date: str | None = None):
-    st = store()
-    d = _date(date) if date else str((st.last_date() + pd.Timedelta(days=1)).date())
+    st = Store(DB, cut=(v3.today(), None))  # the forecast plans from whole days: today counts in full
+    d = _date(date) if date else str((pd.Timestamp(v3.today()) + pd.Timedelta(days=1)).date())
     if d in _FC_CACHE:
         return _FC_CACHE[d]
     bt = None
@@ -204,6 +215,13 @@ async def start_close(request: Request):
     except Exception:
         body = {}
     d = _date(body.get("date"))
+    ni = now_info()
+    if d > ni["today"]:
+        raise HTTPException(400, f"{d} has not happened yet")
+    if d == ni["today"] and ni["phase"] != "closed":
+        h, m = int(ni["close"][:2]), int(ni["close"][3:])
+        raise HTTPException(409, f"The store is open until {h % 12 or 12}:{m:02d} {'pm' if h >= 12 else 'am'}; "
+                                 f"tonight's close unlocks then.")
     pc = body.get("portion_counts")
     force = bool(body.get("force", False))
     run = new_run("close")

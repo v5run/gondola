@@ -57,11 +57,12 @@
   "uri": "daily/2026/08/2026-08-27.pdf",
   "findings": "daily/2026/08/2026-08-27.findings.json",
   "html": "daily/2026/08/2026-08-27.html",
-  "sha256": null,
+  "sha256": "746b8b92c916a5ec0a3ddc22853e078f4cf097828380a73030141aad63d83c7c",
   "template_version": "v1",
-  "created_at": "2026-08-27T23:10:00",
-  "expires_at": "2026-09-26T23:10:00",
-  "status": "expired"
+  "created_at": "2026-10-14T01:46:58.049444",
+  "expires_at": "2026-11-13T01:46:58.049465",
+  "status": "rebuilt",
+  "rebuilt_at": "2026-11-06T01:46:58"
  },
  "daily/2026-08-28": {
   "kind": "daily",
@@ -69,11 +70,12 @@
   "uri": "daily/2026/08/2026-08-28.pdf",
   "findings": "daily/2026/08/2026-08-28.findings.json",
   "html": "daily/2026/08/2026-08-28.html",
-  "sha256": null,
+  "sha256": "274c38f79d7351c09d2a155c71aae65153b371191704089a45bfa97eabfc3584",
   "template_version": "v1",
-  "created_at": "2026-08-28T23:10:00",
-  "expires_at": "2026-09-27T23:10:00",
-  "status": "expired"
+  "created_at": "2026-10-14T01:47:44.578153",
+  "expires_at": "2026-11-13T01:47:44.578166",
+  "status": "rebuilt",
+  "rebuilt_at": "2026-11-06T01:47:44"
  },
  "daily/2026-08-29": {
   "kind": "daily",
@@ -920,7 +922,7 @@
   "uri": "daily/2026/11/2026-11-04.pdf",
   "findings": "daily/2026/11/2026-11-04.findings.json",
   "html": "daily/2026/11/2026-11-04.html",
-  "sha256": "95db7ac4905235b9c3d0f6dc030f946c11a12ac50c6e4bd20491c27d2cdfc5e3",
+  "sha256": "17332f6032c2460bed1fcdc6423b18e383ece51beae6d9e57479a7cc66701acc",
   "template_version": "v1",
   "created_at": "2026-11-04T23:10:00",
   "expires_at": "2026-12-04T23:10:00",

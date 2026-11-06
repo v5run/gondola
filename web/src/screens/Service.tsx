@@ -5,7 +5,7 @@ import { Page } from "../components/Page";
 import { HBar } from "../components/charts";
 import { CH_COLOR, FoodIcon, Icon, NumberField, Tween, appName, clock, useLoad } from "../components/ui";
 import { fmtMonthDay, fromMin, toMin } from "../lib/dates";
-import { useApp, useToast } from "../state";
+import { SPEEDS, useApp, useToast } from "../state";
 import { Own, useAgents } from "../agents";
 
 const CHANNELS: Channel[] = ["in_store", "doordash", "ubereats", "grubhub"];
@@ -14,7 +14,8 @@ const MENU = [["Tonkotsu", "19.25"], ["Spicy Miso", "19.25"], ["Shoyu", "18.15"]
 interface Ev { t: string; text: string; kind: "pause" | "recount" | "info" | "sold" }
 
 export default function Service() {
-  const { date, speed } = useApp();
+  const { date } = useApp();
+  const [speed, setSpeed] = useState(600); // the Guard replay keeps its own speed; the dashboard runs on the real clock
   const toast = useToast();
   const { pulse } = useAgents();
   const [run, setRun] = useState<string | null>(null);
@@ -95,6 +96,9 @@ export default function Service() {
   const live = !!run && follow;
 
   const actions = <>
+    <select id="speed" className="input slim" aria-label="Replay speed" value={speed} onChange={(e) => setSpeed(Number(e.target.value))}>
+      {SPEEDS.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
+    </select>
     {run ? <button className="btn" onClick={stop}>Stop</button> : <button className="btn" onClick={start} disabled={!date}>{done ? "Replay again" : "Start service"}</button>}
   </>;
   return (

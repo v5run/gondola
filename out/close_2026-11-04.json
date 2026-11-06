@@ -1,31 +1,31 @@
 {
  "date": "2026-11-04",
- "db": ".out_backfill/_db/night_2026-11-04.duckdb",
+ "db": "data/gondola.duckdb",
  "log": [
   {
    "step": "stock",
    "status": "done",
-   "seconds": 0.03
+   "seconds": 0.07
   },
   {
    "step": "books",
    "status": "done",
-   "seconds": 0.17
+   "seconds": 0.43
   },
   {
    "step": "demand",
    "status": "done",
-   "seconds": 0.28
+   "seconds": 0.55
   },
   {
    "step": "analyst",
    "status": "done",
-   "seconds": 0.05
+   "seconds": 0.07
   },
   {
    "step": "plan",
    "status": "done",
-   "seconds": 0.02
+   "seconds": 0.07
   },
   {
    "step": "sentinel",
@@ -35,7 +35,7 @@
   {
    "step": "report",
    "status": "done",
-   "seconds": 0.02
+   "seconds": 1.03
   },
   {
    "step": "guard",
@@ -1155,8 +1155,8 @@
    {
     "item": "Chashu",
     "target": 700,
-    "on_hand": 24.0,
-    "prep": 680,
+    "on_hand": 0.0,
+    "prep": 700,
     "pause_at": {
      "doordash": null,
      "ubereats": null,
@@ -1172,7 +1172,7 @@
    }
   ],
   "portion_counts": {
-   "chashu": 24.0
+   "chashu": 0
   }
  },
  "cancel_rate": 0.004929143561306223,
@@ -1246,6 +1246,6 @@
   "note": "Rule armed; executor fires during service when the trigger is met."
  },
  "status": "done",
- "seconds": 0.38,
- "run_id": "2026-11-04-20261105T214513912610"
+ "seconds": 1.73,
+ "run_id": "2026-11-04-20261106T014726984093"
 }

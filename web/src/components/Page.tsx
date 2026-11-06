@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { SPEEDS, useApp, useLive } from "../state";
+import { useApp, useClock, useLive } from "../state";
 import { D, iso } from "../lib/dates";
 import { Icon, Segmented, clock } from "./ui";
 
@@ -69,18 +69,19 @@ function MonthPicker({ value, min, max, onPick, onClose }: { value: string; min:
   );
 }
 
+/** A calm live dot and the real time while today is in service; "Closed" once the night is over. */
 export function LiveControl() {
-  const { view, setView, speed, setSpeed } = useApp();
+  const { view, setView, date, now, inService } = useApp();
+  const t = useClock();
   const live = useLive();
-  const running = view === "live" && (live.status === "running" || live.status === "connecting");
+  const isToday = !!now && date === now.today;
+  const on = view === "live" && isToday && inService && live.status !== "error";
   return (
     <div className="livec">
-      {view === "live" && <span className={`livedot${running ? " on" : ""}`} aria-hidden="true" />}
-      {view === "live" && <span className="livec-clock num" aria-live="off">{live.clock ? clock(live.clock) : ""}</span>}
+      {view === "live" && isToday && <span className={`livedot${on ? " on" : ""}`} aria-hidden="true" />}
+      {view === "live" && isToday && <span className="livec-clock num" aria-live="off" title={now ? `${now.tz.replace("_", " ")} time` : undefined}>
+        {inService ? (t ? clock(t.slice(0, 5)) : "") : "Closed"}</span>}
       <Segmented label="View" value={view} onChange={setView} options={[["live", "Live"], ["day", "Day"]]} />
-      <select id="speed" className="input slim" aria-label="Replay speed" value={speed} onChange={(e) => setSpeed(Number(e.target.value))}>
-        {SPEEDS.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
-      </select>
     </div>
   );
 }
