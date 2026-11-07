@@ -1,0 +1,14 @@
+{
+  "checks": [
+    "Present navigation and compatibility route; four channels, 29 orders, four plans",
+    "Rules admission is atomic and reload restores decisions and receipt",
+    "Capacity disruption and progress update the shared plan",
+    "Stale browser plan is rejected and refreshed without admitting requests",
+    "Real Gemini specialist uses three tools and produces a read-back-verified local commit",
+    "Order Manager fits 900 and 390 pixel windows",
+    "Rush, promotions/Flex and four existing workflows remain reachable"
+  ],
+  "javascript_errors": [],
+  "real_model_requested": true,
+  "mode": "real local browser/API; synthetic orders; no merchant writes"
+}

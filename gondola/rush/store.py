@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
+from contextlib import contextmanager
 import uuid
 from datetime import datetime, timezone
 from pathlib import Path
@@ -10,11 +11,16 @@ from pathlib import Path
 DB = Path(__file__).resolve().parents[2] / ".local" / "rush-control.sqlite3"
 
 
+@contextmanager
 def _connect():
     DB.parent.mkdir(parents=True, exist_ok=True)
     con = sqlite3.connect(DB, timeout=15)
-    con.execute("CREATE TABLE IF NOT EXISTS artifacts (id TEXT PRIMARY KEY, kind TEXT NOT NULL, status TEXT NOT NULL, created TEXT NOT NULL, payload TEXT NOT NULL)")
-    return con
+    try:
+        con.execute("CREATE TABLE IF NOT EXISTS artifacts (id TEXT PRIMARY KEY, kind TEXT NOT NULL, status TEXT NOT NULL, created TEXT NOT NULL, payload TEXT NOT NULL)")
+        with con:
+            yield con
+    finally:
+        con.close()
 
 
 def create(kind: str, payload: dict) -> str:
@@ -37,7 +43,7 @@ def get(ident: str) -> dict | None:
 
 def recent() -> list[dict]:
     with _connect() as con:
-        rows = con.execute("SELECT id,kind,status,created FROM artifacts WHERE kind != 'comparison' ORDER BY created DESC LIMIT 20").fetchall()
+        rows = con.execute("SELECT id,kind,status,created FROM artifacts WHERE kind IN ('controller','policy_lab') ORDER BY created DESC LIMIT 20").fetchall()
     return [dict(zip(("id", "kind", "status", "created"), row)) for row in rows]
 
 

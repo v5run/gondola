@@ -1,0 +1,204 @@
+{
+  "mode": "real_model_synthetic_orders_local_commit",
+  "job_id": "322b13ea2f1c4823808c778bb38c026f",
+  "model": "gemini-3.1-flash-lite",
+  "tools": [
+    "inspect_demand",
+    "compare_admission_plans",
+    "select_checked_plan"
+  ],
+  "receipt": {
+    "event_id": "agent-1dc5418c195c4068b9aa7132be33cb20",
+    "source_mode": "local_simulation",
+    "external_verified": false,
+    "minute": 0,
+    "before_revision": 0,
+    "status": "applied",
+    "decision_mode": "model_selected",
+    "action": "admission_plan",
+    "strategy": "current",
+    "plan_id": "4447dc1190a3ed26c31c77d9",
+    "decisions": [
+      {
+        "order_key": "doordash:DOORDASH-01",
+        "decision": "accept_now",
+        "promise": 15,
+        "predicted_ready": 9,
+        "reason": "Reserved shared cooks, stations and finishing capacity within the authorized ready window"
+      },
+      {
+        "order_key": "ubereats:UBEREATS-01",
+        "decision": "accept_later",
+        "promise": 31,
+        "predicted_ready": 29,
+        "reason": "Reserved shared cooks, stations and finishing capacity within the authorized ready window"
+      },
+      {
+        "order_key": "pickup:PICKUP-01",
+        "decision": "accept_now",
+        "promise": 15,
+        "predicted_ready": 5,
+        "reason": "Reserved shared cooks, stations and finishing capacity within the authorized ready window"
+      },
+      {
+        "order_key": "doordash:DOORDASH-02",
+        "decision": "accept_later",
+        "promise": 16,
+        "predicted_ready": 14,
+        "reason": "Reserved shared cooks, stations and finishing capacity within the authorized ready window"
+      },
+      {
+        "order_key": "ubereats:UBEREATS-02",
+        "decision": "accept_later",
+        "promise": 36,
+        "predicted_ready": 34,
+        "reason": "Reserved shared cooks, stations and finishing capacity within the authorized ready window"
+      },
+      {
+        "order_key": "pickup:PICKUP-02",
+        "decision": "accept_now",
+        "promise": 15,
+        "predicted_ready": 8,
+        "reason": "Reserved shared cooks, stations and finishing capacity within the authorized ready window"
+      },
+      {
+        "order_key": "doordash:DOORDASH-03",
+        "decision": "accept_later",
+        "promise": 19,
+        "predicted_ready": 17,
+        "reason": "Reserved shared cooks, stations and finishing capacity within the authorized ready window"
+      },
+      {
+        "order_key": "ubereats:UBEREATS-03",
+        "decision": "accept_later",
+        "promise": 41,
+        "predicted_ready": 39,
+        "reason": "Reserved shared cooks, stations and finishing capacity within the authorized ready window"
+      },
+      {
+        "order_key": "pickup:PICKUP-03",
+        "decision": "accept_now",
+        "promise": 15,
+        "predicted_ready": 11,
+        "reason": "Reserved shared cooks, stations and finishing capacity within the authorized ready window"
+      },
+      {
+        "order_key": "doordash:DOORDASH-04",
+        "decision": "accept_later",
+        "promise": 23,
+        "predicted_ready": 21,
+        "reason": "Reserved shared cooks, stations and finishing capacity within the authorized ready window"
+      },
+      {
+        "order_key": "ubereats:UBEREATS-04",
+        "decision": "accept_later",
+        "promise": 46,
+        "predicted_ready": 44,
+        "reason": "Reserved shared cooks, stations and finishing capacity within the authorized ready window"
+      },
+      {
+        "order_key": "pickup:PICKUP-04",
+        "decision": "accept_now",
+        "promise": 15,
+        "predicted_ready": 12,
+        "reason": "Reserved shared cooks, stations and finishing capacity within the authorized ready window"
+      },
+      {
+        "order_key": "doordash:DOORDASH-05",
+        "decision": "accept_later",
+        "promise": 27,
+        "predicted_ready": 25,
+        "reason": "Reserved shared cooks, stations and finishing capacity within the authorized ready window"
+      },
+      {
+        "order_key": "ubereats:UBEREATS-05",
+        "decision": "accept_later",
+        "promise": 51,
+        "predicted_ready": 49,
+        "reason": "Reserved shared cooks, stations and finishing capacity within the authorized ready window"
+      },
+      {
+        "order_key": "doordash:DOORDASH-06",
+        "decision": "accept_later",
+        "promise": 17,
+        "predicted_ready": 15,
+        "reason": "Reserved shared cooks, stations and finishing capacity within the authorized ready window"
+      },
+      {
+        "order_key": "ubereats:UBEREATS-06",
+        "decision": "accept_later",
+        "promise": 35,
+        "predicted_ready": 33,
+        "reason": "Reserved shared cooks, stations and finishing capacity within the authorized ready window"
+      },
+      {
+        "order_key": "doordash:DOORDASH-07",
+        "decision": "accept_later",
+        "promise": 56,
+        "predicted_ready": 54,
+        "reason": "Reserved shared cooks, stations and finishing capacity within the authorized ready window"
+      },
+      {
+        "order_key": "ubereats:UBEREATS-07",
+        "decision": "accept_later",
+        "promise": 59,
+        "predicted_ready": 57,
+        "reason": "Reserved shared cooks, stations and finishing capacity within the authorized ready window"
+      },
+      {
+        "order_key": "doordash:DOORDASH-08",
+        "decision": "accept_later",
+        "promise": 20,
+        "predicted_ready": 18,
+        "reason": "Reserved shared cooks, stations and finishing capacity within the authorized ready window"
+      },
+      {
+        "order_key": "ubereats:UBEREATS-08",
+        "decision": "accept_later",
+        "promise": 39,
+        "predicted_ready": 37,
+        "reason": "Reserved shared cooks, stations and finishing capacity within the authorized ready window"
+      },
+      {
+        "order_key": "doordash:DOORDASH-09",
+        "decision": "decline",
+        "promise": null,
+        "predicted_ready": 62,
+        "reason": "Capacity needs ready minute 64; authorized/owner limit is 60"
+      },
+      {
+        "order_key": "doordash:DOORDASH-10",
+        "decision": "decline",
+        "promise": null,
+        "predicted_ready": 60,
+        "reason": "Capacity needs ready minute 62; authorized/owner limit is 60"
+      },
+      {
+        "order_key": "doordash:DOORDASH-11",
+        "decision": "accept_later",
+        "promise": 24,
+        "predicted_ready": 22,
+        "reason": "Reserved shared cooks, stations and finishing capacity within the authorized ready window"
+      },
+      {
+        "order_key": "doordash:DOORDASH-12",
+        "decision": "accept_later",
+        "promise": 43,
+        "predicted_ready": 41,
+        "reason": "Reserved shared cooks, stations and finishing capacity within the authorized ready window"
+      }
+    ],
+    "protected_order_keys": [
+      "dine_in:DINE_IN-01",
+      "dine_in:DINE_IN-02",
+      "dine_in:DINE_IN-03",
+      "dine_in:DINE_IN-04",
+      "dine_in:DINE_IN-05"
+    ],
+    "guard": "No increased estimated lateness for any prior commitment; frozen work preserved",
+    "after_revision": 1,
+    "receipt_id": "4988fc33531baa25fdb1928e"
+  },
+  "local_receipt_verified": true,
+  "external_verified": false
+}

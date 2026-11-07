@@ -1,0 +1,14 @@
+{
+  "full_suite_passed": 254,
+  "seconds": 227.59,
+  "new_order_tests": 29,
+  "production_build": "passed; 83 modules",
+  "browser_checks": 7,
+  "real_model_tools": [
+    "inspect_demand",
+    "compare_admission_plans",
+    "select_checked_plan"
+  ],
+  "unchanged_complete_rush_cases": 6,
+  "external_merchant_writes": false
+}

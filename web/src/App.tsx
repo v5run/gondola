@@ -16,6 +16,7 @@ import Ask from "./screens/Ask";
 import Alerts from "./screens/Alerts";
 import Rush from "./screens/Rush";
 import Flex from "./screens/Flex";
+import OrderManager from "./screens/OrderManager";
 import Queue from "./screens/Queue";
 import RestOfToday from "./screens/RestOfToday";
 import Tomorrow from "./screens/Tomorrow";
@@ -72,6 +73,8 @@ function Shell() {
       <main className="main">
         {mode === "mock" && <div className="offline" role="status"><i className="dot" />Backend offline Â· sample data</div>}
         <Routes>
+          <Route path="/present/orders" element={<Page title="Present" live={false} date={false}><OrderManager /></Page>} />
+          <Route path="/rush/orders" element={<Navigate to="/present/orders" replace />} />
           <Route path="/flex" element={<Page title="Present" live={false} date={false}><Flex /></Page>} />
           <Route path="/" element={<Navigate to="/present" replace />} />
           <Route path="/past" element={<Orders />} />

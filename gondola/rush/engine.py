@@ -16,6 +16,7 @@ from dataclasses import asdict, dataclass, field
 from typing import Any
 
 from .models import OfferPolicy, RushRequest
+from .reservations import Reservations
 
 MENU = {
     "tonkotsu": {"name": "Tonkotsu ramen", "station": "noodles", "minutes": 4, "price": 1925, "cost": 620, "stock": 55},
@@ -153,24 +154,14 @@ class Kitchen:
         used. This is a heuristic schedule, not a claim of global optimality.
         """
         now = self.minute
-        occ = {s: [0] * 500 for s in STATIONS}
-        labour = [0] * 500
-        rows: list[dict] = []
+        calendar = Reservations(now, self.req.cooks, STATIONS, self.blocked_until, 499)
+        rows = calendar.rows
         work = self.orders + ([extra] if extra else [])
         ends: dict[str, int] = {}
-        for s, until in self.blocked_until.items():
-            for m in range(now, min(until, 500)):
-                occ[s][m] = 1
 
         def reserve(t: Task, start: int, duration: int, item: str):
-            end = min(499, start + duration)
-            for m in range(start, end):
-                occ[t.station][m] += 1
-                if t.station != "packing":
-                    labour[m] += 1
-            ends[t.id] = end
-            rows.append({"task_id": t.id, "order_id": t.order_id, "station": t.station,
-                         "start": start, "end": end, "item": item, "frozen": t.start is not None})
+            row = calendar.reserve(t.id, t.order_id, t.station, start, duration, item, t.start is not None)
+            ends[t.id] = row["end"]
 
         for o in work:
             for t in o.tasks:
@@ -211,12 +202,7 @@ class Kitchen:
                 if t.station == "packing":
                     earliest = max(earliest, ends.get(o.id + ":cook", now))
                 duration = max(1, math.ceil(t.nominal / max(self.speed[t.station], 0.1)))
-                start = earliest
-                while start + duration < 499:
-                    if all(occ[t.station][m] < 1 and (t.station == "packing" or labour[m] < self.req.cooks)
-                           for m in range(start, start + duration)):
-                        break
-                    start += 1
+                start = calendar.find_slot(t.station, earliest, duration)
                 reserve(t, start, duration, o.item)
         return rows
 

@@ -1,5 +1,9 @@
 # Feature coverage against the discussion
 
+**Verification:** Full suite 254 passed, production build passed (83 modules), seven integrated browser checks passed including one actual Gemini three-tool/read-back run, and six complete Rush replay hashes unchanged. No live merchant write.
+
+**Current main addition:** [Order Manager](ORDER_MANAGER.md) is now integrated under Present for versioned multi-order admission/dispatch, using one specialist and shared reservation code. Promotions remain in Rush/Present; Flex remains its separate customer-consent workflow. Their ledgers are not a newly unified live merchant state.
+
 **Repository migration:** [Branch order, conflict resolution and verification](REPOSITORY_STACK.md) records the combined tri-workflow plus Flex build in `v5run/gondola`. The original live-model results are historical; no new live-provider call was made for this migration. The two operational ledgers remain separate. Windows SQLite connection cleanup is included so staged histories can move without waiting for garbage collection.
 
 **November 7 strategy discussion:** [Judge pitch and capability assumptions](../ideas/JUDGE_PITCH_AND_CAPABILITIES.md) distinguishes the target shared operating loop from current synthetic/partial behavior and maps possible extensions. It is a research brief, not a new feature selection or completion claim. In particular, current offers have no modeled customer-demand response, completed-order nowcasting is affected by sell-outs, and checked Review comparisons do not establish causal learning.
@@ -12,6 +16,7 @@ The complete earlier vision is **not** implemented. The current new demo combine
 
 | Discussed feature | Status | Actual behavior / boundary |
 |---|---|---|
+| Order Manager | Implemented in local simulation; real Gemini tool loop verified | Multi-item intake, four checked admission priorities, explicit ready-time authorization, protected commitments, atomic/versioned event handling and durable receipts. `/present/orders`; no external platform writes or always-on event subscription |
 | Store clock and time-aware dashboard (V's new branch) | Implemented on synthetic store data | Real America/New_York clock, 4 a.m. business-day rollover, current-minute data cutoff, catch-up order stream, date limits and close-time lock. Events remain generated dataset orders; this is not a live merchant connector or the new kitchen prioritizer |
 | V's dynamic cross-channel order prioritization | Implemented in synthetic replay | Replans unstarted work using promises, courier estimates, remaining effort and shared cook/station/packing capacity. In-progress work remains assigned. Heuristic scheduling; no live order feed or globally optimal/just-in-time scheduling claim |
 | Kitchen-aware promotions/demand steering | Implemented in synthetic replay | Checks approved items/discounts against reservations, stock, contribution, budget and reserve; features an item or pauses in the simulated first-party menu. No real DoorDash campaign writes or general base-price optimization |

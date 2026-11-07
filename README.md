@@ -1,5 +1,7 @@
 # Gondola
 
+**Order Manager:** Present > Order manager (`/present/orders`) adds one-agent checked admission for multi-channel, multi-item requests, persistent receipts and failure guards. [Behavior, verification and limits](docs/development/ORDER_MANAGER.md). Promotions, Flex and existing workflows remain available.
+
 **Current repository:** `v5run/gondola`. [Migration and branch order](docs/development/REPOSITORY_STACK.md) records the replay of V's clock, Rush Control, tri-workflow, Flexible Pickup and latest strategy notes onto this repository's history. The combined app keeps Past/Present/Future/Review, `/rush` compatibility and `/flex` under Present.
 
 **New working feature:** [Flexible pickup](http://127.0.0.1:8000/flex) lets a customer choose a later pickup for a bounded discount and moves the kitchen's cooking/packing reservation. Real Gemini choice tools, explicit consent and atomic acceptance; [demo, evidence and production path](docs/development/FLEX_DEMO.md) · [recording](docs/demo/flex-demo.webm). Synthetic restaurant/no real payment.

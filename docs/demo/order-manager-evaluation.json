@@ -1,0 +1,1415 @@
+{
+  "source_mode": "synthetic_declared_duration_simulation",
+  "model_calls": 0,
+  "cases": [
+    {
+      "cooks": 1,
+      "fryer_speed": 1,
+      "blind_forwarding": {
+        "observed": 29,
+        "completed": 27,
+        "unfinished": 2,
+        "declined": 0,
+        "expired": 0,
+        "accepted_later": 0,
+        "quote_extension_minutes": 0,
+        "missed_agreed_promises": 22,
+        "missed_original_requested_times": 22,
+        "total_lateness_against_agreed_promises": 1306,
+        "by_channel": {
+          "doordash": {
+            "observed": 12,
+            "completed": 10,
+            "declined": 0
+          },
+          "ubereats": {
+            "observed": 8,
+            "completed": 8,
+            "declined": 0
+          },
+          "dine_in": {
+            "observed": 5,
+            "completed": 5,
+            "declined": 0
+          },
+          "pickup": {
+            "observed": 4,
+            "completed": 4,
+            "declined": 0
+          }
+        }
+      },
+      "checked_priorities": {
+        "current": {
+          "observed": 29,
+          "completed": 13,
+          "unfinished": 0,
+          "declined": 16,
+          "expired": 0,
+          "accepted_later": 8,
+          "quote_extension_minutes": 262,
+          "missed_agreed_promises": 0,
+          "missed_original_requested_times": 8,
+          "total_lateness_against_agreed_promises": 0,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 3,
+              "declined": 9
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 2,
+              "declined": 6
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 3,
+              "declined": 1
+            }
+          }
+        },
+        "arrival": {
+          "observed": 29,
+          "completed": 13,
+          "unfinished": 0,
+          "declined": 16,
+          "expired": 0,
+          "accepted_later": 8,
+          "quote_extension_minutes": 262,
+          "missed_agreed_promises": 0,
+          "missed_original_requested_times": 8,
+          "total_lateness_against_agreed_promises": 0,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 3,
+              "declined": 9
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 2,
+              "declined": 6
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 3,
+              "declined": 1
+            }
+          }
+        },
+        "promise": {
+          "observed": 29,
+          "completed": 13,
+          "unfinished": 0,
+          "declined": 16,
+          "expired": 0,
+          "accepted_later": 8,
+          "quote_extension_minutes": 262,
+          "missed_agreed_promises": 0,
+          "missed_original_requested_times": 8,
+          "total_lateness_against_agreed_promises": 0,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 3,
+              "declined": 9
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 2,
+              "declined": 6
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 3,
+              "declined": 1
+            }
+          }
+        },
+        "slack": {
+          "observed": 29,
+          "completed": 11,
+          "unfinished": 0,
+          "declined": 18,
+          "expired": 0,
+          "accepted_later": 6,
+          "quote_extension_minutes": 196,
+          "missed_agreed_promises": 0,
+          "missed_original_requested_times": 6,
+          "total_lateness_against_agreed_promises": 0,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 1,
+              "declined": 11
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 5,
+              "declined": 3
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 0,
+              "declined": 4
+            }
+          }
+        }
+      }
+    },
+    {
+      "cooks": 1,
+      "fryer_speed": 0.5,
+      "blind_forwarding": {
+        "observed": 29,
+        "completed": 17,
+        "unfinished": 12,
+        "declined": 0,
+        "expired": 0,
+        "accepted_later": 0,
+        "quote_extension_minutes": 0,
+        "missed_agreed_promises": 15,
+        "missed_original_requested_times": 15,
+        "total_lateness_against_agreed_promises": 899,
+        "by_channel": {
+          "doordash": {
+            "observed": 12,
+            "completed": 4,
+            "declined": 0
+          },
+          "ubereats": {
+            "observed": 8,
+            "completed": 4,
+            "declined": 0
+          },
+          "dine_in": {
+            "observed": 5,
+            "completed": 5,
+            "declined": 0
+          },
+          "pickup": {
+            "observed": 4,
+            "completed": 4,
+            "declined": 0
+          }
+        }
+      },
+      "checked_priorities": {
+        "current": {
+          "observed": 29,
+          "completed": 10,
+          "unfinished": 0,
+          "declined": 19,
+          "expired": 0,
+          "accepted_later": 5,
+          "quote_extension_minutes": 194,
+          "missed_agreed_promises": 3,
+          "missed_original_requested_times": 8,
+          "total_lateness_against_agreed_promises": 33,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 2,
+              "declined": 10
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 0,
+              "declined": 8
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 3,
+              "declined": 1
+            }
+          }
+        },
+        "arrival": {
+          "observed": 29,
+          "completed": 10,
+          "unfinished": 0,
+          "declined": 19,
+          "expired": 0,
+          "accepted_later": 5,
+          "quote_extension_minutes": 194,
+          "missed_agreed_promises": 3,
+          "missed_original_requested_times": 8,
+          "total_lateness_against_agreed_promises": 33,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 2,
+              "declined": 10
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 0,
+              "declined": 8
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 3,
+              "declined": 1
+            }
+          }
+        },
+        "promise": {
+          "observed": 29,
+          "completed": 10,
+          "unfinished": 0,
+          "declined": 19,
+          "expired": 0,
+          "accepted_later": 5,
+          "quote_extension_minutes": 194,
+          "missed_agreed_promises": 3,
+          "missed_original_requested_times": 8,
+          "total_lateness_against_agreed_promises": 33,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 2,
+              "declined": 10
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 0,
+              "declined": 8
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 3,
+              "declined": 1
+            }
+          }
+        },
+        "slack": {
+          "observed": 29,
+          "completed": 6,
+          "unfinished": 0,
+          "declined": 23,
+          "expired": 0,
+          "accepted_later": 1,
+          "quote_extension_minutes": 44,
+          "missed_agreed_promises": 3,
+          "missed_original_requested_times": 4,
+          "total_lateness_against_agreed_promises": 33,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 0,
+              "declined": 12
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 1,
+              "declined": 7
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 0,
+              "declined": 4
+            }
+          }
+        }
+      }
+    },
+    {
+      "cooks": 2,
+      "fryer_speed": 1,
+      "blind_forwarding": {
+        "observed": 29,
+        "completed": 29,
+        "unfinished": 0,
+        "declined": 0,
+        "expired": 0,
+        "accepted_later": 0,
+        "quote_extension_minutes": 0,
+        "missed_agreed_promises": 22,
+        "missed_original_requested_times": 22,
+        "total_lateness_against_agreed_promises": 593,
+        "by_channel": {
+          "doordash": {
+            "observed": 12,
+            "completed": 12,
+            "declined": 0
+          },
+          "ubereats": {
+            "observed": 8,
+            "completed": 8,
+            "declined": 0
+          },
+          "dine_in": {
+            "observed": 5,
+            "completed": 5,
+            "declined": 0
+          },
+          "pickup": {
+            "observed": 4,
+            "completed": 4,
+            "declined": 0
+          }
+        }
+      },
+      "checked_priorities": {
+        "current": {
+          "observed": 29,
+          "completed": 26,
+          "unfinished": 0,
+          "declined": 3,
+          "expired": 0,
+          "accepted_later": 20,
+          "quote_extension_minutes": 489,
+          "missed_agreed_promises": 0,
+          "missed_original_requested_times": 19,
+          "total_lateness_against_agreed_promises": 0,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 9,
+              "declined": 3
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 8,
+              "declined": 0
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 4,
+              "declined": 0
+            }
+          }
+        },
+        "arrival": {
+          "observed": 29,
+          "completed": 26,
+          "unfinished": 0,
+          "declined": 3,
+          "expired": 0,
+          "accepted_later": 20,
+          "quote_extension_minutes": 489,
+          "missed_agreed_promises": 0,
+          "missed_original_requested_times": 19,
+          "total_lateness_against_agreed_promises": 0,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 9,
+              "declined": 3
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 8,
+              "declined": 0
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 4,
+              "declined": 0
+            }
+          }
+        },
+        "promise": {
+          "observed": 29,
+          "completed": 26,
+          "unfinished": 0,
+          "declined": 3,
+          "expired": 0,
+          "accepted_later": 20,
+          "quote_extension_minutes": 489,
+          "missed_agreed_promises": 0,
+          "missed_original_requested_times": 19,
+          "total_lateness_against_agreed_promises": 0,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 9,
+              "declined": 3
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 8,
+              "declined": 0
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 4,
+              "declined": 0
+            }
+          }
+        },
+        "slack": {
+          "observed": 29,
+          "completed": 25,
+          "unfinished": 0,
+          "declined": 4,
+          "expired": 0,
+          "accepted_later": 19,
+          "quote_extension_minutes": 524,
+          "missed_agreed_promises": 0,
+          "missed_original_requested_times": 19,
+          "total_lateness_against_agreed_promises": 0,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 9,
+              "declined": 3
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 8,
+              "declined": 0
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 3,
+              "declined": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "cooks": 2,
+      "fryer_speed": 0.5,
+      "blind_forwarding": {
+        "observed": 29,
+        "completed": 27,
+        "unfinished": 2,
+        "declined": 0,
+        "expired": 0,
+        "accepted_later": 0,
+        "quote_extension_minutes": 0,
+        "missed_agreed_promises": 23,
+        "missed_original_requested_times": 23,
+        "total_lateness_against_agreed_promises": 827,
+        "by_channel": {
+          "doordash": {
+            "observed": 12,
+            "completed": 10,
+            "declined": 0
+          },
+          "ubereats": {
+            "observed": 8,
+            "completed": 8,
+            "declined": 0
+          },
+          "dine_in": {
+            "observed": 5,
+            "completed": 5,
+            "declined": 0
+          },
+          "pickup": {
+            "observed": 4,
+            "completed": 4,
+            "declined": 0
+          }
+        }
+      },
+      "checked_priorities": {
+        "current": {
+          "observed": 29,
+          "completed": 20,
+          "unfinished": 0,
+          "declined": 9,
+          "expired": 0,
+          "accepted_later": 14,
+          "quote_extension_minutes": 317,
+          "missed_agreed_promises": 3,
+          "missed_original_requested_times": 16,
+          "total_lateness_against_agreed_promises": 33,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 8,
+              "declined": 4
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 3,
+              "declined": 5
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 4,
+              "declined": 0
+            }
+          }
+        },
+        "arrival": {
+          "observed": 29,
+          "completed": 20,
+          "unfinished": 0,
+          "declined": 9,
+          "expired": 0,
+          "accepted_later": 14,
+          "quote_extension_minutes": 317,
+          "missed_agreed_promises": 3,
+          "missed_original_requested_times": 16,
+          "total_lateness_against_agreed_promises": 33,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 8,
+              "declined": 4
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 3,
+              "declined": 5
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 4,
+              "declined": 0
+            }
+          }
+        },
+        "promise": {
+          "observed": 29,
+          "completed": 20,
+          "unfinished": 0,
+          "declined": 9,
+          "expired": 0,
+          "accepted_later": 14,
+          "quote_extension_minutes": 317,
+          "missed_agreed_promises": 3,
+          "missed_original_requested_times": 16,
+          "total_lateness_against_agreed_promises": 33,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 8,
+              "declined": 4
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 3,
+              "declined": 5
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 4,
+              "declined": 0
+            }
+          }
+        },
+        "slack": {
+          "observed": 29,
+          "completed": 19,
+          "unfinished": 0,
+          "declined": 10,
+          "expired": 0,
+          "accepted_later": 13,
+          "quote_extension_minutes": 353,
+          "missed_agreed_promises": 3,
+          "missed_original_requested_times": 16,
+          "total_lateness_against_agreed_promises": 33,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 8,
+              "declined": 4
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 3,
+              "declined": 5
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 3,
+              "declined": 1
+            }
+          }
+        }
+      }
+    },
+    {
+      "cooks": 3,
+      "fryer_speed": 1,
+      "blind_forwarding": {
+        "observed": 29,
+        "completed": 29,
+        "unfinished": 0,
+        "declined": 0,
+        "expired": 0,
+        "accepted_later": 0,
+        "quote_extension_minutes": 0,
+        "missed_agreed_promises": 17,
+        "missed_original_requested_times": 17,
+        "total_lateness_against_agreed_promises": 392,
+        "by_channel": {
+          "doordash": {
+            "observed": 12,
+            "completed": 12,
+            "declined": 0
+          },
+          "ubereats": {
+            "observed": 8,
+            "completed": 8,
+            "declined": 0
+          },
+          "dine_in": {
+            "observed": 5,
+            "completed": 5,
+            "declined": 0
+          },
+          "pickup": {
+            "observed": 4,
+            "completed": 4,
+            "declined": 0
+          }
+        }
+      },
+      "checked_priorities": {
+        "current": {
+          "observed": 29,
+          "completed": 27,
+          "unfinished": 0,
+          "declined": 2,
+          "expired": 0,
+          "accepted_later": 17,
+          "quote_extension_minutes": 328,
+          "missed_agreed_promises": 0,
+          "missed_original_requested_times": 15,
+          "total_lateness_against_agreed_promises": 0,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 10,
+              "declined": 2
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 8,
+              "declined": 0
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 4,
+              "declined": 0
+            }
+          }
+        },
+        "arrival": {
+          "observed": 29,
+          "completed": 27,
+          "unfinished": 0,
+          "declined": 2,
+          "expired": 0,
+          "accepted_later": 17,
+          "quote_extension_minutes": 328,
+          "missed_agreed_promises": 0,
+          "missed_original_requested_times": 15,
+          "total_lateness_against_agreed_promises": 0,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 10,
+              "declined": 2
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 8,
+              "declined": 0
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 4,
+              "declined": 0
+            }
+          }
+        },
+        "promise": {
+          "observed": 29,
+          "completed": 27,
+          "unfinished": 0,
+          "declined": 2,
+          "expired": 0,
+          "accepted_later": 17,
+          "quote_extension_minutes": 328,
+          "missed_agreed_promises": 0,
+          "missed_original_requested_times": 15,
+          "total_lateness_against_agreed_promises": 0,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 10,
+              "declined": 2
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 8,
+              "declined": 0
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 4,
+              "declined": 0
+            }
+          }
+        },
+        "slack": {
+          "observed": 29,
+          "completed": 27,
+          "unfinished": 0,
+          "declined": 2,
+          "expired": 0,
+          "accepted_later": 19,
+          "quote_extension_minutes": 352,
+          "missed_agreed_promises": 0,
+          "missed_original_requested_times": 17,
+          "total_lateness_against_agreed_promises": 0,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 10,
+              "declined": 2
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 8,
+              "declined": 0
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 4,
+              "declined": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "cooks": 3,
+      "fryer_speed": 0.5,
+      "blind_forwarding": {
+        "observed": 29,
+        "completed": 27,
+        "unfinished": 2,
+        "declined": 0,
+        "expired": 0,
+        "accepted_later": 0,
+        "quote_extension_minutes": 0,
+        "missed_agreed_promises": 18,
+        "missed_original_requested_times": 18,
+        "total_lateness_against_agreed_promises": 629,
+        "by_channel": {
+          "doordash": {
+            "observed": 12,
+            "completed": 10,
+            "declined": 0
+          },
+          "ubereats": {
+            "observed": 8,
+            "completed": 8,
+            "declined": 0
+          },
+          "dine_in": {
+            "observed": 5,
+            "completed": 5,
+            "declined": 0
+          },
+          "pickup": {
+            "observed": 4,
+            "completed": 4,
+            "declined": 0
+          }
+        }
+      },
+      "checked_priorities": {
+        "current": {
+          "observed": 29,
+          "completed": 21,
+          "unfinished": 0,
+          "declined": 8,
+          "expired": 0,
+          "accepted_later": 11,
+          "quote_extension_minutes": 159,
+          "missed_agreed_promises": 3,
+          "missed_original_requested_times": 12,
+          "total_lateness_against_agreed_promises": 33,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 9,
+              "declined": 3
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 3,
+              "declined": 5
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 4,
+              "declined": 0
+            }
+          }
+        },
+        "arrival": {
+          "observed": 29,
+          "completed": 21,
+          "unfinished": 0,
+          "declined": 8,
+          "expired": 0,
+          "accepted_later": 11,
+          "quote_extension_minutes": 159,
+          "missed_agreed_promises": 3,
+          "missed_original_requested_times": 12,
+          "total_lateness_against_agreed_promises": 33,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 9,
+              "declined": 3
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 3,
+              "declined": 5
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 4,
+              "declined": 0
+            }
+          }
+        },
+        "promise": {
+          "observed": 29,
+          "completed": 21,
+          "unfinished": 0,
+          "declined": 8,
+          "expired": 0,
+          "accepted_later": 11,
+          "quote_extension_minutes": 159,
+          "missed_agreed_promises": 3,
+          "missed_original_requested_times": 12,
+          "total_lateness_against_agreed_promises": 33,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 9,
+              "declined": 3
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 3,
+              "declined": 5
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 4,
+              "declined": 0
+            }
+          }
+        },
+        "slack": {
+          "observed": 29,
+          "completed": 21,
+          "unfinished": 0,
+          "declined": 8,
+          "expired": 0,
+          "accepted_later": 13,
+          "quote_extension_minutes": 182,
+          "missed_agreed_promises": 3,
+          "missed_original_requested_times": 14,
+          "total_lateness_against_agreed_promises": 33,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 9,
+              "declined": 3
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 3,
+              "declined": 5
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 4,
+              "declined": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "cooks": 4,
+      "fryer_speed": 1,
+      "blind_forwarding": {
+        "observed": 29,
+        "completed": 29,
+        "unfinished": 0,
+        "declined": 0,
+        "expired": 0,
+        "accepted_later": 0,
+        "quote_extension_minutes": 0,
+        "missed_agreed_promises": 17,
+        "missed_original_requested_times": 17,
+        "total_lateness_against_agreed_promises": 392,
+        "by_channel": {
+          "doordash": {
+            "observed": 12,
+            "completed": 12,
+            "declined": 0
+          },
+          "ubereats": {
+            "observed": 8,
+            "completed": 8,
+            "declined": 0
+          },
+          "dine_in": {
+            "observed": 5,
+            "completed": 5,
+            "declined": 0
+          },
+          "pickup": {
+            "observed": 4,
+            "completed": 4,
+            "declined": 0
+          }
+        }
+      },
+      "checked_priorities": {
+        "current": {
+          "observed": 29,
+          "completed": 27,
+          "unfinished": 0,
+          "declined": 2,
+          "expired": 0,
+          "accepted_later": 17,
+          "quote_extension_minutes": 328,
+          "missed_agreed_promises": 0,
+          "missed_original_requested_times": 15,
+          "total_lateness_against_agreed_promises": 0,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 10,
+              "declined": 2
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 8,
+              "declined": 0
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 4,
+              "declined": 0
+            }
+          }
+        },
+        "arrival": {
+          "observed": 29,
+          "completed": 27,
+          "unfinished": 0,
+          "declined": 2,
+          "expired": 0,
+          "accepted_later": 17,
+          "quote_extension_minutes": 328,
+          "missed_agreed_promises": 0,
+          "missed_original_requested_times": 15,
+          "total_lateness_against_agreed_promises": 0,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 10,
+              "declined": 2
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 8,
+              "declined": 0
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 4,
+              "declined": 0
+            }
+          }
+        },
+        "promise": {
+          "observed": 29,
+          "completed": 27,
+          "unfinished": 0,
+          "declined": 2,
+          "expired": 0,
+          "accepted_later": 17,
+          "quote_extension_minutes": 328,
+          "missed_agreed_promises": 0,
+          "missed_original_requested_times": 15,
+          "total_lateness_against_agreed_promises": 0,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 10,
+              "declined": 2
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 8,
+              "declined": 0
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 4,
+              "declined": 0
+            }
+          }
+        },
+        "slack": {
+          "observed": 29,
+          "completed": 27,
+          "unfinished": 0,
+          "declined": 2,
+          "expired": 0,
+          "accepted_later": 19,
+          "quote_extension_minutes": 352,
+          "missed_agreed_promises": 0,
+          "missed_original_requested_times": 17,
+          "total_lateness_against_agreed_promises": 0,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 10,
+              "declined": 2
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 8,
+              "declined": 0
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 4,
+              "declined": 0
+            }
+          }
+        }
+      }
+    },
+    {
+      "cooks": 4,
+      "fryer_speed": 0.5,
+      "blind_forwarding": {
+        "observed": 29,
+        "completed": 27,
+        "unfinished": 2,
+        "declined": 0,
+        "expired": 0,
+        "accepted_later": 0,
+        "quote_extension_minutes": 0,
+        "missed_agreed_promises": 18,
+        "missed_original_requested_times": 18,
+        "total_lateness_against_agreed_promises": 629,
+        "by_channel": {
+          "doordash": {
+            "observed": 12,
+            "completed": 10,
+            "declined": 0
+          },
+          "ubereats": {
+            "observed": 8,
+            "completed": 8,
+            "declined": 0
+          },
+          "dine_in": {
+            "observed": 5,
+            "completed": 5,
+            "declined": 0
+          },
+          "pickup": {
+            "observed": 4,
+            "completed": 4,
+            "declined": 0
+          }
+        }
+      },
+      "checked_priorities": {
+        "current": {
+          "observed": 29,
+          "completed": 21,
+          "unfinished": 0,
+          "declined": 8,
+          "expired": 0,
+          "accepted_later": 11,
+          "quote_extension_minutes": 159,
+          "missed_agreed_promises": 3,
+          "missed_original_requested_times": 12,
+          "total_lateness_against_agreed_promises": 33,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 9,
+              "declined": 3
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 3,
+              "declined": 5
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 4,
+              "declined": 0
+            }
+          }
+        },
+        "arrival": {
+          "observed": 29,
+          "completed": 21,
+          "unfinished": 0,
+          "declined": 8,
+          "expired": 0,
+          "accepted_later": 11,
+          "quote_extension_minutes": 159,
+          "missed_agreed_promises": 3,
+          "missed_original_requested_times": 12,
+          "total_lateness_against_agreed_promises": 33,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 9,
+              "declined": 3
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 3,
+              "declined": 5
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 4,
+              "declined": 0
+            }
+          }
+        },
+        "promise": {
+          "observed": 29,
+          "completed": 21,
+          "unfinished": 0,
+          "declined": 8,
+          "expired": 0,
+          "accepted_later": 11,
+          "quote_extension_minutes": 159,
+          "missed_agreed_promises": 3,
+          "missed_original_requested_times": 12,
+          "total_lateness_against_agreed_promises": 33,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 9,
+              "declined": 3
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 3,
+              "declined": 5
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 4,
+              "declined": 0
+            }
+          }
+        },
+        "slack": {
+          "observed": 29,
+          "completed": 21,
+          "unfinished": 0,
+          "declined": 8,
+          "expired": 0,
+          "accepted_later": 13,
+          "quote_extension_minutes": 182,
+          "missed_agreed_promises": 3,
+          "missed_original_requested_times": 14,
+          "total_lateness_against_agreed_promises": 33,
+          "by_channel": {
+            "doordash": {
+              "observed": 12,
+              "completed": 9,
+              "declined": 3
+            },
+            "ubereats": {
+              "observed": 8,
+              "completed": 3,
+              "declined": 5
+            },
+            "dine_in": {
+              "observed": 5,
+              "completed": 5,
+              "declined": 0
+            },
+            "pickup": {
+              "observed": 4,
+              "completed": 4,
+              "declined": 0
+            }
+          }
+        }
+      }
+    }
+  ],
+  "limits": "Both admission and simulated progress use declared recipe work and observed speed. This tests reservation/accounting mechanics. Later promises require explicit fixture authorization; extensions and declines are retained, so on-time rates must not be compared without those counts. No real merchant, held-out duration or LLM-quality result is established."
+}

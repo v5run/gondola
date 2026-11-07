@@ -2,6 +2,8 @@
 
 November 7, 2026. Repository: `https://github.com/v5run/gondola`. Local checkout: `C:/Code/Novahacks/gondola`.
 
+**Main follow-up:** Main now includes the combined workflow baseline. Order Manager is added as one subsequent commit directly on that baseline; see [its verification and boundaries](ORDER_MANAGER.md). The dependency stack below records how the combined baseline was assembled.
+
 ## Dependency order
 
 1. `main`: existing application baseline.
@@ -9,7 +11,7 @@ November 7, 2026. Repository: `https://github.com/v5run/gondola`. Local checkout
 3. `savvy/tri-workflow`: extends Rush with Past, Present, Future and Review.
 4. `savvy/flexible-pickup`: extends tri-workflow with customer pickup-time offers, atomic reservations, strategy notes and combined validation.
 
-Each branch includes its predecessor. The final branch is the complete review target. Main is unchanged. Original authorship is preserved. Strategy documents contain proposed experiments, not additional implemented features.
+Each branch includes its predecessor. The final branch is the complete review target. The stack preparation left main unchanged; the combined baseline was subsequently adopted as main. Original authorship is preserved. Strategy documents contain proposed experiments, not additional implemented features.
 
 ## Integration resolutions
 
