@@ -1,0 +1,827 @@
+{
+ "data": {
+  "orders": 171929,
+  "order_lines": 385019,
+  "payout_lines": 118599,
+  "days": 364,
+  "planted_anomalies": 2355
+ },
+ "books": {
+  "days_reconciled": 364,
+  "error_charges_disputable": {
+   "tp": 662,
+   "fp": 33,
+   "fn": 86,
+   "precision": 0.9525,
+   "recall": 0.885
+  },
+  "missing_from_payout": {
+   "tp": 289,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "commission_overcharge_days": {
+   "tp": 5,
+   "fp": 0,
+   "fn": 0,
+   "precision": 1.0,
+   "recall": 1.0
+  },
+  "error_charges_sent_to_review": 347,
+  "review_that_were_truly_disputable": 47,
+  "recoverable_flagged_usd": 20102.4,
+  "recoverable_truth_usd": 21295.59,
+  "seconds": 12.2,
+  "cash_short": {
+   "tp": 11,
+   "fp": 8,
+   "fn": 0,
+   "precision": 0.5789,
+   "recall": 1.0
+  }
+ },
+ "stock": {
+  "count_days": 52,
+  "sapporo_shrink_weeks_flagged": "3 of 4",
+  "sapporo_false_flags_outside_window": 0,
+  "noodles_weeks_flagged": "0 of 52",
+  "noodles_median_gap_pct": -0.0195,
+  "other_sku_false_flag_rate": 0.0
+ },
+ "forecast": {
+  "backtest_days": 120,
+  "mape_daily": 0.081,
+  "mape_naive_same_weekday": 0.0912,
+  "mape_with_perfect_weather_last60": 0.0689,
+  "bias_daily": -0.0022,
+  "worst_days": [
+   {
+    "date": "2026-07-11",
+    "predicted": 339.2,
+    "actual": 473.0,
+    "error_pct": -0.2828
+   },
+   {
+    "date": "2026-09-29",
+    "predicted": 399.3,
+    "actual": 313.0,
+    "error_pct": 0.2758
+   },
+   {
+    "date": "2026-08-02",
+    "predicted": 425.1,
+    "actual": 341.0,
+    "error_pct": 0.2466
+   }
+  ],
+  "interval_80_coverage_last60": 0.883,
+  "tomorrow": {
+   "date": "2026-11-06",
+   "p10": 531.2,
+   "p50": 589.9,
+   "p90": 678.5,
+   "actual": 607,
+   "error_pct": -0.0282,
+   "rush": {
+    "start": "18:00",
+    "end": "19:30",
+    "peak_per_15min": 32.6
+   }
+  },
+  "tomorrow_wape_15min_shape": 0.1915,
+  "tomorrow_wape_hourly_shape": 0.1146,
+  "tomorrow_wape_item_level": 0.114,
+  "seconds": 16.5
+ },
+ "plan": [
+  {
+   "policy": "gondola",
+   "days": 90,
+   "stockout_days": 8,
+   "portions_short": 273.5,
+   "portions_left": 8578.0,
+   "avg_par": 612.0,
+   "leftover_cost_usd": 3823.34,
+   "lost_margin_usd": 3008.5
+  },
+  {
+   "policy": "habit",
+   "days": 90,
+   "stockout_days": 24,
+   "portions_short": 1494.0,
+   "portions_left": 5747.5,
+   "avg_par": 567.0,
+   "leftover_cost_usd": 2561.74,
+   "lost_margin_usd": 16434.0
+  }
+ ],
+ "guard": {
+  "days_replayed": 364,
+  "historical_avoidable_cancels": 1522,
+  "avoided": 1432,
+  "app_orders_held_back_for_dine_in": 225,
+  "app_sales_held_back_usd": 8069.05,
+  "days_with_pause": 98
+ },
+ "plan_schedule_example": [
+  {
+   "name": "Braise chashu",
+   "start": "9:00",
+   "end": "11:30",
+   "deadline": "17:00",
+   "_s": 540
+  },
+  {
+   "name": "Fold gyoza",
+   "start": "9:00",
+   "end": "10:30",
+   "deadline": "17:30",
+   "_s": 540
+  },
+  {
+   "name": "Slice chashu",
+   "start": "11:30",
+   "end": "12:10",
+   "deadline": "18:00",
+   "_s": 690
+  }
+ ],
+ "guard_errors": {
+  "status_quo_cancels_90d": 294,
+  "grid": [
+   {
+    "count_error": 0.0,
+    "pause_delay_min": 2,
+    "recount": false,
+    "cancels_90d": 0,
+    "portions_held_back": 1073,
+    "recount_prompts": 0
+   },
+   {
+    "count_error": 0.0,
+    "pause_delay_min": 2,
+    "recount": true,
+    "cancels_90d": 1,
+    "portions_held_back": 1053,
+    "recount_prompts": 73
+   },
+   {
+    "count_error": 0.0,
+    "pause_delay_min": 5,
+    "recount": false,
+    "cancels_90d": 0,
+    "portions_held_back": 1084,
+    "recount_prompts": 0
+   },
+   {
+    "count_error": 0.0,
+    "pause_delay_min": 5,
+    "recount": true,
+    "cancels_90d": 0,
+    "portions_held_back": 1077,
+    "recount_prompts": 73
+   },
+   {
+    "count_error": 0.0,
+    "pause_delay_min": 15,
+    "recount": false,
+    "cancels_90d": 18,
+    "portions_held_back": 1099,
+    "recount_prompts": 0
+   },
+   {
+    "count_error": 0.0,
+    "pause_delay_min": 15,
+    "recount": true,
+    "cancels_90d": 19,
+    "portions_held_back": 1096,
+    "recount_prompts": 73
+   },
+   {
+    "count_error": 0.05,
+    "pause_delay_min": 2,
+    "recount": false,
+    "cancels_90d": 402,
+    "portions_held_back": 609,
+    "recount_prompts": 0
+   },
+   {
+    "count_error": 0.05,
+    "pause_delay_min": 2,
+    "recount": true,
+    "cancels_90d": 0,
+    "portions_held_back": 1192,
+    "recount_prompts": 73
+   },
+   {
+    "count_error": 0.05,
+    "pause_delay_min": 5,
+    "recount": false,
+    "cancels_90d": 314,
+    "portions_held_back": 760,
+    "recount_prompts": 0
+   },
+   {
+    "count_error": 0.05,
+    "pause_delay_min": 5,
+    "recount": true,
+    "cancels_90d": 6,
+    "portions_held_back": 1191,
+    "recount_prompts": 72
+   },
+   {
+    "count_error": 0.05,
+    "pause_delay_min": 15,
+    "recount": false,
+    "cancels_90d": 192,
+    "portions_held_back": 976,
+    "recount_prompts": 0
+   },
+   {
+    "count_error": 0.05,
+    "pause_delay_min": 15,
+    "recount": true,
+    "cancels_90d": 23,
+    "portions_held_back": 1205,
+    "recount_prompts": 73
+   },
+   {
+    "count_error": 0.1,
+    "pause_delay_min": 2,
+    "recount": false,
+    "cancels_90d": 648,
+    "portions_held_back": 492,
+    "recount_prompts": 0
+   },
+   {
+    "count_error": 0.1,
+    "pause_delay_min": 2,
+    "recount": true,
+    "cancels_90d": 1,
+    "portions_held_back": 1422,
+    "recount_prompts": 72
+   },
+   {
+    "count_error": 0.1,
+    "pause_delay_min": 5,
+    "recount": false,
+    "cancels_90d": 595,
+    "portions_held_back": 589,
+    "recount_prompts": 0
+   },
+   {
+    "count_error": 0.1,
+    "pause_delay_min": 5,
+    "recount": true,
+    "cancels_90d": 4,
+    "portions_held_back": 1428,
+    "recount_prompts": 73
+   },
+   {
+    "count_error": 0.1,
+    "pause_delay_min": 15,
+    "recount": false,
+    "cancels_90d": 501,
+    "portions_held_back": 750,
+    "recount_prompts": 0
+   },
+   {
+    "count_error": 0.1,
+    "pause_delay_min": 15,
+    "recount": true,
+    "cancels_90d": 22,
+    "portions_held_back": 1466,
+    "recount_prompts": 73
+   }
+  ]
+ },
+ "ask_adversarial": {
+  "questions": 62,
+  "crashes": 0,
+  "clarified": 11,
+  "answered": 51,
+  "answers": [
+   {
+    "q": "how'd we do",
+    "a": "Net sales for today: $14,964.00.",
+    "clarify": false
+   },
+   {
+    "q": "how'd we do yesterday?",
+    "a": "Net sales for yesterday: $17,146.85.",
+    "clarify": false
+   },
+   {
+    "q": "uber vs doordash last month",
+    "a": "Net sales for last month: DoorDash $229,128.35, Uber Eats $89,724.80.",
+    "clarify": false
+   },
+   {
+    "q": "sales on the 3rd",
+    "a": "Net sales for Nov 3, 2026: $14,792.65.",
+    "clarify": false
+   },
+   {
+    "q": "sales this time last year",
+    "a": "I only have data from Nov 6, 2025 to Nov 5, 2026.",
+    "clarify": true
+   },
+   {
+    "q": "what were sales last year",
+    "a": "Net sales for the last 365 days: $5,451,824.05.",
+    "clarify": false
+   },
+   {
+    "q": "sales yesterdy",
+    "a": "Net sales for yesterday: $17,146.85.",
+    "clarify": false
+   },
+   {
+    "q": "how many orders tomorrow",
+    "a": "Tomorrow (Fri Nov 6): about 590 orders (likely 531\u2013678), rush 18:00\u201319:30.",
+    "clarify": false
+   },
+   {
+    "q": "forecast for tomorrow",
+    "a": "Tomorrow (Fri Nov 6): about 590 orders (likely 531\u2013678), rush 18:00\u201319:30.",
+    "clarify": false
+   },
+   {
+    "q": "whats the forecast",
+    "a": "Tomorrow (Fri Nov 6): about 590 orders (likely 531\u2013678), rush 18:00\u201319:30.",
+    "clarify": false
+   },
+   {
+    "q": "best seller this week",
+    "a": "Top items for this week: Tonkotsu (669), Spicy Miso (497), Shoyu (392).",
+    "clarify": false
+   },
+   {
+    "q": "what was our top seller yesterday",
+    "a": "Top items for yesterday: Tonkotsu (197), Spicy Miso (147), Chicken Paitan (118).",
+    "clarify": false
+   },
+   {
+    "q": "what items sold the most last week",
+    "a": "Top items for last week: Tonkotsu (1,428), Spicy Miso (964), Shoyu (724).",
+    "clarify": false
+   },
+   {
+    "q": "busiest day last month",
+    "a": "Best day in last month: Sat Oct 24 with $22,066.40.",
+    "clarify": false
+   },
+   {
+    "q": "slowest day in december",
+    "a": "Slowest day in December 2025: Wed Dec 24 with $9,710.05.",
+    "clarify": false
+   },
+   {
+    "q": "why was dec 25 so slow",
+    "a": "Dec 25, 2025: the store was closed (Christmas (closed)).",
+    "clarify": false
+   },
+   {
+    "q": "why was christmas slow",
+    "a": "Dec 25, 2025: the store was closed (Christmas (closed)).",
+    "clarify": false
+   },
+   {
+    "q": "what happened on 2025-12-25",
+    "a": "Dec 25, 2025: the store was closed (Christmas (closed)).",
+    "clarify": false
+   },
+   {
+    "q": "sales on nov 6",
+    "a": "I only have data from Nov 6, 2025 to Nov 5, 2026.",
+    "clarify": true
+   },
+   {
+    "q": "sales on 2025-11-01",
+    "a": "I only have data from Nov 6, 2025 to Nov 5, 2026.",
+    "clarify": true
+   },
+   {
+    "q": "sales on 2026-11-06",
+    "a": "I only have data from Nov 6, 2025 to Nov 5, 2026.",
+    "clarify": true
+   },
+   {
+    "q": "sales feb 30",
+    "a": "February doesn't have a day 30. Which date did you mean?",
+    "clarify": true
+   },
+   {
+    "q": "orders june 31",
+    "a": "June doesn't have a day 31. Which date did you mean?",
+    "clarify": true
+   },
+   {
+    "q": "doordash sales last 7 days",
+    "a": "Net sales on DoorDash for the last 7 days: $54,438.45.",
+    "clarify": false
+   },
+   {
+    "q": "doordahs sales yesterday",
+    "a": "Net sales on DoorDash for yesterday: $8,089.40.",
+    "clarify": false
+   },
+   {
+    "q": "dd orders yesterday",
+    "a": "Orders on DoorDash for yesterday: 247.",
+    "clarify": false
+   },
+   {
+    "q": "how much did we pay in card fees yesterday",
+    "a": "Card fees (in-store) for yesterday: $152.37.",
+    "clarify": false
+   },
+   {
+    "q": "how much did doordash charge us in error last week",
+    "a": "Error charges on DoorDash for last week: $306.56.",
+    "clarify": false
+   },
+   {
+    "q": "labour cost in store yesterday",
+    "a": "Labour cost for yesterday: $4,057.70 (labour isn't split by channel).",
+    "clarify": false
+   },
+   {
+    "q": "payroll last week",
+    "a": "Labour cost for last week: $27,123.02.",
+    "clarify": false
+   },
+   {
+    "q": "tips yesterday",
+    "a": "Tips for yesterday: $450.41.",
+    "clarify": false
+   },
+   {
+    "q": "how many tonkotsu did we sell yesterday",
+    "a": "Sold for yesterday: Tonkotsu 197.",
+    "clarify": false
+   },
+   {
+    "q": "how much may we have made",
+    "a": "Which day or period? For example 'yesterday', 'last week' or 'Oct 3'.",
+    "clarify": true
+   },
+   {
+    "q": "sales in november 2025",
+    "a": "Net sales for November 2025 (data starts Nov 6, 2025): $323,356.65.",
+    "clarify": false
+   },
+   {
+    "q": "sales in november",
+    "a": "Net sales for November 2026: $77,585.20.",
+    "clarify": false
+   },
+   {
+    "q": "past 7 days sales",
+    "a": "Net sales for the last 7 days: $119,098.15.",
+    "clarify": false
+   },
+   {
+    "q": "last two weeks orders",
+    "a": "Orders for the last 14 days: 7,238.",
+    "clarify": false
+   },
+   {
+    "q": "sales last sunday",
+    "a": "Net sales for Sunday Nov 1: $17,786.70.",
+    "clarify": false
+   },
+   {
+    "q": "sales on sunday",
+    "a": "Net sales for Sunday Nov 1: $17,786.70.",
+    "clarify": false
+   },
+   {
+    "q": "orders on monday",
+    "a": "Orders for Monday Nov 2: 388.",
+    "clarify": false
+   },
+   {
+    "q": "compare yesterday to last week",
+    "a": "Yesterday: $17,146.85 vs $17,127.58 on a usual Wednesday (+0.1%).",
+    "clarify": false
+   },
+   {
+    "q": "how did yesterday compare",
+    "a": "Yesterday: $17,146.85 vs $17,127.58 on a usual Wednesday (+0.1%).",
+    "clarify": false
+   },
+   {
+    "q": "avg ticket on uber last month",
+    "a": "Average ticket on Uber Eats for last month: $33.54.",
+    "clarify": false
+   },
+   {
+    "q": "cancellations last 30 days",
+    "a": "Cancelled orders for the last 30 days: 101.",
+    "clarify": false
+   },
+   {
+    "q": "avoidable cancellations last month",
+    "a": "Avoidable cancellations (item unavailable) for last month: 101.",
+    "clarify": false
+   },
+   {
+    "q": "error charges last week",
+    "a": "Error charges for last week: $500.54.",
+    "clarify": false
+   },
+   {
+    "q": "how accurate was the forecast yesterday",
+    "a": "For yesterday, the forecast made with data up to the night before was 525 orders; actual was 542 (-3.1%). Same weekday last month would have said 520.",
+    "clarify": false
+   },
+   {
+    "q": "forecast accuracy",
+    "a": "Over the last 30 days the forecast was off by 6.1% on average, against 7.1% for same-weekday averages.",
+    "clarify": false
+   },
+   {
+    "q": "days like tomorrow",
+    "a": "Most similar past days: Fri Oct 9 (540 orders, same weekday, school in session); Fri May 8 (510 orders, same weekday, school in session); Fri Sep 18 (462 orders, same weekday, school in session); Fri Sep 25 (526 orders, same weekday, school in session); Fri Sep 11 (502 orders, same weekday, school in session)",
+    "clarify": false
+   },
+   {
+    "q": "explain mar 8",
+    "a": "Mar 8, 2026: net sales $16,192 vs $19,480 on a usual Sunday (-17%). Biggest move: DoorDash (-1,451), mostly at dinner (-2,299). Context: CMU/Pitt on break. The usual-Sunday average includes 1 game night and 1 rainy day; against the most similar past days it was -9%.",
+    "clarify": false
+   },
+   {
+    "q": "why was nov 1 busy",
+    "a": "Nov 1, 2026: net sales $17,787 vs $16,626 on a usual Sunday (+7%). Biggest move: DoorDash (+542), mostly at dinner (+995). Context: Steelers home game. The usual-Sunday average includes 1 game night and 0 rainy days; against the most similar past days it was +9%.",
+    "clarify": false
+   },
+   {
+    "q": "what's our labor %",
+    "a": "Which day or period? For example 'yesterday', 'last week' or 'Oct 3'.",
+    "clarify": true
+   },
+   {
+    "q": "net sales march 8",
+    "a": "Net sales for Mar 8, 2026: $16,191.80.",
+    "clarify": false
+   },
+   {
+    "q": "orders nov 1",
+    "a": "Orders for Nov 1, 2026: 560.",
+    "clarify": false
+   },
+   {
+    "q": "asdfgh",
+    "a": "What would you like to know? For example: 'sales yesterday', 'DoorDash orders last week' or 'why was Friday busy?'",
+    "clarify": true
+   },
+   {
+    "q": "",
+    "a": "What would you like to know? For example: 'sales yesterday', 'DoorDash orders last week' or 'why was Friday busy?'",
+    "clarify": true
+   },
+   {
+    "q": "sales 3/8",
+    "a": "Net sales for Mar 8, 2026: $16,191.80.",
+    "clarify": false
+   },
+   {
+    "q": "revenue on grubhub this week",
+    "a": "Net sales on Grubhub for this week: $4,946.15.",
+    "clarify": false
+   },
+   {
+    "q": "how busy were we last friday",
+    "a": "Orders for Friday Oct 30: 642.",
+    "clarify": false
+   },
+   {
+    "q": "why did we lose money on uber",
+    "a": "Which day or period? For example 'yesterday', 'last week' or 'Oct 3'.",
+    "clarify": true
+   },
+   {
+    "q": "commission last month",
+    "a": "Commission for last month: $90,195.06.",
+    "clarify": false
+   },
+   {
+    "q": "what's tomorrow's rush",
+    "a": "Tomorrow (Fri Nov 6): about 590 orders (likely 531\u2013678), rush 18:00\u201319:30.",
+    "clarify": false
+   }
+  ]
+ },
+ "ask": {
+  "questions": 25,
+  "correct": 25,
+  "failures": [],
+  "sample": [
+   {
+    "q": "What were net sales yesterday?",
+    "truth": 17146.85,
+    "answer": "Net sales for yesterday: $17,146.85.",
+    "ok": true
+   },
+   {
+    "q": "How many orders did we do today?",
+    "truth": 475.0,
+    "answer": "Orders for today: 475.",
+    "ok": true
+   },
+   {
+    "q": "DoorDash sales last week?",
+    "truth": 53164.65,
+    "answer": "Net sales on DoorDash for last week: $53,164.65.",
+    "ok": true
+   },
+   {
+    "q": "Why was last Thursday slow?",
+    "truth": "explain_change",
+    "answer": "Thursday Oct 29: net sales $14,567 vs $16,023 on a usual Thursday (-9%). Biggest move: DoorDash (-946), mostly at dinner (-1,577). Context: nothing unusual. The usual-Thursday average includes 2 game nights and 1 rainy day; against the most similar past days it was -2%.",
+    "ok": true
+   },
+   {
+    "q": "Which past days were most like tomorrow?",
+    "truth": "find_similar_days",
+    "answer": "Most similar past days: Fri Oct 9 (540 orders, same weekday, school in session); Fri May 8 (510 orders, same weekday, school in session); Fri Sep 18 (462 orders, same weekday, school in session); Fri Sep 25 (526 orders, same weekday, school in session); Fri Sep 11 (502 orders, same weekday, school in session)",
+    "ok": true
+   },
+   {
+    "q": "How accurate was the forecast on Oct 31?",
+    "truth": "backtest_forecast",
+    "answer": "For Oct 31, 2026, the forecast made with data up to the night before was 633 orders; actual was 658 (-3.9%). Same weekday last month would have said 622.",
+    "ok": true
+   },
+   {
+    "q": "How good has the forecast been lately?",
+    "truth": "backtest_forecast",
+    "answer": "Over the last 30 days the forecast was off by 6.1% on average, against 7.1% for same-weekday averages.",
+    "ok": true
+   },
+   {
+    "q": "Compare today vs a usual Thursday",
+    "truth": "compare_periods",
+    "answer": "Today: $14,964.00 vs $15,658.01 on a usual Thursday (-4.4%).",
+    "ok": true
+   }
+  ]
+ },
+ "guardrails": {
+  "cases": 6,
+  "correct": 6,
+  "detail": [
+   {
+    "text": "Net sales were $15,270 on 470 orders.",
+    "expected_ok": true,
+    "got_ok": true
+   },
+   {
+    "text": "DoorDash paid $86.34 short.",
+    "expected_ok": true,
+    "got_ok": true
+   },
+   {
+    "text": "Cancellation rate is 1.0%.",
+    "expected_ok": true,
+    "got_ok": true
+   },
+   {
+    "text": "Net sales were $16,100.",
+    "expected_ok": false,
+    "got_ok": false
+   },
+   {
+    "text": "We lost $212.50 to fees.",
+    "expected_ok": false,
+    "got_ok": false
+   },
+   {
+    "text": "470 orders, up 12% on last week.",
+    "expected_ok": false,
+    "got_ok": false
+   }
+  ]
+ },
+ "adk_graph": {
+  "built": true,
+  "tree": [
+   "close_coordinator",
+   "  reconcile",
+   "    books",
+   "    stock",
+   "    demand",
+   "  understand",
+   "    analyst",
+   "    plan",
+   "  communicate",
+   "    report",
+   "    sentinel",
+   "  guard"
+  ]
+ },
+ "robustness": {
+  "books": {
+   "status": "partial",
+   "finished": true,
+   "failure_text_sent": true,
+   "other_steps_done": [
+    "stock",
+    "demand",
+    "analyst",
+    "plan",
+    "sentinel",
+    "report",
+    "guard"
+   ]
+  },
+  "stock": {
+   "status": "partial",
+   "finished": true,
+   "failure_text_sent": true,
+   "other_steps_done": [
+    "books",
+    "demand",
+    "analyst",
+    "plan",
+    "sentinel",
+    "report",
+    "guard"
+   ]
+  },
+  "demand": {
+   "status": "partial",
+   "finished": true,
+   "failure_text_sent": true,
+   "other_steps_done": [
+    "stock",
+    "books",
+    "analyst",
+    "sentinel",
+    "report"
+   ]
+  },
+  "analyst": {
+   "status": "partial",
+   "finished": true,
+   "failure_text_sent": true,
+   "other_steps_done": [
+    "stock",
+    "books",
+    "demand",
+    "plan",
+    "sentinel",
+    "report",
+    "guard"
+   ]
+  },
+  "report": {
+   "status": "partial",
+   "finished": true,
+   "failure_text_sent": false,
+   "other_steps_done": [
+    "stock",
+    "books",
+    "demand",
+    "analyst",
+    "plan",
+    "sentinel",
+    "guard"
+   ]
+  },
+  "idempotent_second_tap": {
+   "hit": true,
+   "sms_after_two_taps": 1
+  },
+  "close_at_1_40am": [
+   "held_for_8am"
+  ],
+  "no_opt_in": [
+   "blocked_no_opt_in"
+  ]
+ },
+ "nightly_replay": {
+  "nights": 47,
+  "done": 47,
+  "partial": 0,
+  "seconds_median": 2.21,
+  "seconds_max": 37.24,
+  "nights_with_sms": 14,
+  "sms_total": 14,
+  "cross_check_issues": 0,
+  "bucket_daily_status": {
+   "stored": 30,
+   "expired": 17
+  },
+  "bucket_bytes": 4116013,
+  "monthly_summaries": [
+   "monthly/2026-09",
+   "monthly/2026-10"
+  ],
+  "retrieve_recent": "stored",
+  "retrieve_40_days_old": "rebuilt"
+ }
+}

@@ -1,0 +1,2130 @@
+invoice_id,supplier,received_at,business_date,sku,qty,unit_cost
+inv00001,Penn Dairy & Eggs,2025-11-07 09:30:00,2025-11-07,ajitama_egg,390,0.418
+inv00001,Restaurant Depot,2025-11-07 09:30:00,2025-11-07,bao_bun,100,0.363
+inv00001,Strip District Meats,2025-11-07 09:30:00,2025-11-07,chicken_thigh,25,6.353
+inv00001,Restaurant Depot,2025-11-07 09:30:00,2025-11-07,edamame,8,4.488
+inv00001,Restaurant Depot,2025-11-07 09:30:00,2025-11-07,green_tea,20,0.614
+inv00001,Restaurant Depot,2025-11-07 09:30:00,2025-11-07,gyoza,700,0.274
+inv00001,Restaurant Depot,2025-11-07 09:30:00,2025-11-07,mochi,108,0.694
+inv00001,Sun Noodle,2025-11-07 09:30:00,2025-11-07,noodles,600,0.543
+inv00001,Strip District Meats,2025-11-07 09:30:00,2025-11-07,pork_belly,60,7.824
+inv00001,Restaurant Depot,2025-11-07 09:30:00,2025-11-07,ramune,72,1.177
+inv00001,Restaurant Depot,2025-11-07 09:30:00,2025-11-07,rice,20,2.158
+inv00001,Pittsburgh Beverage,2025-11-07 09:30:00,2025-11-07,sapporo,24,1.839
+inv00001,Strip District Produce,2025-11-07 09:30:00,2025-11-07,scallion,7,3.085
+inv00001,Restaurant Depot,2025-11-07 09:30:00,2025-11-07,takoyaki,300,0.302
+inv00002,Penn Dairy & Eggs,2025-11-10 09:30:00,2025-11-10,ajitama_egg,990,0.421
+inv00002,Restaurant Depot,2025-11-10 09:30:00,2025-11-10,bao_bun,150,0.344
+inv00002,Strip District Meats,2025-11-10 09:30:00,2025-11-10,chicken_thigh,80,6.131
+inv00002,Restaurant Depot,2025-11-10 09:30:00,2025-11-10,edamame,22,4.486
+inv00002,Restaurant Depot,2025-11-10 09:30:00,2025-11-10,green_tea,56,0.599
+inv00002,Restaurant Depot,2025-11-10 09:30:00,2025-11-10,gyoza,1900,0.281
+inv00002,Restaurant Depot,2025-11-10 09:30:00,2025-11-10,mochi,360,0.717
+inv00002,Sun Noodle,2025-11-10 09:30:00,2025-11-10,noodles,1680,0.542
+inv00002,Strip District Meats,2025-11-10 09:30:00,2025-11-10,pork_belly,120,7.782
+inv00002,Restaurant Depot,2025-11-10 09:30:00,2025-11-10,ramune,192,1.227
+inv00002,Restaurant Depot,2025-11-10 09:30:00,2025-11-10,rice,20,2.075
+inv00002,Pittsburgh Beverage,2025-11-10 09:30:00,2025-11-10,sapporo,48,1.912
+inv00002,Strip District Produce,2025-11-10 09:30:00,2025-11-10,scallion,18,3.083
+inv00002,Restaurant Depot,2025-11-10 09:30:00,2025-11-10,takoyaki,600,0.295
+inv00003,Penn Dairy & Eggs,2025-11-12 09:30:00,2025-11-12,ajitama_egg,570,0.428
+inv00003,Restaurant Depot,2025-11-12 09:30:00,2025-11-12,bao_bun,100,0.354
+inv00003,Strip District Meats,2025-11-12 09:30:00,2025-11-12,chicken_thigh,30,6.058
+inv00003,Restaurant Depot,2025-11-12 09:30:00,2025-11-12,edamame,8,4.424
+inv00003,Restaurant Depot,2025-11-12 09:30:00,2025-11-12,green_tea,16,0.604
+inv00003,Restaurant Depot,2025-11-12 09:30:00,2025-11-12,gyoza,800,0.272
+inv00003,Restaurant Depot,2025-11-12 09:30:00,2025-11-12,mochi,108,0.717
+inv00003,Sun Noodle,2025-11-12 09:30:00,2025-11-12,noodles,840,0.553
+inv00003,Strip District Meats,2025-11-12 09:30:00,2025-11-12,pork_belly,80,7.718
+inv00003,Restaurant Depot,2025-11-12 09:30:00,2025-11-12,ramune,72,1.217
+inv00003,Restaurant Depot,2025-11-12 09:30:00,2025-11-12,rice,20,2.109
+inv00003,Strip District Produce,2025-11-12 09:30:00,2025-11-12,scallion,9,3.07
+inv00003,Restaurant Depot,2025-11-12 09:30:00,2025-11-12,takoyaki,300,0.289
+inv00004,Penn Dairy & Eggs,2025-11-14 09:30:00,2025-11-14,ajitama_egg,630,0.42
+inv00004,Restaurant Depot,2025-11-14 09:30:00,2025-11-14,bao_bun,100,0.344
+inv00004,Strip District Meats,2025-11-14 09:30:00,2025-11-14,chicken_thigh,30,6.12
+inv00004,Restaurant Depot,2025-11-14 09:30:00,2025-11-14,edamame,10,4.499
+inv00004,Restaurant Depot,2025-11-14 09:30:00,2025-11-14,green_tea,24,0.608
+inv00004,Restaurant Depot,2025-11-14 09:30:00,2025-11-14,gyoza,800,0.281
+inv00004,Restaurant Depot,2025-11-14 09:30:00,2025-11-14,mochi,108,0.704
+inv00004,Sun Noodle,2025-11-14 09:30:00,2025-11-14,noodles,960,0.556
+inv00004,Strip District Meats,2025-11-14 09:30:00,2025-11-14,pork_belly,90,7.68
+inv00004,Restaurant Depot,2025-11-14 09:30:00,2025-11-14,ramune,96,1.189
+inv00004,Pittsburgh Beverage,2025-11-14 09:30:00,2025-11-14,sapporo,24,1.906
+inv00004,Strip District Produce,2025-11-14 09:30:00,2025-11-14,scallion,11,3.156
+inv00004,Restaurant Depot,2025-11-14 09:30:00,2025-11-14,takoyaki,300,0.292
+inv00005,Penn Dairy & Eggs,2025-11-17 09:30:00,2025-11-17,ajitama_egg,1170,0.427
+inv00005,Restaurant Depot,2025-11-17 09:30:00,2025-11-17,bao_bun,200,0.356
+inv00005,Strip District Meats,2025-11-17 09:30:00,2025-11-17,chicken_thigh,70,6.033
+inv00005,Restaurant Depot,2025-11-17 09:30:00,2025-11-17,edamame,20,4.376
+inv00005,Restaurant Depot,2025-11-17 09:30:00,2025-11-17,green_tea,52,0.588
+inv00005,Restaurant Depot,2025-11-17 09:30:00,2025-11-17,gyoza,1600,0.287
+inv00005,Restaurant Depot,2025-11-17 09:30:00,2025-11-17,mochi,324,0.677
+inv00005,Sun Noodle,2025-11-17 09:30:00,2025-11-17,noodles,1760,0.532
+inv00005,Strip District Meats,2025-11-17 09:30:00,2025-11-17,pork_belly,160,7.563
+inv00005,Restaurant Depot,2025-11-17 09:30:00,2025-11-17,ramune,144,1.219
+inv00005,Restaurant Depot,2025-11-17 09:30:00,2025-11-17,rice,20,2.091
+inv00005,Pittsburgh Beverage,2025-11-17 09:30:00,2025-11-17,sapporo,24,1.98
+inv00005,Strip District Produce,2025-11-17 09:30:00,2025-11-17,scallion,18,3.126
+inv00005,Restaurant Depot,2025-11-17 09:30:00,2025-11-17,takoyaki,540,0.308
+inv00006,Penn Dairy & Eggs,2025-11-19 09:30:00,2025-11-19,ajitama_egg,660,0.411
+inv00006,Restaurant Depot,2025-11-19 09:30:00,2025-11-19,bao_bun,150,0.349
+inv00006,Strip District Meats,2025-11-19 09:30:00,2025-11-19,chicken_thigh,30,6.058
+inv00006,Restaurant Depot,2025-11-19 09:30:00,2025-11-19,edamame,8,4.511
+inv00006,Restaurant Depot,2025-11-19 09:30:00,2025-11-19,green_tea,16,0.613
+inv00006,Restaurant Depot,2025-11-19 09:30:00,2025-11-19,gyoza,700,0.288
+inv00006,Restaurant Depot,2025-11-19 09:30:00,2025-11-19,mochi,144,0.693
+inv00006,Sun Noodle,2025-11-19 09:30:00,2025-11-19,noodles,960,0.548
+inv00006,Strip District Meats,2025-11-19 09:30:00,2025-11-19,pork_belly,100,7.682
+inv00006,Restaurant Depot,2025-11-19 09:30:00,2025-11-19,ramune,72,1.219
+inv00006,Restaurant Depot,2025-11-19 09:30:00,2025-11-19,rice,20,2.15
+inv00006,Pittsburgh Beverage,2025-11-19 09:30:00,2025-11-19,sapporo,24,1.956
+inv00006,Strip District Produce,2025-11-19 09:30:00,2025-11-19,scallion,11,3.088
+inv00006,Restaurant Depot,2025-11-19 09:30:00,2025-11-19,takoyaki,300,0.306
+inv00007,Penn Dairy & Eggs,2025-11-21 09:30:00,2025-11-21,ajitama_egg,750,0.408
+inv00007,Restaurant Depot,2025-11-21 09:30:00,2025-11-21,bao_bun,150,0.337
+inv00007,Strip District Meats,2025-11-21 09:30:00,2025-11-21,chicken_thigh,40,6.156
+inv00007,Restaurant Depot,2025-11-21 09:30:00,2025-11-21,edamame,12,4.484
+inv00007,Restaurant Depot,2025-11-21 09:30:00,2025-11-21,green_tea,28,0.618
+inv00007,Restaurant Depot,2025-11-21 09:30:00,2025-11-21,gyoza,1000,0.277
+inv00007,Restaurant Depot,2025-11-21 09:30:00,2025-11-21,mochi,108,0.702
+inv00007,Sun Noodle,2025-11-21 09:30:00,2025-11-21,noodles,1080,0.556
+inv00007,Strip District Meats,2025-11-21 09:30:00,2025-11-21,pork_belly,115,7.9
+inv00007,Restaurant Depot,2025-11-21 09:30:00,2025-11-21,ramune,72,1.225
+inv00007,Restaurant Depot,2025-11-21 09:30:00,2025-11-21,rice,20,2.086
+inv00007,Strip District Produce,2025-11-21 09:30:00,2025-11-21,scallion,12,3.146
+inv00007,Restaurant Depot,2025-11-21 09:30:00,2025-11-21,takoyaki,300,0.298
+inv00008,Penn Dairy & Eggs,2025-11-24 09:30:00,2025-11-24,ajitama_egg,1260,0.422
+inv00008,Restaurant Depot,2025-11-24 09:30:00,2025-11-24,bao_bun,200,0.334
+inv00008,Strip District Meats,2025-11-24 09:30:00,2025-11-24,chicken_thigh,65,6.184
+inv00008,Restaurant Depot,2025-11-24 09:30:00,2025-11-24,edamame,20,4.361
+inv00008,Restaurant Depot,2025-11-24 09:30:00,2025-11-24,green_tea,56,0.609
+inv00008,Restaurant Depot,2025-11-24 09:30:00,2025-11-24,gyoza,1400,0.281
+inv00008,Restaurant Depot,2025-11-24 09:30:00,2025-11-24,mochi,288,0.731
+inv00008,Sun Noodle,2025-11-24 09:30:00,2025-11-24,noodles,1880,0.554
+inv00008,Strip District Meats,2025-11-24 09:30:00,2025-11-24,pork_belly,175,8.208
+inv00008,Restaurant Depot,2025-11-24 09:30:00,2025-11-24,ramune,144,1.176
+inv00008,Restaurant Depot,2025-11-24 09:30:00,2025-11-24,rice,40,2.138
+inv00008,Pittsburgh Beverage,2025-11-24 09:30:00,2025-11-24,sapporo,24,1.863
+inv00008,Strip District Produce,2025-11-24 09:30:00,2025-11-24,scallion,20,3.025
+inv00008,Restaurant Depot,2025-11-24 09:30:00,2025-11-24,takoyaki,540,0.291
+inv00009,Penn Dairy & Eggs,2025-11-26 09:30:00,2025-11-26,ajitama_egg,780,0.416
+inv00009,Restaurant Depot,2025-11-26 09:30:00,2025-11-26,bao_bun,150,0.35
+inv00009,Strip District Meats,2025-11-26 09:30:00,2025-11-26,chicken_thigh,40,6.058
+inv00009,Restaurant Depot,2025-11-26 09:30:00,2025-11-26,edamame,10,4.454
+inv00009,Restaurant Depot,2025-11-26 09:30:00,2025-11-26,green_tea,24,0.59
+inv00009,Restaurant Depot,2025-11-26 09:30:00,2025-11-26,gyoza,1000,0.274
+inv00009,Restaurant Depot,2025-11-26 09:30:00,2025-11-26,mochi,144,0.695
+inv00009,Sun Noodle,2025-11-26 09:30:00,2025-11-26,noodles,1120,0.518
+inv00009,Strip District Meats,2025-11-26 09:30:00,2025-11-26,pork_belly,120,7.7
+inv00009,Restaurant Depot,2025-11-26 09:30:00,2025-11-26,ramune,96,1.217
+inv00009,Pittsburgh Beverage,2025-11-26 09:30:00,2025-11-26,sapporo,24,1.894
+inv00009,Strip District Produce,2025-11-26 09:30:00,2025-11-26,scallion,12,2.914
+inv00009,Restaurant Depot,2025-11-26 09:30:00,2025-11-26,takoyaki,300,0.296
+inv00010,Penn Dairy & Eggs,2025-11-28 09:30:00,2025-11-28,ajitama_egg,540,0.418
+inv00010,Restaurant Depot,2025-11-28 09:30:00,2025-11-28,bao_bun,50,0.344
+inv00010,Strip District Meats,2025-11-28 09:30:00,2025-11-28,chicken_thigh,30,6.028
+inv00010,Restaurant Depot,2025-11-28 09:30:00,2025-11-28,edamame,8,4.468
+inv00010,Restaurant Depot,2025-11-28 09:30:00,2025-11-28,green_tea,20,0.59
+inv00010,Restaurant Depot,2025-11-28 09:30:00,2025-11-28,gyoza,600,0.287
+inv00010,Restaurant Depot,2025-11-28 09:30:00,2025-11-28,mochi,108,0.688
+inv00010,Sun Noodle,2025-11-28 09:30:00,2025-11-28,noodles,800,0.575
+inv00010,Strip District Meats,2025-11-28 09:30:00,2025-11-28,pork_belly,125,7.577
+inv00010,Restaurant Depot,2025-11-28 09:30:00,2025-11-28,ramune,48,1.186
+inv00010,Restaurant Depot,2025-11-28 09:30:00,2025-11-28,rice,20,2.074
+inv00010,Strip District Produce,2025-11-28 09:30:00,2025-11-28,scallion,9,3.078
+inv00010,Restaurant Depot,2025-11-28 09:30:00,2025-11-28,takoyaki,180,0.295
+inv00011,Penn Dairy & Eggs,2025-12-01 09:30:00,2025-12-01,ajitama_egg,1410,0.412
+inv00011,Restaurant Depot,2025-12-01 09:30:00,2025-12-01,bao_bun,200,0.345
+inv00011,Strip District Meats,2025-12-01 09:30:00,2025-12-01,chicken_thigh,85,6.223
+inv00011,Restaurant Depot,2025-12-01 09:30:00,2025-12-01,edamame,18,4.324
+inv00011,Restaurant Depot,2025-12-01 09:30:00,2025-12-01,green_tea,56,0.604
+inv00011,Restaurant Depot,2025-12-01 09:30:00,2025-12-01,gyoza,2000,0.28
+inv00011,Restaurant Depot,2025-12-01 09:30:00,2025-12-01,mochi,360,0.689
+inv00011,Sun Noodle,2025-12-01 09:30:00,2025-12-01,noodles,2200,0.544
+inv00011,Strip District Meats,2025-12-01 09:30:00,2025-12-01,pork_belly,195,7.994
+inv00011,Restaurant Depot,2025-12-01 09:30:00,2025-12-01,ramune,192,1.172
+inv00011,Restaurant Depot,2025-12-01 09:30:00,2025-12-01,rice,40,2.123
+inv00011,Pittsburgh Beverage,2025-12-01 09:30:00,2025-12-01,sapporo,48,1.874
+inv00011,Strip District Produce,2025-12-01 09:30:00,2025-12-01,scallion,23,2.999
+inv00011,Restaurant Depot,2025-12-01 09:30:00,2025-12-01,takoyaki,660,0.3
+inv00012,Penn Dairy & Eggs,2025-12-03 09:30:00,2025-12-03,ajitama_egg,810,0.42
+inv00012,Restaurant Depot,2025-12-03 09:30:00,2025-12-03,bao_bun,150,0.344
+inv00012,Strip District Meats,2025-12-03 09:30:00,2025-12-03,chicken_thigh,35,6.263
+inv00012,Restaurant Depot,2025-12-03 09:30:00,2025-12-03,edamame,8,4.415
+inv00012,Restaurant Depot,2025-12-03 09:30:00,2025-12-03,green_tea,32,0.602
+inv00012,Restaurant Depot,2025-12-03 09:30:00,2025-12-03,gyoza,1100,0.283
+inv00012,Restaurant Depot,2025-12-03 09:30:00,2025-12-03,mochi,108,0.673
+inv00012,Sun Noodle,2025-12-03 09:30:00,2025-12-03,noodles,1200,0.552
+inv00012,Strip District Meats,2025-12-03 09:30:00,2025-12-03,pork_belly,130,7.629
+inv00012,Restaurant Depot,2025-12-03 09:30:00,2025-12-03,ramune,96,1.198
+inv00012,Restaurant Depot,2025-12-03 09:30:00,2025-12-03,rice,20,2.097
+inv00012,Strip District Produce,2025-12-03 09:30:00,2025-12-03,scallion,14,3.06
+inv00012,Restaurant Depot,2025-12-03 09:30:00,2025-12-03,takoyaki,300,0.299
+inv00013,Penn Dairy & Eggs,2025-12-05 09:30:00,2025-12-05,ajitama_egg,840,0.429
+inv00013,Restaurant Depot,2025-12-05 09:30:00,2025-12-05,bao_bun,150,0.343
+inv00013,Strip District Meats,2025-12-05 09:30:00,2025-12-05,chicken_thigh,45,6.442
+inv00013,Restaurant Depot,2025-12-05 09:30:00,2025-12-05,edamame,14,4.245
+inv00013,Restaurant Depot,2025-12-05 09:30:00,2025-12-05,green_tea,32,0.6
+inv00013,Restaurant Depot,2025-12-05 09:30:00,2025-12-05,gyoza,1000,0.274
+inv00013,Restaurant Depot,2025-12-05 09:30:00,2025-12-05,mochi,180,0.71
+inv00013,Sun Noodle,2025-12-05 09:30:00,2025-12-05,noodles,1160,0.559
+inv00013,Strip District Meats,2025-12-05 09:30:00,2025-12-05,pork_belly,120,7.922
+inv00013,Restaurant Depot,2025-12-05 09:30:00,2025-12-05,ramune,72,1.222
+inv00013,Restaurant Depot,2025-12-05 09:30:00,2025-12-05,rice,20,2.135
+inv00013,Pittsburgh Beverage,2025-12-05 09:30:00,2025-12-05,sapporo,24,1.843
+inv00013,Strip District Produce,2025-12-05 09:30:00,2025-12-05,scallion,12,3.128
+inv00013,Restaurant Depot,2025-12-05 09:30:00,2025-12-05,takoyaki,240,0.299
+inv00014,Penn Dairy & Eggs,2025-12-08 09:30:00,2025-12-08,ajitama_egg,1410,0.429
+inv00014,Restaurant Depot,2025-12-08 09:30:00,2025-12-08,bao_bun,250,0.348
+inv00014,Strip District Meats,2025-12-08 09:30:00,2025-12-08,chicken_thigh,75,6.294
+inv00014,Restaurant Depot,2025-12-08 09:30:00,2025-12-08,edamame,20,4.352
+inv00014,Restaurant Depot,2025-12-08 09:30:00,2025-12-08,green_tea,52,0.614
+inv00014,Restaurant Depot,2025-12-08 09:30:00,2025-12-08,gyoza,2000,0.285
+inv00014,Restaurant Depot,2025-12-08 09:30:00,2025-12-08,mochi,360,0.679
+inv00014,Sun Noodle,2025-12-08 09:30:00,2025-12-08,noodles,2160,0.567
+inv00014,Strip District Meats,2025-12-08 09:30:00,2025-12-08,pork_belly,205,7.812
+inv00014,Restaurant Depot,2025-12-08 09:30:00,2025-12-08,ramune,168,1.177
+inv00014,Restaurant Depot,2025-12-08 09:30:00,2025-12-08,rice,40,2.16
+inv00014,Pittsburgh Beverage,2025-12-08 09:30:00,2025-12-08,sapporo,24,1.921
+inv00014,Strip District Produce,2025-12-08 09:30:00,2025-12-08,scallion,23,3.2
+inv00014,Restaurant Depot,2025-12-08 09:30:00,2025-12-08,takoyaki,600,0.303
+inv00015,Penn Dairy & Eggs,2025-12-10 09:30:00,2025-12-10,ajitama_egg,810,0.411
+inv00015,Restaurant Depot,2025-12-10 09:30:00,2025-12-10,bao_bun,150,0.351
+inv00015,Strip District Meats,2025-12-10 09:30:00,2025-12-10,chicken_thigh,35,6.06
+inv00015,Restaurant Depot,2025-12-10 09:30:00,2025-12-10,edamame,10,4.398
+inv00015,Restaurant Depot,2025-12-10 09:30:00,2025-12-10,green_tea,24,0.609
+inv00015,Restaurant Depot,2025-12-10 09:30:00,2025-12-10,gyoza,900,0.269
+inv00015,Restaurant Depot,2025-12-10 09:30:00,2025-12-10,mochi,144,0.704
+inv00015,Sun Noodle,2025-12-10 09:30:00,2025-12-10,noodles,1120,0.561
+inv00015,Strip District Meats,2025-12-10 09:30:00,2025-12-10,pork_belly,140,7.878
+inv00015,Restaurant Depot,2025-12-10 09:30:00,2025-12-10,ramune,72,1.183
+inv00015,Pittsburgh Beverage,2025-12-10 09:30:00,2025-12-10,sapporo,24,1.888
+inv00015,Strip District Produce,2025-12-10 09:30:00,2025-12-10,scallion,12,3.049
+inv00015,Restaurant Depot,2025-12-10 09:30:00,2025-12-10,takoyaki,300,0.3
+inv00016,Penn Dairy & Eggs,2025-12-12 09:30:00,2025-12-12,ajitama_egg,870,0.413
+inv00016,Restaurant Depot,2025-12-12 09:30:00,2025-12-12,bao_bun,150,0.35
+inv00016,Strip District Meats,2025-12-12 09:30:00,2025-12-12,chicken_thigh,40,6.186
+inv00016,Restaurant Depot,2025-12-12 09:30:00,2025-12-12,edamame,10,4.41
+inv00016,Restaurant Depot,2025-12-12 09:30:00,2025-12-12,green_tea,36,0.584
+inv00016,Restaurant Depot,2025-12-12 09:30:00,2025-12-12,gyoza,900,0.273
+inv00016,Restaurant Depot,2025-12-12 09:30:00,2025-12-12,mochi,252,0.708
+inv00016,Sun Noodle,2025-12-12 09:30:00,2025-12-12,noodles,1240,0.552
+inv00016,Strip District Meats,2025-12-12 09:30:00,2025-12-12,pork_belly,130,7.934
+inv00016,Restaurant Depot,2025-12-12 09:30:00,2025-12-12,ramune,72,1.207
+inv00016,Restaurant Depot,2025-12-12 09:30:00,2025-12-12,rice,40,2.099
+inv00016,Pittsburgh Beverage,2025-12-12 09:30:00,2025-12-12,sapporo,24,1.906
+inv00016,Strip District Produce,2025-12-12 09:30:00,2025-12-12,scallion,14,3.163
+inv00016,Restaurant Depot,2025-12-12 09:30:00,2025-12-12,takoyaki,300,0.316
+inv00017,Penn Dairy & Eggs,2025-12-15 09:30:00,2025-12-15,ajitama_egg,1650,0.415
+inv00017,Restaurant Depot,2025-12-15 09:30:00,2025-12-15,bao_bun,250,0.363
+inv00017,Strip District Meats,2025-12-15 09:30:00,2025-12-15,chicken_thigh,80,6.225
+inv00017,Restaurant Depot,2025-12-15 09:30:00,2025-12-15,edamame,20,4.392
+inv00017,Restaurant Depot,2025-12-15 09:30:00,2025-12-15,green_tea,60,0.614
+inv00017,Restaurant Depot,2025-12-15 09:30:00,2025-12-15,gyoza,1900,0.28
+inv00017,Restaurant Depot,2025-12-15 09:30:00,2025-12-15,mochi,252,0.704
+inv00017,Sun Noodle,2025-12-15 09:30:00,2025-12-15,noodles,2360,0.545
+inv00017,Strip District Meats,2025-12-15 09:30:00,2025-12-15,pork_belly,230,7.701
+inv00017,Restaurant Depot,2025-12-15 09:30:00,2025-12-15,ramune,168,1.199
+inv00017,Restaurant Depot,2025-12-15 09:30:00,2025-12-15,rice,20,2.142
+inv00017,Pittsburgh Beverage,2025-12-15 09:30:00,2025-12-15,sapporo,24,1.877
+inv00017,Strip District Produce,2025-12-15 09:30:00,2025-12-15,scallion,25,3.183
+inv00017,Restaurant Depot,2025-12-15 09:30:00,2025-12-15,takoyaki,720,0.3
+inv00018,Penn Dairy & Eggs,2025-12-17 09:30:00,2025-12-17,ajitama_egg,870,0.416
+inv00018,Restaurant Depot,2025-12-17 09:30:00,2025-12-17,bao_bun,150,0.346
+inv00018,Strip District Meats,2025-12-17 09:30:00,2025-12-17,chicken_thigh,35,6.028
+inv00018,Restaurant Depot,2025-12-17 09:30:00,2025-12-17,edamame,10,4.223
+inv00018,Restaurant Depot,2025-12-17 09:30:00,2025-12-17,green_tea,32,0.61
+inv00018,Restaurant Depot,2025-12-17 09:30:00,2025-12-17,gyoza,1000,0.277
+inv00018,Restaurant Depot,2025-12-17 09:30:00,2025-12-17,mochi,144,0.714
+inv00018,Sun Noodle,2025-12-17 09:30:00,2025-12-17,noodles,1240,0.567
+inv00018,Strip District Meats,2025-12-17 09:30:00,2025-12-17,pork_belly,155,8.176
+inv00018,Restaurant Depot,2025-12-17 09:30:00,2025-12-17,ramune,96,1.236
+inv00018,Restaurant Depot,2025-12-17 09:30:00,2025-12-17,rice,40,2.083
+inv00018,Pittsburgh Beverage,2025-12-17 09:30:00,2025-12-17,sapporo,24,1.92
+inv00018,Strip District Produce,2025-12-17 09:30:00,2025-12-17,scallion,13,3.047
+inv00018,Restaurant Depot,2025-12-17 09:30:00,2025-12-17,takoyaki,300,0.299
+inv00019,Penn Dairy & Eggs,2025-12-19 09:30:00,2025-12-19,ajitama_egg,960,0.419
+inv00019,Restaurant Depot,2025-12-19 09:30:00,2025-12-19,bao_bun,200,0.34
+inv00019,Strip District Meats,2025-12-19 09:30:00,2025-12-19,chicken_thigh,45,6.048
+inv00019,Restaurant Depot,2025-12-19 09:30:00,2025-12-19,edamame,12,4.497
+inv00019,Restaurant Depot,2025-12-19 09:30:00,2025-12-19,green_tea,32,0.61
+inv00019,Restaurant Depot,2025-12-19 09:30:00,2025-12-19,gyoza,1100,0.285
+inv00019,Restaurant Depot,2025-12-19 09:30:00,2025-12-19,mochi,180,0.701
+inv00019,Sun Noodle,2025-12-19 09:30:00,2025-12-19,noodles,1360,0.551
+inv00019,Strip District Meats,2025-12-19 09:30:00,2025-12-19,pork_belly,140,8.097
+inv00019,Restaurant Depot,2025-12-19 09:30:00,2025-12-19,ramune,120,1.229
+inv00019,Restaurant Depot,2025-12-19 09:30:00,2025-12-19,rice,20,2.079
+inv00019,Strip District Produce,2025-12-19 09:30:00,2025-12-19,scallion,15,3.18
+inv00019,Restaurant Depot,2025-12-19 09:30:00,2025-12-19,takoyaki,360,0.291
+inv00020,Penn Dairy & Eggs,2025-12-22 09:30:00,2025-12-22,ajitama_egg,1620,0.438
+inv00020,Restaurant Depot,2025-12-22 09:30:00,2025-12-22,bao_bun,250,0.351
+inv00020,Strip District Meats,2025-12-22 09:30:00,2025-12-22,chicken_thigh,70,6.205
+inv00020,Restaurant Depot,2025-12-22 09:30:00,2025-12-22,edamame,20,4.428
+inv00020,Restaurant Depot,2025-12-22 09:30:00,2025-12-22,green_tea,48,0.598
+inv00020,Restaurant Depot,2025-12-22 09:30:00,2025-12-22,gyoza,1600,0.28
+inv00020,Restaurant Depot,2025-12-22 09:30:00,2025-12-22,mochi,252,0.682
+inv00020,Sun Noodle,2025-12-22 09:30:00,2025-12-22,noodles,2320,0.56
+inv00020,Strip District Meats,2025-12-22 09:30:00,2025-12-22,pork_belly,255,7.487
+inv00020,Restaurant Depot,2025-12-22 09:30:00,2025-12-22,ramune,144,1.224
+inv00020,Restaurant Depot,2025-12-22 09:30:00,2025-12-22,rice,40,2.096
+inv00020,Pittsburgh Beverage,2025-12-22 09:30:00,2025-12-22,sapporo,48,1.955
+inv00020,Strip District Produce,2025-12-22 09:30:00,2025-12-22,scallion,25,3.111
+inv00020,Restaurant Depot,2025-12-22 09:30:00,2025-12-22,takoyaki,480,0.306
+inv00021,Penn Dairy & Eggs,2025-12-24 09:30:00,2025-12-24,ajitama_egg,780,0.434
+inv00021,Restaurant Depot,2025-12-24 09:30:00,2025-12-24,bao_bun,150,0.358
+inv00021,Strip District Meats,2025-12-24 09:30:00,2025-12-24,chicken_thigh,30,6.369
+inv00021,Restaurant Depot,2025-12-24 09:30:00,2025-12-24,edamame,8,4.431
+inv00021,Restaurant Depot,2025-12-24 09:30:00,2025-12-24,green_tea,20,0.607
+inv00021,Restaurant Depot,2025-12-24 09:30:00,2025-12-24,gyoza,700,0.28
+inv00021,Restaurant Depot,2025-12-24 09:30:00,2025-12-24,mochi,180,0.721
+inv00021,Sun Noodle,2025-12-24 09:30:00,2025-12-24,noodles,1080,0.553
+inv00021,Strip District Meats,2025-12-24 09:30:00,2025-12-24,pork_belly,155,7.82
+inv00021,Restaurant Depot,2025-12-24 09:30:00,2025-12-24,ramune,72,1.207
+inv00021,Restaurant Depot,2025-12-24 09:30:00,2025-12-24,rice,20,2.146
+inv00021,Strip District Produce,2025-12-24 09:30:00,2025-12-24,scallion,12,3.239
+inv00021,Restaurant Depot,2025-12-24 09:30:00,2025-12-24,takoyaki,180,0.304
+inv00022,Penn Dairy & Eggs,2025-12-26 09:30:00,2025-12-26,ajitama_egg,300,0.423
+inv00022,Restaurant Depot,2025-12-26 09:30:00,2025-12-26,bao_bun,50,0.349
+inv00022,Strip District Meats,2025-12-26 09:30:00,2025-12-26,chicken_thigh,15,6.538
+inv00022,Restaurant Depot,2025-12-26 09:30:00,2025-12-26,edamame,4,4.548
+inv00022,Restaurant Depot,2025-12-26 09:30:00,2025-12-26,green_tea,8,0.602
+inv00022,Restaurant Depot,2025-12-26 09:30:00,2025-12-26,gyoza,300,0.275
+inv00022,Restaurant Depot,2025-12-26 09:30:00,2025-12-26,mochi,36,0.708
+inv00022,Sun Noodle,2025-12-26 09:30:00,2025-12-26,noodles,400,0.538
+inv00022,Strip District Meats,2025-12-26 09:30:00,2025-12-26,pork_belly,85,7.713
+inv00022,Restaurant Depot,2025-12-26 09:30:00,2025-12-26,ramune,24,1.236
+inv00022,Strip District Produce,2025-12-26 09:30:00,2025-12-26,scallion,4,2.987
+inv00022,Restaurant Depot,2025-12-26 09:30:00,2025-12-26,takoyaki,120,0.306
+inv00023,Penn Dairy & Eggs,2025-12-29 09:30:00,2025-12-29,ajitama_egg,1770,0.41
+inv00023,Restaurant Depot,2025-12-29 09:30:00,2025-12-29,bao_bun,300,0.344
+inv00023,Strip District Meats,2025-12-29 09:30:00,2025-12-29,chicken_thigh,85,6.359
+inv00023,Restaurant Depot,2025-12-29 09:30:00,2025-12-29,edamame,22,4.259
+inv00023,Restaurant Depot,2025-12-29 09:30:00,2025-12-29,green_tea,60,0.575
+inv00023,Restaurant Depot,2025-12-29 09:30:00,2025-12-29,gyoza,1900,0.276
+inv00023,Restaurant Depot,2025-12-29 09:30:00,2025-12-29,mochi,288,0.696
+inv00023,Sun Noodle,2025-12-29 09:30:00,2025-12-29,noodles,2560,0.558
+inv00023,Strip District Meats,2025-12-29 09:30:00,2025-12-29,pork_belly,285,7.873
+inv00023,Restaurant Depot,2025-12-29 09:30:00,2025-12-29,ramune,168,1.203
+inv00023,Restaurant Depot,2025-12-29 09:30:00,2025-12-29,rice,40,2.056
+inv00023,Pittsburgh Beverage,2025-12-29 09:30:00,2025-12-29,sapporo,24,1.899
+inv00023,Strip District Produce,2025-12-29 09:30:00,2025-12-29,scallion,27,3.135
+inv00023,Restaurant Depot,2025-12-29 09:30:00,2025-12-29,takoyaki,720,0.298
+inv00024,Penn Dairy & Eggs,2025-12-31 09:30:00,2025-12-31,ajitama_egg,750,0.407
+inv00024,Restaurant Depot,2025-12-31 09:30:00,2025-12-31,bao_bun,150,0.357
+inv00024,Strip District Meats,2025-12-31 09:30:00,2025-12-31,chicken_thigh,30,6.363
+inv00024,Restaurant Depot,2025-12-31 09:30:00,2025-12-31,edamame,10,4.482
+inv00024,Restaurant Depot,2025-12-31 09:30:00,2025-12-31,green_tea,20,0.587
+inv00024,Restaurant Depot,2025-12-31 09:30:00,2025-12-31,gyoza,800,0.28
+inv00024,Restaurant Depot,2025-12-31 09:30:00,2025-12-31,mochi,108,0.7
+inv00024,Sun Noodle,2025-12-31 09:30:00,2025-12-31,noodles,1040,0.546
+inv00024,Strip District Meats,2025-12-31 09:30:00,2025-12-31,pork_belly,160,7.897
+inv00024,Restaurant Depot,2025-12-31 09:30:00,2025-12-31,ramune,72,1.214
+inv00024,Restaurant Depot,2025-12-31 09:30:00,2025-12-31,rice,20,2.092
+inv00024,Pittsburgh Beverage,2025-12-31 09:30:00,2025-12-31,sapporo,24,1.995
+inv00024,Strip District Produce,2025-12-31 09:30:00,2025-12-31,scallion,12,3.12
+inv00024,Restaurant Depot,2025-12-31 09:30:00,2025-12-31,takoyaki,240,0.301
+inv00025,Penn Dairy & Eggs,2026-01-02 09:30:00,2026-01-02,ajitama_egg,780,0.415
+inv00025,Restaurant Depot,2026-01-02 09:30:00,2026-01-02,bao_bun,150,0.35
+inv00025,Strip District Meats,2026-01-02 09:30:00,2026-01-02,chicken_thigh,30,6.21
+inv00025,Restaurant Depot,2026-01-02 09:30:00,2026-01-02,edamame,10,4.376
+inv00025,Restaurant Depot,2026-01-02 09:30:00,2026-01-02,green_tea,20,0.625
+inv00025,Restaurant Depot,2026-01-02 09:30:00,2026-01-02,gyoza,700,0.284
+inv00025,Restaurant Depot,2026-01-02 09:30:00,2026-01-02,mochi,144,0.693
+inv00025,Sun Noodle,2026-01-02 09:30:00,2026-01-02,noodles,1080,0.556
+inv00025,Strip District Meats,2026-01-02 09:30:00,2026-01-02,pork_belly,145,7.746
+inv00025,Restaurant Depot,2026-01-02 09:30:00,2026-01-02,ramune,72,1.229
+inv00025,Restaurant Depot,2026-01-02 09:30:00,2026-01-02,rice,40,2.14
+inv00025,Pittsburgh Beverage,2026-01-02 09:30:00,2026-01-02,sapporo,24,1.971
+inv00025,Strip District Produce,2026-01-02 09:30:00,2026-01-02,scallion,12,3.125
+inv00025,Restaurant Depot,2026-01-02 09:30:00,2026-01-02,takoyaki,180,0.29
+inv00026,Penn Dairy & Eggs,2026-01-05 09:30:00,2026-01-05,ajitama_egg,1530,0.401
+inv00026,Restaurant Depot,2026-01-05 09:30:00,2026-01-05,bao_bun,250,0.345
+inv00026,Strip District Meats,2026-01-05 09:30:00,2026-01-05,chicken_thigh,70,6.203
+inv00026,Restaurant Depot,2026-01-05 09:30:00,2026-01-05,edamame,16,4.378
+inv00026,Restaurant Depot,2026-01-05 09:30:00,2026-01-05,green_tea,44,0.599
+inv00026,Restaurant Depot,2026-01-05 09:30:00,2026-01-05,gyoza,1600,0.287
+inv00026,Restaurant Depot,2026-01-05 09:30:00,2026-01-05,mochi,288,0.713
+inv00026,Sun Noodle,2026-01-05 09:30:00,2026-01-05,noodles,2160,0.552
+inv00026,Strip District Meats,2026-01-05 09:30:00,2026-01-05,pork_belly,305,7.738
+inv00026,Restaurant Depot,2026-01-05 09:30:00,2026-01-05,ramune,144,1.247
+inv00026,Restaurant Depot,2026-01-05 09:30:00,2026-01-05,rice,40,2.118
+inv00026,Pittsburgh Beverage,2026-01-05 09:30:00,2026-01-05,sapporo,24,1.849
+inv00026,Strip District Produce,2026-01-05 09:30:00,2026-01-05,scallion,22,3.159
+inv00026,Restaurant Depot,2026-01-05 09:30:00,2026-01-05,takoyaki,600,0.297
+inv00027,Penn Dairy & Eggs,2026-01-07 09:30:00,2026-01-07,ajitama_egg,900,0.422
+inv00027,Restaurant Depot,2026-01-07 09:30:00,2026-01-07,bao_bun,150,0.344
+inv00027,Strip District Meats,2026-01-07 09:30:00,2026-01-07,chicken_thigh,30,6.262
+inv00027,Restaurant Depot,2026-01-07 09:30:00,2026-01-07,edamame,10,4.226
+inv00027,Restaurant Depot,2026-01-07 09:30:00,2026-01-07,green_tea,28,0.598
+inv00027,Restaurant Depot,2026-01-07 09:30:00,2026-01-07,gyoza,900,0.282
+inv00027,Restaurant Depot,2026-01-07 09:30:00,2026-01-07,mochi,180,0.691
+inv00027,Sun Noodle,2026-01-07 09:30:00,2026-01-07,noodles,1240,0.546
+inv00027,Strip District Meats,2026-01-07 09:30:00,2026-01-07,pork_belly,145,7.477
+inv00027,Restaurant Depot,2026-01-07 09:30:00,2026-01-07,ramune,48,1.2
+inv00027,Restaurant Depot,2026-01-07 09:30:00,2026-01-07,rice,20,2.064
+inv00027,Strip District Produce,2026-01-07 09:30:00,2026-01-07,scallion,14,2.986
+inv00027,Restaurant Depot,2026-01-07 09:30:00,2026-01-07,takoyaki,180,0.301
+inv00028,Penn Dairy & Eggs,2026-01-09 09:30:00,2026-01-09,ajitama_egg,900,0.422
+inv00028,Restaurant Depot,2026-01-09 09:30:00,2026-01-09,bao_bun,200,0.332
+inv00028,Strip District Meats,2026-01-09 09:30:00,2026-01-09,chicken_thigh,40,6.443
+inv00028,Restaurant Depot,2026-01-09 09:30:00,2026-01-09,edamame,12,4.501
+inv00028,Restaurant Depot,2026-01-09 09:30:00,2026-01-09,green_tea,28,0.598
+inv00028,Restaurant Depot,2026-01-09 09:30:00,2026-01-09,gyoza,800,0.272
+inv00028,Restaurant Depot,2026-01-09 09:30:00,2026-01-09,mochi,144,0.689
+inv00028,Sun Noodle,2026-01-09 09:30:00,2026-01-09,noodles,1280,0.555
+inv00028,Strip District Meats,2026-01-09 09:30:00,2026-01-09,pork_belly,150,7.916
+inv00028,Restaurant Depot,2026-01-09 09:30:00,2026-01-09,ramune,96,1.164
+inv00028,Restaurant Depot,2026-01-09 09:30:00,2026-01-09,rice,20,2.124
+inv00028,Pittsburgh Beverage,2026-01-09 09:30:00,2026-01-09,sapporo,24,1.923
+inv00028,Strip District Produce,2026-01-09 09:30:00,2026-01-09,scallion,14,3.091
+inv00028,Restaurant Depot,2026-01-09 09:30:00,2026-01-09,takoyaki,360,0.297
+inv00029,Penn Dairy & Eggs,2026-01-12 09:30:00,2026-01-12,ajitama_egg,1590,0.42
+inv00029,Restaurant Depot,2026-01-12 09:30:00,2026-01-12,bao_bun,300,0.355
+inv00029,Strip District Meats,2026-01-12 09:30:00,2026-01-12,chicken_thigh,65,6.326
+inv00029,Restaurant Depot,2026-01-12 09:30:00,2026-01-12,edamame,20,4.493
+inv00029,Restaurant Depot,2026-01-12 09:30:00,2026-01-12,green_tea,40,0.605
+inv00029,Restaurant Depot,2026-01-12 09:30:00,2026-01-12,gyoza,1700,0.268
+inv00029,Restaurant Depot,2026-01-12 09:30:00,2026-01-12,mochi,252,0.698
+inv00029,Sun Noodle,2026-01-12 09:30:00,2026-01-12,noodles,2320,0.556
+inv00029,Strip District Meats,2026-01-12 09:30:00,2026-01-12,pork_belly,305,7.731
+inv00029,Restaurant Depot,2026-01-12 09:30:00,2026-01-12,ramune,120,1.231
+inv00029,Restaurant Depot,2026-01-12 09:30:00,2026-01-12,rice,40,2.072
+inv00029,Pittsburgh Beverage,2026-01-12 09:30:00,2026-01-12,sapporo,24,1.904
+inv00029,Strip District Produce,2026-01-12 09:30:00,2026-01-12,scallion,24,3.062
+inv00029,Restaurant Depot,2026-01-12 09:30:00,2026-01-12,takoyaki,420,0.307
+inv00030,Penn Dairy & Eggs,2026-01-14 09:30:00,2026-01-14,ajitama_egg,1020,0.417
+inv00030,Restaurant Depot,2026-01-14 09:30:00,2026-01-14,bao_bun,200,0.343
+inv00030,Strip District Meats,2026-01-14 09:30:00,2026-01-14,chicken_thigh,45,6.258
+inv00030,Restaurant Depot,2026-01-14 09:30:00,2026-01-14,edamame,8,4.585
+inv00030,Restaurant Depot,2026-01-14 09:30:00,2026-01-14,green_tea,28,0.596
+inv00030,Restaurant Depot,2026-01-14 09:30:00,2026-01-14,gyoza,900,0.275
+inv00030,Restaurant Depot,2026-01-14 09:30:00,2026-01-14,mochi,180,0.7
+inv00030,Sun Noodle,2026-01-14 09:30:00,2026-01-14,noodles,1440,0.554
+inv00030,Strip District Meats,2026-01-14 09:30:00,2026-01-14,pork_belly,165,7.973
+inv00030,Restaurant Depot,2026-01-14 09:30:00,2026-01-14,ramune,96,1.204
+inv00030,Restaurant Depot,2026-01-14 09:30:00,2026-01-14,rice,20,2.139
+inv00030,Strip District Produce,2026-01-14 09:30:00,2026-01-14,scallion,16,3.106
+inv00030,Restaurant Depot,2026-01-14 09:30:00,2026-01-14,takoyaki,300,0.3
+inv00031,Penn Dairy & Eggs,2026-01-16 09:30:00,2026-01-16,ajitama_egg,990,0.419
+inv00031,Restaurant Depot,2026-01-16 09:30:00,2026-01-16,bao_bun,150,0.36
+inv00031,Strip District Meats,2026-01-16 09:30:00,2026-01-16,chicken_thigh,40,6.242
+inv00031,Restaurant Depot,2026-01-16 09:30:00,2026-01-16,edamame,12,4.433
+inv00031,Restaurant Depot,2026-01-16 09:30:00,2026-01-16,green_tea,36,0.598
+inv00031,Restaurant Depot,2026-01-16 09:30:00,2026-01-16,gyoza,900,0.282
+inv00031,Restaurant Depot,2026-01-16 09:30:00,2026-01-16,mochi,180,0.708
+inv00031,Sun Noodle,2026-01-16 09:30:00,2026-01-16,noodles,1360,0.548
+inv00031,Strip District Meats,2026-01-16 09:30:00,2026-01-16,pork_belly,155,7.667
+inv00031,Restaurant Depot,2026-01-16 09:30:00,2026-01-16,ramune,96,1.189
+inv00031,Restaurant Depot,2026-01-16 09:30:00,2026-01-16,rice,20,2.044
+inv00031,Pittsburgh Beverage,2026-01-16 09:30:00,2026-01-16,sapporo,24,1.875
+inv00031,Strip District Produce,2026-01-16 09:30:00,2026-01-16,scallion,15,3.053
+inv00031,Restaurant Depot,2026-01-16 09:30:00,2026-01-16,takoyaki,300,0.301
+inv00032,Penn Dairy & Eggs,2026-01-19 09:30:00,2026-01-19,ajitama_egg,1830,0.421
+inv00032,Restaurant Depot,2026-01-19 09:30:00,2026-01-19,bao_bun,300,0.351
+inv00032,Strip District Meats,2026-01-19 09:30:00,2026-01-19,chicken_thigh,75,6.218
+inv00032,Restaurant Depot,2026-01-19 09:30:00,2026-01-19,edamame,22,4.442
+inv00032,Restaurant Depot,2026-01-19 09:30:00,2026-01-19,green_tea,60,0.598
+inv00032,Restaurant Depot,2026-01-19 09:30:00,2026-01-19,gyoza,2000,0.291
+inv00032,Restaurant Depot,2026-01-19 09:30:00,2026-01-19,mochi,360,0.694
+inv00032,Sun Noodle,2026-01-19 09:30:00,2026-01-19,noodles,2600,0.55
+inv00032,Strip District Meats,2026-01-19 09:30:00,2026-01-19,pork_belly,285,7.792
+inv00032,Restaurant Depot,2026-01-19 09:30:00,2026-01-19,ramune,192,1.202
+inv00032,Restaurant Depot,2026-01-19 09:30:00,2026-01-19,rice,60,2.182
+inv00032,Pittsburgh Beverage,2026-01-19 09:30:00,2026-01-19,sapporo,48,1.827
+inv00032,Strip District Produce,2026-01-19 09:30:00,2026-01-19,scallion,27,3.044
+inv00032,Restaurant Depot,2026-01-19 09:30:00,2026-01-19,takoyaki,660,0.304
+inv00033,Penn Dairy & Eggs,2026-01-21 09:30:00,2026-01-21,ajitama_egg,930,0.418
+inv00033,Restaurant Depot,2026-01-21 09:30:00,2026-01-21,bao_bun,200,0.349
+inv00033,Strip District Meats,2026-01-21 09:30:00,2026-01-21,chicken_thigh,35,6.299
+inv00033,Restaurant Depot,2026-01-21 09:30:00,2026-01-21,edamame,8,4.489
+inv00033,Restaurant Depot,2026-01-21 09:30:00,2026-01-21,green_tea,32,0.618
+inv00033,Restaurant Depot,2026-01-21 09:30:00,2026-01-21,gyoza,900,0.277
+inv00033,Restaurant Depot,2026-01-21 09:30:00,2026-01-21,mochi,144,0.685
+inv00033,Sun Noodle,2026-01-21 09:30:00,2026-01-21,noodles,1280,0.562
+inv00033,Strip District Meats,2026-01-21 09:30:00,2026-01-21,pork_belly,175,7.615
+inv00033,Restaurant Depot,2026-01-21 09:30:00,2026-01-21,ramune,96,1.19
+inv00033,Restaurant Depot,2026-01-21 09:30:00,2026-01-21,rice,20,2.111
+inv00033,Strip District Produce,2026-01-21 09:30:00,2026-01-21,scallion,15,3.115
+inv00033,Restaurant Depot,2026-01-21 09:30:00,2026-01-21,takoyaki,300,0.305
+inv00034,Penn Dairy & Eggs,2026-01-23 09:30:00,2026-01-23,ajitama_egg,1080,0.417
+inv00034,Restaurant Depot,2026-01-23 09:30:00,2026-01-23,bao_bun,200,0.351
+inv00034,Strip District Meats,2026-01-23 09:30:00,2026-01-23,chicken_thigh,40,5.966
+inv00034,Restaurant Depot,2026-01-23 09:30:00,2026-01-23,edamame,14,4.388
+inv00034,Restaurant Depot,2026-01-23 09:30:00,2026-01-23,green_tea,28,0.602
+inv00034,Restaurant Depot,2026-01-23 09:30:00,2026-01-23,gyoza,1000,0.278
+inv00034,Restaurant Depot,2026-01-23 09:30:00,2026-01-23,mochi,144,0.697
+inv00034,Sun Noodle,2026-01-23 09:30:00,2026-01-23,noodles,1520,0.546
+inv00034,Strip District Meats,2026-01-23 09:30:00,2026-01-23,pork_belly,170,7.864
+inv00034,Restaurant Depot,2026-01-23 09:30:00,2026-01-23,ramune,120,1.233
+inv00034,Restaurant Depot,2026-01-23 09:30:00,2026-01-23,rice,40,2.077
+inv00034,Pittsburgh Beverage,2026-01-23 09:30:00,2026-01-23,sapporo,24,1.888
+inv00034,Strip District Produce,2026-01-23 09:30:00,2026-01-23,scallion,16,3.061
+inv00034,Restaurant Depot,2026-01-23 09:30:00,2026-01-23,takoyaki,480,0.3
+inv00035,Penn Dairy & Eggs,2026-01-26 09:30:00,2026-01-26,ajitama_egg,1920,0.402
+inv00035,Restaurant Depot,2026-01-26 09:30:00,2026-01-26,bao_bun,350,0.332
+inv00035,Strip District Meats,2026-01-26 09:30:00,2026-01-26,chicken_thigh,85,6.517
+inv00035,Restaurant Depot,2026-01-26 09:30:00,2026-01-26,edamame,20,4.305
+inv00035,Restaurant Depot,2026-01-26 09:30:00,2026-01-26,green_tea,56,0.605
+inv00035,Restaurant Depot,2026-01-26 09:30:00,2026-01-26,gyoza,2000,0.29
+inv00035,Restaurant Depot,2026-01-26 09:30:00,2026-01-26,mochi,324,0.702
+inv00035,Sun Noodle,2026-01-26 09:30:00,2026-01-26,noodles,2680,0.559
+inv00035,Strip District Meats,2026-01-26 09:30:00,2026-01-26,pork_belly,340,7.596
+inv00035,Restaurant Depot,2026-01-26 09:30:00,2026-01-26,ramune,168,1.198
+inv00035,Restaurant Depot,2026-01-26 09:30:00,2026-01-26,rice,40,2.069
+inv00035,Pittsburgh Beverage,2026-01-26 09:30:00,2026-01-26,sapporo,48,1.968
+inv00035,Strip District Produce,2026-01-26 09:30:00,2026-01-26,scallion,29,3.05
+inv00035,Restaurant Depot,2026-01-26 09:30:00,2026-01-26,takoyaki,540,0.307
+inv00036,Penn Dairy & Eggs,2026-01-28 09:30:00,2026-01-28,ajitama_egg,1050,0.418
+inv00036,Restaurant Depot,2026-01-28 09:30:00,2026-01-28,bao_bun,200,0.354
+inv00036,Strip District Meats,2026-01-28 09:30:00,2026-01-28,chicken_thigh,40,6.158
+inv00036,Restaurant Depot,2026-01-28 09:30:00,2026-01-28,edamame,14,4.394
+inv00036,Restaurant Depot,2026-01-28 09:30:00,2026-01-28,green_tea,28,0.588
+inv00036,Restaurant Depot,2026-01-28 09:30:00,2026-01-28,gyoza,1200,0.276
+inv00036,Restaurant Depot,2026-01-28 09:30:00,2026-01-28,mochi,180,0.684
+inv00036,Sun Noodle,2026-01-28 09:30:00,2026-01-28,noodles,1400,0.541
+inv00036,Strip District Meats,2026-01-28 09:30:00,2026-01-28,pork_belly,160,8.173
+inv00036,Restaurant Depot,2026-01-28 09:30:00,2026-01-28,ramune,96,1.17
+inv00036,Restaurant Depot,2026-01-28 09:30:00,2026-01-28,rice,20,2.116
+inv00036,Pittsburgh Beverage,2026-01-28 09:30:00,2026-01-28,sapporo,24,1.983
+inv00036,Strip District Produce,2026-01-28 09:30:00,2026-01-28,scallion,15,3.052
+inv00036,Restaurant Depot,2026-01-28 09:30:00,2026-01-28,takoyaki,360,0.289
+inv00037,Penn Dairy & Eggs,2026-01-30 09:30:00,2026-01-30,ajitama_egg,960,0.418
+inv00037,Restaurant Depot,2026-01-30 09:30:00,2026-01-30,bao_bun,200,0.36
+inv00037,Strip District Meats,2026-01-30 09:30:00,2026-01-30,chicken_thigh,40,5.906
+inv00037,Restaurant Depot,2026-01-30 09:30:00,2026-01-30,edamame,10,4.362
+inv00037,Restaurant Depot,2026-01-30 09:30:00,2026-01-30,green_tea,32,0.582
+inv00037,Restaurant Depot,2026-01-30 09:30:00,2026-01-30,gyoza,1000,0.28
+inv00037,Restaurant Depot,2026-01-30 09:30:00,2026-01-30,mochi,216,0.702
+inv00037,Sun Noodle,2026-01-30 09:30:00,2026-01-30,noodles,1360,0.555
+inv00037,Strip District Meats,2026-01-30 09:30:00,2026-01-30,pork_belly,190,7.807
+inv00037,Restaurant Depot,2026-01-30 09:30:00,2026-01-30,ramune,96,1.212
+inv00037,Restaurant Depot,2026-01-30 09:30:00,2026-01-30,rice,40,2.117
+inv00037,Strip District Produce,2026-01-30 09:30:00,2026-01-30,scallion,15,3.164
+inv00037,Restaurant Depot,2026-01-30 09:30:00,2026-01-30,takoyaki,360,0.299
+inv00038,Penn Dairy & Eggs,2026-02-02 09:30:00,2026-02-02,ajitama_egg,1890,0.431
+inv00038,Restaurant Depot,2026-02-02 09:30:00,2026-02-02,bao_bun,350,0.351
+inv00038,Strip District Meats,2026-02-02 09:30:00,2026-02-02,chicken_thigh,80,6.065
+inv00038,Restaurant Depot,2026-02-02 09:30:00,2026-02-02,edamame,20,4.333
+inv00038,Restaurant Depot,2026-02-02 09:30:00,2026-02-02,green_tea,60,0.588
+inv00038,Restaurant Depot,2026-02-02 09:30:00,2026-02-02,gyoza,1600,0.275
+inv00038,Restaurant Depot,2026-02-02 09:30:00,2026-02-02,mochi,324,0.74
+inv00038,Sun Noodle,2026-02-02 09:30:00,2026-02-02,noodles,2680,0.546
+inv00038,Strip District Meats,2026-02-02 09:30:00,2026-02-02,pork_belly,345,7.599
+inv00038,Restaurant Depot,2026-02-02 09:30:00,2026-02-02,ramune,120,1.17
+inv00038,Restaurant Depot,2026-02-02 09:30:00,2026-02-02,rice,40,2.079
+inv00038,Pittsburgh Beverage,2026-02-02 09:30:00,2026-02-02,sapporo,48,1.879
+inv00038,Strip District Produce,2026-02-02 09:30:00,2026-02-02,scallion,30,3.207
+inv00038,Restaurant Depot,2026-02-02 09:30:00,2026-02-02,takoyaki,540,0.296
+inv00039,Penn Dairy & Eggs,2026-02-04 09:30:00,2026-02-04,ajitama_egg,900,0.417
+inv00039,Restaurant Depot,2026-02-04 09:30:00,2026-02-04,bao_bun,150,0.348
+inv00039,Strip District Meats,2026-02-04 09:30:00,2026-02-04,chicken_thigh,40,6.158
+inv00039,Restaurant Depot,2026-02-04 09:30:00,2026-02-04,edamame,10,4.547
+inv00039,Restaurant Depot,2026-02-04 09:30:00,2026-02-04,green_tea,24,0.583
+inv00039,Restaurant Depot,2026-02-04 09:30:00,2026-02-04,gyoza,1000,0.277
+inv00039,Restaurant Depot,2026-02-04 09:30:00,2026-02-04,mochi,180,0.716
+inv00039,Sun Noodle,2026-02-04 09:30:00,2026-02-04,noodles,1240,0.553
+inv00039,Strip District Meats,2026-02-04 09:30:00,2026-02-04,pork_belly,170,7.791
+inv00039,Restaurant Depot,2026-02-04 09:30:00,2026-02-04,ramune,120,1.232
+inv00039,Restaurant Depot,2026-02-04 09:30:00,2026-02-04,rice,20,2.104
+inv00039,Strip District Produce,2026-02-04 09:30:00,2026-02-04,scallion,13,3.096
+inv00039,Restaurant Depot,2026-02-04 09:30:00,2026-02-04,takoyaki,420,0.296
+inv00040,Penn Dairy & Eggs,2026-02-06 09:30:00,2026-02-06,ajitama_egg,1050,0.42
+inv00040,Restaurant Depot,2026-02-06 09:30:00,2026-02-06,bao_bun,200,0.361
+inv00040,Strip District Meats,2026-02-06 09:30:00,2026-02-06,chicken_thigh,45,6.332
+inv00040,Restaurant Depot,2026-02-06 09:30:00,2026-02-06,edamame,12,4.273
+inv00040,Restaurant Depot,2026-02-06 09:30:00,2026-02-06,green_tea,24,0.593
+inv00040,Restaurant Depot,2026-02-06 09:30:00,2026-02-06,gyoza,1000,0.28
+inv00040,Restaurant Depot,2026-02-06 09:30:00,2026-02-06,mochi,180,0.693
+inv00040,Sun Noodle,2026-02-06 09:30:00,2026-02-06,noodles,1400,0.554
+inv00040,Strip District Meats,2026-02-06 09:30:00,2026-02-06,pork_belly,185,7.83
+inv00040,Restaurant Depot,2026-02-06 09:30:00,2026-02-06,ramune,72,1.171
+inv00040,Restaurant Depot,2026-02-06 09:30:00,2026-02-06,rice,40,2.046
+inv00040,Pittsburgh Beverage,2026-02-06 09:30:00,2026-02-06,sapporo,24,1.812
+inv00040,Strip District Produce,2026-02-06 09:30:00,2026-02-06,scallion,16,3.109
+inv00040,Restaurant Depot,2026-02-06 09:30:00,2026-02-06,takoyaki,240,0.302
+inv00041,Penn Dairy & Eggs,2026-02-09 09:30:00,2026-02-09,ajitama_egg,1920,0.426
+inv00041,Restaurant Depot,2026-02-09 09:30:00,2026-02-09,bao_bun,350,0.344
+inv00041,Strip District Meats,2026-02-09 09:30:00,2026-02-09,chicken_thigh,85,6.067
+inv00041,Restaurant Depot,2026-02-09 09:30:00,2026-02-09,edamame,24,4.317
+inv00041,Restaurant Depot,2026-02-09 09:30:00,2026-02-09,green_tea,52,0.611
+inv00041,Restaurant Depot,2026-02-09 09:30:00,2026-02-09,gyoza,2000,0.281
+inv00041,Restaurant Depot,2026-02-09 09:30:00,2026-02-09,mochi,324,0.717
+inv00041,Sun Noodle,2026-02-09 09:30:00,2026-02-09,noodles,2680,0.565
+inv00041,Strip District Meats,2026-02-09 09:30:00,2026-02-09,pork_belly,315,7.77
+inv00041,Restaurant Depot,2026-02-09 09:30:00,2026-02-09,ramune,192,1.196
+inv00041,Restaurant Depot,2026-02-09 09:30:00,2026-02-09,rice,40,2.127
+inv00041,Pittsburgh Beverage,2026-02-09 09:30:00,2026-02-09,sapporo,24,1.891
+inv00041,Strip District Produce,2026-02-09 09:30:00,2026-02-09,scallion,29,3.138
+inv00041,Restaurant Depot,2026-02-09 09:30:00,2026-02-09,takoyaki,720,0.296
+inv00042,Penn Dairy & Eggs,2026-02-11 09:30:00,2026-02-11,ajitama_egg,930,0.422
+inv00042,Restaurant Depot,2026-02-11 09:30:00,2026-02-11,bao_bun,150,0.369
+inv00042,Strip District Meats,2026-02-11 09:30:00,2026-02-11,chicken_thigh,40,6.278
+inv00042,Restaurant Depot,2026-02-11 09:30:00,2026-02-11,edamame,12,4.503
+inv00042,Restaurant Depot,2026-02-11 09:30:00,2026-02-11,green_tea,28,0.585
+inv00042,Restaurant Depot,2026-02-11 09:30:00,2026-02-11,gyoza,1000,0.278
+inv00042,Restaurant Depot,2026-02-11 09:30:00,2026-02-11,mochi,144,0.682
+inv00042,Sun Noodle,2026-02-11 09:30:00,2026-02-11,noodles,1320,0.56
+inv00042,Strip District Meats,2026-02-11 09:30:00,2026-02-11,pork_belly,170,7.601
+inv00042,Restaurant Depot,2026-02-11 09:30:00,2026-02-11,ramune,72,1.213
+inv00042,Restaurant Depot,2026-02-11 09:30:00,2026-02-11,rice,20,2.224
+inv00042,Pittsburgh Beverage,2026-02-11 09:30:00,2026-02-11,sapporo,24,1.931
+inv00042,Strip District Produce,2026-02-11 09:30:00,2026-02-11,scallion,14,3.233
+inv00042,Restaurant Depot,2026-02-11 09:30:00,2026-02-11,takoyaki,360,0.298
+inv00043,Penn Dairy & Eggs,2026-02-13 09:30:00,2026-02-13,ajitama_egg,1020,0.417
+inv00043,Restaurant Depot,2026-02-13 09:30:00,2026-02-13,bao_bun,250,0.351
+inv00043,Strip District Meats,2026-02-13 09:30:00,2026-02-13,chicken_thigh,45,6.012
+inv00043,Restaurant Depot,2026-02-13 09:30:00,2026-02-13,edamame,10,4.532
+inv00043,Restaurant Depot,2026-02-13 09:30:00,2026-02-13,green_tea,32,0.611
+inv00043,Restaurant Depot,2026-02-13 09:30:00,2026-02-13,gyoza,1100,0.285
+inv00043,Restaurant Depot,2026-02-13 09:30:00,2026-02-13,mochi,144,0.669
+inv00043,Sun Noodle,2026-02-13 09:30:00,2026-02-13,noodles,1360,0.556
+inv00043,Strip District Meats,2026-02-13 09:30:00,2026-02-13,pork_belly,200,7.922
+inv00043,Restaurant Depot,2026-02-13 09:30:00,2026-02-13,ramune,120,1.206
+inv00043,Restaurant Depot,2026-02-13 09:30:00,2026-02-13,rice,40,2.083
+inv00043,Strip District Produce,2026-02-13 09:30:00,2026-02-13,scallion,15,3.104
+inv00043,Restaurant Depot,2026-02-13 09:30:00,2026-02-13,takoyaki,300,0.3
+inv00044,Penn Dairy & Eggs,2026-02-16 09:30:00,2026-02-16,ajitama_egg,1920,0.419
+inv00044,Restaurant Depot,2026-02-16 09:30:00,2026-02-16,bao_bun,350,0.346
+inv00044,Strip District Meats,2026-02-16 09:30:00,2026-02-16,chicken_thigh,85,6.089
+inv00044,Restaurant Depot,2026-02-16 09:30:00,2026-02-16,edamame,22,4.408
+inv00044,Restaurant Depot,2026-02-16 09:30:00,2026-02-16,green_tea,60,0.598
+inv00044,Restaurant Depot,2026-02-16 09:30:00,2026-02-16,gyoza,2000,0.284
+inv00044,Restaurant Depot,2026-02-16 09:30:00,2026-02-16,mochi,288,0.683
+inv00044,Sun Noodle,2026-02-16 09:30:00,2026-02-16,noodles,2680,0.559
+inv00044,Strip District Meats,2026-02-16 09:30:00,2026-02-16,pork_belly,345,7.525
+inv00044,Restaurant Depot,2026-02-16 09:30:00,2026-02-16,ramune,168,1.21
+inv00044,Restaurant Depot,2026-02-16 09:30:00,2026-02-16,rice,40,2.043
+inv00044,Pittsburgh Beverage,2026-02-16 09:30:00,2026-02-16,sapporo,48,1.968
+inv00044,Strip District Produce,2026-02-16 09:30:00,2026-02-16,scallion,30,3.07
+inv00044,Restaurant Depot,2026-02-16 09:30:00,2026-02-16,takoyaki,720,0.308
+inv00045,Penn Dairy & Eggs,2026-02-18 09:30:00,2026-02-18,ajitama_egg,960,0.419
+inv00045,Restaurant Depot,2026-02-18 09:30:00,2026-02-18,bao_bun,200,0.351
+inv00045,Strip District Meats,2026-02-18 09:30:00,2026-02-18,chicken_thigh,40,6.34
+inv00045,Restaurant Depot,2026-02-18 09:30:00,2026-02-18,edamame,8,4.366
+inv00045,Restaurant Depot,2026-02-18 09:30:00,2026-02-18,green_tea,28,0.583
+inv00045,Restaurant Depot,2026-02-18 09:30:00,2026-02-18,gyoza,900,0.279
+inv00045,Restaurant Depot,2026-02-18 09:30:00,2026-02-18,mochi,180,0.723
+inv00045,Sun Noodle,2026-02-18 09:30:00,2026-02-18,noodles,1320,0.542
+inv00045,Strip District Meats,2026-02-18 09:30:00,2026-02-18,pork_belly,165,7.915
+inv00045,Restaurant Depot,2026-02-18 09:30:00,2026-02-18,ramune,96,1.2
+inv00045,Restaurant Depot,2026-02-18 09:30:00,2026-02-18,rice,20,2.171
+inv00045,Pittsburgh Beverage,2026-02-18 09:30:00,2026-02-18,sapporo,24,1.872
+inv00045,Strip District Produce,2026-02-18 09:30:00,2026-02-18,scallion,14,3.129
+inv00045,Restaurant Depot,2026-02-18 09:30:00,2026-02-18,takoyaki,300,0.305
+inv00046,Penn Dairy & Eggs,2026-02-20 09:30:00,2026-02-20,ajitama_egg,1080,0.426
+inv00046,Restaurant Depot,2026-02-20 09:30:00,2026-02-20,bao_bun,200,0.349
+inv00046,Strip District Meats,2026-02-20 09:30:00,2026-02-20,chicken_thigh,45,6.258
+inv00046,Restaurant Depot,2026-02-20 09:30:00,2026-02-20,edamame,12,4.418
+inv00046,Restaurant Depot,2026-02-20 09:30:00,2026-02-20,green_tea,28,0.598
+inv00046,Restaurant Depot,2026-02-20 09:30:00,2026-02-20,gyoza,1100,0.283
+inv00046,Restaurant Depot,2026-02-20 09:30:00,2026-02-20,mochi,180,0.712
+inv00046,Sun Noodle,2026-02-20 09:30:00,2026-02-20,noodles,1480,0.554
+inv00046,Strip District Meats,2026-02-20 09:30:00,2026-02-20,pork_belly,190,8.074
+inv00046,Restaurant Depot,2026-02-20 09:30:00,2026-02-20,ramune,96,1.224
+inv00046,Restaurant Depot,2026-02-20 09:30:00,2026-02-20,rice,40,2.184
+inv00046,Strip District Produce,2026-02-20 09:30:00,2026-02-20,scallion,16,3.105
+inv00046,Restaurant Depot,2026-02-20 09:30:00,2026-02-20,takoyaki,300,0.306
+inv00047,Penn Dairy & Eggs,2026-02-23 09:30:00,2026-02-23,ajitama_egg,1920,0.419
+inv00047,Restaurant Depot,2026-02-23 09:30:00,2026-02-23,bao_bun,350,0.348
+inv00047,Strip District Meats,2026-02-23 09:30:00,2026-02-23,chicken_thigh,85,6.291
+inv00047,Restaurant Depot,2026-02-23 09:30:00,2026-02-23,edamame,24,4.442
+inv00047,Restaurant Depot,2026-02-23 09:30:00,2026-02-23,green_tea,60,0.613
+inv00047,Restaurant Depot,2026-02-23 09:30:00,2026-02-23,gyoza,2000,0.278
+inv00047,Restaurant Depot,2026-02-23 09:30:00,2026-02-23,mochi,360,0.676
+inv00047,Sun Noodle,2026-02-23 09:30:00,2026-02-23,noodles,2680,0.547
+inv00047,Strip District Meats,2026-02-23 09:30:00,2026-02-23,pork_belly,345,7.735
+inv00047,Restaurant Depot,2026-02-23 09:30:00,2026-02-23,ramune,168,1.272
+inv00047,Restaurant Depot,2026-02-23 09:30:00,2026-02-23,rice,60,2.102
+inv00047,Pittsburgh Beverage,2026-02-23 09:30:00,2026-02-23,sapporo,48,1.979
+inv00047,Strip District Produce,2026-02-23 09:30:00,2026-02-23,scallion,30,3.126
+inv00047,Restaurant Depot,2026-02-23 09:30:00,2026-02-23,takoyaki,540,0.303
+inv00048,Penn Dairy & Eggs,2026-02-25 09:30:00,2026-02-25,ajitama_egg,870,0.423
+inv00048,Restaurant Depot,2026-02-25 09:30:00,2026-02-25,bao_bun,150,0.346
+inv00048,Strip District Meats,2026-02-25 09:30:00,2026-02-25,chicken_thigh,40,6.327
+inv00048,Restaurant Depot,2026-02-25 09:30:00,2026-02-25,edamame,8,4.493
+inv00048,Restaurant Depot,2026-02-25 09:30:00,2026-02-25,green_tea,28,0.622
+inv00048,Restaurant Depot,2026-02-25 09:30:00,2026-02-25,gyoza,900,0.279
+inv00048,Restaurant Depot,2026-02-25 09:30:00,2026-02-25,mochi,108,0.708
+inv00048,Sun Noodle,2026-02-25 09:30:00,2026-02-25,noodles,1160,0.559
+inv00048,Strip District Meats,2026-02-25 09:30:00,2026-02-25,pork_belly,165,7.597
+inv00048,Restaurant Depot,2026-02-25 09:30:00,2026-02-25,ramune,48,1.134
+inv00048,Restaurant Depot,2026-02-25 09:30:00,2026-02-25,rice,20,2.071
+inv00048,Strip District Produce,2026-02-25 09:30:00,2026-02-25,scallion,12,3.11
+inv00048,Restaurant Depot,2026-02-25 09:30:00,2026-02-25,takoyaki,360,0.291
+inv00049,Penn Dairy & Eggs,2026-02-27 09:30:00,2026-02-27,ajitama_egg,1050,0.419
+inv00049,Restaurant Depot,2026-02-27 09:30:00,2026-02-27,bao_bun,150,0.359
+inv00049,Strip District Meats,2026-02-27 09:30:00,2026-02-27,chicken_thigh,40,6.125
+inv00049,Restaurant Depot,2026-02-27 09:30:00,2026-02-27,edamame,12,4.491
+inv00049,Restaurant Depot,2026-02-27 09:30:00,2026-02-27,green_tea,36,0.62
+inv00049,Restaurant Depot,2026-02-27 09:30:00,2026-02-27,gyoza,1100,0.285
+inv00049,Restaurant Depot,2026-02-27 09:30:00,2026-02-27,mochi,144,0.723
+inv00049,Sun Noodle,2026-02-27 09:30:00,2026-02-27,noodles,1520,0.56
+inv00049,Strip District Meats,2026-02-27 09:30:00,2026-02-27,pork_belly,180,7.947
+inv00049,Restaurant Depot,2026-02-27 09:30:00,2026-02-27,ramune,120,1.194
+inv00049,Restaurant Depot,2026-02-27 09:30:00,2026-02-27,rice,20,2.063
+inv00049,Pittsburgh Beverage,2026-02-27 09:30:00,2026-02-27,sapporo,24,1.915
+inv00049,Strip District Produce,2026-02-27 09:30:00,2026-02-27,scallion,16,3.113
+inv00049,Restaurant Depot,2026-02-27 09:30:00,2026-02-27,takoyaki,360,0.294
+inv00050,Penn Dairy & Eggs,2026-03-02 09:30:00,2026-03-02,ajitama_egg,1920,0.423
+inv00050,Restaurant Depot,2026-03-02 09:30:00,2026-03-02,bao_bun,400,0.348
+inv00050,Strip District Meats,2026-03-02 09:30:00,2026-03-02,chicken_thigh,85,6.227
+inv00050,Restaurant Depot,2026-03-02 09:30:00,2026-03-02,edamame,24,4.282
+inv00050,Restaurant Depot,2026-03-02 09:30:00,2026-03-02,green_tea,60,0.595
+inv00050,Restaurant Depot,2026-03-02 09:30:00,2026-03-02,gyoza,2000,0.275
+inv00050,Restaurant Depot,2026-03-02 09:30:00,2026-03-02,mochi,360,0.691
+inv00050,Sun Noodle,2026-03-02 09:30:00,2026-03-02,noodles,2680,0.581
+inv00050,Strip District Meats,2026-03-02 09:30:00,2026-03-02,pork_belly,345,8.021
+inv00050,Restaurant Depot,2026-03-02 09:30:00,2026-03-02,ramune,168,1.182
+inv00050,Restaurant Depot,2026-03-02 09:30:00,2026-03-02,rice,60,2.038
+inv00050,Pittsburgh Beverage,2026-03-02 09:30:00,2026-03-02,sapporo,24,1.88
+inv00050,Strip District Produce,2026-03-02 09:30:00,2026-03-02,scallion,30,3.069
+inv00050,Restaurant Depot,2026-03-02 09:30:00,2026-03-02,takoyaki,660,0.296
+inv00051,Penn Dairy & Eggs,2026-03-04 09:30:00,2026-03-04,ajitama_egg,960,0.413
+inv00051,Restaurant Depot,2026-03-04 09:30:00,2026-03-04,bao_bun,200,0.344
+inv00051,Strip District Meats,2026-03-04 09:30:00,2026-03-04,chicken_thigh,35,6.036
+inv00051,Restaurant Depot,2026-03-04 09:30:00,2026-03-04,edamame,10,4.323
+inv00051,Restaurant Depot,2026-03-04 09:30:00,2026-03-04,green_tea,28,0.613
+inv00051,Restaurant Depot,2026-03-04 09:30:00,2026-03-04,gyoza,1000,0.276
+inv00051,Restaurant Depot,2026-03-04 09:30:00,2026-03-04,mochi,144,0.687
+inv00051,Sun Noodle,2026-03-04 09:30:00,2026-03-04,noodles,1360,0.55
+inv00051,Strip District Meats,2026-03-04 09:30:00,2026-03-04,pork_belly,160,7.961
+inv00051,Restaurant Depot,2026-03-04 09:30:00,2026-03-04,ramune,96,1.208
+inv00051,Restaurant Depot,2026-03-04 09:30:00,2026-03-04,rice,20,2.072
+inv00051,Pittsburgh Beverage,2026-03-04 09:30:00,2026-03-04,sapporo,24,1.903
+inv00051,Strip District Produce,2026-03-04 09:30:00,2026-03-04,scallion,14,3.239
+inv00051,Restaurant Depot,2026-03-04 09:30:00,2026-03-04,takoyaki,300,0.295
+inv00052,Penn Dairy & Eggs,2026-03-06 09:30:00,2026-03-06,ajitama_egg,930,0.42
+inv00052,Restaurant Depot,2026-03-06 09:30:00,2026-03-06,bao_bun,150,0.343
+inv00052,Strip District Meats,2026-03-06 09:30:00,2026-03-06,chicken_thigh,40,6.193
+inv00052,Restaurant Depot,2026-03-06 09:30:00,2026-03-06,edamame,10,4.323
+inv00052,Restaurant Depot,2026-03-06 09:30:00,2026-03-06,green_tea,36,0.626
+inv00052,Restaurant Depot,2026-03-06 09:30:00,2026-03-06,gyoza,900,0.288
+inv00052,Restaurant Depot,2026-03-06 09:30:00,2026-03-06,mochi,144,0.689
+inv00052,Sun Noodle,2026-03-06 09:30:00,2026-03-06,noodles,1360,0.551
+inv00052,Strip District Meats,2026-03-06 09:30:00,2026-03-06,pork_belly,180,7.975
+inv00052,Restaurant Depot,2026-03-06 09:30:00,2026-03-06,ramune,72,1.217
+inv00052,Restaurant Depot,2026-03-06 09:30:00,2026-03-06,rice,20,2.021
+inv00052,Pittsburgh Beverage,2026-03-06 09:30:00,2026-03-06,sapporo,24,1.876
+inv00052,Strip District Produce,2026-03-06 09:30:00,2026-03-06,scallion,15,2.986
+inv00052,Restaurant Depot,2026-03-06 09:30:00,2026-03-06,takoyaki,420,0.288
+inv00053,Penn Dairy & Eggs,2026-03-09 09:30:00,2026-03-09,ajitama_egg,1650,0.438
+inv00053,Restaurant Depot,2026-03-09 09:30:00,2026-03-09,bao_bun,350,0.356
+inv00053,Strip District Meats,2026-03-09 09:30:00,2026-03-09,chicken_thigh,70,6.318
+inv00053,Restaurant Depot,2026-03-09 09:30:00,2026-03-09,edamame,20,4.384
+inv00053,Restaurant Depot,2026-03-09 09:30:00,2026-03-09,green_tea,56,0.601
+inv00053,Restaurant Depot,2026-03-09 09:30:00,2026-03-09,gyoza,1700,0.277
+inv00053,Restaurant Depot,2026-03-09 09:30:00,2026-03-09,mochi,288,0.684
+inv00053,Sun Noodle,2026-03-09 09:30:00,2026-03-09,noodles,2480,0.576
+inv00053,Strip District Meats,2026-03-09 09:30:00,2026-03-09,pork_belly,345,7.762
+inv00053,Restaurant Depot,2026-03-09 09:30:00,2026-03-09,ramune,168,1.202
+inv00053,Restaurant Depot,2026-03-09 09:30:00,2026-03-09,rice,60,2.076
+inv00053,Pittsburgh Beverage,2026-03-09 09:30:00,2026-03-09,sapporo,48,1.865
+inv00053,Strip District Produce,2026-03-09 09:30:00,2026-03-09,scallion,25,3.107
+inv00053,Restaurant Depot,2026-03-09 09:30:00,2026-03-09,takoyaki,540,0.305
+inv00054,Penn Dairy & Eggs,2026-03-11 09:30:00,2026-03-11,ajitama_egg,810,0.423
+inv00054,Restaurant Depot,2026-03-11 09:30:00,2026-03-11,bao_bun,150,0.355
+inv00054,Strip District Meats,2026-03-11 09:30:00,2026-03-11,chicken_thigh,30,6.142
+inv00054,Restaurant Depot,2026-03-11 09:30:00,2026-03-11,edamame,8,4.328
+inv00054,Restaurant Depot,2026-03-11 09:30:00,2026-03-11,green_tea,20,0.6
+inv00054,Restaurant Depot,2026-03-11 09:30:00,2026-03-11,gyoza,800,0.277
+inv00054,Restaurant Depot,2026-03-11 09:30:00,2026-03-11,mochi,144,0.724
+inv00054,Sun Noodle,2026-03-11 09:30:00,2026-03-11,noodles,1080,0.543
+inv00054,Strip District Meats,2026-03-11 09:30:00,2026-03-11,pork_belly,165,7.834
+inv00054,Restaurant Depot,2026-03-11 09:30:00,2026-03-11,ramune,72,1.195
+inv00054,Restaurant Depot,2026-03-11 09:30:00,2026-03-11,rice,20,2.147
+inv00054,Pittsburgh Beverage,2026-03-11 09:30:00,2026-03-11,sapporo,24,1.848
+inv00054,Strip District Produce,2026-03-11 09:30:00,2026-03-11,scallion,12,3.019
+inv00054,Restaurant Depot,2026-03-11 09:30:00,2026-03-11,takoyaki,240,0.295
+inv00055,Penn Dairy & Eggs,2026-03-13 09:30:00,2026-03-13,ajitama_egg,870,0.417
+inv00055,Restaurant Depot,2026-03-13 09:30:00,2026-03-13,bao_bun,150,0.36
+inv00055,Strip District Meats,2026-03-13 09:30:00,2026-03-13,chicken_thigh,35,6.304
+inv00055,Restaurant Depot,2026-03-13 09:30:00,2026-03-13,edamame,8,4.337
+inv00055,Restaurant Depot,2026-03-13 09:30:00,2026-03-13,green_tea,24,0.599
+inv00055,Restaurant Depot,2026-03-13 09:30:00,2026-03-13,gyoza,900,0.279
+inv00055,Restaurant Depot,2026-03-13 09:30:00,2026-03-13,mochi,180,0.654
+inv00055,Sun Noodle,2026-03-13 09:30:00,2026-03-13,noodles,1240,0.555
+inv00055,Strip District Meats,2026-03-13 09:30:00,2026-03-13,pork_belly,175,7.957
+inv00055,Restaurant Depot,2026-03-13 09:30:00,2026-03-13,ramune,72,1.234
+inv00055,Restaurant Depot,2026-03-13 09:30:00,2026-03-13,rice,20,2.075
+inv00055,Pittsburgh Beverage,2026-03-13 09:30:00,2026-03-13,sapporo,24,1.872
+inv00055,Strip District Produce,2026-03-13 09:30:00,2026-03-13,scallion,14,3.085
+inv00055,Restaurant Depot,2026-03-13 09:30:00,2026-03-13,takoyaki,240,0.302
+inv00056,Penn Dairy & Eggs,2026-03-16 09:30:00,2026-03-16,ajitama_egg,1680,0.407
+inv00056,Restaurant Depot,2026-03-16 09:30:00,2026-03-16,bao_bun,300,0.353
+inv00056,Strip District Meats,2026-03-16 09:30:00,2026-03-16,chicken_thigh,70,6.009
+inv00056,Restaurant Depot,2026-03-16 09:30:00,2026-03-16,edamame,20,4.422
+inv00056,Restaurant Depot,2026-03-16 09:30:00,2026-03-16,green_tea,48,0.608
+inv00056,Restaurant Depot,2026-03-16 09:30:00,2026-03-16,gyoza,1800,0.279
+inv00056,Restaurant Depot,2026-03-16 09:30:00,2026-03-16,mochi,324,0.693
+inv00056,Sun Noodle,2026-03-16 09:30:00,2026-03-16,noodles,2400,0.554
+inv00056,Strip District Meats,2026-03-16 09:30:00,2026-03-16,pork_belly,345,8.064
+inv00056,Restaurant Depot,2026-03-16 09:30:00,2026-03-16,ramune,168,1.186
+inv00056,Restaurant Depot,2026-03-16 09:30:00,2026-03-16,rice,40,2.099
+inv00056,Pittsburgh Beverage,2026-03-16 09:30:00,2026-03-16,sapporo,48,1.902
+inv00056,Strip District Produce,2026-03-16 09:30:00,2026-03-16,scallion,25,3.08
+inv00056,Restaurant Depot,2026-03-16 09:30:00,2026-03-16,takoyaki,540,0.308
+inv00057,Penn Dairy & Eggs,2026-03-18 09:30:00,2026-03-18,ajitama_egg,870,0.422
+inv00057,Restaurant Depot,2026-03-18 09:30:00,2026-03-18,bao_bun,150,0.354
+inv00057,Strip District Meats,2026-03-18 09:30:00,2026-03-18,chicken_thigh,45,6.229
+inv00057,Restaurant Depot,2026-03-18 09:30:00,2026-03-18,edamame,8,4.392
+inv00057,Restaurant Depot,2026-03-18 09:30:00,2026-03-18,green_tea,28,0.612
+inv00057,Restaurant Depot,2026-03-18 09:30:00,2026-03-18,gyoza,1100,0.285
+inv00057,Restaurant Depot,2026-03-18 09:30:00,2026-03-18,mochi,144,0.712
+inv00057,Sun Noodle,2026-03-18 09:30:00,2026-03-18,noodles,1200,0.546
+inv00057,Strip District Meats,2026-03-18 09:30:00,2026-03-18,pork_belly,160,7.931
+inv00057,Restaurant Depot,2026-03-18 09:30:00,2026-03-18,ramune,72,1.189
+inv00057,Restaurant Depot,2026-03-18 09:30:00,2026-03-18,rice,20,2.106
+inv00057,Pittsburgh Beverage,2026-03-18 09:30:00,2026-03-18,sapporo,24,1.877
+inv00057,Strip District Produce,2026-03-18 09:30:00,2026-03-18,scallion,13,2.98
+inv00057,Restaurant Depot,2026-03-18 09:30:00,2026-03-18,takoyaki,240,0.299
+inv00058,Penn Dairy & Eggs,2026-03-20 09:30:00,2026-03-20,ajitama_egg,990,0.417
+inv00058,Restaurant Depot,2026-03-20 09:30:00,2026-03-20,bao_bun,200,0.354
+inv00058,Strip District Meats,2026-03-20 09:30:00,2026-03-20,chicken_thigh,40,6.096
+inv00058,Restaurant Depot,2026-03-20 09:30:00,2026-03-20,edamame,12,4.438
+inv00058,Restaurant Depot,2026-03-20 09:30:00,2026-03-20,green_tea,32,0.574
+inv00058,Restaurant Depot,2026-03-20 09:30:00,2026-03-20,gyoza,1000,0.282
+inv00058,Restaurant Depot,2026-03-20 09:30:00,2026-03-20,mochi,180,0.697
+inv00058,Sun Noodle,2026-03-20 09:30:00,2026-03-20,noodles,1400,0.534
+inv00058,Strip District Meats,2026-03-20 09:30:00,2026-03-20,pork_belly,175,7.883
+inv00058,Restaurant Depot,2026-03-20 09:30:00,2026-03-20,ramune,96,1.196
+inv00058,Restaurant Depot,2026-03-20 09:30:00,2026-03-20,rice,20,2.071
+inv00058,Pittsburgh Beverage,2026-03-20 09:30:00,2026-03-20,sapporo,24,1.874
+inv00058,Strip District Produce,2026-03-20 09:30:00,2026-03-20,scallion,16,3.088
+inv00058,Restaurant Depot,2026-03-20 09:30:00,2026-03-20,takoyaki,300,0.289
+inv00059,Penn Dairy & Eggs,2026-03-23 09:30:00,2026-03-23,ajitama_egg,1920,0.427
+inv00059,Restaurant Depot,2026-03-23 09:30:00,2026-03-23,bao_bun,350,0.349
+inv00059,Strip District Meats,2026-03-23 09:30:00,2026-03-23,chicken_thigh,80,6.265
+inv00059,Restaurant Depot,2026-03-23 09:30:00,2026-03-23,edamame,20,4.328
+inv00059,Restaurant Depot,2026-03-23 09:30:00,2026-03-23,green_tea,60,0.593
+inv00059,Restaurant Depot,2026-03-23 09:30:00,2026-03-23,gyoza,1900,0.272
+inv00059,Restaurant Depot,2026-03-23 09:30:00,2026-03-23,mochi,324,0.707
+inv00059,Sun Noodle,2026-03-23 09:30:00,2026-03-23,noodles,2680,0.552
+inv00059,Strip District Meats,2026-03-23 09:30:00,2026-03-23,pork_belly,325,7.964
+inv00059,Restaurant Depot,2026-03-23 09:30:00,2026-03-23,ramune,192,1.201
+inv00059,Restaurant Depot,2026-03-23 09:30:00,2026-03-23,rice,60,2.107
+inv00059,Pittsburgh Beverage,2026-03-23 09:30:00,2026-03-23,sapporo,48,1.848
+inv00059,Strip District Produce,2026-03-23 09:30:00,2026-03-23,scallion,29,3.1
+inv00059,Restaurant Depot,2026-03-23 09:30:00,2026-03-23,takoyaki,720,0.304
+inv00060,Penn Dairy & Eggs,2026-03-25 09:30:00,2026-03-25,ajitama_egg,780,0.43
+inv00060,Restaurant Depot,2026-03-25 09:30:00,2026-03-25,bao_bun,150,0.331
+inv00060,Strip District Meats,2026-03-25 09:30:00,2026-03-25,chicken_thigh,35,6.135
+inv00060,Restaurant Depot,2026-03-25 09:30:00,2026-03-25,edamame,8,4.563
+inv00060,Restaurant Depot,2026-03-25 09:30:00,2026-03-25,green_tea,24,0.603
+inv00060,Restaurant Depot,2026-03-25 09:30:00,2026-03-25,gyoza,900,0.275
+inv00060,Restaurant Depot,2026-03-25 09:30:00,2026-03-25,mochi,144,0.708
+inv00060,Sun Noodle,2026-03-25 09:30:00,2026-03-25,noodles,1160,0.577
+inv00060,Strip District Meats,2026-03-25 09:30:00,2026-03-25,pork_belly,155,7.689
+inv00060,Restaurant Depot,2026-03-25 09:30:00,2026-03-25,ramune,72,1.168
+inv00060,Restaurant Depot,2026-03-25 09:30:00,2026-03-25,rice,20,2.117
+inv00060,Pittsburgh Beverage,2026-03-25 09:30:00,2026-03-25,sapporo,24,1.851
+inv00060,Strip District Produce,2026-03-25 09:30:00,2026-03-25,scallion,13,3.134
+inv00060,Restaurant Depot,2026-03-25 09:30:00,2026-03-25,takoyaki,240,0.299
+inv00061,Penn Dairy & Eggs,2026-03-27 09:30:00,2026-03-27,ajitama_egg,1080,0.418
+inv00061,Restaurant Depot,2026-03-27 09:30:00,2026-03-27,bao_bun,250,0.361
+inv00061,Strip District Meats,2026-03-27 09:30:00,2026-03-27,chicken_thigh,45,6.116
+inv00061,Restaurant Depot,2026-03-27 09:30:00,2026-03-27,edamame,14,4.483
+inv00061,Restaurant Depot,2026-03-27 09:30:00,2026-03-27,green_tea,28,0.608
+inv00061,Restaurant Depot,2026-03-27 09:30:00,2026-03-27,gyoza,1300,0.279
+inv00061,Restaurant Depot,2026-03-27 09:30:00,2026-03-27,mochi,180,0.692
+inv00061,Sun Noodle,2026-03-27 09:30:00,2026-03-27,noodles,1440,0.552
+inv00061,Strip District Meats,2026-03-27 09:30:00,2026-03-27,pork_belly,190,7.603
+inv00061,Restaurant Depot,2026-03-27 09:30:00,2026-03-27,ramune,120,1.243
+inv00061,Restaurant Depot,2026-03-27 09:30:00,2026-03-27,rice,20,2.106
+inv00061,Strip District Produce,2026-03-27 09:30:00,2026-03-27,scallion,17,3.187
+inv00061,Restaurant Depot,2026-03-27 09:30:00,2026-03-27,takoyaki,360,0.309
+inv00062,Penn Dairy & Eggs,2026-03-30 09:30:00,2026-03-30,ajitama_egg,1740,0.408
+inv00062,Restaurant Depot,2026-03-30 09:30:00,2026-03-30,bao_bun,250,0.361
+inv00062,Strip District Meats,2026-03-30 09:30:00,2026-03-30,chicken_thigh,70,6.039
+inv00062,Restaurant Depot,2026-03-30 09:30:00,2026-03-30,edamame,18,4.36
+inv00062,Restaurant Depot,2026-03-30 09:30:00,2026-03-30,green_tea,56,0.609
+inv00062,Restaurant Depot,2026-03-30 09:30:00,2026-03-30,gyoza,1700,0.269
+inv00062,Restaurant Depot,2026-03-30 09:30:00,2026-03-30,mochi,288,0.721
+inv00062,Sun Noodle,2026-03-30 09:30:00,2026-03-30,noodles,2520,0.54
+inv00062,Strip District Meats,2026-03-30 09:30:00,2026-03-30,pork_belly,320,7.967
+inv00062,Restaurant Depot,2026-03-30 09:30:00,2026-03-30,ramune,144,1.239
+inv00062,Restaurant Depot,2026-03-30 09:30:00,2026-03-30,rice,60,2.037
+inv00062,Pittsburgh Beverage,2026-03-30 09:30:00,2026-03-30,sapporo,24,1.893
+inv00062,Strip District Produce,2026-03-30 09:30:00,2026-03-30,scallion,26,3.304
+inv00062,Restaurant Depot,2026-03-30 09:30:00,2026-03-30,takoyaki,540,0.294
+inv00063,Penn Dairy & Eggs,2026-04-01 09:30:00,2026-04-01,ajitama_egg,900,0.411
+inv00063,Restaurant Depot,2026-04-01 09:30:00,2026-04-01,bao_bun,150,0.347
+inv00063,Strip District Meats,2026-04-01 09:30:00,2026-04-01,chicken_thigh,35,6.266
+inv00063,Restaurant Depot,2026-04-01 09:30:00,2026-04-01,edamame,8,4.283
+inv00063,Restaurant Depot,2026-04-01 09:30:00,2026-04-01,green_tea,28,0.59
+inv00063,Restaurant Depot,2026-04-01 09:30:00,2026-04-01,gyoza,800,0.278
+inv00063,Restaurant Depot,2026-04-01 09:30:00,2026-04-01,mochi,144,0.693
+inv00063,Sun Noodle,2026-04-01 09:30:00,2026-04-01,noodles,1240,0.542
+inv00063,Strip District Meats,2026-04-01 09:30:00,2026-04-01,pork_belly,150,7.81
+inv00063,Restaurant Depot,2026-04-01 09:30:00,2026-04-01,ramune,72,1.196
+inv00063,Restaurant Depot,2026-04-01 09:30:00,2026-04-01,rice,20,2.116
+inv00063,Pittsburgh Beverage,2026-04-01 09:30:00,2026-04-01,sapporo,24,1.895
+inv00063,Strip District Produce,2026-04-01 09:30:00,2026-04-01,scallion,14,2.995
+inv00063,Restaurant Depot,2026-04-01 09:30:00,2026-04-01,takoyaki,360,0.301
+inv00064,Penn Dairy & Eggs,2026-04-03 09:30:00,2026-04-03,ajitama_egg,930,0.418
+inv00064,Restaurant Depot,2026-04-03 09:30:00,2026-04-03,bao_bun,200,0.355
+inv00064,Strip District Meats,2026-04-03 09:30:00,2026-04-03,chicken_thigh,40,6.372
+inv00064,Restaurant Depot,2026-04-03 09:30:00,2026-04-03,edamame,10,4.509
+inv00064,Restaurant Depot,2026-04-03 09:30:00,2026-04-03,green_tea,28,0.582
+inv00064,Restaurant Depot,2026-04-03 09:30:00,2026-04-03,gyoza,900,0.27
+inv00064,Restaurant Depot,2026-04-03 09:30:00,2026-04-03,mochi,144,0.699
+inv00064,Sun Noodle,2026-04-03 09:30:00,2026-04-03,noodles,1280,0.549
+inv00064,Strip District Meats,2026-04-03 09:30:00,2026-04-03,pork_belly,185,7.516
+inv00064,Restaurant Depot,2026-04-03 09:30:00,2026-04-03,ramune,96,1.207
+inv00064,Restaurant Depot,2026-04-03 09:30:00,2026-04-03,rice,20,2.084
+inv00064,Pittsburgh Beverage,2026-04-03 09:30:00,2026-04-03,sapporo,24,1.909
+inv00064,Strip District Produce,2026-04-03 09:30:00,2026-04-03,scallion,14,3.11
+inv00064,Restaurant Depot,2026-04-03 09:30:00,2026-04-03,takoyaki,300,0.301
+inv00065,Penn Dairy & Eggs,2026-04-06 09:30:00,2026-04-06,ajitama_egg,1650,0.423
+inv00065,Restaurant Depot,2026-04-06 09:30:00,2026-04-06,bao_bun,300,0.349
+inv00065,Strip District Meats,2026-04-06 09:30:00,2026-04-06,chicken_thigh,65,6.332
+inv00065,Restaurant Depot,2026-04-06 09:30:00,2026-04-06,edamame,18,4.528
+inv00065,Restaurant Depot,2026-04-06 09:30:00,2026-04-06,green_tea,52,0.589
+inv00065,Restaurant Depot,2026-04-06 09:30:00,2026-04-06,gyoza,1500,0.285
+inv00065,Restaurant Depot,2026-04-06 09:30:00,2026-04-06,mochi,288,0.698
+inv00065,Sun Noodle,2026-04-06 09:30:00,2026-04-06,noodles,2320,0.56
+inv00065,Strip District Meats,2026-04-06 09:30:00,2026-04-06,pork_belly,305,7.565
+inv00065,Restaurant Depot,2026-04-06 09:30:00,2026-04-06,ramune,168,1.202
+inv00065,Restaurant Depot,2026-04-06 09:30:00,2026-04-06,rice,60,2.073
+inv00065,Pittsburgh Beverage,2026-04-06 09:30:00,2026-04-06,sapporo,24,1.97
+inv00065,Strip District Produce,2026-04-06 09:30:00,2026-04-06,scallion,25,3.168
+inv00065,Restaurant Depot,2026-04-06 09:30:00,2026-04-06,takoyaki,540,0.294
+inv00066,Penn Dairy & Eggs,2026-04-08 09:30:00,2026-04-08,ajitama_egg,900,0.441
+inv00066,Restaurant Depot,2026-04-08 09:30:00,2026-04-08,bao_bun,200,0.339
+inv00066,Strip District Meats,2026-04-08 09:30:00,2026-04-08,chicken_thigh,40,6.316
+inv00066,Restaurant Depot,2026-04-08 09:30:00,2026-04-08,edamame,10,4.441
+inv00066,Restaurant Depot,2026-04-08 09:30:00,2026-04-08,green_tea,24,0.605
+inv00066,Restaurant Depot,2026-04-08 09:30:00,2026-04-08,gyoza,800,0.28
+inv00066,Restaurant Depot,2026-04-08 09:30:00,2026-04-08,mochi,144,0.705
+inv00066,Sun Noodle,2026-04-08 09:30:00,2026-04-08,noodles,1240,0.552
+inv00066,Strip District Meats,2026-04-08 09:30:00,2026-04-08,pork_belly,155,7.661
+inv00066,Restaurant Depot,2026-04-08 09:30:00,2026-04-08,ramune,72,1.219
+inv00066,Restaurant Depot,2026-04-08 09:30:00,2026-04-08,rice,20,2.081
+inv00066,Pittsburgh Beverage,2026-04-08 09:30:00,2026-04-08,sapporo,24,1.855
+inv00066,Strip District Produce,2026-04-08 09:30:00,2026-04-08,scallion,13,3.205
+inv00066,Restaurant Depot,2026-04-08 09:30:00,2026-04-08,takoyaki,240,0.296
+inv00067,Penn Dairy & Eggs,2026-04-10 09:30:00,2026-04-10,ajitama_egg,900,0.423
+inv00067,Restaurant Depot,2026-04-10 09:30:00,2026-04-10,bao_bun,150,0.344
+inv00067,Strip District Meats,2026-04-10 09:30:00,2026-04-10,chicken_thigh,35,6.041
+inv00067,Restaurant Depot,2026-04-10 09:30:00,2026-04-10,edamame,12,4.388
+inv00067,Restaurant Depot,2026-04-10 09:30:00,2026-04-10,green_tea,24,0.582
+inv00067,Restaurant Depot,2026-04-10 09:30:00,2026-04-10,gyoza,1000,0.272
+inv00067,Restaurant Depot,2026-04-10 09:30:00,2026-04-10,mochi,216,0.708
+inv00067,Sun Noodle,2026-04-10 09:30:00,2026-04-10,noodles,1240,0.557
+inv00067,Strip District Meats,2026-04-10 09:30:00,2026-04-10,pork_belly,175,7.941
+inv00067,Restaurant Depot,2026-04-10 09:30:00,2026-04-10,ramune,96,1.207
+inv00067,Restaurant Depot,2026-04-10 09:30:00,2026-04-10,rice,20,2.041
+inv00067,Strip District Produce,2026-04-10 09:30:00,2026-04-10,scallion,14,2.996
+inv00067,Restaurant Depot,2026-04-10 09:30:00,2026-04-10,takoyaki,420,0.297
+inv00068,Penn Dairy & Eggs,2026-04-13 09:30:00,2026-04-13,ajitama_egg,1650,0.441
+inv00068,Restaurant Depot,2026-04-13 09:30:00,2026-04-13,bao_bun,300,0.346
+inv00068,Strip District Meats,2026-04-13 09:30:00,2026-04-13,chicken_thigh,70,6.097
+inv00068,Restaurant Depot,2026-04-13 09:30:00,2026-04-13,edamame,14,4.519
+inv00068,Restaurant Depot,2026-04-13 09:30:00,2026-04-13,green_tea,52,0.625
+inv00068,Restaurant Depot,2026-04-13 09:30:00,2026-04-13,gyoza,1700,0.28
+inv00068,Restaurant Depot,2026-04-13 09:30:00,2026-04-13,mochi,288,0.698
+inv00068,Sun Noodle,2026-04-13 09:30:00,2026-04-13,noodles,2480,0.541
+inv00068,Strip District Meats,2026-04-13 09:30:00,2026-04-13,pork_belly,305,7.682
+inv00068,Restaurant Depot,2026-04-13 09:30:00,2026-04-13,ramune,144,1.212
+inv00068,Restaurant Depot,2026-04-13 09:30:00,2026-04-13,rice,40,2.118
+inv00068,Pittsburgh Beverage,2026-04-13 09:30:00,2026-04-13,sapporo,24,1.888
+inv00068,Strip District Produce,2026-04-13 09:30:00,2026-04-13,scallion,26,3.092
+inv00068,Restaurant Depot,2026-04-13 09:30:00,2026-04-13,takoyaki,480,0.296
+inv00069,Penn Dairy & Eggs,2026-04-15 09:30:00,2026-04-15,ajitama_egg,810,0.419
+inv00069,Restaurant Depot,2026-04-15 09:30:00,2026-04-15,bao_bun,150,0.355
+inv00069,Strip District Meats,2026-04-15 09:30:00,2026-04-15,chicken_thigh,35,6.184
+inv00069,Restaurant Depot,2026-04-15 09:30:00,2026-04-15,edamame,10,4.398
+inv00069,Restaurant Depot,2026-04-15 09:30:00,2026-04-15,green_tea,24,0.606
+inv00069,Restaurant Depot,2026-04-15 09:30:00,2026-04-15,gyoza,700,0.28
+inv00069,Restaurant Depot,2026-04-15 09:30:00,2026-04-15,mochi,144,0.695
+inv00069,Sun Noodle,2026-04-15 09:30:00,2026-04-15,noodles,1120,0.532
+inv00069,Strip District Meats,2026-04-15 09:30:00,2026-04-15,pork_belly,165,7.918
+inv00069,Restaurant Depot,2026-04-15 09:30:00,2026-04-15,ramune,72,1.194
+inv00069,Restaurant Depot,2026-04-15 09:30:00,2026-04-15,rice,40,2.064
+inv00069,Pittsburgh Beverage,2026-04-15 09:30:00,2026-04-15,sapporo,24,1.825
+inv00069,Strip District Produce,2026-04-15 09:30:00,2026-04-15,scallion,12,3.09
+inv00069,Restaurant Depot,2026-04-15 09:30:00,2026-04-15,takoyaki,300,0.309
+inv00070,Penn Dairy & Eggs,2026-04-17 09:30:00,2026-04-17,ajitama_egg,870,0.42
+inv00070,Restaurant Depot,2026-04-17 09:30:00,2026-04-17,bao_bun,200,0.35
+inv00070,Strip District Meats,2026-04-17 09:30:00,2026-04-17,chicken_thigh,40,6.405
+inv00070,Restaurant Depot,2026-04-17 09:30:00,2026-04-17,edamame,10,4.515
+inv00070,Restaurant Depot,2026-04-17 09:30:00,2026-04-17,green_tea,32,0.593
+inv00070,Restaurant Depot,2026-04-17 09:30:00,2026-04-17,gyoza,1100,0.282
+inv00070,Restaurant Depot,2026-04-17 09:30:00,2026-04-17,mochi,180,0.699
+inv00070,Sun Noodle,2026-04-17 09:30:00,2026-04-17,noodles,1200,0.544
+inv00070,Strip District Meats,2026-04-17 09:30:00,2026-04-17,pork_belly,175,8.086
+inv00070,Restaurant Depot,2026-04-17 09:30:00,2026-04-17,ramune,96,1.16
+inv00070,Restaurant Depot,2026-04-17 09:30:00,2026-04-17,rice,20,2.085
+inv00070,Pittsburgh Beverage,2026-04-17 09:30:00,2026-04-17,sapporo,24,1.903
+inv00070,Strip District Produce,2026-04-17 09:30:00,2026-04-17,scallion,14,3.201
+inv00070,Restaurant Depot,2026-04-17 09:30:00,2026-04-17,takoyaki,360,0.302
+inv00071,Penn Dairy & Eggs,2026-04-20 09:30:00,2026-04-20,ajitama_egg,1830,0.417
+inv00071,Restaurant Depot,2026-04-20 09:30:00,2026-04-20,bao_bun,350,0.339
+inv00071,Strip District Meats,2026-04-20 09:30:00,2026-04-20,chicken_thigh,75,6.224
+inv00071,Restaurant Depot,2026-04-20 09:30:00,2026-04-20,edamame,18,4.45
+inv00071,Restaurant Depot,2026-04-20 09:30:00,2026-04-20,green_tea,52,0.591
+inv00071,Restaurant Depot,2026-04-20 09:30:00,2026-04-20,gyoza,1800,0.266
+inv00071,Restaurant Depot,2026-04-20 09:30:00,2026-04-20,mochi,324,0.676
+inv00071,Sun Noodle,2026-04-20 09:30:00,2026-04-20,noodles,2640,0.545
+inv00071,Strip District Meats,2026-04-20 09:30:00,2026-04-20,pork_belly,315,7.546
+inv00071,Restaurant Depot,2026-04-20 09:30:00,2026-04-20,ramune,144,1.194
+inv00071,Restaurant Depot,2026-04-20 09:30:00,2026-04-20,rice,40,2.077
+inv00071,Strip District Produce,2026-04-20 09:30:00,2026-04-20,scallion,27,3.069
+inv00071,Restaurant Depot,2026-04-20 09:30:00,2026-04-20,takoyaki,600,0.298
+inv00072,Penn Dairy & Eggs,2026-04-22 09:30:00,2026-04-22,ajitama_egg,690,0.435
+inv00072,Restaurant Depot,2026-04-22 09:30:00,2026-04-22,bao_bun,150,0.363
+inv00072,Strip District Meats,2026-04-22 09:30:00,2026-04-22,chicken_thigh,30,6.12
+inv00072,Restaurant Depot,2026-04-22 09:30:00,2026-04-22,edamame,8,4.197
+inv00072,Restaurant Depot,2026-04-22 09:30:00,2026-04-22,green_tea,28,0.614
+inv00072,Restaurant Depot,2026-04-22 09:30:00,2026-04-22,gyoza,600,0.278
+inv00072,Restaurant Depot,2026-04-22 09:30:00,2026-04-22,mochi,72,0.711
+inv00072,Sun Noodle,2026-04-22 09:30:00,2026-04-22,noodles,960,0.565
+inv00072,Strip District Meats,2026-04-22 09:30:00,2026-04-22,pork_belly,160,7.895
+inv00072,Restaurant Depot,2026-04-22 09:30:00,2026-04-22,ramune,96,1.182
+inv00072,Restaurant Depot,2026-04-22 09:30:00,2026-04-22,rice,20,2.078
+inv00072,Pittsburgh Beverage,2026-04-22 09:30:00,2026-04-22,sapporo,24,1.8
+inv00072,Strip District Produce,2026-04-22 09:30:00,2026-04-22,scallion,10,3.095
+inv00072,Restaurant Depot,2026-04-22 09:30:00,2026-04-22,takoyaki,360,0.301
+inv00073,Penn Dairy & Eggs,2026-04-24 09:30:00,2026-04-24,ajitama_egg,960,0.419
+inv00073,Restaurant Depot,2026-04-24 09:30:00,2026-04-24,bao_bun,150,0.344
+inv00073,Strip District Meats,2026-04-24 09:30:00,2026-04-24,chicken_thigh,40,6.172
+inv00073,Restaurant Depot,2026-04-24 09:30:00,2026-04-24,edamame,10,4.454
+inv00073,Restaurant Depot,2026-04-24 09:30:00,2026-04-24,green_tea,28,0.618
+inv00073,Restaurant Depot,2026-04-24 09:30:00,2026-04-24,gyoza,900,0.288
+inv00073,Restaurant Depot,2026-04-24 09:30:00,2026-04-24,mochi,144,0.708
+inv00073,Sun Noodle,2026-04-24 09:30:00,2026-04-24,noodles,1240,0.532
+inv00073,Strip District Meats,2026-04-24 09:30:00,2026-04-24,pork_belly,165,7.466
+inv00073,Restaurant Depot,2026-04-24 09:30:00,2026-04-24,ramune,72,1.14
+inv00073,Restaurant Depot,2026-04-24 09:30:00,2026-04-24,rice,20,2.089
+inv00073,Pittsburgh Beverage,2026-04-24 09:30:00,2026-04-24,sapporo,24,1.953
+inv00073,Strip District Produce,2026-04-24 09:30:00,2026-04-24,scallion,14,3.045
+inv00073,Restaurant Depot,2026-04-24 09:30:00,2026-04-24,takoyaki,240,0.296
+inv00074,Penn Dairy & Eggs,2026-04-27 09:30:00,2026-04-27,ajitama_egg,1620,0.417
+inv00074,Restaurant Depot,2026-04-27 09:30:00,2026-04-27,bao_bun,250,0.361
+inv00074,Strip District Meats,2026-04-27 09:30:00,2026-04-27,chicken_thigh,65,6.153
+inv00074,Restaurant Depot,2026-04-27 09:30:00,2026-04-27,edamame,18,4.465
+inv00074,Restaurant Depot,2026-04-27 09:30:00,2026-04-27,green_tea,40,0.623
+inv00074,Restaurant Depot,2026-04-27 09:30:00,2026-04-27,gyoza,1600,0.279
+inv00074,Restaurant Depot,2026-04-27 09:30:00,2026-04-27,mochi,288,0.692
+inv00074,Sun Noodle,2026-04-27 09:30:00,2026-04-27,noodles,2320,0.556
+inv00074,Strip District Meats,2026-04-27 09:30:00,2026-04-27,pork_belly,320,7.996
+inv00074,Restaurant Depot,2026-04-27 09:30:00,2026-04-27,ramune,144,1.195
+inv00074,Restaurant Depot,2026-04-27 09:30:00,2026-04-27,rice,60,2.061
+inv00074,Pittsburgh Beverage,2026-04-27 09:30:00,2026-04-27,sapporo,24,1.875
+inv00074,Strip District Produce,2026-04-27 09:30:00,2026-04-27,scallion,24,3.069
+inv00074,Restaurant Depot,2026-04-27 09:30:00,2026-04-27,takoyaki,480,0.306
+inv00075,Penn Dairy & Eggs,2026-04-29 09:30:00,2026-04-29,ajitama_egg,930,0.43
+inv00075,Restaurant Depot,2026-04-29 09:30:00,2026-04-29,bao_bun,200,0.352
+inv00075,Strip District Meats,2026-04-29 09:30:00,2026-04-29,chicken_thigh,35,6.316
+inv00075,Restaurant Depot,2026-04-29 09:30:00,2026-04-29,edamame,10,4.481
+inv00075,Restaurant Depot,2026-04-29 09:30:00,2026-04-29,green_tea,28,0.585
+inv00075,Restaurant Depot,2026-04-29 09:30:00,2026-04-29,gyoza,900,0.277
+inv00075,Restaurant Depot,2026-04-29 09:30:00,2026-04-29,mochi,180,0.688
+inv00075,Sun Noodle,2026-04-29 09:30:00,2026-04-29,noodles,1240,0.527
+inv00075,Strip District Meats,2026-04-29 09:30:00,2026-04-29,pork_belly,155,7.697
+inv00075,Restaurant Depot,2026-04-29 09:30:00,2026-04-29,ramune,72,1.223
+inv00075,Restaurant Depot,2026-04-29 09:30:00,2026-04-29,rice,20,2.093
+inv00075,Pittsburgh Beverage,2026-04-29 09:30:00,2026-04-29,sapporo,24,1.973
+inv00075,Strip District Produce,2026-04-29 09:30:00,2026-04-29,scallion,14,3.119
+inv00075,Restaurant Depot,2026-04-29 09:30:00,2026-04-29,takoyaki,360,0.295
+inv00076,Penn Dairy & Eggs,2026-05-01 09:30:00,2026-05-01,ajitama_egg,930,0.408
+inv00076,Restaurant Depot,2026-05-01 09:30:00,2026-05-01,bao_bun,150,0.349
+inv00076,Strip District Meats,2026-05-01 09:30:00,2026-05-01,chicken_thigh,35,6.274
+inv00076,Restaurant Depot,2026-05-01 09:30:00,2026-05-01,edamame,12,4.422
+inv00076,Restaurant Depot,2026-05-01 09:30:00,2026-05-01,green_tea,28,0.606
+inv00076,Restaurant Depot,2026-05-01 09:30:00,2026-05-01,gyoza,1000,0.285
+inv00076,Restaurant Depot,2026-05-01 09:30:00,2026-05-01,mochi,144,0.723
+inv00076,Sun Noodle,2026-05-01 09:30:00,2026-05-01,noodles,1320,0.564
+inv00076,Strip District Meats,2026-05-01 09:30:00,2026-05-01,pork_belly,165,7.704
+inv00076,Restaurant Depot,2026-05-01 09:30:00,2026-05-01,ramune,96,1.183
+inv00076,Restaurant Depot,2026-05-01 09:30:00,2026-05-01,rice,20,2.093
+inv00076,Pittsburgh Beverage,2026-05-01 09:30:00,2026-05-01,sapporo,24,1.87
+inv00076,Strip District Produce,2026-05-01 09:30:00,2026-05-01,scallion,14,3.189
+inv00076,Restaurant Depot,2026-05-01 09:30:00,2026-05-01,takoyaki,240,0.305
+inv00077,Penn Dairy & Eggs,2026-05-04 09:30:00,2026-05-04,ajitama_egg,1620,0.415
+inv00077,Restaurant Depot,2026-05-04 09:30:00,2026-05-04,bao_bun,300,0.349
+inv00077,Strip District Meats,2026-05-04 09:30:00,2026-05-04,chicken_thigh,75,6.397
+inv00077,Restaurant Depot,2026-05-04 09:30:00,2026-05-04,edamame,16,4.416
+inv00077,Restaurant Depot,2026-05-04 09:30:00,2026-05-04,green_tea,60,0.606
+inv00077,Restaurant Depot,2026-05-04 09:30:00,2026-05-04,gyoza,1600,0.28
+inv00077,Restaurant Depot,2026-05-04 09:30:00,2026-05-04,mochi,216,0.693
+inv00077,Sun Noodle,2026-05-04 09:30:00,2026-05-04,noodles,2360,0.567
+inv00077,Strip District Meats,2026-05-04 09:30:00,2026-05-04,pork_belly,310,7.898
+inv00077,Restaurant Depot,2026-05-04 09:30:00,2026-05-04,ramune,144,1.185
+inv00077,Restaurant Depot,2026-05-04 09:30:00,2026-05-04,rice,40,2.139
+inv00077,Pittsburgh Beverage,2026-05-04 09:30:00,2026-05-04,sapporo,24,1.878
+inv00077,Strip District Produce,2026-05-04 09:30:00,2026-05-04,scallion,26,3.072
+inv00077,Restaurant Depot,2026-05-04 09:30:00,2026-05-04,takoyaki,480,0.292
+inv00078,Penn Dairy & Eggs,2026-05-06 09:30:00,2026-05-06,ajitama_egg,780,0.419
+inv00078,Restaurant Depot,2026-05-06 09:30:00,2026-05-06,bao_bun,200,0.345
+inv00078,Strip District Meats,2026-05-06 09:30:00,2026-05-06,chicken_thigh,30,6.119
+inv00078,Restaurant Depot,2026-05-06 09:30:00,2026-05-06,edamame,10,4.233
+inv00078,Restaurant Depot,2026-05-06 09:30:00,2026-05-06,green_tea,24,0.6
+inv00078,Restaurant Depot,2026-05-06 09:30:00,2026-05-06,gyoza,700,0.279
+inv00078,Restaurant Depot,2026-05-06 09:30:00,2026-05-06,mochi,108,0.697
+inv00078,Sun Noodle,2026-05-06 09:30:00,2026-05-06,noodles,1040,0.572
+inv00078,Strip District Meats,2026-05-06 09:30:00,2026-05-06,pork_belly,145,7.909
+inv00078,Restaurant Depot,2026-05-06 09:30:00,2026-05-06,ramune,96,1.235
+inv00078,Restaurant Depot,2026-05-06 09:30:00,2026-05-06,rice,20,2.074
+inv00078,Strip District Produce,2026-05-06 09:30:00,2026-05-06,scallion,11,3.085
+inv00078,Restaurant Depot,2026-05-06 09:30:00,2026-05-06,takoyaki,240,0.297
+inv00079,Penn Dairy & Eggs,2026-05-08 09:30:00,2026-05-08,ajitama_egg,810,0.426
+inv00079,Restaurant Depot,2026-05-08 09:30:00,2026-05-08,bao_bun,100,0.363
+inv00079,Strip District Meats,2026-05-08 09:30:00,2026-05-08,chicken_thigh,35,6.386
+inv00079,Restaurant Depot,2026-05-08 09:30:00,2026-05-08,edamame,12,4.272
+inv00079,Restaurant Depot,2026-05-08 09:30:00,2026-05-08,green_tea,24,0.598
+inv00079,Restaurant Depot,2026-05-08 09:30:00,2026-05-08,gyoza,800,0.283
+inv00079,Restaurant Depot,2026-05-08 09:30:00,2026-05-08,mochi,108,0.683
+inv00079,Sun Noodle,2026-05-08 09:30:00,2026-05-08,noodles,1120,0.545
+inv00079,Strip District Meats,2026-05-08 09:30:00,2026-05-08,pork_belly,165,7.717
+inv00079,Restaurant Depot,2026-05-08 09:30:00,2026-05-08,ramune,72,1.204
+inv00079,Restaurant Depot,2026-05-08 09:30:00,2026-05-08,rice,20,2.105
+inv00079,Pittsburgh Beverage,2026-05-08 09:30:00,2026-05-08,sapporo,24,1.893
+inv00079,Strip District Produce,2026-05-08 09:30:00,2026-05-08,scallion,13,3.151
+inv00079,Restaurant Depot,2026-05-08 09:30:00,2026-05-08,takoyaki,240,0.31
+inv00080,Penn Dairy & Eggs,2026-05-11 09:30:00,2026-05-11,ajitama_egg,1500,0.418
+inv00080,Restaurant Depot,2026-05-11 09:30:00,2026-05-11,bao_bun,300,0.354
+inv00080,Strip District Meats,2026-05-11 09:30:00,2026-05-11,chicken_thigh,60,6.379
+inv00080,Restaurant Depot,2026-05-11 09:30:00,2026-05-11,edamame,16,4.549
+inv00080,Restaurant Depot,2026-05-11 09:30:00,2026-05-11,green_tea,44,0.59
+inv00080,Restaurant Depot,2026-05-11 09:30:00,2026-05-11,gyoza,1400,0.28
+inv00080,Restaurant Depot,2026-05-11 09:30:00,2026-05-11,mochi,216,0.715
+inv00080,Sun Noodle,2026-05-11 09:30:00,2026-05-11,noodles,2200,0.552
+inv00080,Strip District Meats,2026-05-11 09:30:00,2026-05-11,pork_belly,300,7.723
+inv00080,Restaurant Depot,2026-05-11 09:30:00,2026-05-11,ramune,120,1.185
+inv00080,Restaurant Depot,2026-05-11 09:30:00,2026-05-11,rice,40,2.041
+inv00080,Pittsburgh Beverage,2026-05-11 09:30:00,2026-05-11,sapporo,24,1.87
+inv00080,Strip District Produce,2026-05-11 09:30:00,2026-05-11,scallion,23,3.143
+inv00080,Restaurant Depot,2026-05-11 09:30:00,2026-05-11,takoyaki,420,0.283
+inv00081,Penn Dairy & Eggs,2026-05-13 09:30:00,2026-05-13,ajitama_egg,750,0.407
+inv00081,Restaurant Depot,2026-05-13 09:30:00,2026-05-13,bao_bun,100,0.341
+inv00081,Strip District Meats,2026-05-13 09:30:00,2026-05-13,chicken_thigh,35,6.213
+inv00081,Restaurant Depot,2026-05-13 09:30:00,2026-05-13,edamame,8,4.389
+inv00081,Restaurant Depot,2026-05-13 09:30:00,2026-05-13,green_tea,24,0.632
+inv00081,Restaurant Depot,2026-05-13 09:30:00,2026-05-13,gyoza,900,0.287
+inv00081,Restaurant Depot,2026-05-13 09:30:00,2026-05-13,mochi,108,0.705
+inv00081,Sun Noodle,2026-05-13 09:30:00,2026-05-13,noodles,1080,0.537
+inv00081,Strip District Meats,2026-05-13 09:30:00,2026-05-13,pork_belly,140,7.881
+inv00081,Restaurant Depot,2026-05-13 09:30:00,2026-05-13,ramune,48,1.21
+inv00081,Restaurant Depot,2026-05-13 09:30:00,2026-05-13,rice,20,2.061
+inv00081,Strip District Produce,2026-05-13 09:30:00,2026-05-13,scallion,11,2.988
+inv00081,Restaurant Depot,2026-05-13 09:30:00,2026-05-13,takoyaki,300,0.301
+inv00082,Penn Dairy & Eggs,2026-05-15 09:30:00,2026-05-15,ajitama_egg,810,0.425
+inv00082,Restaurant Depot,2026-05-15 09:30:00,2026-05-15,bao_bun,150,0.344
+inv00082,Strip District Meats,2026-05-15 09:30:00,2026-05-15,chicken_thigh,30,6.178
+inv00082,Restaurant Depot,2026-05-15 09:30:00,2026-05-15,edamame,10,4.357
+inv00082,Restaurant Depot,2026-05-15 09:30:00,2026-05-15,green_tea,28,0.591
+inv00082,Restaurant Depot,2026-05-15 09:30:00,2026-05-15,gyoza,800,0.272
+inv00082,Restaurant Depot,2026-05-15 09:30:00,2026-05-15,mochi,144,0.686
+inv00082,Sun Noodle,2026-05-15 09:30:00,2026-05-15,noodles,1120,0.53
+inv00082,Strip District Meats,2026-05-15 09:30:00,2026-05-15,pork_belly,160,7.531
+inv00082,Restaurant Depot,2026-05-15 09:30:00,2026-05-15,ramune,72,1.184
+inv00082,Restaurant Depot,2026-05-15 09:30:00,2026-05-15,rice,20,2.075
+inv00082,Pittsburgh Beverage,2026-05-15 09:30:00,2026-05-15,sapporo,24,1.905
+inv00082,Strip District Produce,2026-05-15 09:30:00,2026-05-15,scallion,12,3.121
+inv00082,Restaurant Depot,2026-05-15 09:30:00,2026-05-15,takoyaki,180,0.299
+inv00083,Penn Dairy & Eggs,2026-05-18 09:30:00,2026-05-18,ajitama_egg,1350,0.425
+inv00083,Restaurant Depot,2026-05-18 09:30:00,2026-05-18,bao_bun,250,0.345
+inv00083,Strip District Meats,2026-05-18 09:30:00,2026-05-18,chicken_thigh,55,6.216
+inv00083,Restaurant Depot,2026-05-18 09:30:00,2026-05-18,edamame,16,4.405
+inv00083,Restaurant Depot,2026-05-18 09:30:00,2026-05-18,green_tea,40,0.6
+inv00083,Restaurant Depot,2026-05-18 09:30:00,2026-05-18,gyoza,1400,0.293
+inv00083,Restaurant Depot,2026-05-18 09:30:00,2026-05-18,mochi,288,0.679
+inv00083,Sun Noodle,2026-05-18 09:30:00,2026-05-18,noodles,1920,0.558
+inv00083,Strip District Meats,2026-05-18 09:30:00,2026-05-18,pork_belly,295,7.841
+inv00083,Restaurant Depot,2026-05-18 09:30:00,2026-05-18,ramune,144,1.177
+inv00083,Restaurant Depot,2026-05-18 09:30:00,2026-05-18,rice,20,2.07
+inv00083,Pittsburgh Beverage,2026-05-18 09:30:00,2026-05-18,sapporo,24,1.864
+inv00083,Strip District Produce,2026-05-18 09:30:00,2026-05-18,scallion,20,3.139
+inv00083,Restaurant Depot,2026-05-18 09:30:00,2026-05-18,takoyaki,420,0.299
+inv00084,Penn Dairy & Eggs,2026-05-20 09:30:00,2026-05-20,ajitama_egg,720,0.427
+inv00084,Restaurant Depot,2026-05-20 09:30:00,2026-05-20,bao_bun,150,0.35
+inv00084,Strip District Meats,2026-05-20 09:30:00,2026-05-20,chicken_thigh,30,6.358
+inv00084,Restaurant Depot,2026-05-20 09:30:00,2026-05-20,edamame,12,4.373
+inv00084,Restaurant Depot,2026-05-20 09:30:00,2026-05-20,green_tea,24,0.603
+inv00084,Restaurant Depot,2026-05-20 09:30:00,2026-05-20,gyoza,700,0.284
+inv00084,Restaurant Depot,2026-05-20 09:30:00,2026-05-20,mochi,108,0.693
+inv00084,Sun Noodle,2026-05-20 09:30:00,2026-05-20,noodles,1000,0.548
+inv00084,Strip District Meats,2026-05-20 09:30:00,2026-05-20,pork_belly,135,7.568
+inv00084,Restaurant Depot,2026-05-20 09:30:00,2026-05-20,ramune,48,1.186
+inv00084,Restaurant Depot,2026-05-20 09:30:00,2026-05-20,rice,20,2.133
+inv00084,Strip District Produce,2026-05-20 09:30:00,2026-05-20,scallion,11,3.243
+inv00084,Restaurant Depot,2026-05-20 09:30:00,2026-05-20,takoyaki,240,0.3
+inv00085,Penn Dairy & Eggs,2026-05-22 09:30:00,2026-05-22,ajitama_egg,780,0.422
+inv00085,Restaurant Depot,2026-05-22 09:30:00,2026-05-22,bao_bun,150,0.345
+inv00085,Strip District Meats,2026-05-22 09:30:00,2026-05-22,chicken_thigh,35,6.1
+inv00085,Restaurant Depot,2026-05-22 09:30:00,2026-05-22,edamame,6,4.342
+inv00085,Restaurant Depot,2026-05-22 09:30:00,2026-05-22,green_tea,20,0.592
+inv00085,Restaurant Depot,2026-05-22 09:30:00,2026-05-22,gyoza,800,0.29
+inv00085,Restaurant Depot,2026-05-22 09:30:00,2026-05-22,mochi,108,0.694
+inv00085,Sun Noodle,2026-05-22 09:30:00,2026-05-22,noodles,1040,0.568
+inv00085,Strip District Meats,2026-05-22 09:30:00,2026-05-22,pork_belly,155,7.815
+inv00085,Restaurant Depot,2026-05-22 09:30:00,2026-05-22,ramune,48,1.235
+inv00085,Restaurant Depot,2026-05-22 09:30:00,2026-05-22,rice,20,2.108
+inv00085,Strip District Produce,2026-05-22 09:30:00,2026-05-22,scallion,11,3.191
+inv00085,Restaurant Depot,2026-05-22 09:30:00,2026-05-22,takoyaki,240,0.307
+inv00086,Penn Dairy & Eggs,2026-05-25 09:30:00,2026-05-25,ajitama_egg,1410,0.421
+inv00086,Restaurant Depot,2026-05-25 09:30:00,2026-05-25,bao_bun,250,0.35
+inv00086,Strip District Meats,2026-05-25 09:30:00,2026-05-25,chicken_thigh,60,6.224
+inv00086,Restaurant Depot,2026-05-25 09:30:00,2026-05-25,edamame,16,4.472
+inv00086,Restaurant Depot,2026-05-25 09:30:00,2026-05-25,green_tea,36,0.612
+inv00086,Restaurant Depot,2026-05-25 09:30:00,2026-05-25,gyoza,1500,0.275
+inv00086,Restaurant Depot,2026-05-25 09:30:00,2026-05-25,mochi,252,0.724
+inv00086,Sun Noodle,2026-05-25 09:30:00,2026-05-25,noodles,2040,0.55
+inv00086,Strip District Meats,2026-05-25 09:30:00,2026-05-25,pork_belly,270,7.934
+inv00086,Restaurant Depot,2026-05-25 09:30:00,2026-05-25,ramune,144,1.195
+inv00086,Restaurant Depot,2026-05-25 09:30:00,2026-05-25,rice,40,2.112
+inv00086,Pittsburgh Beverage,2026-05-25 09:30:00,2026-05-25,sapporo,24,1.85
+inv00086,Strip District Produce,2026-05-25 09:30:00,2026-05-25,scallion,22,3.164
+inv00086,Restaurant Depot,2026-05-25 09:30:00,2026-05-25,takoyaki,480,0.307
+inv00087,Penn Dairy & Eggs,2026-05-27 09:30:00,2026-05-27,ajitama_egg,630,0.419
+inv00087,Restaurant Depot,2026-05-27 09:30:00,2026-05-27,bao_bun,150,0.345
+inv00087,Strip District Meats,2026-05-27 09:30:00,2026-05-27,chicken_thigh,25,6.165
+inv00087,Restaurant Depot,2026-05-27 09:30:00,2026-05-27,edamame,8,4.438
+inv00087,Restaurant Depot,2026-05-27 09:30:00,2026-05-27,green_tea,16,0.574
+inv00087,Restaurant Depot,2026-05-27 09:30:00,2026-05-27,gyoza,600,0.279
+inv00087,Restaurant Depot,2026-05-27 09:30:00,2026-05-27,mochi,108,0.707
+inv00087,Sun Noodle,2026-05-27 09:30:00,2026-05-27,noodles,840,0.551
+inv00087,Strip District Meats,2026-05-27 09:30:00,2026-05-27,pork_belly,140,7.693
+inv00087,Restaurant Depot,2026-05-27 09:30:00,2026-05-27,ramune,72,1.184
+inv00087,Restaurant Depot,2026-05-27 09:30:00,2026-05-27,rice,20,2.072
+inv00087,Pittsburgh Beverage,2026-05-27 09:30:00,2026-05-27,sapporo,24,1.871
+inv00087,Strip District Produce,2026-05-27 09:30:00,2026-05-27,scallion,10,3.07
+inv00087,Restaurant Depot,2026-05-27 09:30:00,2026-05-27,takoyaki,180,0.298
+inv00088,Penn Dairy & Eggs,2026-05-29 09:30:00,2026-05-29,ajitama_egg,780,0.423
+inv00088,Restaurant Depot,2026-05-29 09:30:00,2026-05-29,bao_bun,150,0.353
+inv00088,Strip District Meats,2026-05-29 09:30:00,2026-05-29,chicken_thigh,30,6.481
+inv00088,Restaurant Depot,2026-05-29 09:30:00,2026-05-29,edamame,8,4.406
+inv00088,Restaurant Depot,2026-05-29 09:30:00,2026-05-29,green_tea,20,0.597
+inv00088,Restaurant Depot,2026-05-29 09:30:00,2026-05-29,gyoza,800,0.281
+inv00088,Restaurant Depot,2026-05-29 09:30:00,2026-05-29,mochi,144,0.709
+inv00088,Sun Noodle,2026-05-29 09:30:00,2026-05-29,noodles,1080,0.556
+inv00088,Strip District Meats,2026-05-29 09:30:00,2026-05-29,pork_belly,145,7.607
+inv00088,Restaurant Depot,2026-05-29 09:30:00,2026-05-29,ramune,48,1.238
+inv00088,Restaurant Depot,2026-05-29 09:30:00,2026-05-29,rice,20,2.08
+inv00088,Strip District Produce,2026-05-29 09:30:00,2026-05-29,scallion,11,3.168
+inv00088,Restaurant Depot,2026-05-29 09:30:00,2026-05-29,takoyaki,240,0.302
+inv00089,Penn Dairy & Eggs,2026-06-01 09:30:00,2026-06-01,ajitama_egg,1590,0.415
+inv00089,Restaurant Depot,2026-06-01 09:30:00,2026-06-01,bao_bun,300,0.351
+inv00089,Strip District Meats,2026-06-01 09:30:00,2026-06-01,chicken_thigh,65,6.083
+inv00089,Restaurant Depot,2026-06-01 09:30:00,2026-06-01,edamame,20,4.26
+inv00089,Restaurant Depot,2026-06-01 09:30:00,2026-06-01,green_tea,44,0.62
+inv00089,Restaurant Depot,2026-06-01 09:30:00,2026-06-01,gyoza,1600,0.269
+inv00089,Restaurant Depot,2026-06-01 09:30:00,2026-06-01,mochi,216,0.689
+inv00089,Sun Noodle,2026-06-01 09:30:00,2026-06-01,noodles,2200,0.541
+inv00089,Strip District Meats,2026-06-01 09:30:00,2026-06-01,pork_belly,270,7.814
+inv00089,Restaurant Depot,2026-06-01 09:30:00,2026-06-01,ramune,168,1.228
+inv00089,Restaurant Depot,2026-06-01 09:30:00,2026-06-01,rice,40,2.146
+inv00089,Pittsburgh Beverage,2026-06-01 09:30:00,2026-06-01,sapporo,24,1.933
+inv00089,Strip District Produce,2026-06-01 09:30:00,2026-06-01,scallion,24,3.116
+inv00089,Restaurant Depot,2026-06-01 09:30:00,2026-06-01,takoyaki,540,0.302
+inv00090,Penn Dairy & Eggs,2026-06-03 09:30:00,2026-06-03,ajitama_egg,600,0.409
+inv00090,Restaurant Depot,2026-06-03 09:30:00,2026-06-03,bao_bun,100,0.35
+inv00090,Strip District Meats,2026-06-03 09:30:00,2026-06-03,chicken_thigh,25,6.038
+inv00090,Restaurant Depot,2026-06-03 09:30:00,2026-06-03,edamame,6,4.46
+inv00090,Restaurant Depot,2026-06-03 09:30:00,2026-06-03,green_tea,16,0.603
+inv00090,Restaurant Depot,2026-06-03 09:30:00,2026-06-03,gyoza,700,0.277
+inv00090,Restaurant Depot,2026-06-03 09:30:00,2026-06-03,mochi,144,0.699
+inv00090,Sun Noodle,2026-06-03 09:30:00,2026-06-03,noodles,880,0.538
+inv00090,Strip District Meats,2026-06-03 09:30:00,2026-06-03,pork_belly,125,7.569
+inv00090,Restaurant Depot,2026-06-03 09:30:00,2026-06-03,ramune,48,1.197
+inv00090,Restaurant Depot,2026-06-03 09:30:00,2026-06-03,rice,20,2.088
+inv00090,Pittsburgh Beverage,2026-06-03 09:30:00,2026-06-03,sapporo,24,1.869
+inv00090,Strip District Produce,2026-06-03 09:30:00,2026-06-03,scallion,9,3.1
+inv00090,Restaurant Depot,2026-06-03 09:30:00,2026-06-03,takoyaki,180,0.296
+inv00091,Penn Dairy & Eggs,2026-06-05 09:30:00,2026-06-05,ajitama_egg,780,0.409
+inv00091,Restaurant Depot,2026-06-05 09:30:00,2026-06-05,bao_bun,100,0.346
+inv00091,Strip District Meats,2026-06-05 09:30:00,2026-06-05,chicken_thigh,35,6.283
+inv00091,Restaurant Depot,2026-06-05 09:30:00,2026-06-05,edamame,10,4.377
+inv00091,Restaurant Depot,2026-06-05 09:30:00,2026-06-05,green_tea,20,0.605
+inv00091,Restaurant Depot,2026-06-05 09:30:00,2026-06-05,gyoza,800,0.273
+inv00091,Restaurant Depot,2026-06-05 09:30:00,2026-06-05,mochi,108,0.677
+inv00091,Sun Noodle,2026-06-05 09:30:00,2026-06-05,noodles,1080,0.541
+inv00091,Strip District Meats,2026-06-05 09:30:00,2026-06-05,pork_belly,140,7.751
+inv00091,Restaurant Depot,2026-06-05 09:30:00,2026-06-05,ramune,96,1.207
+inv00091,Restaurant Depot,2026-06-05 09:30:00,2026-06-05,rice,20,2.143
+inv00091,Strip District Produce,2026-06-05 09:30:00,2026-06-05,scallion,12,3.172
+inv00091,Restaurant Depot,2026-06-05 09:30:00,2026-06-05,takoyaki,240,0.301
+inv00092,Penn Dairy & Eggs,2026-06-08 09:30:00,2026-06-08,ajitama_egg,1410,0.42
+inv00092,Restaurant Depot,2026-06-08 09:30:00,2026-06-08,bao_bun,250,0.36
+inv00092,Strip District Meats,2026-06-08 09:30:00,2026-06-08,chicken_thigh,65,6.1
+inv00092,Restaurant Depot,2026-06-08 09:30:00,2026-06-08,edamame,14,4.445
+inv00092,Restaurant Depot,2026-06-08 09:30:00,2026-06-08,green_tea,44,0.597
+inv00092,Restaurant Depot,2026-06-08 09:30:00,2026-06-08,gyoza,1600,0.28
+inv00092,Restaurant Depot,2026-06-08 09:30:00,2026-06-08,mochi,288,0.699
+inv00092,Sun Noodle,2026-06-08 09:30:00,2026-06-08,noodles,2080,0.534
+inv00092,Strip District Meats,2026-06-08 09:30:00,2026-06-08,pork_belly,270,8.081
+inv00092,Restaurant Depot,2026-06-08 09:30:00,2026-06-08,ramune,120,1.213
+inv00092,Restaurant Depot,2026-06-08 09:30:00,2026-06-08,rice,40,2.174
+inv00092,Pittsburgh Beverage,2026-06-08 09:30:00,2026-06-08,sapporo,48,1.883
+inv00092,Strip District Produce,2026-06-08 09:30:00,2026-06-08,scallion,22,3.106
+inv00092,Restaurant Depot,2026-06-08 09:30:00,2026-06-08,takoyaki,540,0.296
+inv00093,Penn Dairy & Eggs,2026-06-10 09:30:00,2026-06-10,ajitama_egg,630,0.417
+inv00093,Restaurant Depot,2026-06-10 09:30:00,2026-06-10,bao_bun,150,0.35
+inv00093,Strip District Meats,2026-06-10 09:30:00,2026-06-10,chicken_thigh,25,5.966
+inv00093,Restaurant Depot,2026-06-10 09:30:00,2026-06-10,edamame,8,4.459
+inv00093,Restaurant Depot,2026-06-10 09:30:00,2026-06-10,green_tea,16,0.607
+inv00093,Restaurant Depot,2026-06-10 09:30:00,2026-06-10,gyoza,500,0.278
+inv00093,Restaurant Depot,2026-06-10 09:30:00,2026-06-10,mochi,108,0.689
+inv00093,Sun Noodle,2026-06-10 09:30:00,2026-06-10,noodles,840,0.545
+inv00093,Strip District Meats,2026-06-10 09:30:00,2026-06-10,pork_belly,120,7.841
+inv00093,Restaurant Depot,2026-06-10 09:30:00,2026-06-10,ramune,48,1.218
+inv00093,Restaurant Depot,2026-06-10 09:30:00,2026-06-10,rice,20,2.018
+inv00093,Strip District Produce,2026-06-10 09:30:00,2026-06-10,scallion,9,3.124
+inv00093,Restaurant Depot,2026-06-10 09:30:00,2026-06-10,takoyaki,120,0.301
+inv00094,Penn Dairy & Eggs,2026-06-12 09:30:00,2026-06-12,ajitama_egg,660,0.418
+inv00094,Restaurant Depot,2026-06-12 09:30:00,2026-06-12,bao_bun,100,0.353
+inv00094,Strip District Meats,2026-06-12 09:30:00,2026-06-12,chicken_thigh,25,6.009
+inv00094,Restaurant Depot,2026-06-12 09:30:00,2026-06-12,edamame,6,4.363
+inv00094,Restaurant Depot,2026-06-12 09:30:00,2026-06-12,green_tea,24,0.596
+inv00094,Restaurant Depot,2026-06-12 09:30:00,2026-06-12,gyoza,600,0.275
+inv00094,Restaurant Depot,2026-06-12 09:30:00,2026-06-12,mochi,108,0.714
+inv00094,Sun Noodle,2026-06-12 09:30:00,2026-06-12,noodles,960,0.55
+inv00094,Strip District Meats,2026-06-12 09:30:00,2026-06-12,pork_belly,145,7.535
+inv00094,Restaurant Depot,2026-06-12 09:30:00,2026-06-12,ramune,72,1.19
+inv00094,Strip District Produce,2026-06-12 09:30:00,2026-06-12,scallion,10,3.138
+inv00094,Restaurant Depot,2026-06-12 09:30:00,2026-06-12,takoyaki,240,0.308
+inv00095,Penn Dairy & Eggs,2026-06-15 09:30:00,2026-06-15,ajitama_egg,1290,0.412
+inv00095,Restaurant Depot,2026-06-15 09:30:00,2026-06-15,bao_bun,200,0.357
+inv00095,Strip District Meats,2026-06-15 09:30:00,2026-06-15,chicken_thigh,45,6.042
+inv00095,Restaurant Depot,2026-06-15 09:30:00,2026-06-15,edamame,16,4.393
+inv00095,Restaurant Depot,2026-06-15 09:30:00,2026-06-15,green_tea,40,0.598
+inv00095,Restaurant Depot,2026-06-15 09:30:00,2026-06-15,gyoza,1300,0.292
+inv00095,Restaurant Depot,2026-06-15 09:30:00,2026-06-15,mochi,252,0.694
+inv00095,Sun Noodle,2026-06-15 09:30:00,2026-06-15,noodles,1840,0.534
+inv00095,Strip District Meats,2026-06-15 09:30:00,2026-06-15,pork_belly,275,7.754
+inv00095,Restaurant Depot,2026-06-15 09:30:00,2026-06-15,ramune,120,1.172
+inv00095,Restaurant Depot,2026-06-15 09:30:00,2026-06-15,rice,40,2.043
+inv00095,Pittsburgh Beverage,2026-06-15 09:30:00,2026-06-15,sapporo,24,1.883
+inv00095,Strip District Produce,2026-06-15 09:30:00,2026-06-15,scallion,20,3.144
+inv00095,Restaurant Depot,2026-06-15 09:30:00,2026-06-15,takoyaki,480,0.305
+inv00096,Penn Dairy & Eggs,2026-06-17 09:30:00,2026-06-17,ajitama_egg,690,0.425
+inv00096,Restaurant Depot,2026-06-17 09:30:00,2026-06-17,bao_bun,150,0.352
+inv00096,Strip District Meats,2026-06-17 09:30:00,2026-06-17,chicken_thigh,25,6.173
+inv00096,Restaurant Depot,2026-06-17 09:30:00,2026-06-17,edamame,8,4.364
+inv00096,Restaurant Depot,2026-06-17 09:30:00,2026-06-17,green_tea,20,0.605
+inv00096,Restaurant Depot,2026-06-17 09:30:00,2026-06-17,gyoza,600,0.274
+inv00096,Restaurant Depot,2026-06-17 09:30:00,2026-06-17,mochi,108,0.693
+inv00096,Sun Noodle,2026-06-17 09:30:00,2026-06-17,noodles,960,0.532
+inv00096,Strip District Meats,2026-06-17 09:30:00,2026-06-17,pork_belly,120,7.81
+inv00096,Restaurant Depot,2026-06-17 09:30:00,2026-06-17,ramune,48,1.19
+inv00096,Restaurant Depot,2026-06-17 09:30:00,2026-06-17,rice,20,2.157
+inv00096,Pittsburgh Beverage,2026-06-17 09:30:00,2026-06-17,sapporo,24,1.91
+inv00096,Strip District Produce,2026-06-17 09:30:00,2026-06-17,scallion,10,2.977
+inv00096,Restaurant Depot,2026-06-17 09:30:00,2026-06-17,takoyaki,180,0.302
+inv00097,Penn Dairy & Eggs,2026-06-19 09:30:00,2026-06-19,ajitama_egg,780,0.426
+inv00097,Restaurant Depot,2026-06-19 09:30:00,2026-06-19,bao_bun,100,0.357
+inv00097,Strip District Meats,2026-06-19 09:30:00,2026-06-19,chicken_thigh,30,6.113
+inv00097,Restaurant Depot,2026-06-19 09:30:00,2026-06-19,edamame,8,4.38
+inv00097,Restaurant Depot,2026-06-19 09:30:00,2026-06-19,green_tea,24,0.589
+inv00097,Restaurant Depot,2026-06-19 09:30:00,2026-06-19,gyoza,900,0.28
+inv00097,Restaurant Depot,2026-06-19 09:30:00,2026-06-19,mochi,108,0.682
+inv00097,Sun Noodle,2026-06-19 09:30:00,2026-06-19,noodles,1080,0.537
+inv00097,Strip District Meats,2026-06-19 09:30:00,2026-06-19,pork_belly,140,7.786
+inv00097,Restaurant Depot,2026-06-19 09:30:00,2026-06-19,ramune,72,1.203
+inv00097,Restaurant Depot,2026-06-19 09:30:00,2026-06-19,rice,20,2.105
+inv00097,Strip District Produce,2026-06-19 09:30:00,2026-06-19,scallion,12,3.1
+inv00097,Restaurant Depot,2026-06-19 09:30:00,2026-06-19,takoyaki,300,0.295
+inv00098,Penn Dairy & Eggs,2026-06-22 09:30:00,2026-06-22,ajitama_egg,1410,0.399
+inv00098,Restaurant Depot,2026-06-22 09:30:00,2026-06-22,bao_bun,250,0.345
+inv00098,Strip District Meats,2026-06-22 09:30:00,2026-06-22,chicken_thigh,55,6.252
+inv00098,Restaurant Depot,2026-06-22 09:30:00,2026-06-22,edamame,16,4.543
+inv00098,Restaurant Depot,2026-06-22 09:30:00,2026-06-22,green_tea,40,0.59
+inv00098,Restaurant Depot,2026-06-22 09:30:00,2026-06-22,gyoza,1400,0.286
+inv00098,Restaurant Depot,2026-06-22 09:30:00,2026-06-22,mochi,216,0.707
+inv00098,Sun Noodle,2026-06-22 09:30:00,2026-06-22,noodles,2040,0.551
+inv00098,Strip District Meats,2026-06-22 09:30:00,2026-06-22,pork_belly,260,7.716
+inv00098,Restaurant Depot,2026-06-22 09:30:00,2026-06-22,ramune,144,1.218
+inv00098,Restaurant Depot,2026-06-22 09:30:00,2026-06-22,rice,40,2.154
+inv00098,Pittsburgh Beverage,2026-06-22 09:30:00,2026-06-22,sapporo,24,1.922
+inv00098,Strip District Produce,2026-06-22 09:30:00,2026-06-22,scallion,21,3.154
+inv00098,Restaurant Depot,2026-06-22 09:30:00,2026-06-22,takoyaki,480,0.301
+inv00099,Penn Dairy & Eggs,2026-06-24 09:30:00,2026-06-24,ajitama_egg,570,0.426
+inv00099,Restaurant Depot,2026-06-24 09:30:00,2026-06-24,bao_bun,100,0.353
+inv00099,Strip District Meats,2026-06-24 09:30:00,2026-06-24,chicken_thigh,25,6.187
+inv00099,Restaurant Depot,2026-06-24 09:30:00,2026-06-24,edamame,8,4.434
+inv00099,Restaurant Depot,2026-06-24 09:30:00,2026-06-24,green_tea,24,0.608
+inv00099,Restaurant Depot,2026-06-24 09:30:00,2026-06-24,gyoza,700,0.281
+inv00099,Restaurant Depot,2026-06-24 09:30:00,2026-06-24,mochi,108,0.703
+inv00099,Sun Noodle,2026-06-24 09:30:00,2026-06-24,noodles,800,0.55
+inv00099,Strip District Meats,2026-06-24 09:30:00,2026-06-24,pork_belly,120,7.571
+inv00099,Restaurant Depot,2026-06-24 09:30:00,2026-06-24,ramune,72,1.185
+inv00099,Pittsburgh Beverage,2026-06-24 09:30:00,2026-06-24,sapporo,24,1.898
+inv00099,Strip District Produce,2026-06-24 09:30:00,2026-06-24,scallion,9,3.089
+inv00099,Restaurant Depot,2026-06-24 09:30:00,2026-06-24,takoyaki,120,0.305
+inv00100,Penn Dairy & Eggs,2026-06-26 09:30:00,2026-06-26,ajitama_egg,690,0.42
+inv00100,Restaurant Depot,2026-06-26 09:30:00,2026-06-26,bao_bun,150,0.354
+inv00100,Strip District Meats,2026-06-26 09:30:00,2026-06-26,chicken_thigh,30,6.164
+inv00100,Restaurant Depot,2026-06-26 09:30:00,2026-06-26,edamame,8,4.462
+inv00100,Restaurant Depot,2026-06-26 09:30:00,2026-06-26,green_tea,20,0.592
+inv00100,Restaurant Depot,2026-06-26 09:30:00,2026-06-26,gyoza,600,0.27
+inv00100,Restaurant Depot,2026-06-26 09:30:00,2026-06-26,mochi,108,0.705
+inv00100,Sun Noodle,2026-06-26 09:30:00,2026-06-26,noodles,920,0.552
+inv00100,Strip District Meats,2026-06-26 09:30:00,2026-06-26,pork_belly,130,7.89
+inv00100,Restaurant Depot,2026-06-26 09:30:00,2026-06-26,ramune,48,1.214
+inv00100,Restaurant Depot,2026-06-26 09:30:00,2026-06-26,rice,20,2.08
+inv00100,Pittsburgh Beverage,2026-06-26 09:30:00,2026-06-26,sapporo,24,1.819
+inv00100,Strip District Produce,2026-06-26 09:30:00,2026-06-26,scallion,10,3.121
+inv00100,Restaurant Depot,2026-06-26 09:30:00,2026-06-26,takoyaki,300,0.311
+inv00101,Penn Dairy & Eggs,2026-06-29 09:30:00,2026-06-29,ajitama_egg,1380,0.421
+inv00101,Restaurant Depot,2026-06-29 09:30:00,2026-06-29,bao_bun,250,0.364
+inv00101,Strip District Meats,2026-06-29 09:30:00,2026-06-29,chicken_thigh,60,6.224
+inv00101,Restaurant Depot,2026-06-29 09:30:00,2026-06-29,edamame,18,4.347
+inv00101,Restaurant Depot,2026-06-29 09:30:00,2026-06-29,green_tea,36,0.596
+inv00101,Restaurant Depot,2026-06-29 09:30:00,2026-06-29,gyoza,1400,0.274
+inv00101,Restaurant Depot,2026-06-29 09:30:00,2026-06-29,mochi,252,0.681
+inv00101,Sun Noodle,2026-06-29 09:30:00,2026-06-29,noodles,1960,0.558
+inv00101,Strip District Meats,2026-06-29 09:30:00,2026-06-29,pork_belly,250,8.042
+inv00101,Restaurant Depot,2026-06-29 09:30:00,2026-06-29,ramune,120,1.194
+inv00101,Restaurant Depot,2026-06-29 09:30:00,2026-06-29,rice,40,2.097
+inv00101,Pittsburgh Beverage,2026-06-29 09:30:00,2026-06-29,sapporo,24,1.872
+inv00101,Strip District Produce,2026-06-29 09:30:00,2026-06-29,scallion,20,3.179
+inv00101,Restaurant Depot,2026-06-29 09:30:00,2026-06-29,takoyaki,540,0.307
+inv00102,Penn Dairy & Eggs,2026-07-01 09:30:00,2026-07-01,ajitama_egg,690,0.411
+inv00102,Restaurant Depot,2026-07-01 09:30:00,2026-07-01,bao_bun,150,0.353
+inv00102,Strip District Meats,2026-07-01 09:30:00,2026-07-01,chicken_thigh,25,6.041
+inv00102,Restaurant Depot,2026-07-01 09:30:00,2026-07-01,edamame,10,4.459
+inv00102,Restaurant Depot,2026-07-01 09:30:00,2026-07-01,green_tea,24,0.584
+inv00102,Restaurant Depot,2026-07-01 09:30:00,2026-07-01,gyoza,600,0.285
+inv00102,Restaurant Depot,2026-07-01 09:30:00,2026-07-01,mochi,108,0.67
+inv00102,Sun Noodle,2026-07-01 09:30:00,2026-07-01,noodles,960,0.552
+inv00102,Strip District Meats,2026-07-01 09:30:00,2026-07-01,pork_belly,110,7.657
+inv00102,Restaurant Depot,2026-07-01 09:30:00,2026-07-01,ramune,96,1.173
+inv00102,Restaurant Depot,2026-07-01 09:30:00,2026-07-01,rice,20,2.166
+inv00102,Strip District Produce,2026-07-01 09:30:00,2026-07-01,scallion,11,3.188
+inv00102,Restaurant Depot,2026-07-01 09:30:00,2026-07-01,takoyaki,180,0.297
+inv00103,Penn Dairy & Eggs,2026-07-03 09:30:00,2026-07-03,ajitama_egg,780,0.421
+inv00103,Restaurant Depot,2026-07-03 09:30:00,2026-07-03,bao_bun,100,0.355
+inv00103,Strip District Meats,2026-07-03 09:30:00,2026-07-03,chicken_thigh,30,6.16
+inv00103,Restaurant Depot,2026-07-03 09:30:00,2026-07-03,edamame,8,4.41
+inv00103,Restaurant Depot,2026-07-03 09:30:00,2026-07-03,green_tea,20,0.597
+inv00103,Restaurant Depot,2026-07-03 09:30:00,2026-07-03,gyoza,800,0.285
+inv00103,Restaurant Depot,2026-07-03 09:30:00,2026-07-03,mochi,108,0.695
+inv00103,Sun Noodle,2026-07-03 09:30:00,2026-07-03,noodles,1040,0.539
+inv00103,Strip District Meats,2026-07-03 09:30:00,2026-07-03,pork_belly,125,7.725
+inv00103,Restaurant Depot,2026-07-03 09:30:00,2026-07-03,ramune,48,1.182
+inv00103,Restaurant Depot,2026-07-03 09:30:00,2026-07-03,rice,20,2.134
+inv00103,Strip District Produce,2026-07-03 09:30:00,2026-07-03,scallion,11,3.013
+inv00103,Restaurant Depot,2026-07-03 09:30:00,2026-07-03,takoyaki,300,0.306
+inv00104,Penn Dairy & Eggs,2026-07-06 09:30:00,2026-07-06,ajitama_egg,1230,0.4
+inv00104,Restaurant Depot,2026-07-06 09:30:00,2026-07-06,bao_bun,300,0.348
+inv00104,Strip District Meats,2026-07-06 09:30:00,2026-07-06,chicken_thigh,55,6.208
+inv00104,Restaurant Depot,2026-07-06 09:30:00,2026-07-06,edamame,14,4.387
+inv00104,Restaurant Depot,2026-07-06 09:30:00,2026-07-06,green_tea,40,0.596
+inv00104,Restaurant Depot,2026-07-06 09:30:00,2026-07-06,gyoza,1300,0.287
+inv00104,Restaurant Depot,2026-07-06 09:30:00,2026-07-06,mochi,288,0.716
+inv00104,Sun Noodle,2026-07-06 09:30:00,2026-07-06,noodles,1800,0.564
+inv00104,Strip District Meats,2026-07-06 09:30:00,2026-07-06,pork_belly,240,7.761
+inv00104,Restaurant Depot,2026-07-06 09:30:00,2026-07-06,ramune,120,1.204
+inv00104,Restaurant Depot,2026-07-06 09:30:00,2026-07-06,rice,40,2.15
+inv00104,Pittsburgh Beverage,2026-07-06 09:30:00,2026-07-06,sapporo,48,1.874
+inv00104,Strip District Produce,2026-07-06 09:30:00,2026-07-06,scallion,19,3.148
+inv00104,Restaurant Depot,2026-07-06 09:30:00,2026-07-06,takoyaki,360,0.289
+inv00105,Penn Dairy & Eggs,2026-07-08 09:30:00,2026-07-08,ajitama_egg,630,0.428
+inv00105,Restaurant Depot,2026-07-08 09:30:00,2026-07-08,bao_bun,100,0.352
+inv00105,Strip District Meats,2026-07-08 09:30:00,2026-07-08,chicken_thigh,25,6.168
+inv00105,Restaurant Depot,2026-07-08 09:30:00,2026-07-08,edamame,6,4.442
+inv00105,Restaurant Depot,2026-07-08 09:30:00,2026-07-08,green_tea,24,0.588
+inv00105,Restaurant Depot,2026-07-08 09:30:00,2026-07-08,gyoza,600,0.28
+inv00105,Restaurant Depot,2026-07-08 09:30:00,2026-07-08,mochi,144,0.724
+inv00105,Sun Noodle,2026-07-08 09:30:00,2026-07-08,noodles,880,0.554
+inv00105,Strip District Meats,2026-07-08 09:30:00,2026-07-08,pork_belly,125,7.977
+inv00105,Restaurant Depot,2026-07-08 09:30:00,2026-07-08,ramune,72,1.229
+inv00105,Restaurant Depot,2026-07-08 09:30:00,2026-07-08,rice,20,2.073
+inv00105,Strip District Produce,2026-07-08 09:30:00,2026-07-08,scallion,10,3.117
+inv00105,Restaurant Depot,2026-07-08 09:30:00,2026-07-08,takoyaki,300,0.299
+inv00106,Penn Dairy & Eggs,2026-07-10 09:30:00,2026-07-10,ajitama_egg,690,0.429
+inv00106,Restaurant Depot,2026-07-10 09:30:00,2026-07-10,bao_bun,150,0.343
+inv00106,Strip District Meats,2026-07-10 09:30:00,2026-07-10,chicken_thigh,35,6.072
+inv00106,Restaurant Depot,2026-07-10 09:30:00,2026-07-10,edamame,8,4.435
+inv00106,Restaurant Depot,2026-07-10 09:30:00,2026-07-10,green_tea,20,0.602
+inv00106,Restaurant Depot,2026-07-10 09:30:00,2026-07-10,gyoza,800,0.286
+inv00106,Restaurant Depot,2026-07-10 09:30:00,2026-07-10,mochi,108,0.715
+inv00106,Sun Noodle,2026-07-10 09:30:00,2026-07-10,noodles,920,0.541
+inv00106,Strip District Meats,2026-07-10 09:30:00,2026-07-10,pork_belly,130,7.945
+inv00106,Restaurant Depot,2026-07-10 09:30:00,2026-07-10,ramune,72,1.209
+inv00106,Restaurant Depot,2026-07-10 09:30:00,2026-07-10,rice,20,2.062
+inv00106,Pittsburgh Beverage,2026-07-10 09:30:00,2026-07-10,sapporo,24,1.954
+inv00106,Strip District Produce,2026-07-10 09:30:00,2026-07-10,scallion,10,3.1
+inv00106,Restaurant Depot,2026-07-10 09:30:00,2026-07-10,takoyaki,240,0.309
+inv00107,Penn Dairy & Eggs,2026-07-13 09:30:00,2026-07-13,ajitama_egg,1320,0.423
+inv00107,Restaurant Depot,2026-07-13 09:30:00,2026-07-13,bao_bun,200,0.354
+inv00107,Strip District Meats,2026-07-13 09:30:00,2026-07-13,chicken_thigh,50,5.93
+inv00107,Restaurant Depot,2026-07-13 09:30:00,2026-07-13,edamame,14,4.213
+inv00107,Restaurant Depot,2026-07-13 09:30:00,2026-07-13,green_tea,44,0.598
+inv00107,Restaurant Depot,2026-07-13 09:30:00,2026-07-13,gyoza,1400,0.267
+inv00107,Restaurant Depot,2026-07-13 09:30:00,2026-07-13,mochi,216,0.715
+inv00107,Sun Noodle,2026-07-13 09:30:00,2026-07-13,noodles,1920,0.534
+inv00107,Strip District Meats,2026-07-13 09:30:00,2026-07-13,pork_belly,245,7.883
+inv00107,Restaurant Depot,2026-07-13 09:30:00,2026-07-13,ramune,96,1.185
+inv00107,Restaurant Depot,2026-07-13 09:30:00,2026-07-13,rice,40,2.091
+inv00107,Pittsburgh Beverage,2026-07-13 09:30:00,2026-07-13,sapporo,24,1.862
+inv00107,Strip District Produce,2026-07-13 09:30:00,2026-07-13,scallion,20,3.164
+inv00107,Restaurant Depot,2026-07-13 09:30:00,2026-07-13,takoyaki,480,0.298
+inv00108,Penn Dairy & Eggs,2026-07-15 09:30:00,2026-07-15,ajitama_egg,630,0.421
+inv00108,Restaurant Depot,2026-07-15 09:30:00,2026-07-15,bao_bun,150,0.353
+inv00108,Strip District Meats,2026-07-15 09:30:00,2026-07-15,chicken_thigh,20,6.196
+inv00108,Restaurant Depot,2026-07-15 09:30:00,2026-07-15,edamame,8,4.384
+inv00108,Restaurant Depot,2026-07-15 09:30:00,2026-07-15,green_tea,16,0.589
+inv00108,Restaurant Depot,2026-07-15 09:30:00,2026-07-15,gyoza,700,0.277
+inv00108,Restaurant Depot,2026-07-15 09:30:00,2026-07-15,mochi,108,0.674
+inv00108,Sun Noodle,2026-07-15 09:30:00,2026-07-15,noodles,880,0.537
+inv00108,Strip District Meats,2026-07-15 09:30:00,2026-07-15,pork_belly,135,8.047
+inv00108,Restaurant Depot,2026-07-15 09:30:00,2026-07-15,ramune,72,1.188
+inv00108,Strip District Produce,2026-07-15 09:30:00,2026-07-15,scallion,10,3.076
+inv00108,Restaurant Depot,2026-07-15 09:30:00,2026-07-15,takoyaki,240,0.304
+inv00109,Penn Dairy & Eggs,2026-07-17 09:30:00,2026-07-17,ajitama_egg,720,0.416
+inv00109,Restaurant Depot,2026-07-17 09:30:00,2026-07-17,bao_bun,100,0.349
+inv00109,Strip District Meats,2026-07-17 09:30:00,2026-07-17,chicken_thigh,30,6.23
+inv00109,Restaurant Depot,2026-07-17 09:30:00,2026-07-17,edamame,8,4.292
+inv00109,Restaurant Depot,2026-07-17 09:30:00,2026-07-17,green_tea,20,0.595
+inv00109,Restaurant Depot,2026-07-17 09:30:00,2026-07-17,gyoza,600,0.282
+inv00109,Restaurant Depot,2026-07-17 09:30:00,2026-07-17,mochi,108,0.714
+inv00109,Sun Noodle,2026-07-17 09:30:00,2026-07-17,noodles,920,0.559
+inv00109,Strip District Meats,2026-07-17 09:30:00,2026-07-17,pork_belly,140,7.911
+inv00109,Restaurant Depot,2026-07-17 09:30:00,2026-07-17,ramune,48,1.182
+inv00109,Restaurant Depot,2026-07-17 09:30:00,2026-07-17,rice,20,2.075
+inv00109,Pittsburgh Beverage,2026-07-17 09:30:00,2026-07-17,sapporo,24,1.919
+inv00109,Strip District Produce,2026-07-17 09:30:00,2026-07-17,scallion,10,3.021
+inv00109,Restaurant Depot,2026-07-17 09:30:00,2026-07-17,takoyaki,180,0.292
+inv00110,Penn Dairy & Eggs,2026-07-20 09:30:00,2026-07-20,ajitama_egg,1320,0.427
+inv00110,Restaurant Depot,2026-07-20 09:30:00,2026-07-20,bao_bun,250,0.355
+inv00110,Strip District Meats,2026-07-20 09:30:00,2026-07-20,chicken_thigh,55,6.104
+inv00110,Restaurant Depot,2026-07-20 09:30:00,2026-07-20,edamame,16,4.324
+inv00110,Restaurant Depot,2026-07-20 09:30:00,2026-07-20,green_tea,44,0.6
+inv00110,Restaurant Depot,2026-07-20 09:30:00,2026-07-20,gyoza,1300,0.274
+inv00110,Restaurant Depot,2026-07-20 09:30:00,2026-07-20,mochi,288,0.703
+inv00110,Sun Noodle,2026-07-20 09:30:00,2026-07-20,noodles,1880,0.54
+inv00110,Strip District Meats,2026-07-20 09:30:00,2026-07-20,pork_belly,250,8.019
+inv00110,Restaurant Depot,2026-07-20 09:30:00,2026-07-20,ramune,120,1.157
+inv00110,Restaurant Depot,2026-07-20 09:30:00,2026-07-20,rice,40,2.11
+inv00110,Pittsburgh Beverage,2026-07-20 09:30:00,2026-07-20,sapporo,24,1.925
+inv00110,Strip District Produce,2026-07-20 09:30:00,2026-07-20,scallion,20,3.064
+inv00110,Restaurant Depot,2026-07-20 09:30:00,2026-07-20,takoyaki,420,0.292
+inv00111,Penn Dairy & Eggs,2026-07-22 09:30:00,2026-07-22,ajitama_egg,660,0.423
+inv00111,Restaurant Depot,2026-07-22 09:30:00,2026-07-22,bao_bun,100,0.366
+inv00111,Strip District Meats,2026-07-22 09:30:00,2026-07-22,chicken_thigh,25,6.096
+inv00111,Restaurant Depot,2026-07-22 09:30:00,2026-07-22,edamame,8,4.51
+inv00111,Restaurant Depot,2026-07-22 09:30:00,2026-07-22,green_tea,16,0.611
+inv00111,Restaurant Depot,2026-07-22 09:30:00,2026-07-22,gyoza,600,0.279
+inv00111,Restaurant Depot,2026-07-22 09:30:00,2026-07-22,mochi,144,0.691
+inv00111,Sun Noodle,2026-07-22 09:30:00,2026-07-22,noodles,920,0.552
+inv00111,Strip District Meats,2026-07-22 09:30:00,2026-07-22,pork_belly,120,7.761
+inv00111,Restaurant Depot,2026-07-22 09:30:00,2026-07-22,ramune,48,1.19
+inv00111,Restaurant Depot,2026-07-22 09:30:00,2026-07-22,rice,20,2.132
+inv00111,Strip District Produce,2026-07-22 09:30:00,2026-07-22,scallion,10,3.175
+inv00111,Restaurant Depot,2026-07-22 09:30:00,2026-07-22,takoyaki,180,0.304
+inv00112,Penn Dairy & Eggs,2026-07-24 09:30:00,2026-07-24,ajitama_egg,720,0.42
+inv00112,Restaurant Depot,2026-07-24 09:30:00,2026-07-24,bao_bun,150,0.347
+inv00112,Strip District Meats,2026-07-24 09:30:00,2026-07-24,chicken_thigh,30,6.181
+inv00112,Restaurant Depot,2026-07-24 09:30:00,2026-07-24,edamame,8,4.345
+inv00112,Restaurant Depot,2026-07-24 09:30:00,2026-07-24,green_tea,24,0.605
+inv00112,Restaurant Depot,2026-07-24 09:30:00,2026-07-24,gyoza,700,0.273
+inv00112,Restaurant Depot,2026-07-24 09:30:00,2026-07-24,mochi,108,0.682
+inv00112,Sun Noodle,2026-07-24 09:30:00,2026-07-24,noodles,1080,0.535
+inv00112,Strip District Meats,2026-07-24 09:30:00,2026-07-24,pork_belly,130,7.736
+inv00112,Restaurant Depot,2026-07-24 09:30:00,2026-07-24,ramune,96,1.195
+inv00112,Restaurant Depot,2026-07-24 09:30:00,2026-07-24,rice,20,2.163
+inv00112,Pittsburgh Beverage,2026-07-24 09:30:00,2026-07-24,sapporo,24,1.9
+inv00112,Strip District Produce,2026-07-24 09:30:00,2026-07-24,scallion,12,3.065
+inv00112,Restaurant Depot,2026-07-24 09:30:00,2026-07-24,takoyaki,300,0.292
+inv00113,Penn Dairy & Eggs,2026-07-27 09:30:00,2026-07-27,ajitama_egg,1320,0.421
+inv00113,Restaurant Depot,2026-07-27 09:30:00,2026-07-27,bao_bun,200,0.341
+inv00113,Strip District Meats,2026-07-27 09:30:00,2026-07-27,chicken_thigh,55,6.174
+inv00113,Restaurant Depot,2026-07-27 09:30:00,2026-07-27,edamame,12,4.385
+inv00113,Restaurant Depot,2026-07-27 09:30:00,2026-07-27,green_tea,36,0.609
+inv00113,Restaurant Depot,2026-07-27 09:30:00,2026-07-27,gyoza,1200,0.273
+inv00113,Restaurant Depot,2026-07-27 09:30:00,2026-07-27,mochi,216,0.694
+inv00113,Sun Noodle,2026-07-27 09:30:00,2026-07-27,noodles,1880,0.56
+inv00113,Strip District Meats,2026-07-27 09:30:00,2026-07-27,pork_belly,245,7.822
+inv00113,Restaurant Depot,2026-07-27 09:30:00,2026-07-27,ramune,120,1.243
+inv00113,Restaurant Depot,2026-07-27 09:30:00,2026-07-27,rice,40,2.093
+inv00113,Pittsburgh Beverage,2026-07-27 09:30:00,2026-07-27,sapporo,24,1.932
+inv00113,Strip District Produce,2026-07-27 09:30:00,2026-07-27,scallion,20,3.164
+inv00113,Restaurant Depot,2026-07-27 09:30:00,2026-07-27,takoyaki,480,0.295
+inv00114,Penn Dairy & Eggs,2026-07-29 09:30:00,2026-07-29,ajitama_egg,660,0.432
+inv00114,Restaurant Depot,2026-07-29 09:30:00,2026-07-29,bao_bun,150,0.344
+inv00114,Strip District Meats,2026-07-29 09:30:00,2026-07-29,chicken_thigh,30,6.23
+inv00114,Restaurant Depot,2026-07-29 09:30:00,2026-07-29,edamame,6,4.404
+inv00114,Restaurant Depot,2026-07-29 09:30:00,2026-07-29,green_tea,20,0.596
+inv00114,Restaurant Depot,2026-07-29 09:30:00,2026-07-29,gyoza,600,0.276
+inv00114,Restaurant Depot,2026-07-29 09:30:00,2026-07-29,mochi,72,0.692
+inv00114,Sun Noodle,2026-07-29 09:30:00,2026-07-29,noodles,880,0.533
+inv00114,Strip District Meats,2026-07-29 09:30:00,2026-07-29,pork_belly,115,7.88
+inv00114,Restaurant Depot,2026-07-29 09:30:00,2026-07-29,ramune,48,1.209
+inv00114,Restaurant Depot,2026-07-29 09:30:00,2026-07-29,rice,20,2.077
+inv00114,Strip District Produce,2026-07-29 09:30:00,2026-07-29,scallion,10,3.108
+inv00114,Restaurant Depot,2026-07-29 09:30:00,2026-07-29,takoyaki,180,0.308
+inv00115,Penn Dairy & Eggs,2026-07-31 09:30:00,2026-07-31,ajitama_egg,630,0.406
+inv00115,Restaurant Depot,2026-07-31 09:30:00,2026-07-31,bao_bun,100,0.347
+inv00115,Strip District Meats,2026-07-31 09:30:00,2026-07-31,chicken_thigh,30,6.141
+inv00115,Restaurant Depot,2026-07-31 09:30:00,2026-07-31,edamame,6,4.373
+inv00115,Restaurant Depot,2026-07-31 09:30:00,2026-07-31,green_tea,20,0.593
+inv00115,Restaurant Depot,2026-07-31 09:30:00,2026-07-31,gyoza,600,0.274
+inv00115,Restaurant Depot,2026-07-31 09:30:00,2026-07-31,mochi,108,0.709
+inv00115,Sun Noodle,2026-07-31 09:30:00,2026-07-31,noodles,880,0.56
+inv00115,Strip District Meats,2026-07-31 09:30:00,2026-07-31,pork_belly,135,7.719
+inv00115,Restaurant Depot,2026-07-31 09:30:00,2026-07-31,ramune,48,1.213
+inv00115,Pittsburgh Beverage,2026-07-31 09:30:00,2026-07-31,sapporo,24,1.854
+inv00115,Strip District Produce,2026-07-31 09:30:00,2026-07-31,scallion,10,3.145
+inv00115,Restaurant Depot,2026-07-31 09:30:00,2026-07-31,takoyaki,300,0.301
+inv00116,Penn Dairy & Eggs,2026-08-03 09:30:00,2026-08-03,ajitama_egg,1380,0.428
+inv00116,Restaurant Depot,2026-08-03 09:30:00,2026-08-03,bao_bun,250,0.355
+inv00116,Strip District Meats,2026-08-03 09:30:00,2026-08-03,chicken_thigh,55,6.201
+inv00116,Restaurant Depot,2026-08-03 09:30:00,2026-08-03,edamame,12,4.305
+inv00116,Restaurant Depot,2026-08-03 09:30:00,2026-08-03,green_tea,44,0.611
+inv00116,Restaurant Depot,2026-08-03 09:30:00,2026-08-03,gyoza,1500,0.278
+inv00116,Restaurant Depot,2026-08-03 09:30:00,2026-08-03,mochi,180,0.688
+inv00116,Sun Noodle,2026-08-03 09:30:00,2026-08-03,noodles,2000,0.557
+inv00116,Strip District Meats,2026-08-03 09:30:00,2026-08-03,pork_belly,240,7.868
+inv00116,Restaurant Depot,2026-08-03 09:30:00,2026-08-03,ramune,144,1.183
+inv00116,Restaurant Depot,2026-08-03 09:30:00,2026-08-03,rice,40,2.082
+inv00116,Pittsburgh Beverage,2026-08-03 09:30:00,2026-08-03,sapporo,24,1.873
+inv00116,Strip District Produce,2026-08-03 09:30:00,2026-08-03,scallion,20,3.059
+inv00116,Restaurant Depot,2026-08-03 09:30:00,2026-08-03,takoyaki,480,0.297
+inv00117,Penn Dairy & Eggs,2026-08-05 09:30:00,2026-08-05,ajitama_egg,630,0.425
+inv00117,Restaurant Depot,2026-08-05 09:30:00,2026-08-05,bao_bun,100,0.352
+inv00117,Strip District Meats,2026-08-05 09:30:00,2026-08-05,chicken_thigh,30,6.37
+inv00117,Restaurant Depot,2026-08-05 09:30:00,2026-08-05,edamame,8,4.261
+inv00117,Restaurant Depot,2026-08-05 09:30:00,2026-08-05,green_tea,16,0.603
+inv00117,Restaurant Depot,2026-08-05 09:30:00,2026-08-05,gyoza,600,0.281
+inv00117,Restaurant Depot,2026-08-05 09:30:00,2026-08-05,mochi,108,0.7
+inv00117,Sun Noodle,2026-08-05 09:30:00,2026-08-05,noodles,920,0.541
+inv00117,Strip District Meats,2026-08-05 09:30:00,2026-08-05,pork_belly,125,7.793
+inv00117,Restaurant Depot,2026-08-05 09:30:00,2026-08-05,ramune,72,1.196
+inv00117,Restaurant Depot,2026-08-05 09:30:00,2026-08-05,rice,20,2.149
+inv00117,Strip District Produce,2026-08-05 09:30:00,2026-08-05,scallion,10,3.19
+inv00117,Restaurant Depot,2026-08-05 09:30:00,2026-08-05,takoyaki,240,0.304
+inv00118,Penn Dairy & Eggs,2026-08-07 09:30:00,2026-08-07,ajitama_egg,630,0.399
+inv00118,Restaurant Depot,2026-08-07 09:30:00,2026-08-07,bao_bun,150,0.346
+inv00118,Strip District Meats,2026-08-07 09:30:00,2026-08-07,chicken_thigh,25,6.204
+inv00118,Restaurant Depot,2026-08-07 09:30:00,2026-08-07,edamame,8,4.324
+inv00118,Restaurant Depot,2026-08-07 09:30:00,2026-08-07,green_tea,16,0.596
+inv00118,Restaurant Depot,2026-08-07 09:30:00,2026-08-07,gyoza,500,0.275
+inv00118,Restaurant Depot,2026-08-07 09:30:00,2026-08-07,mochi,72,0.679
+inv00118,Sun Noodle,2026-08-07 09:30:00,2026-08-07,noodles,840,0.55
+inv00118,Strip District Meats,2026-08-07 09:30:00,2026-08-07,pork_belly,130,7.584
+inv00118,Restaurant Depot,2026-08-07 09:30:00,2026-08-07,ramune,48,1.176
+inv00118,Restaurant Depot,2026-08-07 09:30:00,2026-08-07,rice,20,2.076
+inv00118,Pittsburgh Beverage,2026-08-07 09:30:00,2026-08-07,sapporo,24,1.867
+inv00118,Strip District Produce,2026-08-07 09:30:00,2026-08-07,scallion,9,3.073
+inv00118,Restaurant Depot,2026-08-07 09:30:00,2026-08-07,takoyaki,180,0.304
+inv00119,Penn Dairy & Eggs,2026-08-10 09:30:00,2026-08-10,ajitama_egg,1320,0.42
+inv00119,Restaurant Depot,2026-08-10 09:30:00,2026-08-10,bao_bun,200,0.348
+inv00119,Strip District Meats,2026-08-10 09:30:00,2026-08-10,chicken_thigh,55,6.2
+inv00119,Restaurant Depot,2026-08-10 09:30:00,2026-08-10,edamame,14,4.401
+inv00119,Restaurant Depot,2026-08-10 09:30:00,2026-08-10,green_tea,36,0.599
+inv00119,Restaurant Depot,2026-08-10 09:30:00,2026-08-10,gyoza,1300,0.28
+inv00119,Restaurant Depot,2026-08-10 09:30:00,2026-08-10,mochi,180,0.702
+inv00119,Sun Noodle,2026-08-10 09:30:00,2026-08-10,noodles,1960,0.547
+inv00119,Strip District Meats,2026-08-10 09:30:00,2026-08-10,pork_belly,230,7.882
+inv00119,Restaurant Depot,2026-08-10 09:30:00,2026-08-10,ramune,144,1.213
+inv00119,Restaurant Depot,2026-08-10 09:30:00,2026-08-10,rice,40,2.116
+inv00119,Strip District Produce,2026-08-10 09:30:00,2026-08-10,scallion,21,3.089
+inv00119,Restaurant Depot,2026-08-10 09:30:00,2026-08-10,takoyaki,480,0.301
+inv00120,Penn Dairy & Eggs,2026-08-12 09:30:00,2026-08-12,ajitama_egg,720,0.423
+inv00120,Restaurant Depot,2026-08-12 09:30:00,2026-08-12,bao_bun,150,0.358
+inv00120,Strip District Meats,2026-08-12 09:30:00,2026-08-12,chicken_thigh,30,6.322
+inv00120,Restaurant Depot,2026-08-12 09:30:00,2026-08-12,edamame,8,4.362
+inv00120,Restaurant Depot,2026-08-12 09:30:00,2026-08-12,green_tea,24,0.561
+inv00120,Restaurant Depot,2026-08-12 09:30:00,2026-08-12,gyoza,800,0.277
+inv00120,Restaurant Depot,2026-08-12 09:30:00,2026-08-12,mochi,144,0.714
+inv00120,Sun Noodle,2026-08-12 09:30:00,2026-08-12,noodles,1000,0.559
+inv00120,Strip District Meats,2026-08-12 09:30:00,2026-08-12,pork_belly,130,7.971
+inv00120,Restaurant Depot,2026-08-12 09:30:00,2026-08-12,ramune,48,1.204
+inv00120,Restaurant Depot,2026-08-12 09:30:00,2026-08-12,rice,20,2.111
+inv00120,Pittsburgh Beverage,2026-08-12 09:30:00,2026-08-12,sapporo,24,1.879
+inv00120,Strip District Produce,2026-08-12 09:30:00,2026-08-12,scallion,11,3.039
+inv00120,Restaurant Depot,2026-08-12 09:30:00,2026-08-12,takoyaki,180,0.295
+inv00121,Penn Dairy & Eggs,2026-08-14 09:30:00,2026-08-14,ajitama_egg,750,0.425
+inv00121,Restaurant Depot,2026-08-14 09:30:00,2026-08-14,bao_bun,150,0.349
+inv00121,Strip District Meats,2026-08-14 09:30:00,2026-08-14,chicken_thigh,30,6.473
+inv00121,Restaurant Depot,2026-08-14 09:30:00,2026-08-14,edamame,6,4.586
+inv00121,Restaurant Depot,2026-08-14 09:30:00,2026-08-14,green_tea,24,0.616
+inv00121,Restaurant Depot,2026-08-14 09:30:00,2026-08-14,gyoza,900,0.275
+inv00121,Restaurant Depot,2026-08-14 09:30:00,2026-08-14,mochi,108,0.699
+inv00121,Sun Noodle,2026-08-14 09:30:00,2026-08-14,noodles,1040,0.565
+inv00121,Strip District Meats,2026-08-14 09:30:00,2026-08-14,pork_belly,125,7.526
+inv00121,Restaurant Depot,2026-08-14 09:30:00,2026-08-14,ramune,48,1.183
+inv00121,Strip District Produce,2026-08-14 09:30:00,2026-08-14,scallion,11,3.055
+inv00121,Restaurant Depot,2026-08-14 09:30:00,2026-08-14,takoyaki,240,0.303
+inv00122,Penn Dairy & Eggs,2026-08-17 09:30:00,2026-08-17,ajitama_egg,1350,0.422
+inv00122,Restaurant Depot,2026-08-17 09:30:00,2026-08-17,bao_bun,250,0.35
+inv00122,Strip District Meats,2026-08-17 09:30:00,2026-08-17,chicken_thigh,55,6.095
+inv00122,Restaurant Depot,2026-08-17 09:30:00,2026-08-17,edamame,14,4.406
+inv00122,Restaurant Depot,2026-08-17 09:30:00,2026-08-17,green_tea,36,0.593
+inv00122,Restaurant Depot,2026-08-17 09:30:00,2026-08-17,gyoza,1300,0.284
+inv00122,Restaurant Depot,2026-08-17 09:30:00,2026-08-17,mochi,252,0.717
+inv00122,Sun Noodle,2026-08-17 09:30:00,2026-08-17,noodles,1920,0.539
+inv00122,Strip District Meats,2026-08-17 09:30:00,2026-08-17,pork_belly,245,7.577
+inv00122,Restaurant Depot,2026-08-17 09:30:00,2026-08-17,ramune,120,1.214
+inv00122,Restaurant Depot,2026-08-17 09:30:00,2026-08-17,rice,40,2.113
+inv00122,Pittsburgh Beverage,2026-08-17 09:30:00,2026-08-17,sapporo,24,1.88
+inv00122,Strip District Produce,2026-08-17 09:30:00,2026-08-17,scallion,20,3.169
+inv00122,Restaurant Depot,2026-08-17 09:30:00,2026-08-17,takoyaki,480,0.299
+inv00123,Penn Dairy & Eggs,2026-08-19 09:30:00,2026-08-19,ajitama_egg,690,0.424
+inv00123,Restaurant Depot,2026-08-19 09:30:00,2026-08-19,bao_bun,150,0.35
+inv00123,Strip District Meats,2026-08-19 09:30:00,2026-08-19,chicken_thigh,30,6.3
+inv00123,Restaurant Depot,2026-08-19 09:30:00,2026-08-19,edamame,8,4.297
+inv00123,Restaurant Depot,2026-08-19 09:30:00,2026-08-19,green_tea,20,0.584
+inv00123,Restaurant Depot,2026-08-19 09:30:00,2026-08-19,gyoza,800,0.276
+inv00123,Restaurant Depot,2026-08-19 09:30:00,2026-08-19,mochi,144,0.684
+inv00123,Sun Noodle,2026-08-19 09:30:00,2026-08-19,noodles,960,0.544
+inv00123,Strip District Meats,2026-08-19 09:30:00,2026-08-19,pork_belly,130,7.804
+inv00123,Restaurant Depot,2026-08-19 09:30:00,2026-08-19,ramune,72,1.21
+inv00123,Restaurant Depot,2026-08-19 09:30:00,2026-08-19,rice,20,2.119
+inv00123,Pittsburgh Beverage,2026-08-19 09:30:00,2026-08-19,sapporo,24,1.901
+inv00123,Strip District Produce,2026-08-19 09:30:00,2026-08-19,scallion,10,3.187
+inv00123,Restaurant Depot,2026-08-19 09:30:00,2026-08-19,takoyaki,180,0.304
+inv00124,Penn Dairy & Eggs,2026-08-21 09:30:00,2026-08-21,ajitama_egg,720,0.418
+inv00124,Restaurant Depot,2026-08-21 09:30:00,2026-08-21,bao_bun,150,0.351
+inv00124,Strip District Meats,2026-08-21 09:30:00,2026-08-21,chicken_thigh,30,6.184
+inv00124,Restaurant Depot,2026-08-21 09:30:00,2026-08-21,edamame,10,4.414
+inv00124,Restaurant Depot,2026-08-21 09:30:00,2026-08-21,green_tea,28,0.607
+inv00124,Restaurant Depot,2026-08-21 09:30:00,2026-08-21,gyoza,700,0.279
+inv00124,Restaurant Depot,2026-08-21 09:30:00,2026-08-21,mochi,108,0.688
+inv00124,Sun Noodle,2026-08-21 09:30:00,2026-08-21,noodles,960,0.561
+inv00124,Strip District Meats,2026-08-21 09:30:00,2026-08-21,pork_belly,130,7.577
+inv00124,Restaurant Depot,2026-08-21 09:30:00,2026-08-21,ramune,72,1.186
+inv00124,Restaurant Depot,2026-08-21 09:30:00,2026-08-21,rice,20,1.995
+inv00124,Strip District Produce,2026-08-21 09:30:00,2026-08-21,scallion,12,3.172
+inv00124,Restaurant Depot,2026-08-21 09:30:00,2026-08-21,takoyaki,240,0.309
+inv00125,Penn Dairy & Eggs,2026-08-24 09:30:00,2026-08-24,ajitama_egg,1290,0.423
+inv00125,Restaurant Depot,2026-08-24 09:30:00,2026-08-24,bao_bun,250,0.351
+inv00125,Strip District Meats,2026-08-24 09:30:00,2026-08-24,chicken_thigh,50,6.243
+inv00125,Restaurant Depot,2026-08-24 09:30:00,2026-08-24,edamame,14,4.39
+inv00125,Restaurant Depot,2026-08-24 09:30:00,2026-08-24,green_tea,32,0.607
+inv00125,Restaurant Depot,2026-08-24 09:30:00,2026-08-24,gyoza,1200,0.276
+inv00125,Restaurant Depot,2026-08-24 09:30:00,2026-08-24,mochi,180,0.703
+inv00125,Sun Noodle,2026-08-24 09:30:00,2026-08-24,noodles,1880,0.559
+inv00125,Strip District Meats,2026-08-24 09:30:00,2026-08-24,pork_belly,255,7.533
+inv00125,Restaurant Depot,2026-08-24 09:30:00,2026-08-24,ramune,96,1.226
+inv00125,Restaurant Depot,2026-08-24 09:30:00,2026-08-24,rice,40,2.085
+inv00125,Pittsburgh Beverage,2026-08-24 09:30:00,2026-08-24,sapporo,24,1.931
+inv00125,Strip District Produce,2026-08-24 09:30:00,2026-08-24,scallion,19,3.136
+inv00125,Restaurant Depot,2026-08-24 09:30:00,2026-08-24,takoyaki,360,0.299
+inv00126,Penn Dairy & Eggs,2026-08-26 09:30:00,2026-08-26,ajitama_egg,690,0.432
+inv00126,Restaurant Depot,2026-08-26 09:30:00,2026-08-26,bao_bun,100,0.35
+inv00126,Strip District Meats,2026-08-26 09:30:00,2026-08-26,chicken_thigh,30,6.407
+inv00126,Restaurant Depot,2026-08-26 09:30:00,2026-08-26,edamame,6,4.439
+inv00126,Restaurant Depot,2026-08-26 09:30:00,2026-08-26,green_tea,24,0.61
+inv00126,Restaurant Depot,2026-08-26 09:30:00,2026-08-26,gyoza,700,0.279
+inv00126,Restaurant Depot,2026-08-26 09:30:00,2026-08-26,mochi,108,0.717
+inv00126,Sun Noodle,2026-08-26 09:30:00,2026-08-26,noodles,1040,0.562
+inv00126,Strip District Meats,2026-08-26 09:30:00,2026-08-26,pork_belly,120,7.829
+inv00126,Restaurant Depot,2026-08-26 09:30:00,2026-08-26,ramune,72,1.186
+inv00126,Restaurant Depot,2026-08-26 09:30:00,2026-08-26,rice,20,2.129
+inv00126,Pittsburgh Beverage,2026-08-26 09:30:00,2026-08-26,sapporo,24,1.938
+inv00126,Strip District Produce,2026-08-26 09:30:00,2026-08-26,scallion,11,3.012
+inv00126,Restaurant Depot,2026-08-26 09:30:00,2026-08-26,takoyaki,240,0.306
+inv00127,Penn Dairy & Eggs,2026-08-28 09:30:00,2026-08-28,ajitama_egg,870,0.428
+inv00127,Restaurant Depot,2026-08-28 09:30:00,2026-08-28,bao_bun,150,0.346
+inv00127,Strip District Meats,2026-08-28 09:30:00,2026-08-28,chicken_thigh,35,6.214
+inv00127,Restaurant Depot,2026-08-28 09:30:00,2026-08-28,edamame,8,4.359
+inv00127,Restaurant Depot,2026-08-28 09:30:00,2026-08-28,green_tea,28,0.596
+inv00127,Restaurant Depot,2026-08-28 09:30:00,2026-08-28,gyoza,900,0.276
+inv00127,Restaurant Depot,2026-08-28 09:30:00,2026-08-28,mochi,144,0.692
+inv00127,Sun Noodle,2026-08-28 09:30:00,2026-08-28,noodles,1160,0.558
+inv00127,Strip District Meats,2026-08-28 09:30:00,2026-08-28,pork_belly,140,7.861
+inv00127,Restaurant Depot,2026-08-28 09:30:00,2026-08-28,ramune,72,1.238
+inv00127,Restaurant Depot,2026-08-28 09:30:00,2026-08-28,rice,20,2.086
+inv00127,Strip District Produce,2026-08-28 09:30:00,2026-08-28,scallion,14,3.074
+inv00127,Restaurant Depot,2026-08-28 09:30:00,2026-08-28,takoyaki,240,0.311
+inv00128,Penn Dairy & Eggs,2026-08-31 09:30:00,2026-08-31,ajitama_egg,1590,0.422
+inv00128,Restaurant Depot,2026-08-31 09:30:00,2026-08-31,bao_bun,250,0.353
+inv00128,Strip District Meats,2026-08-31 09:30:00,2026-08-31,chicken_thigh,65,6.052
+inv00128,Restaurant Depot,2026-08-31 09:30:00,2026-08-31,edamame,20,4.433
+inv00128,Restaurant Depot,2026-08-31 09:30:00,2026-08-31,green_tea,52,0.606
+inv00128,Restaurant Depot,2026-08-31 09:30:00,2026-08-31,gyoza,1800,0.281
+inv00128,Restaurant Depot,2026-08-31 09:30:00,2026-08-31,mochi,288,0.703
+inv00128,Sun Noodle,2026-08-31 09:30:00,2026-08-31,noodles,2280,0.57
+inv00128,Strip District Meats,2026-08-31 09:30:00,2026-08-31,pork_belly,245,7.775
+inv00128,Restaurant Depot,2026-08-31 09:30:00,2026-08-31,ramune,168,1.177
+inv00128,Restaurant Depot,2026-08-31 09:30:00,2026-08-31,rice,40,2.107
+inv00128,Pittsburgh Beverage,2026-08-31 09:30:00,2026-08-31,sapporo,24,1.834
+inv00128,Strip District Produce,2026-08-31 09:30:00,2026-08-31,scallion,23,3.104
+inv00128,Restaurant Depot,2026-08-31 09:30:00,2026-08-31,takoyaki,540,0.293
+inv00129,Penn Dairy & Eggs,2026-09-02 09:30:00,2026-09-02,ajitama_egg,690,0.412
+inv00129,Restaurant Depot,2026-09-02 09:30:00,2026-09-02,bao_bun,150,0.354
+inv00129,Strip District Meats,2026-09-02 09:30:00,2026-09-02,chicken_thigh,30,6.205
+inv00129,Restaurant Depot,2026-09-02 09:30:00,2026-09-02,edamame,8,4.519
+inv00129,Restaurant Depot,2026-09-02 09:30:00,2026-09-02,green_tea,24,0.592
+inv00129,Restaurant Depot,2026-09-02 09:30:00,2026-09-02,gyoza,700,0.292
+inv00129,Restaurant Depot,2026-09-02 09:30:00,2026-09-02,mochi,72,0.673
+inv00129,Sun Noodle,2026-09-02 09:30:00,2026-09-02,noodles,960,0.547
+inv00129,Strip District Meats,2026-09-02 09:30:00,2026-09-02,pork_belly,130,9.388
+inv00129,Restaurant Depot,2026-09-02 09:30:00,2026-09-02,ramune,96,1.187
+inv00129,Restaurant Depot,2026-09-02 09:30:00,2026-09-02,rice,20,2.142
+inv00129,Pittsburgh Beverage,2026-09-02 09:30:00,2026-09-02,sapporo,24,1.884
+inv00129,Strip District Produce,2026-09-02 09:30:00,2026-09-02,scallion,11,3.078
+inv00129,Restaurant Depot,2026-09-02 09:30:00,2026-09-02,takoyaki,240,0.3
+inv00130,Penn Dairy & Eggs,2026-09-04 09:30:00,2026-09-04,ajitama_egg,810,0.423
+inv00130,Restaurant Depot,2026-09-04 09:30:00,2026-09-04,bao_bun,150,0.353
+inv00130,Strip District Meats,2026-09-04 09:30:00,2026-09-04,chicken_thigh,30,6.287
+inv00130,Restaurant Depot,2026-09-04 09:30:00,2026-09-04,edamame,8,4.351
+inv00130,Restaurant Depot,2026-09-04 09:30:00,2026-09-04,green_tea,24,0.592
+inv00130,Restaurant Depot,2026-09-04 09:30:00,2026-09-04,gyoza,800,0.279
+inv00130,Restaurant Depot,2026-09-04 09:30:00,2026-09-04,mochi,144,0.677
+inv00130,Sun Noodle,2026-09-04 09:30:00,2026-09-04,noodles,1080,0.578
+inv00130,Strip District Meats,2026-09-04 09:30:00,2026-09-04,pork_belly,155,8.97
+inv00130,Restaurant Depot,2026-09-04 09:30:00,2026-09-04,ramune,72,1.181
+inv00130,Restaurant Depot,2026-09-04 09:30:00,2026-09-04,rice,20,2.143
+inv00130,Strip District Produce,2026-09-04 09:30:00,2026-09-04,scallion,12,2.996
+inv00130,Restaurant Depot,2026-09-04 09:30:00,2026-09-04,takoyaki,360,0.291
+inv00131,Penn Dairy & Eggs,2026-09-07 09:30:00,2026-09-07,ajitama_egg,1410,0.42
+inv00131,Restaurant Depot,2026-09-07 09:30:00,2026-09-07,bao_bun,250,0.353
+inv00131,Strip District Meats,2026-09-07 09:30:00,2026-09-07,chicken_thigh,65,6.104
+inv00131,Restaurant Depot,2026-09-07 09:30:00,2026-09-07,edamame,16,4.489
+inv00131,Restaurant Depot,2026-09-07 09:30:00,2026-09-07,green_tea,36,0.599
+inv00131,Restaurant Depot,2026-09-07 09:30:00,2026-09-07,gyoza,1400,0.282
+inv00131,Restaurant Depot,2026-09-07 09:30:00,2026-09-07,mochi,288,0.69
+inv00131,Sun Noodle,2026-09-07 09:30:00,2026-09-07,noodles,2080,0.54
+inv00131,Strip District Meats,2026-09-07 09:30:00,2026-09-07,pork_belly,265,9.393
+inv00131,Restaurant Depot,2026-09-07 09:30:00,2026-09-07,ramune,120,1.167
+inv00131,Restaurant Depot,2026-09-07 09:30:00,2026-09-07,rice,40,2.199
+inv00131,Pittsburgh Beverage,2026-09-07 09:30:00,2026-09-07,sapporo,24,1.886
+inv00131,Strip District Produce,2026-09-07 09:30:00,2026-09-07,scallion,22,3.175
+inv00131,Restaurant Depot,2026-09-07 09:30:00,2026-09-07,takoyaki,300,0.309
+inv00132,Penn Dairy & Eggs,2026-09-09 09:30:00,2026-09-09,ajitama_egg,720,0.428
+inv00132,Restaurant Depot,2026-09-09 09:30:00,2026-09-09,bao_bun,100,0.361
+inv00132,Strip District Meats,2026-09-09 09:30:00,2026-09-09,chicken_thigh,30,6.348
+inv00132,Restaurant Depot,2026-09-09 09:30:00,2026-09-09,edamame,8,4.349
+inv00132,Restaurant Depot,2026-09-09 09:30:00,2026-09-09,green_tea,20,0.591
+inv00132,Restaurant Depot,2026-09-09 09:30:00,2026-09-09,gyoza,600,0.285
+inv00132,Restaurant Depot,2026-09-09 09:30:00,2026-09-09,mochi,108,0.706
+inv00132,Sun Noodle,2026-09-09 09:30:00,2026-09-09,noodles,1000,0.56
+inv00132,Strip District Meats,2026-09-09 09:30:00,2026-09-09,pork_belly,135,9.134
+inv00132,Restaurant Depot,2026-09-09 09:30:00,2026-09-09,ramune,72,1.21
+inv00132,Restaurant Depot,2026-09-09 09:30:00,2026-09-09,rice,20,2.17
+inv00132,Pittsburgh Beverage,2026-09-09 09:30:00,2026-09-09,sapporo,24,1.897
+inv00132,Strip District Produce,2026-09-09 09:30:00,2026-09-09,scallion,11,3.16
+inv00132,Restaurant Depot,2026-09-09 09:30:00,2026-09-09,takoyaki,240,0.301
+inv00133,Penn Dairy & Eggs,2026-09-11 09:30:00,2026-09-11,ajitama_egg,930,0.416
+inv00133,Restaurant Depot,2026-09-11 09:30:00,2026-09-11,bao_bun,200,0.351
+inv00133,Strip District Meats,2026-09-11 09:30:00,2026-09-11,chicken_thigh,40,6.099
+inv00133,Restaurant Depot,2026-09-11 09:30:00,2026-09-11,edamame,10,4.435
+inv00133,Restaurant Depot,2026-09-11 09:30:00,2026-09-11,green_tea,32,0.595
+inv00133,Restaurant Depot,2026-09-11 09:30:00,2026-09-11,gyoza,900,0.275
+inv00133,Restaurant Depot,2026-09-11 09:30:00,2026-09-11,mochi,144,0.714
+inv00133,Sun Noodle,2026-09-11 09:30:00,2026-09-11,noodles,1240,0.535
+inv00133,Strip District Meats,2026-09-11 09:30:00,2026-09-11,pork_belly,150,9.152
+inv00133,Restaurant Depot,2026-09-11 09:30:00,2026-09-11,ramune,72,1.196
+inv00133,Restaurant Depot,2026-09-11 09:30:00,2026-09-11,rice,20,2.096
+inv00133,Strip District Produce,2026-09-11 09:30:00,2026-09-11,scallion,13,3.031
+inv00133,Restaurant Depot,2026-09-11 09:30:00,2026-09-11,takoyaki,240,0.294
+inv00134,Penn Dairy & Eggs,2026-09-14 09:30:00,2026-09-14,ajitama_egg,1500,0.428
+inv00134,Restaurant Depot,2026-09-14 09:30:00,2026-09-14,bao_bun,250,0.355
+inv00134,Strip District Meats,2026-09-14 09:30:00,2026-09-14,chicken_thigh,75,6.209
+inv00134,Restaurant Depot,2026-09-14 09:30:00,2026-09-14,edamame,20,4.294
+inv00134,Restaurant Depot,2026-09-14 09:30:00,2026-09-14,green_tea,44,0.595
+inv00134,Restaurant Depot,2026-09-14 09:30:00,2026-09-14,gyoza,1500,0.28
+inv00134,Restaurant Depot,2026-09-14 09:30:00,2026-09-14,mochi,252,0.692
+inv00134,Sun Noodle,2026-09-14 09:30:00,2026-09-14,noodles,2120,0.537
+inv00134,Strip District Meats,2026-09-14 09:30:00,2026-09-14,pork_belly,270,9.41
+inv00134,Restaurant Depot,2026-09-14 09:30:00,2026-09-14,ramune,168,1.229
+inv00134,Restaurant Depot,2026-09-14 09:30:00,2026-09-14,rice,40,2.126
+inv00134,Pittsburgh Beverage,2026-09-14 09:30:00,2026-09-14,sapporo,48,1.94
+inv00134,Strip District Produce,2026-09-14 09:30:00,2026-09-14,scallion,24,3.216
+inv00134,Restaurant Depot,2026-09-14 09:30:00,2026-09-14,takoyaki,540,0.31
+inv00135,Penn Dairy & Eggs,2026-09-16 09:30:00,2026-09-16,ajitama_egg,660,0.429
+inv00135,Restaurant Depot,2026-09-16 09:30:00,2026-09-16,bao_bun,200,0.35
+inv00135,Strip District Meats,2026-09-16 09:30:00,2026-09-16,chicken_thigh,30,6.39
+inv00135,Restaurant Depot,2026-09-16 09:30:00,2026-09-16,edamame,6,4.49
+inv00135,Restaurant Depot,2026-09-16 09:30:00,2026-09-16,green_tea,20,0.585
+inv00135,Restaurant Depot,2026-09-16 09:30:00,2026-09-16,gyoza,800,0.286
+inv00135,Restaurant Depot,2026-09-16 09:30:00,2026-09-16,mochi,108,0.699
+inv00135,Sun Noodle,2026-09-16 09:30:00,2026-09-16,noodles,1000,0.541
+inv00135,Strip District Meats,2026-09-16 09:30:00,2026-09-16,pork_belly,130,8.918
+inv00135,Restaurant Depot,2026-09-16 09:30:00,2026-09-16,ramune,72,1.183
+inv00135,Strip District Produce,2026-09-16 09:30:00,2026-09-16,scallion,10,3.128
+inv00135,Restaurant Depot,2026-09-16 09:30:00,2026-09-16,takoyaki,300,0.308
+inv00136,Penn Dairy & Eggs,2026-09-18 09:30:00,2026-09-18,ajitama_egg,900,0.409
+inv00136,Restaurant Depot,2026-09-18 09:30:00,2026-09-18,bao_bun,150,0.337
+inv00136,Strip District Meats,2026-09-18 09:30:00,2026-09-18,chicken_thigh,35,6.312
+inv00136,Restaurant Depot,2026-09-18 09:30:00,2026-09-18,edamame,12,4.485
+inv00136,Restaurant Depot,2026-09-18 09:30:00,2026-09-18,green_tea,28,0.597
+inv00136,Restaurant Depot,2026-09-18 09:30:00,2026-09-18,gyoza,1000,0.277
+inv00136,Restaurant Depot,2026-09-18 09:30:00,2026-09-18,mochi,216,0.707
+inv00136,Sun Noodle,2026-09-18 09:30:00,2026-09-18,noodles,1240,0.57
+inv00136,Strip District Meats,2026-09-18 09:30:00,2026-09-18,pork_belly,155,8.937
+inv00136,Restaurant Depot,2026-09-18 09:30:00,2026-09-18,ramune,72,1.202
+inv00136,Restaurant Depot,2026-09-18 09:30:00,2026-09-18,rice,20,2.059
+inv00136,Pittsburgh Beverage,2026-09-18 09:30:00,2026-09-18,sapporo,24,1.886
+inv00136,Strip District Produce,2026-09-18 09:30:00,2026-09-18,scallion,14,3.092
+inv00136,Restaurant Depot,2026-09-18 09:30:00,2026-09-18,takoyaki,300,0.3
+inv00137,Penn Dairy & Eggs,2026-09-21 09:30:00,2026-09-21,ajitama_egg,1530,0.425
+inv00137,Restaurant Depot,2026-09-21 09:30:00,2026-09-21,bao_bun,300,0.366
+inv00137,Strip District Meats,2026-09-21 09:30:00,2026-09-21,chicken_thigh,60,6.324
+inv00137,Restaurant Depot,2026-09-21 09:30:00,2026-09-21,edamame,16,4.444
+inv00137,Restaurant Depot,2026-09-21 09:30:00,2026-09-21,green_tea,48,0.625
+inv00137,Restaurant Depot,2026-09-21 09:30:00,2026-09-21,gyoza,1500,0.277
+inv00137,Restaurant Depot,2026-09-21 09:30:00,2026-09-21,mochi,216,0.703
+inv00137,Sun Noodle,2026-09-21 09:30:00,2026-09-21,noodles,2160,0.55
+inv00137,Strip District Meats,2026-09-21 09:30:00,2026-09-21,pork_belly,260,8.926
+inv00137,Restaurant Depot,2026-09-21 09:30:00,2026-09-21,ramune,144,1.217
+inv00137,Restaurant Depot,2026-09-21 09:30:00,2026-09-21,rice,40,2.124
+inv00137,Pittsburgh Beverage,2026-09-21 09:30:00,2026-09-21,sapporo,24,1.839
+inv00137,Strip District Produce,2026-09-21 09:30:00,2026-09-21,scallion,23,3.13
+inv00137,Restaurant Depot,2026-09-21 09:30:00,2026-09-21,takoyaki,540,0.297
+inv00138,Penn Dairy & Eggs,2026-09-23 09:30:00,2026-09-23,ajitama_egg,750,0.424
+inv00138,Restaurant Depot,2026-09-23 09:30:00,2026-09-23,bao_bun,100,0.349
+inv00138,Strip District Meats,2026-09-23 09:30:00,2026-09-23,chicken_thigh,35,6.392
+inv00138,Restaurant Depot,2026-09-23 09:30:00,2026-09-23,edamame,8,4.419
+inv00138,Restaurant Depot,2026-09-23 09:30:00,2026-09-23,green_tea,20,0.579
+inv00138,Restaurant Depot,2026-09-23 09:30:00,2026-09-23,gyoza,800,0.276
+inv00138,Restaurant Depot,2026-09-23 09:30:00,2026-09-23,mochi,144,0.685
+inv00138,Sun Noodle,2026-09-23 09:30:00,2026-09-23,noodles,1040,0.559
+inv00138,Strip District Meats,2026-09-23 09:30:00,2026-09-23,pork_belly,130,9.441
+inv00138,Restaurant Depot,2026-09-23 09:30:00,2026-09-23,ramune,72,1.173
+inv00138,Restaurant Depot,2026-09-23 09:30:00,2026-09-23,rice,20,2.108
+inv00138,Pittsburgh Beverage,2026-09-23 09:30:00,2026-09-23,sapporo,24,1.873
+inv00138,Strip District Produce,2026-09-23 09:30:00,2026-09-23,scallion,11,3.112
+inv00138,Restaurant Depot,2026-09-23 09:30:00,2026-09-23,takoyaki,300,0.291
+inv00139,Penn Dairy & Eggs,2026-09-25 09:30:00,2026-09-25,ajitama_egg,900,0.406
+inv00139,Restaurant Depot,2026-09-25 09:30:00,2026-09-25,bao_bun,200,0.356
+inv00139,Strip District Meats,2026-09-25 09:30:00,2026-09-25,chicken_thigh,40,6.079
+inv00139,Restaurant Depot,2026-09-25 09:30:00,2026-09-25,edamame,12,4.419
+inv00139,Restaurant Depot,2026-09-25 09:30:00,2026-09-25,green_tea,24,0.59
+inv00139,Restaurant Depot,2026-09-25 09:30:00,2026-09-25,gyoza,900,0.279
+inv00139,Restaurant Depot,2026-09-25 09:30:00,2026-09-25,mochi,108,0.695
+inv00139,Sun Noodle,2026-09-25 09:30:00,2026-09-25,noodles,1280,0.536
+inv00139,Strip District Meats,2026-09-25 09:30:00,2026-09-25,pork_belly,175,9.32
+inv00139,Restaurant Depot,2026-09-25 09:30:00,2026-09-25,ramune,72,1.197
+inv00139,Restaurant Depot,2026-09-25 09:30:00,2026-09-25,rice,20,2.086
+inv00139,Strip District Produce,2026-09-25 09:30:00,2026-09-25,scallion,14,3.126
+inv00139,Restaurant Depot,2026-09-25 09:30:00,2026-09-25,takoyaki,360,0.291
+inv00140,Penn Dairy & Eggs,2026-09-28 09:30:00,2026-09-28,ajitama_egg,1740,0.42
+inv00140,Restaurant Depot,2026-09-28 09:30:00,2026-09-28,bao_bun,300,0.349
+inv00140,Strip District Meats,2026-09-28 09:30:00,2026-09-28,chicken_thigh,75,6.197
+inv00140,Restaurant Depot,2026-09-28 09:30:00,2026-09-28,edamame,20,4.472
+inv00140,Restaurant Depot,2026-09-28 09:30:00,2026-09-28,green_tea,56,0.605
+inv00140,Restaurant Depot,2026-09-28 09:30:00,2026-09-28,gyoza,1700,0.277
+inv00140,Restaurant Depot,2026-09-28 09:30:00,2026-09-28,mochi,288,0.698
+inv00140,Sun Noodle,2026-09-28 09:30:00,2026-09-28,noodles,2520,0.551
+inv00140,Strip District Meats,2026-09-28 09:30:00,2026-09-28,pork_belly,280,9.504
+inv00140,Restaurant Depot,2026-09-28 09:30:00,2026-09-28,ramune,168,1.205
+inv00140,Restaurant Depot,2026-09-28 09:30:00,2026-09-28,rice,40,2.046
+inv00140,Pittsburgh Beverage,2026-09-28 09:30:00,2026-09-28,sapporo,48,1.871
+inv00140,Strip District Produce,2026-09-28 09:30:00,2026-09-28,scallion,27,3.044
+inv00140,Restaurant Depot,2026-09-28 09:30:00,2026-09-28,takoyaki,480,0.301
+inv00141,Penn Dairy & Eggs,2026-09-30 09:30:00,2026-09-30,ajitama_egg,690,0.421
+inv00141,Restaurant Depot,2026-09-30 09:30:00,2026-09-30,bao_bun,100,0.348
+inv00141,Strip District Meats,2026-09-30 09:30:00,2026-09-30,chicken_thigh,30,6.13
+inv00141,Restaurant Depot,2026-09-30 09:30:00,2026-09-30,edamame,8,4.435
+inv00141,Restaurant Depot,2026-09-30 09:30:00,2026-09-30,green_tea,24,0.588
+inv00141,Restaurant Depot,2026-09-30 09:30:00,2026-09-30,gyoza,700,0.284
+inv00141,Restaurant Depot,2026-09-30 09:30:00,2026-09-30,mochi,72,0.692
+inv00141,Sun Noodle,2026-09-30 09:30:00,2026-09-30,noodles,960,0.557
+inv00141,Strip District Meats,2026-09-30 09:30:00,2026-09-30,pork_belly,140,9.222
+inv00141,Restaurant Depot,2026-09-30 09:30:00,2026-09-30,ramune,48,1.193
+inv00141,Restaurant Depot,2026-09-30 09:30:00,2026-09-30,rice,20,2.108
+inv00141,Strip District Produce,2026-09-30 09:30:00,2026-09-30,scallion,11,3.116
+inv00141,Restaurant Depot,2026-09-30 09:30:00,2026-09-30,takoyaki,240,0.296
+inv00142,Penn Dairy & Eggs,2026-10-02 09:30:00,2026-10-02,ajitama_egg,960,0.406
+inv00142,Restaurant Depot,2026-10-02 09:30:00,2026-10-02,bao_bun,150,0.354
+inv00142,Strip District Meats,2026-10-02 09:30:00,2026-10-02,chicken_thigh,40,6.346
+inv00142,Restaurant Depot,2026-10-02 09:30:00,2026-10-02,edamame,10,4.416
+inv00142,Restaurant Depot,2026-10-02 09:30:00,2026-10-02,green_tea,28,0.592
+inv00142,Restaurant Depot,2026-10-02 09:30:00,2026-10-02,gyoza,1000,0.271
+inv00142,Restaurant Depot,2026-10-02 09:30:00,2026-10-02,mochi,144,0.684
+inv00142,Sun Noodle,2026-10-02 09:30:00,2026-10-02,noodles,1360,0.536
+inv00142,Strip District Meats,2026-10-02 09:30:00,2026-10-02,pork_belly,165,9.261
+inv00142,Restaurant Depot,2026-10-02 09:30:00,2026-10-02,ramune,96,1.158
+inv00142,Restaurant Depot,2026-10-02 09:30:00,2026-10-02,rice,40,2.049
+inv00142,Pittsburgh Beverage,2026-10-02 09:30:00,2026-10-02,sapporo,24,1.911
+inv00142,Strip District Produce,2026-10-02 09:30:00,2026-10-02,scallion,14,3.195
+inv00142,Restaurant Depot,2026-10-02 09:30:00,2026-10-02,takoyaki,300,0.291
+inv00143,Penn Dairy & Eggs,2026-10-05 09:30:00,2026-10-05,ajitama_egg,1650,0.439
+inv00143,Restaurant Depot,2026-10-05 09:30:00,2026-10-05,bao_bun,300,0.342
+inv00143,Strip District Meats,2026-10-05 09:30:00,2026-10-05,chicken_thigh,70,5.994
+inv00143,Restaurant Depot,2026-10-05 09:30:00,2026-10-05,edamame,18,4.402
+inv00143,Restaurant Depot,2026-10-05 09:30:00,2026-10-05,green_tea,52,0.611
+inv00143,Restaurant Depot,2026-10-05 09:30:00,2026-10-05,gyoza,1600,0.281
+inv00143,Restaurant Depot,2026-10-05 09:30:00,2026-10-05,mochi,288,0.711
+inv00143,Sun Noodle,2026-10-05 09:30:00,2026-10-05,noodles,2360,0.546
+inv00143,Strip District Meats,2026-10-05 09:30:00,2026-10-05,pork_belly,285,9.143
+inv00143,Restaurant Depot,2026-10-05 09:30:00,2026-10-05,ramune,144,1.207
+inv00143,Restaurant Depot,2026-10-05 09:30:00,2026-10-05,rice,40,2.125
+inv00143,Pittsburgh Beverage,2026-10-05 09:30:00,2026-10-05,sapporo,24,1.905
+inv00143,Strip District Produce,2026-10-05 09:30:00,2026-10-05,scallion,25,3.116
+inv00143,Restaurant Depot,2026-10-05 09:30:00,2026-10-05,takoyaki,720,0.296
+inv00144,Penn Dairy & Eggs,2026-10-07 09:30:00,2026-10-07,ajitama_egg,810,0.411
+inv00144,Restaurant Depot,2026-10-07 09:30:00,2026-10-07,bao_bun,200,0.36
+inv00144,Strip District Meats,2026-10-07 09:30:00,2026-10-07,chicken_thigh,35,6.246
+inv00144,Restaurant Depot,2026-10-07 09:30:00,2026-10-07,edamame,6,4.343
+inv00144,Restaurant Depot,2026-10-07 09:30:00,2026-10-07,green_tea,20,0.612
+inv00144,Restaurant Depot,2026-10-07 09:30:00,2026-10-07,gyoza,700,0.28
+inv00144,Restaurant Depot,2026-10-07 09:30:00,2026-10-07,mochi,144,0.677
+inv00144,Sun Noodle,2026-10-07 09:30:00,2026-10-07,noodles,1120,0.549
+inv00144,Strip District Meats,2026-10-07 09:30:00,2026-10-07,pork_belly,140,9.04
+inv00144,Restaurant Depot,2026-10-07 09:30:00,2026-10-07,ramune,72,1.164
+inv00144,Restaurant Depot,2026-10-07 09:30:00,2026-10-07,rice,20,2.069
+inv00144,Pittsburgh Beverage,2026-10-07 09:30:00,2026-10-07,sapporo,24,1.839
+inv00144,Strip District Produce,2026-10-07 09:30:00,2026-10-07,scallion,12,2.988
+inv00144,Restaurant Depot,2026-10-07 09:30:00,2026-10-07,takoyaki,300,0.307
+inv00145,Penn Dairy & Eggs,2026-10-09 09:30:00,2026-10-09,ajitama_egg,1050,0.432
+inv00145,Restaurant Depot,2026-10-09 09:30:00,2026-10-09,bao_bun,200,0.34
+inv00145,Strip District Meats,2026-10-09 09:30:00,2026-10-09,chicken_thigh,40,6.124
+inv00145,Restaurant Depot,2026-10-09 09:30:00,2026-10-09,edamame,12,4.384
+inv00145,Restaurant Depot,2026-10-09 09:30:00,2026-10-09,green_tea,36,0.59
+inv00145,Restaurant Depot,2026-10-09 09:30:00,2026-10-09,gyoza,1000,0.283
+inv00145,Restaurant Depot,2026-10-09 09:30:00,2026-10-09,mochi,180,0.695
+inv00145,Sun Noodle,2026-10-09 09:30:00,2026-10-09,noodles,1480,0.557
+inv00145,Strip District Meats,2026-10-09 09:30:00,2026-10-09,pork_belly,170,9.064
+inv00145,Restaurant Depot,2026-10-09 09:30:00,2026-10-09,ramune,120,1.2
+inv00145,Restaurant Depot,2026-10-09 09:30:00,2026-10-09,rice,40,2.062
+inv00145,Strip District Produce,2026-10-09 09:30:00,2026-10-09,scallion,16,3.16
+inv00145,Restaurant Depot,2026-10-09 09:30:00,2026-10-09,takoyaki,300,0.297
+inv00146,Penn Dairy & Eggs,2026-10-12 09:30:00,2026-10-12,ajitama_egg,1710,0.422
+inv00146,Restaurant Depot,2026-10-12 09:30:00,2026-10-12,bao_bun,300,0.353
+inv00146,Strip District Meats,2026-10-12 09:30:00,2026-10-12,chicken_thigh,75,6.441
+inv00146,Restaurant Depot,2026-10-12 09:30:00,2026-10-12,edamame,18,4.369
+inv00146,Restaurant Depot,2026-10-12 09:30:00,2026-10-12,green_tea,44,0.595
+inv00146,Restaurant Depot,2026-10-12 09:30:00,2026-10-12,gyoza,1700,0.285
+inv00146,Restaurant Depot,2026-10-12 09:30:00,2026-10-12,mochi,252,0.7
+inv00146,Sun Noodle,2026-10-12 09:30:00,2026-10-12,noodles,2400,0.539
+inv00146,Strip District Meats,2026-10-12 09:30:00,2026-10-12,pork_belly,300,9.244
+inv00146,Restaurant Depot,2026-10-12 09:30:00,2026-10-12,ramune,168,1.238
+inv00146,Restaurant Depot,2026-10-12 09:30:00,2026-10-12,rice,40,2.146
+inv00146,Pittsburgh Beverage,2026-10-12 09:30:00,2026-10-12,sapporo,48,1.933
+inv00146,Strip District Produce,2026-10-12 09:30:00,2026-10-12,scallion,25,3.061
+inv00146,Restaurant Depot,2026-10-12 09:30:00,2026-10-12,takoyaki,660,0.307
+inv00147,Penn Dairy & Eggs,2026-10-14 09:30:00,2026-10-14,ajitama_egg,810,0.418
+inv00147,Restaurant Depot,2026-10-14 09:30:00,2026-10-14,bao_bun,150,0.363
+inv00147,Strip District Meats,2026-10-14 09:30:00,2026-10-14,chicken_thigh,35,6.243
+inv00147,Restaurant Depot,2026-10-14 09:30:00,2026-10-14,edamame,10,4.421
+inv00147,Restaurant Depot,2026-10-14 09:30:00,2026-10-14,green_tea,24,0.595
+inv00147,Restaurant Depot,2026-10-14 09:30:00,2026-10-14,gyoza,800,0.276
+inv00147,Restaurant Depot,2026-10-14 09:30:00,2026-10-14,mochi,144,0.7
+inv00147,Sun Noodle,2026-10-14 09:30:00,2026-10-14,noodles,1080,0.544
+inv00147,Strip District Meats,2026-10-14 09:30:00,2026-10-14,pork_belly,140,9.028
+inv00147,Restaurant Depot,2026-10-14 09:30:00,2026-10-14,ramune,48,1.218
+inv00147,Restaurant Depot,2026-10-14 09:30:00,2026-10-14,rice,20,2.076
+inv00147,Strip District Produce,2026-10-14 09:30:00,2026-10-14,scallion,13,3.149
+inv00147,Restaurant Depot,2026-10-14 09:30:00,2026-10-14,takoyaki,240,0.305
+inv00148,Penn Dairy & Eggs,2026-10-16 09:30:00,2026-10-16,ajitama_egg,960,0.416
+inv00148,Restaurant Depot,2026-10-16 09:30:00,2026-10-16,bao_bun,150,0.352
+inv00148,Strip District Meats,2026-10-16 09:30:00,2026-10-16,chicken_thigh,35,6.131
+inv00148,Restaurant Depot,2026-10-16 09:30:00,2026-10-16,edamame,12,4.339
+inv00148,Restaurant Depot,2026-10-16 09:30:00,2026-10-16,green_tea,36,0.597
+inv00148,Restaurant Depot,2026-10-16 09:30:00,2026-10-16,gyoza,1000,0.291
+inv00148,Restaurant Depot,2026-10-16 09:30:00,2026-10-16,mochi,144,0.702
+inv00148,Sun Noodle,2026-10-16 09:30:00,2026-10-16,noodles,1320,0.55
+inv00148,Strip District Meats,2026-10-16 09:30:00,2026-10-16,pork_belly,190,9.038
+inv00148,Restaurant Depot,2026-10-16 09:30:00,2026-10-16,ramune,72,1.225
+inv00148,Restaurant Depot,2026-10-16 09:30:00,2026-10-16,rice,20,2.133
+inv00148,Pittsburgh Beverage,2026-10-16 09:30:00,2026-10-16,sapporo,24,1.881
+inv00148,Strip District Produce,2026-10-16 09:30:00,2026-10-16,scallion,14,3.065
+inv00148,Restaurant Depot,2026-10-16 09:30:00,2026-10-16,takoyaki,300,0.298
+inv00149,Penn Dairy & Eggs,2026-10-19 09:30:00,2026-10-19,ajitama_egg,1620,0.425
+inv00149,Restaurant Depot,2026-10-19 09:30:00,2026-10-19,bao_bun,300,0.347
+inv00149,Strip District Meats,2026-10-19 09:30:00,2026-10-19,chicken_thigh,65,6.31
+inv00149,Restaurant Depot,2026-10-19 09:30:00,2026-10-19,edamame,20,4.407
+inv00149,Restaurant Depot,2026-10-19 09:30:00,2026-10-19,green_tea,48,0.618
+inv00149,Restaurant Depot,2026-10-19 09:30:00,2026-10-19,gyoza,1700,0.285
+inv00149,Restaurant Depot,2026-10-19 09:30:00,2026-10-19,mochi,288,0.688
+inv00149,Sun Noodle,2026-10-19 09:30:00,2026-10-19,noodles,2360,0.57
+inv00149,Strip District Meats,2026-10-19 09:30:00,2026-10-19,pork_belly,300,9.012
+inv00149,Restaurant Depot,2026-10-19 09:30:00,2026-10-19,ramune,144,1.251
+inv00149,Restaurant Depot,2026-10-19 09:30:00,2026-10-19,rice,40,2.059
+inv00149,Pittsburgh Beverage,2026-10-19 09:30:00,2026-10-19,sapporo,24,1.919
+inv00149,Strip District Produce,2026-10-19 09:30:00,2026-10-19,scallion,25,3.168
+inv00149,Restaurant Depot,2026-10-19 09:30:00,2026-10-19,takoyaki,480,0.305
+inv00150,Penn Dairy & Eggs,2026-10-21 09:30:00,2026-10-21,ajitama_egg,810,0.437
+inv00150,Restaurant Depot,2026-10-21 09:30:00,2026-10-21,bao_bun,150,0.34
+inv00150,Strip District Meats,2026-10-21 09:30:00,2026-10-21,chicken_thigh,40,6.084
+inv00150,Restaurant Depot,2026-10-21 09:30:00,2026-10-21,edamame,10,4.454
+inv00150,Restaurant Depot,2026-10-21 09:30:00,2026-10-21,green_tea,24,0.595
+inv00150,Restaurant Depot,2026-10-21 09:30:00,2026-10-21,gyoza,900,0.278
+inv00150,Restaurant Depot,2026-10-21 09:30:00,2026-10-21,mochi,108,0.698
+inv00150,Sun Noodle,2026-10-21 09:30:00,2026-10-21,noodles,1080,0.537
+inv00150,Strip District Meats,2026-10-21 09:30:00,2026-10-21,pork_belly,135,9.373
+inv00150,Restaurant Depot,2026-10-21 09:30:00,2026-10-21,ramune,72,1.194
+inv00150,Restaurant Depot,2026-10-21 09:30:00,2026-10-21,rice,20,2.187
+inv00150,Pittsburgh Beverage,2026-10-21 09:30:00,2026-10-21,sapporo,24,1.9
+inv00150,Strip District Produce,2026-10-21 09:30:00,2026-10-21,scallion,12,3.119
+inv00150,Restaurant Depot,2026-10-21 09:30:00,2026-10-21,takoyaki,360,0.301
+inv00151,Penn Dairy & Eggs,2026-10-23 09:30:00,2026-10-23,ajitama_egg,1080,0.411
+inv00151,Restaurant Depot,2026-10-23 09:30:00,2026-10-23,bao_bun,200,0.352
+inv00151,Strip District Meats,2026-10-23 09:30:00,2026-10-23,chicken_thigh,50,6.222
+inv00151,Restaurant Depot,2026-10-23 09:30:00,2026-10-23,edamame,12,4.491
+inv00151,Restaurant Depot,2026-10-23 09:30:00,2026-10-23,green_tea,32,0.599
+inv00151,Restaurant Depot,2026-10-23 09:30:00,2026-10-23,gyoza,900,0.279
+inv00151,Restaurant Depot,2026-10-23 09:30:00,2026-10-23,mochi,216,0.698
+inv00151,Sun Noodle,2026-10-23 09:30:00,2026-10-23,noodles,1520,0.534
+inv00151,Strip District Meats,2026-10-23 09:30:00,2026-10-23,pork_belly,200,9.623
+inv00151,Restaurant Depot,2026-10-23 09:30:00,2026-10-23,ramune,96,1.215
+inv00151,Restaurant Depot,2026-10-23 09:30:00,2026-10-23,rice,40,2.106
+inv00151,Pittsburgh Beverage,2026-10-23 09:30:00,2026-10-23,sapporo,24,1.935
+inv00151,Strip District Produce,2026-10-23 09:30:00,2026-10-23,scallion,16,3.138
+inv00151,Restaurant Depot,2026-10-23 09:30:00,2026-10-23,takoyaki,360,0.298
+inv00152,Penn Dairy & Eggs,2026-10-26 09:30:00,2026-10-26,ajitama_egg,1740,0.418
+inv00152,Restaurant Depot,2026-10-26 09:30:00,2026-10-26,bao_bun,300,0.349
+inv00152,Strip District Meats,2026-10-26 09:30:00,2026-10-26,chicken_thigh,70,6.247
+inv00152,Restaurant Depot,2026-10-26 09:30:00,2026-10-26,edamame,22,4.444
+inv00152,Restaurant Depot,2026-10-26 09:30:00,2026-10-26,green_tea,48,0.583
+inv00152,Restaurant Depot,2026-10-26 09:30:00,2026-10-26,gyoza,2000,0.284
+inv00152,Restaurant Depot,2026-10-26 09:30:00,2026-10-26,mochi,288,0.722
+inv00152,Sun Noodle,2026-10-26 09:30:00,2026-10-26,noodles,2480,0.558
+inv00152,Strip District Meats,2026-10-26 09:30:00,2026-10-26,pork_belly,305,9.023
+inv00152,Restaurant Depot,2026-10-26 09:30:00,2026-10-26,ramune,192,1.205
+inv00152,Restaurant Depot,2026-10-26 09:30:00,2026-10-26,rice,40,2.026
+inv00152,Pittsburgh Beverage,2026-10-26 09:30:00,2026-10-26,sapporo,24,1.88
+inv00152,Strip District Produce,2026-10-26 09:30:00,2026-10-26,scallion,27,3.101
+inv00152,Restaurant Depot,2026-10-26 09:30:00,2026-10-26,takoyaki,480,0.307
+inv00153,Penn Dairy & Eggs,2026-10-28 09:30:00,2026-10-28,ajitama_egg,840,0.415
+inv00153,Restaurant Depot,2026-10-28 09:30:00,2026-10-28,bao_bun,100,0.356
+inv00153,Strip District Meats,2026-10-28 09:30:00,2026-10-28,chicken_thigh,30,6.195
+inv00153,Restaurant Depot,2026-10-28 09:30:00,2026-10-28,edamame,10,4.417
+inv00153,Restaurant Depot,2026-10-28 09:30:00,2026-10-28,green_tea,32,0.606
+inv00153,Restaurant Depot,2026-10-28 09:30:00,2026-10-28,gyoza,900,0.276
+inv00153,Restaurant Depot,2026-10-28 09:30:00,2026-10-28,mochi,144,0.666
+inv00153,Sun Noodle,2026-10-28 09:30:00,2026-10-28,noodles,1160,0.55
+inv00153,Strip District Meats,2026-10-28 09:30:00,2026-10-28,pork_belly,145,9.223
+inv00153,Restaurant Depot,2026-10-28 09:30:00,2026-10-28,ramune,72,1.177
+inv00153,Restaurant Depot,2026-10-28 09:30:00,2026-10-28,rice,20,2.06
+inv00153,Pittsburgh Beverage,2026-10-28 09:30:00,2026-10-28,sapporo,24,1.816
+inv00153,Strip District Produce,2026-10-28 09:30:00,2026-10-28,scallion,13,3.065
+inv00153,Restaurant Depot,2026-10-28 09:30:00,2026-10-28,takoyaki,360,0.297
+inv00154,Penn Dairy & Eggs,2026-10-30 09:30:00,2026-10-30,ajitama_egg,900,0.44
+inv00154,Restaurant Depot,2026-10-30 09:30:00,2026-10-30,bao_bun,200,0.342
+inv00154,Strip District Meats,2026-10-30 09:30:00,2026-10-30,chicken_thigh,40,6.258
+inv00154,Restaurant Depot,2026-10-30 09:30:00,2026-10-30,edamame,8,4.457
+inv00154,Restaurant Depot,2026-10-30 09:30:00,2026-10-30,green_tea,32,0.576
+inv00154,Restaurant Depot,2026-10-30 09:30:00,2026-10-30,gyoza,1000,0.271
+inv00154,Restaurant Depot,2026-10-30 09:30:00,2026-10-30,mochi,180,0.686
+inv00154,Sun Noodle,2026-10-30 09:30:00,2026-10-30,noodles,1280,0.537
+inv00154,Strip District Meats,2026-10-30 09:30:00,2026-10-30,pork_belly,180,9.184
+inv00154,Restaurant Depot,2026-10-30 09:30:00,2026-10-30,ramune,72,1.17
+inv00154,Restaurant Depot,2026-10-30 09:30:00,2026-10-30,rice,20,2.144
+inv00154,Pittsburgh Beverage,2026-10-30 09:30:00,2026-10-30,sapporo,24,1.91
+inv00154,Strip District Produce,2026-10-30 09:30:00,2026-10-30,scallion,14,3.103
+inv00154,Restaurant Depot,2026-10-30 09:30:00,2026-10-30,takoyaki,300,0.291
+inv00155,Penn Dairy & Eggs,2026-11-02 09:30:00,2026-11-02,ajitama_egg,1800,0.42
+inv00155,Restaurant Depot,2026-11-02 09:30:00,2026-11-02,bao_bun,350,0.354
+inv00155,Strip District Meats,2026-11-02 09:30:00,2026-11-02,chicken_thigh,85,6.195
+inv00155,Restaurant Depot,2026-11-02 09:30:00,2026-11-02,edamame,20,4.214
+inv00155,Restaurant Depot,2026-11-02 09:30:00,2026-11-02,green_tea,48,0.606
+inv00155,Restaurant Depot,2026-11-02 09:30:00,2026-11-02,gyoza,1900,0.288
+inv00155,Restaurant Depot,2026-11-02 09:30:00,2026-11-02,mochi,252,0.713
+inv00155,Sun Noodle,2026-11-02 09:30:00,2026-11-02,noodles,2600,0.557
+inv00155,Strip District Meats,2026-11-02 09:30:00,2026-11-02,pork_belly,325,9.084
+inv00155,Restaurant Depot,2026-11-02 09:30:00,2026-11-02,ramune,168,1.161
+inv00155,Restaurant Depot,2026-11-02 09:30:00,2026-11-02,rice,60,2.116
+inv00155,Pittsburgh Beverage,2026-11-02 09:30:00,2026-11-02,sapporo,24,1.848
+inv00155,Strip District Produce,2026-11-02 09:30:00,2026-11-02,scallion,27,3.041
+inv00155,Restaurant Depot,2026-11-02 09:30:00,2026-11-02,takoyaki,660,0.291
+inv00156,Penn Dairy & Eggs,2026-11-04 09:30:00,2026-11-04,ajitama_egg,840,0.41
+inv00156,Restaurant Depot,2026-11-04 09:30:00,2026-11-04,bao_bun,150,0.359
+inv00156,Strip District Meats,2026-11-04 09:30:00,2026-11-04,chicken_thigh,30,6.433
+inv00156,Restaurant Depot,2026-11-04 09:30:00,2026-11-04,edamame,12,4.495
+inv00156,Restaurant Depot,2026-11-04 09:30:00,2026-11-04,green_tea,16,0.593
+inv00156,Restaurant Depot,2026-11-04 09:30:00,2026-11-04,gyoza,800,0.278
+inv00156,Restaurant Depot,2026-11-04 09:30:00,2026-11-04,mochi,180,0.708
+inv00156,Sun Noodle,2026-11-04 09:30:00,2026-11-04,noodles,1240,0.549
+inv00156,Strip District Meats,2026-11-04 09:30:00,2026-11-04,pork_belly,155,9.191
+inv00156,Restaurant Depot,2026-11-04 09:30:00,2026-11-04,ramune,96,1.239
+inv00156,Restaurant Depot,2026-11-04 09:30:00,2026-11-04,rice,20,2.082
+inv00156,Pittsburgh Beverage,2026-11-04 09:30:00,2026-11-04,sapporo,24,1.868
+inv00156,Strip District Produce,2026-11-04 09:30:00,2026-11-04,scallion,13,3.124
+inv00156,Restaurant Depot,2026-11-04 09:30:00,2026-11-04,takoyaki,360,0.287

@@ -1,0 +1,1382 @@
+order_id,item,price
+o0171930,Chicken Paitan,18.15
+o0171930,Gyoza,8.8
+o0171931,Spicy Miso,19.25
+o0171932,Karaage,9.9
+o0171932,Spicy Miso,19.25
+o0171933,Iced Green Tea,3.85
+o0171933,Ramune,4.95
+o0171933,Shoyu,18.15
+o0171934,Shoyu,16.5
+o0171934,Chashu Don,14.0
+o0171935,Chashu Bao,9.35
+o0171935,Chashu Don,15.4
+o0171936,Gyoza,8.8
+o0171937,Mochi Trio,7.15
+o0171937,Karaage,9.9
+o0171937,Tonkotsu,19.25
+o0171938,Spicy Miso,19.25
+o0171938,Mochi Trio,7.15
+o0171938,Takoyaki,9.35
+o0171938,Tonkotsu,19.25
+o0171938,Shoyu,18.15
+o0171938,Chicken Paitan,18.15
+o0171938,Chashu Bao,9.35
+o0171939,Shoyu,16.5
+o0171939,Tantanmen,17.0
+o0171940,Tonkotsu,19.25
+o0171940,Spicy Miso,19.25
+o0171941,Karaage,9.0
+o0171941,Iced Green Tea,3.5
+o0171941,Shoyu,16.5
+o0171942,Chicken Paitan,18.15
+o0171943,Sapporo,7.0
+o0171943,Karaage,9.0
+o0171943,Chicken Paitan,16.5
+o0171944,Ramune,4.95
+o0171944,Spicy Miso,19.25
+o0171945,Tonkotsu,19.25
+o0171946,Shoyu,18.15
+o0171947,Gyoza,8.8
+o0171947,Shoyu,18.15
+o0171948,Gyoza,8.8
+o0171948,Veggie Miso,17.05
+o0171949,Chashu Bao,8.5
+o0171949,Chicken Paitan,16.5
+o0171950,Shoyu,18.15
+o0171950,Karaage,9.9
+o0171951,Spicy Miso,19.25
+o0171952,Gyoza,8.8
+o0171952,Tonkotsu,19.25
+o0171953,Tonkotsu,19.25
+o0171953,Spicy Miso,19.25
+o0171954,Gyoza,8.0
+o0171954,Chashu Don,14.0
+o0171955,Karaage,9.9
+o0171955,Tonkotsu,19.25
+o0171955,Ramune,4.95
+o0171956,Shoyu,18.15
+o0171957,Veggie Miso,15.5
+o0171958,Spicy Miso,17.5
+o0171958,Karaage,9.0
+o0171959,Edamame,6.6
+o0171959,Gyoza,8.8
+o0171960,Chashu Bao,9.35
+o0171960,Veggie Miso,17.05
+o0171960,Gyoza,8.8
+o0171961,Chashu Don,15.4
+o0171962,Tantanmen,18.7
+o0171962,Veggie Miso,17.05
+o0171963,Gyoza,8.8
+o0171963,Spicy Miso,19.25
+o0171964,Tantanmen,17.0
+o0171964,Spicy Miso,17.5
+o0171965,Shoyu,18.15
+o0171965,Veggie Miso,17.05
+o0171965,Spicy Miso,19.25
+o0171965,Iced Green Tea,3.85
+o0171966,Takoyaki,9.35
+o0171966,Tonkotsu,19.25
+o0171967,Chashu Don,15.4
+o0171968,Chashu Bao,9.35
+o0171968,Mochi Trio,7.15
+o0171968,Veggie Miso,17.05
+o0171969,Gyoza,8.8
+o0171969,Spicy Miso,19.25
+o0171970,Edamame,6.0
+o0171970,Veggie Miso,15.5
+o0171970,Shoyu,16.5
+o0171970,Veggie Miso,15.5
+o0171971,Tonkotsu,17.5
+o0171971,Spicy Miso,17.5
+o0171972,Shoyu,18.15
+o0171973,Chicken Paitan,18.15
+o0171973,Karaage,9.9
+o0171973,Tonkotsu,19.25
+o0171974,Veggie Miso,15.5
+o0171974,Shoyu,16.5
+o0171974,Chicken Paitan,16.5
+o0171974,Tonkotsu,17.5
+o0171975,Karaage,9.9
+o0171975,Spicy Miso,19.25
+o0171975,Takoyaki,9.35
+o0171975,Tonkotsu,19.25
+o0171976,Chicken Paitan,16.5
+o0171976,Gyoza,8.0
+o0171976,Chashu Don,14.0
+o0171977,Mochi Trio,6.5
+o0171977,Ramune,4.5
+o0171977,Shoyu,16.5
+o0171978,Gyoza,8.8
+o0171979,Ramune,4.95
+o0171979,Chashu Bao,9.35
+o0171979,Gyoza,8.8
+o0171980,Shoyu,16.5
+o0171980,Sapporo,7.0
+o0171981,Tonkotsu,19.25
+o0171982,Spicy Miso,17.5
+o0171982,Tantanmen,17.0
+o0171982,Mochi Trio,6.5
+o0171983,Gyoza,8.8
+o0171983,Chicken Paitan,18.15
+o0171983,Tantanmen,18.7
+o0171984,Iced Green Tea,3.85
+o0171984,Edamame,6.6
+o0171984,Chicken Paitan,18.15
+o0171985,Veggie Miso,17.05
+o0171986,Chashu Bao,9.35
+o0171986,Shoyu,18.15
+o0171987,Tonkotsu,17.5
+o0171988,Mochi Trio,6.5
+o0171988,Veggie Miso,15.5
+o0171989,Gyoza,8.8
+o0171989,Chashu Bao,9.35
+o0171989,Spicy Miso,19.25
+o0171990,Spicy Miso,19.25
+o0171990,Spicy Miso,19.25
+o0171991,Tonkotsu,19.25
+o0171991,Tonkotsu,19.25
+o0171992,Tonkotsu,17.5
+o0171992,Veggie Miso,15.5
+o0171992,Tonkotsu,17.5
+o0171992,Chashu Bao,8.5
+o0171993,Spicy Miso,17.5
+o0171993,Veggie Miso,15.5
+o0171994,Takoyaki,9.35
+o0171994,Tonkotsu,19.25
+o0171995,Spicy Miso,17.5
+o0171995,Shoyu,16.5
+o0171996,Chashu Don,14.0
+o0171996,Gyoza,8.0
+o0171997,Iced Green Tea,3.85
+o0171997,Tonkotsu,19.25
+o0171998,Veggie Miso,17.05
+o0171999,Shoyu,16.5
+o0172000,Gyoza,8.0
+o0172000,Spicy Miso,17.5
+o0172000,Ramune,4.5
+o0172001,Tonkotsu,17.5
+o0172001,Tantanmen,17.0
+o0172001,Chashu Don,14.0
+o0172002,Gyoza,8.8
+o0172003,Chicken Paitan,18.15
+o0172003,Chashu Don,15.4
+o0172003,Spicy Miso,19.25
+o0172004,Takoyaki,9.35
+o0172004,Spicy Miso,19.25
+o0172005,Spicy Miso,19.25
+o0172005,Edamame,6.6
+o0172006,Shoyu,18.15
+o0172006,Chashu Don,15.4
+o0172006,Spicy Miso,19.25
+o0172007,Gyoza,8.8
+o0172007,Takoyaki,9.35
+o0172007,Tonkotsu,19.25
+o0172008,Chashu Don,15.4
+o0172009,Spicy Miso,17.5
+o0172009,Chicken Paitan,16.5
+o0172009,Tonkotsu,17.5
+o0172009,Spicy Miso,17.5
+o0172010,Shoyu,18.15
+o0172010,Iced Green Tea,3.85
+o0172011,Spicy Miso,19.25
+o0172012,Tonkotsu,19.25
+o0172013,Chashu Bao,9.35
+o0172013,Ramune,4.95
+o0172013,Shoyu,18.15
+o0172014,Tonkotsu,19.25
+o0172015,Chashu Don,15.4
+o0172015,Iced Green Tea,3.85
+o0172016,Chicken Paitan,18.15
+o0172017,Spicy Miso,17.5
+o0172017,Karaage,9.0
+o0172017,Spicy Miso,17.5
+o0172017,Tonkotsu,17.5
+o0172017,Karaage,9.0
+o0172018,Veggie Miso,17.05
+o0172019,Tonkotsu,19.25
+o0172019,Chicken Paitan,18.15
+o0172020,Shoyu,16.5
+o0172020,Ramune,4.5
+o0172021,Shoyu,16.5
+o0172021,Karaage,9.0
+o0172021,Spicy Miso,17.5
+o0172022,Tonkotsu,19.25
+o0172022,Chicken Paitan,18.15
+o0172022,Tonkotsu,19.25
+o0172023,Tonkotsu,19.25
+o0172024,Karaage,9.9
+o0172024,Spicy Miso,19.25
+o0172024,Edamame,6.6
+o0172025,Iced Green Tea,3.85
+o0172025,Veggie Miso,17.05
+o0172026,Iced Green Tea,3.85
+o0172026,Gyoza,8.8
+o0172026,Tantanmen,18.7
+o0172027,Shoyu,16.5
+o0172027,Gyoza,8.0
+o0172027,Tantanmen,17.0
+o0172027,Gyoza,8.0
+o0172028,Tonkotsu,17.5
+o0172029,Tonkotsu,19.25
+o0172030,Tonkotsu,17.5
+o0172031,Tantanmen,18.7
+o0172031,Edamame,6.6
+o0172032,Chicken Paitan,18.15
+o0172032,Gyoza,8.8
+o0172033,Ramune,4.95
+o0172033,Edamame,6.6
+o0172033,Tonkotsu,19.25
+o0172033,Chashu Don,15.4
+o0172034,Tantanmen,18.7
+o0172035,Spicy Miso,19.25
+o0172035,Tonkotsu,19.25
+o0172036,Spicy Miso,17.5
+o0172037,Spicy Miso,17.5
+o0172037,Gyoza,8.0
+o0172038,Tonkotsu,19.25
+o0172039,Tonkotsu,17.5
+o0172039,Takoyaki,8.5
+o0172040,Chicken Paitan,18.15
+o0172041,Tonkotsu,17.5
+o0172041,Gyoza,8.0
+o0172041,Tonkotsu,17.5
+o0172041,Tonkotsu,17.5
+o0172042,Chicken Paitan,18.15
+o0172042,Tantanmen,18.7
+o0172042,Tonkotsu,19.25
+o0172043,Karaage,9.0
+o0172043,Chicken Paitan,16.5
+o0172044,Shoyu,18.15
+o0172045,Iced Green Tea,3.85
+o0172045,Tonkotsu,19.25
+o0172046,Shoyu,18.15
+o0172046,Spicy Miso,19.25
+o0172047,Edamame,6.6
+o0172047,Ramune,4.95
+o0172047,Takoyaki,9.35
+o0172047,Tonkotsu,19.25
+o0172047,Shoyu,18.15
+o0172047,Karaage,9.9
+o0172048,Tonkotsu,19.25
+o0172048,Chashu Bao,9.35
+o0172049,Tonkotsu,19.25
+o0172050,Chashu Don,14.0
+o0172050,Tonkotsu,17.5
+o0172051,Mochi Trio,7.15
+o0172052,Mochi Trio,7.15
+o0172052,Tonkotsu,19.25
+o0172052,Shoyu,18.15
+o0172053,Chashu Bao,9.35
+o0172053,Tonkotsu,19.25
+o0172054,Shoyu,18.15
+o0172054,Chicken Paitan,18.15
+o0172054,Karaage,9.9
+o0172055,Ramune,4.95
+o0172056,Spicy Miso,19.25
+o0172056,Spicy Miso,19.25
+o0172056,Spicy Miso,19.25
+o0172057,Shoyu,18.15
+o0172057,Ramune,4.95
+o0172058,Shoyu,18.15
+o0172058,Chashu Bao,9.35
+o0172059,Shoyu,16.5
+o0172059,Chashu Bao,8.5
+o0172060,Spicy Miso,17.5
+o0172061,Tonkotsu,19.25
+o0172061,Tantanmen,18.7
+o0172062,Tonkotsu,19.25
+o0172063,Shoyu,18.15
+o0172064,Tonkotsu,17.5
+o0172064,Tonkotsu,17.5
+o0172065,Karaage,9.9
+o0172065,Gyoza,8.8
+o0172065,Gyoza,8.8
+o0172065,Chicken Paitan,18.15
+o0172066,Spicy Miso,19.25
+o0172067,Tonkotsu,19.25
+o0172067,Chicken Paitan,18.15
+o0172067,Tantanmen,18.7
+o0172068,Tantanmen,17.0
+o0172068,Ramune,4.5
+o0172069,Spicy Miso,19.25
+o0172069,Chashu Don,15.4
+o0172069,Gyoza,8.8
+o0172070,Ramune,4.95
+o0172070,Edamame,6.6
+o0172070,Spicy Miso,19.25
+o0172071,Tonkotsu,19.25
+o0172072,Veggie Miso,17.05
+o0172072,Chashu Bao,9.35
+o0172073,Shoyu,16.5
+o0172074,Spicy Miso,19.25
+o0172074,Shoyu,18.15
+o0172074,Iced Green Tea,3.85
+o0172075,Tonkotsu,19.25
+o0172075,Edamame,6.6
+o0172075,Spicy Miso,19.25
+o0172075,Spicy Miso,19.25
+o0172075,Shoyu,18.15
+o0172076,Chashu Don,15.4
+o0172076,Spicy Miso,19.25
+o0172077,Edamame,6.6
+o0172077,Mochi Trio,7.15
+o0172078,Chashu Don,15.4
+o0172078,Edamame,6.6
+o0172078,Tonkotsu,19.25
+o0172079,Chicken Paitan,18.15
+o0172080,Tonkotsu,19.25
+o0172080,Takoyaki,9.35
+o0172081,Tonkotsu,19.25
+o0172082,Tonkotsu,19.25
+o0172082,Shoyu,18.15
+o0172083,Tonkotsu,17.5
+o0172083,Chicken Paitan,16.5
+o0172083,Tonkotsu,17.5
+o0172083,Tonkotsu,17.5
+o0172084,Mochi Trio,7.15
+o0172084,Spicy Miso,19.25
+o0172084,Chashu Don,15.4
+o0172084,Karaage,9.9
+o0172085,Spicy Miso,19.25
+o0172085,Karaage,9.9
+o0172086,Spicy Miso,19.25
+o0172086,Iced Green Tea,3.85
+o0172087,Tonkotsu,19.25
+o0172088,Chashu Don,15.4
+o0172089,Gyoza,8.8
+o0172089,Karaage,9.9
+o0172089,Gyoza,8.8
+o0172090,Karaage,9.9
+o0172090,Karaage,9.9
+o0172090,Shoyu,18.15
+o0172091,Chicken Paitan,16.5
+o0172092,Karaage,9.9
+o0172092,Chashu Don,15.4
+o0172093,Karaage,9.0
+o0172093,Tantanmen,17.0
+o0172094,Tonkotsu,17.5
+o0172094,Karaage,9.0
+o0172095,Shoyu,16.5
+o0172095,Shoyu,16.5
+o0172095,Takoyaki,8.5
+o0172096,Ramune,4.5
+o0172096,Tonkotsu,17.5
+o0172096,Iced Green Tea,3.5
+o0172097,Tonkotsu,19.25
+o0172098,Spicy Miso,19.25
+o0172099,Spicy Miso,19.25
+o0172099,Gyoza,8.8
+o0172099,Gyoza,8.8
+o0172100,Takoyaki,9.35
+o0172100,Tantanmen,18.7
+o0172101,Spicy Miso,19.25
+o0172102,Tonkotsu,17.5
+o0172102,Chicken Paitan,16.5
+o0172103,Tonkotsu,17.5
+o0172103,Shoyu,16.5
+o0172103,Mochi Trio,6.5
+o0172104,Veggie Miso,15.5
+o0172104,Tantanmen,17.0
+o0172105,Gyoza,8.8
+o0172105,Spicy Miso,19.25
+o0172106,Iced Green Tea,3.85
+o0172106,Spicy Miso,19.25
+o0172107,Ramune,4.95
+o0172107,Tonkotsu,19.25
+o0172108,Spicy Miso,19.25
+o0172108,Chashu Don,15.4
+o0172108,Shoyu,18.15
+o0172109,Ramune,4.95
+o0172109,Tonkotsu,19.25
+o0172110,Iced Green Tea,3.85
+o0172110,Gyoza,8.8
+o0172111,Spicy Miso,19.25
+o0172111,Chicken Paitan,18.15
+o0172111,Tantanmen,18.7
+o0172112,Spicy Miso,17.5
+o0172112,Spicy Miso,17.5
+o0172113,Ramune,4.95
+o0172113,Tonkotsu,19.25
+o0172114,Gyoza,8.8
+o0172114,Chicken Paitan,18.15
+o0172115,Veggie Miso,17.05
+o0172115,Tantanmen,18.7
+o0172116,Tantanmen,17.0
+o0172116,Chashu Don,14.0
+o0172116,Karaage,9.0
+o0172117,Gyoza,8.8
+o0172117,Tonkotsu,19.25
+o0172118,Chicken Paitan,16.5
+o0172119,Chicken Paitan,16.5
+o0172119,Veggie Miso,15.5
+o0172119,Ramune,4.5
+o0172119,Tantanmen,17.0
+o0172120,Karaage,9.0
+o0172121,Gyoza,8.0
+o0172121,Tonkotsu,17.5
+o0172121,Tantanmen,17.0
+o0172122,Spicy Miso,19.25
+o0172123,Spicy Miso,17.5
+o0172124,Tonkotsu,17.5
+o0172124,Tantanmen,17.0
+o0172125,Shoyu,18.15
+o0172126,Tonkotsu,17.5
+o0172126,Chashu Don,14.0
+o0172127,Tantanmen,18.7
+o0172127,Shoyu,18.15
+o0172128,Tonkotsu,17.5
+o0172128,Tonkotsu,17.5
+o0172128,Tonkotsu,17.5
+o0172128,Tantanmen,17.0
+o0172129,Shoyu,16.5
+o0172129,Spicy Miso,17.5
+o0172129,Tonkotsu,17.5
+o0172130,Chicken Paitan,16.5
+o0172130,Karaage,9.0
+o0172131,Iced Green Tea,3.85
+o0172131,Shoyu,18.15
+o0172132,Tonkotsu,19.25
+o0172132,Shoyu,18.15
+o0172132,Tantanmen,18.7
+o0172133,Tonkotsu,19.25
+o0172133,Spicy Miso,19.25
+o0172134,Spicy Miso,19.25
+o0172134,Tonkotsu,19.25
+o0172135,Shoyu,18.15
+o0172135,Gyoza,8.8
+o0172135,Tonkotsu,19.25
+o0172136,Karaage,9.0
+o0172136,Gyoza,8.0
+o0172136,Tonkotsu,17.5
+o0172137,Karaage,9.9
+o0172137,Tantanmen,18.7
+o0172137,Spicy Miso,19.25
+o0172137,Spicy Miso,19.25
+o0172138,Gyoza,8.8
+o0172138,Gyoza,8.8
+o0172139,Edamame,6.6
+o0172139,Karaage,9.9
+o0172139,Spicy Miso,19.25
+o0172140,Chashu Bao,9.35
+o0172140,Gyoza,8.8
+o0172140,Edamame,6.6
+o0172141,Chashu Bao,9.35
+o0172141,Tonkotsu,19.25
+o0172142,Gyoza,8.0
+o0172142,Takoyaki,8.5
+o0172142,Spicy Miso,17.5
+o0172143,Tonkotsu,19.25
+o0172143,Tonkotsu,19.25
+o0172143,Mochi Trio,7.15
+o0172144,Tantanmen,17.0
+o0172144,Veggie Miso,15.5
+o0172144,Karaage,9.0
+o0172144,Spicy Miso,17.5
+o0172145,Karaage,9.9
+o0172145,Veggie Miso,17.05
+o0172146,Karaage,9.9
+o0172146,Edamame,6.6
+o0172146,Chicken Paitan,18.15
+o0172147,Chicken Paitan,18.15
+o0172147,Ramune,4.95
+o0172147,Spicy Miso,19.25
+o0172148,Veggie Miso,17.05
+o0172149,Chicken Paitan,18.15
+o0172149,Tonkotsu,19.25
+o0172150,Gyoza,8.8
+o0172150,Tonkotsu,19.25
+o0172151,Chicken Paitan,16.5
+o0172152,Gyoza,8.0
+o0172152,Mochi Trio,6.5
+o0172153,Tonkotsu,19.25
+o0172154,Tonkotsu,17.5
+o0172154,Chashu Don,14.0
+o0172155,Takoyaki,8.5
+o0172155,Spicy Miso,17.5
+o0172155,Tonkotsu,17.5
+o0172155,Mochi Trio,6.5
+o0172156,Tonkotsu,17.5
+o0172156,Tantanmen,17.0
+o0172157,Veggie Miso,17.05
+o0172157,Edamame,6.6
+o0172158,Tantanmen,18.7
+o0172158,Tonkotsu,19.25
+o0172159,Gyoza,8.8
+o0172160,Mochi Trio,6.5
+o0172160,Chashu Don,14.0
+o0172160,Mochi Trio,6.5
+o0172160,Chicken Paitan,16.5
+o0172161,Karaage,9.9
+o0172161,Chashu Don,15.4
+o0172161,Tantanmen,18.7
+o0172162,Ramune,4.5
+o0172162,Ramune,4.5
+o0172162,Shoyu,16.5
+o0172163,Chashu Don,14.0
+o0172164,Tantanmen,17.0
+o0172164,Edamame,6.0
+o0172164,Ramune,4.5
+o0172165,Tantanmen,18.7
+o0172165,Spicy Miso,19.25
+o0172166,Karaage,9.9
+o0172166,Chicken Paitan,18.15
+o0172167,Gyoza,8.0
+o0172167,Gyoza,8.0
+o0172167,Spicy Miso,17.5
+o0172168,Chashu Don,15.4
+o0172169,Chicken Paitan,18.15
+o0172169,Karaage,9.9
+o0172170,Tantanmen,18.7
+o0172170,Ramune,4.95
+o0172171,Tonkotsu,17.5
+o0172171,Veggie Miso,15.5
+o0172171,Karaage,9.0
+o0172171,Tantanmen,17.0
+o0172172,Karaage,9.0
+o0172173,Tonkotsu,19.25
+o0172173,Iced Green Tea,3.85
+o0172173,Spicy Miso,19.25
+o0172174,Karaage,9.9
+o0172174,Tonkotsu,19.25
+o0172175,Spicy Miso,17.5
+o0172175,Tonkotsu,17.5
+o0172175,Tonkotsu,17.5
+o0172175,Spicy Miso,17.5
+o0172176,Tantanmen,17.0
+o0172177,Tonkotsu,19.25
+o0172177,Chashu Bao,9.35
+o0172178,Veggie Miso,17.05
+o0172179,Chicken Paitan,18.15
+o0172179,Veggie Miso,17.05
+o0172180,Tonkotsu,17.5
+o0172180,Shoyu,16.5
+o0172180,Shoyu,16.5
+o0172181,Chashu Bao,8.5
+o0172181,Tonkotsu,17.5
+o0172181,Tantanmen,17.0
+o0172182,Chashu Don,14.0
+o0172182,Spicy Miso,17.5
+o0172183,Spicy Miso,17.5
+o0172183,Tonkotsu,17.5
+o0172183,Tantanmen,17.0
+o0172184,Tonkotsu,17.5
+o0172184,Spicy Miso,17.5
+o0172185,Edamame,6.0
+o0172185,Chicken Paitan,16.5
+o0172185,Chashu Bao,8.5
+o0172185,Tonkotsu,17.5
+o0172186,Shoyu,16.5
+o0172187,Spicy Miso,19.25
+o0172187,Mochi Trio,7.15
+o0172188,Karaage,9.0
+o0172188,Mochi Trio,6.5
+o0172188,Sapporo,7.0
+o0172188,Spicy Miso,17.5
+o0172189,Chicken Paitan,18.15
+o0172189,Takoyaki,9.35
+o0172190,Spicy Miso,19.25
+o0172190,Spicy Miso,19.25
+o0172191,Chashu Bao,9.35
+o0172191,Edamame,6.6
+o0172191,Tonkotsu,19.25
+o0172192,Tonkotsu,17.5
+o0172193,Chashu Don,14.0
+o0172193,Ramune,4.5
+o0172193,Tonkotsu,17.5
+o0172194,Tantanmen,18.7
+o0172195,Karaage,9.9
+o0172195,Chashu Don,15.4
+o0172195,Karaage,9.9
+o0172196,Chashu Bao,9.35
+o0172196,Spicy Miso,19.25
+o0172197,Tonkotsu,19.25
+o0172197,Ramune,4.95
+o0172198,Chashu Don,15.4
+o0172198,Spicy Miso,19.25
+o0172198,Gyoza,8.8
+o0172198,Spicy Miso,19.25
+o0172199,Chashu Don,14.0
+o0172199,Tantanmen,17.0
+o0172199,Chashu Bao,8.5
+o0172200,Chicken Paitan,18.15
+o0172200,Edamame,6.6
+o0172201,Gyoza,8.8
+o0172201,Tonkotsu,19.25
+o0172202,Sapporo,7.0
+o0172202,Gyoza,8.0
+o0172202,Chicken Paitan,16.5
+o0172203,Chicken Paitan,16.5
+o0172204,Iced Green Tea,3.85
+o0172204,Shoyu,18.15
+o0172205,Chashu Bao,8.5
+o0172205,Sapporo,7.0
+o0172205,Tonkotsu,17.5
+o0172206,Veggie Miso,17.05
+o0172207,Iced Green Tea,3.85
+o0172207,Gyoza,8.8
+o0172207,Spicy Miso,19.25
+o0172208,Shoyu,18.15
+o0172208,Chicken Paitan,18.15
+o0172208,Chicken Paitan,18.15
+o0172209,Tonkotsu,19.25
+o0172209,Gyoza,8.8
+o0172210,Gyoza,8.8
+o0172210,Spicy Miso,19.25
+o0172211,Karaage,9.9
+o0172211,Chicken Paitan,18.15
+o0172211,Tonkotsu,19.25
+o0172212,Tonkotsu,17.5
+o0172212,Gyoza,8.0
+o0172212,Chashu Don,14.0
+o0172213,Iced Green Tea,3.85
+o0172213,Tonkotsu,19.25
+o0172214,Shoyu,18.15
+o0172214,Tonkotsu,19.25
+o0172215,Tantanmen,18.7
+o0172215,Chashu Bao,9.35
+o0172215,Spicy Miso,19.25
+o0172216,Ramune,4.5
+o0172216,Tonkotsu,17.5
+o0172216,Tantanmen,17.0
+o0172217,Tonkotsu,17.5
+o0172217,Shoyu,16.5
+o0172217,Spicy Miso,17.5
+o0172218,Tantanmen,17.0
+o0172218,Mochi Trio,6.5
+o0172219,Chicken Paitan,18.15
+o0172219,Shoyu,18.15
+o0172220,Tonkotsu,19.25
+o0172220,Karaage,9.9
+o0172221,Chashu Bao,9.35
+o0172221,Chicken Paitan,18.15
+o0172222,Veggie Miso,17.05
+o0172222,Tonkotsu,19.25
+o0172222,Spicy Miso,19.25
+o0172223,Iced Green Tea,3.85
+o0172223,Shoyu,18.15
+o0172224,Shoyu,18.15
+o0172224,Edamame,6.6
+o0172224,Spicy Miso,19.25
+o0172224,Iced Green Tea,3.85
+o0172224,Karaage,9.9
+o0172225,Ramune,4.95
+o0172225,Chashu Bao,9.35
+o0172225,Spicy Miso,19.25
+o0172225,Ramune,4.95
+o0172226,Gyoza,8.8
+o0172226,Spicy Miso,19.25
+o0172226,Gyoza,8.8
+o0172226,Chicken Paitan,18.15
+o0172227,Shoyu,16.5
+o0172228,Karaage,9.9
+o0172228,Spicy Miso,19.25
+o0172229,Spicy Miso,19.25
+o0172230,Karaage,9.9
+o0172230,Chashu Don,15.4
+o0172231,Veggie Miso,15.5
+o0172231,Mochi Trio,6.5
+o0172232,Spicy Miso,19.25
+o0172232,Chashu Don,15.4
+o0172232,Tonkotsu,19.25
+o0172232,Tantanmen,18.7
+o0172233,Spicy Miso,19.25
+o0172233,Ramune,4.95
+o0172233,Tonkotsu,19.25
+o0172234,Spicy Miso,17.5
+o0172235,Karaage,9.0
+o0172235,Edamame,6.0
+o0172236,Chashu Don,14.0
+o0172236,Edamame,6.0
+o0172237,Tantanmen,17.0
+o0172237,Spicy Miso,17.5
+o0172237,Chashu Don,14.0
+o0172238,Edamame,6.0
+o0172238,Tonkotsu,17.5
+o0172239,Spicy Miso,17.5
+o0172239,Tonkotsu,17.5
+o0172240,Spicy Miso,19.25
+o0172241,Spicy Miso,19.25
+o0172241,Veggie Miso,17.05
+o0172242,Ramune,4.5
+o0172242,Tonkotsu,17.5
+o0172243,Mochi Trio,7.15
+o0172243,Takoyaki,9.35
+o0172243,Tonkotsu,19.25
+o0172244,Mochi Trio,6.5
+o0172244,Tonkotsu,17.5
+o0172244,Gyoza,8.0
+o0172244,Takoyaki,8.5
+o0172245,Gyoza,8.8
+o0172245,Tonkotsu,19.25
+o0172245,Spicy Miso,19.25
+o0172246,Karaage,9.9
+o0172246,Spicy Miso,19.25
+o0172247,Veggie Miso,17.05
+o0172247,Takoyaki,9.35
+o0172247,Ramune,4.95
+o0172248,Chicken Paitan,16.5
+o0172249,Tonkotsu,19.25
+o0172249,Spicy Miso,19.25
+o0172249,Tonkotsu,19.25
+o0172249,Tonkotsu,19.25
+o0172250,Gyoza,8.8
+o0172250,Ramune,4.95
+o0172250,Tonkotsu,19.25
+o0172250,Spicy Miso,19.25
+o0172250,Iced Green Tea,3.85
+o0172251,Spicy Miso,17.5
+o0172252,Shoyu,16.5
+o0172253,Iced Green Tea,3.85
+o0172253,Veggie Miso,17.05
+o0172254,Chicken Paitan,18.15
+o0172254,Iced Green Tea,3.85
+o0172254,Gyoza,8.8
+o0172254,Chicken Paitan,18.15
+o0172254,Spicy Miso,19.25
+o0172255,Spicy Miso,19.25
+o0172255,Ramune,4.95
+o0172255,Veggie Miso,17.05
+o0172255,Karaage,9.9
+o0172256,Chicken Paitan,18.15
+o0172256,Chashu Don,15.4
+o0172257,Mochi Trio,7.15
+o0172257,Shoyu,18.15
+o0172258,Tantanmen,18.7
+o0172258,Shoyu,18.15
+o0172258,Takoyaki,9.35
+o0172259,Gyoza,8.8
+o0172259,Tonkotsu,19.25
+o0172260,Tonkotsu,19.25
+o0172260,Tonkotsu,19.25
+o0172261,Chashu Bao,9.35
+o0172261,Ramune,4.95
+o0172261,Gyoza,8.8
+o0172262,Chicken Paitan,16.5
+o0172262,Spicy Miso,17.5
+o0172262,Tonkotsu,17.5
+o0172262,Takoyaki,8.5
+o0172263,Chashu Bao,9.35
+o0172263,Spicy Miso,19.25
+o0172263,Tantanmen,18.7
+o0172263,Chicken Paitan,18.15
+o0172264,Shoyu,18.15
+o0172264,Edamame,6.6
+o0172265,Karaage,9.9
+o0172265,Karaage,9.9
+o0172265,Gyoza,8.8
+o0172265,Tonkotsu,19.25
+o0172266,Takoyaki,9.35
+o0172266,Spicy Miso,19.25
+o0172267,Tonkotsu,19.25
+o0172267,Tantanmen,18.7
+o0172267,Gyoza,8.8
+o0172267,Edamame,6.6
+o0172268,Edamame,6.6
+o0172268,Chicken Paitan,18.15
+o0172268,Spicy Miso,19.25
+o0172269,Edamame,6.0
+o0172269,Chashu Don,14.0
+o0172269,Chicken Paitan,16.5
+o0172270,Spicy Miso,17.5
+o0172270,Chashu Bao,8.5
+o0172271,Chicken Paitan,18.15
+o0172272,Chicken Paitan,18.15
+o0172272,Chicken Paitan,18.15
+o0172272,Edamame,6.6
+o0172272,Edamame,6.6
+o0172273,Gyoza,8.8
+o0172273,Gyoza,8.8
+o0172273,Gyoza,8.8
+o0172273,Tonkotsu,19.25
+o0172274,Spicy Miso,19.25
+o0172275,Shoyu,18.15
+o0172275,Chashu Don,15.4
+o0172275,Karaage,9.9
+o0172275,Edamame,6.6
+o0172276,Tonkotsu,19.25
+o0172277,Shoyu,16.5
+o0172277,Chashu Don,14.0
+o0172278,Iced Green Tea,3.85
+o0172278,Shoyu,18.15
+o0172278,Shoyu,18.15
+o0172279,Gyoza,8.8
+o0172279,Ramune,4.95
+o0172279,Shoyu,18.15
+o0172280,Tonkotsu,17.5
+o0172281,Iced Green Tea,3.85
+o0172281,Chicken Paitan,18.15
+o0172281,Tantanmen,18.7
+o0172282,Spicy Miso,19.25
+o0172282,Tonkotsu,19.25
+o0172283,Spicy Miso,17.5
+o0172283,Spicy Miso,17.5
+o0172284,Gyoza,8.8
+o0172284,Veggie Miso,17.05
+o0172285,Gyoza,8.0
+o0172285,Veggie Miso,15.5
+o0172285,Spicy Miso,17.5
+o0172286,Shoyu,18.15
+o0172287,Edamame,6.0
+o0172287,Tonkotsu,17.5
+o0172288,Chashu Bao,8.5
+o0172288,Spicy Miso,17.5
+o0172288,Gyoza,8.0
+o0172288,Mochi Trio,6.5
+o0172288,Spicy Miso,17.5
+o0172289,Tonkotsu,19.25
+o0172289,Chashu Bao,9.35
+o0172289,Tantanmen,18.7
+o0172290,Takoyaki,9.35
+o0172290,Veggie Miso,17.05
+o0172290,Tantanmen,18.7
+o0172291,Tonkotsu,19.25
+o0172291,Chashu Bao,9.35
+o0172291,Chashu Bao,9.35
+o0172291,Shoyu,18.15
+o0172292,Shoyu,16.5
+o0172292,Spicy Miso,17.5
+o0172292,Spicy Miso,17.5
+o0172293,Chashu Bao,8.5
+o0172293,Sapporo,7.0
+o0172293,Spicy Miso,17.5
+o0172293,Tonkotsu,17.5
+o0172293,Gyoza,8.0
+o0172294,Tantanmen,17.0
+o0172294,Takoyaki,8.5
+o0172295,Veggie Miso,17.05
+o0172296,Spicy Miso,19.25
+o0172297,Spicy Miso,19.25
+o0172298,Mochi Trio,7.15
+o0172298,Spicy Miso,19.25
+o0172299,Veggie Miso,17.05
+o0172299,Takoyaki,9.35
+o0172299,Tonkotsu,19.25
+o0172300,Mochi Trio,6.5
+o0172300,Tantanmen,17.0
+o0172300,Tantanmen,17.0
+o0172300,Chicken Paitan,16.5
+o0172301,Tonkotsu,19.25
+o0172301,Spicy Miso,19.25
+o0172301,Mochi Trio,7.15
+o0172302,Gyoza,8.0
+o0172303,Iced Green Tea,3.5
+o0172303,Shoyu,16.5
+o0172304,Sapporo,7.0
+o0172305,Chicken Paitan,16.5
+o0172305,Tonkotsu,17.5
+o0172305,Karaage,9.0
+o0172306,Chashu Bao,8.5
+o0172306,Tonkotsu,17.5
+o0172307,Tonkotsu,17.5
+o0172307,Chashu Don,14.0
+o0172307,Chashu Don,14.0
+o0172308,Chashu Bao,9.35
+o0172308,Gyoza,8.8
+o0172308,Shoyu,18.15
+o0172309,Karaage,9.0
+o0172309,Gyoza,8.0
+o0172309,Tonkotsu,17.5
+o0172310,Chashu Don,14.0
+o0172310,Karaage,9.0
+o0172311,Tantanmen,17.0
+o0172312,Chicken Paitan,16.5
+o0172313,Karaage,9.9
+o0172314,Ramune,4.5
+o0172314,Chicken Paitan,16.5
+o0172315,Tantanmen,18.7
+o0172316,Tonkotsu,19.25
+o0172316,Tonkotsu,19.25
+o0172317,Chashu Don,14.0
+o0172317,Veggie Miso,15.5
+o0172317,Spicy Miso,17.5
+o0172318,Karaage,9.0
+o0172318,Tonkotsu,17.5
+o0172319,Chashu Bao,9.35
+o0172319,Tonkotsu,19.25
+o0172319,Spicy Miso,19.25
+o0172320,Spicy Miso,17.5
+o0172320,Gyoza,8.0
+o0172320,Edamame,6.0
+o0172320,Mochi Trio,6.5
+o0172321,Tonkotsu,19.25
+o0172321,Gyoza,8.8
+o0172321,Spicy Miso,19.25
+o0172322,Tonkotsu,19.25
+o0172322,Tantanmen,18.7
+o0172323,Tonkotsu,19.25
+o0172324,Chashu Don,15.4
+o0172324,Edamame,6.6
+o0172324,Ramune,4.95
+o0172325,Karaage,9.0
+o0172326,Ramune,4.95
+o0172326,Spicy Miso,19.25
+o0172327,Tonkotsu,19.25
+o0172328,Shoyu,18.15
+o0172329,Tonkotsu,17.5
+o0172330,Chashu Don,15.4
+o0172330,Edamame,6.6
+o0172331,Tonkotsu,19.25
+o0172331,Tantanmen,18.7
+o0172331,Spicy Miso,19.25
+o0172332,Chicken Paitan,18.15
+o0172332,Chashu Bao,9.35
+o0172333,Tantanmen,18.7
+o0172334,Spicy Miso,19.25
+o0172335,Tonkotsu,17.5
+o0172335,Chicken Paitan,16.5
+o0172336,Tonkotsu,17.5
+o0172336,Tonkotsu,17.5
+o0172337,Tonkotsu,19.25
+o0172338,Tonkotsu,17.5
+o0172338,Chicken Paitan,16.5
+o0172339,Chashu Don,15.4
+o0172340,Tonkotsu,19.25
+o0172341,Tonkotsu,19.25
+o0172341,Karaage,9.9
+o0172341,Chicken Paitan,18.15
+o0172341,Tonkotsu,19.25
+o0172342,Spicy Miso,19.25
+o0172343,Chicken Paitan,18.15
+o0172343,Spicy Miso,19.25
+o0172344,Tonkotsu,19.25
+o0172344,Chashu Bao,9.35
+o0172344,Chashu Don,15.4
+o0172345,Tonkotsu,19.25
+o0172345,Chashu Bao,9.35
+o0172346,Tonkotsu,19.25
+o0172346,Tonkotsu,19.25
+o0172347,Shoyu,16.5
+o0172347,Veggie Miso,15.5
+o0172348,Spicy Miso,19.25
+o0172348,Iced Green Tea,3.85
+o0172348,Gyoza,8.8
+o0172348,Iced Green Tea,3.85
+o0172349,Shoyu,18.15
+o0172350,Chicken Paitan,18.15
+o0172350,Tonkotsu,19.25
+o0172351,Chashu Bao,9.35
+o0172351,Spicy Miso,19.25
+o0172352,Spicy Miso,19.25
+o0172352,Ramune,4.95
+o0172352,Chashu Don,15.4
+o0172353,Veggie Miso,17.05
+o0172353,Chicken Paitan,18.15
+o0172354,Shoyu,16.5
+o0172354,Spicy Miso,17.5
+o0172354,Sapporo,7.0
+o0172355,Chicken Paitan,18.15
+o0172355,Tonkotsu,19.25
+o0172355,Shoyu,18.15
+o0172356,Tantanmen,18.7
+o0172357,Gyoza,8.0
+o0172357,Ramune,4.5
+o0172357,Tantanmen,17.0
+o0172358,Veggie Miso,15.5
+o0172358,Tonkotsu,17.5
+o0172358,Takoyaki,8.5
+o0172359,Iced Green Tea,3.85
+o0172359,Takoyaki,9.35
+o0172359,Shoyu,18.15
+o0172360,Spicy Miso,17.5
+o0172360,Gyoza,8.0
+o0172361,Edamame,6.6
+o0172361,Tonkotsu,19.25
+o0172362,Veggie Miso,17.05
+o0172362,Chicken Paitan,18.15
+o0172362,Veggie Miso,17.05
+o0172363,Shoyu,18.15
+o0172363,Tantanmen,18.7
+o0172363,Tonkotsu,19.25
+o0172363,Ramune,4.95
+o0172364,Chicken Paitan,16.5
+o0172364,Gyoza,8.0
+o0172364,Ramune,4.5
+o0172364,Tonkotsu,17.5
+o0172364,Shoyu,16.5
+o0172365,Spicy Miso,19.25
+o0172365,Spicy Miso,19.25
+o0172366,Tantanmen,17.0
+o0172366,Takoyaki,8.5
+o0172366,Shoyu,16.5
+o0172367,Spicy Miso,19.25
+o0172368,Takoyaki,9.35
+o0172368,Veggie Miso,17.05
+o0172369,Tonkotsu,19.25
+o0172370,Iced Green Tea,3.5
+o0172370,Edamame,6.0
+o0172370,Tonkotsu,17.5
+o0172371,Iced Green Tea,3.85
+o0172371,Gyoza,8.8
+o0172372,Spicy Miso,17.5
+o0172372,Tonkotsu,17.5
+o0172373,Ramune,4.5
+o0172374,Tonkotsu,17.5
+o0172374,Chicken Paitan,16.5
+o0172374,Veggie Miso,15.5
+o0172375,Chicken Paitan,16.5
+o0172376,Ramune,4.5
+o0172376,Spicy Miso,17.5
+o0172377,Karaage,9.9
+o0172377,Chashu Don,15.4
+o0172378,Tonkotsu,19.25
+o0172378,Chicken Paitan,18.15
+o0172378,Chicken Paitan,18.15
+o0172378,Spicy Miso,19.25
+o0172379,Tonkotsu,19.25
+o0172379,Tonkotsu,19.25
+o0172379,Gyoza,8.8
+o0172380,Tantanmen,18.7
+o0172381,Spicy Miso,19.25
+o0172382,Tonkotsu,19.25
+o0172382,Edamame,6.6
+o0172382,Spicy Miso,19.25
+o0172382,Tonkotsu,19.25
+o0172383,Tonkotsu,19.25
+o0172384,Spicy Miso,17.5
+o0172384,Spicy Miso,17.5
+o0172384,Tonkotsu,17.5
+o0172385,Chicken Paitan,18.15
+o0172385,Tantanmen,18.7
+o0172386,Chashu Bao,9.35
+o0172386,Gyoza,8.8
+o0172386,Tonkotsu,19.25
+o0172387,Veggie Miso,17.05
+o0172388,Veggie Miso,15.5
+o0172389,Shoyu,16.5
+o0172390,Spicy Miso,19.25
+o0172390,Karaage,9.9
+o0172390,Shoyu,18.15
+o0172390,Tonkotsu,19.25
+o0172390,Gyoza,8.8
+o0172391,Takoyaki,9.35
+o0172392,Tantanmen,18.7
+o0172393,Iced Green Tea,3.85
+o0172393,Chashu Don,15.4
+o0172394,Tonkotsu,19.25
+o0172395,Tonkotsu,17.5
+o0172395,Tonkotsu,17.5
+o0172395,Tonkotsu,17.5
+o0172396,Chicken Paitan,16.5
+o0172397,Karaage,9.9
+o0172397,Tonkotsu,19.25
+o0172398,Karaage,9.9
+o0172398,Tonkotsu,19.25
+o0172399,Edamame,6.0
+o0172399,Tantanmen,17.0
+o0172399,Tonkotsu,17.5
+o0172400,Gyoza,8.0
+o0172400,Spicy Miso,17.5
+o0172400,Ramune,4.5
+o0172401,Gyoza,8.0
+o0172401,Chicken Paitan,16.5
+o0172401,Tonkotsu,17.5
+o0172401,Chashu Bao,8.5
+o0172402,Tonkotsu,19.25
+o0172402,Chicken Paitan,18.15
+o0172403,Karaage,9.0
+o0172403,Spicy Miso,17.5
+o0172403,Ramune,4.5
+o0172404,Karaage,9.0
+o0172404,Tantanmen,17.0
+o0172405,Takoyaki,9.35
+o0172405,Tonkotsu,19.25
+o0172406,Chashu Don,15.4
+o0172407,Shoyu,18.15
+o0172407,Veggie Miso,17.05
+o0172407,Chicken Paitan,18.15
+o0172408,Spicy Miso,17.5
+o0172408,Chashu Don,14.0
+o0172409,Chicken Paitan,18.15
+o0172409,Chashu Don,15.4
+o0172410,Chicken Paitan,18.15
+o0172410,Karaage,9.9
+o0172411,Veggie Miso,17.05
+o0172411,Tantanmen,18.7
+o0172411,Chashu Don,15.4
+o0172411,Tonkotsu,19.25
+o0172411,Spicy Miso,19.25
+o0172412,Edamame,6.0
+o0172412,Gyoza,8.0
+o0172412,Spicy Miso,17.5
+o0172412,Gyoza,8.0
+o0172413,Chicken Paitan,18.15
+o0172413,Tantanmen,18.7
+o0172414,Veggie Miso,17.05
+o0172415,Tonkotsu,19.25
+o0172416,Spicy Miso,19.25
+o0172417,Edamame,6.0
+o0172418,Veggie Miso,17.05
+o0172418,Gyoza,8.8
+o0172418,Spicy Miso,19.25
+o0172418,Edamame,6.6
+o0172419,Gyoza,8.8
+o0172419,Chashu Don,15.4
+o0172419,Veggie Miso,17.05
+o0172420,Tantanmen,18.7
+o0172420,Chashu Bao,9.35
+o0172421,Shoyu,18.15
+o0172421,Chicken Paitan,18.15
+o0172422,Shoyu,18.15
+o0172422,Edamame,6.6
+o0172423,Takoyaki,9.35
+o0172423,Chicken Paitan,18.15
+o0172424,Shoyu,18.15
+o0172424,Chashu Don,15.4
+o0172424,Tantanmen,18.7
+o0172425,Karaage,9.0
+o0172425,Shoyu,16.5
+o0172426,Iced Green Tea,3.5
+o0172426,Chashu Bao,8.5
+o0172426,Chashu Don,14.0
+o0172426,Karaage,9.0
+o0172427,Spicy Miso,17.5
+o0172427,Karaage,9.0
+o0172428,Veggie Miso,17.05
+o0172428,Takoyaki,9.35
+o0172429,Chicken Paitan,16.5
+o0172429,Tantanmen,17.0
+o0172430,Gyoza,8.0
+o0172430,Tantanmen,17.0
+o0172430,Tonkotsu,17.5
+o0172430,Chicken Paitan,16.5
+o0172431,Tonkotsu,19.25
+o0172431,Tonkotsu,19.25
+o0172432,Chashu Don,15.4
+o0172432,Karaage,9.9
+o0172433,Sapporo,7.0
+o0172433,Tonkotsu,17.5
+o0172434,Gyoza,8.0
+o0172434,Takoyaki,8.5
+o0172434,Tantanmen,17.0
+o0172435,Karaage,9.0
+o0172435,Chashu Don,14.0
+o0172435,Karaage,9.0
+o0172435,Chashu Don,14.0
+o0172435,Ramune,4.5
+o0172435,Veggie Miso,15.5
+o0172436,Chashu Bao,9.35
+o0172436,Tonkotsu,19.25
+o0172437,Tonkotsu,19.25
+o0172437,Chicken Paitan,18.15
+o0172438,Chashu Bao,9.35
+o0172438,Tonkotsu,19.25
+o0172438,Spicy Miso,19.25
+o0172439,Tantanmen,17.0
+o0172439,Edamame,6.0
+o0172439,Chashu Don,14.0
+o0172439,Spicy Miso,17.5
+o0172440,Tantanmen,18.7
+o0172440,Tonkotsu,19.25
+o0172440,Edamame,6.6
+o0172441,Sapporo,7.0
+o0172441,Tonkotsu,17.5
+o0172442,Shoyu,18.15
+o0172442,Gyoza,8.8
+o0172442,Shoyu,18.15
+o0172443,Chicken Paitan,16.5
+o0172443,Spicy Miso,17.5
+o0172444,Mochi Trio,7.15
+o0172445,Ramune,4.95
+o0172445,Veggie Miso,17.05
+o0172446,Tonkotsu,19.25
+o0172447,Spicy Miso,17.5
+o0172447,Edamame,6.0
+o0172448,Shoyu,16.5
+o0172448,Chashu Don,14.0
+o0172448,Takoyaki,8.5
+o0172448,Gyoza,8.0
+o0172448,Karaage,9.0
+o0172449,Shoyu,16.5
+o0172450,Iced Green Tea,3.85
+o0172450,Edamame,6.6
+o0172450,Tantanmen,18.7
+o0172451,Tantanmen,17.0
+o0172452,Tantanmen,18.7
+o0172452,Veggie Miso,17.05
+o0172453,Chicken Paitan,18.15
+o0172453,Tonkotsu,19.25
+o0172453,Chicken Paitan,18.15
+o0172453,Spicy Miso,19.25
+o0172454,Chashu Bao,9.35
+o0172454,Spicy Miso,19.25
+o0172455,Edamame,6.6
+o0172455,Chicken Paitan,18.15
+o0172456,Karaage,9.0
+o0172456,Shoyu,16.5
+o0172457,Tonkotsu,17.5
+o0172457,Spicy Miso,17.5
+o0172458,Gyoza,8.0
+o0172458,Chashu Don,14.0
+o0172459,Veggie Miso,17.05
+o0172460,Mochi Trio,6.5
+o0172460,Tonkotsu,17.5
+o0172461,Tonkotsu,19.25
+o0172462,Takoyaki,9.35
+o0172462,Tonkotsu,19.25
+o0172462,Veggie Miso,17.05
+o0172462,Veggie Miso,17.05
+o0172463,Chashu Don,15.4
+o0172464,Tonkotsu,19.25
+o0172464,Karaage,9.9
+o0172464,Mochi Trio,7.15
+o0172464,Shoyu,18.15
+o0172465,Shoyu,16.5
+o0172466,Ramune,4.95
+o0172466,Iced Green Tea,3.85
+o0172466,Spicy Miso,19.25
+o0172467,Karaage,9.9
+o0172467,Karaage,9.9
+o0172467,Tonkotsu,19.25
+o0172468,Iced Green Tea,3.85
+o0172468,Tonkotsu,19.25
+o0172468,Tantanmen,18.7
+o0172469,Gyoza,8.0
+o0172469,Veggie Miso,15.5
+o0172469,Karaage,9.0
+o0172470,Gyoza,8.0
+o0172471,Tonkotsu,19.25
+o0172471,Tonkotsu,19.25
+o0172471,Tantanmen,18.7
+o0172471,Tonkotsu,19.25
+o0172472,Shoyu,18.15
+o0172472,Chicken Paitan,18.15
+o0172473,Chashu Don,15.4
+o0172474,Spicy Miso,19.25
+o0172474,Gyoza,8.8
+o0172475,Mochi Trio,7.15
+o0172475,Gyoza,8.8
+o0172475,Chashu Don,15.4
+o0172476,Tonkotsu,19.25
+o0172476,Tonkotsu,19.25
+o0172476,Tantanmen,18.7
+o0172477,Chicken Paitan,16.5
+o0172478,Shoyu,16.5
+o0172479,Gyoza,8.8
+o0172479,Tonkotsu,19.25
+o0172480,Shoyu,18.15
+o0172480,Shoyu,18.15
+o0172481,Tonkotsu,19.25
+o0172481,Spicy Miso,19.25
+o0172481,Tonkotsu,19.25
+o0172482,Gyoza,8.8
+o0172482,Karaage,9.9
+o0172482,Tonkotsu,19.25
+o0172483,Ramune,4.95
+o0172483,Spicy Miso,19.25
+o0172484,Tantanmen,17.0
+o0172484,Tonkotsu,17.5
+o0172484,Tonkotsu,17.5
+o0172485,Gyoza,8.0
+o0172485,Gyoza,8.0
+o0172486,Iced Green Tea,3.85
+o0172486,Gyoza,8.8
+o0172486,Tonkotsu,19.25
+o0172487,Chashu Don,15.4
+o0172487,Chashu Don,15.4
+o0172488,Tantanmen,17.0
+o0172489,Shoyu,16.5
+o0172489,Chicken Paitan,16.5
+o0172490,Spicy Miso,19.25
+o0172490,Karaage,9.9
+o0172491,Shoyu,18.15
+o0172492,Ramune,4.5
+o0172492,Shoyu,16.5
+o0172492,Chicken Paitan,16.5
+o0172493,Tantanmen,17.0
+o0172493,Chashu Don,14.0
+o0172494,Chashu Don,15.4
+o0172495,Chicken Paitan,18.15
+o0172496,Tonkotsu,19.25
+o0172496,Spicy Miso,19.25
+o0172496,Chicken Paitan,18.15
+o0172496,Spicy Miso,19.25
+o0172497,Spicy Miso,17.5
+o0172498,Edamame,6.6
+o0172498,Chicken Paitan,18.15
+o0172498,Shoyu,18.15
+o0172499,Iced Green Tea,3.5
+o0172499,Chicken Paitan,16.5
+o0172499,Tonkotsu,17.5
+o0172500,Edamame,6.6
+o0172500,Ramune,4.95
+o0172500,Tantanmen,18.7
+o0172501,Chicken Paitan,16.5
+o0172501,Gyoza,8.0
+o0172501,Karaage,9.0
+o0172501,Tantanmen,17.0
+o0172502,Chashu Bao,9.35
+o0172502,Chashu Don,15.4
+o0172503,Tonkotsu,17.5
+o0172503,Chicken Paitan,16.5
+o0172503,Chicken Paitan,16.5
+o0172503,Tonkotsu,17.5
+o0172504,Chashu Don,15.4
+o0172505,Veggie Miso,17.05
+o0172506,Shoyu,18.15
+o0172507,Tantanmen,18.7
+o0172507,Veggie Miso,17.05
+o0172508,Ramune,4.95
+o0172508,Ramune,4.95
+o0172508,Spicy Miso,19.25
+o0172509,Ramune,4.95
+o0172510,Spicy Miso,19.25
+o0172511,Spicy Miso,17.5
+o0172511,Spicy Miso,17.5
+o0172512,Spicy Miso,19.25
+o0172512,Shoyu,18.15
+o0172512,Edamame,6.6
+o0172513,Tonkotsu,19.25
+o0172514,Ramune,4.5
+o0172514,Mochi Trio,6.5
+o0172514,Tonkotsu,17.5
+o0172515,Tonkotsu,19.25
+o0172515,Shoyu,18.15
+o0172516,Edamame,6.6
+o0172516,Spicy Miso,19.25
+o0172517,Chicken Paitan,18.15
+o0172518,Shoyu,16.5
+o0172519,Tantanmen,18.7
+o0172520,Tonkotsu,19.25
+o0172521,Shoyu,18.15
+o0172522,Ramune,4.95
+o0172522,Chashu Don,15.4
+o0172522,Edamame,6.6
+o0172523,Gyoza,8.0
+o0172523,Chashu Don,14.0
+o0172523,Spicy Miso,17.5
+o0172524,Iced Green Tea,3.5
+o0172524,Ramune,4.5
+o0172524,Tonkotsu,17.5
+o0172525,Karaage,9.9
+o0172525,Tonkotsu,19.25
+o0172526,Spicy Miso,19.25
+o0172526,Spicy Miso,19.25
+o0172527,Gyoza,8.8
+o0172527,Ramune,4.95
+o0172527,Karaage,9.9
+o0172527,Tonkotsu,19.25
+o0172528,Shoyu,18.15
+o0172529,Spicy Miso,19.25
+o0172530,Karaage,9.9
+o0172530,Ramune,4.95
+o0172530,Tonkotsu,19.25
+o0172531,Edamame,6.6
+o0172531,Chicken Paitan,18.15
+o0172532,Tonkotsu,19.25
+o0172533,Spicy Miso,19.25
+o0172534,Mochi Trio,7.15
+o0172534,Chicken Paitan,18.15
+o0172534,Tantanmen,18.7
+o0172534,Takoyaki,9.35
+o0172535,Spicy Miso,19.25
+o0172535,Spicy Miso,19.25
+o0172536,Tonkotsu,19.25
+o0172536,Karaage,9.9
+o0172536,Veggie Miso,17.05
+o0172536,Gyoza,8.8
+o0172536,Tantanmen,18.7
+o0172536,Gyoza,8.8
+o0172537,Mochi Trio,7.15
+o0172537,Tonkotsu,19.25
+o0172538,Shoyu,16.5

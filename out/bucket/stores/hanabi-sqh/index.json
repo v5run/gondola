@@ -1,0 +1,13 @@
+{
+ "daily/2026-11-05": {
+  "kind": "daily",
+  "period": "2026-11-05",
+  "uri": "/home/claude/gondola-test/out/bucket/stores/hanabi-sqh/daily/2026/11/2026-11-05.pdf",
+  "findings": "/home/claude/gondola-test/out/bucket/stores/hanabi-sqh/daily/2026/11/2026-11-05.findings.json",
+  "sha256": "a781ca9b21af04f06d2a94947e11bc17159238db0af6863fb44dedb3f307557a",
+  "template_version": "v1",
+  "created_at": "2026-11-05T23:10:00",
+  "expires_at": "2026-12-05T23:10:00",
+  "status": "stored"
+ }
+}

@@ -1,0 +1,40 @@
+item,sku,qty
+Tonkotsu,chashu,1.0
+Tonkotsu,tonkotsu_broth,0.45
+Tonkotsu,noodles,1.0
+Tonkotsu,ajitama_egg,1.0
+Tonkotsu,scallion,0.01
+Shoyu,chashu,1.0
+Shoyu,chicken_broth,0.45
+Shoyu,noodles,1.0
+Shoyu,ajitama_egg,1.0
+Shoyu,scallion,0.01
+Spicy Miso,chashu,1.0
+Spicy Miso,tonkotsu_broth,0.45
+Spicy Miso,noodles,1.0
+Spicy Miso,ajitama_egg,0.5
+Spicy Miso,scallion,0.01
+Chicken Paitan,chicken_broth,0.45
+Chicken Paitan,noodles,1.0
+Chicken Paitan,chicken_thigh,0.09
+Chicken Paitan,ajitama_egg,1.0
+Chicken Paitan,scallion,0.01
+Veggie Miso,noodles,1.0
+Veggie Miso,scallion,0.015
+Tantanmen,tonkotsu_broth,0.4
+Tantanmen,noodles,1.0
+Tantanmen,scallion,0.01
+Chashu Don,chashu,1.5
+Chashu Don,rice,0.22
+Chashu Don,ajitama_egg,0.5
+Chashu Don,scallion,0.005
+Gyoza,gyoza,6.0
+Karaage,chicken_thigh,0.18
+Chashu Bao,chashu,0.5
+Chashu Bao,bao_bun,2.0
+Edamame,edamame,0.15
+Takoyaki,takoyaki,6.0
+Ramune,ramune,1.0
+Iced Green Tea,green_tea,0.4
+Sapporo,sapporo,1.0
+Mochi Trio,mochi,3.0

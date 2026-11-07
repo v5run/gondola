@@ -1,0 +1,20 @@
+# Questions written by the independent QA pass to break the Ask router
+QS = [
+ "how'd we do", "how'd we do yesterday?", "uber vs doordash last month", "sales on the 3rd",
+ "sales this time last year", "what were sales last year", "sales yesterdy", "how many orders tomorrow",
+ "forecast for tomorrow", "whats the forecast", "best seller this week", "what was our top seller yesterday",
+ "what items sold the most last week", "busiest day last month", "slowest day in december",
+ "why was dec 25 so slow", "why was christmas slow", "what happened on 2025-12-25",
+ "sales on nov 6", "sales on 2025-11-01", "sales on 2026-11-06", "sales feb 30", "orders june 31",
+ "doordash sales last 7 days", "doordahs sales yesterday", "dd orders yesterday",
+ "how much did we pay in card fees yesterday", "how much did doordash charge us in error last week",
+ "labour cost in store yesterday", "payroll last week", "tips yesterday", "how many tonkotsu did we sell yesterday",
+ "how much may we have made", "sales in november 2025", "sales in november", "past 7 days sales",
+ "last two weeks orders", "sales last sunday", "sales on sunday", "orders on monday",
+ "compare yesterday to last week", "how did yesterday compare", "avg ticket on uber last month",
+ "cancellations last 30 days", "avoidable cancellations last month", "error charges last week",
+ "how accurate was the forecast yesterday", "forecast accuracy", "days like tomorrow",
+ "explain mar 8", "why was nov 1 busy", "what's our labor %", "net sales march 8", "orders nov 1",
+ "asdfgh", "", "sales 3/8", "revenue on grubhub this week", "how busy were we last friday",
+ "why did we lose money on uber", "commission last month", "what's tomorrow's rush",
+]

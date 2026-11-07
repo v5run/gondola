@@ -1,0 +1,141 @@
+{
+ "allocation": {
+  "days": 90,
+  "table": [
+   {
+    "policy": "forecast prep + allocation",
+    "days": 90,
+    "avg_par": 618.6,
+    "cancels": 0,
+    "portions_turned_away_dinein": 10.0,
+    "portions_not_offered_apps": 270.0,
+    "leftover_portions": 9318.0,
+    "chashu_margin": 422980.6,
+    "net": 418827.5,
+    "net_vs_status_quo": 11914.0
+   },
+   {
+    "policy": "forecast prep + guard",
+    "days": 90,
+    "avg_par": 618.6,
+    "cancels": 0,
+    "portions_turned_away_dinein": 61.0,
+    "portions_not_offered_apps": 206.5,
+    "leftover_portions": 9305.5,
+    "chashu_margin": 422968.7,
+    "net": 418821.1,
+    "net_vs_status_quo": 11908.0
+   },
+   {
+    "policy": "guard",
+    "days": 90,
+    "avg_par": 567.0,
+    "cancels": 0,
+    "portions_turned_away_dinein": 368.5,
+    "portions_not_offered_apps": 1095.5,
+    "leftover_portions": 5861.0,
+    "chashu_margin": 412172.4,
+    "net": 409560.1,
+    "net_vs_status_quo": 2647.0
+   },
+   {
+    "policy": "habit prep + allocation",
+    "days": 90,
+    "avg_par": 567.0,
+    "cancels": 0,
+    "portions_turned_away_dinein": 42.5,
+    "portions_not_offered_apps": 1607.5,
+    "leftover_portions": 6047.0,
+    "chashu_margin": 411309.7,
+    "net": 408614.5,
+    "net_vs_status_quo": 1701.0
+   },
+   {
+    "policy": "status quo",
+    "days": 90,
+    "avg_par": 567.0,
+    "cancels": 424,
+    "portions_turned_away_dinein": 479.0,
+    "portions_not_offered_apps": 539.0,
+    "leftover_portions": 5847.5,
+    "chashu_margin": 412063.5,
+    "net": 406913.2,
+    "net_vs_status_quo": 0.0
+   }
+  ]
+ },
+ "capacity": {
+  "days": 90,
+  "app_orders_per_day": 317.0,
+  "slots_backed_up_per_day": 9.19,
+  "late_app_orders_per_day_fixed_quote": 119.9,
+  "late_app_orders_per_day_forecast_quote": 65.2,
+  "assumption": "capacity 7.5 orders/cook/15 min, 2 cooks before 5 pm and 3 after; demand not affected by waits"
+ },
+ "guard_with_recount": [
+  {
+   "count_error_sd": 0.05,
+   "pause_delay_min": 5,
+   "buffer_portions": 8,
+   "cancels_90d": 4,
+   "portions_held_back": 891,
+   "recount_prompts": 74
+  },
+  {
+   "count_error_sd": 0.05,
+   "pause_delay_min": 5,
+   "buffer_portions": 15,
+   "cancels_90d": 0,
+   "portions_held_back": 1003,
+   "recount_prompts": 74
+  },
+  {
+   "count_error_sd": 0.05,
+   "pause_delay_min": 15,
+   "buffer_portions": 8,
+   "cancels_90d": 55,
+   "portions_held_back": 821,
+   "recount_prompts": 74
+  },
+  {
+   "count_error_sd": 0.05,
+   "pause_delay_min": 15,
+   "buffer_portions": 15,
+   "cancels_90d": 40,
+   "portions_held_back": 926,
+   "recount_prompts": 74
+  },
+  {
+   "count_error_sd": 0.1,
+   "pause_delay_min": 5,
+   "buffer_portions": 8,
+   "cancels_90d": 10,
+   "portions_held_back": 859,
+   "recount_prompts": 74
+  },
+  {
+   "count_error_sd": 0.1,
+   "pause_delay_min": 5,
+   "buffer_portions": 15,
+   "cancels_90d": 0,
+   "portions_held_back": 975,
+   "recount_prompts": 74
+  },
+  {
+   "count_error_sd": 0.1,
+   "pause_delay_min": 15,
+   "buffer_portions": 8,
+   "cancels_90d": 68,
+   "portions_held_back": 783,
+   "recount_prompts": 74
+  },
+  {
+   "count_error_sd": 0.1,
+   "pause_delay_min": 15,
+   "buffer_portions": 15,
+   "cancels_90d": 42,
+   "portions_held_back": 911,
+   "recount_prompts": 74
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Daily Close Report {{ date }}</title>
+<style>
+@page { size: Letter; margin: 0 }
+* { box-sizing: border-box }
+body { margin: 0; font-family: "Inter", "Helvetica Neue", Arial, sans-serif; color: #14201c; background: #f6f3ec; font-size: 10.5pt; line-height: 1.45 }
+.page { width: 8.5in; height: 11in; padding: 0.55in 0.6in; page-break-after: always; position: relative }
+.top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px }
+.brand { font-weight: 700; color: #0f4d40; font-size: 13pt }
+.meta { color: #56605b; font-size: 9.5pt }
+h1 { font-size: 24pt; margin: 0 0 6px; font-weight: 650; letter-spacing: 0 }
+h2 { font-size: 13pt; margin: 16px 0 6px; font-weight: 650 }
+.lead { color: #56605b; margin: 0 0 18px; max-width: 6.4in }
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px }
+.kpi { background: #fff; border-radius: 12px; padding: 12px 14px }
+.kpi .v { font-size: 18pt; font-weight: 650 }
+.kpi .l { color: #56605b; font-size: 9pt }
+.kpi .d { font-size: 9pt; color: #0f4d40 }
+.kpi .d.neg { color: #d03b3b }
+.att { background: #0f4d40; color: #fff; border-radius: 14px; padding: 14px 18px; margin-top: 14px }
+.att h2 { color: #b8e986; margin: 0 0 6px }
+.att li { margin: 4px 0 }
+table { width: 100%; border-collapse: collapse; font-size: 9.5pt }
+th { text-align: left; color: #56605b; font-weight: 500; padding: 5px 6px }
+td { padding: 6px; background: #fff }
+tr td:first-child { border-radius: 8px 0 0 8px } tr td:last-child { border-radius: 0 8px 8px 0 }
+table { border-spacing: 0 4px; border-collapse: separate }
+.num { text-align: right; font-variant-numeric: tabular-nums }
+.neg { color: #d03b3b } .pos { color: #0ca30c }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 18px }
+.card { background: #fff; border-radius: 12px; padding: 12px 14px }
+.small { font-size: 9pt; color: #56605b }
+.foot { position: absolute; bottom: 0.4in; left: 0.6in; right: 0.6in; display: flex; justify-content: space-between; color: #8b938e; font-size: 8.5pt }
+</style></head>
+<body>
+<div class="page">
+  <div class="top"><div class="brand">Gondola</div><div class="meta">{{ store_name }} · {{ date_long }}{% if rebuilt %} · rebuilt {{ rebuilt }}{% endif %}</div></div>
+  <h1>{{ headline }}</h1>
+  <p class="lead">{{ summary }}</p>
+  <div class="kpis">
+    {% for k in kpis %}<div class="kpi"><div class="l">{{ k.label }}</div><div class="v">{{ k.value }}</div><div class="d {{ 'neg' if k.bad else '' }}">{{ k.delta }}</div></div>{% endfor %}
+  </div>
+  <div class="att"><h2>Needs your attention</h2><ul>{% for a in attention %}<li>{{ a }}</li>{% endfor %}</ul></div>
+  <h2>How the day went</h2>
+  {% if channels %}<div class="two">
+    <div class="card">{{ curve_svg | safe }}<div class="small">Orders per 15 minutes today, with a usual {{ dow_name }} in grey</div></div>
+    <div class="card"><table><tr><th>Channel</th><th class="num">Today</th><th class="num">Usual</th></tr>
+      {% for c in channels %}<tr><td>{{ {"in_store": "In-store", "doordash": "DoorDash", "ubereats": "Uber Eats", "grubhub": "Grubhub"}.get(c.key, c.key) }}</td><td class="num">${{ "{:,.0f}".format(c.today) }}</td><td class="num">${{ "{:,.0f}".format(c.usual) }}</td></tr>{% endfor %}
+    </table><div class="small">{{ context_line }}</div></div>
+  </div>{% else %}<p class="small">{{ context_line }}</p>{% endif %}
+  <div class="foot"><span>Daily Close Report</span><span>1</span></div>
+</div>
+<div class="page">
+  <div class="top"><div class="brand">Gondola</div><div class="meta">{{ store_name }} · {{ date_long }}</div></div>
+  <h2 style="margin-top:0">Money</h2>
+  <table><tr><th>Channel</th><th>Status</th><th class="num">Sales</th><th class="num">Expected payout</th><th class="num">Reported</th><th class="num">Difference</th></tr>
+    {% for c in payouts %}<tr><td>{{ c.channel }}</td><td>{{ c.status }}</td><td class="num">${{ "{:,.2f}".format(c.sales) }}</td><td class="num">${{ "{:,.2f}".format(c.expected) }}</td><td class="num">{{ c.reported_s }}</td><td class="num {{ 'neg' if c.difference and c.difference < -1 else '' }}">{{ c.diff_s }}</td></tr>{% endfor %}
+  </table>
+  <div class="two" style="margin-top:10px">
+    <div class="card"><b>Cash drawer</b><br>{% if cash %}Expected ${{ "{:,.2f}".format(cash.expected) }} · counted ${{ "{:,.2f}".format(cash.counted) }} · <span class="{{ 'neg' if cash.difference < 0 else '' }}">{{ "{:+,.2f}".format(cash.difference) }}</span>{% else %}Not counted{% endif %}</div>
+    <div class="card"><b>Labour</b><br>{{ labour_line }}</div>
+  </div>
+  {% if disputes %}<h2>Dispute checklist</h2><div class="small" style="margin-bottom:4px">The largest charges that look wrong. Submit them yourself in each app's portal before the 14-day window closes.</div>
+  <table><tr><th>App</th><th>Order</th><th>Charge</th><th>Why it looks wrong</th><th class="num">Days left</th></tr>
+    {% for d in disputes %}<tr><td>{{ d.channel }}</td><td>{{ d.order }}</td><td>${{ "{:.2f}".format(d.amount) }}</td><td>{{ d.reason }}</td><td class="num">{{ d.days_left }}</td></tr>{% endfor %}</table>{% endif %}
+  {% if tomorrow %}<h2>Tomorrow</h2>
+  <div class="two">
+    <div class="card"><b>{{ tomorrow.p50 }} orders</b> expected (likely {{ tomorrow.p10 }}–{{ tomorrow.p90 }})<br>Rush {{ tomorrow.rush }}<br>
+      <span class="small">Like {{ tomorrow.similar }}</span></div>
+    <div class="card">{% for c in tomorrow.card %}<b>{{ c.item }}</b> make {{ c.prep }} (have {{ c.on_hand|int }}, target {{ c.target }}; usual habit {{ tomorrow.old_par }})<br>
+      <span class="small">{% if c.pause_at.doordash %}Pause DoorDash {{ c.pause_at.doordash }} · Uber Eats {{ c.pause_at.ubereats }} · Grubhub {{ c.pause_at.grubhub }}{% elif c.pause_if_busy.doordash %}No pause expected; on a busy night, DoorDash {{ c.pause_if_busy.doordash }} · Uber Eats {{ c.pause_if_busy.ubereats }} · Grubhub {{ c.pause_if_busy.grubhub }}{% else %}No pause expected{% endif %} · recount at {{ c.recount_at }} left</span><br>{% endfor %}
+      <b>Staffing</b> {{ tomorrow.staff }}</div>
+  </div>
+  {% endif %}
+  {% if check %}<h2>Forecast check</h2>
+  <div class="small">Forecast for tonight ({{ check.source }}): {{ check.predicted }} orders; actual {{ check.actual }} ({{ check.err }}). Average error over the last 60 days: {{ check.mape }}, against {{ check.naive }} for "same weekday last month".</div>{% endif %}
+  <div class="foot"><span>Numbers come from the store's own POS, payout reports and cash drawer. Generated {{ generated }}.</span><span>2</span></div>
+</div>
+</body></html>

@@ -1,0 +1,18 @@
+sku,unit,unit_cost,shelf_life_days,pack_size,supplier
+pork_belly,kg,7.8,5,5,Strip District Meats
+chashu,portion,0.0,3,1,prepped
+tonkotsu_broth,L,1.1,4,1,prepped
+chicken_broth,L,0.9,4,1,prepped
+noodles,portion,0.55,4,40,Sun Noodle
+ajitama_egg,each,0.42,4,30,Penn Dairy & Eggs
+chicken_thigh,kg,6.2,4,5,Strip District Meats
+gyoza,piece,0.28,90,100,Restaurant Depot
+bao_bun,each,0.35,60,50,Restaurant Depot
+rice,kg,2.1,365,20,Restaurant Depot
+edamame,kg,4.4,180,2,Restaurant Depot
+takoyaki,piece,0.3,90,60,Restaurant Depot
+ramune,bottle,1.2,365,24,Restaurant Depot
+green_tea,L,0.6,7,4,Restaurant Depot
+sapporo,bottle,1.9,180,24,Pittsburgh Beverage
+mochi,piece,0.7,60,36,Restaurant Depot
+scallion,kg,3.1,7,1,Strip District Produce

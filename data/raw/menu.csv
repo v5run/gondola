@@ -1,0 +1,17 @@
+item,category,price,chashu_portions,weight,item_id
+Tonkotsu,ramen,17.5,1.0,0.2,m00
+Shoyu,ramen,16.5,1.0,0.1,m01
+Spicy Miso,ramen,17.5,1.0,0.14,m02
+Chicken Paitan,ramen,16.5,0.0,0.1,m03
+Veggie Miso,ramen,15.5,0.0,0.07,m04
+Tantanmen,ramen,17.0,0.0,0.08,m05
+Chashu Don,rice,14.0,1.5,0.06,m06
+Gyoza,side,8.0,0.0,0.09,m07
+Karaage,side,9.0,0.0,0.07,m08
+Chashu Bao,side,8.5,0.5,0.05,m09
+Edamame,side,6.0,0.0,0.04,m10
+Takoyaki,side,8.5,0.0,0.03,m11
+Ramune,drink,4.5,0.0,0.05,m12
+Iced Green Tea,drink,3.5,0.0,0.04,m13
+Sapporo,drink,7.0,0.0,0.03,m14
+Mochi Trio,dessert,6.5,0.0,0.03,m15

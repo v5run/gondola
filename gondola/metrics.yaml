@@ -1,0 +1,62 @@
+# One definition per number. Agents, the report and Ask all read these.
+# grain: day | channel | hour | item
+net_sales:
+  label: Net sales
+  unit: usd
+  owner: analyst
+  sql: SUM(CASE WHEN status='completed' THEN subtotal ELSE 0 END)
+  from: orders
+orders:
+  label: Orders
+  unit: count
+  owner: analyst
+  sql: SUM(CASE WHEN status='completed' THEN 1 ELSE 0 END)
+  from: orders
+avg_ticket:
+  label: Average ticket
+  unit: usd
+  owner: analyst
+  sql: SUM(CASE WHEN status='completed' THEN subtotal END) / NULLIF(SUM(CASE WHEN status='completed' THEN 1 END), 0)
+  from: orders
+cancellations:
+  label: Cancelled orders
+  unit: count
+  owner: analyst
+  sql: SUM(CASE WHEN status='cancelled' THEN 1 ELSE 0 END)
+  from: orders
+avoidable_cancellations:
+  label: Avoidable cancellations (item unavailable)
+  unit: count
+  owner: guard
+  sql: SUM(CASE WHEN status='cancelled' AND cancel_reason='item_unavailable' THEN 1 ELSE 0 END)
+  from: orders
+app_sales:
+  label: Delivery app sales
+  unit: usd
+  owner: books
+  sql: SUM(CASE WHEN status='completed' AND channel<>'in_store' THEN subtotal ELSE 0 END)
+  from: orders
+error_charges:
+  label: Error charges
+  unit: usd
+  owner: books
+  sql: SUM(error_charge)
+  from: payout_lines
+commission:
+  label: Commission
+  unit: usd
+  owner: books
+  sql: SUM(commission)
+  from: payout_lines
+labour_cost:
+  label: Labour cost
+  unit: usd
+  owner: books
+  sql: SUM(hours * wage)
+  from: labour
+labour_hours:
+  label: Labour hours
+  unit: hours
+  owner: books
+  sql: SUM(hours)
+  from: labour
