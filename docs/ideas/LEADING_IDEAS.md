@@ -4,6 +4,10 @@ Updated November 6, 2026. **The user authorized building Rush Control:** shared 
 
 To generate more: [repeatable ideation playbook and reusable prompts](IDEATION_PLAYBOOK.md). [The wider idea pool](IDEA_POOL.md) records new angles and variants with first tests and evidence limits; entries there are not automatically leading candidates.
 
+**Latest exploration:** [Post-demo avenues P13-P16](NEXT_AVENUES.md): failure-discovery/contingency agents, decision-aware evidence acquisition, executable operating-model compilation, and a refinement of voluntary flexibility. P13-P15 remain exploratory/unimplemented. P16 was subsequently selected and implemented as the bounded workflow below.
+
+**Latest built extension:** P16, discounts for voluntarily choosing a later pickup. [DoorDash overlap and implementation boundary](PICKUP_FLEXIBILITY.md) separates existing scheduling/promotions and established demand shifting from the unverified exact native feature. [Flexible pickup demo](../development/FLEX_DEMO.md) now includes shopper consent, expiry, atomic reservation and real Gemini tools. First-party/synthetic episode; no DoorDash access established.
+
 **Selected direction:** Station-aware demand steering integrated with forecasting and shared kitchen reservations. [Product/adoption research](DEMAND_STEERING.md) explains the hypothesis. The implemented simulation exposes measured service/revenue tradeoffs; it does not establish real merchant benefit or feature exclusivity.
 
 **DoorDash track check:** Start with [native capabilities, API access, and sponsor fit](DOORDASH_FIT_AND_ACCESS.md). DoorDash already offers automated Smart Campaigns. Station-level coordination is unverified; our campaign API access and the required demo integration level are also unconfirmed.
@@ -24,7 +28,7 @@ Keep three kinds of learning distinct: updating forecasts, investigating useful 
 | **Merchant agent negotiates feasible orders** | Negotiate approved menu, quantity, timing, and price while reserving committed capacity | Commercial alternative; closer quoting competition and buyer/access dependencies | Improve feasible completed orders over fixed quoting while preventing double booking and broken commitments |
 | **Adaptive cross-channel kitchen scheduling** | Coordinate DoorDash/Uber/pickup preparation using promises, courier estimates, station capacity, and food-holding limits | Teammate idea the user likes; concrete demo candidate, with direct existing-product overlap | Beat FIFO **and** deadline/slack-based rules across varied scenarios while protecting fairness and in-progress work |
 
-Kitchen scheduling and demand steering can provide concrete problems for policy development: an agent develops and tests policies while a fast engine runs validated decisions. These combinations are proposed, not implemented or proved novel. Do not build all candidates at once.
+The current demo implements bounded scheduling, demand steering and policy-parameter experiments. The earlier table preserves broader hypotheses, including richer rule generation, tool synthesis and negotiation; consult [feature coverage](../development/FEATURE_COVERAGE.md) for exact boundaries. Broader concepts remain unbuilt, and novelty/business benefit are not established. Do not build all candidates at once.
 
 ## What each could look like
 

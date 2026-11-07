@@ -1,5 +1,7 @@
 # Gondola development
 
+P16 Flexible pickup is also explicitly authorized and now implemented on `savvy/flexible-pickup`, stacked on `savvy/rush-control` at `Rush-integration`. Start with `docs/development/FLEX_DEMO.md` for `/flex`, real Gemini choice tools, atomic local reservations, verification and boundaries. It takes a frozen Rush observation; its subsequent bookings share a separate Flex ledger, not a running Rush replay. Quotes are proposals, not holds. Do not imply live DoorDash access, continuous service, actual payment or demonstrated AI/business superiority. Keep the feature tracker current.
+
 The user selected this repository for the NOVA DoorDash project and authorized building/testing Rush Control. Start with `docs/development/RUSH_DEMO.md` for the implemented browser episode, measured tradeoffs and production path. Build plan: `RUSH_BUILD.md`. Branch: `feat/rush-control`. Preserve the inherited app and existing dirty setup/research/generated files.
 
 Read `docs/development/LOCAL_SETUP.md`, `FUNCTIONALITY_AUDIT.md`, and `BACKLOG.md` in that order when resuming development. Parent research/continuity lives at `../docs/project/AFTER_COMPACTION.md`; its project skill is `../.agents/skills/hackathon-continuity/SKILL.md`.

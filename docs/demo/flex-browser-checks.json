@@ -1,0 +1,18 @@
+{
+  "checks": [
+    "Choice reserves moved cook/pack slots, spends $2 once, decrements stock, preserves existing work and reloads receipt",
+    "Independent merchant view reads shared evidence without adopting another customer's receipt",
+    "Customer can keep earliest regular-price pickup",
+    "Declining makes no order and spends nothing",
+    "Expired quote disables confirmation and reserves nothing",
+    "Competing reservation rejects stale confirmation with no extra booking or spend; refreshed options work",
+    "Two independent customer checkouts cannot confirm the same production slot",
+    "Quiet/budget/preference/deadline and overload cases do not fabricate bargains or available slots",
+    "Injected provider failure remains an error, with no fake AI result or automatic planner fallback",
+    "Real Gemini tools publish choices; separate explicit customer confirmation creates a durable reservation",
+    "Both views fit 1440, 900 and 390 pixel windows without page overflow",
+    "No JavaScript page errors in any checked browser context"
+  ],
+  "javascript_errors": [],
+  "mode": "Real local UI/API/SQLite; one real Gemini job; synthetic restaurant; explicit injected failure"
+}

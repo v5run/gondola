@@ -17,7 +17,7 @@ from .. import NP
 from ..agents.ask import ask as ask_fn
 from ..metrics import ROOT, Store
 from ..tools import analyst, demand, sentinel
-from . import guard_live, v3, rush
+from . import guard_live, v3, rush, flex
 from .runs import RUNS, new_run, stream
 
 VERSION = "3.0.0"
@@ -33,6 +33,7 @@ app.include_router(v3.router)  # /api/live/stream, /api/metrics/intraday|items|r
 app.include_router(rush.router)
 from . import tri  # noqa: E402
 app.include_router(tri.router)  # Past / Present / Future / Review
+app.include_router(flex.router)
 
 
 def out_dir() -> Path:

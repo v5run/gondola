@@ -15,6 +15,7 @@ import Reports from "./screens/Reports";
 import Ask from "./screens/Ask";
 import Alerts from "./screens/Alerts";
 import Rush from "./screens/Rush";
+import Flex from "./screens/Flex";
 import Queue from "./screens/Queue";
 import RestOfToday from "./screens/RestOfToday";
 import Tomorrow from "./screens/Tomorrow";
@@ -69,8 +70,9 @@ function Shell() {
         <div className="av" title="Maya, manager">MK</div>
       </nav>
       <main className="main">
-        {mode === "mock" && <div className="offline" role="status"><i className="dot" />Backend offline · sample data</div>}
+        {mode === "mock" && <div className="offline" role="status"><i className="dot" />Backend offline Â· sample data</div>}
         <Routes>
+          <Route path="/flex" element={<Page title="Present" live={false} date={false}><Flex /></Page>} />
           <Route path="/" element={<Navigate to="/present" replace />} />
           <Route path="/past" element={<Orders />} />
           <Route path="/past/money" element={<Money />} />

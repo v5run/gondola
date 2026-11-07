@@ -1,0 +1,9 @@
+{
+  "api_restart_verified": true,
+  "order_id": "FLEX-F44C0B05",
+  "orders_after_repeated_acceptance": 1,
+  "incentive_spend_cents": 200,
+  "same_receipt_replayed": true,
+  "merchant_browser_restored_confirmed_evidence": true,
+  "javascript_errors": []
+}

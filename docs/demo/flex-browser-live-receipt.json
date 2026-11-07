@@ -1,0 +1,525 @@
+{
+  "mode": "real_gemini_tools_synthetic_customer_and_kitchen",
+  "receipt": {
+    "id": "FLEX-F44C0B05",
+    "cart_id": "754b7238-e057-4871-a154-3356cf0e0140",
+    "item": "don",
+    "option": {
+      "pickup_minute": 40,
+      "pickup_clock": "18:10",
+      "tasks": [
+        {
+          "task_id": "FLEX-F44C0B05:cook",
+          "order_id": "FLEX-F44C0B05",
+          "station": "assembly",
+          "start": 36,
+          "end": 39,
+          "item": "don",
+          "channel": "pickup"
+        },
+        {
+          "task_id": "FLEX-F44C0B05:pack",
+          "order_id": "FLEX-F44C0B05",
+          "station": "packing",
+          "start": 39,
+          "end": 40,
+          "item": "don",
+          "channel": "pickup"
+        }
+      ],
+      "cook_minutes": 3,
+      "holding_minutes": 0,
+      "kind": "flexible",
+      "discount_cents": 200,
+      "price_cents": 1340,
+      "released_cook_minutes": 2,
+      "score": -34,
+      "reason": "Moves production beyond pressure while preserving all existing allocations",
+      "contribution_cents": 784,
+      "id": "a0e802b5cbfb44609b75a2a49e76b6db-1"
+    },
+    "regular_option": {
+      "pickup_minute": 23,
+      "pickup_clock": "17:53",
+      "tasks": [
+        {
+          "task_id": "candidate:cook",
+          "order_id": "candidate",
+          "station": "assembly",
+          "start": 19,
+          "end": 22,
+          "item": "don",
+          "channel": "pickup"
+        },
+        {
+          "task_id": "candidate:pack",
+          "order_id": "candidate",
+          "station": "packing",
+          "start": 22,
+          "end": 23,
+          "item": "don",
+          "channel": "pickup"
+        }
+      ],
+      "cook_minutes": 3,
+      "holding_minutes": 0,
+      "kind": "regular",
+      "discount_cents": 0,
+      "price_cents": 1540,
+      "released_cook_minutes": 0,
+      "score": 0,
+      "reason": "Earliest currently reservable pickup; regular price",
+      "id": "a0e802b5cbfb44609b75a2a49e76b6db-0"
+    },
+    "quote_id": "a0e802b5cbfb44609b75a2a49e76b6db",
+    "accepted_at": 1794023914.3489602,
+    "consent": "Customer explicitly selected this quoted time and price",
+    "source": "gemini",
+    "status": "reserved",
+    "source_mode": "simulation",
+    "payment_mode": "no_charge",
+    "replayed": false,
+    "comparison": {
+      "allocations": [
+        {
+          "task_id": "UB-119:cook",
+          "order_id": "UB-119",
+          "station": "assembly",
+          "start": 12,
+          "end": 13,
+          "item": "don",
+          "frozen": true
+        },
+        {
+          "task_id": "DO-105:cook",
+          "order_id": "DO-105",
+          "station": "noodles",
+          "start": 12,
+          "end": 15,
+          "item": "tonkotsu",
+          "frozen": true
+        },
+        {
+          "task_id": "PI-127:cook",
+          "order_id": "PI-127",
+          "station": "fryer",
+          "start": 12,
+          "end": 15,
+          "item": "gyoza",
+          "frozen": true
+        },
+        {
+          "task_id": "UB-121:cook",
+          "order_id": "UB-121",
+          "station": "fryer",
+          "start": 15,
+          "end": 25,
+          "item": "karaage",
+          "frozen": false
+        },
+        {
+          "task_id": "UB-121:pack",
+          "order_id": "UB-121",
+          "station": "packing",
+          "start": 25,
+          "end": 26,
+          "item": "karaage",
+          "frozen": false
+        },
+        {
+          "task_id": "DO-101:cook",
+          "order_id": "DO-101",
+          "station": "fryer",
+          "start": 25,
+          "end": 35,
+          "item": "karaage",
+          "frozen": false
+        },
+        {
+          "task_id": "DO-101:pack",
+          "order_id": "DO-101",
+          "station": "packing",
+          "start": 35,
+          "end": 36,
+          "item": "karaage",
+          "frozen": false
+        },
+        {
+          "task_id": "PI-127:pack",
+          "order_id": "PI-127",
+          "station": "packing",
+          "start": 15,
+          "end": 16,
+          "item": "gyoza",
+          "frozen": false
+        },
+        {
+          "task_id": "DO-112:cook",
+          "order_id": "DO-112",
+          "station": "fryer",
+          "start": 35,
+          "end": 42,
+          "item": "gyoza",
+          "frozen": false
+        },
+        {
+          "task_id": "DO-112:pack",
+          "order_id": "DO-112",
+          "station": "packing",
+          "start": 42,
+          "end": 43,
+          "item": "gyoza",
+          "frozen": false
+        },
+        {
+          "task_id": "PI-123:cook",
+          "order_id": "PI-123",
+          "station": "fryer",
+          "start": 42,
+          "end": 52,
+          "item": "karaage",
+          "frozen": false
+        },
+        {
+          "task_id": "PI-123:pack",
+          "order_id": "PI-123",
+          "station": "packing",
+          "start": 52,
+          "end": 53,
+          "item": "karaage",
+          "frozen": false
+        },
+        {
+          "task_id": "DO-106:cook",
+          "order_id": "DO-106",
+          "station": "fryer",
+          "start": 52,
+          "end": 58,
+          "item": "gyoza",
+          "frozen": false
+        },
+        {
+          "task_id": "DO-106:pack",
+          "order_id": "DO-106",
+          "station": "packing",
+          "start": 58,
+          "end": 59,
+          "item": "gyoza",
+          "frozen": false
+        },
+        {
+          "task_id": "DO-105:pack",
+          "order_id": "DO-105",
+          "station": "packing",
+          "start": 16,
+          "end": 17,
+          "item": "tonkotsu",
+          "frozen": false
+        },
+        {
+          "task_id": "UB-115:cook",
+          "order_id": "UB-115",
+          "station": "fryer",
+          "start": 58,
+          "end": 68,
+          "item": "karaage",
+          "frozen": false
+        },
+        {
+          "task_id": "UB-115:pack",
+          "order_id": "UB-115",
+          "station": "packing",
+          "start": 68,
+          "end": 69,
+          "item": "karaage",
+          "frozen": false
+        },
+        {
+          "task_id": "DO-110:cook",
+          "order_id": "DO-110",
+          "station": "fryer",
+          "start": 68,
+          "end": 75,
+          "item": "gyoza",
+          "frozen": false
+        },
+        {
+          "task_id": "DO-110:pack",
+          "order_id": "DO-110",
+          "station": "packing",
+          "start": 75,
+          "end": 76,
+          "item": "gyoza",
+          "frozen": false
+        },
+        {
+          "task_id": "DO-103:cook",
+          "order_id": "DO-103",
+          "station": "fryer",
+          "start": 75,
+          "end": 82,
+          "item": "gyoza",
+          "frozen": false
+        },
+        {
+          "task_id": "DO-103:pack",
+          "order_id": "DO-103",
+          "station": "packing",
+          "start": 82,
+          "end": 83,
+          "item": "gyoza",
+          "frozen": false
+        },
+        {
+          "task_id": "UB-120:cook",
+          "order_id": "UB-120",
+          "station": "noodles",
+          "start": 15,
+          "end": 19,
+          "item": "tonkotsu",
+          "frozen": false
+        },
+        {
+          "task_id": "UB-120:pack",
+          "order_id": "UB-120",
+          "station": "packing",
+          "start": 19,
+          "end": 20,
+          "item": "tonkotsu",
+          "frozen": false
+        },
+        {
+          "task_id": "UB-122:cook",
+          "order_id": "UB-122",
+          "station": "fryer",
+          "start": 82,
+          "end": 89,
+          "item": "gyoza",
+          "frozen": false
+        },
+        {
+          "task_id": "UB-122:pack",
+          "order_id": "UB-122",
+          "station": "packing",
+          "start": 89,
+          "end": 90,
+          "item": "gyoza",
+          "frozen": false
+        },
+        {
+          "task_id": "DO-102:cook",
+          "order_id": "DO-102",
+          "station": "noodles",
+          "start": 19,
+          "end": 24,
+          "item": "tonkotsu",
+          "frozen": false
+        },
+        {
+          "task_id": "DO-102:pack",
+          "order_id": "DO-102",
+          "station": "packing",
+          "start": 24,
+          "end": 25,
+          "item": "tonkotsu",
+          "frozen": false
+        },
+        {
+          "task_id": "DO-104:pack",
+          "order_id": "DO-104",
+          "station": "packing",
+          "start": 12,
+          "end": 13,
+          "item": "tonkotsu",
+          "frozen": false
+        },
+        {
+          "task_id": "UB-119:pack",
+          "order_id": "UB-119",
+          "station": "packing",
+          "start": 13,
+          "end": 14,
+          "item": "don",
+          "frozen": false
+        },
+        {
+          "task_id": "PI-126:cook",
+          "order_id": "PI-126",
+          "station": "noodles",
+          "start": 24,
+          "end": 28,
+          "item": "tonkotsu",
+          "frozen": false
+        },
+        {
+          "task_id": "PI-126:pack",
+          "order_id": "PI-126",
+          "station": "packing",
+          "start": 28,
+          "end": 29,
+          "item": "tonkotsu",
+          "frozen": false
+        },
+        {
+          "task_id": "UB-117:cook",
+          "order_id": "UB-117",
+          "station": "noodles",
+          "start": 28,
+          "end": 32,
+          "item": "tonkotsu",
+          "frozen": false
+        },
+        {
+          "task_id": "UB-117:pack",
+          "order_id": "UB-117",
+          "station": "packing",
+          "start": 32,
+          "end": 33,
+          "item": "tonkotsu",
+          "frozen": false
+        },
+        {
+          "task_id": "UB-114:cook",
+          "order_id": "UB-114",
+          "station": "fryer",
+          "start": 89,
+          "end": 96,
+          "item": "gyoza",
+          "frozen": false
+        },
+        {
+          "task_id": "UB-114:pack",
+          "order_id": "UB-114",
+          "station": "packing",
+          "start": 96,
+          "end": 97,
+          "item": "gyoza",
+          "frozen": false
+        },
+        {
+          "task_id": "DO-109:cook",
+          "order_id": "DO-109",
+          "station": "assembly",
+          "start": 13,
+          "end": 16,
+          "item": "don",
+          "frozen": false
+        },
+        {
+          "task_id": "DO-109:pack",
+          "order_id": "DO-109",
+          "station": "packing",
+          "start": 17,
+          "end": 18,
+          "item": "don",
+          "frozen": false
+        },
+        {
+          "task_id": "UB-118:cook",
+          "order_id": "UB-118",
+          "station": "assembly",
+          "start": 16,
+          "end": 19,
+          "item": "don",
+          "frozen": false
+        },
+        {
+          "task_id": "UB-118:pack",
+          "order_id": "UB-118",
+          "station": "packing",
+          "start": 20,
+          "end": 21,
+          "item": "don",
+          "frozen": false
+        },
+        {
+          "task_id": "WEB-201:cook",
+          "order_id": "WEB-201",
+          "station": "fryer",
+          "start": 96,
+          "end": 107,
+          "item": "karaage",
+          "frozen": false
+        },
+        {
+          "task_id": "WEB-201:pack",
+          "order_id": "WEB-201",
+          "station": "packing",
+          "start": 107,
+          "end": 108,
+          "item": "karaage",
+          "frozen": false
+        }
+      ],
+      "regular": {
+        "pickup_minute": 23,
+        "pickup_clock": "17:53",
+        "tasks": [
+          {
+            "task_id": "candidate:cook",
+            "order_id": "candidate",
+            "station": "assembly",
+            "start": 19,
+            "end": 22,
+            "item": "don",
+            "channel": "pickup"
+          },
+          {
+            "task_id": "candidate:pack",
+            "order_id": "candidate",
+            "station": "packing",
+            "start": 22,
+            "end": 23,
+            "item": "don",
+            "channel": "pickup"
+          }
+        ],
+        "cook_minutes": 3,
+        "holding_minutes": 0,
+        "kind": "regular",
+        "discount_cents": 0,
+        "price_cents": 1540,
+        "released_cook_minutes": 0,
+        "score": 0,
+        "reason": "Earliest currently reservable pickup; regular price",
+        "id": "a0e802b5cbfb44609b75a2a49e76b6db-0"
+      },
+      "selected": {
+        "pickup_minute": 40,
+        "pickup_clock": "18:10",
+        "tasks": [
+          {
+            "task_id": "FLEX-F44C0B05:cook",
+            "order_id": "FLEX-F44C0B05",
+            "station": "assembly",
+            "start": 36,
+            "end": 39,
+            "item": "don",
+            "channel": "pickup"
+          },
+          {
+            "task_id": "FLEX-F44C0B05:pack",
+            "order_id": "FLEX-F44C0B05",
+            "station": "packing",
+            "start": 39,
+            "end": 40,
+            "item": "don",
+            "channel": "pickup"
+          }
+        ],
+        "cook_minutes": 3,
+        "holding_minutes": 0,
+        "kind": "flexible",
+        "discount_cents": 200,
+        "price_cents": 1340,
+        "released_cook_minutes": 2,
+        "score": -34,
+        "reason": "Moves production beyond pressure while preserving all existing allocations",
+        "contribution_cents": 784,
+        "id": "a0e802b5cbfb44609b75a2a49e76b6db-1"
+      },
+      "peak_start": 12,
+      "peak_end": 37
+    }
+  }
+}

@@ -1,0 +1,622 @@
+{
+  "mode": "synthetic_frozen_calendar_reservations",
+  "cases": [
+    {
+      "case": "default_rush_bowl",
+      "configuration": {
+        "scenario": "rush",
+        "seed": 7,
+        "cooks": 3,
+        "budget_cents": 1200,
+        "max_discount_cents": 300,
+        "quote_ttl_seconds": 180
+      },
+      "customer": {
+        "cart_id": "evaluation-cart",
+        "item": "don",
+        "latest_pickup_minute": 70,
+        "minimum_saving_cents": 200
+      },
+      "regular": {
+        "status": "reservable",
+        "kind": "regular",
+        "pickup": "17:53",
+        "cook": [
+          "17:49",
+          "17:52"
+        ],
+        "pack": [
+          "17:52",
+          "17:53"
+        ],
+        "price_cents": 1540,
+        "incentive_cost_cents": 0,
+        "additional_customer_wait_minutes": 0,
+        "near_term_cook_minutes_released": 0,
+        "modeled_holding_minutes": 0,
+        "invariants_pass": true,
+        "hypothetical_urgent_bowl_earliest_pickup": "17:57",
+        "hypothetical_urgent_bowl_fits_by_17_54": false
+      },
+      "guarded_fixed_20_minute_rule": {
+        "status": "reservable",
+        "kind": "flexible",
+        "pickup": "18:15",
+        "cook": [
+          "18:11",
+          "18:14"
+        ],
+        "pack": [
+          "18:14",
+          "18:15"
+        ],
+        "price_cents": 1340,
+        "incentive_cost_cents": 200,
+        "additional_customer_wait_minutes": 22,
+        "near_term_cook_minutes_released": 3,
+        "modeled_holding_minutes": 0,
+        "invariants_pass": true,
+        "hypothetical_urgent_bowl_earliest_pickup": "17:53",
+        "hypothetical_urgent_bowl_fits_by_17_54": true
+      },
+      "checked_capacity_planner": {
+        "status": "reservable",
+        "kind": "flexible",
+        "pickup": "18:15",
+        "cook": [
+          "18:11",
+          "18:14"
+        ],
+        "pack": [
+          "18:14",
+          "18:15"
+        ],
+        "price_cents": 1340,
+        "incentive_cost_cents": 200,
+        "additional_customer_wait_minutes": 22,
+        "near_term_cook_minutes_released": 3,
+        "modeled_holding_minutes": 0,
+        "invariants_pass": true,
+        "hypothetical_urgent_bowl_earliest_pickup": "17:53",
+        "hypothetical_urgent_bowl_fits_by_17_54": true
+      },
+      "fixed_rule_rejection": null
+    },
+    {
+      "case": "different_seed_noodles",
+      "configuration": {
+        "scenario": "rush",
+        "seed": 11,
+        "cooks": 3,
+        "budget_cents": 1200,
+        "max_discount_cents": 300,
+        "quote_ttl_seconds": 180
+      },
+      "customer": {
+        "cart_id": "evaluation-cart",
+        "item": "tonkotsu",
+        "latest_pickup_minute": 90,
+        "minimum_saving_cents": 200
+      },
+      "regular": {
+        "status": "reservable",
+        "kind": "regular",
+        "pickup": "18:14",
+        "cook": [
+          "18:07",
+          "18:13"
+        ],
+        "pack": [
+          "18:13",
+          "18:14"
+        ],
+        "price_cents": 1925,
+        "incentive_cost_cents": 0,
+        "additional_customer_wait_minutes": 0,
+        "near_term_cook_minutes_released": 0,
+        "modeled_holding_minutes": 0,
+        "invariants_pass": true,
+        "hypothetical_urgent_bowl_earliest_pickup": null,
+        "hypothetical_urgent_bowl_fits_by_17_54": false
+      },
+      "guarded_fixed_20_minute_rule": {
+        "status": "reservable",
+        "kind": "regular",
+        "pickup": "18:14",
+        "cook": [
+          "18:07",
+          "18:13"
+        ],
+        "pack": [
+          "18:13",
+          "18:14"
+        ],
+        "price_cents": 1925,
+        "incentive_cost_cents": 0,
+        "additional_customer_wait_minutes": 0,
+        "near_term_cook_minutes_released": 0,
+        "modeled_holding_minutes": 0,
+        "invariants_pass": true,
+        "hypothetical_urgent_bowl_earliest_pickup": null,
+        "hypothetical_urgent_bowl_fits_by_17_54": false
+      },
+      "checked_capacity_planner": {
+        "status": "reservable",
+        "kind": "regular",
+        "pickup": "18:14",
+        "cook": [
+          "18:07",
+          "18:13"
+        ],
+        "pack": [
+          "18:13",
+          "18:14"
+        ],
+        "price_cents": 1925,
+        "incentive_cost_cents": 0,
+        "additional_customer_wait_minutes": 0,
+        "near_term_cook_minutes_released": 0,
+        "modeled_holding_minutes": 0,
+        "invariants_pass": true,
+        "hypothetical_urgent_bowl_earliest_pickup": null,
+        "hypothetical_urgent_bowl_fits_by_17_54": false
+      },
+      "fixed_rule_rejection": "Those cooking/packing slots are not free"
+    },
+    {
+      "case": "blocked_fryer",
+      "configuration": {
+        "scenario": "rush",
+        "seed": 7,
+        "cooks": 3,
+        "budget_cents": 1200,
+        "max_discount_cents": 300,
+        "quote_ttl_seconds": 180
+      },
+      "customer": {
+        "cart_id": "evaluation-cart",
+        "item": "gyoza",
+        "latest_pickup_minute": 120,
+        "minimum_saving_cents": 200
+      },
+      "regular": {
+        "status": "reservable",
+        "kind": "regular",
+        "pickup": "19:26",
+        "cook": [
+          "19:17",
+          "19:25"
+        ],
+        "pack": [
+          "19:25",
+          "19:26"
+        ],
+        "price_cents": 950,
+        "incentive_cost_cents": 0,
+        "additional_customer_wait_minutes": 0,
+        "near_term_cook_minutes_released": 0,
+        "modeled_holding_minutes": 0,
+        "invariants_pass": true,
+        "hypothetical_urgent_bowl_earliest_pickup": "17:53",
+        "hypothetical_urgent_bowl_fits_by_17_54": true
+      },
+      "guarded_fixed_20_minute_rule": {
+        "status": "reservable",
+        "kind": "regular",
+        "pickup": "19:26",
+        "cook": [
+          "19:17",
+          "19:25"
+        ],
+        "pack": [
+          "19:25",
+          "19:26"
+        ],
+        "price_cents": 950,
+        "incentive_cost_cents": 0,
+        "additional_customer_wait_minutes": 0,
+        "near_term_cook_minutes_released": 0,
+        "modeled_holding_minutes": 0,
+        "invariants_pass": true,
+        "hypothetical_urgent_bowl_earliest_pickup": "17:53",
+        "hypothetical_urgent_bowl_fits_by_17_54": true
+      },
+      "checked_capacity_planner": {
+        "status": "reservable",
+        "kind": "regular",
+        "pickup": "19:26",
+        "cook": [
+          "19:17",
+          "19:25"
+        ],
+        "pack": [
+          "19:25",
+          "19:26"
+        ],
+        "price_cents": 950,
+        "incentive_cost_cents": 0,
+        "additional_customer_wait_minutes": 0,
+        "near_term_cook_minutes_released": 0,
+        "modeled_holding_minutes": 0,
+        "invariants_pass": true,
+        "hypothetical_urgent_bowl_earliest_pickup": "17:53",
+        "hypothetical_urgent_bowl_fits_by_17_54": true
+      },
+      "fixed_rule_rejection": "Pickup exceeds this customer's stated latest time"
+    },
+    {
+      "case": "quiet_evening",
+      "configuration": {
+        "scenario": "quiet",
+        "seed": 7,
+        "cooks": 3,
+        "budget_cents": 1200,
+        "max_discount_cents": 300,
+        "quote_ttl_seconds": 180
+      },
+      "customer": {
+        "cart_id": "evaluation-cart",
+        "item": "don",
+        "latest_pickup_minute": 70,
+        "minimum_saving_cents": 200
+      },
+      "regular": {
+        "status": "reservable",
+        "kind": "regular",
+        "pickup": "17:46",
+        "cook": [
+          "17:42",
+          "17:45"
+        ],
+        "pack": [
+          "17:45",
+          "17:46"
+        ],
+        "price_cents": 1540,
+        "incentive_cost_cents": 0,
+        "additional_customer_wait_minutes": 0,
+        "near_term_cook_minutes_released": 0,
+        "modeled_holding_minutes": 0,
+        "invariants_pass": true,
+        "hypothetical_urgent_bowl_earliest_pickup": "17:52",
+        "hypothetical_urgent_bowl_fits_by_17_54": true
+      },
+      "guarded_fixed_20_minute_rule": {
+        "status": "reservable",
+        "kind": "regular",
+        "pickup": "17:46",
+        "cook": [
+          "17:42",
+          "17:45"
+        ],
+        "pack": [
+          "17:45",
+          "17:46"
+        ],
+        "price_cents": 1540,
+        "incentive_cost_cents": 0,
+        "additional_customer_wait_minutes": 0,
+        "near_term_cook_minutes_released": 0,
+        "modeled_holding_minutes": 0,
+        "invariants_pass": true,
+        "hypothetical_urgent_bowl_earliest_pickup": "17:52",
+        "hypothetical_urgent_bowl_fits_by_17_54": true
+      },
+      "checked_capacity_planner": {
+        "status": "reservable",
+        "kind": "regular",
+        "pickup": "17:46",
+        "cook": [
+          "17:42",
+          "17:45"
+        ],
+        "pack": [
+          "17:45",
+          "17:46"
+        ],
+        "price_cents": 1540,
+        "incentive_cost_cents": 0,
+        "additional_customer_wait_minutes": 0,
+        "near_term_cook_minutes_released": 0,
+        "modeled_holding_minutes": 0,
+        "invariants_pass": true,
+        "hypothetical_urgent_bowl_earliest_pickup": "17:52",
+        "hypothetical_urgent_bowl_fits_by_17_54": true
+      },
+      "fixed_rule_rejection": "No measured pressure in this frozen episode justifies an incentive"
+    },
+    {
+      "case": "one_cook_overload",
+      "configuration": {
+        "scenario": "overload",
+        "seed": 7,
+        "cooks": 1,
+        "budget_cents": 1200,
+        "max_discount_cents": 300,
+        "quote_ttl_seconds": 180
+      },
+      "customer": {
+        "cart_id": "evaluation-cart",
+        "item": "don",
+        "latest_pickup_minute": 120,
+        "minimum_saving_cents": 200
+      },
+      "regular": {
+        "status": "no_feasible_checkout"
+      },
+      "guarded_fixed_20_minute_rule": {
+        "status": "no_feasible_checkout"
+      },
+      "checked_capacity_planner": {
+        "status": "no_feasible_checkout"
+      },
+      "fixed_rule_rejection": null
+    },
+    {
+      "case": "short_customer_deadline",
+      "configuration": {
+        "scenario": "rush",
+        "seed": 7,
+        "cooks": 3,
+        "budget_cents": 1200,
+        "max_discount_cents": 300,
+        "quote_ttl_seconds": 180
+      },
+      "customer": {
+        "cart_id": "evaluation-cart",
+        "item": "don",
+        "latest_pickup_minute": 25,
+        "minimum_saving_cents": 200
+      },
+      "regular": {
+        "status": "reservable",
+        "kind": "regular",
+        "pickup": "17:53",
+        "cook": [
+          "17:49",
+          "17:52"
+        ],
+        "pack": [
+          "17:52",
+          "17:53"
+        ],
+        "price_cents": 1540,
+        "incentive_cost_cents": 0,
+        "additional_customer_wait_minutes": 0,
+        "near_term_cook_minutes_released": 0,
+        "modeled_holding_minutes": 0,
+        "invariants_pass": true,
+        "hypothetical_urgent_bowl_earliest_pickup": "17:57",
+        "hypothetical_urgent_bowl_fits_by_17_54": false
+      },
+      "guarded_fixed_20_minute_rule": {
+        "status": "reservable",
+        "kind": "regular",
+        "pickup": "17:53",
+        "cook": [
+          "17:49",
+          "17:52"
+        ],
+        "pack": [
+          "17:52",
+          "17:53"
+        ],
+        "price_cents": 1540,
+        "incentive_cost_cents": 0,
+        "additional_customer_wait_minutes": 0,
+        "near_term_cook_minutes_released": 0,
+        "modeled_holding_minutes": 0,
+        "invariants_pass": true,
+        "hypothetical_urgent_bowl_earliest_pickup": "17:57",
+        "hypothetical_urgent_bowl_fits_by_17_54": false
+      },
+      "checked_capacity_planner": {
+        "status": "reservable",
+        "kind": "regular",
+        "pickup": "17:53",
+        "cook": [
+          "17:49",
+          "17:52"
+        ],
+        "pack": [
+          "17:52",
+          "17:53"
+        ],
+        "price_cents": 1540,
+        "incentive_cost_cents": 0,
+        "additional_customer_wait_minutes": 0,
+        "near_term_cook_minutes_released": 0,
+        "modeled_holding_minutes": 0,
+        "invariants_pass": true,
+        "hypothetical_urgent_bowl_earliest_pickup": "17:57",
+        "hypothetical_urgent_bowl_fits_by_17_54": false
+      },
+      "fixed_rule_rejection": "Pickup exceeds this customer's stated latest time"
+    },
+    {
+      "case": "no_incentive_budget",
+      "configuration": {
+        "scenario": "rush",
+        "seed": 7,
+        "cooks": 3,
+        "budget_cents": 0,
+        "max_discount_cents": 300,
+        "quote_ttl_seconds": 180
+      },
+      "customer": {
+        "cart_id": "evaluation-cart",
+        "item": "don",
+        "latest_pickup_minute": 70,
+        "minimum_saving_cents": 200
+      },
+      "regular": {
+        "status": "reservable",
+        "kind": "regular",
+        "pickup": "17:53",
+        "cook": [
+          "17:49",
+          "17:52"
+        ],
+        "pack": [
+          "17:52",
+          "17:53"
+        ],
+        "price_cents": 1540,
+        "incentive_cost_cents": 0,
+        "additional_customer_wait_minutes": 0,
+        "near_term_cook_minutes_released": 0,
+        "modeled_holding_minutes": 0,
+        "invariants_pass": true,
+        "hypothetical_urgent_bowl_earliest_pickup": "17:57",
+        "hypothetical_urgent_bowl_fits_by_17_54": false
+      },
+      "guarded_fixed_20_minute_rule": {
+        "status": "reservable",
+        "kind": "regular",
+        "pickup": "17:53",
+        "cook": [
+          "17:49",
+          "17:52"
+        ],
+        "pack": [
+          "17:52",
+          "17:53"
+        ],
+        "price_cents": 1540,
+        "incentive_cost_cents": 0,
+        "additional_customer_wait_minutes": 0,
+        "near_term_cook_minutes_released": 0,
+        "modeled_holding_minutes": 0,
+        "invariants_pass": true,
+        "hypothetical_urgent_bowl_earliest_pickup": "17:57",
+        "hypothetical_urgent_bowl_fits_by_17_54": false
+      },
+      "checked_capacity_planner": {
+        "status": "reservable",
+        "kind": "regular",
+        "pickup": "17:53",
+        "cook": [
+          "17:49",
+          "17:52"
+        ],
+        "pack": [
+          "17:52",
+          "17:53"
+        ],
+        "price_cents": 1540,
+        "incentive_cost_cents": 0,
+        "additional_customer_wait_minutes": 0,
+        "near_term_cook_minutes_released": 0,
+        "modeled_holding_minutes": 0,
+        "invariants_pass": true,
+        "hypothetical_urgent_bowl_earliest_pickup": "17:57",
+        "hypothetical_urgent_bowl_fits_by_17_54": false
+      },
+      "fixed_rule_rejection": "Insufficient unspent incentive budget"
+    },
+    {
+      "case": "higher_minimum_saving",
+      "configuration": {
+        "scenario": "rush",
+        "seed": 7,
+        "cooks": 4,
+        "budget_cents": 1200,
+        "max_discount_cents": 300,
+        "quote_ttl_seconds": 180
+      },
+      "customer": {
+        "cart_id": "evaluation-cart",
+        "item": "don",
+        "latest_pickup_minute": 70,
+        "minimum_saving_cents": 300
+      },
+      "regular": {
+        "status": "reservable",
+        "kind": "regular",
+        "pickup": "17:53",
+        "cook": [
+          "17:49",
+          "17:52"
+        ],
+        "pack": [
+          "17:52",
+          "17:53"
+        ],
+        "price_cents": 1540,
+        "incentive_cost_cents": 0,
+        "additional_customer_wait_minutes": 0,
+        "near_term_cook_minutes_released": 0,
+        "modeled_holding_minutes": 0,
+        "invariants_pass": true,
+        "hypothetical_urgent_bowl_earliest_pickup": "17:57",
+        "hypothetical_urgent_bowl_fits_by_17_54": false
+      },
+      "guarded_fixed_20_minute_rule": {
+        "status": "reservable",
+        "kind": "regular",
+        "pickup": "17:53",
+        "cook": [
+          "17:49",
+          "17:52"
+        ],
+        "pack": [
+          "17:52",
+          "17:53"
+        ],
+        "price_cents": 1540,
+        "incentive_cost_cents": 0,
+        "additional_customer_wait_minutes": 0,
+        "near_term_cook_minutes_released": 0,
+        "modeled_holding_minutes": 0,
+        "invariants_pass": true,
+        "hypothetical_urgent_bowl_earliest_pickup": "17:57",
+        "hypothetical_urgent_bowl_fits_by_17_54": false
+      },
+      "checked_capacity_planner": {
+        "status": "reservable",
+        "kind": "flexible",
+        "pickup": "18:15",
+        "cook": [
+          "18:11",
+          "18:14"
+        ],
+        "pack": [
+          "18:14",
+          "18:15"
+        ],
+        "price_cents": 1240,
+        "incentive_cost_cents": 300,
+        "additional_customer_wait_minutes": 22,
+        "near_term_cook_minutes_released": 3,
+        "modeled_holding_minutes": 0,
+        "invariants_pass": true,
+        "hypothetical_urgent_bowl_earliest_pickup": "17:53",
+        "hypothetical_urgent_bowl_fits_by_17_54": true
+      },
+      "fixed_rule_rejection": "Saving is below this customer's declared minimum"
+    }
+  ],
+  "summary": {
+    "cases": 8,
+    "invariant_failures": 0,
+    "planner_incentive_cases": 2,
+    "guarded_fixed_incentive_cases": 1
+  },
+  "arrival_only_delay_diagnostic": {
+    "case": "default_rush_bowl",
+    "cook": [
+      "17:49",
+      "17:52"
+    ],
+    "later_pickup": "18:15",
+    "near_term_cook_minutes_released": 0,
+    "holding_minutes": 22
+  },
+  "limits": [
+    "Feasible reservations using observed estimates plus 20% allowance; no rest-of-dinner execution or future disruption model",
+    "The planner is deterministic. A separate real Gemini run selects proposals through these checked tools; no claim it outperforms the fixed rule",
+    "The urgent-bowl probe is a designed hypothetical future arrival at 17:48, tested only after selection; it does not estimate its probability",
+    "No customer adoption, causal sales uplift, actual fulfillment, profit or DoorDash integration is measured",
+    "$1 per released cooking minute is a stated owner-limit assumption; incentive cost and extra customer wait are reported explicitly"
+  ]
+}

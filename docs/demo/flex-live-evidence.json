@@ -1,0 +1,254 @@
+{
+  "source": "Real Gemini via configured Google key; synthetic frozen restaurant; no customer acceptance",
+  "job_id": "3c291e4c52da4071b838731064684050",
+  "status": "done",
+  "model": "gemini-3.1-flash-lite",
+  "invoked": [
+    "pickup_flexibility"
+  ],
+  "usage": [
+    {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 10,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 549,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 549
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 559,
+      "traffic_type": null
+    },
+    {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 12,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 3024,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 3024
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 3036,
+      "traffic_type": null
+    },
+    {
+      "cache_tokens_details": null,
+      "cached_content_token_count": null,
+      "candidates_token_count": 27,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 4087,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 4087
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 4114,
+      "traffic_type": null
+    },
+    {
+      "cache_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 2009
+        }
+      ],
+      "cached_content_token_count": 2009,
+      "candidates_token_count": 27,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 4349,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 4349
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 4376,
+      "traffic_type": null
+    },
+    {
+      "cache_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 2007
+        }
+      ],
+      "cached_content_token_count": 2007,
+      "candidates_token_count": 50,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 4611,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 4611
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 4661,
+      "traffic_type": null
+    },
+    {
+      "cache_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 2009
+        }
+      ],
+      "cached_content_token_count": 2009,
+      "candidates_token_count": 70,
+      "candidates_tokens_details": null,
+      "prompt_token_count": 5372,
+      "prompt_tokens_details": [
+        {
+          "modality": "TEXT",
+          "token_count": 5372
+        }
+      ],
+      "thoughts_token_count": null,
+      "tool_use_prompt_token_count": null,
+      "tool_use_prompt_tokens_details": null,
+      "total_token_count": 5442,
+      "traffic_type": null
+    }
+  ],
+  "tool_sequence": [
+    "inspect_checkout",
+    "compare_pickup_choices",
+    "check_pickup_choice",
+    "check_pickup_choice",
+    "publish_pickup_choices"
+  ],
+  "quote": {
+    "id": "2f01ae056eff45879123178e5d1892ba",
+    "source": "gemini",
+    "contract": "A proposal, not a hold. Choosing rechecks and reserves capacity, stock and budget atomically.",
+    "options": [
+      {
+        "pickup_minute": 23,
+        "pickup_clock": "17:53",
+        "tasks": [
+          {
+            "task_id": "candidate:cook",
+            "order_id": "candidate",
+            "station": "assembly",
+            "start": 19,
+            "end": 22,
+            "item": "don",
+            "channel": "pickup"
+          },
+          {
+            "task_id": "candidate:pack",
+            "order_id": "candidate",
+            "station": "packing",
+            "start": 22,
+            "end": 23,
+            "item": "don",
+            "channel": "pickup"
+          }
+        ],
+        "cook_minutes": 3,
+        "holding_minutes": 0,
+        "kind": "regular",
+        "discount_cents": 0,
+        "price_cents": 1540,
+        "released_cook_minutes": 0,
+        "score": 0,
+        "reason": "Earliest currently reservable pickup; regular price",
+        "id": "2f01ae056eff45879123178e5d1892ba-0"
+      },
+      {
+        "pickup_minute": 45,
+        "pickup_clock": "18:15",
+        "tasks": [
+          {
+            "task_id": "candidate:cook",
+            "order_id": "candidate",
+            "station": "assembly",
+            "start": 41,
+            "end": 44,
+            "item": "don",
+            "channel": "pickup"
+          },
+          {
+            "task_id": "candidate:pack",
+            "order_id": "candidate",
+            "station": "packing",
+            "start": 44,
+            "end": 45,
+            "item": "don",
+            "channel": "pickup"
+          }
+        ],
+        "cook_minutes": 3,
+        "holding_minutes": 0,
+        "kind": "flexible",
+        "discount_cents": 200,
+        "price_cents": 1340,
+        "released_cook_minutes": 3,
+        "score": 56,
+        "reason": "Moves production beyond pressure while preserving all existing allocations",
+        "contribution_cents": 784,
+        "id": "2f01ae056eff45879123178e5d1892ba-1"
+      },
+      {
+        "pickup_minute": 65,
+        "pickup_clock": "18:35",
+        "tasks": [
+          {
+            "task_id": "candidate:cook",
+            "order_id": "candidate",
+            "station": "assembly",
+            "start": 61,
+            "end": 64,
+            "item": "don",
+            "channel": "pickup"
+          },
+          {
+            "task_id": "candidate:pack",
+            "order_id": "candidate",
+            "station": "packing",
+            "start": 64,
+            "end": 65,
+            "item": "don",
+            "channel": "pickup"
+          }
+        ],
+        "cook_minutes": 3,
+        "holding_minutes": 0,
+        "kind": "flexible",
+        "discount_cents": 300,
+        "price_cents": 1240,
+        "released_cook_minutes": 3,
+        "score": -84,
+        "reason": "Moves production beyond pressure while preserving all existing allocations",
+        "contribution_cents": 684,
+        "id": "2f01ae056eff45879123178e5d1892ba-2"
+      }
+    ],
+    "created_at": 1794023440.920421,
+    "expires_at": 1794023620.920421
+  },
+  "bookings_after_publication": 0,
+  "spend_after_publication": 0,
+  "action": "proposals_only_customer_consent_required"
+}

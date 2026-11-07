@@ -2,6 +2,8 @@
 
 Built and measured November 6, 2026, before the hackathon. Branch: `feat/rush-control`. All restaurant, customer, courier and campaign state is synthetic. Gemini calls are real. No DoorDash/Uber/POS integration or campaign spend occurred.
 
+**New extension:** [Flexible pickup](FLEX_DEMO.md) adds voluntary later-pickup discounts, actual production reservations and real Gemini choice tools at [/flex](http://127.0.0.1:8000/flex). The original Rush engine/benchmarks below are unchanged.
+
 [Feature coverage against the full discussion](FEATURE_COVERAGE.md) distinguishes implemented, partial and unbuilt ideas. This demo is not the full earlier autonomous forecasting/staffing/stocking vision.
 
 The source is now based on V's `origin/varun` (`clock-layer`); his clock-aware main dashboard is preserved. [Rebase and integration checks](VARUN_REBASE.md) passed with zero source conflicts, 127 Python tests and eight additional browser checks. The recording and original Gemini experiments below predate that integration; the Rush engine is unchanged.
