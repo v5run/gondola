@@ -219,4 +219,4 @@ def test_api_contract_validation_origin_and_failure(client, monkeypatch):
         result = client.get(f"/api/rush/jobs/{response['id']}").json()
         if result["status"] != "running": break
     assert result["status"] == "failed" and "result" not in result
-    assert "Provider unavailable" in result["error"]
+    assert result["error"] == "Agent job failed; no successful result is available."

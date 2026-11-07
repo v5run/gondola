@@ -68,26 +68,26 @@ def test_sendgrid_payload_with_pdf(tmp_path, requests_mock):
     assert m.last_request.headers["Authorization"] == "Bearer SG.key"
 
 
-def test_notifier_sends_live_and_logs(clean_env, tmp_path, requests_mock):
+def test_notifier_credentials_still_dry_run(clean_env, tmp_path, requests_mock):
     for k, v in {"TWILIO_ACCOUNT_SID": "AC1", "TWILIO_AUTH_TOKEN": "t", "TWILIO_FROM": "+14165550100",
                  "ALERT_SMS_TO": "+14165550101,+14165550102"}.items():
         clean_env.setenv(k, v)
     m = requests_mock.post("https://api.twilio.com/2010-04-01/Accounts/AC1/Messages.json", json={"sid": "SM1"})
     n = sentinel.Notifier(tmp_path / "o.jsonl")
     r = n.send_sms("k1", "Gondola close Thu Nov 5: cash $23.50 short", datetime(2026, 11, 5, 23, 10))
-    assert r["status"] == "sent" and m.call_count == 2 and r["to"] == ["+14165550101", "+14165550102"]
-    assert json.loads((tmp_path / "o.jsonl").read_text(encoding="utf-8").splitlines()[0])["status"] == "sent"
+    assert r["status"] == "dry_run" and m.call_count == 0
+    assert json.loads((tmp_path / "o.jsonl").read_text(encoding="utf-8").splitlines()[0])["status"] == "dry_run"
     # quiet hours: held, not sent
     r2 = n.send_sms("k2", "x", datetime(2026, 11, 6, 2, 0))
-    assert r2["status"] == "held_for_8am" and m.call_count == 2
+    assert r2["status"] == "held_for_8am" and m.call_count == 0
 
 
-def test_notifier_provider_error_is_logged_not_raised(clean_env, tmp_path, requests_mock):
+def test_notifier_does_not_call_provider_with_credentials(clean_env, tmp_path, requests_mock):
     for k, v in {"TWILIO_ACCOUNT_SID": "AC1", "TWILIO_AUTH_TOKEN": "t", "TWILIO_FROM": "+1", "ALERT_SMS_TO": "+2"}.items():
         clean_env.setenv(k, v)
     requests_mock.post("https://api.twilio.com/2010-04-01/Accounts/AC1/Messages.json", status_code=400, text="bad")
     r = sentinel.Notifier(tmp_path / "o.jsonl").send_sms("k", "hi", datetime(2026, 11, 5, 23))
-    assert r["status"].startswith("failed")
+    assert r["status"] == "dry_run"
 
 
 def test_phrase_guardrail_fallback(monkeypatch):
@@ -131,12 +131,13 @@ def test_square_shift_mapping_and_window():
     assert a == "2026-11-05T09:00:00Z" and b == "2026-11-06T09:00:00Z"
 
 
-def test_square_sold_out_request(clean_env, requests_mock):
+def test_square_sold_out_is_blocked(clean_env, requests_mock):
     clean_env.setenv("SQUARE_ACCESS_TOKEN", "EAAA"); clean_env.setenv("SQUARE_LOCATION_ID", "L1")
     m = requests_mock.post("https://connect.squareupsandbox.com/v2/inventory/changes/batch-create", json={"counts": []})
-    square.SquareClient().set_sold_out("VAR1")
-    ch = m.last_request.json()["changes"][0]["physical_count"]
-    assert ch["catalog_object_id"] == "VAR1" and ch["quantity"] == "0" and ch["location_id"] == "L1"
+    with pytest.raises(square.SquareError, match="disabled"):
+        square.SquareClient().set_sold_out("VAR1")
+    assert m.call_count == 0
+
 
 
 def test_doordash_jwt_structure():
@@ -156,12 +157,14 @@ def test_pause_executor_dry_run_and_idempotent(clean_env, tmp_path):
     assert r1["status"] == "dry_run" and r2["status"] == "duplicate_ignored"
 
 
-def test_pause_executor_live_doordash(clean_env, tmp_path, requests_mock):
+def test_pause_executor_configured_doordash_still_dry_run(clean_env, tmp_path, requests_mock):
     secret = base64.urlsafe_b64encode(b"k" * 32).decode()
     for k, v in {"DOORDASH_DEVELOPER_ID": "d", "DOORDASH_KEY_ID": "k", "DOORDASH_SIGNING_SECRET": secret,
                  "DOORDASH_STORE_ID": "S9"}.items():
         clean_env.setenv(k, v)
     m = requests_mock.put("https://openapi.doordash.com/marketplace/api/v1/stores/S9/items/status", json={"ok": True})
     r = doordash.AppPauseExecutor(tmp_path / "a.jsonl").pause("hanabi", "2026-11-06", "chashu", "doordash")
-    assert r["status"] == "ok" and m.last_request.json() == [{"merchant_supplied_id": "chashu", "is_active": False}]
-    assert m.last_request.headers["Authorization"].startswith("Bearer ")
+    assert r["status"] == "dry_run" and m.call_count == 0
+    with pytest.raises(RuntimeError, match="disabled"):
+        doordash.DoorDashClient().set_item_status("S9", "chashu", False)
+    assert m.call_count == 0

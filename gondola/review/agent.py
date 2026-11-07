@@ -361,8 +361,8 @@ def run_review(date: str, db: Path | str = DB, led: Ledger | None = None, kb: KB
             r = llm_review(date, ctx, off, model, db, led)
             extra = {"dropped": r.pop("dropped"), "tool_calls": r.pop("tool_calls"), "guardrail_blocked": r.pop("guardrail_blocked")}
             off, mode = r, "adk"
-        except Exception as e:  # noqa: BLE001 - the deterministic review always stands
-            extra = {"agent_error": str(e)[:300]}
+        except Exception:  # noqa: BLE001 - the deterministic review always stands
+            extra = {"agent_error": "Agent failed; using offline review"}
     # final number check on everything we will show (the offline texts are template + code numbers; checked anyway)
     for sec in ("well", "wrong", "causes"):
         kept = []

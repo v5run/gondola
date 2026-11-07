@@ -4,6 +4,8 @@ data/*.duckdb
 out/replay/
 out/robust/
 .env
+.env.*
+!.env.example
 .venv/
 .local/
 web/node_modules/

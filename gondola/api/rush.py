@@ -46,8 +46,8 @@ def comparison(req: RushRequest):
 
 
 def _origin(request: Request):
-    origin = request.headers.get("origin")
-    if origin and origin not in {"http://127.0.0.1:8000", "http://localhost:8000", "http://127.0.0.1:5173", "http://localhost:5173"}:
+    from .security import allowed_origin
+    if not allowed_origin(request):
         raise HTTPException(403, "Model jobs are limited to the local demo origin")
 
 
@@ -65,14 +65,9 @@ def _start(kind: str, inputs: dict, work) -> dict:
         try:
             result = await work(progress)
             store.update(ident, "done", {"inputs": inputs, "events": events, "result": result})
-        except Exception as exc:
-            from ..config import get_settings
-            s = get_settings()
-            message = str(exc)
-            for key in (s.google_api_key, s.anthropic_api_key):
-                if key:
-                    message = message.replace(key, "[REDACTED]")
-            store.update(ident, "failed", {"inputs": inputs, "events": events, "error": message[:600] or type(exc).__name__})
+        except Exception:  # provider responses may contain credentials or sensitive prompts
+            store.update(ident, "failed", {"inputs": inputs, "events": events,
+                         "error": "Agent job failed; no successful result is available."})
     task = asyncio.create_task(run())
     TASKS.add(task)
     task.add_done_callback(TASKS.discard)

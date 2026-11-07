@@ -1,5 +1,7 @@
 # Gondola
 
+**Security / demo boundary:** Synthetic data only; not production-ready or an OS sandbox. App notifications and merchant writes are disabled even with credentials; local approval buttons are not authenticated live authorization. Storage is not encrypted by the app. See the [agent security explainer and production design](docs/strategy/AI_AGENT_SECURITY.md) and [security audit and launch checklist](docs/development/SECURITY_AUDIT.md). This notice supersedes older live-integration descriptions below.
+
 **Order Manager:** Present > Order manager (`/present/orders`) adds one-agent checked admission for multi-channel, multi-item requests, persistent receipts and failure guards. [Behavior, verification and limits](docs/development/ORDER_MANAGER.md). Promotions, Flex and existing workflows remain available.
 
 **Current repository:** `v5run/gondola`. [Migration and branch order](docs/development/REPOSITORY_STACK.md) records the replay of V's clock, Rush Control, tri-workflow, Flexible Pickup and latest strategy notes onto this repository's history. The combined app keeps Past/Present/Future/Review, `/rush` compatibility and `/flex` under Present.
@@ -15,15 +17,15 @@ Brainstorming: [idea-generation playbook and prompts](docs/ideas/IDEATION_PLAYBO
 Selected build: station-aware demand steering connected to forecasting and kitchen scheduling, plus guarded agent policy experiments, on branch `feat/rush-control`. [Earlier research](docs/ideas/DEMAND_STEERING.md) remains context; current implementation and measured tradeoffs are in the demo guide. The legacy nightly-close product description below describes the inherited app; its adapters still depend on their configured modes.
 
 Nightly close-out agents for a delivery-heavy restaurant. The manager taps **Close shift**; agents reconcile the
-cash drawer and app payouts, update stock, forecast tomorrow, write tomorrow's prep card, send one bundled text
-and a 2-page PDF, and arm a safety net that pauses the limited item on the apps before it runs out. Ask answers
-questions about the last year, in the app or by text.
+cash drawer and app payouts, update stock, forecast tomorrow, write tomorrow's prep card, prepare a bundled alert
+and a 2-page PDF, and replay a safety net that simulates app pauses. Ask answers questions about the last year.
+Application alerts are outbox-only; no live pause is executed.
 
 ## Run the app
 
 ### Windows (PowerShell or cmd)
 
-Needs Python 3.11+ (python.org, tick "Add to PATH"). Node.js 18+ only if `web\dist` is missing.
+Needs Python 3.11+ (python.org, tick "Add to PATH"). Node.js 20+ is required to rebuild the web app.
 
 ```powershell
 cd C:\path\to\gondola
@@ -41,13 +43,14 @@ By hand, in an activated venv (`.venv\Scripts\Activate.ps1`):
 pip install -r requirements.txt
 python -m playwright install chromium
 python -m gondola.setup               # data + 75 nights of close history (~1-3 min the first time; --skip-history for data only)
-python -m gondola.api                 # http://localhost:8000  (PORT / GONDOLA_HOST to change)
+python -m gondola.api                 # http://localhost:8000  (PORT to change; GONDOLA_HOST must be loopback)
 python -m pytest -q tests             # 86 tests, about 2 minutes
 ```
 
 If the PDF step says no browser was found, run `python -m playwright install chromium` again, or set
 `CHROME_PATH` in `.env` to `C:\Program Files\Google\Chrome\Application\chrome.exe` (Gondola also tries
-installed Chrome and Edge).
+installed Chrome and Edge). PDF rendering requires Chromium's sandbox to work; it does not fall back to an
+unsandboxed browser. Some restricted Linux/container environments cannot provide this sandbox.
 
 ### macOS / Linux
 
@@ -63,14 +66,14 @@ templates). Fill in what you have:
 
 | Setting | Turns on |
 |---|---|
-| `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, `TWILIO_FROM`, `ALERT_SMS_TO` | Real texts (replies need `PUBLIC_BASE_URL` + a tunnel, see docs/integrations.md) |
-| `SENDGRID_API_KEY`, `ALERT_EMAIL_FROM`, `ALERT_EMAIL_TO` | The nightly email with the PDF |
+| `TWILIO_ACCOUNT_SID`, `TWILIO_AUTH_TOKEN`, `TWILIO_FROM`, `ALERT_SMS_TO` | Credential configuration only; application alerts remain dry runs. A configured inbound webhook requires a signature and allowed sender. Do not expose the demo. |
+| `SENDGRID_API_KEY`, `ALERT_EMAIL_FROM`, `ALERT_EMAIL_TO` | Credential configuration only; application emails remain dry runs. |
 | `GOOGLE_API_KEY`, `GONDOLA_MODEL` | LLM wording behind the guardrail |
 | `GONDOLA_AGENTS=adk` (with `GOOGLE_API_KEY`) | **Agent mode**: the Google ADK agent graph writes the close explanations and answers Ask |
-| `SQUARE_*`, `DOORDASH_*` | Sandbox POS orders, DoorDash test-store item pause |
+| `SQUARE_*`, `DOORDASH_*` | Connector credentials; merchant writes and sandbox seeding are disabled. |
 | `CHROME_PATH` | A specific browser for the PDF |
 
-`GET /api/integrations` shows what is live. Restart the server after editing `.env`.
+`GET /api/integrations` reports credential configuration as `live`, not verified connectivity or permission to write; `delivery_enabled` and `writes_enabled` are false. Restart the server after editing `.env`.
 
 ### Agent mode vs offline mode
 
@@ -122,8 +125,8 @@ Test hook (not for the demo): `GONDOLA_NOW=2026-11-05T19:30:00` starts the clock
 | Live (real code, real results) | Demo / simulated |
 |---|---|
 | Every calculation, forecast + backtests, prep optimizer, coordinator, guardrail, PDF, report bucket lifecycle | The store: a generated year of Hanabi Ramen data (files instead of POS/app APIs) |
-| Twilio SMS, SendGrid email, Gemini wording, ADK agent mode (when keys are set) | Texts/emails go to the outbox when keys aren't set |
-| Square sandbox orders, DoorDash test-store pause (if Marketplace access is granted) | Uber Eats and Grubhub pauses (partner-gated), app payout reports (CSV), the live order stream (the data's orders released at their real times of day) |
+| Gemini wording and ADK agent mode can call a real provider when configured | Application texts/emails always go to the outbox; direct low-level SMS/email adapters can still send if invoked by trusted code |
+| Square read connector code exists; connectivity is not verified | Merchant writes and Square seeding are disabled; app payout reports are CSV fixtures and the order stream replays synthetic data |
 | The Guard's rule and recount logic | "Now" is the last business date in the data (Nov 5 2026); close messages are stamped 11:10 pm that night |
 
 ## History (backfill)
@@ -197,7 +200,7 @@ tests/                  test_gondola.py, test_api.py, test_api_v3.py (live SSE, 
 ## What's real and what's simulated here
 
 Real: every calculation, the forecast and backtests, the optimizer, the coordinator, the PDF, the bucket lifecycle, the ADK graph definition.
-Simulated: the POS/app connectors (files instead of APIs), SMS/email (written to `out/outbox.jsonl` unless Twilio/SendGrid keys are set), the LLM wording (templates unless agent mode or a key is set).
+Simulated: the POS/app connectors (files instead of APIs), application SMS/email (always written to `out/outbox.jsonl` as dry runs), the LLM wording (templates unless agent mode or a key is set).
 
 ## What changed in V2
 
@@ -205,4 +208,4 @@ Simulated: the POS/app connectors (files instead of APIs), SMS/email (written to
 - Stock takes confirmed portion counts for limited items at close (`--chashu-left`); the ingredient ledger is optional.
 - Plan produces tomorrow's card: prep per item and predicted pause time per app, with busy-night times (`tools/plan.py: close_card`).
 - Guard asks for one recount at about 40 portions left; `tools/guard.py: guarded_day` tests it under count error and pause delay (`scripts/evaluate.py` -> `guard_errors`).
-- Sentinel sends one bundled text per close, only when urgent. Every text and report passes the number guardrail.
+- Sentinel prepares one bundled text per close, only when urgent; it remains a dry run. The number guardrail is not a complete safety or truth check.

@@ -2,9 +2,7 @@
 
 - orders_for_date(): completed orders for a business date -> Gondola's POS order schema (orders + lines)
 - cash_drawer_shifts(): shifts for a date -> Gondola's cash_drawer_shifts schema (expected vs counted)
-- set_sold_out(): physical count 0 for a catalog item variation. Note: this sells the item out on EVERY channel
-  (dine-in included) and Square's DoorDash/Uber integrations remove it from those menus.
-- seed_demo_orders(): create demo-night orders in the sandbox for the live demo.
+- Writes, including sold-out and sandbox order seeding, are disabled pending an authenticated approval design.
 """
 from __future__ import annotations
 
@@ -41,9 +39,12 @@ class SquareClient:
                 "Content-Type": "application/json"}
 
     def _req(self, method: str, path: str, **kw) -> dict:
+        # Square uses POST for order search, but all other POSTs are writes.
+        if method.upper() != "GET" and not (method.upper() == "POST" and path == "/v2/orders/search"):
+            raise SquareError("Merchant writes are disabled pending authenticated manager approval")
         r = self.http.request(method, self.base + path, headers=self._h(), timeout=20, **kw)
         if r.status_code >= 300:
-            raise SquareError(f"Square {r.status_code} {path}: {r.text[:200]}")
+            raise SquareError(f"Square {r.status_code}")
         return r.json()
 
     # ------------------------------------------------------------------ reads
@@ -92,27 +93,9 @@ class SquareClient:
                          json={"idempotency_key": str(uuid.uuid4()), "changes": [change]})
 
     def seed_demo_orders(self, n: int = 20, date: str = "2026-11-05", store=None) -> list[str]:
-        """Create `n` demo-night orders (paid with the sandbox test card) so the live demo has real POS data."""
-        from ..metrics import Store
-        st = store or Store()
-        o = st.df("""SELECT o.order_id, o.channel, l.item, l.price FROM orders o JOIN order_lines l USING(order_id)
-                     WHERE o.business_date = ? AND o.status = 'completed' ORDER BY o.created_at""", [date])
-        ids = []
-        for oid, g in list(o.groupby("order_id", sort=False))[:n]:
-            ch = g.channel.iloc[0]
-            order = {"location_id": self.s.square_location_id, "reference_id": oid,
-                     "source": {"name": {"in_store": "Gondola demo", "doordash": "DoorDash", "ubereats": "Uber Eats",
-                                         "grubhub": "Grubhub"}[ch]},
-                     "line_items": [{"name": r.item, "quantity": "1",
-                                     "base_price_money": {"amount": int(round(r.price * 100)), "currency": "USD"}}
-                                    for r in g.itertuples()]}
-            j = self._req("POST", "/v2/orders", json={"idempotency_key": str(uuid.uuid4()), "order": order})
-            created = j["order"]
-            self._req("POST", "/v2/payments", json={"idempotency_key": str(uuid.uuid4()), "source_id": "cnon:card-nonce-ok",
-                                                    "amount_money": created["total_money"], "order_id": created["id"],
-                                                    "location_id": self.s.square_location_id, "autocomplete": True})
-            ids.append(created["id"])
-        return ids
+        """Disabled: even sandbox order creation is an external write."""
+        raise SquareError("Demo order creation is disabled pending authenticated manager approval")
+
 
 
 # ---------------------------------------------------------------------- mapping (pure, tested offline)

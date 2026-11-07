@@ -4,3 +4,6 @@ import os
 
 os.environ.setdefault("GONDOLA_NOW", "2026-11-05T23:30:00")
 os.environ.setdefault("GONDOLA_CLOCK", "frozen")
+
+# Starlette's in-process TestClient uses this synthetic host. Never enable it in deployments.
+os.environ.setdefault("GONDOLA_ADDITIONAL_HOSTS", "testserver")

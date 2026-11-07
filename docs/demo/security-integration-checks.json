@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-07",
+  "source_mode": "synthetic restaurant data; actual local browser/API and sandboxed PDF",
+  "model_calls": false,
+  "merchant_writes": false,
+  "browser": {
+    "checks": [
+      "Rendered /past",
+      "Rendered /present",
+      "Rendered /future",
+      "Rendered /review",
+      "Rendered /flex",
+      "Rendered /present/orders",
+      "Rendered /present/rush",
+      "Client-side main navigation",
+      "Rules admission commits and survives reload",
+      "Legacy Rush redirect",
+      "390px Order Manager layout"
+    ],
+    "javascript_errors": [],
+    "http_failures": [],
+    "order_counts": {
+      "pending": 0,
+      "accepted": 27,
+      "declined": 2,
+      "expired": 0,
+      "completed": 0
+    }
+  },
+  "pdf_and_platform_probe": {
+    "static_symlink_fallback": {
+      "unsupported": "OSError",
+      "errno": 22
+    },
+    "pdf": {
+      "bytes": 14414,
+      "report_rendered": true,
+      "local_iframe_rendered": false,
+      "javascript_rendered": false
+    }
+  },
+  "frontend": {
+    "install": "passed",
+    "build": "passed",
+    "reported_npm_advisories": 0
+  },
+  "full_suite": {
+    "status": "passed",
+    "passed": 268,
+    "skipped": 1,
+    "seconds": 252.22,
+    "warnings": 381099,
+    "skip_reason": "Windows account lacks real symlink creation privilege; modeled containment regression passed"
+  },
+  "publication_checks": {
+    "staged_files_scanned": 34,
+    "secret_or_obsolete_reference_findings": 0,
+    "source_files_matching_reviewed_candidate": 19,
+    "relative_document_links_checked": 44,
+    "broken_links": 0
+  },
+  "refreshed_demo": {
+    "health": "passed",
+    "agent_configured": true,
+    "external_writes": false,
+    "untrusted_host_status": 400,
+    "model_call_requested": false
+  }
+}

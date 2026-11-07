@@ -2,7 +2,7 @@
 
 Rules decide urgency (the LLM may only write the wording). Urgent -> SMS now; important -> email/report;
 FYI -> dashboard. Quiet hours 1-8 am except failures. One message per issue (dedupe key).
-Adapters send through Twilio / SendGrid only if credentials exist; otherwise they write to out/outbox.jsonl.
+The application notifier always writes dry runs to out/outbox.jsonl, even if credentials exist.
 """
 from __future__ import annotations
 
@@ -64,13 +64,11 @@ class Notifier:
                 self.sent.setdefault(r.get("key"), r)
         from ..config import get_settings
         self.settings = get_settings()
-        self.sms_live = self.settings.twilio_live
-        self.email_live = self.settings.sendgrid_live
+        # Background scans and close jobs have no authenticated manager approval.
+        # Keep notifications in the local outbox even when credentials are present.
+        self.sms_live = False
+        self.email_live = False
         self.live = self.sms_live and self.email_live
-        if self.sms_live and sms_to is None:
-            self.sms_to = self.settings.alert_sms_to
-        if self.email_live and email_to is None:
-            self.email_to = self.settings.alert_email_to
 
     def _deliver_sms(self, body: str) -> tuple[str, list]:
         """Send through Twilio when configured; otherwise a dry run. Returns (status, provider ids)."""

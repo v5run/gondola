@@ -1,8 +1,7 @@
 """DoorDash item status (pause one item on DoorDash only), via the Marketplace API.
 
-Access: the Marketplace API is partner-gated ("not yet generally available"); test stores are created in the
-Developer Portal. Until access is granted, AppPauseExecutor runs as a dry run and logs what it would do.
-Uber Eats and Grubhub pauses are logged the same way (their APIs need partner approval).
+All merchant writes are disabled, even with credentials. AppPauseExecutor logs dry runs.
+Partner access and authenticated, action-bound manager approval are needed before live use.
 """
 from __future__ import annotations
 
@@ -39,18 +38,14 @@ class DoorDashClient:
         return self.s.doordash_live
 
     def set_item_status(self, store_id: str, item_id: str, active: bool) -> dict:
-        token = make_jwt(self.s.doordash_developer_id, self.s.doordash_key_id, self.s.doordash_signing_secret)
-        body = [{"merchant_supplied_id": item_id, "is_active": bool(active)}]
-        r = self.http.put(f"{BASE}/marketplace/api/v1/stores/{store_id}/items/status", json=body, timeout=15,
-                          headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"})
-        if r.status_code >= 300:
-            raise RuntimeError(f"DoorDash {r.status_code}: {r.text[:200]}")
-        return r.json() if r.content else {"status": r.status_code}
+        # There is no authenticated, action-bound manager approval service yet.
+        # Credentials or a demo approval must never grant write authority.
+        raise RuntimeError("Live merchant writes are disabled pending authenticated manager approval")
 
 
 class AppPauseExecutor:
     """What Guard calls to pause/unpause an item per app. Idempotent; always logs to out/actions_log.jsonl.
-    DoorDash goes live when configured; Square sold-out (all channels) only when `square_all_channels` is set."""
+    Merchant actions are always dry runs, including when credentials or clients are supplied."""
 
     def __init__(self, log_path: Path = ROOT / "out" / "actions_log.jsonl", s: Settings | None = None,
                  doordash: DoorDashClient | None = None, square=None, square_variation_ids: dict | None = None,
@@ -82,15 +77,6 @@ class AppPauseExecutor:
             return {"key": key, "status": "duplicate_ignored"}
         rec = {"key": key, "store": store_id, "date": date, "item": item, "app": app, "active": active,
                "at": at or datetime.now().strftime("%H:%M"), "action": "set_item_status"}
-        try:
-            if app == "doordash" and self.dd.live:
-                self.dd.set_item_status(self.s.doordash_store_id, item, active)
-                rec["status"] = "ok"
-            elif app == "square" and self.square is not None and self.square_all and item in self.square_ids:
-                self.square.set_sold_out(self.square_ids[item], sold_out=not active)
-                rec["status"] = "ok"
-            else:
-                rec["status"] = "dry_run"
-        except Exception as e:  # noqa: BLE001 - a failed pause is logged and surfaced, never fatal
-            rec["status"] = f"failed: {e}"[:200]
+        # Even injected clients must not bypass the demo's write boundary.
+        rec["status"] = "dry_run"
         return self._log(rec)

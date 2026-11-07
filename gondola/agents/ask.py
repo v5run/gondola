@@ -232,7 +232,7 @@ def ask(store: Store, question: str, today: str | None = None) -> Answer:
     except Unclear as u:
         return Answer(str(u), [], None, clarify=True)
     except (ValueError, KeyError, IndexError) as e:
-        return Answer(f"I couldn't work that out. Could you rephrase with a date, like 'sales on Oct 3'?", [], {"error": str(e)}, clarify=True)
+        return Answer(f"I couldn't work that out. Could you rephrase with a date, like 'sales on Oct 3'?", [], {"error": "Unable to interpret question"}, clarify=True)
 
 
 def _ask(store: Store, question: str, today: str | None) -> Answer:

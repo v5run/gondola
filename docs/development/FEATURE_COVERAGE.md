@@ -1,6 +1,10 @@
 # Feature coverage against the discussion
 
-**Verification:** Full suite 254 passed, production build passed (83 modules), seven integrated browser checks passed including one actual Gemini three-tool/read-back run, and six complete Rush replay hashes unchanged. No live merchant write.
+**Demo hardening, November 7:** The standard entry point rejects non-loopback binds; Host, browser origin and Fetch Metadata checks provide defense in depth, not authentication. Provider failures no longer expose raw responses in the reviewed paths. PDF rendering requires Chromium sandbox support; an actual PDF smoke blocked JavaScript and a second local file. Updated frontend build and seven-page browser checks passed, including Order Manager admission/reload and mobile layout. Closed-day status and SPA fallback containment corrections are included. Integrated offline suite: **268 passed, 1 skipped** (Windows symlink privilege; modeled containment coverage passed). See [security audit](SECURITY_AUDIT.md) and [integration evidence](../demo/security-integration-checks.json).
+
+**Security audit, November 7:** App notifications and merchant writes are dry-run/blocked even with credentials; local approval is not live authorization. Twilio inbound verifies signatures and allowed senders when a token is configured. No OS sandbox, encrypted storage, authenticated access or production approval gate exists. See [security audit](SECURITY_AUDIT.md) for boundaries, offline regression tests, and release blockers. Source mode: synthetic/local; no external write was tested.
+
+**Order Manager verification before security hardening:** Full suite 254 passed, production build passed (83 modules), seven integrated browser checks passed including one actual Gemini three-tool/read-back run, and six complete Rush replay hashes unchanged. No live merchant write. The new security integration repeats offline checks; it does not establish another live-model run.
 
 **Current main addition:** [Order Manager](ORDER_MANAGER.md) is now integrated under Present for versioned multi-order admission/dispatch, using one specialist and shared reservation code. Promotions remain in Rush/Present; Flex remains its separate customer-consent workflow. Their ledgers are not a newly unified live merchant state.
 

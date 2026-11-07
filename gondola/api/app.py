@@ -18,6 +18,7 @@ from ..agents.ask import ask as ask_fn
 from ..metrics import ROOT, Store
 from ..tools import analyst, demand, sentinel
 from . import guard_live, v3, rush, flex, orders
+from .security import demo_security
 from .runs import RUNS, new_run, stream
 
 VERSION = "3.0.0"
@@ -28,7 +29,9 @@ STORE_INFO = {"id": "hanabi-sqh", "name": "Hanabi Ramen", "address": "Murray Ave
 CLOSE_LOCK = threading.Lock()
 
 app = FastAPI(title="Gondola", version=VERSION)
-app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
+app.middleware("http")(demo_security)
+app.add_middleware(CORSMiddleware, allow_origins=["http://127.0.0.1:5173", "http://localhost:5173"],
+                   allow_methods=["*"], allow_headers=["*"])
 app.include_router(v3.router)  # /api/live/stream, /api/metrics/intraday|items|range, /api/day/{date}
 app.include_router(rush.router)
 from . import tri  # noqa: E402
@@ -245,8 +248,8 @@ async def start_close(request: Request):
                                              "urgency": f.get("urgency") or sentinel.score_urgency(f)})
                 run.emit("done", {"status": res.get("status"), "seconds": res.get("seconds"), "date": d,
                                   "idempotent": bool(res.get("idempotent_hit"))})
-            except Exception as e:
-                run.emit("done", {"status": "failed", "error": str(e), "date": d})
+            except Exception:
+                run.emit("done", {"status": "failed", "error": "Close failed", "date": d})
 
     threading.Thread(target=work, daemon=True).start()
     return {"run_id": run.id, "date": d}
@@ -696,7 +699,21 @@ def _latest_urgent() -> list[dict]:
 
 
 @app.post("/api/sms/inbound")
-def sms_inbound(From: str = Form(""), Body: str = Form("")):
+async def sms_inbound(request: Request, From: str = Form(""), Body: str = Form("")):
+    from ..config import get_settings
+    from ..integrations.twilio_sms import validate_signature
+    s = get_settings()
+    # Mock messages remain usable locally without credentials. A configured Twilio
+    # webhook must use its fixed public HTTPS URL and an allowlisted sender.
+    if s.twilio_auth_token:
+        params = await request.form()
+        url = s.public_base_url.rstrip("/") + "/api/sms/inbound"
+        if (not s.public_base_url.startswith("https://") or request.url.query
+                or any(len(params.getlist(k)) != 1 for k in params.keys())
+                or From not in s.alert_sms_to
+                or not validate_signature(s.twilio_auth_token, url, dict(params),
+                                          request.headers.get("X-Twilio-Signature", ""))):
+            raise HTTPException(403, "Invalid or unauthorized SMS webhook")
     body = (Body or "").strip()
     now = _demo_now()
     if body.isdigit() and 1 <= int(body) <= 3:
@@ -771,10 +788,15 @@ if WEB.exists():
     def spa(path: str):
         if path.startswith("api/"):
             raise HTTPException(404, "not found")
-        f = WEB / path
+        f = (WEB / path).resolve()
+        if not f.is_relative_to(WEB.resolve()):
+            raise HTTPException(404, "not found")
         if path and f.is_file():
             return FileResponse(f)
-        return FileResponse(WEB / "index.html")
+        index = (WEB / "index.html").resolve()
+        if not index.is_relative_to(WEB.resolve()):
+            raise HTTPException(404, "not found")
+        return FileResponse(index)
 else:
     @app.get("/")
     def root():

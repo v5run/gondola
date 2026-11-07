@@ -31,16 +31,16 @@ def chrome_path() -> str | None:
 async def _launch(p):
     explicit = chrome_path()
     if explicit:
-        return await p.chromium.launch(executable_path=explicit, args=["--no-sandbox"])
+        return await p.chromium.launch(executable_path=explicit, chromium_sandbox=True)
     errors = []
     for kw in ({}, {"channel": "chrome"}, {"channel": "msedge"}):
         try:
-            return await p.chromium.launch(args=["--no-sandbox"], **kw)
+            return await p.chromium.launch(chromium_sandbox=True, **kw)
         except Exception as e:  # noqa: BLE001 - try the next option
             errors.append(str(e).splitlines()[0] if str(e) else type(e).__name__)
     for path in SYSTEM_BROWSERS:
         if Path(path).is_file():
-            return await p.chromium.launch(executable_path=path, args=["--no-sandbox"])
+            return await p.chromium.launch(executable_path=path, chromium_sandbox=True)
     raise RuntimeError(INSTALL_HINT + " Tried: " + " | ".join(errors))
 
 
@@ -90,7 +90,9 @@ async def _pdf_many(jobs: list[tuple[Path, Path]], concurrency: int = 4):
 
             async def one(hp: Path, pp: Path):
                 async with sem:
-                    pg = await b.new_page()
+                    # Reports are generated documents: no scripts or external requests.
+                    pg = await b.new_page(java_script_enabled=False)
+                    await pg.route("**/*", lambda route: route.continue_() if route.request.url == Path(hp).resolve().as_uri() else route.abort())
                     try:
                         await pg.goto(Path(hp).resolve().as_uri())
                         Path(pp).parent.mkdir(parents=True, exist_ok=True)

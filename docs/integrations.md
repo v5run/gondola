@@ -1,5 +1,7 @@
 # Live integrations
 
+> **Security update, 2026-11-07:** Application notification delivery, DoorDash writes, and Square writes/seeding are disabled, even with credentials. Configuration only indicates credentials are present; it does not enable these actions. Do not expose the unauthenticated demo through a tunnel. The setup and live-action claims below are historical and superseded by the [security audit](development/SECURITY_AUDIT.md). Low-level SMS/email adapters remain capable of sending if invoked directly by trusted code.
+
 Gondola runs fully offline by default. Each integration switches on when its settings are in `.env` (copy `.env.example`). `GET /api/integrations` shows which are live.
 
 | Integration | What it does | Live when | Without it |

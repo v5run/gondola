@@ -19,7 +19,6 @@ from gondola import NP, clock
 import argparse
 import json
 import time
-import traceback
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -67,10 +66,9 @@ def _timed(name, fn, log, fail: set):
         log.append({"step": name, "status": "done", "seconds": round(time.perf_counter() - t0, 2)})
         _emit("step", {"step": name, "status": "done", "seconds": round(time.perf_counter() - t0, 2)})
         return res
-    except Exception as e:  # fail soft: record, continue
-        log.append({"step": name, "status": "failed", "seconds": round(time.perf_counter() - t0, 2), "error": str(e),
-                    "trace": traceback.format_exc(limit=2)})
-        _emit("step", {"step": name, "status": "failed", "seconds": round(time.perf_counter() - t0, 2), "message": str(e)})
+    except Exception:  # fail soft: record, continue
+        log.append({"step": name, "status": "failed", "seconds": round(time.perf_counter() - t0, 2), "error": "Step failed"})
+        _emit("step", {"step": name, "status": "failed", "seconds": round(time.perf_counter() - t0, 2), "message": "Step failed"})
         return None
 
 
@@ -428,9 +426,9 @@ def _agent_wording(res: dict, date: str, agent_model) -> dict | None:
         out["seconds"] = round(time.perf_counter() - t0, 2)
         _emit("agent", {"agent": "close_coordinator", "status": "done", "seconds": out["seconds"]})
         return out
-    except Exception as e:  # noqa: BLE001
-        _emit("agent", {"agent": "close_coordinator", "status": "failed", "message": str(e)[:200]})
-        return {"mode": "adk", "error": str(e)[:500], "outputs": {}}
+    except Exception:  # noqa: BLE001
+        _emit("agent", {"agent": "close_coordinator", "status": "failed", "message": "Agent failed; using templates"})
+        return {"mode": "adk", "error": "Agent failed; using templates", "outputs": {}}
 
 
 def _run_close(date, db, as_of, fail, force, notifier, bucket, render, approve_plan, executor, portion_counts,
@@ -541,7 +539,8 @@ def _run_close(date, db, as_of, fail, force, notifier, bucket, render, approve_p
         res["review"] = _timed("review", lambda: _review_step(res, date, db, agent_model), log, fail)
     if res["closed_day"]:
         for s_ in log:
-            if s_["status"] == "failed" and "injected" in s_.get("error", ""):
+            # Closed days intentionally omit these steps; error wording is not control flow.
+            if s_["status"] == "failed" and s_["step"] in {"books", "stock", "analyst"}:
                 s_["status"], s_["error"] = "skipped", "store closed"
     failed = [s_ for s_ in log if s_["status"] == "failed" and s_["step"] != "review"]
     res["status"] = ("closed" if res["closed_day"] else "done") if not failed and not res["cross_check"] else "partial"

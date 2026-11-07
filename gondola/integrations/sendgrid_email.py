@@ -34,5 +34,5 @@ def send_email(api_key: str, from_: str, to: list[str], subject: str, body: str,
     r = requests.post(API, json=build_payload(from_, to, subject, body, attachment),
                       headers={"Authorization": f"Bearer {api_key}"}, timeout=timeout)
     if r.status_code >= 300:
-        raise SendGridError(f"SendGrid {r.status_code}: {r.text[:200]}")
+        raise SendGridError(f"SendGrid {r.status_code}")
     return r.headers.get("X-Message-Id", "accepted")

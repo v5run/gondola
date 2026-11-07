@@ -137,4 +137,4 @@ def run_replay(run: Run, db: Path | str, date: str = "2026-11-05", speed: float 
         run.emit("done", {"status": "done", "cancels": cancels, "held_back": round(held, 1), "status_quo_cancels": sq,
                           "true_left": round(max(true_left, 0), 1)})
     except Exception as e:  # never leave a stream hanging
-        run.emit("done", {"status": "failed", "error": str(e), "cancels": None, "held_back": None, "status_quo_cancels": None})
+        run.emit("done", {"status": "failed", "error": "Replay failed", "cancels": None, "held_back": None, "status_quo_cancels": None})

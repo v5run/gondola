@@ -4,6 +4,8 @@ November 7, 2026. Repository: `https://github.com/v5run/gondola`. Local checkout
 
 **Main follow-up:** Main now includes the combined workflow baseline. Order Manager is added as one subsequent commit directly on that baseline; see [its verification and boundaries](ORDER_MANAGER.md). The dependency stack below records how the combined baseline was assembled.
 
+**Security follow-up:** The reviewed [demo hardening](SECURITY_AUDIT.md) follows Order Manager on main, with corrected closed-day status and checked SPA fallback. This transfers the security changes and preserves v5run attribution; unrelated strategy history is not imported. Browser assets are rebuilt from the upgraded dependency lockfile. Merchant writes and outgoing application notifications remain disabled even with credentials; local simulation and real model access are separate capabilities.
+
 ## Dependency order
 
 1. `main`: existing application baseline.

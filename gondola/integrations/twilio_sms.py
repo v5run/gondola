@@ -22,7 +22,7 @@ def send_sms(account_sid: str, auth_token: str, from_: str, to: str, body: str, 
         data["StatusCallback"] = status_callback
     r = requests.post(API.format(sid=account_sid), data=data, auth=(account_sid, auth_token), timeout=timeout)
     if r.status_code >= 300:
-        raise TwilioError(f"Twilio {r.status_code}: {r.text[:200]}")
+        raise TwilioError(f"Twilio {r.status_code}")
     return r.json()["sid"]
 
 

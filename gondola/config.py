@@ -112,11 +112,11 @@ def integrations_status(s: Settings | None = None) -> dict:
     elif s.llm_provider == "anthropic":
         model = s.gondola_anthropic_model
     return {
-        "twilio": {"live": s.twilio_live, "from": s.twilio_from or None},
-        "sendgrid": {"live": s.sendgrid_live},
+        "twilio": {"live": s.twilio_live, "from": s.twilio_from or None, "delivery_enabled": False},
+        "sendgrid": {"live": s.sendgrid_live, "delivery_enabled": False},
         "llm": {"live": s.llm_provider is not None, "provider": s.llm_provider, "model": model},
-        "square": {"live": s.square_live, "env": s.square_env},
-        "doordash": {"live": s.doordash_live},
+        "square": {"live": s.square_live, "env": s.square_env, "writes_enabled": False},
+        "doordash": {"live": s.doordash_live, "writes_enabled": False},
         "agents": agents_status(s),
     }
 
