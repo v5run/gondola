@@ -1,5 +1,6 @@
 /** Mock API used when the backend isn't running (or VITE_MOCK=1). Data comes from fixtures.json, which is
  *  generated from the real demo year by web/scripts/make_fixtures.py, so the numbers match the backend. */
+import { toMin } from "../lib/dates";
 import fx from "./fixtures.json";
 import type { CardItem, Channel, CloseDetail, OutboxMsg } from "./types";
 import { initTri, sampleNow, triRequest, triStream } from "./mockTri";
@@ -46,10 +47,15 @@ function p50Of(d: string) {
   return same.length ? same.reduce((a, m) => a + m.orders, 0) / same.length : 180;
 }
 
-function intraday(d: string) {
+function intraday(d: string, at: string | null) {
   const o = overviewFor(d) as { curve_today: { time: string; orders: number }[]; curve_usual: { time: string; orders: number }[]; kpis: { avg_ticket: number } | null };
-  return { date: d, usual: o.curve_usual, bins: o.curve_today.map((p) => ({ time: p.time, orders: p.orders, net_sales: p.orders * (o.kpis?.avg_ticket || 30),
-    by_channel: Object.fromEntries(CHS.map((c) => [c, Math.round(p.orders * SHARE[c] * 10) / 10])) })) };
+  return { date: d, as_of: at, usual: o.curve_usual, bins: o.curve_today.flatMap((p) => {
+    const fraction = at === null ? 1 : Math.min(1, (toMin(at) - toMin(p.time)) / 15);
+    if (fraction <= 0) return [];
+    const orders = Math.floor(p.orders * fraction);
+    return [{ time: p.time, orders, net_sales: orders * (o.kpis?.avg_ticket || 30),
+      by_channel: Object.fromEntries(CHS.map((c) => [c, Math.round(orders * SHARE[c] * 10) / 10])) }];
+  }) };
 }
 function range(a: string, b: string) {
   const r = fx.metrics.filter((m) => m.date >= a && m.date <= b && m.orders > 0);
@@ -196,7 +202,7 @@ export const mock = {
     }
     if (p.startsWith("/closes/")) { if (p.slice(8) !== fx.store.today) throw new Error(`no close for ${p.slice(8)}`); return state.close; }
     if (p === "/reports") return reports();
-    if (p === "/metrics/intraday") return intraday(q.get("date") || fx.store.today);
+    if (p === "/metrics/intraday") return intraday(q.get("date") || fx.store.today, q.get("at"));
     if (p === "/metrics/items") return items(q.get("start") || fx.store.today, q.get("end") || fx.store.today);
     if (p === "/metrics/range") return range(q.get("start") || fx.store.today, q.get("end") || fx.store.today);
     if (p.startsWith("/day/")) return day(p.slice(5));

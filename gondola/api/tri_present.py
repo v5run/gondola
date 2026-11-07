@@ -48,8 +48,10 @@ def _guard(fn, *a, **kw):
 
 
 @router.get("/state")
-async def state(date: str | None = None, at: str | None = None, compare: bool = False):
-    return await run_in_threadpool(_guard, service.state, _date(date), None, _at(at), None, True, compare)
+async def state(date: str | None = None, at: str | None = None, compare: bool = False,
+                after: str | None = None):
+    lower = service.parse_hm(_at(after)) if at is not None and after is not None else None
+    return await run_in_threadpool(_guard, service.state, _date(date), None, _at(at), None, at is None, compare, lower)
 
 
 @router.get("/compare")

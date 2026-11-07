@@ -43,7 +43,7 @@ export interface PresentState {
   date: string; now: string; phase: string; headroom_pct: number; ladder: Ladder; queue: QueueRow[]; stations: Station[];
   headroom?: { pct: number; binding?: string; forecast_orders?: number; window_min?: number } | null;
   incidents?: { kind?: string; station?: string; text?: string; start?: number; end?: number }[];
-  channels: Record<string, ChannelState>; actions: Action[]; weather: { rain: boolean; temp_c: number | null; source: string } | null;
+  channels: Record<string, ChannelState>; actions: Action[]; playback_actions?: Action[]; weather: { rain: boolean; temp_c: number | null; source: string } | null;
   compare?: { fifo: CompareSide; gondola: CompareSide } | null;
 }
 export interface Compare { fifo: CompareSide; gondola: CompareSide; orders: number }
@@ -142,12 +142,13 @@ export const normDay = (d: any): FutureDay => ({ ...d, drivers: (d.drivers || []
 
 export const tri = {
   past: {
-    summary: (date: string) => req<PastSummary>(`/past/summary${q({ date })}`),
-    ledger: (date: string, opts: { types?: string[]; limit?: number; before_id?: number | null } = {}) =>
-      req<{ events: LedgerEvent[]; next_before_id: number | null }>(`/past/ledger${q({ date, types: opts.types?.join(","), limit: opts.limit ?? 200, before_id: opts.before_id })}`),
+    summary: (date: string, at?: string) => req<PastSummary>(`/past/summary${q({ date, at })}`),
+    ledger: (date: string, opts: { at?: string; types?: string[]; limit?: number; before_id?: number | null } = {}) =>
+      req<{ events: LedgerEvent[]; next_before_id: number | null }>(`/past/ledger${q({ date, at: opts.at, types: opts.types?.join(","), limit: opts.limit ?? 200, before_id: opts.before_id })}`),
   },
   present: {
-    state: (date: string) => req<PresentState>(`/present/state${q({ date })}`).then(normState),
+    state: (date: string, at?: string, after?: string, compare?: boolean) =>
+      req<PresentState>(`/present/state${q({ date, at, after, compare: compare ? "true" : undefined })}`).then(normState),
     compare: (date: string) => req<any>(`/present/compare${q({ date })}`).then((c): Compare => ({ fifo: normSide(c.fifo), gondola: normSide(c.gondola), orders: c.orders ?? 0 })),
     simulate: (date: string, action: Record<string, unknown>) => req<Simulation>("/present/simulate", post({ date, action })),
     agent: (date: string) => req<AgentRun>("/present/agent", post({ date })).then((r) => ({ ...r, actions: (r.actions || []).map((a) => normAction(a, date)) })),
@@ -155,9 +156,9 @@ export const tri = {
     saveSettings: (s: PresentSettings) => req<PresentSettings>("/present/settings", put(s)),
   },
   future: {
-    today: (date: string) => req<any>(`/future/today${q({ date })}`).then(normToday),
+    today: (date: string, at?: string) => req<any>(`/future/today${q({ date, at })}`).then(normToday),
     days: (start: string, n = 1) => req<any[]>(`/future/days${q({ start, n })}`).then((l) => l.map(normDay)),
-    items: (date: string) => req<{ items: any[] }>(`/future/items${q({ date })}`).then((r) => ({ items: (r.items || []).map(normItem) })),
+    items: (date: string, at?: string) => req<{ items: any[] }>(`/future/items${q({ date, at })}`).then((r) => ({ items: (r.items || []).map(normItem) })),
   },
   review: {
     exceptions: (date: string) => req<ExceptionItem[]>(`/review/exceptions${q({ date })}`),

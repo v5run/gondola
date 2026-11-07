@@ -199,10 +199,6 @@ a { color: inherit; }
 .legend button.off { color: var(--muted); text-decoration: line-through; }
 .hbar { position: relative; border-radius: 4px; overflow: hidden; }
 .hbar i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; transition: width .28s cubic-bezier(.2,.8,.2,1); }
-path.draw { stroke-dasharray: 4000; stroke-dashoffset: 0; animation: draw .6s ease-out; }
-@keyframes draw { from { stroke-dashoffset: 4000 } to { stroke-dashoffset: 0 } }
-circle.pulse { animation: cpulse 1.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-@keyframes cpulse { 0%,100% { transform: scale(1) } 50% { transform: scale(1.5) } }
 .grow { animation: fade .25s ease-out; }
 
 .cardhead { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
@@ -431,3 +427,34 @@ body[data-hl="report"] .rail [data-agent="report"] { background: var(--mint); co
 body[data-hl="guard"] [data-owner="guard"] { box-shadow: 0 0 0 3px var(--mint); }
 body[data-hl="guard"] .rail [data-agent="guard"] { background: var(--mint); color: var(--ink); }
 @media (max-height: 860px) { .navlink { height: 42px; } .side { gap: 6px; } }
+
+.playback-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  padding: 10px 14px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.playback-controls label { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; }
+.playback-timeline { flex: 1 1 200px; }
+.playback-timeline input { flex: 1; min-width: 80px; accent-color: var(--green); }
+.playback-livec { flex-wrap: wrap; }
+.playback-top { flex-wrap: wrap; row-gap: 10px; }
+.playback-top .right { flex-wrap: wrap; }
+
+/* Reveal the plot as one layer so solid lines, dashed lines and fills share the same sweep. */
+@media (prefers-reduced-motion: no-preference) {
+  .chart-reveal { animation: chart-reveal .48s cubic-bezier(.2,.65,.25,1); }
+  .chart-playhead { transition: transform .16s linear; }
+  @keyframes chart-reveal {
+    from { clip-path: inset(0 100% 0 0) view-box; }
+    to { clip-path: inset(0) view-box; }
+  }
+}
+
+.playback-controls > .btn { min-width: 74px; }
+.playback-status { flex: 0 0 112px; font-size: 12px; white-space: nowrap; }
+.playback-controls [role="alert"] { flex-basis: 100%; }

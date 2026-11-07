@@ -25,6 +25,10 @@ The complete earlier vision is **not** implemented. The current new demo combine
 
 Broader supplier-delay/staffing-change recovery and selective owner escalation were earlier manager-package proposals; they were not built in this Rush milestone. Count Next, Close Detective and the earlier broad idea pool remain historical alternatives, not hidden implemented features.
 
+## Workflow Playback
+
+A shared clock drives Past orders and totals, Present queue and intake decisions, and Future nowcast and limited stock. Live is the default. Chart lines and fills share a single reveal, the opening chart shows the historical baseline as soon as Past data loads, and the last loaded chart stays visible during a seek. Playback supports date selection, seeking, speed controls and keyboard shortcuts.
+
 ## Largest remaining gap against the original baseline
 
 The discussed autonomous loop was: gather merchant sales/customer data plus local signals, predict demand, update stock/staff plans, observe misses, investigate them and improve future plans. The repo has parts of forecasting/planning on synthetic data and the new operational replay, but that full continuously operating loop is not connected or verified.

@@ -419,3 +419,46 @@ def test_api_stream_open_day(client, monkeypatch):
     assert lines[0] == "event: state"
     st = json.loads(lines[1][6:])
     assert st["phase"] == "open" and st["now"] == "18:15" and st["queue"]
+
+
+def test_playback_cutoffs_and_no_ledger_writes(client, monkeypatch, tmp_path):
+    from gondola.ledger import ledger
+
+    monkeypatch.setenv("GONDOLA_NOW", f"{DEMO}T19:30:00")
+    monkeypatch.setenv("GONDOLA_CLOCK", "frozen")
+    monkeypatch.setenv("GONDOLA_LEDGER_DB", str(tmp_path / "playback.sqlite"))
+    monkeypatch.setenv("GONDOLA_FUTURE_DIR", str(tmp_path / "future"))
+    early = {"date": DEMO, "at": "11:00"}
+    late = {"date": DEMO, "at": "19:30"}
+
+    def read(endpoint, params):
+        response = client.get(f"/api/{endpoint}", params=params)
+        assert response.status_code == 200, response.text
+        return response.json()
+
+    for endpoint in ("present/state", "past/summary", "past/ledger", "metrics/intraday"):
+        assert client.get(f"/api/{endpoint}", params={**late, "at": "19:31"}).status_code == 400
+    assert not read("present/state", early)["queue"]
+    state = read("present/state", {**late, "after": "11:00"})
+    assert state["now"] == "19:30" and state["queue"]
+    assert state["playback_actions"]
+    assert all(660 <= action["minute"] < 1170 for action in state["playback_actions"])
+    assert read("past/summary", early)["processed"] < read("past/summary", late)["processed"]
+    page = read("past/ledger", {**late, "types": "order.received", "limit": 5})
+    older = read("past/ledger", {**late, "types": "order.received", "limit": 5, "before_id": page["next_before_id"]})
+    assert len(page["events"]) == len(older["events"]) == 5
+    assert {e["id"] for e in page["events"]}.isdisjoint(e["id"] for e in older["events"])
+    assert all(e["ts"] < f"{DEMO}T19:30:00" for e in page["events"])
+    opening_chart = read("metrics/intraday", early)
+    later_chart = read("metrics/intraday", late)
+    assert opening_chart["bins"] == []
+    assert opening_chart["usual"] == later_chart["usual"] and opening_chart["usual"]
+    assert all(day < DEMO for day in opening_chart["baseline_dates"])
+    assert later_chart["bins"][-1]["time"] == "19:15"
+    assert read("future/today", early)["so_far"]["orders"] < read("future/today", late)["so_far"]["orders"]
+    opening_stock = read("future/items", early)["items"]
+    later_stock = read("future/items", late)["items"]
+    assert next(i for i in opening_stock if i["key"] == "chashu")["believed_left"] > next(
+        i for i in later_stock if i["key"] == "chashu"
+    )["believed_left"]
+    assert not ledger().query(DEMO)

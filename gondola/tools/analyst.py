@@ -47,6 +47,12 @@ def find_similar_days(store: Store, date: str, k: int = 5, daily: pd.DataFrame |
              "distance": round(float(r.distance), 3)} for r in pool.itertuples()]
 
 
+def usual_weekdays(daily: pd.DataFrame, date: pd.Timestamp) -> pd.DataFrame:
+    """Up to four prior, non-holiday service days on the same weekday."""
+    return daily[(daily.business_date < date) & (daily.dow == date.day_of_week)
+                 & (daily.orders > 0) & (daily.holiday_factor == 1)].tail(4)
+
+
 def compare_periods(store: Store, date: str, baseline: str = "usual_weekday", daily: pd.DataFrame | None = None) -> dict:
     """Today vs the average of the last 4 same weekdays (or similar days)."""
     df = daily if daily is not None else store.daily_frame()
@@ -59,7 +65,7 @@ def compare_periods(store: Store, date: str, baseline: str = "usual_weekday", da
         sims = [pd.Timestamp(x["date"]) for x in find_similar_days(store, date, 5, df)]
         base = df[df.business_date.isin(sims)]
     else:
-        base = df[(df.business_date < d) & (df.dow == t.dow) & (df.orders > 0) & (df.holiday_factor == 1)].tail(4)
+        base = usual_weekdays(df, d)
     out = {"date": date, "baseline": baseline, "baseline_dates": [str(x.date()) for x in base.business_date]}
     if base.empty or float(t.orders) == 0:
         out["status"] = "no_data" if float(t.orders) == 0 else "no_baseline"

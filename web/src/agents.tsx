@@ -28,9 +28,10 @@ interface Act { text: string; t?: string }
 interface Ctx {
   pulse: (a: string, text: string, t?: string) => void;
   setRunning: (a: string, on: boolean) => void;
+  clearActivity: () => void;
   last: Record<string, Act>; running: Set<string>; flash: Record<string, number>;
 }
-const AgentCtx = createContext<Ctx>({ pulse: () => {}, setRunning: () => {}, last: {}, running: new Set(), flash: {} });
+const AgentCtx = createContext<Ctx>({ pulse: () => {}, setRunning: () => {}, clearActivity: () => {}, last: {}, running: new Set(), flash: {} });
 export const useAgents = () => useContext(AgentCtx);
 
 const setHl = (a: string | null) => { if (a) document.body.dataset.hl = a; else delete document.body.dataset.hl; };
@@ -61,7 +62,8 @@ export function AgentProvider({ children }: { children: ReactNode }) {
     if (!a) return;
     setRun((s) => { if (s.has(a) === on) return s; const n = new Set(s); if (on) n.add(a); else n.delete(a); return n; });
   }, []);
-  const v = useMemo(() => ({ pulse, setRunning, last, running, flash }), [pulse, setRunning, last, running, flash]);
+  const clearActivity = useCallback(() => { setLast({}); setFlash({}); }, []);
+  const v = useMemo(() => ({ pulse, setRunning, clearActivity, last, running, flash }), [pulse, setRunning, clearActivity, last, running, flash]);
   return <AgentCtx.Provider value={v}>{children}</AgentCtx.Provider>;
 }
 
@@ -86,6 +88,7 @@ function Glyph({ k, m, name, group, job, act, on, n }: { k: string; m: string; n
   const first = useRef(true);
   useEffect(() => {
     if (first.current) { first.current = false; return; }
+    if (!n) { setBlink(false); return; }
     setBlink(true); const t = setTimeout(() => setBlink(false), 900); return () => clearTimeout(t);
   }, [n]);
   const label = group === name ? name : `${group} · ${name}`;
