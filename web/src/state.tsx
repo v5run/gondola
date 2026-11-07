@@ -8,7 +8,7 @@ import { useAgents } from "./agents";
 
 /* ================= app: store, mode, global date, view, store clock ================= */
 
-export type View = "live" | "day";
+export type View = "live" | "playback";
 interface AppCtx {
   store: Store | null; integrations: Integrations | null; mode: "live" | "mock" | null;
   date: string; setDate: (d: string) => void; step: (n: number) => void; today: () => void;
@@ -96,6 +96,8 @@ export function AppProvider({ children }: { children: ReactNode }) {
 interface Toast { id: number; text: string; tone?: "crit" | "good" | "info" }
 const ToastCtx = createContext<(text: string, tone?: Toast["tone"]) => void>(() => {});
 export const useToast = () => useContext(ToastCtx);
+const ClearToastCtx = createContext<() => void>(() => {});
+export const useClearToasts = () => useContext(ClearToastCtx);
 
 export function ToastProvider({ children }: { children: ReactNode }) {
   const [list, setList] = useState<Toast[]>([]);
@@ -105,9 +107,10 @@ export function ToastProvider({ children }: { children: ReactNode }) {
     setList((l) => [...l.slice(-3), { id, text, tone }]);
     setTimeout(() => setList((l) => l.filter((t) => t.id !== id)), 3600);
   }, []);
+  const clear = useCallback(() => setList([]), []);
   return (
     <ToastCtx.Provider value={push}>
-      {children}
+      <ClearToastCtx.Provider value={clear}>{children}</ClearToastCtx.Provider>
       {createPortal(
         <div className="toasts" aria-live="polite">
           {list.map((t) => <div key={t.id} className={`toast ${t.tone || ""}`}><i className="dot" />{t.text}</div>)}

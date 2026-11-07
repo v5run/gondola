@@ -72,7 +72,7 @@ export interface NowInfo { today: string; now: string; tz: string; mapped: boole
 export interface LiveTick { t: string; orders: number; placed?: number; net_sales: number; by_channel: ByChannel; by_channel_sales?: ByChannel; chashu_left: number; cancels: number }
 export interface LiveEvent { t: string; kind: "sold_out" | "pause" | "rush_start" | "rush_end" | string; text: string; app?: string; chashu_left?: number; catchup?: boolean }
 export interface IntradayBin { time: string; orders: number; by_channel: ByChannel; net_sales: number }
-export interface Intraday { date: string; bins: IntradayBin[]; usual: Point[] }
+export interface Intraday { date: string; as_of?: string | null; bins: IntradayBin[]; usual: Point[] }
 export interface ItemRow { item: string; sold: number; net_sales: number; share: number }
 export interface RangeMetrics {
   start: string; end: string; days: number; net_sales: number; orders: number; avg_ticket: number; labour_pct: number;

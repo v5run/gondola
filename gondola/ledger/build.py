@@ -61,7 +61,7 @@ def build_day(date: str, db: Path | str = DB, led: Ledger | None = None, until: 
     st = store or Store(db)
     own = store is None
     try:
-        rows = _order_rows(st, date, until) + _cash_rows(st, date, until) + _payout_rows(st, date, until) + _forecast_rows(date)
+        rows = day_rows(st, date, until)
     finally:
         if own:
             st.con.close()
@@ -71,6 +71,12 @@ def build_day(date: str, db: Path | str = DB, led: Ledger | None = None, until: 
         by_type[r["type"]] = by_type.get(r["type"], 0) + 1
     return {"date": date, "new": new, "rows": len(rows), "by_type": by_type,
             "until": until.isoformat(timespec="seconds") if isinstance(until, datetime) else None}
+
+
+def day_rows(store: Store, date: str, until: datetime | None = None) -> list[dict]:
+    """Build source events without persisting them."""
+    return (_order_rows(store, date, until) + _cash_rows(store, date, until)
+            + _payout_rows(store, date, until) + _forecast_rows(date))
 
 
 def _order_rows(st: Store, date: str, until: datetime | None) -> list[dict]:

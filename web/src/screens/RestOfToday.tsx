@@ -6,6 +6,7 @@ import { DriverList, ItemClock, NowcastChart } from "../components/future";
 import { CH_COLOR, ErrorBox, Skeleton, Tween, appName, pct, shortDate } from "../components/ui";
 import { toMin } from "../lib/dates";
 import { useApp, useClock } from "../state";
+import { usePlayback } from "../playback";
 import { Own } from "../agents";
 
 
@@ -13,15 +14,16 @@ import { Own } from "../agents";
 export default function RestOfToday() {
   const { now, inService } = useApp();
   const clockNow = useClock();
+  const playback = usePlayback();
   const today = now?.today || "";
-  const [t, setT] = useState<FutureToday | null>(null);
-  const [items, setItems] = useState<LimitedItem[] | null>(null);
-  const [err, setErr] = useState<string | null>(null);
-  const [itemsErr, setItemsErr] = useState<string | null>(null);
+  const [liveForecast, setT] = useState<FutureToday | null>(null);
+  const [liveItems, setItems] = useState<LimitedItem[] | null>(null);
+  const [liveError, setErr] = useState<string | null>(null);
+  const [liveItemsError, setItemsErr] = useState<string | null>(null);
   const [ch, setCh] = useState("all");
   const [n, setN] = useState(0);
   useEffect(() => {
-    if (!today) return;
+    if (!today || playback.active) return;
     let dead = false;
     const pull = () => {
       tri.future.today(today).then((x) => { if (!dead) { setT(x); setErr(null); } }).catch((e) => !dead && setErr(String(e.message)));
@@ -30,8 +32,12 @@ export default function RestOfToday() {
     pull();
     const id = inService ? setInterval(pull, 60000) : undefined;
     return () => { dead = true; if (id) clearInterval(id); };
-  }, [today, inService, n]);
-  const nowMin = inService && clockNow ? toMin(clockNow) : t?.now ? toMin(t.now) : null;
+  }, [today, inService, n, playback.active]);
+  const t = playback.active ? playback.frame?.forecast : liveForecast;
+  const items = playback.active ? playback.frame?.items : liveItems;
+  const err = playback.active ? null : liveError;
+  const itemsErr = playback.active ? null : liveItemsError;
+  const nowMin = playback.active ? playback.minute : inService && clockNow ? toMin(clockNow) : t?.now ? toMin(t.now) : null;
   const sf = t?.so_far;
   return (
     <Page title="Future" date={false}>
@@ -64,7 +70,7 @@ export default function RestOfToday() {
           <div className="cardhead"><h3>Limited items</h3></div>
           {itemsErr && <ErrorBox error={itemsErr} />}
           {!items && !itemsErr && <Skeleton h={220} />}
-          {items && <div className="iclocks" data-testid="items">{items.map((it) => <ItemClock key={it.key} it={it} nowMin={nowMin} />)}</div>}
+          {items && <div className="iclocks" data-testid="items">{items.map((it) => <ItemClock key={it.key} it={playback.active ? { ...it, believed_left: Math.max(0, it.believed_left) } : it} nowMin={nowMin} closeMin={playback.active ? playback.close : undefined} />)}</div>}
         </div>
       </div>
     </Page>

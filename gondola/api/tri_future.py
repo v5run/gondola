@@ -66,9 +66,9 @@ def _drivers(date: str, now) -> list[dict]:
                        lambda: DR.drivers(date, db, now=now))
 
 
-def _today(date: str, now) -> dict:
+def _today(date: str, now, issue: bool = True) -> dict:
     db = _db()
-    v = N.today_view(date, now, db, issue=True)
+    v = N.today_view(date, now, db, issue=issue)
     v["drivers"] = _drivers(date, now)
     v["adjustments"] = [{"driver": a["driver"], "pct": a["pct"], "evidence": a.get("evidence"), "by": a.get("by"),
                          "reason": a.get("reason")} for a in B.stored_adjustments(date)]  # Outlook agent deferred: []
@@ -81,8 +81,8 @@ async def today(date: str | None = None, at: str | None = None):
     db = _db()
     d = _date(date, B.today_for(None, db))
     now, stamp = _moment(d, at)
-    key = ("today", B.db_version(db), stamp, _adj_stamp(d))
-    return await run_in_threadpool(_RESP.get, key, lambda: _today(d, now))
+    key = ("today", B.db_version(db), stamp, _adj_stamp(d), at is None)
+    return await run_in_threadpool(_RESP.get, key, lambda: _today(d, now, issue=at is None))
 
 
 @router.get("/arrivals")

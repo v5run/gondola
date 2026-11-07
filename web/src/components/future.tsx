@@ -40,13 +40,18 @@ export function NowcastChart({ bins, channel, nowMin, drivers, H = 270 }: { bins
         onMouseLeave={() => setHover(null)}>
         {[0.5, 1].map((f) => <text key={f} x={L - 8} y={y(ymax * f / 1.08) + 4} fontSize="12" fill="#9fc2b8" textAnchor="end">{Math.round(ymax * f / 1.08)}</text>)}
         {nowMin !== null && nowMin > t0 && <rect x={L} y={T} width={Math.max(0, Math.min(pw, x(nowMin) - L))} height={ph} fill="#0b3d33" />}
-        <path d={band} fill="#1b5d4e" />
-        {pts.map((p, i) => p.actual !== null && (
-          <rect key={p.time} x={mid(p) - bw / 2} y={y(p.actual)} width={bw} height={Math.max(0, y(0) - y(p.actual))} rx="2" fill={i === hover ? "#fbf0d6" : channel === "all" ? "#8cc8ff" : CH_COLOR[channel] || "#8cc8ff"} />
-        ))}
-        <path d={line} fill="none" stroke="#b8e986" strokeWidth="2.4" strokeLinejoin="round" />
+        <g className="chart-reveal">
+          <path d={band} fill="#1b5d4e" />
+          {pts.map((p, i) => p.actual !== null && (
+            <rect key={p.time} x={mid(p) - bw / 2} y={y(p.actual)} width={bw} height={Math.max(0, y(0) - y(p.actual))} rx="2" fill={i === hover ? "#fbf0d6" : channel === "all" ? "#8cc8ff" : CH_COLOR[channel] || "#8cc8ff"} />
+          ))}
+          <path d={line} fill="none" stroke="#b8e986" strokeWidth="2.4" strokeLinejoin="round" />
+        </g>
         <line x1={L} x2={L + pw} y1={y(0)} y2={y(0)} stroke="#3d7a6c" />
-        {nowMin !== null && nowMin > t0 && nowMin < t1 && <g><line x1={x(nowMin)} x2={x(nowMin)} y1={T} y2={y(0)} stroke="#fff" strokeWidth="1.5" /></g>}
+        {nowMin !== null && nowMin > t0 && nowMin < t1 &&
+          <g className="chart-playhead" style={{ transform: `translateX(${x(nowMin)}px)` }}>
+            <line x1={0} x2={0} y1={T} y2={y(0)} stroke="#fff" strokeWidth="1.5" />
+          </g>}
         {flags.map((d, i) => {
           const fx = x(toMin(d.time!));
           const right = fx > W - 200;
