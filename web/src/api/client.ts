@@ -21,7 +21,7 @@ export async function apiMode(): Promise<"live" | "mock"> {
   return probing;
 }
 
-async function req<T>(path: string, init?: RequestInit): Promise<T> {
+export async function req<T>(path: string, init?: RequestInit): Promise<T> {
   if ((await apiMode()) === "mock") return mock.request(path, init) as Promise<T>;
   const r = await fetch(`/api${path}`, {
     ...init, headers: { "Content-Type": "application/json", ...(init?.headers || {}) },

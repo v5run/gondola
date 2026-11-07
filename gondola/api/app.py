@@ -31,6 +31,8 @@ app = FastAPI(title="Gondola", version=VERSION)
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 app.include_router(v3.router)  # /api/live/stream, /api/metrics/intraday|items|range, /api/day/{date}
 app.include_router(rush.router)
+from . import tri  # noqa: E402
+app.include_router(tri.router)  # Past / Present / Future / Review
 
 
 def out_dir() -> Path:

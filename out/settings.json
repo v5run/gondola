@@ -1,0 +1,60 @@
+{
+  "present": {
+    "ladder": {
+      "promote_above": 20.0,
+      "quote_below": 0.0,
+      "pause_below": -10.0,
+      "busy_below": -25.0,
+      "hysteresis_min": 2,
+      "release_margin_pct": 3.0
+    },
+    "weights": {
+      "courier": 1.0,
+      "courier_far_cap_min": 8.0,
+      "courier_arriving_min": 3.0,
+      "distance": 0.5,
+      "hold": 1.0,
+      "weather": 1.0,
+      "rain_buffer_min": 3.0,
+      "snow_buffer_min": 5.0,
+      "cold_hold_factor": 0.7,
+      "cold_temp_c": 3.0,
+      "batch": 1.0,
+      "batch_window_min": 3.0,
+      "fairness": 1.0,
+      "in_store": 4.0,
+      "urgent_slack_min": 1.0,
+      "reshuffle_margin_min": 1.5
+    },
+    "max_wait_min": 35,
+    "kitchen": {
+      "slots": {
+        "noodles": 12,
+        "fryer": 4,
+        "assembly": 2,
+        "packing": 3
+      },
+      "line_share": 0.5,
+      "min_cooks": 2,
+      "max_cooks": 8,
+      "dine_in_target_min": 12,
+      "window_min": 30,
+      "forecast_lead_min": 15,
+      "jit_min_headroom_pct": 50.0,
+      "safety_buffer_min": 2.0
+    },
+    "pricing": {
+      "budget_cents": 1200,
+      "discount_cents": 100,
+      "every_min": 5
+    },
+    "agent": {
+      "trigger_headroom_pct": -10.0,
+      "trigger_lookahead_min": 20,
+      "min_gap_min": 10,
+      "action_ttl_min": 15,
+      "courier_delay_cluster": 3,
+      "courier_delay_min": 5.0
+    }
+  }
+}

@@ -5,27 +5,27 @@
   {
    "step": "stock",
    "status": "done",
-   "seconds": 0.08
+   "seconds": 0.07
   },
   {
    "step": "books",
    "status": "done",
-   "seconds": 0.22
+   "seconds": 0.41
   },
   {
    "step": "demand",
    "status": "done",
-   "seconds": 0.38
+   "seconds": 0.98
   },
   {
    "step": "analyst",
    "status": "done",
-   "seconds": 0.06
+   "seconds": 0.07
   },
   {
    "step": "plan",
    "status": "done",
-   "seconds": 0.03
+   "seconds": 0.02
   },
   {
    "step": "sentinel",
@@ -35,7 +35,7 @@
   {
    "step": "report",
    "status": "done",
-   "seconds": 0.02
+   "seconds": 0.03
   },
   {
    "step": "guard",
@@ -313,14 +313,6 @@
   ],
   "estimate_today": [
    {
-    "channel": "doordash",
-    "orders": 217,
-    "sales": 7359.0,
-    "expected": 5519.25,
-    "reported": null,
-    "difference": null
-   },
-   {
     "channel": "grubhub",
     "orders": 28,
     "sales": 1064.25,
@@ -333,6 +325,14 @@
     "orders": 84,
     "sales": 2768.7,
     "expected": 2021.15,
+    "reported": null,
+    "difference": null
+   },
+   {
+    "channel": "doordash",
+    "orders": 217,
+    "sales": 7359.0,
+    "expected": 5519.25,
     "reported": null,
     "difference": null
    }
@@ -1341,6 +1341,6 @@
   "note": "Rule armed; executor fires during service when the trigger is met."
  },
  "status": "done",
- "seconds": 0.53,
- "run_id": "2026-10-08-20261105T214453151027"
+ "seconds": 1.13,
+ "run_id": "2026-10-08-20261107T065641598272"
 }

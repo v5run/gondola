@@ -5,17 +5,17 @@
   {
    "step": "stock",
    "status": "done",
-   "seconds": 0.04
+   "seconds": 0.06
   },
   {
    "step": "books",
    "status": "done",
-   "seconds": 0.35
+   "seconds": 0.46
   },
   {
    "step": "demand",
    "status": "done",
-   "seconds": 0.52
+   "seconds": 0.92
   },
   {
    "step": "analyst",
@@ -35,7 +35,7 @@
   {
    "step": "report",
    "status": "done",
-   "seconds": 0.03
+   "seconds": 0.02
   },
   {
    "step": "guard",
@@ -343,14 +343,6 @@
   ],
   "estimate_today": [
    {
-    "channel": "doordash",
-    "orders": 233,
-    "sales": 8210.95,
-    "expected": 6158.21,
-    "reported": null,
-    "difference": null
-   },
-   {
     "channel": "grubhub",
     "orders": 48,
     "sales": 1641.75,
@@ -363,6 +355,14 @@
     "orders": 83,
     "sales": 2814.35,
     "expected": 2054.48,
+    "reported": null,
+    "difference": null
+   },
+   {
+    "channel": "doordash",
+    "orders": 233,
+    "sales": 8210.95,
+    "expected": 6158.21,
     "reported": null,
     "difference": null
    }
@@ -1144,17 +1144,17 @@
    {
     "item": "Shoyu",
     "sold": 121,
-    "sales": 2130.1500000000033
+    "sales": 2130.150000000003
    },
    {
     "item": "Chicken Paitan",
     "sold": 119,
-    "sales": 2095.500000000003
+    "sales": 2095.5000000000027
    },
    {
     "item": "Gyoza",
     "sold": 113,
-    "sales": 968.7999999999986
+    "sales": 968.7999999999987
    },
    {
     "item": "Tantanmen",
@@ -1169,7 +1169,7 @@
    {
     "item": "Chashu Don",
     "sold": 79,
-    "sales": 1180.2
+    "sales": 1180.1999999999998
    }
   ]
  },
@@ -1335,6 +1335,6 @@
   "note": "Rule armed; executor fires during service when the trigger is met."
  },
  "status": "done",
- "seconds": 0.64,
- "run_id": "2026-10-23-20261105T214504988641"
+ "seconds": 1.04,
+ "run_id": "2026-10-23-20261107T065656863162"
 }

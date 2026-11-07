@@ -15,17 +15,17 @@
   {
    "step": "demand",
    "status": "done",
-   "seconds": 0.49
+   "seconds": 0.84
   },
   {
    "step": "analyst",
    "status": "done",
-   "seconds": 0.09
+   "seconds": 0.06
   },
   {
    "step": "plan",
    "status": "done",
-   "seconds": 0.05
+   "seconds": 0.02
   },
   {
    "step": "sentinel",
@@ -1251,6 +1251,6 @@
   "note": "Rule armed; executor fires during service when the trigger is met."
  },
  "status": "done",
- "seconds": 0.66,
- "run_id": "2026-09-06-20261105T214428958335"
+ "seconds": 0.96,
+ "run_id": "2026-09-06-20261107T065613663303"
 }

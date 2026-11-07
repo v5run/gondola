@@ -2,7 +2,7 @@
  "nights": 75,
  "first": "2026-08-23",
  "last": "2026-11-05",
- "built_at": "2026-11-05T21:45:24",
+ "built_at": "2026-11-07T06:57:17",
  "monthly": [
   "2026-08",
   "2026-09",
@@ -12,126 +12,126 @@
   {
    "date": "2026-08-23",
    "status": "done",
-   "seconds": 4.61,
+   "seconds": 6.41,
    "urgent": 0,
    "chashu_left": 5.0
   },
   {
    "date": "2026-08-24",
    "status": "done",
-   "seconds": 0.62,
+   "seconds": 0.93,
    "urgent": 2,
    "chashu_left": 0.0
   },
   {
    "date": "2026-08-25",
    "status": "done",
-   "seconds": 0.89,
+   "seconds": 0.86,
    "urgent": 0,
    "chashu_left": 5.0
   },
   {
    "date": "2026-08-26",
    "status": "done",
-   "seconds": 0.84,
+   "seconds": 1.03,
    "urgent": 0,
    "chashu_left": 26.0
   },
   {
    "date": "2026-08-27",
    "status": "done",
-   "seconds": 0.56,
+   "seconds": 0.91,
    "urgent": 3,
    "chashu_left": 0.0
   },
   {
    "date": "2026-08-28",
    "status": "done",
-   "seconds": 0.62,
+   "seconds": 0.86,
    "urgent": 2,
    "chashu_left": 0.0
   },
   {
    "date": "2026-08-29",
    "status": "done",
-   "seconds": 0.67,
+   "seconds": 0.98,
    "urgent": 0,
    "chashu_left": 0.0
   },
   {
    "date": "2026-08-30",
    "status": "done",
-   "seconds": 0.78,
+   "seconds": 0.97,
    "urgent": 0,
    "chashu_left": 17.0
   },
   {
    "date": "2026-08-31",
    "status": "done",
-   "seconds": 0.85,
+   "seconds": 0.95,
    "urgent": 0,
    "chashu_left": 24.0
   },
   {
    "date": "2026-09-01",
    "status": "done",
-   "seconds": 0.62,
+   "seconds": 0.9,
    "urgent": 0,
    "chashu_left": 24.0
   },
   {
    "date": "2026-09-02",
    "status": "done",
-   "seconds": 0.65,
+   "seconds": 0.84,
    "urgent": 0,
    "chashu_left": 29.0
   },
   {
    "date": "2026-09-03",
    "status": "done",
-   "seconds": 0.65,
+   "seconds": 0.99,
    "urgent": 1,
    "chashu_left": 1.0
   },
   {
    "date": "2026-09-04",
    "status": "done",
-   "seconds": 0.75,
+   "seconds": 0.95,
    "urgent": 0,
    "chashu_left": 19.0
   },
   {
    "date": "2026-09-05",
    "status": "done",
-   "seconds": 0.6,
+   "seconds": 1.1,
    "urgent": 0,
    "chashu_left": 6.0
   },
   {
    "date": "2026-09-06",
    "status": "done",
-   "seconds": 0.66,
+   "seconds": 0.96,
    "urgent": 1,
    "chashu_left": 16.0
   },
   {
    "date": "2026-09-07",
    "status": "done",
-   "seconds": 0.73,
+   "seconds": 0.97,
    "urgent": 0,
    "chashu_left": 38.0
   },
   {
    "date": "2026-09-08",
    "status": "done",
-   "seconds": 0.7,
+   "seconds": 0.95,
    "urgent": 0,
    "chashu_left": 4.0
   },
   {
    "date": "2026-09-09",
    "status": "done",
-   "seconds": 0.96,
+   "seconds": 0.78,
    "urgent": 1,
    "chashu_left": 0.0
   },
@@ -145,392 +145,392 @@
   {
    "date": "2026-09-11",
    "status": "done",
-   "seconds": 0.85,
+   "seconds": 0.71,
    "urgent": 0,
    "chashu_left": 22.0
   },
   {
    "date": "2026-09-12",
    "status": "done",
-   "seconds": 0.74,
+   "seconds": 0.71,
    "urgent": 0,
    "chashu_left": 5.0
   },
   {
    "date": "2026-09-13",
    "status": "done",
-   "seconds": 0.85,
+   "seconds": 0.78,
    "urgent": 2,
    "chashu_left": 0.0
   },
   {
    "date": "2026-09-14",
    "status": "done",
-   "seconds": 0.84,
+   "seconds": 0.74,
    "urgent": 0,
    "chashu_left": 30.0
   },
   {
    "date": "2026-09-15",
    "status": "done",
-   "seconds": 0.81,
+   "seconds": 0.67,
    "urgent": 0,
    "chashu_left": 38.0
   },
   {
    "date": "2026-09-16",
    "status": "done",
-   "seconds": 0.68,
+   "seconds": 0.77,
    "urgent": 0,
    "chashu_left": 40.0
   },
   {
    "date": "2026-09-17",
    "status": "done",
-   "seconds": 0.55,
+   "seconds": 0.86,
    "urgent": 0,
    "chashu_left": 0.0
   },
   {
    "date": "2026-09-18",
    "status": "done",
-   "seconds": 0.64,
+   "seconds": 0.83,
    "urgent": 1,
    "chashu_left": 25.0
   },
   {
    "date": "2026-09-19",
    "status": "done",
-   "seconds": 0.71,
+   "seconds": 0.85,
    "urgent": 3,
    "chashu_left": 0.0
   },
   {
    "date": "2026-09-20",
    "status": "done",
-   "seconds": 0.58,
+   "seconds": 0.75,
    "urgent": 0,
    "chashu_left": 35.0
   },
   {
    "date": "2026-09-21",
    "status": "done",
-   "seconds": 0.82,
+   "seconds": 0.83,
    "urgent": 0,
    "chashu_left": 15.0
   },
   {
    "date": "2026-09-22",
    "status": "done",
-   "seconds": 0.7,
+   "seconds": 0.87,
    "urgent": 2,
    "chashu_left": 0.0
   },
   {
    "date": "2026-09-23",
    "status": "done",
-   "seconds": 0.7,
+   "seconds": 0.81,
    "urgent": 0,
    "chashu_left": 5.0
   },
   {
    "date": "2026-09-24",
    "status": "done",
-   "seconds": 0.74,
+   "seconds": 0.72,
    "urgent": 0,
    "chashu_left": 20.0
   },
   {
    "date": "2026-09-25",
    "status": "done",
-   "seconds": 0.53,
+   "seconds": 0.82,
    "urgent": 1,
    "chashu_left": 18.0
   },
   {
    "date": "2026-09-26",
    "status": "done",
-   "seconds": 0.73,
+   "seconds": 0.83,
    "urgent": 0,
    "chashu_left": 27.0
   },
   {
    "date": "2026-09-27",
    "status": "done",
-   "seconds": 0.57,
+   "seconds": 0.97,
    "urgent": 2,
    "chashu_left": 0.0
   },
   {
    "date": "2026-09-28",
    "status": "done",
-   "seconds": 0.73,
+   "seconds": 1.0,
    "urgent": 0,
    "chashu_left": 0.0
   },
   {
    "date": "2026-09-29",
    "status": "done",
-   "seconds": 0.54,
+   "seconds": 0.75,
    "urgent": 0,
    "chashu_left": 40.0
   },
   {
    "date": "2026-09-30",
    "status": "done",
-   "seconds": 0.74,
+   "seconds": 0.97,
    "urgent": 1,
    "chashu_left": 0.0
   },
   {
    "date": "2026-10-01",
    "status": "done",
-   "seconds": 0.68,
+   "seconds": 0.73,
    "urgent": 0,
    "chashu_left": 11.0
   },
   {
    "date": "2026-10-02",
    "status": "done",
-   "seconds": 0.56,
+   "seconds": 0.77,
    "urgent": 2,
    "chashu_left": 0.0
   },
   {
    "date": "2026-10-03",
    "status": "done",
-   "seconds": 0.6,
+   "seconds": 0.79,
    "urgent": 1,
    "chashu_left": 35.0
   },
   {
    "date": "2026-10-04",
    "status": "done",
-   "seconds": 0.69,
+   "seconds": 0.91,
    "urgent": 0,
    "chashu_left": 5.0
   },
   {
    "date": "2026-10-05",
    "status": "done",
-   "seconds": 0.55,
+   "seconds": 0.94,
    "urgent": 0,
    "chashu_left": 14.0
   },
   {
    "date": "2026-10-06",
    "status": "done",
-   "seconds": 0.72,
+   "seconds": 0.87,
    "urgent": 0,
    "chashu_left": 32.0
   },
   {
    "date": "2026-10-07",
    "status": "done",
-   "seconds": 0.68,
+   "seconds": 0.97,
    "urgent": 1,
    "chashu_left": 0.0
   },
   {
    "date": "2026-10-08",
    "status": "done",
-   "seconds": 0.53,
+   "seconds": 1.13,
    "urgent": 1,
    "chashu_left": 0.0
   },
   {
    "date": "2026-10-09",
    "status": "done",
-   "seconds": 0.7,
+   "seconds": 0.91,
    "urgent": 0,
    "chashu_left": 10.0
   },
   {
    "date": "2026-10-10",
    "status": "done",
-   "seconds": 0.89,
+   "seconds": 0.9,
    "urgent": 0,
    "chashu_left": 2.0
   },
   {
    "date": "2026-10-11",
    "status": "done",
-   "seconds": 0.73,
+   "seconds": 1.11,
    "urgent": 0,
    "chashu_left": 18.0
   },
   {
    "date": "2026-10-12",
    "status": "done",
-   "seconds": 0.96,
+   "seconds": 0.89,
    "urgent": 0,
    "chashu_left": 21.0
   },
   {
    "date": "2026-10-13",
    "status": "done",
-   "seconds": 0.57,
+   "seconds": 1.02,
    "urgent": 1,
    "chashu_left": 25.0
   },
   {
    "date": "2026-10-14",
    "status": "done",
-   "seconds": 0.75,
+   "seconds": 0.97,
    "urgent": 0,
    "chashu_left": 33.0
   },
   {
    "date": "2026-10-15",
    "status": "done",
-   "seconds": 0.51,
+   "seconds": 0.93,
    "urgent": 0,
    "chashu_left": 34.0
   },
   {
    "date": "2026-10-16",
    "status": "done",
-   "seconds": 1.02,
+   "seconds": 0.93,
    "urgent": 0,
    "chashu_left": 22.0
   },
   {
    "date": "2026-10-17",
    "status": "done",
-   "seconds": 0.71,
+   "seconds": 0.91,
    "urgent": 0,
    "chashu_left": 40.0
   },
   {
    "date": "2026-10-18",
    "status": "done",
-   "seconds": 0.79,
+   "seconds": 0.95,
    "urgent": 1,
    "chashu_left": 0.0
   },
   {
    "date": "2026-10-19",
    "status": "done",
-   "seconds": 0.59,
+   "seconds": 1.0,
    "urgent": 0,
    "chashu_left": 40.0
   },
   {
    "date": "2026-10-20",
    "status": "done",
-   "seconds": 0.89,
+   "seconds": 1.01,
    "urgent": 1,
    "chashu_left": 0.0
   },
   {
    "date": "2026-10-21",
    "status": "done",
-   "seconds": 0.51,
+   "seconds": 1.14,
    "urgent": 0,
    "chashu_left": 5.0
   },
   {
    "date": "2026-10-22",
    "status": "done",
-   "seconds": 0.83,
+   "seconds": 1.07,
    "urgent": 0,
    "chashu_left": 8.0
   },
   {
    "date": "2026-10-23",
    "status": "done",
-   "seconds": 0.64,
+   "seconds": 1.04,
    "urgent": 0,
    "chashu_left": 12.0
   },
   {
    "date": "2026-10-24",
    "status": "done",
-   "seconds": 0.89,
+   "seconds": 0.99,
    "urgent": 1,
    "chashu_left": 0.0
   },
   {
    "date": "2026-10-25",
    "status": "done",
-   "seconds": 0.78,
+   "seconds": 0.9,
    "urgent": 0,
    "chashu_left": 22.0
   },
   {
    "date": "2026-10-26",
    "status": "done",
-   "seconds": 0.65,
+   "seconds": 0.94,
    "urgent": 0,
    "chashu_left": 11.0
   },
   {
    "date": "2026-10-27",
    "status": "done",
-   "seconds": 0.54,
+   "seconds": 1.09,
    "urgent": 0,
    "chashu_left": 19.0
   },
   {
    "date": "2026-10-28",
    "status": "done",
-   "seconds": 0.77,
+   "seconds": 0.81,
    "urgent": 0,
    "chashu_left": 40.0
   },
   {
    "date": "2026-10-29",
    "status": "done",
-   "seconds": 0.94,
+   "seconds": 0.91,
    "urgent": 0,
    "chashu_left": 14.0
   },
   {
    "date": "2026-10-30",
    "status": "done",
-   "seconds": 0.59,
+   "seconds": 0.73,
    "urgent": 1,
    "chashu_left": 0.0
   },
   {
    "date": "2026-10-31",
    "status": "done",
-   "seconds": 0.65,
+   "seconds": 0.88,
    "urgent": 0,
    "chashu_left": 38.0
   },
   {
    "date": "2026-11-01",
    "status": "done",
-   "seconds": 0.77,
+   "seconds": 0.92,
    "urgent": 0,
    "chashu_left": 24.0
   },
   {
    "date": "2026-11-02",
    "status": "done",
-   "seconds": 0.55,
+   "seconds": 0.91,
    "urgent": 0,
    "chashu_left": 29.0
   },
   {
    "date": "2026-11-03",
    "status": "done",
-   "seconds": 0.55,
+   "seconds": 0.5,
    "urgent": 0,
    "chashu_left": 9.0
   },
   {
    "date": "2026-11-04",
    "status": "done",
-   "seconds": 0.38,
+   "seconds": 0.5,
    "urgent": 0,
    "chashu_left": 24.0
   },
   {
    "date": "2026-11-05",
    "status": "done",
-   "seconds": 0.37,
+   "seconds": 0.5,
    "urgent": 3,
    "chashu_left": 0.0
   }

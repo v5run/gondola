@@ -48,6 +48,15 @@ def ensure_history(days: int = 75, force: bool = False, quiet: bool = False) -> 
     return True
 
 
+def ensure_review_history(days: int = 75, quiet: bool = False) -> bool:
+    """Tri-workflow: ledger, exceptions, digests and knowledge base for the past nights (gondola.review.history).
+    The backfill's closes already run the Review; this only fills nights that have none. Returns True if it ran."""
+    from .review import history
+    if not quiet:
+        print("Checking the ledger / review history...", flush=True)
+    return history.ensure(days, quiet=quiet) is not None
+
+
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--force", action="store_true")
@@ -60,4 +69,6 @@ if __name__ == "__main__":
     if not a.skip_history:
         ran = ensure_history(a.history_days, force=a.history)
         print("History ready." if not ran else "History built.")
+        ran = ensure_review_history(a.history_days)
+        print("Review history ready." if not ran else "Review history built.")
     sys.exit(0)

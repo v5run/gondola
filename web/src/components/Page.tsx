@@ -1,15 +1,24 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import { useApp, useClock, useLive } from "../state";
+import { sectionOf } from "../nav";
 import { D, iso } from "../lib/dates";
 import { Icon, Segmented, clock } from "./ui";
 
-/** Screen header: title, the global date control, screen actions, the live controls. */
-export function Page({ title, actions, children, live = true }: { title: ReactNode; actions?: ReactNode; children: ReactNode; live?: boolean }) {
+/** Screen header: the workflow and its views (or a title), the global date control, screen actions, the live controls. */
+export function Page({ title, actions, children, live = true, date = true }: { title: ReactNode; actions?: ReactNode; children: ReactNode; live?: boolean; date?: boolean }) {
+  const loc = useLocation();
+  const sec = sectionOf(loc.pathname);
   return (
     <>
       <header className="top">
-        <h1>{title}</h1>
-        <DateControl />
+        <div className="ttl">
+          <h1>{sec ? sec.name : title}</h1>
+          {sec && <nav className="tabs" aria-label={`${sec.name} views`}>
+            {sec.tabs.map(([to, label]) => <NavLink key={to} to={to} end className={({ isActive }) => (isActive ? "on" : "")}>{label}</NavLink>)}
+          </nav>}
+        </div>
+        {date && <DateControl />}
         <div className="right">
           {actions}
           {live && <LiveControl />}

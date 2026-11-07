@@ -76,6 +76,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     const k = (e: KeyboardEvent) => {
       if (e.metaKey || e.ctrlKey || e.altKey || (e.key !== "ArrowLeft" && e.key !== "ArrowRight")) return;
+      if (document.body.hasAttribute("data-ownkeys")) return; // the screen steps its own days (Future: forward only)
       const t = e.target as HTMLElement;
       if (t.closest("input, textarea, select, [contenteditable], [role=slider], [data-keys]")) return;
       e.preventDefault();

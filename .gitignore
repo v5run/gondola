@@ -10,3 +10,7 @@ web/node_modules/
 .out_backfill/
 .out_old_history/
 out/rebuilt/
+out/ledger.sqlite*
+out/kb.sqlite*
+out/digests.sqlite*
+out/future/

@@ -23,6 +23,11 @@ const P: Record<string, ReactNode> = {
   reports: <><rect x="4" y="3" width="14" height="16" rx="1.5" fill="none" stroke="currentColor" strokeWidth="2" /><path d="M8 8h6M8 12h6M8 15.5h4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /></>,
   ask: <path d="M4 5h14v9H9l-4 3.5V14H4z" fill="none" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />,
   alerts: <><rect x="6" y="2.5" width="10" height="17" rx="2.5" fill="none" stroke="currentColor" strokeWidth="2" /><circle cx="11" cy="16" r="1.2" fill="currentColor" /></>,
+  past: <><circle cx="11" cy="11" r="8" fill="none" stroke="currentColor" strokeWidth="2" /><path d="M11 6.5V11l3.2 2.2" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" /></>,
+  present: <><path d="M3 11h3.2l2.2-5 3.4 10 2.4-5H19" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" /></>,
+  future: <><path d="M3 16.5 8 11l3.4 3L18 6.5" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" /><path d="M13.5 6.2H18.4v4.9" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" /></>,
+  review: <><rect x="4" y="3" width="14" height="16" rx="2" fill="none" stroke="currentColor" strokeWidth="2" /><path d="M7.6 11.2l2.2 2.2 4.4-4.6" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" /></>,
+  gear: <><path d="M3 6.5h16M3 15.5h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" /><circle cx="8" cy="6.5" r="2.6" fill="var(--bg)" stroke="currentColor" strokeWidth="2" /><circle cx="14" cy="15.5" r="2.6" fill="var(--bg)" stroke="currentColor" strokeWidth="2" /></>,
   left: <path d="M13.5 5 7.5 11l6 6" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />,
   right: <path d="M8.5 5l6 6-6 6" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />,
   x: <path d="M6 6l10 10M16 6 6 16" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />,
@@ -212,9 +217,9 @@ export const money = (v: number | null | undefined, d = 0) =>
 export const pct = (v: number | null | undefined, d = 0, sign = true) =>
   v === null || v === undefined || Number.isNaN(v) ? "–" : `${sign && v > 0 ? "+" : v < 0 ? "−" : ""}${Math.abs(v * 100).toFixed(d)}%`;
 export const compactMoney = (v: number) => (Math.abs(v) >= 1000 ? `$${(v / 1000).toFixed(v >= 10000 ? 0 : 1)}k` : `$${Math.round(v)}`);
-export const appName: Record<string, string> = { doordash: "DoorDash", ubereats: "Uber Eats", grubhub: "Grubhub", in_store: "Dine-in" };
-/** Channel colors, validated as a categorical set (fixed order, never cycled). */
-export const CH_COLOR: Record<string, string> = { in_store: "#1f7a62", doordash: "#e0703f", ubereats: "#3f86c9", grubhub: "#c99a14" };
+export const appName: Record<string, string> = { doordash: "DoorDash", ubereats: "Uber Eats", grubhub: "Grubhub", in_store: "Dine-in", dine_in: "Dine-in", pickup: "Pickup" };
+/** Channel colors, validated as a categorical set (fixed order, never cycled). Pickup is the fifth hue for the queue. */
+export const CH_COLOR: Record<string, string> = { in_store: "#1f7a62", dine_in: "#1f7a62", doordash: "#e0703f", ubereats: "#3f86c9", grubhub: "#c99a14", pickup: "#8a64b4" };
 export const CHANNELS = ["in_store", "doordash", "ubereats", "grubhub"] as const;
 
 /** "21:15" -> "9:15 pm" */
@@ -234,4 +239,10 @@ export function longDate(iso: string) {
 export function shortDate(iso: string) {
   const d = new Date(`${iso}T12:00:00`);
   return d.toLocaleDateString("en-US", { weekday: "short", month: "short", day: "numeric" });
+}
+
+/** A compact 0–1 bar (confidence, budget use). */
+export function HBarInline({ v, color }: { v: number; color?: string }) {
+  const w = Math.max(0, Math.min(1, v)) * 100;
+  return <span className="hbi" aria-hidden="true"><i style={{ width: `${w}%`, background: color || (v < 0.3 ? "var(--crit)" : v < 0.6 ? "var(--warn)" : "var(--green)") }} /></span>;
 }

@@ -174,8 +174,8 @@
    {
     "item": "Chashu",
     "target": 700,
-    "on_hand": 0.0,
-    "prep": 700,
+    "on_hand": 24.0,
+    "prep": 680,
     "pause_at": {
      "doordash": null,
      "ubereats": null,

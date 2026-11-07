@@ -249,8 +249,8 @@ function DayActions({ date, report }: { date: string; report?: boolean }) {
   const nav = useNavigate();
   return (
     <div className="why-links">
-      <button className="link" onClick={() => { setDate(date); nav("/"); }}>Open day</button>
-      {report && <button className="link" onClick={() => { setDate(date); nav("/reports"); }}>Report</button>}
+      <button className="link" onClick={() => { setDate(date); nav("/past"); }}>Open day</button>
+      {report && <button className="link" onClick={() => { setDate(date); nav("/past/reports"); }}>Report</button>}
     </div>
   );
 }
