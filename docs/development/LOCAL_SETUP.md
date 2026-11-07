@@ -1,6 +1,6 @@
 # Local development setup
 
-Prepared November 5, 2026. Repository: `https://github.com/v5run/gondola`, cloned to `C:\Code\Novahacks\gondola`, branch `main`, baseline `application-baseline`.
+Repository: `https://github.com/v5run/gondola`, local checkout `C:/Code/Novahacks/gondola`. Use `savvy/flexible-pickup` for the combined feature set; see [branch order and validation](REPOSITORY_STACK.md).
 
 **November 6 build update:** Current branch is `feat/rush-control`. [Rush Control](http://127.0.0.1:8000/rush) is implemented, with [recording, checks and production mapping](RUSH_DEMO.md). Port 8000 serves the entire demo; Vite is optional and need not be running. Google Gemini tool use is verified for the new intervention and policy lab. Merchant adapters remain simulated/unconfigured. The earlier setup results below are historical; see the latest parent progress ledger for build verification.
 

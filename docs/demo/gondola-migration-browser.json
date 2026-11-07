@@ -1,0 +1,12 @@
+{
+  "checks": [
+    "Flex is in Present navigation",
+    "Migrated Flex quotes, accepts and restores receipt",
+    "Production proof survives combined layout",
+    "Legacy Rush URL redirects to tri-workflow Rush",
+    "Past Present Future Review routes render",
+    "Flex fits 900 and 390 pixel combined layout"
+  ],
+  "javascript_errors": [],
+  "mode": "Local migrated app; synthetic data; no live provider calls"
+}

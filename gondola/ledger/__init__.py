@@ -15,6 +15,7 @@ from __future__ import annotations
 import json
 import os
 import sqlite3
+from contextlib import contextmanager
 import sys
 import threading
 from dataclasses import dataclass
@@ -63,10 +64,15 @@ class Ledger:
             c.execute("CREATE INDEX IF NOT EXISTS ix_date_type ON events(date, type)")
             c.execute("CREATE INDEX IF NOT EXISTS ix_date_ts ON events(date, ts)")
 
+    @contextmanager
     def _con(self):
         c = sqlite3.connect(self.path, timeout=30, check_same_thread=False)
-        c.execute("PRAGMA journal_mode=WAL")
-        return c
+        try:
+            c.execute("PRAGMA journal_mode=WAL")
+            with c:  # Commit/rollback before releasing the Windows file handle.
+                yield c
+        finally:
+            c.close()
 
     def append(self, type: str, date: str, ts: str, payload: dict | None = None, source: str = "system",
                key: str | None = None) -> int | None:

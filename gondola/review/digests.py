@@ -15,6 +15,7 @@ from __future__ import annotations
 import json
 import os
 import sqlite3
+from contextlib import contextmanager
 import threading
 from datetime import datetime
 from pathlib import Path
@@ -55,10 +56,15 @@ class Digests:
             c.execute("CREATE INDEX IF NOT EXISTS ix_kind ON digests(kind, date_end)")
             c.execute("CREATE TABLE IF NOT EXISTS reviews (date TEXT PRIMARY KEY, created TEXT, body TEXT NOT NULL)")
 
+    @contextmanager
     def _con(self):
         c = sqlite3.connect(self.path, timeout=30, check_same_thread=False)
-        c.execute("PRAGMA journal_mode=WAL")
-        return c
+        try:
+            c.execute("PRAGMA journal_mode=WAL")
+            with c:  # Commit/rollback before releasing the Windows file handle.
+                yield c
+        finally:
+            c.close()
 
     def put(self, d: dict) -> dict:
         with _LOCK, self._con() as c:

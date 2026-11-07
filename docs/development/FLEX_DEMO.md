@@ -2,7 +2,7 @@
 
 Built and verified November 6, 2026, before the hackathon. Open [Flexible pickup](http://127.0.0.1:8000/flex). It is a first-party merchant checkout prototype alongside Rush Control. Restaurant state, customer orders and payments are simulated; Gemini calls and the reservation ledger are real local software.
 
-Branch: `savvy/flexible-pickup`, stacked on `savvy/rush-control` at `Rush-integration`. The parent already includes V's `varun` work. This branch adds the Flex feature, related research, tests, evidence and browser build; it does not rewrite the parent.
+Current branch: `savvy/flexible-pickup` in `v5run/gondola`, stacked on `savvy/tri-workflow`, which includes `savvy/rush-control` and V's clock. [Migration order and verification](REPOSITORY_STACK.md) maps the old commits to this repository's history. The original standalone Flex recordings/model runs below predate the migration; they are retained as evidence from that version. The current UI adds Flexible pickup to Present while preserving the tri-workflow routes. Flex remains a separate frozen reservation ledger, not a continuous Present booking feed.
 
 [Recorded walkthrough](../demo/flex-demo.webm) · [Customer choices](../demo/flex-checkout.png) · [Kitchen comparison](../demo/flex-kitchen.png) · [Actual Gemini tools](../demo/flex-gemini.png) · [Conflict case](../demo/flex-conflict.png)
 

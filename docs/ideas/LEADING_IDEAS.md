@@ -1,5 +1,7 @@
 # Current leading ideas
 
+**November 7 judge discussion:** [Formal pitch, differentiation, operating assumptions and mentor questions](JUDGE_PITCH_AND_CAPABILITIES.md). This connects the user's forecast/steer/schedule/review plan, checks DoorDash overlap, and separates current implementation from proposed extensions. No additional product feature is selected by this research brief.
+
 Updated November 6, 2026. **The user authorized building Rush Control:** shared kitchen scheduling, station-aware demand steering, observed effort learning, a live intervention agent and bounded policy experiments. [Implemented demo, measurements and production path](../development/RUSH_DEMO.md) is now the current entry point. The shortlist below preserves research history; other ideas and the twelve-ticket manager backlog are not automatic build scope.
 
 To generate more: [repeatable ideation playbook and reusable prompts](IDEATION_PLAYBOOK.md). [The wider idea pool](IDEA_POOL.md) records new angles and variants with first tests and evidence limits; entries there are not automatically leading candidates.

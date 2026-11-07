@@ -1,5 +1,7 @@
 # Gondola
 
+**Current repository:** `v5run/gondola`. [Migration and branch order](docs/development/REPOSITORY_STACK.md) records the replay of V's clock, Rush Control, tri-workflow, Flexible Pickup and latest strategy notes onto this repository's history. The combined app keeps Past/Present/Future/Review, `/rush` compatibility and `/flex` under Present.
+
 **New working feature:** [Flexible pickup](http://127.0.0.1:8000/flex) lets a customer choose a later pickup for a bounded discount and moves the kitchen's cooking/packing reservation. Real Gemini choice tools, explicit consent and atomic acceptance; [demo, evidence and production path](docs/development/FLEX_DEMO.md) · [recording](docs/demo/flex-demo.webm). Synthetic restaurant/no real payment.
 
 **Working hackathon demo:** [Rush Control](http://127.0.0.1:8000/rush) connects kitchen reservations, capacity-aware offers and real Gemini interventions/policy experiments. [Demo guide, measurements and production path](docs/development/RUSH_DEMO.md) · [recording](docs/demo/rush-demo.webm) · [local setup](docs/development/LOCAL_SETUP.md). Restaurant/campaign state is synthetic; Gemini tool calls are real. No live DoorDash connection is configured.

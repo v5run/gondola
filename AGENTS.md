@@ -1,5 +1,7 @@
 # Gondola development
 
+Current repository: `v5run/gondola`, migrated onto its own history. Branch stack is `main` -> `savvy/rush-control` -> `savvy/tri-workflow` -> `savvy/flexible-pickup`. See `docs/development/REPOSITORY_STACK.md` for source commit mapping, conflict resolutions and combined verification. Older commit IDs/demo measurements below are historical evidence; do not present old live-model runs as new tests of the entire combined workflow. Preserve both tri-workflow and Flex routes. Flex still uses its separate frozen reservation ledger.
+
 P16 Flexible pickup is also explicitly authorized and now implemented on `savvy/flexible-pickup`, stacked on `savvy/rush-control` at `Rush-integration`. Start with `docs/development/FLEX_DEMO.md` for `/flex`, real Gemini choice tools, atomic local reservations, verification and boundaries. It takes a frozen Rush observation; its subsequent bookings share a separate Flex ledger, not a running Rush replay. Quotes are proposals, not holds. Do not imply live DoorDash access, continuous service, actual payment or demonstrated AI/business superiority. Keep the feature tracker current.
 
 The user selected this repository for the NOVA DoorDash project and authorized building/testing Rush Control. Start with `docs/development/RUSH_DEMO.md` for the implemented browser episode, measured tradeoffs and production path. Build plan: `RUSH_BUILD.md`. Branch: `feat/rush-control`. Preserve the inherited app and existing dirty setup/research/generated files.

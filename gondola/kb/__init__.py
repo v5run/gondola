@@ -25,6 +25,7 @@ from __future__ import annotations
 import json
 import os
 import sqlite3
+from contextlib import contextmanager
 import threading
 from datetime import date as Date
 from pathlib import Path
@@ -84,10 +85,15 @@ class KB:
                          op TEXT, detail TEXT)""")
             c.execute("CREATE TABLE IF NOT EXISTS meta (k TEXT PRIMARY KEY, v TEXT)")
 
+    @contextmanager
     def _con(self):
         c = sqlite3.connect(self.path, timeout=30, check_same_thread=False)
-        c.execute("PRAGMA journal_mode=WAL")
-        return c
+        try:
+            c.execute("PRAGMA journal_mode=WAL")
+            with c:  # Commit/rollback before releasing the Windows file handle.
+                yield c
+        finally:
+            c.close()
 
     # ---------------------------------------------------------------- storage
     def _next_id(self, c) -> str:
