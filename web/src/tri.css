@@ -1,6 +1,6 @@
 /* ================= Past / Present / Future / Review ================= */
 
-/* shell: workflows, then Ask and Alerts, then the agent rail */
+/* shell: workflow links, utility links, and the agent rail */
 .navgap { height: 8px; flex: none; }
 .navdot { position: absolute; top: 9px; right: 9px; width: 8px; height: 8px; border-radius: 50%; background: var(--crit); box-shadow: 0 0 0 2px var(--ink); }
 .navlink.active .navdot { box-shadow: 0 0 0 2px var(--mint); }

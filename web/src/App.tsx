@@ -29,6 +29,8 @@ import Memory from "./screens/Memory";
 
 export { useApp } from "./state";
 
+const SHOW_ALERTS_TAB = false;
+
 export default function App() {
   return (
     <AppProvider>
@@ -67,7 +69,7 @@ function Shell() {
         ))}
         <span className="navgap" />
         <NavLink to="/ask" className={({ isActive }) => `navlink${isActive ? " active" : ""}`} aria-label="Ask Gondola"><Icon name="ask" /><span className="tip">Ask Gondola</span></NavLink>
-        <NavLink to="/alerts" className={({ isActive }) => `navlink${isActive ? " active" : ""}`} aria-label="Alerts"><Icon name="alerts" /><span className="tip">Alerts</span></NavLink>
+        {SHOW_ALERTS_TAB && <NavLink to="/alerts" className={({ isActive }) => `navlink${isActive ? " active" : ""}`} aria-label="Alerts"><Icon name="alerts" /><span className="tip">Alerts</span></NavLink>}
         <AgentRail />
         <div className="av" title="Maya, manager">MK</div>
       </nav>
@@ -95,7 +97,7 @@ function Shell() {
           <Route path="/review/knowledge" element={<Knowledge />} />
           <Route path="/review/memory" element={<Memory />} />
           <Route path="/ask" element={<Ask />} />
-          <Route path="/alerts" element={<Alerts />} />
+          {SHOW_ALERTS_TAB && <Route path="/alerts" element={<Alerts />} />}
           {/* earlier addresses */}
           <Route path="/rush" element={<Navigate to="/present/rush" replace />} />
           <Route path="/tonight" element={<Navigate to="/past" replace />} />

@@ -89,15 +89,19 @@ def main():
         page.on("pageerror", lambda e: errors.append(f"{page.url}: {e}"))
         page.set_default_timeout(60000)
 
-        @step("Shell: workflows, Ask and Alerts in the sidebar; rail grouped by workflow; real backend")
+        @step("Shell: workflows and Ask in the sidebar, Alerts hidden, grouped agent rail, real backend")
         def shell():
             page.goto("/")
             expect(page).to_have_url(re.compile(r"/present$"))
-            for name in ("Past", "Present", "Future", "Review", "Ask Gondola", "Alerts"):
-                expect(page.get_by_role("link", name=name, exact=True)).to_have_count(1)
+            nav = page.get_by_role("navigation", name="Main", exact=True)
+            for name in ("Past", "Present", "Future", "Review", "Ask Gondola"):
+                expect(nav.get_by_role("link", name=name, exact=True)).to_have_count(1)
+            expect(nav.get_by_role("link", name="Alerts", exact=True)).to_have_count(0)
             assert page.locator(".offline").count() == 0, "offline banner against the real backend"
             groups = page.locator(".rail .railg").evaluate_all("els => els.map(e => e.getAttribute('aria-label'))")
             assert groups == ["Ledger", "Present", "Future", "Review"], groups
+            page.goto("/alerts")
+            expect(page).to_have_url(re.compile(r"/present$"))
             return f"clock {clk['now']} phase {clk['phase']}"
 
         @step("Present: queue board renders and updates live on the real clock")
