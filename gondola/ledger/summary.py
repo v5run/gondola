@@ -41,11 +41,11 @@ def _cut_ts(date: str, cutoff: str | None) -> str | None:
     return f"{date}T{hm}" if len(hm) == 8 else f"{date}T{hm[:8]}"
 
 
-def summary(date: str, cutoff: str | None = None, led: Ledger | None = None) -> dict:
+def summary(date: str, cutoff: str | None = None, led: Ledger | None = None, *,
+            events: list[Event] | None = None) -> dict:
     """KPIs for business `date` from events before `cutoff` ("HH:MM", None = the whole day)."""
-    led = led or ledger()
     end = _cut_ts(date, cutoff)
-    evs = led.query(date, ORDER_TYPES)
+    evs = (led or ledger()).query(date, ORDER_TYPES) if events is None else events
     if end:
         evs = [e for e in evs if e.ts < end]
     orders = per_order(evs)

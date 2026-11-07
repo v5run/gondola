@@ -1,5 +1,6 @@
 import { NavLink, Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { AppProvider, LiveProvider, ToastProvider, useApp } from "./state";
+import { PlaybackProvider } from "./playback";
 import { WhyProvider } from "./why";
 import { AgentProvider, AgentRail } from "./agents";
 import { ExceptionsProvider, PresentProvider, useExceptions } from "./live";
@@ -37,7 +38,7 @@ export default function App() {
             <PresentProvider>
               <ExceptionsProvider>
                 <WhyProvider>
-                  <Shell />
+                  <PlaybackProvider><Shell /></PlaybackProvider>
                 </WhyProvider>
               </ExceptionsProvider>
             </PresentProvider>

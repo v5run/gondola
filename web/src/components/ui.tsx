@@ -107,12 +107,13 @@ export function useTween(value: number, ms = 260) {
   const from = useRef(value);
   const cur = useRef(value);
   useEffect(() => {
-    if (reduce || !Number.isFinite(value)) { cur.current = value; setV(value); return; }
+    if (reduce || ms <= 0 || !Number.isFinite(value)) { cur.current = value; setV(value); return; }
     from.current = cur.current;
     const t0 = performance.now();
     let raf = 0;
     const f = (now: number) => {
-      const k = Math.min(1, (now - t0) / ms);
+      // The frame timestamp can precede the effect that scheduled it.
+      const k = Math.max(0, Math.min(1, (now - t0) / ms));
       const e = 1 - Math.pow(1 - k, 3);
       cur.current = from.current + (value - from.current) * e;
       setV(cur.current);

@@ -82,7 +82,7 @@ export const api = {
   approve: (date: string, card?: CardItem[]) => { clearCache(); return req<{ approved: boolean; card: CardItem[] }>(`/closes/${date}/approve`, post({ card })); },
   reports: () => req<ReportEntry[]>("/reports"),
   ask: (question: string, today?: string) => req<AskAnswer>("/ask", post(today ? { question, today } : { question })),
-  intraday: (date: string) => cached<Intraday>(`/metrics/intraday?date=${date}`),
+  intraday: (date: string, at?: string) => at ? req<Intraday>(`/metrics/intraday?date=${date}&at=${at}`) : cached<Intraday>(`/metrics/intraday?date=${date}`),
   items: (start: string, end: string) => cached<ItemRow[]>(`/metrics/items?start=${start}&end=${end}`),
   range: (start: string, end: string) => cached<RangeMetrics>(`/metrics/range?start=${start}&end=${end}`),
   day: (date: string) => cached<DayDetail>(`/day/${date}`, 20000),

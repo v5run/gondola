@@ -132,13 +132,13 @@ def _baseline(d: str) -> list[str]:
         return []
 
 
-def _slot_frame(dates: list[str]) -> pd.DataFrame:
+def _slot_frame(dates: list[str], source: Store | None = None) -> pd.DataFrame:
     if not dates:
         return pd.DataFrame(columns=["business_date", "slot", "channel", "status", "n", "s"])
     q = """SELECT business_date, CAST(extract(hour FROM created_at)*4 + extract(minute FROM created_at)//15 AS INT) AS slot,
               channel, status, COUNT(*) n, SUM(subtotal) s
            FROM orders WHERE business_date IN (SELECT unnest(?::DATE[])) GROUP BY ALL"""
-    return store().df(q, [dates])
+    return (source or store()).df(q, [dates])
 
 
 def slots_for(d: str) -> tuple[range, str | None]:
@@ -150,18 +150,40 @@ def slots_for(d: str) -> tuple[range, str | None]:
     return range(SLOTS.start, max(SLOTS.start, min(SLOTS.stop, m // 15 + 1 if m % 15 else m // 15))), hm
 
 
-def intraday(d: str) -> dict:
-    x = _slot_frame([d])
+def playback_cutoff(d: str, at: str) -> str:
+    """Validate the playback time against the store clock before querying historical data."""
+    sec = _parse_hm(at)
+    current, cutoff = cut()
+    if d > current or (d == current and cutoff is not None and sec > _parse_hm(cutoff)):
+        raise HTTPException(400, "cannot replay past the store clock")
+    return _hms(sec)[:5]
+
+
+def intraday(d: str, at: str | None = None) -> dict:
+    if at is None:
+        x = _slot_frame([d])
+        slots, as_of = slots_for(d)
+    else:
+        source = Store(DB, cut=(d, at))
+        try:
+            x = _slot_frame([d], source)
+        finally:
+            source.con.close()
+        minute = _parse_hm(at) // 60
+        slots = range(SLOTS.start, min(SLOTS.stop, (minute + 14) // 15))
+        as_of = at
     c = x[x.status == "completed"]
     bins = []
-    slots, as_of = slots_for(d)
     for s in slots:
         cs = c[c.slot == s]
         bins.append({"time": f"{s // 4:02d}:{s % 4 * 15:02d}", "orders": int(cs.n.sum()),
                      "by_channel": {ch: int(cs[cs.channel == ch].n.sum()) for ch in CHANNELS},
                      "net_sales": _r2(cs.s.sum()), "placed": int(x[x.slot == s].n.sum()),
                      "cancels": int(x[(x.slot == s) & (x.status == "cancelled")].n.sum())})
-    base = _baseline(d) if len(x) else []
+    if at is not None:
+        base = [str(day.date()) for day in analyst.usual_weekdays(daily_frame(), pd.Timestamp(d)).business_date]
+    else:
+        base = _baseline(d) if len(x) else []
     usual = []
     if base:
         u = _slot_frame(base)
@@ -171,9 +193,10 @@ def intraday(d: str) -> dict:
 
 
 @router.get("/metrics/intraday")
-async def metrics_intraday(date: str | None = None):
+async def metrics_intraday(date: str | None = None, at: str | None = None):
     d = _date(date)
-    return await run_in_threadpool(cached, "intraday", intraday, d)
+    cutoff = playback_cutoff(d, at) if at is not None else None
+    return await run_in_threadpool(cached, "intraday", intraday, d, cutoff)
 
 
 # ------------------------------------------------------------------ /metrics/items

@@ -893,14 +893,20 @@ def _phase_minute(d: str, now: datetime | None, at: str | None) -> tuple[int, st
     if at:
         m = parse_hm(at)
         lim, phase = _clock(d, now)
+        if phase == "before_open" and now is None:
+            from ..now import info
+            from .world import DB
+            clock = info(DB)
+            if d == clock["today"]:
+                lim = parse_hm(clock["now"])
         if m > lim:
             raise ValueError("cannot replay past the store clock (no reading data after now)")
-        return m, "replay" if phase == "closed" else phase
+        return m, "replay"
     return _clock(d, now)
 
 
 def state(d: str, now: datetime | None = None, at: str | None = None, settings: PresentSettings | None = None,
-          write: bool = True, compare: bool = False) -> dict:
+          write: bool = True, compare: bool = False, after: int | None = None) -> dict:
     """GET /api/present/state: the service at `now` (or at a replay time `at` on a closed day)."""
     from .world import has_data
     s = settings or load_settings()
@@ -909,19 +915,22 @@ def state(d: str, now: datetime | None = None, at: str | None = None, settings: 
         return {"date": d, "now": None, "phase": "no_data", "headroom_pct": None, "ladder": None, "queue": [],
                 "stations": [], "channels": {}, "actions": [], "weather": None, "source_mode": "synthetic",
                 "notes": ["no orders for this date in the store data"]}
-    ckey = (d, minute, s.digest(), len(overrides_for(d)), compare)
+    ckey = (d, minute, s.digest(), len(overrides_for(d)), compare, phase)
     with _LOCK:
-        if ckey in _STATES:
+        if after is None and ckey in _STATES:
             _STATES.move_to_end(ckey)
             return _STATES[ckey]
-    e = engine(d, minute, s)
-    if write and phase != "replay":
-        flush(e)
-    out = build_state(e, phase, minute)
+        e = engine(d, minute, s)
+        if write and phase != "replay":
+            flush(e)
+        out = build_state(e, phase, minute)
+        if after is not None:
+            out["playback_actions"] = [a for a in e.actions if after <= a["minute"] < minute]
     if compare:
         out["compare"] = compare_at(d, minute, s)
     with _LOCK:
-        _STATES[ckey] = out
+        if after is None:
+            _STATES[ckey] = out
         while len(_STATES) > 512:
             _STATES.popitem(last=False)
     return out
