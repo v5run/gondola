@@ -94,8 +94,8 @@ templates). Fill in what you have:
    4% under a usual Thursday. Chashu sold out at 8:39 pm and stayed live on the apps for 45 minutes: 12 cancels.
 2. **0:25 Close shift.** Tap it, confirm 0 chashu left. Steps light up (books, stock, demand in parallel, then
    analyst, plan, sentinel, report, guard) in about 30 s the first time (instant on a re-tap: it's idempotent).
-3. **0:55 The text.** Alerts screen: one bundled SMS ("3 things need you": cash drawer $23.50 short, the DoorDash
-   disputes, chashu). Reply `1` and `why did we run out of chashu?` (or POST /api/sms/inbound) to show replies routed to Ask.
+3. **0:55 The text.** Review → Close shows the bundled dry-run SMS ("3 things need you": cash drawer $23.50 short,
+   the DoorDash disputes, chashu).
 4. **1:20 Money.** Cash drawer $23.50 short; Wednesday's DoorDash report with disputable charges and days left to
    dispute; copy-evidence checklist.
 5. **1:40 Tomorrow.** 590 orders forecast (532-678), rush 6:00-7:30 pm, the prep card (chashu par vs the usual
@@ -105,8 +105,7 @@ templates). Fill in what you have:
    App cancels: 12 on the real night, 0 in the replay.
 7. **2:20 Report.** Open the 2-page PDF. Close on: every number traces to a tool result, or it isn't sent.
 
-Fallbacks: the Alerts screen is the SMS fallback if Twilio is down; the bundled `web/public/sample-report.pdf`
-if the PDF can't render.
+If the PDF can't render, open the bundled `web/public/sample-report.pdf`.
 
 ### The store clock
 
