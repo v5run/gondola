@@ -38,7 +38,7 @@ const fmtPct = (v: number) => { const r = Math.round(v); return `${r > 0 ? "+" :
 
 /* ================= the admission ladder ================= */
 
-export function LadderHero({ st, settings, date, onSettings }: { st: PresentState; settings: PresentSettings; date: string; onSettings: () => void }) {
+export function LadderHero({ st, settings, date, onSettings }: { st: PresentState; settings: PresentSettings; date: string; onSettings?: () => void }) {
   const zs = zones(settings);
   const h = st.headroom_pct;
   // the ladder's own level (it holds a step for the hysteresis time), not just the zone the headroom sits in
@@ -80,7 +80,7 @@ export function LadderHero({ st, settings, date, onSettings }: { st: PresentStat
               onClick={(e) => trySim(e, z)} aria-label={`What if: ${z.name}`} data-level={z.key}>{z.short}</button>
           ))}
         </div>
-        <button className="link ladder-set" onClick={onSettings}>Thresholds and weights</button>
+        {onSettings && <button className="link ladder-set" onClick={onSettings}>Thresholds and weights</button>}
       </div>
       <div className="apps" data-testid="apps">
         {["doordash", "ubereats", "grubhub", "pickup", "dine_in"].map((c) => <AppLine key={c} ch={c} s={st.channels[c] || (c === "dine_in" ? st.channels.in_store : undefined)} />)}

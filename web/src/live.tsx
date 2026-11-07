@@ -42,7 +42,7 @@ export const actionText = (a: Action) => {
 export const actor = (a: Action) => (a.by === "rush-agent" ? "rush" : a.action === "offer" || a.action === "promote" ? "pricing" : a.by === "manager" ? "controller" : "controller");
 
 export function PresentProvider({ children }: { children: ReactNode }) {
-  const { mode, now, inService } = useApp();
+  const { mode, now, inService, view } = useApp();
   const { pulse } = useAgents();
   const toast = useToast();
   const [state, setState] = useState<PresentState | null>(null);
@@ -63,7 +63,7 @@ export function PresentProvider({ children }: { children: ReactNode }) {
   }, []);
 
   useEffect(() => {
-    if (!mode || !today) return;
+    if (!mode || !today || view === "playback") return;
     let dead = false;
     let poll: ReturnType<typeof setInterval> | undefined;
     let stop = () => {};
@@ -95,7 +95,7 @@ export function PresentProvider({ children }: { children: ReactNode }) {
       },
     });
     return () => { dead = true; stop(); if (poll) clearInterval(poll); };
-  }, [mode, today, inService, gen, take, pulse, toast]);
+  }, [mode, today, inService, view, gen, take, pulse, toast]);
 
   const v = useMemo<PresentLive>(() => ({
     state, status, error, at, fresh: fresh.current,
@@ -113,7 +113,7 @@ export const useExceptions = () => useContext(ExceptionsCtx);
 
 /** Polls today's exceptions every 20 s; new ones light the Exceptions agent, high ones also raise a toast. */
 export function ExceptionsProvider({ children }: { children: ReactNode }) {
-  const { mode, now } = useApp();
+  const { mode, now, view } = useApp();
   const { pulse } = useAgents();
   const toast = useToast();
   const [list, setList] = useState<ExceptionItem[] | null>(null);
@@ -122,7 +122,7 @@ export function ExceptionsProvider({ children }: { children: ReactNode }) {
   const seen = useRef<Set<string> | null>(null);
   const today = now?.today || "";
   useEffect(() => {
-    if (!mode || !today) return;
+    if (!mode || !today || view === "playback") return;
     let dead = false;
     const pull = () => tri.review.exceptions(today).then((l) => {
       if (dead) return;
@@ -139,7 +139,7 @@ export function ExceptionsProvider({ children }: { children: ReactNode }) {
     pull();
     const id = setInterval(pull, 20000);
     return () => { dead = true; clearInterval(id); };
-  }, [mode, today, n, pulse, toast]);
+  }, [mode, today, view, n, pulse, toast]);
   const v = useMemo<ExCtx>(() => ({
     list, error, open: (list || []).filter((x) => !x.resolved).length, reload: () => setN((x) => x + 1),
     resolveLocal: (id) => setList((l) => (l ? l.map((x) => (x.id === id ? { ...x, resolved: true } : x)) : l)),

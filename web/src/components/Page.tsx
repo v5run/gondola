@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useApp, useClock, useLive } from "../state";
+import { PlaybackControls, usePlayback } from "../playback";
 import { sectionOf } from "../nav";
 import { D, iso } from "../lib/dates";
 import { Icon, Segmented, clock } from "./ui";
@@ -9,21 +10,23 @@ import { Icon, Segmented, clock } from "./ui";
 export function Page({ title, actions, children, live = true, date = true }: { title: ReactNode; actions?: ReactNode; children: ReactNode; live?: boolean; date?: boolean }) {
   const loc = useLocation();
   const sec = sectionOf(loc.pathname);
+  const { active } = usePlayback();
   return (
     <>
-      <header className="top">
+      <header className={`top${active ? " playback-top" : ""}`}>
         <div className="ttl">
           <h1>{sec ? sec.name : title}</h1>
           {sec && <nav className="tabs" aria-label={`${sec.name} views`}>
             {sec.tabs.map(([to, label]) => <NavLink key={to} to={to} end className={({ isActive }) => (isActive ? "on" : "")}>{label}</NavLink>)}
           </nav>}
         </div>
-        {date && <DateControl />}
+        {(date || active) && <DateControl />}
         <div className="right">
           {actions}
-          {live && <LiveControl />}
+          {(live || active) && <LiveControl />}
         </div>
       </header>
+      <PlaybackControls />
       {children}
     </>
   );
@@ -80,17 +83,23 @@ function MonthPicker({ value, min, max, onPick, onClose }: { value: string; min:
 
 /** A calm live dot and the real time while today is in service; "Closed" once the night is over. */
 export function LiveControl() {
-  const { view, setView, date, now, inService } = useApp();
+  const { view, setView, date, now, inService, today } = useApp();
   const t = useClock();
+  const playback = usePlayback();
+  const backToLive = () => { today(); setView("live"); };
   const live = useLive();
   const isToday = !!now && date === now.today;
   const on = view === "live" && isToday && inService && live.status !== "error";
   return (
-    <div className="livec">
+    <div className={`livec${playback.active ? " playback-livec" : ""}`}>
       {view === "live" && isToday && <span className={`livedot${on ? " on" : ""}`} aria-hidden="true" />}
       {view === "live" && isToday && <span className="livec-clock num" aria-live="off" title={now ? `${now.tz.replace("_", " ")} time` : undefined}>
         {inService ? (t ? clock(t.slice(0, 5)) : "") : "Closed"}</span>}
-      <Segmented label="View" value={view} onChange={setView} options={[["live", "Live"], ["day", "Day"]]} />
+      {playback.active && <span className="livec-clock num" data-testid="playback-clock">Playback · {playback.at} · {playback.speed} min/s</span>}
+      <Segmented label="View" value={view} onChange={(next) => {
+        if (next === "live") backToLive(); else setView(next);
+      }} options={[["live", "Live"], ["playback", "Playback"]]} />
+      {playback.active && <button className="btn small light" onClick={backToLive}>Back to live</button>}
     </div>
   );
 }

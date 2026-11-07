@@ -1,6 +1,7 @@
 /** Sample data for the Past / Present / Future / Review endpoints, used only when the backend is offline (or VITE_MOCK=1).
  *  Deterministic per date and driven by the real clock: outside service hours the sample clock starts at 7:30 pm on
  *  page load and runs in real time, so the queue still moves like a live night. Shapes follow TRI_WORKFLOW_API.md. */
+import { toMin } from "../lib/dates";
 import type {
   Action, ActionItem, ContextPayload, DayReview, Digest, ExceptionItem, FutureDay, FutureDriver, FutureToday, KbItem, LedgerEvent,
   LimitedItem, PastSummary, PresentSettings, PresentState, QueueRow, Station,
@@ -214,8 +215,7 @@ function compareAt(date: string, m: number) {
   return { fifo: f, gondola: g, orders: n };
 }
 
-function presentState(date: string): PresentState {
-  const m = nowFor(date);
+function presentState(date: string, m = nowFor(date)): PresentState {
   const rain = hash(`${date}rain`) < 0.4;
   const head = m > CLOSE ? 30 : headroomAt(date, m);
   const log = ladderLog(date, m);
@@ -254,8 +254,7 @@ function presentStream(q: URLSearchParams, on: Handlers): () => void {
 }
 
 /* ---------------- Past ---------------- */
-function pastSummary(date: string): PastSummary {
-  const m = nowFor(date);
+function pastSummary(date: string, m = nowFor(date)): PastSummary {
   const os = orders(date).filter((o) => o.t <= m);
   const done = os.filter((o) => o.handoff <= m && !o.cancelled);
   const by: PastSummary["by_channel"] = {};
@@ -270,8 +269,7 @@ function pastSummary(date: string): PastSummary {
     cancels: os.filter((o) => o.cancelled).length, refunds: Math.floor(os.length / 140), actions_count: actionsFor(date, m).length };
 }
 
-function ledgerEvents(date: string): LedgerEvent[] {
-  const m = nowFor(date);
+function ledgerEvents(date: string, m = nowFor(date)): LedgerEvent[] {
   const ev: LedgerEvent[] = [];
   let id = 1;
   const add = (min: number, type: string, payload: Record<string, any>, source: string) => { if (min <= m) ev.push({ id: 0, date, ts: `${date}T${hms(min)}`, type, source, key: `${type}:${id++}`, payload }); };
@@ -285,7 +283,7 @@ function ledgerEvents(date: string): LedgerEvent[] {
     add(o.handoff, "order.handed_off", { order_id: o.id, channel: o.channel, ready: hm(o.end), handed: hm(o.handoff), wait_min: Math.round(Math.max(0, (o.courier ?? o.promise) - o.end) * 10) / 10, hold_min: Math.round(Math.max(0, o.handoff - o.end) * 10) / 10, late_min: Math.round(Math.max(0, o.end - o.due) * 10) / 10 }, "present");
   }
   for (const a of actionsFor(date, m)) { const [h, mm] = String(a.ts).slice(11, 16).split(":").map(Number); add(h * 60 + mm, "action.applied", a, a.by === "controller" ? "present" : "review"); }
-  for (const x of exceptionsFor(date)) { const [h, mm] = x.ts.slice(11, 16).split(":").map(Number); add(h * 60 + mm, "exception.raised", x, "review"); }
+  for (const x of exceptionsFor(date, m)) { const [h, mm] = x.ts.slice(11, 16).split(":").map(Number); add(h * 60 + mm, "exception.raised", x, "review"); }
   ev.sort((a, b) => a.ts.localeCompare(b.ts));
   ev.forEach((e, i) => { e.id = i + 1; });
   return ev.reverse();
@@ -303,8 +301,7 @@ const BASE_DRIVERS = (date: string): FutureDriver[] => {
   return out;
 };
 const CHS5 = ["doordash", "ubereats", "grubhub", "pickup", "dine_in"];
-function futureToday(date: string): FutureToday {
-  const m = nowFor(date);
+function futureToday(date: string, m = nowFor(date)): FutureToday {
   const curve = curveOf(date);
   const drivers = BASE_DRIVERS(date);
   const lift = 1 + drivers.reduce((a, d) => a + d.effect_pct / 100, 0) * 0.4;
@@ -327,8 +324,7 @@ function futureToday(date: string): FutureToday {
   };
 }
 const ITEMS: [string, string, string, number, number][] = [["chashu", "Chashu", "portions", 150, 10], ["egg", "Ajitama egg", "eggs", 120, 12], ["gyoza", "Gyoza", "pieces", 360, 30], ["broth", "Tonkotsu broth", "litres", 38, 4]];
-function itemsAt(date: string): LimitedItem[] {
-  const m = nowFor(date);
+function itemsAt(date: string, m = nowFor(date)): LimitedItem[] {
   const os = orders(date).filter((o) => o.t <= m && !o.cancelled);
   const used = { chashu: 0, egg: 0, gyoza: 0, broth: 0 } as Record<string, number>;
   for (const o of os) for (const i of o.items) {
@@ -370,8 +366,8 @@ const outlookAdj: { date: string; driver: string; pct: number; evidence: string 
 
 /* ---------------- Review ---------------- */
 const resolved = new Set<string>();
-function exceptionsFor(date: string): ExceptionItem[] {
-  const m = nowFor(date);
+function exceptionsFor(date: string, at?: number): ExceptionItem[] {
+  const m = at ?? nowFor(date);
   const all: [number, string, string, string, string, string][] = [
     [17 * 60 + 44, "station_incident", "high", "Fryer at half speed since 5:42 pm", "present", "Karaage and Gyoza paused on Grubhub until the fryer recovers."],
     [18 * 60 + 21, "late_order", "high", "DD-142 is 12 min past due", "alert", "Courier waited 12 min. Texted the manager (bundled with the fryer note)."],
@@ -380,7 +376,7 @@ function exceptionsFor(date: string): ExceptionItem[] {
     [19 * 60 + 26, "late_order", "info", "PK-188 ready 4 min after promise", "note", "Guest was already waiting. Within tolerance; noted."],
     [20 * 60 + 40, "payout_mismatch", "high", "DoorDash payout $86.40 short for Nov 4", "alert", "3 error charges look wrong. Dispute checklist drafted under Money."],
   ];
-  return all.filter((a) => a[0] <= m || date < todayIso).map(([t, kind, severity, title, decision, note], i) => {
+  return all.filter((a) => a[0] <= m || (at === undefined && date < todayIso)).map(([t, kind, severity, title, decision, note], i) => {
     const id = `ex-${date.replace(/-/g, "").slice(4)}-${i + 1}`;
     return { id, ts: `${date}T${hm(t)}:00`, kind, severity, title, decision, note, resolved: resolved.has(id) || (date < todayIso && i % 3 !== 1) };
   }).reverse();
@@ -475,16 +471,31 @@ function context(agent: string, date: string): ContextPayload {
 /* ---------------- router ---------------- */
 export function triRequest(p: string, q: URLSearchParams, method: string, body: any, p50Of: (d: string) => number): unknown | undefined {
   const date = q.get("date") || body?.date || todayIso;
-  if (p === "/past/summary") return pastSummary(date);
+  const at = q.get("at");
+  const minute = at === null ? undefined : Math.min(toMin(at), nowFor(date));
+  if (p === "/past/summary") {
+    const sum = pastSummary(date, minute);
+    return at ? { ...sum, cutoff: at } : sum;
+  }
   if (p === "/past/ledger") {
     const types = (q.get("types") || "").split(",").filter(Boolean);
     const before = Number(q.get("before_id") || 0);
     const limit = Number(q.get("limit") || 200);
-    const all = ledgerEvents(date).filter((e) => (!types.length || types.includes(e.type)) && (!before || e.id < before));
+    const all = ledgerEvents(date, minute).filter((e) => (!at || e.ts < `${date}T${at}:00`) && (!types.length || types.includes(e.type)) && (!before || e.id < before));
     const page = all.slice(0, limit);
     return { events: page, next_before_id: all.length > limit ? page[page.length - 1].id : null };
   }
-  if (p === "/present/state") return presentState(date);
+  if (p === "/present/state") {
+    const st = presentState(date, minute);
+    const after = q.get("after");
+    if (at && minute !== undefined && after) {
+      st.playback_actions = actionsFor(date, minute).filter((a) => {
+        const time = a.ts?.slice(11, 16) || a.time || "";
+        return time >= after && time < at;
+      }).reverse();
+    }
+    return at ? { ...st, phase: "replay" } : st;
+  }
   if (p === "/present/compare") { const c = compareAt(date, nowFor(date)); return c; }
   if (p === "/present/settings") { if (method === "PUT") { Object.assign(settings.ladder, body.ladder || {}); Object.assign(settings.weights, body.weights || {}); if (body.max_wait_min) settings.max_wait_min = body.max_wait_min; } return JSON.parse(JSON.stringify(settings)); }
   if (p === "/present/simulate") {
@@ -504,8 +515,8 @@ export function triRequest(p: string, q: URLSearchParams, method: string, body: 
     agentActions.push(a);
     return { decision: tight ? "Pause Gyoza on Grubhub for 20 min" : "Feature Karaage on DoorDash", actions: [a], receipt: { receipt_id: a.receipt_id, model: "offline rules", checked: ["get_state", "get_queue", "simulate", "apply"], guard: "passed" } };
   }
-  if (p === "/future/today") return futureToday(date);
-  if (p === "/future/items") return { items: itemsAt(date) };
+  if (p === "/future/today") return futureToday(date, minute);
+  if (p === "/future/items") return { items: itemsAt(date, minute) };
   if (p === "/future/days") return futureDays(q.get("start") || todayIso, Number(q.get("n") || 7), { p50Of });
   if (p === "/review/exceptions") return exceptionsFor(date);
   if (p.startsWith("/review/exceptions/") && p.endsWith("/resolve")) { resolved.add(p.split("/")[3]); return { ok: true }; }

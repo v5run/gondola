@@ -39,6 +39,8 @@ export function DayCurve({ today, usual, nowMin, rush, onPick, onHover, H = 300,
   const L = 36, R = 16, T = 14, B = rush ? 52 : 30;
   const pw = W - L - R, ph = H - T - B;
   const times = Array.from(new Set([...usual, ...today].map((p) => p.time))).sort();
+  const hv = hover !== null ? times[hover] : null;
+  useEffect(() => { if (hv && onHover) onHover(hv); }, [hv]); // eslint-disable-line
   if (!times.length) return <div ref={ref} style={{ height: H }} />;
   const t0 = Math.min(660, toMin(times[0])), t1 = Math.max(toMin(times[times.length - 1]) + 15, 1350);
   const ymax = niceMax(Math.max(10, ...today.map((p) => p.orders), ...usual.map((p) => p.orders)) * 1.08);
@@ -51,9 +53,7 @@ export function DayCurve({ today, usual, nowMin, rush, onPick, onHover, H = 300,
     : { area: "#dcebd0", line: "#0f4d40", other: "#8b938e", axis: "#d8ddd8", text: "#8b938e", cross: "#56605b" };
   const idxAt = (px: number) => { const m = t0 + ((px - L) / pw) * (t1 - t0); let best = 0, bd = 1e9; times.forEach((t, i) => { const d = Math.abs(toMin(t) + 7.5 - m); if (d < bd) { bd = d; best = i; } }); return best; };
   const at = (t: string, s: Point[]) => s.find((p) => p.time === t)?.orders ?? null;
-  const hv = hover !== null ? times[hover] : null;
   const last = today[today.length - 1];
-  useEffect(() => { if (hv && onHover) onHover(hv); }, [hv]); // eslint-disable-line
   return (
     <div ref={ref} className="chartwrap" style={{ height: H }} data-why>
       <svg width={W} height={H} role="img" aria-label="Orders per 15 minutes"
@@ -62,13 +62,17 @@ export function DayCurve({ today, usual, nowMin, rush, onPick, onHover, H = 300,
         onClick={(e) => { if (hv && onPick) onPick({ time: hv, today: at(hv, today), usual: at(hv, usual) }, { x: e.clientX, y: e.clientY }); }}
         style={{ cursor: onPick ? "pointer" : undefined }}>
         {[0.5, 1].map((f) => <text key={f} x={L - 8} y={y(ymax * f) + 4} fontSize="12" fill={C.text} textAnchor="end">{Math.round(ymax * f)}</text>)}
-        {area && <path d={area} fill={C.area} />}
         <line x1={L} x2={L + pw} y1={y(0)} y2={y(0)} stroke={C.axis} />
-        {usual.length > 0 && <path d={path(usual)} fill="none" stroke={C.other} strokeWidth="2" strokeDasharray="1 5" strokeLinecap="round" />}
-        {today.length > 0 && <path className="draw" d={path(today)} fill="none" stroke={C.line} strokeWidth="2.6" strokeLinejoin="round" strokeLinecap="round" />}
+        <g className="chart-reveal">
+          {area && <path d={area} fill={C.area} />}
+          {usual.length > 0 && <path d={path(usual)} fill="none" stroke={C.other} strokeWidth="2" strokeDasharray="1 5" strokeLinecap="round" />}
+          {today.length > 0 && <path d={path(today)} fill="none" stroke={C.line} strokeWidth="2.6" strokeLinejoin="round" strokeLinecap="round" />}
+        </g>
         {nowMin != null && last && <>
-          <line x1={x(nowMin)} x2={x(nowMin)} y1={T} y2={y(0)} stroke={C.line} strokeDasharray="2 4" />
-          <circle className="pulse" cx={x(mid(last))} cy={y(last.orders)} r="5" fill={C.line} />
+          <g className="chart-playhead" style={{ transform: `translateX(${x(nowMin)}px)` }}>
+            <line x1={0} x2={0} y1={T} y2={y(0)} stroke={C.line} strokeDasharray="2 4" />
+          </g>
+          <circle cx={x(mid(last))} cy={y(last.orders)} r="4" fill={C.line} />
         </>}
         {[12, 14, 16, 18, 20, 22].map((h) => h * 60).filter((m) => m >= t0 && m <= t1).map((m) =>
           <text key={m} x={x(m)} y={y(0) + 18} fontSize="12" fill={C.text} textAnchor="middle">{hourLabel(m)}</text>)}
@@ -136,7 +140,9 @@ export function StackedBins({ bins, usual, hidden, onPick, onHover, H = 260, now
         {usual && usual.length > 0 && <path d={"M" + usual.map((p) => `${x(toMin(p.time) + 7.5).toFixed(1)},${y(p.orders).toFixed(1)}`).join("L")}
           fill="none" stroke="#14201c" strokeWidth="1.6" strokeDasharray="1 4" strokeLinecap="round" />}
         <line x1={L} x2={L + pw} y1={y(0)} y2={y(0)} stroke="#d8ddd8" />
-        {nowMin != null && <line x1={x(nowMin)} x2={x(nowMin)} y1={T} y2={y(0)} stroke="#0f4d40" strokeDasharray="2 4" />}
+        {nowMin != null && <g className="chart-playhead" style={{ transform: `translateX(${x(nowMin)}px)` }}>
+          <line x1={0} x2={0} y1={T} y2={y(0)} stroke="#0f4d40" strokeDasharray="2 4" />
+        </g>}
         {[12, 14, 16, 18, 20, 22].map((h) => <text key={h} x={x(h * 60)} y={H - 8} fontSize="12" fill="#8b938e" textAnchor="middle">{hourLabel(h * 60)}</text>)}
         {sb && <rect x={x(toMin(sb.time) + 7.5) - bw / 2 - 2} y={T} width={bw + 4} height={ph} fill="none" stroke="#14201c" strokeWidth="2" rx="2" />}
         {hb && hb !== sb && <rect x={x(toMin(hb.time) + 7.5) - bw / 2 - 2} y={T} width={bw + 4} height={ph} fill="none" stroke="#56605b" strokeWidth="1" rx="2" />}

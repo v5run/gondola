@@ -8,6 +8,7 @@ import { ChannelLegend, DayCurve, HBar, StackedBins } from "../components/charts
 import { CH_COLOR, ErrorBox, Segmented, Skeleton, Tween, appName, clock, money, pct, useLoad } from "../components/ui";
 import { dowName, fmtMonthDay, fromMin, toMin } from "../lib/dates";
 import { actionText } from "../live";
+import { usePlayback } from "../playback";
 import { useApp, useClock, useLive } from "../state";
 import { WhySlot, useWhy } from "../why";
 import { Own, useAgents } from "../agents";
@@ -44,27 +45,28 @@ export default function Orders() {
   const { date, now, inService, view } = useApp();
   const live = useLive();
   const t = useClock();
+  const playback = usePlayback();
   const why = useWhy();
   const { pulse } = useAgents();
   const isToday = !!now && date === now.today;
-  const running = isToday && inService;
-  const ov = useLoad(() => (date ? api.overview(date) : new Promise<never>(() => {})), [date]);
-  const intra = useLoad(() => (date ? api.intraday(date) : new Promise<never>(() => {})), [date]);
+  const running = !playback.active && isToday && inService;
+  const ov = useLoad(() => (date && !playback.active ? api.overview(date) : new Promise<never>(() => {})), [date, playback.active]);
+  const intra = useLoad(() => (date && !playback.active ? api.intraday(date) : new Promise<never>(() => {})), [date, playback.active]);
   const [sum, setSum] = useState<PastSummary | null>(null);
   const [sumErr, setSumErr] = useState<string | null>(null);
   useEffect(() => {
-    if (!date) return;
+    if (!date || playback.active) return;
     let dead = false;
     setSum(null); setSumErr(null);
     const pull = () => tri.past.summary(date).then((s) => !dead && setSum(s)).catch((e) => !dead && setSumErr(String(e.message)));
     pull();
     const id = running ? setInterval(pull, 10000) : undefined;
     return () => { dead = true; if (id) clearInterval(id); };
-  }, [date, running]);
+  }, [date, running, playback.active]);
 
-  const o = ov.data && ov.data.date === date ? ov.data : null;
+  const o = !playback.active && ov.data && ov.data.date === date ? ov.data : null;
   const isLive = view === "live" && running && live.date === date && live.status !== "idle" && !!live.cur;
-  const nowMin = isLive && t ? toMin(t.slice(0, 5)) : null;
+  const nowMin = playback.active ? playback.minute : isLive && t ? toMin(t.slice(0, 5)) : null;
   const liveCurve = useMemo(() => {
     if (!isLive || nowMin === null) return [];
     return curveFromOrders(live.orders, nowMin).filter((p) => toMin(p.time) + 15 <= nowMin);
@@ -77,7 +79,10 @@ export default function Orders() {
   const dow = date ? dowName(date) : "";
   const sel = why.target?.kind === "bin" && why.target.date === date ? why.target.time : null;
 
-  const s = sum && sum.date === date ? sum : null;
+  const replay = playback.frame ?? playback.pastPreview;
+  const s = playback.active ? replay?.summary : sum && sum.date === date ? sum : null;
+  const replayIntraday = replay?.intraday;
+  const chart = playback.active ? replayIntraday : intra.data;
   const metPct = s && s.promises_total ? s.promises_met / s.promises_total : null;
   const sales = s ? Object.values(s.by_channel).reduce((a, c) => a + (c.sales || 0), 0) : null;
   const chans = s ? Object.entries(s.by_channel).filter(([, c]) => c.orders || c.sales).sort((a, b) => b[1].sales - a[1].sales) : [];
@@ -86,9 +91,9 @@ export default function Orders() {
 
   return (
     <Page title="Past">
-      {sumErr && !s && <ErrorBox error={sumErr} />}
-      {!o && !ov.error && <Skeleton h={300} />}
-      {o && <section className="hero tonight-hero" aria-label="Orders processed"><Own a="ledger" dark /><Info k="processed" dark />
+      {!playback.active && sumErr && !s && <ErrorBox error={sumErr} />}
+      {!playback.active && !o && !ov.error && <Skeleton h={300} />}
+      {(o || playback.active) && <section className="hero tonight-hero" aria-label="Orders processed"><Own a="ledger" dark /><Info k="processed" dark />
         <div>
           <div className="lab">Orders processed{s?.cutoff ? ` · ${clock(s.cutoff)}` : ""}</div>
           <div className="big" data-testid="processed">{s ? <Tween value={s.processed} /> : closedDay ? "Closed" : "–"}</div>
@@ -96,13 +101,13 @@ export default function Orders() {
             <div><span>Promises met</span><b>{metPct === null ? "–" : pct(metPct, 0, false)}</b></div>
             <div><span>Net sales</span><b>{sales === null ? "–" : <Tween value={sales} fmt={(v) => money(v)} />}</b></div>
             <div><span>Decisions</span><b>{s ? s.actions_count : "–"}</b></div>
-            {o.context?.rain && <div><span>Rain</span><b>Yes</b></div>}
+            {o && o.context?.rain && <div><span>Rain</span><b>Yes</b></div>}
           </div>
         </div>
         <div>
           <div className="legend-inline"><span><i className="sw" style={{ background: "#b8e986" }} />{date ? fmtMonthDay(date) : ""}</span><span><i className="sw" style={{ background: "#8cc8ff" }} />Usual {dow}</span></div>
-          <DayCurve today={isLive ? liveCurve : o.curve_today} usual={o.curve_usual} nowMin={nowMin} H={250} todayLabel={fmtMonthDay(date)} usualLabel={`Usual ${dow}`}
-            onHover={(tm) => why.prefetch({ kind: "bin", date, time: tm })} onPick={(p) => why.open({ kind: "bin", date, time: p.time }, "past-top")} />
+          <DayCurve today={playback.active ? (replayIntraday?.bins || []) : isLive ? liveCurve : o?.curve_today || []} usual={playback.active ? replayIntraday?.usual || [] : o?.curve_usual || []} nowMin={nowMin} H={250} todayLabel={fmtMonthDay(date)} usualLabel={`Usual ${dow}`}
+            onHover={playback.active ? undefined : (tm) => why.prefetch({ kind: "bin", date, time: tm })} onPick={playback.active ? undefined : (p) => why.open({ kind: "bin", date, time: p.time }, "past-top")} />
         </div>
       </section>}
 
@@ -113,10 +118,10 @@ export default function Orders() {
         <Kpi k="avg_hold" label="Food hold" value={s?.avg_hold_min ?? null} fmt={(v) => `${v.toFixed(1)} min`} />
         <Kpi k="ledger_cancels" label="Cancels" value={s?.cancels ?? null} bad={(s?.cancels ?? 0) > 0} sub={s ? `${s.refunds} refund${s.refunds === 1 ? "" : "s"}` : undefined} />
       </div>
-      <WhySlot anchor="past-top" />
+      {!playback.active && <WhySlot anchor="past-top" />}
 
       <div className="past-grid">
-        <LedgerFeed date={date} live={running} onNew={(e) => { if (e.type === "order.handed_off") pulse("ledger", `handed off ${e.payload.order_id}`, e.ts.slice(11, 16)); }} />
+        <LedgerFeed key={`${date}-${view}`} date={date} live={running} at={playback.active ? playback.at : undefined} onNew={(e) => { if (e.type === "order.handed_off") pulse("ledger", `handed off ${e.payload.order_id}`, e.ts.slice(11, 16)); }} />
         <div className="card"><Own a="ledger" /><Info k="by_channel_ledger" />
           <div className="cardhead"><h3>By channel</h3></div>
           {!s && <Skeleton h={200} />}
@@ -133,10 +138,10 @@ export default function Orders() {
 
       <div className="card"><Own a="ledger" /><Info k="every_15" />
         <div className="cardhead"><h3>Every 15 minutes</h3><ChannelLegend hidden={hidden} toggle={(c) => setHidden((h) => { const n = new Set(h); if (n.has(c)) n.delete(c); else n.add(c); return n; })} /></div>
-        {intra.error ? <ErrorBox error={intra.error} retry={intra.reload} /> : !intra.data ? <Skeleton h={240} /> :
-          <StackedBins bins={bins} usual={intra.data.usual} hidden={hidden} nowMin={nowMin} selected={sel}
-            onHover={(b) => why.prefetch({ kind: "bin", date, time: b.time })} onPick={(b) => why.open({ kind: "bin", date, time: b.time }, "past-bins")} />}
-        <WhySlot anchor="past-bins" />
+        {!playback.active && intra.error ? <ErrorBox error={intra.error} retry={intra.reload} /> : !chart ? <Skeleton h={240} /> :
+          <StackedBins bins={playback.active ? chart.bins : bins} usual={chart.usual} hidden={hidden} nowMin={nowMin} selected={sel}
+            onHover={playback.active ? undefined : (b) => why.prefetch({ kind: "bin", date, time: b.time })} onPick={playback.active ? undefined : (b) => why.open({ kind: "bin", date, time: b.time }, "past-bins")} />}
+        {!playback.active && <WhySlot anchor="past-bins" />}
       </div>
     </Page>
   );
@@ -209,7 +214,7 @@ export function dedupe(evs: LedgerEvent[]): LedgerEvent[] {
 
 const cap = (s: unknown) => { const x = String(s || ""); return x.charAt(0).toUpperCase() + x.slice(1); };
 
-function LedgerFeed({ date, live, onNew }: { date: string; live: boolean; onNew: (e: LedgerEvent) => void }) {
+function LedgerFeed({ date, live, at, onNew }: { date: string; live: boolean; at?: string; onNew: (e: LedgerEvent) => void }) {
   const [f, setF] = useState("all");
   const [events, setEvents] = useState<LedgerEvent[] | null>(null);
   const [next, setNext] = useState<number | null>(null);
@@ -218,6 +223,8 @@ function LedgerFeed({ date, live, onNew }: { date: string; live: boolean; onNew:
   const seen = useRef<Set<number> | null>(null);
   const lastDate = useRef("");
   const newIds = useRef(new Set<number>());
+  const requestKey = `${date}:${f}:${at ?? ""}`;
+  const keyRef = useRef(requestKey); keyRef.current = requestKey;
   const onNewRef = useRef(onNew); onNewRef.current = onNew;
   useEffect(() => {
     if (!date) return;
@@ -226,7 +233,7 @@ function LedgerFeed({ date, live, onNew }: { date: string; live: boolean; onNew:
     lastDate.current = date; setErr(null); seen.current = null;
     const types = f === "all" ? undefined : TYPES[f];
     let fresh = true;
-    const pull = () => tri.past.ledger(date, { types, limit: 80 }).then((r) => {
+    const pull = () => tri.past.ledger(date, { at, types, limit: 80 }).then((r) => {
       if (dead) return;
       if (seen.current) { newIds.current = new Set(r.events.filter((e) => !seen.current!.has(e.id)).map((e) => e.id)); r.events.filter((e) => newIds.current.has(e.id)).forEach((e) => onNewRef.current(e)); }
       seen.current = new Set(r.events.map((e) => e.id));
@@ -241,12 +248,13 @@ function LedgerFeed({ date, live, onNew }: { date: string; live: boolean; onNew:
     pull();
     const id = live ? setInterval(pull, 5000) : undefined;
     return () => { dead = true; if (id) clearInterval(id); };
-  }, [date, f, live]);
+  }, [date, f, live, at]);
   const loadMore = async () => {
     if (!next) return;
     setMore(true);
     try {
-      const r = await tri.past.ledger(date, { types: f === "all" ? undefined : TYPES[f], limit: 120, before_id: next });
+      const r = await tri.past.ledger(date, { at, types: f === "all" ? undefined : TYPES[f], limit: 120, before_id: next });
+      if (keyRef.current !== requestKey) return;
       setEvents((old) => [...(old || []), ...r.events.filter((e) => !(old || []).some((x) => x.id === e.id))]); setNext(r.next_before_id);
     } catch (e) { setErr(String((e as Error).message)); }
     finally { setMore(false); }
@@ -258,7 +266,7 @@ function LedgerFeed({ date, live, onNew }: { date: string; live: boolean; onNew:
       {!events && !err && <Skeleton h={360} />}
       {events && <div className="ledger" data-testid="ledger" aria-live="off">
         {events.length === 0 && <div className="empty">Nothing recorded yet</div>}
-        {dedupe(events).map((e) => {
+        {dedupe(at ? events.filter((e) => e.ts < `${date}T${at}:00`) : events).map((e) => {
           const d = describe(e);
           return (
             <div key={e.id} className={`lrow${newIds.current.has(e.id) ? " new" : ""}`} data-type={e.type}>
