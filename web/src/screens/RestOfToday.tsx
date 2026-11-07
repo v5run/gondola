@@ -8,6 +8,7 @@ import { toMin } from "../lib/dates";
 import { useApp, useClock } from "../state";
 import { usePlayback } from "../playback";
 import { Own } from "../agents";
+import { OutlookPanel } from "../components/OutlookPanel";
 
 
 /** Future › Rest of today. Always today (the store's business day); earlier days are in Past. */
@@ -41,6 +42,7 @@ export default function RestOfToday() {
   const sf = t?.so_far;
   return (
     <Page title="Future" date={false}>
+      <OutlookPanel date={today} onUpdate={() => setN((x) => x + 1)} />
       {err && <ErrorBox error={err} retry={() => setN((x) => x + 1)} />}
       {!t && !err && <Skeleton h={330} />}
       {t && <section className="hero tonight-hero nowcast" aria-label="Rest of today"><Own a="forecaster" dark /><Info k="nowcast" dark />

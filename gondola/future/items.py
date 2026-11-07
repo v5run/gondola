@@ -177,7 +177,7 @@ def card(key: str, target: int, leftover: float, curve: list[dict], upo: float, 
              "pause_if_busy": plan.pause_times([{**x, "orders": x["orders"] * busy_ratio} for x in curve], make + usable, upo, it["buffer"]),
              "recount_at": it["recount_at"], "warnings": warnings}
     have = c["prep"] + c["on_hand"]
-    return {**c, "key": key, "unit": unit, "batch": it["batch"], "per_order": round(upo, 3),
+    return {**c, "key": key, "unit": unit, "batch": it["batch"], "buffer": it["buffer"], "per_order": round(upo, 3),
             "recount_time": _recount_time(curve, have, upo, c["recount_at"])}
 
 

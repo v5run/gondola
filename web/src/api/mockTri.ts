@@ -515,6 +515,7 @@ export function triRequest(p: string, q: URLSearchParams, method: string, body: 
     agentActions.push(a);
     return { decision: tight ? "Pause Gyoza on Grubhub for 20 min" : "Feature Karaage on DoorDash", actions: [a], receipt: { receipt_id: a.receipt_id, model: "offline rules", checked: ["get_state", "get_queue", "simulate", "apply"], guard: "passed" } };
   }
+  if (p === "/future/outlook") return { status: "fallback", active: false, target_date: date, reason: "Browser sample mode: no agent has run; showing the sample forecast." };
   if (p === "/future/today") return futureToday(date, minute);
   if (p === "/future/items") return { items: itemsAt(date, minute) };
   if (p === "/future/days") return futureDays(q.get("start") || todayIso, Number(q.get("n") || 7), { p50Of });

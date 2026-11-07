@@ -176,7 +176,7 @@ def level_quantiles(tab: dict, m: int, morning: dict) -> tuple[float, float]:
 
 
 # ------------------------------------------------------------------ the nowcast for one moment
-def nowcast(date: str, now: datetime | None = None, db=DB, m: int | None = None) -> dict:
+def nowcast(date: str, now: datetime | None = None, db=DB, m: int | None = None, use_outlook: bool = True) -> dict:
     """Everything about the rest of `date` at `now` (store clock if None). m overrides the cut minute (tests)."""
     date = B.ddate(date)
     m = B.cut_minute(date, now, db) if m is None else m
@@ -193,9 +193,18 @@ def nowcast(date: str, now: datetime | None = None, db=DB, m: int | None = None)
     mu = rb.p50.values.astype(float)
     sd = np.sqrt(phi * mu + (s * mu) ** 2)
     rb = rb.assign(p10=np.maximum(0.0, mu - Z * sd), p90=mu + Z * sd)
+    snapshot = None
+    if use_outlook:
+        from .outlook import active
+        snapshot = active(date, now, db, minute=m)
+    if snapshot:
+        rb = rb.copy()
+        for col in ("p10", "p50", "p90"):
+            rb[col] *= snapshot["factor"]
     rest50 = float(rb.p50.sum())
     rest = {"p10": min(rest50, rest50 * float(np.exp(q10))), "p50": rest50, "p90": max(rest50, rest50 * float(np.exp(q90)))}
     return {"date": date, "minute": m, "morning": mo, "correction": cor, "rest_bins": rb, "rest": rest,
+            "outlook": {"run_id": snapshot["run_id"], "uncertainty": snapshot["scenario"]["uncertainty"]} if snapshot else None,
             "actual_bins": act, "error_table": {"cut_q10": q10, "cut_q90": q90, "phi": phi, "n_days": tab.get("n_days")},
             "closed": m >= close}
 
@@ -224,14 +233,15 @@ def issue_event(nc: dict, bins: list[dict]) -> None:
             "horizon": "rest_of_day", "for_date": d, "bin": b,
             "total": {k: round(v, 1) for k, v in r.items()},
             "so_far": {"orders": nc["correction"]["actual"], "expected": round(nc["correction"]["expected_by_now"], 1)},
-            "ratio": round(nc["correction"]["ratio"], 4), "bins": bins}, source="future", key=f"forecast.issued:rest_of_day:{d}:{b}")
+            "ratio": round(nc["correction"]["ratio"], 4), "bins": bins, "outlook": nc.get("outlook")}, source="future",
+            key=f"forecast.issued:rest_of_day:{d}:{b}" + (f":{nc['outlook']['run_id']}" if nc.get("outlook") else ""))
     except Exception:  # noqa: BLE001 - the ledger must never break a forecast
         pass
 
 
-def today_view(date: str, now: datetime | None = None, db=DB, issue: bool = False) -> dict:
+def today_view(date: str, now: datetime | None = None, db=DB, issue: bool = False, use_outlook: bool = True) -> dict:
     """The /api/future/today payload (without drivers/adjustments, which the API adds)."""
-    nc = nowcast(date, now, db)
+    nc = nowcast(date, now, db, use_outlook=use_outlook)
     if issue:
         issue_event(nc, [{"time": hm(int(r.bin) * 15), "channel": r.channel, "p10": round(float(r.p10), 2),
                           "p50": round(float(r.p50), 2), "p90": round(float(r.p90), 2)}
@@ -257,6 +267,7 @@ def today_view(date: str, now: datetime | None = None, db=DB, issue: bool = Fals
     F = cor["expected_by_now"]
     return {
         "date": nc["date"], "now": hm(min(m, 24 * 60 - 1)) if m < B.FULL_DAY else None, "closed": nc["closed"],
+        "outlook": nc["outlook"],
         "so_far": {"orders": int(A), "expected_by_now": round(F, 1),
                    "vs_expected_pct": round((A / F - 1) * 100, 1) if F > 0 else None,
                    "by_channel": {c: {"orders": int(v["actual"]), "expected_by_now": round(v["expected"], 1)}

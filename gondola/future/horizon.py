@@ -141,7 +141,8 @@ def implied_effects(date: str, row: dict, now: datetime | None = None, db=DB) ->
 
 
 # ------------------------------------------------------------------ days
-def days(start: str | None = None, n: int = MAX_HORIZON, now: datetime | None = None, db=DB, with_cards: bool = True) -> list[dict]:
+def days(start: str | None = None, n: int = MAX_HORIZON, now: datetime | None = None, db=DB, with_cards: bool = True,
+         use_outlook: bool = True) -> list[dict]:
     """Forecasts for n days from `start` (default tomorrow). start must be >= tomorrow; days past today+7 are
     dropped. Raises ValueError for past dates or a start beyond the horizon."""
     today = B.today_for(now, db)
@@ -162,7 +163,7 @@ def days(start: str | None = None, n: int = MAX_HORIZON, now: datetime | None = 
     ext = ext[[c for c in _COLS if c in ext.columns]].copy()
     if not complete:  # today's lags: the nowcast's expected total
         from .nowcast import today_view
-        tv = today_view(today, now, db)
+        tv = today_view(today, now, db, use_outlook=use_outlook)
         r_today, _, _ = future_row(today, 1, today, db)
         cal_today = _calendar(db)
         hit = cal_today[cal_today.date == t]
@@ -188,7 +189,11 @@ def days(start: str | None = None, n: int = MAX_HORIZON, now: datetime | None = 
             continue
         adjs = B.stored_adjustments(dk)
         fac = B.adjustment_factor(adjs)
-        p50 = p * fac
+        snapshot = None
+        if use_outlook and h == 1:
+            from .outlook import active
+            snapshot = active(dk, now, db)
+        p50 = p * fac * (snapshot["factor"] if snapshot else 1.0)
         s = np.sqrt(h)
         lo_h, hi_h = float(np.exp(np.log(lo) * s)), float(np.exp(np.log(hi) * s))
         drow = pd.concat([B.daily(db, upto=upto), pd.DataFrame([{**{k: row.get(k) for k in _COLS}}])], ignore_index=True)
@@ -213,7 +218,9 @@ def days(start: str | None = None, n: int = MAX_HORIZON, now: datetime | None = 
                     "weather": {"temp_high_c": B.json_safe(row.get("temp_high_c")), "rain": bool(row.get("rain")), "snow": bool(row.get("snow")),
                                 "source": src},
                     "holiday": row.get("holiday") if isinstance(row.get("holiday"), str) else None,
-                    "adjustments": adjs, "cards": cards,
+                    "adjustments": adjs, "cards": cards, "curve": curve,
+                    "outlook": {"run_id": snapshot["run_id"], "uncertainty": snapshot["scenario"]["uncertainty"],
+                                "issue_day": snapshot["issue_day"], "issue_minute": snapshot["issue_minute"]} if snapshot else None,
                     "similar_days": [{k: x[k] for k in ("date", "orders", "why")} for x in sims],
                     "model": "lightgbm-daily" + (f", recursive {h} days out" if h > 1 else "") + " + similar-day shape"})
     return out
@@ -232,9 +239,17 @@ def issue_events(rows: list[dict], today: str) -> None:
     """forecast.issued {horizon:"day"} per forecast day, keyed by the day and the date it was issued. Never raises."""
     try:
         from ..ledger import ledger
-        ledger().extend([{"type": "forecast.issued", "date": today, "ts": f"{today}T00:00:00", "source": "future",
-                          "key": f"forecast.issued:day:{r['date']}:{today}",
+        def issued_at(row):
+            snapshot = row.get("outlook")
+            if not snapshot:
+                return f"{today}T00:00:00"
+            return (datetime.fromisoformat(snapshot["issue_day"]) +
+                    timedelta(minutes=snapshot["issue_minute"])).isoformat(timespec="seconds")
+
+        ledger().extend([{"type": "forecast.issued", "date": today, "ts": issued_at(r), "source": "future",
+                          "key": f"forecast.issued:day:{r['date']}:{today}" + (f":{r['outlook']['run_id']}" if r.get("outlook") else ""),
                           "payload": {"horizon": "day", "days_ahead": r["horizon"], "for_date": r["date"],
-                                      "total": {k: r[k] for k in ("p10", "p50", "p90")}, "rush": r["rush"]}} for r in rows])
+                                      "total": {k: r[k] for k in ("p10", "p50", "p90")}, "rush": r["rush"],
+                                      "outlook": r.get("outlook")}} for r in rows])
     except Exception:  # noqa: BLE001
         pass

@@ -37,7 +37,10 @@ def arrivals(w: World, minute: int) -> tuple[list[dict], str]:
     """Expected arrivals per 15-minute bin and channel from `minute` on: Future's nowcast when available
     (gondola.future.nowcast.arrivals), else the same-weekday historical profile. [{t, channel, p50, p90}]."""
     b = minute // 15
-    key = (w.date, b)
+    # Outlook snapshots can expire mid-bin; never reuse an agent forecast after expiry.
+    from ..future.outlook import active as active_outlook
+    snapshot = active_outlook(w.date, datetime.fromisoformat(w.date) + timedelta(minutes=minute))
+    key = (w.date, b, snapshot["run_id"] if snapshot else None)
     if key in _ARR_CACHE:
         return _ARR_CACHE[key]
     out, src = [], "history: same weekday, previous 4 weeks"
@@ -79,7 +82,9 @@ def _stock(d: str, minute: int, sold: dict[str, int]) -> dict[str, int]:
     """Stock for Savvy's guard: chashu items from Future's runout (gondola.future.items.runout, cached per 15 min)
     when available, else a declared 40 per item less a quarter of today's sales of that item (synthetic)."""
     base = {k: max(0, 40 - sold.get(k, 0) // 4) for k in ("Tonkotsu", "Karaage", "Gyoza", "Chashu Don")}
-    key = (d, minute // 15)
+    from ..future.outlook import active as active_outlook
+    snapshot = active_outlook(d, datetime.fromisoformat(d) + timedelta(minutes=minute))
+    key = (d, minute // 15, snapshot["run_id"] if snapshot else None)
     if key not in _RUNOUT:
         rows = None
         try:

@@ -11,6 +11,7 @@ import { addDays, dowName } from "../lib/dates";
 import { pauseTimes } from "../lib/plan";
 import { useApp, useToast } from "../state";
 import { Own, useAgents } from "../agents";
+import { OutlookPanel } from "../components/OutlookPanel";
 
 const APPS = ["doordash", "ubereats", "grubhub"] as const;
 
@@ -28,23 +29,24 @@ export default function Tomorrow() {
   const [shape, setShape] = useState<{ p50: number; curve: Point[] } | null>(null);
   const [approved, setApproved] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [refresh, setRefresh] = useState(0);
   useEffect(() => {
     if (!start) return;
     tri.future.days(start, 1).then((d) => { setDays(d.filter((x) => x.date >= start).slice(0, 1)); setErr(null); }).catch((e) => setErr(String(e.message)));
     // tomorrow's 15-minute curve gives the shape; other days scale it to their own expected orders
     api.forecast(start).then((f) => setShape({ p50: f.p50, curve: f.curve })).catch(() => setShape(null));
     api.close(today).then((c) => setApproved(!!c?.approved)).catch(() => {});
-  }, [start, today]);
+  }, [start, today, refresh]);
   const day = days?.[0] || null;
   const list = day ? cards[day.date] || day.cards : [];
   const card = list[Math.min(itemK, list.length - 1)];
-  const curve = useMemo(() => (day && shape ? shape.curve.map((p) => ({ ...p, orders: (p.orders * day.p50) / Math.max(1, shape.p50) })) : []), [day, shape]);
+  const curve = useMemo(() => (day?.curve?.length ? day.curve : day && shape ? shape.curve.map((p) => ({ ...p, orders: (p.orders * day.p50) / Math.max(1, shape.p50) })) : []), [day, shape]);
   const busy = useMemo(() => (day ? curve.map((p) => ({ ...p, orders: (p.orders * day.p90 * 1.1) / Math.max(1, day.p50) })) : []), [curve, day]);
   const ppoOf = (c: DayCard) => c.per_order || (day && day.p50 ? Math.max(0.01, c.target / day.p50) : 1);
   const timesOf = (c: DayCard) => {
-    if (!curve.length) return { pz: c.pause_at, pzb: c.pause_if_busy };
+    if (!curve.length || (day && !cards[day.date])) return { pz: c.pause_at, pzb: c.pause_if_busy };
     const have = c.prep + (c.on_hand || 0), ppo = ppoOf(c);
-    return { pz: pauseTimes(curve, have, ppo, ppo * 8), pzb: pauseTimes(busy, have, ppo, ppo * 8) };
+    return { pz: pauseTimes(curve, have, ppo, c.buffer ?? 8), pzb: pauseTimes(busy, have, ppo, c.buffer ?? 8) };
   };
   const setPrep = (k: number, v: number) => {
     if (!day) return;
@@ -71,6 +73,7 @@ export default function Tomorrow() {
   </> : null;
   return (
     <Page title="Future" date={false} live={false} actions={actions}>
+      <OutlookPanel date={start} onUpdate={() => { setCards({}); setRefresh((x) => x + 1); }} />
       {err && <ErrorBox error={err} />}
       {!days && !err && <Skeleton h={330} />}
       {day && <section className="hero tonight-hero" aria-label={`Forecast for ${day.date}`}><Own a="forecaster" dark /><Info k="day_forecast" dark />

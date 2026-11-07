@@ -341,3 +341,14 @@
 @media (min-width: 2000px) { .main { margin: 0 auto; width: 100%; } }
 .ladder .apps:only-child { margin-top: 0; }
 @media (max-width: 1360px) { .ladder .apps { margin-top: 0; } }
+
+.outlook-panel { margin-bottom: 18px; }
+.outlook-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.outlook-head h3 { margin: 4px 0 0; }
+.outlook-panel p { margin: 10px 0; }
+.outlook-status { padding: 10px 12px; border-radius: 8px; background: #eef4e8; }
+.outlook-facts { display: flex; gap: 26px; flex-wrap: wrap; }
+.outlook-facts div { display: flex; flex-direction: column; gap: 4px; }
+.outlook-facts span { font-size: 12px; opacity: .7; }
+.outlook-panel details { margin-top: 12px; }
+.outlook-panel summary { cursor: pointer; font-weight: 600; }

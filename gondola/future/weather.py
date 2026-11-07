@@ -16,6 +16,13 @@ URL = ("https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}"
        "&timezone=America%2FNew_York&forecast_days=8")
 _CACHE: dict = {}
 TTL = 1800
+MAX_RESPONSE_BYTES = 256 * 1024
+
+
+class _NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        # Do not allow the fixed provider URL to redirect to an arbitrary host.
+        return None
 
 
 def enabled() -> bool:
@@ -23,8 +30,12 @@ def enabled() -> bool:
 
 
 def _fetch(timeout: float = 4.0) -> dict:
-    with urllib.request.urlopen(URL.format(lat=LAT, lon=LON), timeout=timeout) as r:  # noqa: S310 - fixed https URL
-        return json.loads(r.read().decode("utf-8"))
+    opener = urllib.request.build_opener(_NoRedirect())
+    with opener.open(URL.format(lat=LAT, lon=LON), timeout=timeout) as r:  # fixed HTTPS URL
+        body = r.read(MAX_RESPONSE_BYTES + 1)
+        if len(body) > MAX_RESPONSE_BYTES:
+            raise ValueError("Weather response too large")
+        return json.loads(body.decode("utf-8"))
 
 
 def parse(js: dict) -> dict[str, dict]:

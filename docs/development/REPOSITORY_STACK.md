@@ -6,6 +6,8 @@ November 7, 2026. Repository: `https://github.com/v5run/gondola`. Local checkout
 
 **Security follow-up:** The reviewed [demo hardening](SECURITY_AUDIT.md) follows Order Manager on main, with corrected closed-day status and checked SPA fallback. This transfers the security changes and preserves v5run attribution; unrelated strategy history is not imported. Browser assets are rebuilt from the upgraded dependency lockfile. Merchant writes and outgoing application notifications remain disabled even with credentials; local simulation and real model access are separate capabilities.
 
+**Future follow-up:** Outlook is integrated after main's synchronized Playback and hidden Alerts changes. Two frontend API-client conflicts preserve both replay cut parameters and new Outlook methods. The bounded fixture scenario demo is approved; real internet event ingestion is deferred. See [implementation](FUTURE_AGENT_IMPLEMENTATION.md) and [security](SECURITY_AUDIT.md).
+
 ## Dependency order
 
 1. `main`: existing application baseline.

@@ -60,7 +60,7 @@ def _startup():
 @app.exception_handler(HTTPException)
 async def _http_err(request: Request, exc: HTTPException):
     return JSONResponse({"error": exc.detail if isinstance(exc.detail, str) else "error", "detail": exc.detail},
-                        status_code=exc.status_code)
+                        status_code=exc.status_code, headers=exc.headers)
 
 
 def _date(d: str | None) -> str:

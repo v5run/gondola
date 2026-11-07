@@ -65,11 +65,18 @@ export interface FutureToday {
   expected: Range3; rest: Range3; bins: FutureBin[]; drivers: FutureDriver[]; adjustments: Adjustment[];
 }
 export type PauseMap = Partial<Record<"doordash" | "ubereats" | "grubhub", string | null>>;
-export interface DayCard { item: string; key?: string; unit?: string; target: number; prep: number; on_hand: number; pause_at: PauseMap; pause_if_busy: PauseMap; recount_at: number | string | null; batch?: number; per_order?: number; warnings?: string[] }
+export interface DayCard { item: string; key?: string; unit?: string; target: number; prep: number; on_hand: number; pause_at: PauseMap; pause_if_busy: PauseMap; recount_at: number | string | null; batch?: number; buffer?: number; per_order?: number; warnings?: string[] }
 export interface FutureDay {
-  date: string; p10: number; p50: number; p90: number; rush: { start: string; end: string } | null; drivers: FutureDriver[]; weather_known: boolean; cards: DayCard[];
+  date: string; p10: number; p50: number; p90: number; rush: { start: string; end: string } | null; drivers: FutureDriver[]; weather_known: boolean; cards: DayCard[]; curve?: { time: string; orders: number }[];
 }
 export interface LimitedItem { key: string; name: string; unit: string; believed_left: number; projected_runout: string | null; pause_at: PauseMap; recount_at: number | string | null; made?: number; prep?: number; recount_time?: string | null }
+export interface Outlook {
+  status: "agent" | "fallback"; active: boolean; reason: string; target_date: string; run_id?: string; issue_minute?: number;
+  scenario?: { anchor: string; event_id: string; assumed_pct: number; total_p50: number; uncertainty: string; warning: string };
+  ml_reference?: { total: Range3; agent_inspected?: boolean }; weather?: { source: string; rain: boolean; snow: boolean; temp_high_c: number | null };
+  events?: { id: string; title: string; start: string; distance_km: number; status: string; source: string }[];
+  analogs?: { date: string; orders: number }[]; tools_called?: string[]; interpretation?: string[]; model?: string; source_mode?: string;
+}
 
 /* ---------------- Review ---------------- */
 export type Severity = "critical" | "high" | "warn" | "medium" | "info" | "low" | string;
@@ -159,6 +166,8 @@ export const tri = {
     today: (date: string, at?: string) => req<any>(`/future/today${q({ date, at })}`).then(normToday),
     days: (start: string, n = 1) => req<any[]>(`/future/days${q({ start, n })}`).then((l) => l.map(normDay)),
     items: (date: string, at?: string) => req<{ items: any[] }>(`/future/items${q({ date, at })}`).then((r) => ({ items: (r.items || []).map(normItem) })),
+    outlook: (date: string) => req<Outlook>(`/future/outlook${q({ date })}`),
+    runOutlook: (date: string) => req<Outlook>("/future/outlook", post({ date })),
   },
   review: {
     exceptions: (date: string) => req<ExceptionItem[]>(`/review/exceptions${q({ date })}`),
