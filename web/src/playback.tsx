@@ -8,7 +8,8 @@ import { D, fromMin, toMin } from "./lib/dates";
 import { actionText, actor } from "./live";
 import { useApp, useClearToasts, useToast } from "./state";
 
-const SPEEDS = [1, 2, 5, 10, 30];
+const SPEEDS = [0.2, 0.5, 1, 2, 5, 10, 30];
+export const speedLabel = (s: number) => (s < 1 ? `1 min every ${Math.round(1 / s)} s` : `${s} min/s`);
 const OPEN = 11 * 60;
 interface Frame {
   date: string;
@@ -64,7 +65,7 @@ export function PlaybackProvider({ children }: { children: ReactNode }) {
   const min = Math.min(OPEN, max);
   const [cursor, setCursor] = useState<{ date: string; minute: number; advancing: boolean }>({ date: "", minute: OPEN, advancing: false });
   const [start, setStart] = useState(OPEN);
-  const [speed, setSpeed] = useState(5);
+  const [speed, setSpeed] = useState(0.5);
   const [playing, setPlaying] = useState(false);
   const [frame, setFrame] = useState<Frame | null>(null);
   const [pastPreview, setPastPreview] = useState<PastPreview | null>(null);
@@ -231,7 +232,7 @@ export function PlaybackControls() {
   return <div className="playback-controls" role="group" aria-label="Playback controls">
     <button className="btn small" onClick={p.toggle} disabled={!p.playing && (!p.frame || p.frame.minute !== p.target || p.min === p.max || !!p.error)}>{p.playing ? "Pause" : "Play"}</button>
     <label>Speed <select className="input slim" value={p.speed} onChange={(e) => p.setSpeed(Number(e.target.value))}>
-      {SPEEDS.map((s) => <option key={s} value={s}>{s} min/s</option>)}
+      {SPEEDS.map((s) => <option key={s} value={s}>{speedLabel(s)}</option>)}
     </select></label>
     <label>Start time <input className="input slim" type="time" min={fromMin(p.min)} max={fromMin(p.max)}
       value={fromMin(Math.min(p.start, p.max))} onChange={(e) => {

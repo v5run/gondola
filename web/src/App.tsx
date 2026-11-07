@@ -2,7 +2,7 @@ import { NavLink, Navigate, Route, Routes, useLocation } from "react-router-dom"
 import { AppProvider, LiveProvider, ToastProvider, useApp } from "./state";
 import { PlaybackProvider } from "./playback";
 import { WhyProvider } from "./why";
-import { AgentProvider, AgentRail } from "./agents";
+import { AgentProvider } from "./agents";
 import { ExceptionsProvider, PresentProvider, useExceptions } from "./live";
 import { Icon, Logo } from "./components/ui";
 import { Page } from "./components/Page";
@@ -19,6 +19,12 @@ import Rush from "./screens/Rush";
 import Flex from "./screens/Flex";
 import OrderManager from "./screens/OrderManager";
 import Queue from "./screens/Queue";
+import Peak from "./screens/Peak";
+import Apps from "./screens/Apps";
+import Details from "./screens/Details";
+import FutureToday from "./screens/FutureToday";
+import PastSummary from "./screens/PastSummary";
+import { Attention, EndOfDay } from "./screens/ReviewSimple";
 import RestOfToday from "./screens/RestOfToday";
 import Tomorrow from "./screens/Tomorrow";
 import Exceptions from "./screens/Exceptions";
@@ -69,8 +75,6 @@ function Shell() {
         ))}
         <span className="navgap" />
         <NavLink to="/ask" className={({ isActive }) => `navlink${isActive ? " active" : ""}`} aria-label="Ask Gondola"><Icon name="ask" /><span className="tip">Ask Gondola</span></NavLink>
-        {SHOW_ALERTS_TAB && <NavLink to="/alerts" className={({ isActive }) => `navlink${isActive ? " active" : ""}`} aria-label="Alerts"><Icon name="alerts" /><span className="tip">Alerts</span></NavLink>}
-        <AgentRail />
         <div className="av" title="Maya, manager">MK</div>
       </nav>
       <main className="main">
@@ -80,17 +84,27 @@ function Shell() {
           <Route path="/rush/orders" element={<Navigate to="/present/orders" replace />} />
           <Route path="/flex" element={<Page title="Present" live={false} date={false}><Flex /></Page>} />
           <Route path="/" element={<Navigate to="/present" replace />} />
-          <Route path="/past" element={<Orders />} />
+          <Route path="/past" element={<PastSummary />} />
+          <Route path="/past/orders" element={<Orders />} />
+          <Route path="/past/details" element={<Details section="past" />} />
           <Route path="/past/money" element={<Money />} />
           <Route path="/past/reports" element={<Reports />} />
           <Route path="/past/insights" element={<Insights />} />
-          <Route path="/present" element={<Queue />} />
+          <Route path="/present" element={<Peak />} />
+          <Route path="/present/detail" element={<Queue />} />
+          <Route path="/present/apps" element={<Apps />} />
+          <Route path="/present/details" element={<Details section="present" />} />
           <Route path="/present/rush" element={<Page title="Present" live={false} date={false}><Rush /></Page>} />
           <Route path="/present/replay" element={<Service />} />
-          <Route path="/future" element={<RestOfToday />} />
+          <Route path="/future" element={<FutureToday />} />
+          <Route path="/future/forecast" element={<RestOfToday />} />
+          <Route path="/future/details" element={<Details section="future" />} />
           <Route path="/future/tomorrow" element={<Tomorrow />} />
           <Route path="/future/days" element={<Navigate to="/future/tomorrow" replace />} />
-          <Route path="/review" element={<Exceptions />} />
+          <Route path="/review" element={<Attention />} />
+          <Route path="/review/exceptions" element={<Exceptions />} />
+          <Route path="/review/end-of-day" element={<EndOfDay />} />
+          <Route path="/review/details" element={<Details section="review" />} />
           <Route path="/review/close" element={<CloseRun />} />
           <Route path="/review/day" element={<DayReview />} />
           <Route path="/review/actions" element={<ActionItems />} />
