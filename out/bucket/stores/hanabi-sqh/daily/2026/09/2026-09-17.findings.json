@@ -1,0 +1,194 @@
+{
+ "store_name": "Hanabi Ramen, Squirrel Hill",
+ "date": "2026-09-17",
+ "date_long": "Thursday, September 17, 2026",
+ "dow_name": "Thursday",
+ "headline": "A strong night, Thursday",
+ "summary": "494 orders and $15,964 in net sales (+17% vs a usual Thursday). Pirates home game, chashu sold out (0 app orders cancelled). Tomorrow looks like 513 orders, with the rush 6:00 pm\u20137:30 pm.",
+ "kpis": [
+  {
+   "label": "Net sales",
+   "value": "$15,964",
+   "delta": "+17% vs a usual Thursday",
+   "bad": false
+  },
+  {
+   "label": "Orders",
+   "value": "494",
+   "delta": "+16% vs a usual Thursday",
+   "bad": false
+  },
+  {
+   "label": "Average ticket",
+   "value": "$32.32",
+   "delta": "+1% vs a usual Thursday",
+   "bad": false
+  },
+  {
+   "label": "Labour",
+   "value": "24.3%",
+   "delta": "of net sales",
+   "bad": false
+  }
+ ],
+ "attention": [
+  "2 older payout reports checked: $55.82 looks recoverable (checklist on page 2)",
+  "Tomorrow needs +2 cook 11:30\u201313:00"
+ ],
+ "curve_svg": "<svg viewBox=\"0 0 300 124\" width=\"100%\"><path d=\"M0.0,88.6 L6.4,98.5 L12.8,66.3 L19.1,53.1 L25.5,48.1 L31.9,43.1 L38.3,51.4 L44.7,69.6 L51.1,88.6 L57.4,99.3 L63.8,107.6 L70.2,112.3 L76.6,115.6 L83.0,120.0 L89.4,120.0 L95.7,120.0 L102.1,120.0 L108.5,116.7 L114.9,116.7 L121.3,120.0 L127.7,112.3 L134.0,111.7 L140.4,106.0 L146.8,101.0 L153.2,100.2 L159.6,71.2 L166.0,68.8 L172.3,62.1 L178.7,51.4 L185.1,53.9 L191.5,43.1 L197.9,48.9 L204.3,58.0 L210.6,55.5 L217.0,69.6 L223.4,81.2 L229.8,87.8 L236.2,91.9 L242.6,96.0 L248.9,92.7 L255.3,93.6 L261.7,96.0 L268.1,106.8 L274.5,104.3 L280.9,120.0 L287.2,120.0 L293.6,120.0 L300.0,120.0\" fill=\"none\" stroke=\"#c9ccc6\" stroke-width=\"2\"/><path d=\"M0.0,67.1 L6.4,86.9 L12.8,70.4 L19.1,44.0 L25.5,10.9 L31.9,34.0 L38.3,40.7 L44.7,93.6 L51.1,103.5 L57.4,93.6 L63.8,113.4 L70.2,116.7 L76.6,116.7 L83.0,120.0 L89.4,120.0 L95.7,120.0 L102.1,120.0 L108.5,120.0 L114.9,116.7 L121.3,120.0 L127.7,113.4 L134.0,103.5 L140.4,103.5 L146.8,100.2 L153.2,93.6 L159.6,60.5 L166.0,73.7 L172.3,67.1 L178.7,24.1 L185.1,63.8 L191.5,44.0 L197.9,17.5 L204.3,50.6 L210.6,44.0 L217.0,73.7 L223.4,63.8 L229.8,86.9 L236.2,80.3 L242.6,103.5 L248.9,80.3 L255.3,80.3 L261.7,96.9 L268.1,93.6 L274.5,100.2 L280.9,120.0 L287.2,120.0 L293.6,120.0 L300.0,120.0\" fill=\"none\" stroke=\"#0f4d40\" stroke-width=\"2.4\"/></svg>",
+ "channels": [
+  {
+   "key": "grubhub",
+   "today": 1373.9,
+   "usual": 1127.78,
+   "change": 246.13
+  },
+  {
+   "key": "in_store",
+   "today": 4052.0,
+   "usual": 3762.38,
+   "change": 289.62
+  },
+  {
+   "key": "ubereats",
+   "today": 2951.85,
+   "usual": 2571.94,
+   "change": 379.91
+  },
+  {
+   "key": "doordash",
+   "today": 7586.15,
+   "usual": 6177.33,
+   "change": 1408.82
+  }
+ ],
+ "context_line": "Pirates home game, chashu sold out (0 app orders cancelled)",
+ "payouts": [
+  {
+   "channel": "Uber Eats \u00b7 Mon Sep 14",
+   "status": "Verified",
+   "sales": 2216.5,
+   "expected": 1618.01,
+   "reported_s": "$1,618.01",
+   "difference": 0.0,
+   "diff_s": "+0.00"
+  },
+  {
+   "channel": "Grubhub \u00b7 Tue Sep 15",
+   "status": "Verified",
+   "sales": 983.4,
+   "expected": 786.72,
+   "reported_s": "$777.92",
+   "difference": -8.8,
+   "diff_s": "-8.80"
+  },
+  {
+   "channel": "DoorDash \u00b7 Wed Sep 16",
+   "status": "Verified",
+   "sales": 5801.95,
+   "expected": 4351.49,
+   "reported_s": "$4,270.66",
+   "difference": -80.83,
+   "diff_s": "-80.83"
+  },
+  {
+   "channel": "DoorDash \u00b7 tonight",
+   "status": "Estimated",
+   "sales": 7586.15,
+   "expected": 5689.61,
+   "reported_s": "arrives later",
+   "difference": null,
+   "diff_s": ""
+  },
+  {
+   "channel": "Uber Eats \u00b7 tonight",
+   "status": "Estimated",
+   "sales": 2951.85,
+   "expected": 2154.85,
+   "reported_s": "arrives later",
+   "difference": null,
+   "diff_s": ""
+  },
+  {
+   "channel": "Grubhub \u00b7 tonight",
+   "status": "Estimated",
+   "sales": 1373.9,
+   "expected": 1099.12,
+   "reported_s": "arrives later",
+   "difference": null,
+   "diff_s": ""
+  }
+ ],
+ "cash": {
+  "date": "2026-09-17",
+  "status": "closed",
+  "shift_id": "cds-20260917",
+  "state": "CLOSED",
+  "shifts": 1,
+  "expected": 1655.34,
+  "counted": 1655.84,
+  "difference": 0.5,
+  "flag": false
+ },
+ "labour_line": "218 hours, $3,877 (24.3% of net sales)",
+ "disputes": [
+  {
+   "order": "o0146383",
+   "amount": 8.8,
+   "reason": "charge equals the price of a menu item that wasn't on the order",
+   "days_left": 12,
+   "channel": "Grubhub"
+  }
+ ],
+ "tomorrow": {
+  "p50": "513",
+  "p10": "454",
+  "p90": "597",
+  "rush": "6:00 pm\u20137:30 pm",
+  "similar": "Sep 11, May 8, Apr 24",
+  "par": 690,
+  "old_par": 590,
+  "safety": "pause chashu on the apps only if fewer than 6 portions remain",
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 690,
+    "on_hand": 0.0,
+    "prep": 690,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:15",
+     "ubereats": "21:15",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "staff": "+2 cook 11:30\u201313:00; +1 cook 18:00\u201319:00"
+ },
+ "check": {
+  "predicted": "435",
+  "actual": "494",
+  "err": "-12.0%",
+  "mape": "8.4%",
+  "naive": "9.8%",
+  "source": "last night's stored forecast"
+ },
+ "generated": "Sep 17 11:10 PM",
+ "rebuilt": null,
+ "closed_day": false,
+ "meta": {
+  "net_sales": 15963.9,
+  "orders": 494,
+  "vs_usual_pct": 0.1704,
+  "urgent": 0,
+  "texted": false,
+  "recoverable_usd": 55.82,
+  "closed_day": false
+ }
+}

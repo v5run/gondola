@@ -1,0 +1,322 @@
+{
+ "month": "2026-10",
+ "month_name": "October 2026",
+ "start": "2026-10-01",
+ "end": "2026-10-31",
+ "days_open": 31,
+ "net_sales": 512060.45,
+ "orders": 15756,
+ "avg_ticket": 32.5,
+ "labour_pct": 0.2338,
+ "cancels": 142,
+ "avoidable_cancels": 101,
+ "net_sales_per_day": 16518.08,
+ "by_channel": {
+  "in_store": 148907.0,
+  "doordash": 229128.35,
+  "ubereats": 89724.8,
+  "grubhub": 44300.3
+ },
+ "vs_prev_month_pct": 0.1446,
+ "prev": {
+  "month": "2026-09",
+  "month_name": "September 2026",
+  "days_open": 30,
+  "net_sales": 432929.8,
+  "orders": 13441,
+  "avg_ticket": 32.21,
+  "labour_pct": 0.2513,
+  "cancels": 157,
+  "avoidable_cancels": 113,
+  "net_sales_per_day": 14430.99,
+  "by_channel": {
+   "in_store": 129161.5,
+   "doordash": 191444.0,
+   "ubereats": 76699.7,
+   "grubhub": 35624.6
+  }
+ },
+ "vs_prev": {
+  "net_sales": 0.1828,
+  "orders": 0.1722,
+  "avg_ticket": 0.009,
+  "net_sales_per_day": 0.1446,
+  "labour_pct_pts": -0.0175,
+  "avoidable_cancels": -12
+ },
+ "best_day": {
+  "date": "2026-10-24",
+  "net_sales": 22066.4,
+  "orders": 697,
+  "events": null,
+  "rain": true,
+  "dow": "Saturday",
+  "vs_weekday_avg_pct": 0.0817
+ },
+ "worst_day": {
+  "date": "2026-10-19",
+  "net_sales": 11319.75,
+  "orders": 350,
+  "events": null,
+  "rain": false,
+  "dow": "Monday",
+  "vs_weekday_avg_pct": -0.0741
+ },
+ "daily": [
+  {
+   "date": "2026-10-01",
+   "net_sales": 16025.65,
+   "orders": 461,
+   "closed": false
+  },
+  {
+   "date": "2026-10-02",
+   "net_sales": 19110.7,
+   "orders": 629,
+   "closed": false
+  },
+  {
+   "date": "2026-10-03",
+   "net_sales": 18949.6,
+   "orders": 569,
+   "closed": false
+  },
+  {
+   "date": "2026-10-04",
+   "net_sales": 15471.95,
+   "orders": 483,
+   "closed": false
+  },
+  {
+   "date": "2026-10-05",
+   "net_sales": 11735.9,
+   "orders": 363,
+   "closed": false
+  },
+  {
+   "date": "2026-10-06",
+   "net_sales": 13637.15,
+   "orders": 414,
+   "closed": false
+  },
+  {
+   "date": "2026-10-07",
+   "net_sales": 18294.0,
+   "orders": 554,
+   "closed": false
+  },
+  {
+   "date": "2026-10-08",
+   "net_sales": 16500.95,
+   "orders": 502,
+   "closed": false
+  },
+  {
+   "date": "2026-10-09",
+   "net_sales": 17580.75,
+   "orders": 540,
+   "closed": false
+  },
+  {
+   "date": "2026-10-10",
+   "net_sales": 20636.65,
+   "orders": 635,
+   "closed": false
+  },
+  {
+   "date": "2026-10-11",
+   "net_sales": 16691.95,
+   "orders": 509,
+   "closed": false
+  },
+  {
+   "date": "2026-10-12",
+   "net_sales": 12945.6,
+   "orders": 391,
+   "closed": false
+  },
+  {
+   "date": "2026-10-13",
+   "net_sales": 12667.8,
+   "orders": 389,
+   "closed": false
+  },
+  {
+   "date": "2026-10-14",
+   "net_sales": 16650.5,
+   "orders": 502,
+   "closed": false
+  },
+  {
+   "date": "2026-10-15",
+   "net_sales": 14160.0,
+   "orders": 436,
+   "closed": false
+  },
+  {
+   "date": "2026-10-16",
+   "net_sales": 16251.5,
+   "orders": 511,
+   "closed": false
+  },
+  {
+   "date": "2026-10-17",
+   "net_sales": 19286.4,
+   "orders": 588,
+   "closed": false
+  },
+  {
+   "date": "2026-10-18",
+   "net_sales": 17542.15,
+   "orders": 552,
+   "closed": false
+  },
+  {
+   "date": "2026-10-19",
+   "net_sales": 11319.75,
+   "orders": 350,
+   "closed": false
+  },
+  {
+   "date": "2026-10-20",
+   "net_sales": 14964.95,
+   "orders": 489,
+   "closed": false
+  },
+  {
+   "date": "2026-10-21",
+   "net_sales": 18038.05,
+   "orders": 539,
+   "closed": false
+  },
+  {
+   "date": "2026-10-22",
+   "net_sales": 17404.35,
+   "orders": 530,
+   "closed": false
+  },
+  {
+   "date": "2026-10-23",
+   "net_sales": 18450.05,
+   "orders": 554,
+   "closed": false
+  },
+  {
+   "date": "2026-10-24",
+   "net_sales": 22066.4,
+   "orders": 697,
+   "closed": false
+  },
+  {
+   "date": "2026-10-25",
+   "net_sales": 16797.45,
+   "orders": 516,
+   "closed": false
+  },
+  {
+   "date": "2026-10-26",
+   "net_sales": 12900.45,
+   "orders": 391,
+   "closed": false
+  },
+  {
+   "date": "2026-10-27",
+   "net_sales": 14372.35,
+   "orders": 423,
+   "closed": false
+  },
+  {
+   "date": "2026-10-28",
+   "net_sales": 15527.75,
+   "orders": 485,
+   "closed": false
+  },
+  {
+   "date": "2026-10-29",
+   "net_sales": 14566.75,
+   "orders": 454,
+   "closed": false
+  },
+  {
+   "date": "2026-10-30",
+   "net_sales": 20454.75,
+   "orders": 642,
+   "closed": false
+  },
+  {
+   "date": "2026-10-31",
+   "net_sales": 21058.2,
+   "orders": 658,
+   "closed": false
+  }
+ ],
+ "sold_out_days": 7,
+ "sold_out_dates": [
+  "2026-10-02",
+  "2026-10-07",
+  "2026-10-08",
+  "2026-10-18",
+  "2026-10-20",
+  "2026-10-24",
+  "2026-10-30"
+ ],
+ "sold_out_app_cancels": 101,
+ "sold_out_app_cancels_with_guard": 0,
+ "cancels_avoided": 101,
+ "forecast": {
+  "days_scored": 31,
+  "stored": 31,
+  "mape": 0.0565,
+  "within_range_pct": 0.9355,
+  "naive_mape": 0.0728,
+  "worst_miss": {
+   "date": "2026-10-06",
+   "error_pct": -0.1553
+  }
+ },
+ "urgent_alerts": 10,
+ "recoverable_flagged_usd": 1322.8,
+ "closes": {
+  "nights": 31,
+  "done": 31,
+  "partial": 0,
+  "first": "2026-10-01",
+  "last": "2026-10-31"
+ },
+ "money": {
+  "recoverable_flagged_usd": 1322.8,
+  "payout_reports_short": 72,
+  "disputable_charges": 77,
+  "payout_short_usd": 2807.55,
+  "cash_short_usd": 98.75,
+  "cash_short_nights": 2,
+  "top": [
+   {
+    "title": "Uber Eats short $95.48 for Sat Oct 10",
+    "recoverable_usd": 95.48,
+    "channel": "Uber Eats"
+   },
+   {
+    "title": "DoorDash short $96.40 for Sun Oct 4",
+    "recoverable_usd": 73.52,
+    "channel": "DoorDash"
+   },
+   {
+    "title": "DoorDash short $83.20 for Sat Oct 3",
+    "recoverable_usd": 67.94,
+    "channel": "DoorDash"
+   },
+   {
+    "title": "DoorDash short $84.36 for Mon Oct 12",
+    "recoverable_usd": 66.28,
+    "channel": "DoorDash"
+   }
+  ]
+ },
+ "alerts": {
+  "texts": 9,
+  "emails": 31,
+  "urgent_items": 10,
+  "quiet_nights": 22
+ }
+}

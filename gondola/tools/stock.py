@@ -77,3 +77,29 @@ def variance_history(store: Store, sku: str | None = None) -> pd.DataFrame:
 def chashu_today(store: Store, date: str) -> dict:
     r = store.df("SELECT * FROM prep_log WHERE business_date = ?", [date])
     return r.iloc[0].to_dict() if len(r) else {}
+
+
+def sold_out_summary(store: Store, date: str) -> dict | None:
+    """When the limited item (chashu) sold out on a date, and what it cost: the last completed sale before the first
+    'item unavailable' cancel, how long it stayed live on the apps, cancels per app and the chashu they asked for.
+    None if nothing was cancelled for being sold out."""
+    from .. import NP
+    canc = store.df("""SELECT MIN(created_at) first_c, MAX(created_at) last_c, COUNT(*) n FROM orders
+                       WHERE business_date = ? AND cancel_reason = 'item_unavailable'""", [date])
+    if not canc.n[0]:
+        return None
+    last_sale = store.df("""SELECT MAX(o.created_at) t FROM orders o JOIN order_lines l USING(order_id) JOIN menu m ON m.item=l.item
+                            WHERE o.business_date = ? AND o.status='completed' AND m.chashu_portions > 0 AND o.created_at <= ?""",
+                         [date, canc.first_c[0]]).t[0]
+    t_so = pd.Timestamp(last_sale if last_sale is not None and not pd.isna(last_sale) else canc.first_c[0])
+    by = store.df("""SELECT channel, COUNT(*) n FROM orders WHERE business_date = ? AND cancel_reason = 'item_unavailable'
+                     GROUP BY 1 ORDER BY 2 DESC""", [date])
+    lost = store.df("""SELECT COALESCE(SUM(m.chashu_portions), 0) p FROM orders o JOIN order_lines l USING(order_id)
+                       JOIN menu m ON m.item = l.item WHERE o.business_date = ? AND o.cancel_reason = 'item_unavailable'""",
+                    [date]).p[0]
+    prep = chashu_today(store, date)
+    return {"at": t_so.strftime(f"%{NP}I:%M %p"), "app_cancels": int(canc.n[0]),
+            "minutes_live": int((pd.Timestamp(canc.last_c[0]) - t_so).total_seconds() // 60) + 1,
+            "by_channel": {r.channel: int(r.n) for r in by.itertuples()}, "portions_missed": round(float(lost), 1),
+            "prepped": int(prep["par"]) if prep.get("par") is not None else None,
+            "used": round(float(prep["used"]), 1) if prep.get("used") is not None else None}

@@ -3,3 +3,7 @@ __pycache__/
 data/*.duckdb
 out/replay/
 out/robust/
+.env
+.out_backfill/
+.out_old_history/
+out/rebuilt/

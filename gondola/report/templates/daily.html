@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html><head><meta charset="utf-8"><title>Daily Close Report {{ date }}</title>
 <style>
+{{ font_face | safe }}
 @page { size: Letter; margin: 0 }
 * { box-sizing: border-box }
-body { margin: 0; font-family: "Inter", "Helvetica Neue", Arial, sans-serif; color: #14201c; background: #f6f3ec; font-size: 10.5pt; line-height: 1.45 }
+body { margin: 0; font-family: "Inter", "Segoe UI", -apple-system, "Helvetica Neue", Arial, sans-serif; color: #14201c; background: #f6f3ec; font-size: 10.5pt; line-height: 1.45 }
 .page { width: 8.5in; height: 11in; padding: 0.55in 0.6in; page-break-after: always; position: relative }
 .top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px }
 .brand { font-weight: 700; color: #0f4d40; font-size: 13pt }

@@ -27,7 +27,7 @@ class Executor:
         log_path.parent.mkdir(parents=True, exist_ok=True)
         self._seen = set()
         if log_path.exists():
-            for line in log_path.read_text().splitlines():
+            for line in log_path.read_text(encoding="utf-8").splitlines():
                 self._seen.add(json.loads(line)["key"])
 
     def set_item_unavailable(self, store_id: str, date: str, item_group: str, channels: list[str], at: str) -> dict:
@@ -38,7 +38,7 @@ class Executor:
             raise RuntimeError("POS adapter timeout")
         rec = {"key": key, "store": store_id, "date": date, "action": "set_item_unavailable", "item_group": item_group,
                "channels": channels, "at": at, "status": "ok"}
-        with self.log_path.open("a") as f:
+        with self.log_path.open("a", encoding="utf-8") as f:
             f.write(json.dumps(rec) + "\n")
         self._seen.add(key)
         return rec

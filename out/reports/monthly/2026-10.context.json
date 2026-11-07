@@ -1,0 +1,138 @@
+{
+ "store_name": "Hanabi Ramen, Squirrel Hill",
+ "month": "2026-10",
+ "month_name": "October 2026",
+ "headline": "A strong month: $512,060 in October",
+ "summary": "15,756 orders over 31 open days, $16,518 a day (+14% a day on September). Chashu sold out on 7 nights.",
+ "kpis": [
+  {
+   "label": "Net sales",
+   "value": "$512,060",
+   "delta": "+18% vs September",
+   "bad": false
+  },
+  {
+   "label": "Orders",
+   "value": "15,756",
+   "delta": "+17% vs September",
+   "bad": false
+  },
+  {
+   "label": "Average ticket",
+   "value": "$32.50",
+   "delta": "+1% vs September",
+   "bad": false
+  },
+  {
+   "label": "Labour",
+   "value": "23.4%",
+   "delta": "-1.8 pts vs September",
+   "bad": false
+  }
+ ],
+ "chart_svg": "<svg viewBox=\"0 0 640 168\" width=\"100%\" role=\"img\" aria-label=\"Net sales per day\"><rect x=\"1.5\" y=\"49.1\" width=\"17.6\" height=\"100.9\" rx=\"2\" fill=\"#7fa89b\"/><text x=\"10.3\" y=\"163\" font-size=\"9\" text-anchor=\"middle\" fill=\"#8b938e\">1</text><rect x=\"22.1\" y=\"29.7\" width=\"17.6\" height=\"120.3\" rx=\"2\" fill=\"#7fa89b\"/><circle cx=\"31.0\" cy=\"24.7\" r=\"2.4\" fill=\"#e0a526\"/><rect x=\"42.8\" y=\"30.7\" width=\"17.6\" height=\"119.3\" rx=\"2\" fill=\"#7fa89b\"/><rect x=\"63.4\" y=\"52.6\" width=\"17.6\" height=\"97.4\" rx=\"2\" fill=\"#7fa89b\"/><rect x=\"84.1\" y=\"76.1\" width=\"17.6\" height=\"73.9\" rx=\"2\" fill=\"#7fa89b\"/><rect x=\"104.7\" y=\"64.2\" width=\"17.6\" height=\"85.8\" rx=\"2\" fill=\"#7fa89b\"/><text x=\"113.5\" y=\"163\" font-size=\"9\" text-anchor=\"middle\" fill=\"#8b938e\">6</text><rect x=\"125.4\" y=\"34.9\" width=\"17.6\" height=\"115.1\" rx=\"2\" fill=\"#7fa89b\"/><circle cx=\"134.2\" cy=\"29.9\" r=\"2.4\" fill=\"#e0a526\"/><rect x=\"146.0\" y=\"46.1\" width=\"17.6\" height=\"103.9\" rx=\"2\" fill=\"#7fa89b\"/><circle cx=\"154.8\" cy=\"41.1\" r=\"2.4\" fill=\"#e0a526\"/><rect x=\"166.7\" y=\"39.3\" width=\"17.6\" height=\"110.7\" rx=\"2\" fill=\"#7fa89b\"/><rect x=\"187.3\" y=\"20.1\" width=\"17.6\" height=\"129.9\" rx=\"2\" fill=\"#7fa89b\"/><rect x=\"208.0\" y=\"44.9\" width=\"17.6\" height=\"105.1\" rx=\"2\" fill=\"#7fa89b\"/><text x=\"216.8\" y=\"163\" font-size=\"9\" text-anchor=\"middle\" fill=\"#8b938e\">11</text><rect x=\"228.6\" y=\"68.5\" width=\"17.6\" height=\"81.5\" rx=\"2\" fill=\"#7fa89b\"/><rect x=\"249.2\" y=\"70.3\" width=\"17.6\" height=\"79.7\" rx=\"2\" fill=\"#7fa89b\"/><rect x=\"269.9\" y=\"45.2\" width=\"17.6\" height=\"104.8\" rx=\"2\" fill=\"#7fa89b\"/><rect x=\"290.5\" y=\"60.9\" width=\"17.6\" height=\"89.1\" rx=\"2\" fill=\"#7fa89b\"/><rect x=\"311.2\" y=\"47.7\" width=\"17.6\" height=\"102.3\" rx=\"2\" fill=\"#7fa89b\"/><text x=\"320.0\" y=\"163\" font-size=\"9\" text-anchor=\"middle\" fill=\"#8b938e\">16</text><rect x=\"331.8\" y=\"28.6\" width=\"17.6\" height=\"121.4\" rx=\"2\" fill=\"#7fa89b\"/><rect x=\"352.5\" y=\"39.6\" width=\"17.6\" height=\"110.4\" rx=\"2\" fill=\"#7fa89b\"/><circle cx=\"361.3\" cy=\"34.6\" r=\"2.4\" fill=\"#e0a526\"/><rect x=\"373.1\" y=\"78.8\" width=\"17.6\" height=\"71.2\" rx=\"2\" fill=\"#d03b3b\"/><rect x=\"393.8\" y=\"55.8\" width=\"17.6\" height=\"94.2\" rx=\"2\" fill=\"#7fa89b\"/><circle cx=\"402.6\" cy=\"50.8\" r=\"2.4\" fill=\"#e0a526\"/><rect x=\"414.4\" y=\"36.5\" width=\"17.6\" height=\"113.5\" rx=\"2\" fill=\"#7fa89b\"/><text x=\"423.2\" y=\"163\" font-size=\"9\" text-anchor=\"middle\" fill=\"#8b938e\">21</text><rect x=\"435.0\" y=\"40.5\" width=\"17.6\" height=\"109.5\" rx=\"2\" fill=\"#7fa89b\"/><rect x=\"455.7\" y=\"33.9\" width=\"17.6\" height=\"116.1\" rx=\"2\" fill=\"#7fa89b\"/><rect x=\"476.3\" y=\"11.1\" width=\"17.6\" height=\"138.9\" rx=\"2\" fill=\"#0f4d40\"/><rect x=\"497.0\" y=\"44.3\" width=\"17.6\" height=\"105.7\" rx=\"2\" fill=\"#7fa89b\"/><rect x=\"517.6\" y=\"68.8\" width=\"17.6\" height=\"81.2\" rx=\"2\" fill=\"#7fa89b\"/><text x=\"526.5\" y=\"163\" font-size=\"9\" text-anchor=\"middle\" fill=\"#8b938e\">26</text><rect x=\"538.3\" y=\"59.5\" width=\"17.6\" height=\"90.5\" rx=\"2\" fill=\"#7fa89b\"/><rect x=\"558.9\" y=\"52.3\" width=\"17.6\" height=\"97.7\" rx=\"2\" fill=\"#7fa89b\"/><rect x=\"579.6\" y=\"58.3\" width=\"17.6\" height=\"91.7\" rx=\"2\" fill=\"#7fa89b\"/><rect x=\"600.2\" y=\"21.3\" width=\"17.6\" height=\"128.7\" rx=\"2\" fill=\"#7fa89b\"/><circle cx=\"609.0\" cy=\"16.3\" r=\"2.4\" fill=\"#e0a526\"/><rect x=\"620.9\" y=\"17.5\" width=\"17.6\" height=\"132.5\" rx=\"2\" fill=\"#7fa89b\"/><text x=\"629.7\" y=\"163\" font-size=\"9\" text-anchor=\"middle\" fill=\"#8b938e\">31</text></svg>",
+ "best": {
+  "label": "Sat Oct 24",
+  "net_sales": "$22,066",
+  "orders": 697,
+  "context": "rain",
+  "vs": "+8% vs the month's average Saturday"
+ },
+ "worst": {
+  "label": "Mon Oct 19",
+  "net_sales": "$11,320",
+  "orders": 350,
+  "context": "no weather or events of note",
+  "vs": "-7% vs the month's average Monday"
+ },
+ "channels": [
+  {
+   "name": "In-store",
+   "value": "$148,907",
+   "share": 0.29079965070530245,
+   "delta": "+15%"
+  },
+  {
+   "name": "DoorDash",
+   "value": "$229,128",
+   "share": 0.4474634781889521,
+   "delta": "+20%"
+  },
+  {
+   "name": "Uber Eats",
+   "value": "$89,725",
+   "share": 0.1752230620427725,
+   "delta": "+17%"
+  },
+  {
+   "name": "Grubhub",
+   "value": "$44,300",
+   "share": 0.08651380906297294,
+   "delta": "+24%"
+  }
+ ],
+ "prev_name": "September",
+ "money": {
+  "recoverable_flagged_usd": 1322.8,
+  "payout_reports_short": 72,
+  "disputable_charges": 77,
+  "payout_short_usd": 2807.55,
+  "cash_short_usd": 98.75,
+  "cash_short_nights": 2,
+  "top": [
+   {
+    "title": "Uber Eats short $95.48 for Sat Oct 10",
+    "recoverable_usd": 95.48,
+    "channel": "Uber Eats"
+   },
+   {
+    "title": "DoorDash short $96.40 for Sun Oct 4",
+    "recoverable_usd": 73.52,
+    "channel": "DoorDash"
+   },
+   {
+    "title": "DoorDash short $83.20 for Sat Oct 3",
+    "recoverable_usd": 67.94,
+    "channel": "DoorDash"
+   },
+   {
+    "title": "DoorDash short $84.36 for Mon Oct 12",
+    "recoverable_usd": 66.28,
+    "channel": "DoorDash"
+   }
+  ]
+ },
+ "alerts": {
+  "texts": 9,
+  "emails": 31,
+  "urgent_items": 10,
+  "quiet_nights": 22
+ },
+ "closes": {
+  "nights": 31,
+  "done": 31,
+  "partial": 0,
+  "first": "2026-10-01",
+  "last": "2026-10-31"
+ },
+ "coverage": null,
+ "sold_out": {
+  "days": 7,
+  "dates": "Oct 2, Oct 7, Oct 8, Oct 18, Oct 20, Oct 24, Oct 30",
+  "app_cancels": 101,
+  "with_guard": 0,
+  "avoided": 101
+ },
+ "cancels": 142,
+ "avoidable_cancels": 101,
+ "forecast": {
+  "days": 31,
+  "mape": "5.7%",
+  "within": "94%",
+  "naive": "7.3%",
+  "stored": 31,
+  "worst": "Tue Oct 6 (-16%)"
+ },
+ "generated": "Nov 1 11:10 PM",
+ "rebuilt": null
+}

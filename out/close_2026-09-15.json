@@ -1,0 +1,1151 @@
+{
+ "date": "2026-09-15",
+ "db": ".out_backfill/_db/night_2026-09-15.duckdb",
+ "log": [
+  {
+   "step": "stock",
+   "status": "done",
+   "seconds": 0.05
+  },
+  {
+   "step": "books",
+   "status": "done",
+   "seconds": 0.22
+  },
+  {
+   "step": "demand",
+   "status": "done",
+   "seconds": 0.66
+  },
+  {
+   "step": "analyst",
+   "status": "done",
+   "seconds": 0.06
+  },
+  {
+   "step": "plan",
+   "status": "done",
+   "seconds": 0.03
+  },
+  {
+   "step": "sentinel",
+   "status": "done",
+   "seconds": 0.0
+  },
+  {
+   "step": "report",
+   "status": "done",
+   "seconds": 0.03
+  },
+  {
+   "step": "guard",
+   "status": "done",
+   "seconds": 0.0
+  }
+ ],
+ "as_of": "2026-09-15T23:10:00",
+ "closed_day": false,
+ "books": {
+  "cash": {
+   "date": "2026-09-15",
+   "status": "closed",
+   "shift_id": "cds-20260915",
+   "state": "CLOSED",
+   "shifts": 1,
+   "expected": 1441.37,
+   "counted": 1441.62,
+   "difference": 0.25,
+   "flag": false
+  },
+  "money": {
+   "net_sales": 12371.4,
+   "orders": 389,
+   "avg_ticket": 31.8,
+   "card_fees": 113.55,
+   "app_commission": 2160.14,
+   "labour_cost": 3283.18,
+   "labour_pct": 0.2654,
+   "labour_hours": 183.88
+  },
+  "verified": [
+   {
+    "date": "2026-09-12",
+    "channels": [
+     {
+      "channel": "ubereats",
+      "orders": 78,
+      "sales": 2632.3,
+      "expected": 1921.55,
+      "reported": 1863.24,
+      "difference": -58.31,
+      "error_charges": 28.6,
+      "fresh": true
+     }
+    ],
+    "findings": [
+     {
+      "agent": "books",
+      "kind": "missing_from_payout",
+      "title": "ubereats order o0144888 missing from payout",
+      "impact_usd": 29.71,
+      "business_date": "2026-09-12",
+      "channel": "ubereats",
+      "evidence": [
+       "o0144888"
+      ],
+      "detail": null
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "ubereats error charge $19.25 on o0144836",
+      "impact_usd": 0.0,
+      "business_date": "2026-09-12",
+      "channel": "ubereats",
+      "evidence": [
+       "o0144836"
+      ],
+      "detail": {
+       "items": [
+        "Tonkotsu"
+       ],
+       "prices": [
+        19.25
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "ubereats error charge $9.35 on o0145052",
+      "impact_usd": 0.0,
+      "business_date": "2026-09-12",
+      "channel": "ubereats",
+      "evidence": [
+       "o0145052"
+      ],
+      "detail": {
+       "items": [
+        "Chashu Bao",
+        "Shoyu"
+       ],
+       "prices": [
+        9.35,
+        18.15
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     }
+    ],
+    "recoverable_usd": 29.71
+   },
+   {
+    "date": "2026-09-13",
+    "channels": [
+     {
+      "channel": "grubhub",
+      "orders": 31,
+      "sales": 983.95,
+      "expected": 787.16,
+      "reported": 787.16,
+      "difference": 0.0,
+      "error_charges": 0.0,
+      "fresh": true
+     }
+    ],
+    "findings": [],
+    "recoverable_usd": 0
+   },
+   {
+    "date": "2026-09-14",
+    "channels": [
+     {
+      "channel": "doordash",
+      "orders": 136,
+      "sales": 4519.35,
+      "expected": 3389.56,
+      "reported": 3374.16,
+      "difference": -15.4,
+      "error_charges": 15.4,
+      "fresh": true
+     }
+    ],
+    "findings": [
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "doordash error charge $15.40 on o0145951",
+      "impact_usd": 0.0,
+      "business_date": "2026-09-14",
+      "channel": "doordash",
+      "evidence": [
+       "o0145951"
+      ],
+      "detail": {
+       "items": [
+        "Chashu Don"
+       ],
+       "prices": [
+        15.4
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     }
+    ],
+    "recoverable_usd": 0
+   }
+  ],
+  "estimate_today": [
+   {
+    "channel": "doordash",
+    "orders": 179,
+    "sales": 5777.2,
+    "expected": 4332.9,
+    "reported": null,
+    "difference": null
+   },
+   {
+    "channel": "ubereats",
+    "orders": 56,
+    "sales": 1922.8,
+    "expected": 1403.64,
+    "reported": null,
+    "difference": null
+   },
+   {
+    "channel": "grubhub",
+    "orders": 31,
+    "sales": 983.4,
+    "expected": 786.72,
+    "reported": null,
+    "difference": null
+   }
+  ],
+  "verified_pairs": [
+   "2026-09-12|ubereats",
+   "2026-09-13|grubhub",
+   "2026-09-14|doordash"
+  ]
+ },
+ "stock": {
+  "ledger": {
+   "date": "2026-09-15",
+   "since": "2026-09-13",
+   "rows": [
+    {
+     "sku": "ajitama_egg",
+     "last_count": 424.61,
+     "received": 1500.0,
+     "used": 684.5,
+     "waste": 0.0,
+     "ledger": 1240.11
+    },
+    {
+     "sku": "bao_bun",
+     "last_count": 102.73,
+     "received": 250.0,
+     "used": 166.0,
+     "waste": 0.0,
+     "ledger": 186.73
+    },
+    {
+     "sku": "chicken_thigh",
+     "last_count": 10.55,
+     "received": 75.0,
+     "used": 28.89,
+     "waste": 0.0,
+     "ledger": 56.66
+    },
+    {
+     "sku": "edamame",
+     "last_count": 3.69,
+     "received": 20.0,
+     "used": 6.75,
+     "waste": 0.0,
+     "ledger": 16.94
+    },
+    {
+     "sku": "green_tea",
+     "last_count": 19.27,
+     "received": 44.0,
+     "used": 21.6,
+     "waste": 0.45,
+     "ledger": 41.22
+    },
+    {
+     "sku": "gyoza",
+     "last_count": 551.03,
+     "received": 1500.0,
+     "used": 774.0,
+     "waste": 0.0,
+     "ledger": 1277.03
+    },
+    {
+     "sku": "mochi",
+     "last_count": 111.48,
+     "received": 252.0,
+     "used": 120.0,
+     "waste": 0.0,
+     "ledger": 243.48
+    },
+    {
+     "sku": "noodles",
+     "last_count": 519.87,
+     "received": 2120.0,
+     "used": 977.0,
+     "waste": 25.7,
+     "ledger": 1637.17
+    },
+    {
+     "sku": "pork_belly",
+     "last_count": 73.97,
+     "received": 270.0,
+     "used": 125.71,
+     "waste": 3.29,
+     "ledger": 214.96
+    },
+    {
+     "sku": "ramune",
+     "last_count": 38.59,
+     "received": 168.0,
+     "used": 77.0,
+     "waste": 0.0,
+     "ledger": 129.59
+    },
+    {
+     "sku": "rice",
+     "last_count": 26.67,
+     "received": 40.0,
+     "used": 16.06,
+     "waste": 0.0,
+     "ledger": 50.61
+    },
+    {
+     "sku": "sapporo",
+     "last_count": 6.71,
+     "received": 48.0,
+     "used": 19.0,
+     "waste": 0.0,
+     "ledger": 35.71
+    },
+    {
+     "sku": "scallion",
+     "last_count": 6.15,
+     "received": 24.0,
+     "used": 10.62,
+     "waste": 0.0,
+     "ledger": 19.53
+    },
+    {
+     "sku": "takoyaki",
+     "last_count": 139.82,
+     "received": 540.0,
+     "used": 318.0,
+     "waste": 0.0,
+     "ledger": 361.82
+    }
+   ],
+   "findings": []
+  },
+  "chashu": {
+   "business_date": "2026-09-15 00:00:00",
+   "par": 460,
+   "used": 400.5,
+   "sold_out": false
+  }
+ },
+ "demand": {
+  "date": "2026-09-16",
+  "p10": 390.5,
+  "p50": 441.4,
+  "p90": 513.4,
+  "similar_days": [
+   {
+    "date": "2026-08-26",
+    "orders": 392,
+    "net_sales": 12942.4,
+    "why": "same weekday, school in session",
+    "distance": 0.195
+   },
+   {
+    "date": "2026-09-02",
+    "orders": 387,
+    "net_sales": 12343.25,
+    "why": "same weekday, school in session",
+    "distance": 0.323
+   },
+   {
+    "date": "2026-05-06",
+    "orders": 402,
+    "net_sales": 12843.3,
+    "why": "same weekday, school in session",
+    "distance": 0.559
+   },
+   {
+    "date": "2026-09-09",
+    "orders": 425,
+    "net_sales": 13751.9,
+    "why": "same weekday, school in session",
+    "distance": 1.112
+   },
+   {
+    "date": "2026-07-08",
+    "orders": 315,
+    "net_sales": 10492.2,
+    "why": "same weekday",
+    "distance": 1.116
+   }
+  ],
+  "curve": [
+   {
+    "bin": 44,
+    "time": "11:00",
+    "orders": 12.66
+   },
+   {
+    "bin": 45,
+    "time": "11:15",
+    "orders": 8.29
+   },
+   {
+    "bin": 46,
+    "time": "11:30",
+    "orders": 11.45
+   },
+   {
+    "bin": 47,
+    "time": "11:45",
+    "orders": 17.26
+   },
+   {
+    "bin": 48,
+    "time": "12:00",
+    "orders": 19.79
+   },
+   {
+    "bin": 49,
+    "time": "12:15",
+    "orders": 22.27
+   },
+   {
+    "bin": 50,
+    "time": "12:30",
+    "orders": 19.14
+   },
+   {
+    "bin": 51,
+    "time": "12:45",
+    "orders": 15.08
+   },
+   {
+    "bin": 52,
+    "time": "13:00",
+    "orders": 11.97
+   },
+   {
+    "bin": 53,
+    "time": "13:15",
+    "orders": 7.13
+   },
+   {
+    "bin": 54,
+    "time": "13:30",
+    "orders": 2.8
+   },
+   {
+    "bin": 55,
+    "time": "13:45",
+    "orders": 2.34
+   },
+   {
+    "bin": 56,
+    "time": "14:00",
+    "orders": 1.11
+   },
+   {
+    "bin": 58,
+    "time": "14:30",
+    "orders": 1.11
+   },
+   {
+    "bin": 60,
+    "time": "15:00",
+    "orders": 1.06
+   },
+   {
+    "bin": 62,
+    "time": "15:30",
+    "orders": 1.16
+   },
+   {
+    "bin": 63,
+    "time": "15:45",
+    "orders": 1.08
+   },
+   {
+    "bin": 64,
+    "time": "16:00",
+    "orders": 2.19
+   },
+   {
+    "bin": 65,
+    "time": "16:15",
+    "orders": 3.57
+   },
+   {
+    "bin": 66,
+    "time": "16:30",
+    "orders": 4.74
+   },
+   {
+    "bin": 67,
+    "time": "16:45",
+    "orders": 6.76
+   },
+   {
+    "bin": 68,
+    "time": "17:00",
+    "orders": 8.34
+   },
+   {
+    "bin": 69,
+    "time": "17:15",
+    "orders": 12.11
+   },
+   {
+    "bin": 70,
+    "time": "17:30",
+    "orders": 13.93
+   },
+   {
+    "bin": 71,
+    "time": "17:45",
+    "orders": 21.55
+   },
+   {
+    "bin": 72,
+    "time": "18:00",
+    "orders": 21.83
+   },
+   {
+    "bin": 73,
+    "time": "18:15",
+    "orders": 23.02
+   },
+   {
+    "bin": 74,
+    "time": "18:30",
+    "orders": 26.56
+   },
+   {
+    "bin": 75,
+    "time": "18:45",
+    "orders": 22.76
+   },
+   {
+    "bin": 76,
+    "time": "19:00",
+    "orders": 22.93
+   },
+   {
+    "bin": 77,
+    "time": "19:15",
+    "orders": 18.32
+   },
+   {
+    "bin": 78,
+    "time": "19:30",
+    "orders": 13.01
+   },
+   {
+    "bin": 79,
+    "time": "19:45",
+    "orders": 13.45
+   },
+   {
+    "bin": 80,
+    "time": "20:00",
+    "orders": 9.13
+   },
+   {
+    "bin": 81,
+    "time": "20:15",
+    "orders": 6.38
+   },
+   {
+    "bin": 82,
+    "time": "20:30",
+    "orders": 6.9
+   },
+   {
+    "bin": 83,
+    "time": "20:45",
+    "orders": 5.24
+   },
+   {
+    "bin": 84,
+    "time": "21:00",
+    "orders": 6.71
+   },
+   {
+    "bin": 85,
+    "time": "21:15",
+    "orders": 7.49
+   },
+   {
+    "bin": 86,
+    "time": "21:30",
+    "orders": 5.58
+   },
+   {
+    "bin": 87,
+    "time": "21:45",
+    "orders": 3.19
+   }
+  ],
+  "items": [
+   {
+    "item": "Chashu Bao",
+    "daypart": "dinner",
+    "units": 30.0
+   },
+   {
+    "item": "Chashu Bao",
+    "daypart": "lunch",
+    "units": 12.2
+   },
+   {
+    "item": "Chashu Don",
+    "daypart": "dinner",
+    "units": 39.4
+   },
+   {
+    "item": "Chashu Don",
+    "daypart": "lunch",
+    "units": 17.9
+   },
+   {
+    "item": "Chicken Paitan",
+    "daypart": "dinner",
+    "units": 57.0
+   },
+   {
+    "item": "Chicken Paitan",
+    "daypart": "lunch",
+    "units": 31.0
+   },
+   {
+    "item": "Edamame",
+    "daypart": "dinner",
+    "units": 19.0
+   },
+   {
+    "item": "Edamame",
+    "daypart": "lunch",
+    "units": 10.4
+   },
+   {
+    "item": "Gyoza",
+    "daypart": "dinner",
+    "units": 44.9
+   },
+   {
+    "item": "Gyoza",
+    "daypart": "lunch",
+    "units": 22.0
+   },
+   {
+    "item": "Iced Green Tea",
+    "daypart": "dinner",
+    "units": 25.3
+   },
+   {
+    "item": "Iced Green Tea",
+    "daypart": "lunch",
+    "units": 10.6
+   },
+   {
+    "item": "Karaage",
+    "daypart": "dinner",
+    "units": 37.4
+   },
+   {
+    "item": "Karaage",
+    "daypart": "lunch",
+    "units": 21.2
+   },
+   {
+    "item": "Mochi Trio",
+    "daypart": "dinner",
+    "units": 16.9
+   },
+   {
+    "item": "Mochi Trio",
+    "daypart": "lunch",
+    "units": 7.8
+   },
+   {
+    "item": "Ramune",
+    "daypart": "dinner",
+    "units": 25.6
+   },
+   {
+    "item": "Ramune",
+    "daypart": "lunch",
+    "units": 15.2
+   },
+   {
+    "item": "Sapporo",
+    "daypart": "dinner",
+    "units": 4.8
+   },
+   {
+    "item": "Sapporo",
+    "daypart": "lunch",
+    "units": 2.3
+   },
+   {
+    "item": "Shoyu",
+    "daypart": "dinner",
+    "units": 63.0
+   },
+   {
+    "item": "Shoyu",
+    "daypart": "lunch",
+    "units": 29.7
+   },
+   {
+    "item": "Spicy Miso",
+    "daypart": "dinner",
+    "units": 82.4
+   },
+   {
+    "item": "Spicy Miso",
+    "daypart": "lunch",
+    "units": 40.9
+   },
+   {
+    "item": "Takoyaki",
+    "daypart": "dinner",
+    "units": 16.0
+   },
+   {
+    "item": "Takoyaki",
+    "daypart": "lunch",
+    "units": 8.7
+   },
+   {
+    "item": "Tantanmen",
+    "daypart": "dinner",
+    "units": 41.0
+   },
+   {
+    "item": "Tantanmen",
+    "daypart": "lunch",
+    "units": 24.8
+   },
+   {
+    "item": "Tonkotsu",
+    "daypart": "dinner",
+    "units": 114.7
+   },
+   {
+    "item": "Tonkotsu",
+    "daypart": "lunch",
+    "units": 62.2
+   },
+   {
+    "item": "Veggie Miso",
+    "daypart": "dinner",
+    "units": 41.9
+   },
+   {
+    "item": "Veggie Miso",
+    "daypart": "lunch",
+    "units": 21.8
+   }
+  ],
+  "rush": {
+   "start": "17:45",
+   "end": "19:15",
+   "peak_per_15min": 26.6
+  },
+  "model": "lightgbm-daily + similar-day shape",
+  "backtest_mape_60d": 0.086,
+  "today_check": {
+   "predicted": 390.0,
+   "actual": 389.0,
+   "error_pct": 0.0026,
+   "source": "stored"
+  },
+  "naive_mape_60d": 0.1033
+ },
+ "analyst": {
+  "compare": {
+   "date": "2026-09-15",
+   "baseline": "usual_weekday",
+   "baseline_dates": [
+    "2026-08-18",
+    "2026-08-25",
+    "2026-09-01",
+    "2026-09-08"
+   ],
+   "orders": {
+    "value": 389.0,
+    "baseline": 373.25,
+    "change_pct": 0.0422
+   },
+   "net_sales": {
+    "value": 12371.4,
+    "baseline": 12043.9,
+    "change_pct": 0.0272
+   },
+   "avg_ticket": {
+    "value": 31.8031,
+    "baseline": 32.2443,
+    "change_pct": -0.0137
+   },
+   "labour_pct": {
+    "value": 0.2654,
+    "baseline": 0.2613,
+    "change_pct": 0.0157
+   },
+   "cancels": {
+    "value": 3.0,
+    "baseline": 1.0,
+    "change_pct": 2.0
+   },
+   "avoidable_cancels": {
+    "value": 0.0,
+    "baseline": 0.0,
+    "change_pct": null
+   }
+  },
+  "explain": {
+   "channel": [
+    {
+     "key": "ubereats",
+     "today": 1922.8,
+     "usual": 2297.35,
+     "change": -374.55
+    },
+    {
+     "key": "grubhub",
+     "today": 983.4,
+     "usual": 995.5,
+     "change": -12.1
+    },
+    {
+     "key": "doordash",
+     "today": 5777.2,
+     "usual": 5507.43,
+     "change": 269.77
+    },
+    {
+     "key": "in_store",
+     "today": 3688.0,
+     "usual": 3243.62,
+     "change": 444.38
+    }
+   ],
+   "daypart": [
+    {
+     "key": "dinner",
+     "today": 6896.3,
+     "usual": 7421.01,
+     "change": -524.71
+    },
+    {
+     "key": "late",
+     "today": 662.95,
+     "usual": 529.79,
+     "change": 133.16
+    },
+    {
+     "key": "lunch",
+     "today": 4812.15,
+     "usual": 4093.1,
+     "change": 719.05
+    }
+   ],
+   "context": {
+    "rain": false,
+    "snow": false,
+    "temp_high_c": 19.0,
+    "events": []
+   }
+  },
+  "similar": [
+   {
+    "date": "2026-09-01",
+    "orders": 350,
+    "net_sales": 10933.15,
+    "why": "same weekday, school in session",
+    "distance": 0.64
+   },
+   {
+    "date": "2026-04-21",
+    "orders": 392,
+    "net_sales": 12290.2,
+    "why": "same weekday, school in session",
+    "distance": 0.842
+   },
+   {
+    "date": "2026-08-25",
+    "orders": 347,
+    "net_sales": 11182.3,
+    "why": "same weekday, school in session",
+    "distance": 0.981
+   },
+   {
+    "date": "2026-08-11",
+    "orders": 378,
+    "net_sales": 12345.2,
+    "why": "same weekday",
+    "distance": 1.071
+   },
+   {
+    "date": "2026-03-31",
+    "orders": 395,
+    "net_sales": 13367.2,
+    "why": "same weekday, school in session",
+    "distance": 1.143
+   }
+  ],
+  "curve": [
+   12,
+   13,
+   20,
+   13,
+   22,
+   24,
+   21,
+   8,
+   10,
+   3,
+   4,
+   4,
+   1,
+   1,
+   1,
+   1,
+   1,
+   4,
+   6,
+   3,
+   5,
+   12,
+   18,
+   19,
+   18,
+   18,
+   21,
+   15,
+   8,
+   14,
+   9,
+   10,
+   9,
+   3,
+   8,
+   9,
+   7,
+   8,
+   4,
+   5
+  ],
+  "items": [
+   {
+    "item": "Tonkotsu",
+    "sold": 136,
+    "sales": 2535.75
+   },
+   {
+    "item": "Spicy Miso",
+    "sold": 113,
+    "sales": 2128.0
+   },
+   {
+    "item": "Chicken Paitan",
+    "sold": 86,
+    "sales": 1504.800000000001
+   },
+   {
+    "item": "Shoyu",
+    "sold": 71,
+    "sales": 1240.8000000000002
+   },
+   {
+    "item": "Tantanmen",
+    "sold": 70,
+    "sales": 1283.5000000000011
+   },
+   {
+    "item": "Gyoza",
+    "sold": 69,
+    "sales": 585.6000000000001
+   },
+   {
+    "item": "Veggie Miso",
+    "sold": 50,
+    "sales": 827.6999999999996
+   },
+   {
+    "item": "Ramune",
+    "sold": 47,
+    "sales": 227.24999999999986
+   }
+  ]
+ },
+ "plan": {
+  "portions_per_order": 1.132,
+  "newsvendor": {
+   "critical_ratio": 0.968,
+   "orders_planned": 537.7,
+   "chashu_portions": 610
+  },
+  "old_par": 510,
+  "old_runout": {
+   "item_group": "chashu",
+   "pause_apps_at": null,
+   "trigger": "only if fewer than 0 portions remain"
+  },
+  "safety_net": {
+   "item_group": "chashu",
+   "pause_apps_at": null,
+   "trigger": "only if fewer than 6 portions remain"
+  },
+  "staff_gaps": [
+   {
+    "start": "11:45",
+    "end": "13:00",
+    "extra_cooks": 1
+   },
+   {
+    "start": "18:15",
+    "end": "19:15",
+    "extra_cooks": 1
+   }
+  ],
+  "prep_schedule": [
+   {
+    "name": "Braise chashu",
+    "start": "9:00",
+    "end": "11:30",
+    "deadline": "16:45",
+    "_s": 540
+   },
+   {
+    "name": "Karaage marinade",
+    "start": "9:00",
+    "end": "9:25",
+    "deadline": "16:15",
+    "_s": 540
+   },
+   {
+    "name": "Marinate eggs",
+    "start": "9:25",
+    "end": "9:55",
+    "deadline": "15:45",
+    "_s": 565
+   },
+   {
+    "name": "Fold gyoza",
+    "start": "9:55",
+    "end": "11:25",
+    "deadline": "17:15",
+    "_s": 595
+   },
+   {
+    "name": "Slice and portion chashu",
+    "start": "11:30",
+    "end": "12:10",
+    "deadline": "17:30",
+    "_s": 690
+   }
+  ],
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 610,
+    "on_hand": 38.0,
+    "prep": 580,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "portion_counts": {
+   "chashu": 38.0
+  }
+ },
+ "cancel_rate": 0.011644832605531296,
+ "prev_cancel_rate": 0.011461318051575931,
+ "cross_check": [],
+ "findings": [
+  {
+   "kind": "payout_short",
+   "channel": "ubereats",
+   "channel_name": "Uber Eats",
+   "fresh": true,
+   "recoverable_usd": 29.71,
+   "for_date_iso": "2026-09-12",
+   "n_disputable": 1,
+   "for_date": "Sat Sep 12",
+   "impact_usd": 58.31,
+   "detail": "1 missing order, 2 valid-looking charges",
+   "title": "Uber Eats short $58.31 for Sat Sep 12",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "doordash",
+   "channel_name": "DoorDash",
+   "fresh": true,
+   "recoverable_usd": 0,
+   "for_date_iso": "2026-09-14",
+   "n_disputable": 0,
+   "for_date": "Mon Sep 14",
+   "impact_usd": 15.4,
+   "detail": "1 valid-looking charge",
+   "title": "DoorDash short $15.40 for Mon Sep 14",
+   "urgency": "important"
+  },
+  {
+   "kind": "cancel_rate",
+   "rate": 0.011644832605531296,
+   "prev_rate": 0.011461318051575931,
+   "title": "DoorDash 7-day cancellation rate 1.2%",
+   "urgency": "important"
+  }
+ ],
+ "agents": null,
+ "alerts": [],
+ "older_recoverable_usd": 29.71,
+ "guardrail_report": {
+  "ok": true,
+  "unsupported": []
+ },
+ "guard": {
+  "armed_rule": {
+   "item_group": "chashu",
+   "pause_apps_at": null,
+   "trigger": "only if fewer than 6 portions remain"
+  },
+  "approved": true,
+  "note": "Rule armed; executor fires during service when the trigger is met."
+ },
+ "status": "done",
+ "seconds": 0.81,
+ "run_id": "2026-09-15-20261105T214436732150"
+}

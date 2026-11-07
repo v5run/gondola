@@ -1,0 +1,1876 @@
+{
+ "2026-08-23": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 450,
+    "on_hand": 5.0,
+    "prep": 450,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "20:45",
+     "ubereats": "20:45",
+     "grubhub": "20:30"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-08-23T23:14:00",
+  "for_run": "2026-08-23-20261105T214418210064",
+  "by": "manager (history)"
+ },
+ "2026-08-24": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 520,
+    "on_hand": 0.0,
+    "prep": 520,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-08-24T23:14:00",
+  "for_run": "2026-08-24-20261105T214418867616",
+  "by": "manager (history)"
+ },
+ "2026-08-25": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 520,
+    "on_hand": 5.0,
+    "prep": 520,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "20:45",
+     "ubereats": "20:45",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-08-25T23:14:00",
+  "for_run": "2026-08-25-20261105T214419811242",
+  "by": "manager (history)"
+ },
+ "2026-08-26": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 550,
+    "on_hand": 26.0,
+    "prep": 530,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-08-26T23:14:00",
+  "for_run": "2026-08-26-20261105T214420685219",
+  "by": "manager (history)"
+ },
+ "2026-08-27": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 650,
+    "on_hand": 0.0,
+    "prep": 650,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-08-27T23:14:00",
+  "for_run": "2026-08-27-20261105T214421279625",
+  "by": "manager (history)"
+ },
+ "2026-08-28": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 740,
+    "on_hand": 0.0,
+    "prep": 740,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-08-28T23:14:00",
+  "for_run": "2026-08-28-20261105T214421973509",
+  "by": "manager (history)"
+ },
+ "2026-08-29": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 550,
+    "on_hand": 0.0,
+    "prep": 550,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "20:30",
+     "ubereats": "20:30",
+     "grubhub": "20:30"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-08-29T23:14:00",
+  "for_run": "2026-08-29-20261105T214422718255",
+  "by": "manager (history)"
+ },
+ "2026-08-30": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 500,
+    "on_hand": 17.0,
+    "prep": 490,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "20:45",
+     "ubereats": "20:45",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-08-30T23:14:00",
+  "for_run": "2026-08-30-20261105T214423550459",
+  "by": "manager (history)"
+ },
+ "2026-08-31": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 510,
+    "on_hand": 24.0,
+    "prep": 490,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-08-31T23:14:00",
+  "for_run": "2026-08-31-20261105T214424440546",
+  "by": "manager (history)"
+ },
+ "2026-09-01": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 550,
+    "on_hand": 24.0,
+    "prep": 530,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-01T23:14:00",
+  "for_run": "2026-09-01-20261105T214425111969",
+  "by": "manager (history)"
+ },
+ "2026-09-02": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 590,
+    "on_hand": 29.0,
+    "prep": 570,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-02T23:14:00",
+  "for_run": "2026-09-02-20261105T214426108543",
+  "by": "manager (history)"
+ },
+ "2026-09-03": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 690,
+    "on_hand": 1.0,
+    "prep": 690,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:15",
+     "ubereats": "21:15",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-03T23:14:00",
+  "for_run": "2026-09-03-20261105T214426804920",
+  "by": "manager (history)"
+ },
+ "2026-09-04": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 720,
+    "on_hand": 19.0,
+    "prep": 710,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:15",
+     "ubereats": "21:15",
+     "grubhub": "21:15"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-04T23:14:00",
+  "for_run": "2026-09-04-20261105T214427602937",
+  "by": "manager (history)"
+ },
+ "2026-09-05": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 590,
+    "on_hand": 6.0,
+    "prep": 590,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "20:45",
+     "ubereats": "20:45",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-05T23:14:00",
+  "for_run": "2026-09-05-20261105T214428234124",
+  "by": "manager (history)"
+ },
+ "2026-09-06": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 400,
+    "on_hand": 16.0,
+    "prep": 390,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "20:45",
+     "ubereats": "20:45",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-06T23:14:00",
+  "for_run": "2026-09-06-20261105T214428958335",
+  "by": "manager (history)"
+ },
+ "2026-09-07": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 560,
+    "on_hand": 38.0,
+    "prep": 530,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "20:45",
+     "ubereats": "20:45",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-07T23:14:00",
+  "for_run": "2026-09-07-20261105T214429752045",
+  "by": "manager (history)"
+ },
+ "2026-09-08": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 540,
+    "on_hand": 4.0,
+    "prep": 540,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-08T23:14:00",
+  "for_run": "2026-09-08-20261105T214430502950",
+  "by": "manager (history)"
+ },
+ "2026-09-09": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 550,
+    "on_hand": 0.0,
+    "prep": 550,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "20:45",
+     "ubereats": "20:45",
+     "grubhub": "20:30"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-09T23:14:00",
+  "for_run": "2026-09-09-20261105T214431499106",
+  "by": "manager (history)"
+ },
+ "2026-09-10": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 690,
+    "on_hand": 2.0,
+    "prep": 690,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:15",
+     "ubereats": "21:15",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-10T23:14:00",
+  "for_run": "2026-09-10-20261105T214432328688",
+  "by": "manager (history)"
+ },
+ "2026-09-11": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 700,
+    "on_hand": 22.0,
+    "prep": 680,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:15",
+     "ubereats": "21:15",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-11T23:14:00",
+  "for_run": "2026-09-11-20261105T214433212409",
+  "by": "manager (history)"
+ },
+ "2026-09-12": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 620,
+    "on_hand": 5.0,
+    "prep": 620,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-12T23:14:00",
+  "for_run": "2026-09-12-20261105T214433999077",
+  "by": "manager (history)"
+ },
+ "2026-09-13": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 500,
+    "on_hand": 0.0,
+    "prep": 500,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "20:45",
+     "ubereats": "20:45",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-13T23:14:00",
+  "for_run": "2026-09-13-20261105T214434879463",
+  "by": "manager (history)"
+ },
+ "2026-09-14": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 540,
+    "on_hand": 30.0,
+    "prep": 510,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-14T23:14:00",
+  "for_run": "2026-09-14-20261105T214435755015",
+  "by": "manager (history)"
+ },
+ "2026-09-15": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 610,
+    "on_hand": 38.0,
+    "prep": 580,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-15T23:14:00",
+  "for_run": "2026-09-15-20261105T214436732150",
+  "by": "manager (history)"
+ },
+ "2026-09-16": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 590,
+    "on_hand": 40.0,
+    "prep": 550,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "20:45",
+     "ubereats": "20:45",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-16T23:14:00",
+  "for_run": "2026-09-16-20261105T214437454244",
+  "by": "manager (history)"
+ },
+ "2026-09-17": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 690,
+    "on_hand": 0.0,
+    "prep": 690,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:15",
+     "ubereats": "21:15",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-17T23:14:00",
+  "for_run": "2026-09-17-20261105T214438057428",
+  "by": "manager (history)"
+ },
+ "2026-09-18": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 760,
+    "on_hand": 25.0,
+    "prep": 740,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:15",
+     "ubereats": "21:15",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-18T23:14:00",
+  "for_run": "2026-09-18-20261105T214438731451",
+  "by": "manager (history)"
+ },
+ "2026-09-19": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 680,
+    "on_hand": 0.0,
+    "prep": 680,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "20:45",
+     "ubereats": "20:45",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-19T23:14:00",
+  "for_run": "2026-09-19-20261105T214439503699",
+  "by": "manager (history)"
+ },
+ "2026-09-20": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 460,
+    "on_hand": 35.0,
+    "prep": 430,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-20T23:14:00",
+  "for_run": "2026-09-20-20261105T214440129197",
+  "by": "manager (history)"
+ },
+ "2026-09-21": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 590,
+    "on_hand": 15.0,
+    "prep": 580,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-21T23:14:00",
+  "for_run": "2026-09-21-20261105T214440993582",
+  "by": "manager (history)"
+ },
+ "2026-09-22": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 620,
+    "on_hand": 0.0,
+    "prep": 620,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-22T23:14:00",
+  "for_run": "2026-09-22-20261105T214441727498",
+  "by": "manager (history)"
+ },
+ "2026-09-23": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 610,
+    "on_hand": 5.0,
+    "prep": 610,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-23T23:14:00",
+  "for_run": "2026-09-23-20261105T214442477052",
+  "by": "manager (history)"
+ },
+ "2026-09-24": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 680,
+    "on_hand": 20.0,
+    "prep": 660,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:15",
+     "ubereats": "21:15",
+     "grubhub": "21:15"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-24T23:14:00",
+  "for_run": "2026-09-24-20261105T214443286928",
+  "by": "manager (history)"
+ },
+ "2026-09-25": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 690,
+    "on_hand": 18.0,
+    "prep": 680,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:15",
+     "ubereats": "21:15",
+     "grubhub": "21:15"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-25T23:14:00",
+  "for_run": "2026-09-25-20261105T214443858119",
+  "by": "manager (history)"
+ },
+ "2026-09-26": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 690,
+    "on_hand": 27.0,
+    "prep": 670,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-26T23:14:00",
+  "for_run": "2026-09-26-20261105T214444652709",
+  "by": "manager (history)"
+ },
+ "2026-09-27": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 550,
+    "on_hand": 0.0,
+    "prep": 550,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "20:45",
+     "ubereats": "20:45",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-27T23:14:00",
+  "for_run": "2026-09-27-20261105T214445281585",
+  "by": "manager (history)"
+ },
+ "2026-09-28": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 550,
+    "on_hand": 0.0,
+    "prep": 550,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "20:45",
+     "ubereats": "20:45",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-28T23:14:00",
+  "for_run": "2026-09-28-20261105T214446083153",
+  "by": "manager (history)"
+ },
+ "2026-09-29": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 600,
+    "on_hand": 40.0,
+    "prep": 560,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "20:45",
+     "ubereats": "20:45",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-29T23:14:00",
+  "for_run": "2026-09-29-20261105T214446693263",
+  "by": "manager (history)"
+ },
+ "2026-09-30": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 690,
+    "on_hand": 0.0,
+    "prep": 690,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-09-30T23:14:00",
+  "for_run": "2026-09-30-20261105T214447473226",
+  "by": "manager (history)"
+ },
+ "2026-10-01": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 810,
+    "on_hand": 11.0,
+    "prep": 800,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:15",
+     "ubereats": "21:15",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-01T23:14:00",
+  "for_run": "2026-10-01-20261105T214448216424",
+  "by": "manager (history)"
+ },
+ "2026-10-02": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 790,
+    "on_hand": 0.0,
+    "prep": 790,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:15",
+     "ubereats": "21:15",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-02T23:14:00",
+  "for_run": "2026-10-02-20261105T214449031299",
+  "by": "manager (history)"
+ },
+ "2026-10-03": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 690,
+    "on_hand": 35.0,
+    "prep": 660,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-03T23:14:00",
+  "for_run": "2026-10-03-20261105T214449702940",
+  "by": "manager (history)"
+ },
+ "2026-10-04": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 470,
+    "on_hand": 5.0,
+    "prep": 470,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-04T23:14:00",
+  "for_run": "2026-10-04-20261105T214450439931",
+  "by": "manager (history)"
+ },
+ "2026-10-05": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 480,
+    "on_hand": 14.0,
+    "prep": 470,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "20:45",
+     "ubereats": "20:45",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-05T23:14:00",
+  "for_run": "2026-10-05-20261105T214451050331",
+  "by": "manager (history)"
+ },
+ "2026-10-06": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 660,
+    "on_hand": 32.0,
+    "prep": 630,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-06T23:14:00",
+  "for_run": "2026-10-06-20261105T214451821772",
+  "by": "manager (history)"
+ },
+ "2026-10-07": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 700,
+    "on_hand": 0.0,
+    "prep": 700,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "20:45",
+     "ubereats": "20:45",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-07T23:14:00",
+  "for_run": "2026-10-07-20261105T214452560027",
+  "by": "manager (history)"
+ },
+ "2026-10-08": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 720,
+    "on_hand": 0.0,
+    "prep": 720,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:15",
+     "ubereats": "21:15",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-08T23:14:00",
+  "for_run": "2026-10-08-20261105T214453151027",
+  "by": "manager (history)"
+ },
+ "2026-10-09": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 840,
+    "on_hand": 10.0,
+    "prep": 830,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:15",
+     "ubereats": "21:15",
+     "grubhub": "21:15"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-09T23:14:00",
+  "for_run": "2026-10-09-20261105T214453889916",
+  "by": "manager (history)"
+ },
+ "2026-10-10": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 740,
+    "on_hand": 2.0,
+    "prep": 740,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-10T23:14:00",
+  "for_run": "2026-10-10-20261105T214454832820",
+  "by": "manager (history)"
+ },
+ "2026-10-11": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 500,
+    "on_hand": 18.0,
+    "prep": 490,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:15",
+     "ubereats": "21:15",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-11T23:14:00",
+  "for_run": "2026-10-11-20261105T214455599996",
+  "by": "manager (history)"
+ },
+ "2026-10-12": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 510,
+    "on_hand": 21.0,
+    "prep": 490,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "20:45",
+     "ubereats": "20:45",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-12T23:14:00",
+  "for_run": "2026-10-12-20261105T214456600038",
+  "by": "manager (history)"
+ },
+ "2026-10-13": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 690,
+    "on_hand": 25.0,
+    "prep": 670,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-13T23:14:00",
+  "for_run": "2026-10-13-20261105T214457209249",
+  "by": "manager (history)"
+ },
+ "2026-10-14": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 620,
+    "on_hand": 33.0,
+    "prep": 590,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-14T23:14:00",
+  "for_run": "2026-10-14-20261105T214458011969",
+  "by": "manager (history)"
+ },
+ "2026-10-15": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 750,
+    "on_hand": 34.0,
+    "prep": 720,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:15",
+     "ubereats": "21:15",
+     "grubhub": "21:15"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-15T23:14:00",
+  "for_run": "2026-10-15-20261105T214458584293",
+  "by": "manager (history)"
+ },
+ "2026-10-16": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 740,
+    "on_hand": 22.0,
+    "prep": 720,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:15",
+     "ubereats": "21:15",
+     "grubhub": "21:15"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-16T23:14:00",
+  "for_run": "2026-10-16-20261105T214459649064",
+  "by": "manager (history)"
+ },
+ "2026-10-17": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 750,
+    "on_hand": 40.0,
+    "prep": 710,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "20:45",
+     "ubereats": "20:45",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-17T23:14:00",
+  "for_run": "2026-10-17-20261105T214500400216",
+  "by": "manager (history)"
+ },
+ "2026-10-18": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 530,
+    "on_hand": 0.0,
+    "prep": 530,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-18T23:14:00",
+  "for_run": "2026-10-18-20261105T214501240923",
+  "by": "manager (history)"
+ },
+ "2026-10-19": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 560,
+    "on_hand": 40.0,
+    "prep": 520,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-19T23:14:00",
+  "for_run": "2026-10-19-20261105T214501916779",
+  "by": "manager (history)"
+ },
+ "2026-10-20": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 680,
+    "on_hand": 0.0,
+    "prep": 680,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-20T23:14:00",
+  "for_run": "2026-10-20-20261105T214502856406",
+  "by": "manager (history)"
+ },
+ "2026-10-21": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 760,
+    "on_hand": 5.0,
+    "prep": 760,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-21T23:14:00",
+  "for_run": "2026-10-21-20261105T214503406323",
+  "by": "manager (history)"
+ },
+ "2026-10-22": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 700,
+    "on_hand": 8.0,
+    "prep": 700,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:15",
+     "ubereats": "21:15",
+     "grubhub": "21:15"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-22T23:14:00",
+  "for_run": "2026-10-22-20261105T214504288036",
+  "by": "manager (history)"
+ },
+ "2026-10-23": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 870,
+    "on_hand": 12.0,
+    "prep": 860,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-23T23:14:00",
+  "for_run": "2026-10-23-20261105T214504988641",
+  "by": "manager (history)"
+ },
+ "2026-10-24": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 710,
+    "on_hand": 0.0,
+    "prep": 710,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "20:45",
+     "ubereats": "20:45",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-24T23:14:00",
+  "for_run": "2026-10-24-20261105T214505943935",
+  "by": "manager (history)"
+ },
+ "2026-10-25": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 520,
+    "on_hand": 22.0,
+    "prep": 500,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "20:45",
+     "ubereats": "20:45",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-25T23:14:00",
+  "for_run": "2026-10-25-20261105T214506788139",
+  "by": "manager (history)"
+ },
+ "2026-10-26": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 620,
+    "on_hand": 11.0,
+    "prep": 610,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-26T23:14:00",
+  "for_run": "2026-10-26-20261105T214507493249",
+  "by": "manager (history)"
+ },
+ "2026-10-27": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 630,
+    "on_hand": 19.0,
+    "prep": 620,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:15",
+     "ubereats": "21:15",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-27T23:14:00",
+  "for_run": "2026-10-27-20261105T214508116894",
+  "by": "manager (history)"
+ },
+ "2026-10-28": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 650,
+    "on_hand": 40.0,
+    "prep": 610,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-28T23:14:00",
+  "for_run": "2026-10-28-20261105T214508929356",
+  "by": "manager (history)"
+ },
+ "2026-10-29": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 800,
+    "on_hand": 14.0,
+    "prep": 790,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:15",
+     "ubereats": "21:15",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-29T23:14:00",
+  "for_run": "2026-10-29-20261105T214509925905",
+  "by": "manager (history)"
+ },
+ "2026-10-30": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 870,
+    "on_hand": 0.0,
+    "prep": 870,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:15",
+     "ubereats": "21:15",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-30T23:14:00",
+  "for_run": "2026-10-30-20261105T214510558393",
+  "by": "manager (history)"
+ },
+ "2026-10-31": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 660,
+    "on_hand": 38.0,
+    "prep": 630,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-10-31T23:14:00",
+  "for_run": "2026-10-31-20261105T214511267181",
+  "by": "manager (history)"
+ },
+ "2026-11-01": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 490,
+    "on_hand": 24.0,
+    "prep": 470,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "20:45",
+     "ubereats": "20:45",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-11-01T23:14:00",
+  "for_run": "2026-11-01-20261105T214512099461",
+  "by": "manager (history)"
+ },
+ "2026-11-02": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 550,
+    "on_hand": 29.0,
+    "prep": 530,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-11-02T23:14:00",
+  "for_run": "2026-11-02-20261105T214512913460",
+  "by": "manager (history)"
+ },
+ "2026-11-03": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 700,
+    "on_hand": 9.0,
+    "prep": 700,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-11-03T23:14:00",
+  "for_run": "2026-11-03-20261105T214513496698",
+  "by": "manager (history)"
+ },
+ "2026-11-04": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 700,
+    "on_hand": 24.0,
+    "prep": 680,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "20:45",
+     "ubereats": "20:45",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-11-04T23:14:00",
+  "for_run": "2026-11-04-20261105T214513912610",
+  "by": "manager (history)"
+ },
+ "2026-11-05": {
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 770,
+    "on_hand": 0,
+    "prep": 770,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "21:00",
+     "ubereats": "21:00",
+     "grubhub": "21:00"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "approved_at": "2026-11-05T22:12:12",
+  "for_run": "2026-11-05-20261105T221211659291"
+ }
+}

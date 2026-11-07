@@ -1,0 +1,3354 @@
+{
+ "date": "2026-08-23",
+ "db": ".out_backfill/_db/night_2026-08-23.duckdb",
+ "log": [
+  {
+   "step": "stock",
+   "status": "done",
+   "seconds": 0.09
+  },
+  {
+   "step": "books",
+   "status": "done",
+   "seconds": 1.08
+  },
+  {
+   "step": "demand",
+   "status": "done",
+   "seconds": 4.48
+  },
+  {
+   "step": "analyst",
+   "status": "done",
+   "seconds": 0.06
+  },
+  {
+   "step": "plan",
+   "status": "done",
+   "seconds": 0.02
+  },
+  {
+   "step": "sentinel",
+   "status": "done",
+   "seconds": 0.0
+  },
+  {
+   "step": "report",
+   "status": "done",
+   "seconds": 0.03
+  },
+  {
+   "step": "guard",
+   "status": "done",
+   "seconds": 0.0
+  }
+ ],
+ "as_of": "2026-08-23T23:10:00",
+ "closed_day": false,
+ "books": {
+  "cash": {
+   "date": "2026-08-23",
+   "status": "closed",
+   "shift_id": "cds-20260823",
+   "state": "CLOSED",
+   "shifts": 1,
+   "expected": 1688.58,
+   "counted": 1685.33,
+   "difference": -3.25,
+   "flag": false
+  },
+  "money": {
+   "net_sales": 12913.25,
+   "orders": 380,
+   "avg_ticket": 33.98,
+   "card_fees": 108.19,
+   "app_commission": 2258.07,
+   "labour_cost": 3171.03,
+   "labour_pct": 0.2456,
+   "labour_hours": 176.62
+  },
+  "verified": [
+   {
+    "date": "2026-08-09",
+    "channels": [
+     {
+      "channel": "doordash",
+      "orders": 172,
+      "sales": 5834.4,
+      "expected": 4375.87,
+      "reported": 4303.72,
+      "difference": -72.15,
+      "error_charges": 72.19,
+      "fresh": false
+     },
+     {
+      "channel": "ubereats",
+      "orders": 63,
+      "sales": 1855.7,
+      "expected": 1354.61,
+      "reported": 1316.11,
+      "difference": -38.5,
+      "error_charges": 38.5,
+      "fresh": false
+     },
+     {
+      "channel": "grubhub",
+      "orders": 30,
+      "sales": 1048.85,
+      "expected": 839.08,
+      "reported": 829.18,
+      "difference": -9.9,
+      "error_charges": 9.9,
+      "fresh": false
+     }
+    ],
+    "findings": [
+     {
+      "agent": "books",
+      "kind": "error_charge_disputable",
+      "title": "doordash error charge $19.25 on o0130567",
+      "impact_usd": 19.25,
+      "business_date": "2026-08-09",
+      "channel": "doordash",
+      "evidence": [
+       "o0130567"
+      ],
+      "detail": {
+       "items": [
+        "Edamame"
+       ],
+       "prices": [
+        6.6
+       ],
+       "reason": "charge is more than any single item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "doordash error charge $15.40 on o0130592",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-09",
+      "channel": "doordash",
+      "evidence": [
+       "o0130592"
+      ],
+      "detail": {
+       "items": [
+        "Tonkotsu",
+        "Chashu Don"
+       ],
+       "prices": [
+        19.25,
+        15.4
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_disputable",
+      "title": "doordash error charge $27.92 on o0130658",
+      "impact_usd": 27.92,
+      "business_date": "2026-08-09",
+      "channel": "doordash",
+      "evidence": [
+       "o0130658"
+      ],
+      "detail": {
+       "items": [
+        "Veggie Miso",
+        "Tonkotsu",
+        "Veggie Miso"
+       ],
+       "prices": [
+        17.05,
+        19.25,
+        17.05
+       ],
+       "reason": "charge is more than any single item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_review",
+      "title": "doordash error charge $9.62 on o0130667",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-09",
+      "channel": "doordash",
+      "evidence": [
+       "o0130667"
+      ],
+      "detail": {
+       "items": [
+        "Spicy Miso",
+        "Mochi Trio"
+       ],
+       "prices": [
+        19.25,
+        7.15
+       ],
+       "reason": "partial charge: check the tablet photo or ticket"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "ubereats error charge $19.25 on o0130462",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-09",
+      "channel": "ubereats",
+      "evidence": [
+       "o0130462"
+      ],
+      "detail": {
+       "items": [
+        "Tonkotsu",
+        "Shoyu",
+        "Tonkotsu"
+       ],
+       "prices": [
+        19.25,
+        18.15,
+        19.25
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_disputable",
+      "title": "ubereats error charge $19.25 on o0130720",
+      "impact_usd": 19.25,
+      "business_date": "2026-08-09",
+      "channel": "ubereats",
+      "evidence": [
+       "o0130720"
+      ],
+      "detail": {
+       "items": [
+        "Veggie Miso"
+       ],
+       "prices": [
+        17.05
+       ],
+       "reason": "charge is more than any single item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "grubhub error charge $9.90 on o0130479",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-09",
+      "channel": "grubhub",
+      "evidence": [
+       "o0130479"
+      ],
+      "detail": {
+       "items": [
+        "Shoyu",
+        "Shoyu",
+        "Veggie Miso",
+        "Karaage",
+        "Spicy Miso"
+       ],
+       "prices": [
+        18.15,
+        18.15,
+        17.05,
+        9.9,
+        19.25
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     }
+    ],
+    "recoverable_usd": 66.42
+   },
+   {
+    "date": "2026-08-10",
+    "channels": [
+     {
+      "channel": "doordash",
+      "orders": 156,
+      "sales": 5265.15,
+      "expected": 3948.9,
+      "reported": 3875.11,
+      "difference": -73.79,
+      "error_charges": 0.0,
+      "fresh": false
+     },
+     {
+      "channel": "ubereats",
+      "orders": 52,
+      "sales": 1786.95,
+      "expected": 1304.46,
+      "reported": 1304.46,
+      "difference": 0.0,
+      "error_charges": 0.0,
+      "fresh": false
+     },
+     {
+      "channel": "grubhub",
+      "orders": 27,
+      "sales": 1048.85,
+      "expected": 839.08,
+      "reported": 812.68,
+      "difference": -26.4,
+      "error_charges": 26.4,
+      "fresh": false
+     }
+    ],
+    "findings": [
+     {
+      "agent": "books",
+      "kind": "missing_from_payout",
+      "title": "doordash order o0130886 missing from payout",
+      "impact_usd": 49.91,
+      "business_date": "2026-08-10",
+      "channel": "doordash",
+      "evidence": [
+       "o0130886"
+      ],
+      "detail": null
+     },
+     {
+      "agent": "books",
+      "kind": "missing_from_payout",
+      "title": "doordash order o0130945 missing from payout",
+      "impact_usd": 23.92,
+      "business_date": "2026-08-10",
+      "channel": "doordash",
+      "evidence": [
+       "o0130945"
+      ],
+      "detail": null
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_disputable",
+      "title": "grubhub error charge $26.40 on o0130979",
+      "impact_usd": 26.4,
+      "business_date": "2026-08-10",
+      "channel": "grubhub",
+      "evidence": [
+       "o0130979"
+      ],
+      "detail": {
+       "items": [
+        "Veggie Miso",
+        "Takoyaki"
+       ],
+       "prices": [
+        17.05,
+        9.35
+       ],
+       "reason": "charge is more than any single item on the order"
+      }
+     }
+    ],
+    "recoverable_usd": 100.23
+   },
+   {
+    "date": "2026-08-11",
+    "channels": [
+     {
+      "channel": "doordash",
+      "orders": 151,
+      "sales": 5090.25,
+      "expected": 3817.69,
+      "reported": 3812.9,
+      "difference": -4.79,
+      "error_charges": 4.81,
+      "fresh": false
+     },
+     {
+      "channel": "ubereats",
+      "orders": 59,
+      "sales": 2087.25,
+      "expected": 1523.65,
+      "reported": 1523.65,
+      "difference": 0.0,
+      "error_charges": 0.0,
+      "fresh": false
+     },
+     {
+      "channel": "grubhub",
+      "orders": 29,
+      "sales": 970.2,
+      "expected": 776.16,
+      "reported": 756.91,
+      "difference": -19.25,
+      "error_charges": 19.25,
+      "fresh": false
+     }
+    ],
+    "findings": [
+     {
+      "agent": "books",
+      "kind": "error_charge_review",
+      "title": "doordash error charge $4.81 on o0131384",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-11",
+      "channel": "doordash",
+      "evidence": [
+       "o0131384"
+      ],
+      "detail": {
+       "items": [
+        "Ramune",
+        "Spicy Miso"
+       ],
+       "prices": [
+        4.95,
+        19.25
+       ],
+       "reason": "partial charge: check the tablet photo or ticket"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "grubhub error charge $19.25 on o0131346",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-11",
+      "channel": "grubhub",
+      "evidence": [
+       "o0131346"
+      ],
+      "detail": {
+       "items": [
+        "Tonkotsu",
+        "Tantanmen"
+       ],
+       "prices": [
+        19.25,
+        18.7
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     }
+    ],
+    "recoverable_usd": 0
+   },
+   {
+    "date": "2026-08-12",
+    "channels": [
+     {
+      "channel": "doordash",
+      "orders": 160,
+      "sales": 5469.2,
+      "expected": 4101.9,
+      "reported": 4101.98,
+      "difference": 0.08,
+      "error_charges": 0.0,
+      "fresh": false
+     },
+     {
+      "channel": "ubereats",
+      "orders": 73,
+      "sales": 2591.6,
+      "expected": 1891.85,
+      "reported": 1868.75,
+      "difference": -23.1,
+      "error_charges": 23.1,
+      "fresh": false
+     },
+     {
+      "channel": "grubhub",
+      "orders": 35,
+      "sales": 1256.75,
+      "expected": 1005.4,
+      "reported": 1005.4,
+      "difference": 0.0,
+      "error_charges": 0.0,
+      "fresh": false
+     }
+    ],
+    "findings": [
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "ubereats error charge $19.25 on o0131657",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-12",
+      "channel": "ubereats",
+      "evidence": [
+       "o0131657"
+      ],
+      "detail": {
+       "items": [
+        "Takoyaki",
+        "Spicy Miso"
+       ],
+       "prices": [
+        9.35,
+        19.25
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_disputable",
+      "title": "ubereats error charge $3.85 on o0131748",
+      "impact_usd": 3.85,
+      "business_date": "2026-08-12",
+      "channel": "ubereats",
+      "evidence": [
+       "o0131748"
+      ],
+      "detail": {
+       "items": [
+        "Karaage",
+        "Edamame",
+        "Tantanmen"
+       ],
+       "prices": [
+        9.9,
+        6.6,
+        18.7
+       ],
+       "reason": "charge equals the price of a menu item that wasn't on the order"
+      }
+     }
+    ],
+    "recoverable_usd": 3.85
+   },
+   {
+    "date": "2026-08-13",
+    "channels": [
+     {
+      "channel": "doordash",
+      "orders": 131,
+      "sales": 4308.7,
+      "expected": 3231.56,
+      "reported": 3203.49,
+      "difference": -28.07,
+      "error_charges": 28.14,
+      "fresh": false
+     },
+     {
+      "channel": "ubereats",
+      "orders": 79,
+      "sales": 2641.1,
+      "expected": 1927.95,
+      "reported": 1910.9,
+      "difference": -17.05,
+      "error_charges": 17.05,
+      "fresh": false
+     },
+     {
+      "channel": "grubhub",
+      "orders": 36,
+      "sales": 1262.25,
+      "expected": 1009.8,
+      "reported": 992.75,
+      "difference": -17.05,
+      "error_charges": 17.05,
+      "fresh": false
+     }
+    ],
+    "findings": [
+     {
+      "agent": "books",
+      "kind": "error_charge_disputable",
+      "title": "doordash error charge $28.14 on o0132159",
+      "impact_usd": 28.14,
+      "business_date": "2026-08-13",
+      "channel": "doordash",
+      "evidence": [
+       "o0132159"
+      ],
+      "detail": {
+       "items": [
+        "Gyoza",
+        "Tonkotsu",
+        "Gyoza"
+       ],
+       "prices": [
+        8.8,
+        19.25,
+        8.8
+       ],
+       "reason": "charge is more than any single item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "ubereats error charge $17.05 on o0132182",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-13",
+      "channel": "ubereats",
+      "evidence": [
+       "o0132182"
+      ],
+      "detail": {
+       "items": [
+        "Tantanmen",
+        "Karaage",
+        "Veggie Miso",
+        "Veggie Miso"
+       ],
+       "prices": [
+        18.7,
+        9.9,
+        17.05,
+        17.05
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "grubhub error charge $17.05 on o0132253",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-13",
+      "channel": "grubhub",
+      "evidence": [
+       "o0132253"
+      ],
+      "detail": {
+       "items": [
+        "Veggie Miso",
+        "Veggie Miso",
+        "Shoyu"
+       ],
+       "prices": [
+        17.05,
+        17.05,
+        18.15
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     }
+    ],
+    "recoverable_usd": 28.14
+   },
+   {
+    "date": "2026-08-14",
+    "channels": [
+     {
+      "channel": "doordash",
+      "orders": 229,
+      "sales": 7610.35,
+      "expected": 5707.8,
+      "reported": 5645.16,
+      "difference": -62.64,
+      "error_charges": 28.05,
+      "fresh": false
+     },
+     {
+      "channel": "ubereats",
+      "orders": 82,
+      "sales": 2982.65,
+      "expected": 2177.26,
+      "reported": 2169.83,
+      "difference": -7.43,
+      "error_charges": 7.43,
+      "fresh": false
+     },
+     {
+      "channel": "grubhub",
+      "orders": 49,
+      "sales": 1623.6,
+      "expected": 1298.88,
+      "reported": 1293.93,
+      "difference": -4.95,
+      "error_charges": 4.95,
+      "fresh": false
+     }
+    ],
+    "findings": [
+     {
+      "agent": "books",
+      "kind": "missing_from_payout",
+      "title": "doordash order o0132494 missing from payout",
+      "impact_usd": 27.64,
+      "business_date": "2026-08-14",
+      "channel": "doordash",
+      "evidence": [
+       "o0132494"
+      ],
+      "detail": null
+     },
+     {
+      "agent": "books",
+      "kind": "missing_from_payout",
+      "title": "doordash order o0132557 missing from payout",
+      "impact_usd": 7.01,
+      "business_date": "2026-08-14",
+      "channel": "doordash",
+      "evidence": [
+       "o0132557"
+      ],
+      "detail": null
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "doordash error charge $18.15 on o0132327",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-14",
+      "channel": "doordash",
+      "evidence": [
+       "o0132327"
+      ],
+      "detail": {
+       "items": [
+        "Chicken Paitan",
+        "Tantanmen",
+        "Shoyu"
+       ],
+       "prices": [
+        18.15,
+        18.7,
+        18.15
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_disputable",
+      "title": "doordash error charge $9.90 on o0132722",
+      "impact_usd": 9.9,
+      "business_date": "2026-08-14",
+      "channel": "doordash",
+      "evidence": [
+       "o0132722"
+      ],
+      "detail": {
+       "items": [
+        "Tantanmen",
+        "Tonkotsu"
+       ],
+       "prices": [
+        18.7,
+        19.25
+       ],
+       "reason": "charge equals the price of a menu item that wasn't on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_review",
+      "title": "ubereats error charge $2.48 on o0132390",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-14",
+      "channel": "ubereats",
+      "evidence": [
+       "o0132390"
+      ],
+      "detail": {
+       "items": [
+        "Ramune",
+        "Iced Green Tea",
+        "Chashu Don"
+       ],
+       "prices": [
+        4.95,
+        3.85,
+        15.4
+       ],
+       "reason": "partial charge: check the tablet photo or ticket"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_disputable",
+      "title": "ubereats error charge $4.95 on o0132505",
+      "impact_usd": 4.95,
+      "business_date": "2026-08-14",
+      "channel": "ubereats",
+      "evidence": [
+       "o0132505"
+      ],
+      "detail": {
+       "items": [
+        "Mochi Trio"
+       ],
+       "prices": [
+        7.15
+       ],
+       "reason": "charge equals the price of a menu item that wasn't on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "grubhub error charge $4.95 on o0132771",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-14",
+      "channel": "grubhub",
+      "evidence": [
+       "o0132771"
+      ],
+      "detail": {
+       "items": [
+        "Tonkotsu",
+        "Ramune"
+       ],
+       "prices": [
+        19.25,
+        4.95
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     }
+    ],
+    "recoverable_usd": 49.5
+   },
+   {
+    "date": "2026-08-15",
+    "channels": [
+     {
+      "channel": "doordash",
+      "orders": 217,
+      "sales": 7283.1,
+      "expected": 5276.39,
+      "reported": 5230.57,
+      "difference": -45.82,
+      "error_charges": 45.92,
+      "fresh": false
+     },
+     {
+      "channel": "ubereats",
+      "orders": 90,
+      "sales": 2951.85,
+      "expected": 2154.76,
+      "reported": 2150.91,
+      "difference": -3.85,
+      "error_charges": 3.85,
+      "fresh": false
+     },
+     {
+      "channel": "grubhub",
+      "orders": 45,
+      "sales": 1663.75,
+      "expected": 1331.0,
+      "reported": 1331.0,
+      "difference": 0.0,
+      "error_charges": 0.0,
+      "fresh": false
+     }
+    ],
+    "findings": [
+     {
+      "agent": "books",
+      "kind": "error_charge_review",
+      "title": "doordash error charge $9.07 on o0132872",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-15",
+      "channel": "doordash",
+      "evidence": [
+       "o0132872"
+      ],
+      "detail": {
+       "items": [
+        "Shoyu",
+        "Chashu Bao"
+       ],
+       "prices": [
+        18.15,
+        9.35
+       ],
+       "reason": "partial charge: check the tablet photo or ticket"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "doordash error charge $18.15 on o0132966",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-15",
+      "channel": "doordash",
+      "evidence": [
+       "o0132966"
+      ],
+      "detail": {
+       "items": [
+        "Chicken Paitan"
+       ],
+       "prices": [
+        18.15
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_disputable",
+      "title": "doordash error charge $18.70 on o0133262",
+      "impact_usd": 18.7,
+      "business_date": "2026-08-15",
+      "channel": "doordash",
+      "evidence": [
+       "o0133262"
+      ],
+      "detail": {
+       "items": [
+        "Tonkotsu",
+        "Chicken Paitan"
+       ],
+       "prices": [
+        19.25,
+        18.15
+       ],
+       "reason": "charge equals the price of a menu item that wasn't on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "ubereats error charge $3.85 on o0133129",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-15",
+      "channel": "ubereats",
+      "evidence": [
+       "o0133129"
+      ],
+      "detail": {
+       "items": [
+        "Iced Green Tea"
+       ],
+       "prices": [
+        3.85
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     }
+    ],
+    "recoverable_usd": 18.7
+   },
+   {
+    "date": "2026-08-16",
+    "channels": [
+     {
+      "channel": "doordash",
+      "orders": 154,
+      "sales": 5199.15,
+      "expected": 3899.38,
+      "reported": 3885.24,
+      "difference": -14.14,
+      "error_charges": 14.16,
+      "fresh": false
+     },
+     {
+      "channel": "ubereats",
+      "orders": 63,
+      "sales": 2126.85,
+      "expected": 1552.58,
+      "reported": 1513.17,
+      "difference": -39.41,
+      "error_charges": 39.41,
+      "fresh": false
+     },
+     {
+      "channel": "grubhub",
+      "orders": 30,
+      "sales": 936.65,
+      "expected": 749.32,
+      "reported": 727.32,
+      "difference": -22.0,
+      "error_charges": 22.0,
+      "fresh": false
+     }
+    ],
+    "findings": [
+     {
+      "agent": "books",
+      "kind": "error_charge_disputable",
+      "title": "doordash error charge $9.90 on o0133322",
+      "impact_usd": 9.9,
+      "business_date": "2026-08-16",
+      "channel": "doordash",
+      "evidence": [
+       "o0133322"
+      ],
+      "detail": {
+       "items": [
+        "Shoyu"
+       ],
+       "prices": [
+        18.15
+       ],
+       "reason": "charge equals the price of a menu item that wasn't on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_review",
+      "title": "doordash error charge $4.26 on o0133465",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-16",
+      "channel": "doordash",
+      "evidence": [
+       "o0133465"
+      ],
+      "detail": {
+       "items": [
+        "Veggie Miso",
+        "Veggie Miso",
+        "Tonkotsu"
+       ],
+       "prices": [
+        17.05,
+        17.05,
+        19.25
+       ],
+       "reason": "partial charge: check the tablet photo or ticket"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "ubereats error charge $19.25 on o0133555",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-16",
+      "channel": "ubereats",
+      "evidence": [
+       "o0133555"
+      ],
+      "detail": {
+       "items": [
+        "Karaage",
+        "Tonkotsu"
+       ],
+       "prices": [
+        9.9,
+        19.25
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_disputable",
+      "title": "ubereats error charge $20.16 on o0133667",
+      "impact_usd": 20.16,
+      "business_date": "2026-08-16",
+      "channel": "ubereats",
+      "evidence": [
+       "o0133667"
+      ],
+      "detail": {
+       "items": [
+        "Tantanmen",
+        "Gyoza",
+        "Tonkotsu"
+       ],
+       "prices": [
+        18.7,
+        8.8,
+        19.25
+       ],
+       "reason": "charge is more than any single item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_disputable",
+      "title": "grubhub error charge $22.00 on o0133374",
+      "impact_usd": 22.0,
+      "business_date": "2026-08-16",
+      "channel": "grubhub",
+      "evidence": [
+       "o0133374"
+      ],
+      "detail": {
+       "items": [
+        "Chicken Paitan",
+        "Iced Green Tea"
+       ],
+       "prices": [
+        18.15,
+        3.85
+       ],
+       "reason": "charge is more than any single item on the order"
+      }
+     }
+    ],
+    "recoverable_usd": 52.06
+   },
+   {
+    "date": "2026-08-17",
+    "channels": [
+     {
+      "channel": "doordash",
+      "orders": 140,
+      "sales": 4327.4,
+      "expected": 3245.58,
+      "reported": 3191.15,
+      "difference": -54.43,
+      "error_charges": 54.45,
+      "fresh": false
+     },
+     {
+      "channel": "ubereats",
+      "orders": 56,
+      "sales": 1941.5,
+      "expected": 1417.25,
+      "reported": 1407.9,
+      "difference": -9.35,
+      "error_charges": 9.35,
+      "fresh": false
+     },
+     {
+      "channel": "grubhub",
+      "orders": 21,
+      "sales": 720.5,
+      "expected": 576.4,
+      "reported": 576.4,
+      "difference": 0.0,
+      "error_charges": 0.0,
+      "fresh": false
+     }
+    ],
+    "findings": [
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "doordash error charge $18.15 on o0133892",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-17",
+      "channel": "doordash",
+      "evidence": [
+       "o0133892"
+      ],
+      "detail": {
+       "items": [
+        "Shoyu"
+       ],
+       "prices": [
+        18.15
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "doordash error charge $19.25 on o0133895",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-17",
+      "channel": "doordash",
+      "evidence": [
+       "o0133895"
+      ],
+      "detail": {
+       "items": [
+        "Tonkotsu"
+       ],
+       "prices": [
+        19.25
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "doordash error charge $17.05 on o0133967",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-17",
+      "channel": "doordash",
+      "evidence": [
+       "o0133967"
+      ],
+      "detail": {
+       "items": [
+        "Karaage",
+        "Spicy Miso",
+        "Veggie Miso"
+       ],
+       "prices": [
+        9.9,
+        19.25,
+        17.05
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_disputable",
+      "title": "ubereats error charge $9.35 on o0133879",
+      "impact_usd": 9.35,
+      "business_date": "2026-08-17",
+      "channel": "ubereats",
+      "evidence": [
+       "o0133879"
+      ],
+      "detail": {
+       "items": [
+        "Tantanmen"
+       ],
+       "prices": [
+        18.7
+       ],
+       "reason": "charge equals the price of a menu item that wasn't on the order"
+      }
+     }
+    ],
+    "recoverable_usd": 9.35
+   },
+   {
+    "date": "2026-08-18",
+    "channels": [
+     {
+      "channel": "doordash",
+      "orders": 191,
+      "sales": 6537.85,
+      "expected": 4903.36,
+      "reported": 4867.62,
+      "difference": -35.74,
+      "error_charges": 35.84,
+      "fresh": false
+     },
+     {
+      "channel": "ubereats",
+      "orders": 67,
+      "sales": 2187.9,
+      "expected": 1597.14,
+      "reported": 1597.14,
+      "difference": 0.0,
+      "error_charges": 0.0,
+      "fresh": false
+     },
+     {
+      "channel": "grubhub",
+      "orders": 30,
+      "sales": 1035.1,
+      "expected": 828.08,
+      "reported": 828.08,
+      "difference": 0.0,
+      "error_charges": 0.0,
+      "fresh": false
+     }
+    ],
+    "findings": [
+     {
+      "agent": "books",
+      "kind": "error_charge_disputable",
+      "title": "doordash error charge $26.77 on o0134008",
+      "impact_usd": 26.77,
+      "business_date": "2026-08-18",
+      "channel": "doordash",
+      "evidence": [
+       "o0134008"
+      ],
+      "detail": {
+       "items": [
+        "Chashu Don",
+        "Spicy Miso"
+       ],
+       "prices": [
+        15.4,
+        19.25
+       ],
+       "reason": "charge is more than any single item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_review",
+      "title": "doordash error charge $9.07 on o0134069",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-18",
+      "channel": "doordash",
+      "evidence": [
+       "o0134069"
+      ],
+      "detail": {
+       "items": [
+        "Gyoza",
+        "Chashu Bao",
+        "Chicken Paitan"
+       ],
+       "prices": [
+        8.8,
+        9.35,
+        18.15
+       ],
+       "reason": "partial charge: check the tablet photo or ticket"
+      }
+     }
+    ],
+    "recoverable_usd": 26.77
+   },
+   {
+    "date": "2026-08-19",
+    "channels": [
+     {
+      "channel": "doordash",
+      "orders": 151,
+      "sales": 5383.4,
+      "expected": 4037.61,
+      "reported": 4001.32,
+      "difference": -36.29,
+      "error_charges": 36.3,
+      "fresh": false
+     },
+     {
+      "channel": "ubereats",
+      "orders": 37,
+      "sales": 1217.7,
+      "expected": 888.92,
+      "reported": 850.42,
+      "difference": -38.5,
+      "error_charges": 38.5,
+      "fresh": false
+     },
+     {
+      "channel": "grubhub",
+      "orders": 33,
+      "sales": 1241.35,
+      "expected": 993.08,
+      "reported": 949.36,
+      "difference": -43.72,
+      "error_charges": 43.72,
+      "fresh": false
+     }
+    ],
+    "findings": [
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "doordash error charge $18.15 on o0134541",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-19",
+      "channel": "doordash",
+      "evidence": [
+       "o0134541"
+      ],
+      "detail": {
+       "items": [
+        "Shoyu",
+        "Iced Green Tea",
+        "Karaage"
+       ],
+       "prices": [
+        18.15,
+        3.85,
+        9.9
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "doordash error charge $18.15 on o0134593",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-19",
+      "channel": "doordash",
+      "evidence": [
+       "o0134593"
+      ],
+      "detail": {
+       "items": [
+        "Shoyu",
+        "Veggie Miso",
+        "Chicken Paitan"
+       ],
+       "prices": [
+        18.15,
+        17.05,
+        18.15
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "ubereats error charge $19.25 on o0134587",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-19",
+      "channel": "ubereats",
+      "evidence": [
+       "o0134587"
+      ],
+      "detail": {
+       "items": [
+        "Tonkotsu"
+       ],
+       "prices": [
+        19.25
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "ubereats error charge $19.25 on o0134701",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-19",
+      "channel": "ubereats",
+      "evidence": [
+       "o0134701"
+      ],
+      "detail": {
+       "items": [
+        "Tonkotsu",
+        "Chashu Bao",
+        "Tonkotsu"
+       ],
+       "prices": [
+        19.25,
+        9.35,
+        19.25
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "grubhub error charge $9.90 on o0134399",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-19",
+      "channel": "grubhub",
+      "evidence": [
+       "o0134399"
+      ],
+      "detail": {
+       "items": [
+        "Karaage",
+        "Tonkotsu"
+       ],
+       "prices": [
+        9.9,
+        19.25
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_review",
+      "title": "grubhub error charge $9.62 on o0134413",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-19",
+      "channel": "grubhub",
+      "evidence": [
+       "o0134413"
+      ],
+      "detail": {
+       "items": [
+        "Spicy Miso",
+        "Edamame"
+       ],
+       "prices": [
+        19.25,
+        6.6
+       ],
+       "reason": "partial charge: check the tablet photo or ticket"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "grubhub error charge $4.95 on o0134479",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-19",
+      "channel": "grubhub",
+      "evidence": [
+       "o0134479"
+      ],
+      "detail": {
+       "items": [
+        "Tonkotsu",
+        "Chicken Paitan",
+        "Ramune"
+       ],
+       "prices": [
+        19.25,
+        18.15,
+        4.95
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "grubhub error charge $19.25 on o0134626",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-19",
+      "channel": "grubhub",
+      "evidence": [
+       "o0134626"
+      ],
+      "detail": {
+       "items": [
+        "Veggie Miso",
+        "Gyoza",
+        "Tonkotsu",
+        "Takoyaki",
+        "Tonkotsu"
+       ],
+       "prices": [
+        17.05,
+        8.8,
+        19.25,
+        9.35,
+        19.25
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     }
+    ],
+    "recoverable_usd": 0
+   },
+   {
+    "date": "2026-08-20",
+    "channels": [
+     {
+      "channel": "doordash",
+      "orders": 162,
+      "sales": 5191.45,
+      "expected": 3893.66,
+      "reported": 3832.8,
+      "difference": -60.86,
+      "error_charges": 36.91,
+      "fresh": false
+     },
+     {
+      "channel": "ubereats",
+      "orders": 56,
+      "sales": 1975.6,
+      "expected": 1442.16,
+      "reported": 1442.16,
+      "difference": 0.0,
+      "error_charges": 0.0,
+      "fresh": true
+     },
+     {
+      "channel": "grubhub",
+      "orders": 22,
+      "sales": 774.95,
+      "expected": 619.96,
+      "reported": 619.96,
+      "difference": 0.0,
+      "error_charges": 0.0,
+      "fresh": false
+     }
+    ],
+    "findings": [
+     {
+      "agent": "books",
+      "kind": "missing_from_payout",
+      "title": "doordash order o0134942 missing from payout",
+      "impact_usd": 23.92,
+      "business_date": "2026-08-20",
+      "channel": "doordash",
+      "evidence": [
+       "o0134942"
+      ],
+      "detail": null
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_disputable",
+      "title": "doordash error charge $18.76 on o0134791",
+      "impact_usd": 18.76,
+      "business_date": "2026-08-20",
+      "channel": "doordash",
+      "evidence": [
+       "o0134791"
+      ],
+      "detail": {
+       "items": [
+        "Karaage",
+        "Chashu Bao",
+        "Chashu Don"
+       ],
+       "prices": [
+        9.9,
+        9.35,
+        15.4
+       ],
+       "reason": "charge is more than any single item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "doordash error charge $18.15 on o0134970",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-20",
+      "channel": "doordash",
+      "evidence": [
+       "o0134970"
+      ],
+      "detail": {
+       "items": [
+        "Chicken Paitan"
+       ],
+       "prices": [
+        18.15
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     }
+    ],
+    "recoverable_usd": 42.68
+   },
+   {
+    "date": "2026-08-21",
+    "channels": [
+     {
+      "channel": "doordash",
+      "orders": 176,
+      "sales": 6114.35,
+      "expected": 4585.83,
+      "reported": 4436.37,
+      "difference": -149.46,
+      "error_charges": 149.49,
+      "fresh": false
+     },
+     {
+      "channel": "grubhub",
+      "orders": 31,
+      "sales": 1260.6,
+      "expected": 1008.48,
+      "reported": 1008.48,
+      "difference": 0.0,
+      "error_charges": 0.0,
+      "fresh": true
+     }
+    ],
+    "findings": [
+     {
+      "agent": "books",
+      "kind": "error_charge_review",
+      "title": "doordash error charge $14.88 on o0135110",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-21",
+      "channel": "doordash",
+      "evidence": [
+       "o0135110"
+      ],
+      "detail": {
+       "items": [
+        "Shoyu",
+        "Edamame",
+        "Spicy Miso",
+        "Spicy Miso"
+       ],
+       "prices": [
+        18.15,
+        6.6,
+        19.25,
+        19.25
+       ],
+       "reason": "partial charge: check the tablet photo or ticket"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "doordash error charge $9.35 on o0135143",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-21",
+      "channel": "doordash",
+      "evidence": [
+       "o0135143"
+      ],
+      "detail": {
+       "items": [
+        "Chashu Bao",
+        "Chicken Paitan",
+        "Takoyaki"
+       ],
+       "prices": [
+        9.35,
+        18.15,
+        9.35
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_disputable",
+      "title": "doordash error charge $25.72 on o0135149",
+      "impact_usd": 25.72,
+      "business_date": "2026-08-21",
+      "channel": "doordash",
+      "evidence": [
+       "o0135149"
+      ],
+      "detail": {
+       "items": [
+        "Shoyu",
+        "Spicy Miso"
+       ],
+       "prices": [
+        18.15,
+        19.25
+       ],
+       "reason": "charge is more than any single item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_disputable",
+      "title": "doordash error charge $18.70 on o0135223",
+      "impact_usd": 18.7,
+      "business_date": "2026-08-21",
+      "channel": "doordash",
+      "evidence": [
+       "o0135223"
+      ],
+      "detail": {
+       "items": [
+        "Chicken Paitan",
+        "Veggie Miso",
+        "Veggie Miso"
+       ],
+       "prices": [
+        18.15,
+        17.05,
+        17.05
+       ],
+       "reason": "charge is more than any single item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_disputable",
+      "title": "doordash error charge $18.15 on o0135250",
+      "impact_usd": 18.15,
+      "business_date": "2026-08-21",
+      "channel": "doordash",
+      "evidence": [
+       "o0135250"
+      ],
+      "detail": {
+       "items": [
+        "Tonkotsu"
+       ],
+       "prices": [
+        19.25
+       ],
+       "reason": "charge equals the price of a menu item that wasn't on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_disputable",
+      "title": "doordash error charge $26.94 on o0135300",
+      "impact_usd": 26.94,
+      "business_date": "2026-08-21",
+      "channel": "doordash",
+      "evidence": [
+       "o0135300"
+      ],
+      "detail": {
+       "items": [
+        "Spicy Miso",
+        "Chicken Paitan",
+        "Shoyu"
+       ],
+       "prices": [
+        19.25,
+        18.15,
+        18.15
+       ],
+       "reason": "charge is more than any single item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_disputable",
+      "title": "doordash error charge $8.80 on o0135323",
+      "impact_usd": 8.8,
+      "business_date": "2026-08-21",
+      "channel": "doordash",
+      "evidence": [
+       "o0135323"
+      ],
+      "detail": {
+       "items": [
+        "Ramune",
+        "Tonkotsu"
+       ],
+       "prices": [
+        4.95,
+        19.25
+       ],
+       "reason": "charge equals the price of a menu item that wasn't on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "doordash error charge $18.15 on o0135417",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-21",
+      "channel": "doordash",
+      "evidence": [
+       "o0135417"
+      ],
+      "detail": {
+       "items": [
+        "Karaage",
+        "Shoyu"
+       ],
+       "prices": [
+        9.9,
+        18.15
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "doordash error charge $8.80 on o0135459",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-21",
+      "channel": "doordash",
+      "evidence": [
+       "o0135459"
+      ],
+      "detail": {
+       "items": [
+        "Gyoza",
+        "Karaage",
+        "Chicken Paitan"
+       ],
+       "prices": [
+        8.8,
+        9.9,
+        18.15
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     }
+    ],
+    "recoverable_usd": 98.31
+   },
+   {
+    "date": "2026-08-22",
+    "channels": [
+     {
+      "channel": "doordash",
+      "orders": 209,
+      "sales": 7258.35,
+      "expected": 5443.84,
+      "reported": 5392.99,
+      "difference": -50.85,
+      "error_charges": 44.36,
+      "fresh": true
+     }
+    ],
+    "findings": [
+     {
+      "agent": "books",
+      "kind": "missing_from_payout",
+      "title": "doordash order o0135514 missing from payout",
+      "impact_usd": 6.6,
+      "business_date": "2026-08-22",
+      "channel": "doordash",
+      "evidence": [
+       "o0135514"
+      ],
+      "detail": null
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_review",
+      "title": "doordash error charge $16.45 on o0135624",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-22",
+      "channel": "doordash",
+      "evidence": [
+       "o0135624"
+      ],
+      "detail": {
+       "items": [
+        "Ramune",
+        "Chicken Paitan"
+       ],
+       "prices": [
+        4.95,
+        18.15
+       ],
+       "reason": "partial charge: check the tablet photo or ticket"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "doordash error charge $3.85 on o0135648",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-22",
+      "channel": "doordash",
+      "evidence": [
+       "o0135648"
+      ],
+      "detail": {
+       "items": [
+        "Iced Green Tea",
+        "Veggie Miso",
+        "Tonkotsu"
+       ],
+       "prices": [
+        3.85,
+        17.05,
+        19.25
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_review",
+      "title": "doordash error charge $4.81 on o0135673",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-22",
+      "channel": "doordash",
+      "evidence": [
+       "o0135673"
+      ],
+      "detail": {
+       "items": [
+        "Chashu Bao",
+        "Spicy Miso",
+        "Spicy Miso"
+       ],
+       "prices": [
+        9.35,
+        19.25,
+        19.25
+       ],
+       "reason": "partial charge: check the tablet photo or ticket"
+      }
+     },
+     {
+      "agent": "books",
+      "kind": "error_charge_likely_valid",
+      "title": "doordash error charge $19.25 on o0135811",
+      "impact_usd": 0.0,
+      "business_date": "2026-08-22",
+      "channel": "doordash",
+      "evidence": [
+       "o0135811"
+      ],
+      "detail": {
+       "items": [
+        "Chashu Bao",
+        "Spicy Miso"
+       ],
+       "prices": [
+        9.35,
+        19.25
+       ],
+       "reason": "charge equals the price of an item on the order"
+      }
+     }
+    ],
+    "recoverable_usd": 6.6
+   }
+  ],
+  "estimate_today": [
+   {
+    "channel": "doordash",
+    "orders": 169,
+    "sales": 5946.05,
+    "expected": 4459.54,
+    "reported": null,
+    "difference": null
+   },
+   {
+    "channel": "ubereats",
+    "orders": 58,
+    "sales": 2074.6,
+    "expected": 1514.46,
+    "reported": null,
+    "difference": null
+   },
+   {
+    "channel": "grubhub",
+    "orders": 32,
+    "sales": 1057.1,
+    "expected": 845.68,
+    "reported": null,
+    "difference": null
+   }
+  ],
+  "verified_pairs": [
+   "2026-08-09|doordash",
+   "2026-08-09|grubhub",
+   "2026-08-09|ubereats",
+   "2026-08-10|doordash",
+   "2026-08-10|grubhub",
+   "2026-08-10|ubereats",
+   "2026-08-11|doordash",
+   "2026-08-11|grubhub",
+   "2026-08-11|ubereats",
+   "2026-08-12|doordash",
+   "2026-08-12|grubhub",
+   "2026-08-12|ubereats",
+   "2026-08-13|doordash",
+   "2026-08-13|grubhub",
+   "2026-08-13|ubereats",
+   "2026-08-14|doordash",
+   "2026-08-14|grubhub",
+   "2026-08-14|ubereats",
+   "2026-08-15|doordash",
+   "2026-08-15|grubhub",
+   "2026-08-15|ubereats",
+   "2026-08-16|doordash",
+   "2026-08-16|grubhub",
+   "2026-08-16|ubereats",
+   "2026-08-17|doordash",
+   "2026-08-17|grubhub",
+   "2026-08-17|ubereats",
+   "2026-08-18|doordash",
+   "2026-08-18|grubhub",
+   "2026-08-18|ubereats",
+   "2026-08-19|doordash",
+   "2026-08-19|grubhub",
+   "2026-08-19|ubereats",
+   "2026-08-20|doordash",
+   "2026-08-20|grubhub",
+   "2026-08-20|ubereats",
+   "2026-08-21|doordash",
+   "2026-08-21|grubhub",
+   "2026-08-22|doordash"
+  ]
+ },
+ "stock": {
+  "ledger": {
+   "date": "2026-08-23",
+   "since": "2026-08-16",
+   "rows": [
+    {
+     "sku": "ajitama_egg",
+     "last_count": 549.38,
+     "received": 2760.0,
+     "used": 2667.0,
+     "waste": 8.55,
+     "ledger": 633.83,
+     "counted": 640.98,
+     "gap": 7.15,
+     "gap_pct": 0.0027
+    },
+    {
+     "sku": "bao_bun",
+     "last_count": 118.89,
+     "received": 550.0,
+     "used": 520.0,
+     "waste": 0.0,
+     "ledger": 148.89,
+     "counted": 142.05,
+     "gap": -6.84,
+     "gap_pct": -0.0132
+    },
+    {
+     "sku": "chicken_thigh",
+     "last_count": 26.91,
+     "received": 115.0,
+     "used": 106.83,
+     "waste": 0.0,
+     "ledger": 35.08,
+     "counted": 36.47,
+     "gap": 1.39,
+     "gap_pct": 0.013
+    },
+    {
+     "sku": "edamame",
+     "last_count": 8.48,
+     "received": 32.0,
+     "used": 30.45,
+     "waste": 0.0,
+     "ledger": 10.03,
+     "counted": 10.12,
+     "gap": 0.09,
+     "gap_pct": 0.003
+    },
+    {
+     "sku": "green_tea",
+     "last_count": 24.81,
+     "received": 84.0,
+     "used": 80.8,
+     "waste": 0.43,
+     "ledger": 27.58,
+     "counted": 26.31,
+     "gap": -1.27,
+     "gap_pct": -0.0157
+    },
+    {
+     "sku": "gyoza",
+     "last_count": 685.84,
+     "received": 2800.0,
+     "used": 2622.0,
+     "waste": 0.0,
+     "ledger": 863.84,
+     "counted": 904.78,
+     "gap": 40.94,
+     "gap_pct": 0.0156
+    },
+    {
+     "sku": "mochi",
+     "last_count": 99.55,
+     "received": 504.0,
+     "used": 417.0,
+     "waste": 0.0,
+     "ledger": 186.55,
+     "counted": 175.26,
+     "gap": -11.29,
+     "gap_pct": -0.0271
+    },
+    {
+     "sku": "noodles",
+     "last_count": 762.8,
+     "received": 3840.0,
+     "used": 3709.0,
+     "waste": 0.0,
+     "ledger": 893.8,
+     "counted": 805.97,
+     "gap": -87.83,
+     "gap_pct": -0.0237
+    },
+    {
+     "sku": "pork_belly",
+     "last_count": 104.23,
+     "received": 505.0,
+     "used": 514.29,
+     "waste": 3.31,
+     "ledger": 91.63,
+     "counted": 83.99,
+     "gap": -7.64,
+     "gap_pct": -0.0149
+    },
+    {
+     "sku": "ramune",
+     "last_count": 65.55,
+     "received": 264.0,
+     "used": 233.0,
+     "waste": 0.0,
+     "ledger": 96.55,
+     "counted": 97.62,
+     "gap": 1.07,
+     "gap_pct": 0.0046
+    },
+    {
+     "sku": "rice",
+     "last_count": 14.58,
+     "received": 80.0,
+     "used": 71.5,
+     "waste": 0.0,
+     "ledger": 23.08,
+     "counted": 23.47,
+     "gap": 0.39,
+     "gap_pct": 0.0055
+    },
+    {
+     "sku": "sapporo",
+     "last_count": 12.95,
+     "received": 48.0,
+     "used": 43.0,
+     "waste": 0.0,
+     "ledger": 17.95,
+     "counted": 19.42,
+     "gap": 1.47,
+     "gap_pct": 0.0342
+    },
+    {
+     "sku": "scallion",
+     "last_count": 9.39,
+     "received": 42.0,
+     "used": 40.59,
+     "waste": 0.33,
+     "ledger": 10.47,
+     "counted": 11.04,
+     "gap": 0.57,
+     "gap_pct": 0.0142
+    },
+    {
+     "sku": "takoyaki",
+     "last_count": 235.87,
+     "received": 900.0,
+     "used": 822.0,
+     "waste": 0.0,
+     "ledger": 313.87,
+     "counted": 299.46,
+     "gap": -14.41,
+     "gap_pct": -0.0175
+    }
+   ],
+   "findings": []
+  },
+  "chashu": {
+   "business_date": "2026-08-23 00:00:00",
+   "par": 520,
+   "used": 452.5,
+   "sold_out": false
+  }
+ },
+ "demand": {
+  "date": "2026-08-24",
+  "p10": 313.0,
+  "p50": 352.4,
+  "p90": 406.1,
+  "similar_days": [
+   {
+    "date": "2026-06-29",
+    "orders": 314,
+    "net_sales": 10267.75,
+    "why": "same weekday, rain",
+    "distance": 1.106
+   },
+   {
+    "date": "2026-05-18",
+    "orders": 395,
+    "net_sales": 13118.35,
+    "why": "same weekday, rain",
+    "distance": 1.174
+   },
+   {
+    "date": "2026-05-25",
+    "orders": 317,
+    "net_sales": 10440.25,
+    "why": "same weekday, rain",
+    "distance": 1.207
+   },
+   {
+    "date": "2026-07-06",
+    "orders": 327,
+    "net_sales": 10258.55,
+    "why": "same weekday, rain",
+    "distance": 1.774
+   },
+   {
+    "date": "2026-07-27",
+    "orders": 340,
+    "net_sales": 11387.3,
+    "why": "same weekday, rain",
+    "distance": 1.787
+   }
+  ],
+  "curve": [
+   {
+    "bin": 44,
+    "time": "11:00",
+    "orders": 8.83
+   },
+   {
+    "bin": 45,
+    "time": "11:15",
+    "orders": 7.42
+   },
+   {
+    "bin": 46,
+    "time": "11:30",
+    "orders": 12.43
+   },
+   {
+    "bin": 47,
+    "time": "11:45",
+    "orders": 12.67
+   },
+   {
+    "bin": 48,
+    "time": "12:00",
+    "orders": 19.72
+   },
+   {
+    "bin": 49,
+    "time": "12:15",
+    "orders": 15.01
+   },
+   {
+    "bin": 50,
+    "time": "12:30",
+    "orders": 16.64
+   },
+   {
+    "bin": 51,
+    "time": "12:45",
+    "orders": 11.39
+   },
+   {
+    "bin": 52,
+    "time": "13:00",
+    "orders": 8.88
+   },
+   {
+    "bin": 53,
+    "time": "13:15",
+    "orders": 4.42
+   },
+   {
+    "bin": 54,
+    "time": "13:30",
+    "orders": 2.77
+   },
+   {
+    "bin": 55,
+    "time": "13:45",
+    "orders": 2.29
+   },
+   {
+    "bin": 57,
+    "time": "14:15",
+    "orders": 1.02
+   },
+   {
+    "bin": 60,
+    "time": "15:00",
+    "orders": 0.99
+   },
+   {
+    "bin": 61,
+    "time": "15:15",
+    "orders": 1.1
+   },
+   {
+    "bin": 63,
+    "time": "15:45",
+    "orders": 1.41
+   },
+   {
+    "bin": 64,
+    "time": "16:00",
+    "orders": 1.89
+   },
+   {
+    "bin": 65,
+    "time": "16:15",
+    "orders": 2.05
+   },
+   {
+    "bin": 66,
+    "time": "16:30",
+    "orders": 3.71
+   },
+   {
+    "bin": 67,
+    "time": "16:45",
+    "orders": 5.04
+   },
+   {
+    "bin": 68,
+    "time": "17:00",
+    "orders": 6.8
+   },
+   {
+    "bin": 69,
+    "time": "17:15",
+    "orders": 6.09
+   },
+   {
+    "bin": 70,
+    "time": "17:30",
+    "orders": 12.05
+   },
+   {
+    "bin": 71,
+    "time": "17:45",
+    "orders": 13.28
+   },
+   {
+    "bin": 72,
+    "time": "18:00",
+    "orders": 17.12
+   },
+   {
+    "bin": 73,
+    "time": "18:15",
+    "orders": 19.46
+   },
+   {
+    "bin": 74,
+    "time": "18:30",
+    "orders": 18.93
+   },
+   {
+    "bin": 75,
+    "time": "18:45",
+    "orders": 19.9
+   },
+   {
+    "bin": 76,
+    "time": "19:00",
+    "orders": 19.54
+   },
+   {
+    "bin": 77,
+    "time": "19:15",
+    "orders": 14.18
+   },
+   {
+    "bin": 78,
+    "time": "19:30",
+    "orders": 11.49
+   },
+   {
+    "bin": 79,
+    "time": "19:45",
+    "orders": 8.32
+   },
+   {
+    "bin": 80,
+    "time": "20:00",
+    "orders": 12.22
+   },
+   {
+    "bin": 81,
+    "time": "20:15",
+    "orders": 5.74
+   },
+   {
+    "bin": 82,
+    "time": "20:30",
+    "orders": 6.38
+   },
+   {
+    "bin": 83,
+    "time": "20:45",
+    "orders": 4.21
+   },
+   {
+    "bin": 84,
+    "time": "21:00",
+    "orders": 6.59
+   },
+   {
+    "bin": 85,
+    "time": "21:15",
+    "orders": 5.36
+   },
+   {
+    "bin": 86,
+    "time": "21:30",
+    "orders": 2.45
+   },
+   {
+    "bin": 87,
+    "time": "21:45",
+    "orders": 2.59
+   }
+  ],
+  "items": [
+   {
+    "item": "Chashu Bao",
+    "daypart": "dinner",
+    "units": 22.4
+   },
+   {
+    "item": "Chashu Bao",
+    "daypart": "lunch",
+    "units": 13.8
+   },
+   {
+    "item": "Chashu Don",
+    "daypart": "dinner",
+    "units": 27.2
+   },
+   {
+    "item": "Chashu Don",
+    "daypart": "lunch",
+    "units": 15.3
+   },
+   {
+    "item": "Chicken Paitan",
+    "daypart": "dinner",
+    "units": 45.8
+   },
+   {
+    "item": "Chicken Paitan",
+    "daypart": "lunch",
+    "units": 25.1
+   },
+   {
+    "item": "Edamame",
+    "daypart": "dinner",
+    "units": 21.6
+   },
+   {
+    "item": "Edamame",
+    "daypart": "lunch",
+    "units": 12.6
+   },
+   {
+    "item": "Gyoza",
+    "daypart": "dinner",
+    "units": 35.1
+   },
+   {
+    "item": "Gyoza",
+    "daypart": "lunch",
+    "units": 18.5
+   },
+   {
+    "item": "Iced Green Tea",
+    "daypart": "dinner",
+    "units": 18.9
+   },
+   {
+    "item": "Iced Green Tea",
+    "daypart": "lunch",
+    "units": 10.6
+   },
+   {
+    "item": "Karaage",
+    "daypart": "dinner",
+    "units": 28.1
+   },
+   {
+    "item": "Karaage",
+    "daypart": "lunch",
+    "units": 19.0
+   },
+   {
+    "item": "Mochi Trio",
+    "daypart": "dinner",
+    "units": 13.2
+   },
+   {
+    "item": "Mochi Trio",
+    "daypart": "lunch",
+    "units": 7.0
+   },
+   {
+    "item": "Ramune",
+    "daypart": "dinner",
+    "units": 23.7
+   },
+   {
+    "item": "Ramune",
+    "daypart": "lunch",
+    "units": 12.5
+   },
+   {
+    "item": "Sapporo",
+    "daypart": "dinner",
+    "units": 3.7
+   },
+   {
+    "item": "Sapporo",
+    "daypart": "lunch",
+    "units": 2.3
+   },
+   {
+    "item": "Shoyu",
+    "daypart": "dinner",
+    "units": 47.8
+   },
+   {
+    "item": "Shoyu",
+    "daypart": "lunch",
+    "units": 21.8
+   },
+   {
+    "item": "Spicy Miso",
+    "daypart": "dinner",
+    "units": 61.4
+   },
+   {
+    "item": "Spicy Miso",
+    "daypart": "lunch",
+    "units": 31.1
+   },
+   {
+    "item": "Takoyaki",
+    "daypart": "dinner",
+    "units": 12.9
+   },
+   {
+    "item": "Takoyaki",
+    "daypart": "lunch",
+    "units": 7.4
+   },
+   {
+    "item": "Tantanmen",
+    "daypart": "dinner",
+    "units": 42.5
+   },
+   {
+    "item": "Tantanmen",
+    "daypart": "lunch",
+    "units": 24.1
+   },
+   {
+    "item": "Tonkotsu",
+    "daypart": "dinner",
+    "units": 88.6
+   },
+   {
+    "item": "Tonkotsu",
+    "daypart": "lunch",
+    "units": 47.9
+   },
+   {
+    "item": "Veggie Miso",
+    "daypart": "dinner",
+    "units": 32.9
+   },
+   {
+    "item": "Veggie Miso",
+    "daypart": "lunch",
+    "units": 16.3
+   }
+  ],
+  "rush": {
+   "start": "18:00",
+   "end": "19:15",
+   "peak_per_15min": 19.9
+  },
+  "model": "lightgbm-daily + similar-day shape",
+  "backtest_mape_60d": 0.0857,
+  "today_check": {
+   "date": "2026-08-23",
+   "predicted": 380.1,
+   "actual": 380.0,
+   "error_pct": 0.0002,
+   "naive_same_weekday": 363.5,
+   "naive_error_pct": -0.0434,
+   "source": "re-run"
+  },
+  "naive_mape_60d": 0.0996
+ },
+ "analyst": {
+  "compare": {
+   "date": "2026-08-23",
+   "baseline": "usual_weekday",
+   "baseline_dates": [
+    "2026-07-26",
+    "2026-08-02",
+    "2026-08-09",
+    "2026-08-16"
+   ],
+   "orders": {
+    "value": 380.0,
+    "baseline": 363.5,
+    "change_pct": 0.0454
+   },
+   "net_sales": {
+    "value": 12913.25,
+    "baseline": 12040.3125,
+    "change_pct": 0.0725
+   },
+   "avg_ticket": {
+    "value": 33.9822,
+    "baseline": 33.1749,
+    "change_pct": 0.0243
+   },
+   "labour_pct": {
+    "value": 0.2456,
+    "baseline": 0.2688,
+    "change_pct": -0.0863
+   },
+   "cancels": {
+    "value": 2.0,
+    "baseline": 3.0,
+    "change_pct": -0.3333
+   },
+   "avoidable_cancels": {
+    "value": 0.0,
+    "baseline": 1.75,
+    "change_pct": -1.0
+   }
+  },
+  "explain": {
+   "channel": [
+    {
+     "key": "ubereats",
+     "today": 2074.6,
+     "usual": 1977.94,
+     "change": 96.66
+    },
+    {
+     "key": "grubhub",
+     "today": 1057.1,
+     "usual": 951.77,
+     "change": 105.32
+    },
+    {
+     "key": "in_store",
+     "today": 3835.5,
+     "usual": 3693.38,
+     "change": 142.12
+    },
+    {
+     "key": "doordash",
+     "today": 5946.05,
+     "usual": 5417.22,
+     "change": 528.83
+    }
+   ],
+   "daypart": [
+    {
+     "key": "lunch",
+     "today": 4605.25,
+     "usual": 4466.62,
+     "change": 138.62
+    },
+    {
+     "key": "late",
+     "today": 912.8,
+     "usual": 618.24,
+     "change": 294.56
+    },
+    {
+     "key": "dinner",
+     "today": 7395.2,
+     "usual": 6955.45,
+     "change": 439.75
+    }
+   ],
+   "context": {
+    "rain": false,
+    "snow": false,
+    "temp_high_c": 24.0,
+    "events": [
+     "Pirates home game",
+     "CMU/Pitt on break"
+    ]
+   }
+  },
+  "similar": [
+   {
+    "date": "2026-07-12",
+    "orders": 357,
+    "net_sales": 11679.6,
+    "why": "same weekday",
+    "distance": 0.136
+   },
+   {
+    "date": "2026-08-09",
+    "orders": 406,
+    "net_sales": 12992.45,
+    "why": "same weekday",
+    "distance": 0.14
+   },
+   {
+    "date": "2026-08-02",
+    "orders": 341,
+    "net_sales": 11657.1,
+    "why": "same weekday",
+    "distance": 0.243
+   },
+   {
+    "date": "2026-05-17",
+    "orders": 337,
+    "net_sales": 10662.45,
+    "why": "same weekday",
+    "distance": 0.678
+   },
+   {
+    "date": "2026-05-10",
+    "orders": 405,
+    "net_sales": 13236.5,
+    "why": "same weekday",
+    "distance": 0.706
+   }
+  ],
+  "curve": [
+   3,
+   6,
+   6,
+   12,
+   12,
+   6,
+   13,
+   16,
+   11,
+   13,
+   12,
+   9,
+   8,
+   3,
+   3,
+   4,
+   1,
+   1,
+   2,
+   1,
+   3,
+   5,
+   5,
+   15,
+   9,
+   15,
+   18,
+   10,
+   18,
+   22,
+   19,
+   17,
+   18,
+   10,
+   8,
+   9,
+   9,
+   4,
+   8,
+   7,
+   7,
+   4
+  ],
+  "items": [
+   {
+    "item": "Tonkotsu",
+    "sold": 165,
+    "sales": 3097.5
+   },
+   {
+    "item": "Spicy Miso",
+    "sold": 123,
+    "sales": 2292.5
+   },
+   {
+    "item": "Shoyu",
+    "sold": 75,
+    "sales": 1315.0500000000002
+   },
+   {
+    "item": "Gyoza",
+    "sold": 73,
+    "sales": 624.7999999999998
+   },
+   {
+    "item": "Chicken Paitan",
+    "sold": 72,
+    "sales": 1267.2
+   },
+   {
+    "item": "Tantanmen",
+    "sold": 71,
+    "sales": 1290.3000000000013
+   },
+   {
+    "item": "Veggie Miso",
+    "sold": 51,
+    "sales": 849.3999999999996
+   },
+   {
+    "item": "Chashu Don",
+    "sold": 48,
+    "sales": 716.7999999999996
+   }
+  ]
+ },
+ "plan": {
+  "portions_per_order": 1.058,
+  "newsvendor": {
+   "critical_ratio": 0.968,
+   "orders_planned": 425.2,
+   "chashu_portions": 450
+  },
+  "old_par": 400,
+  "old_runout": {
+   "item_group": "chashu",
+   "pause_apps_at": null,
+   "trigger": "only if fewer than 0 portions remain"
+  },
+  "safety_net": {
+   "item_group": "chashu",
+   "pause_apps_at": null,
+   "trigger": "only if fewer than 6 portions remain"
+  },
+  "staff_gaps": [
+   {
+    "start": "12:00",
+    "end": "12:45",
+    "extra_cooks": 1
+   }
+  ],
+  "prep_schedule": [
+   {
+    "name": "Braise chashu",
+    "start": "9:00",
+    "end": "11:30",
+    "deadline": "17:00",
+    "_s": 540
+   },
+   {
+    "name": "Karaage marinade",
+    "start": "9:00",
+    "end": "9:25",
+    "deadline": "16:30",
+    "_s": 540
+   },
+   {
+    "name": "Marinate eggs",
+    "start": "9:25",
+    "end": "9:55",
+    "deadline": "16:00",
+    "_s": 565
+   },
+   {
+    "name": "Fold gyoza",
+    "start": "9:55",
+    "end": "11:25",
+    "deadline": "17:30",
+    "_s": 595
+   },
+   {
+    "name": "Slice and portion chashu",
+    "start": "11:30",
+    "end": "12:10",
+    "deadline": "17:45",
+    "_s": 690
+   }
+  ],
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 450,
+    "on_hand": 5.0,
+    "prep": 450,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "20:45",
+     "ubereats": "20:45",
+     "grubhub": "20:30"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "portion_counts": {
+   "chashu": 5.0
+  }
+ },
+ "cancel_rate": 0.0041356492969396195,
+ "prev_cancel_rate": 0.0041876046901172526,
+ "cross_check": [],
+ "findings": [
+  {
+   "kind": "payout_short",
+   "channel": "doordash",
+   "channel_name": "DoorDash",
+   "fresh": false,
+   "recoverable_usd": 47.17,
+   "for_date_iso": "2026-08-09",
+   "n_disputable": 2,
+   "for_date": "Sun Aug 9",
+   "impact_usd": 72.15,
+   "detail": "2 disputable charges, 1 valid-looking charge",
+   "title": "DoorDash short $72.15 for Sun Aug 9",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "ubereats",
+   "channel_name": "Uber Eats",
+   "fresh": false,
+   "recoverable_usd": 19.25,
+   "for_date_iso": "2026-08-09",
+   "n_disputable": 1,
+   "for_date": "Sun Aug 9",
+   "impact_usd": 38.5,
+   "detail": "1 disputable charge, 1 valid-looking charge",
+   "title": "Uber Eats short $38.50 for Sun Aug 9",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "grubhub",
+   "channel_name": "Grubhub",
+   "fresh": false,
+   "recoverable_usd": 0,
+   "for_date_iso": "2026-08-09",
+   "n_disputable": 0,
+   "for_date": "Sun Aug 9",
+   "impact_usd": 9.9,
+   "detail": "1 valid-looking charge",
+   "title": "Grubhub short $9.90 for Sun Aug 9",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "doordash",
+   "channel_name": "DoorDash",
+   "fresh": false,
+   "recoverable_usd": 73.83,
+   "for_date_iso": "2026-08-10",
+   "n_disputable": 2,
+   "for_date": "Mon Aug 10",
+   "impact_usd": 73.79,
+   "detail": "2 missing orders",
+   "title": "DoorDash short $73.79 for Mon Aug 10",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "grubhub",
+   "channel_name": "Grubhub",
+   "fresh": false,
+   "recoverable_usd": 26.4,
+   "for_date_iso": "2026-08-10",
+   "n_disputable": 1,
+   "for_date": "Mon Aug 10",
+   "impact_usd": 26.4,
+   "detail": "1 disputable charge",
+   "title": "Grubhub short $26.40 for Mon Aug 10",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "doordash",
+   "channel_name": "DoorDash",
+   "fresh": false,
+   "recoverable_usd": 0,
+   "for_date_iso": "2026-08-11",
+   "n_disputable": 0,
+   "for_date": "Tue Aug 11",
+   "impact_usd": 4.79,
+   "detail": "unexplained",
+   "title": "DoorDash short $4.79 for Tue Aug 11",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "grubhub",
+   "channel_name": "Grubhub",
+   "fresh": false,
+   "recoverable_usd": 0,
+   "for_date_iso": "2026-08-11",
+   "n_disputable": 0,
+   "for_date": "Tue Aug 11",
+   "impact_usd": 19.25,
+   "detail": "1 valid-looking charge",
+   "title": "Grubhub short $19.25 for Tue Aug 11",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "ubereats",
+   "channel_name": "Uber Eats",
+   "fresh": false,
+   "recoverable_usd": 3.85,
+   "for_date_iso": "2026-08-12",
+   "n_disputable": 1,
+   "for_date": "Wed Aug 12",
+   "impact_usd": 23.1,
+   "detail": "1 disputable charge, 1 valid-looking charge",
+   "title": "Uber Eats short $23.10 for Wed Aug 12",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "doordash",
+   "channel_name": "DoorDash",
+   "fresh": false,
+   "recoverable_usd": 28.14,
+   "for_date_iso": "2026-08-13",
+   "n_disputable": 1,
+   "for_date": "Thu Aug 13",
+   "impact_usd": 28.07,
+   "detail": "1 disputable charge",
+   "title": "DoorDash short $28.07 for Thu Aug 13",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "ubereats",
+   "channel_name": "Uber Eats",
+   "fresh": false,
+   "recoverable_usd": 0,
+   "for_date_iso": "2026-08-13",
+   "n_disputable": 0,
+   "for_date": "Thu Aug 13",
+   "impact_usd": 17.05,
+   "detail": "1 valid-looking charge",
+   "title": "Uber Eats short $17.05 for Thu Aug 13",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "grubhub",
+   "channel_name": "Grubhub",
+   "fresh": false,
+   "recoverable_usd": 0,
+   "for_date_iso": "2026-08-13",
+   "n_disputable": 0,
+   "for_date": "Thu Aug 13",
+   "impact_usd": 17.05,
+   "detail": "1 valid-looking charge",
+   "title": "Grubhub short $17.05 for Thu Aug 13",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "doordash",
+   "channel_name": "DoorDash",
+   "fresh": false,
+   "recoverable_usd": 44.55,
+   "for_date_iso": "2026-08-14",
+   "n_disputable": 3,
+   "for_date": "Fri Aug 14",
+   "impact_usd": 62.64,
+   "detail": "1 disputable charge, 2 missing orders, 1 valid-looking charge",
+   "title": "DoorDash short $62.64 for Fri Aug 14",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "ubereats",
+   "channel_name": "Uber Eats",
+   "fresh": false,
+   "recoverable_usd": 4.95,
+   "for_date_iso": "2026-08-14",
+   "n_disputable": 1,
+   "for_date": "Fri Aug 14",
+   "impact_usd": 7.43,
+   "detail": "1 disputable charge",
+   "title": "Uber Eats short $7.43 for Fri Aug 14",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "grubhub",
+   "channel_name": "Grubhub",
+   "fresh": false,
+   "recoverable_usd": 0,
+   "for_date_iso": "2026-08-14",
+   "n_disputable": 0,
+   "for_date": "Fri Aug 14",
+   "impact_usd": 4.95,
+   "detail": "1 valid-looking charge",
+   "title": "Grubhub short $4.95 for Fri Aug 14",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "doordash",
+   "channel_name": "DoorDash",
+   "fresh": false,
+   "recoverable_usd": 18.7,
+   "for_date_iso": "2026-08-15",
+   "n_disputable": 1,
+   "for_date": "Sat Aug 15",
+   "impact_usd": 45.82,
+   "detail": "1 disputable charge, 1 valid-looking charge",
+   "title": "DoorDash short $45.82 for Sat Aug 15",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "ubereats",
+   "channel_name": "Uber Eats",
+   "fresh": false,
+   "recoverable_usd": 0,
+   "for_date_iso": "2026-08-15",
+   "n_disputable": 0,
+   "for_date": "Sat Aug 15",
+   "impact_usd": 3.85,
+   "detail": "1 valid-looking charge",
+   "title": "Uber Eats short $3.85 for Sat Aug 15",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "doordash",
+   "channel_name": "DoorDash",
+   "fresh": false,
+   "recoverable_usd": 9.9,
+   "for_date_iso": "2026-08-16",
+   "n_disputable": 1,
+   "for_date": "Sun Aug 16",
+   "impact_usd": 14.14,
+   "detail": "1 disputable charge",
+   "title": "DoorDash short $14.14 for Sun Aug 16",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "ubereats",
+   "channel_name": "Uber Eats",
+   "fresh": false,
+   "recoverable_usd": 20.16,
+   "for_date_iso": "2026-08-16",
+   "n_disputable": 1,
+   "for_date": "Sun Aug 16",
+   "impact_usd": 39.41,
+   "detail": "1 disputable charge, 1 valid-looking charge",
+   "title": "Uber Eats short $39.41 for Sun Aug 16",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "grubhub",
+   "channel_name": "Grubhub",
+   "fresh": false,
+   "recoverable_usd": 22.0,
+   "for_date_iso": "2026-08-16",
+   "n_disputable": 1,
+   "for_date": "Sun Aug 16",
+   "impact_usd": 22.0,
+   "detail": "1 disputable charge",
+   "title": "Grubhub short $22.00 for Sun Aug 16",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "doordash",
+   "channel_name": "DoorDash",
+   "fresh": false,
+   "recoverable_usd": 0,
+   "for_date_iso": "2026-08-17",
+   "n_disputable": 0,
+   "for_date": "Mon Aug 17",
+   "impact_usd": 54.43,
+   "detail": "3 valid-looking charges",
+   "title": "DoorDash short $54.43 for Mon Aug 17",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "ubereats",
+   "channel_name": "Uber Eats",
+   "fresh": false,
+   "recoverable_usd": 9.35,
+   "for_date_iso": "2026-08-17",
+   "n_disputable": 1,
+   "for_date": "Mon Aug 17",
+   "impact_usd": 9.35,
+   "detail": "1 disputable charge",
+   "title": "Uber Eats short $9.35 for Mon Aug 17",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "doordash",
+   "channel_name": "DoorDash",
+   "fresh": false,
+   "recoverable_usd": 26.77,
+   "for_date_iso": "2026-08-18",
+   "n_disputable": 1,
+   "for_date": "Tue Aug 18",
+   "impact_usd": 35.74,
+   "detail": "1 disputable charge",
+   "title": "DoorDash short $35.74 for Tue Aug 18",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "doordash",
+   "channel_name": "DoorDash",
+   "fresh": false,
+   "recoverable_usd": 0,
+   "for_date_iso": "2026-08-19",
+   "n_disputable": 0,
+   "for_date": "Wed Aug 19",
+   "impact_usd": 36.29,
+   "detail": "2 valid-looking charges",
+   "title": "DoorDash short $36.29 for Wed Aug 19",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "ubereats",
+   "channel_name": "Uber Eats",
+   "fresh": false,
+   "recoverable_usd": 0,
+   "for_date_iso": "2026-08-19",
+   "n_disputable": 0,
+   "for_date": "Wed Aug 19",
+   "impact_usd": 38.5,
+   "detail": "2 valid-looking charges",
+   "title": "Uber Eats short $38.50 for Wed Aug 19",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "grubhub",
+   "channel_name": "Grubhub",
+   "fresh": false,
+   "recoverable_usd": 0,
+   "for_date_iso": "2026-08-19",
+   "n_disputable": 0,
+   "for_date": "Wed Aug 19",
+   "impact_usd": 43.72,
+   "detail": "3 valid-looking charges",
+   "title": "Grubhub short $43.72 for Wed Aug 19",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "doordash",
+   "channel_name": "DoorDash",
+   "fresh": false,
+   "recoverable_usd": 42.68,
+   "for_date_iso": "2026-08-20",
+   "n_disputable": 2,
+   "for_date": "Thu Aug 20",
+   "impact_usd": 60.86,
+   "detail": "1 disputable charge, 1 missing order, 1 valid-looking charge",
+   "title": "DoorDash short $60.86 for Thu Aug 20",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "doordash",
+   "channel_name": "DoorDash",
+   "fresh": false,
+   "recoverable_usd": 98.31,
+   "for_date_iso": "2026-08-21",
+   "n_disputable": 5,
+   "for_date": "Fri Aug 21",
+   "impact_usd": 149.46,
+   "detail": "5 disputable charges, 3 valid-looking charges",
+   "title": "DoorDash short $149.46 for Fri Aug 21",
+   "urgency": "important"
+  },
+  {
+   "kind": "payout_short",
+   "channel": "doordash",
+   "channel_name": "DoorDash",
+   "fresh": true,
+   "recoverable_usd": 6.6,
+   "for_date_iso": "2026-08-22",
+   "n_disputable": 1,
+   "for_date": "Sat Aug 22",
+   "impact_usd": 50.85,
+   "detail": "1 missing order, 2 valid-looking charges",
+   "title": "DoorDash short $50.85 for Sat Aug 22",
+   "urgency": "important"
+  },
+  {
+   "kind": "cancel_rate",
+   "rate": 0.0041356492969396195,
+   "prev_rate": 0.0041876046901172526,
+   "title": "DoorDash 7-day cancellation rate 0.4%",
+   "urgency": "important"
+  }
+ ],
+ "agents": null,
+ "alerts": [],
+ "older_recoverable_usd": 502.61,
+ "guardrail_report": {
+  "ok": true,
+  "unsupported": []
+ },
+ "guard": {
+  "armed_rule": {
+   "item_group": "chashu",
+   "pause_apps_at": null,
+   "trigger": "only if fewer than 6 portions remain"
+  },
+  "approved": true,
+  "note": "Rule armed; executor fires during service when the trigger is met."
+ },
+ "status": "done",
+ "seconds": 4.61,
+ "run_id": "2026-08-23-20261105T214418210064"
+}

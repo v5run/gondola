@@ -4,7 +4,7 @@
  "date_long": "Thursday, November 5, 2026",
  "dow_name": "Thursday",
  "headline": "A steady night, Thursday",
- "summary": "475 orders and $14,964 in net sales (-4% vs a usual Thursday). Rain, Penguins home game, chashu sold out (12 app orders cancelled). Tomorrow looks like 590 orders, with the rush 18:00\u201319:30.",
+ "summary": "475 orders and $14,964 in net sales (-4% vs a usual Thursday). Rain, Penguins home game, chashu sold out (12 app orders cancelled). Tomorrow looks like 590 orders, with the rush 6:00 pm\u20137:30 pm.",
  "kpis": [
   {
    "label": "Net sales",
@@ -34,8 +34,7 @@
  "attention": [
   "Cash drawer $23.50 short",
   "DoorDash Wed: $86.40 looks recoverable (3 charges to dispute)",
-  "Chashu sold out 8:39 PM, still live on apps 45 min (12 cancels)",
-  "26 older payout reports checked: $557.09 looks recoverable (checklist on page 2)",
+  "Chashu sold out 8:39 pm, still live on apps 45 min (12 cancels)",
   "Tomorrow needs +3 cook 11:30\u201313:00"
  ],
  "curve_svg": "<svg viewBox=\"0 0 300 124\" width=\"100%\"><path d=\"M0.0,77.9 L6.4,92.7 L12.8,65.5 L19.1,46.8 L25.5,48.3 L31.9,51.4 L38.3,56.9 L44.7,59.2 L51.1,81.8 L57.4,93.5 L63.8,108.3 L70.2,109.1 L76.6,116.9 L83.0,116.9 L89.4,120.0 L95.7,120.0 L102.1,120.0 L108.5,116.9 L114.9,116.9 L121.3,116.9 L127.7,113.8 L134.0,113.8 L140.4,106.0 L146.8,102.9 L153.2,84.9 L159.6,91.9 L166.0,73.2 L172.3,70.1 L178.7,55.3 L185.1,54.5 L191.5,35.1 L197.9,46.8 L204.3,53.0 L210.6,46.8 L217.0,67.0 L223.4,64.7 L229.8,88.8 L236.2,97.4 L242.6,95.1 L248.9,87.3 L255.3,93.5 L261.7,91.2 L268.1,91.9 L274.5,95.8 L280.9,120.0 L287.2,120.0 L293.6,120.0 L300.0,120.0\" fill=\"none\" stroke=\"#c9ccc6\" stroke-width=\"2\"/><path d=\"M0.0,79.5 L6.4,91.9 L12.8,48.3 L19.1,60.8 L25.5,63.9 L31.9,60.8 L38.3,45.2 L44.7,67.0 L51.1,82.6 L57.4,98.2 L63.8,104.4 L70.2,120.0 L76.6,116.9 L83.0,116.9 L89.4,120.0 L95.7,120.0 L102.1,120.0 L108.5,120.0 L114.9,120.0 L121.3,120.0 L127.7,113.8 L134.0,113.8 L140.4,107.5 L146.8,110.6 L153.2,98.2 L159.6,95.1 L166.0,63.9 L172.3,82.6 L178.7,45.2 L185.1,54.5 L191.5,14.0 L197.9,20.3 L204.3,10.9 L210.6,39.0 L217.0,63.9 L223.4,82.6 L229.8,73.2 L236.2,88.8 L242.6,95.1 L248.9,91.9 L255.3,101.3 L261.7,104.4 L268.1,101.3 L274.5,110.6 L280.9,120.0 L287.2,120.0 L293.6,120.0 L300.0,120.0\" fill=\"none\" stroke=\"#0f4d40\" stroke-width=\"2.4\"/></svg>",
@@ -136,25 +135,11 @@
  "labour_line": "224 hours, $3,929 (26.3% of net sales)",
  "disputes": [
   {
-   "order": "o0165563",
-   "amount": 33.14,
-   "reason": "charge is more than any single item on the order",
-   "days_left": 2,
-   "channel": "DoorDash"
-  },
-  {
    "order": "o0170909",
    "amount": 31.2,
    "reason": "charge is more than any single item on the order",
    "days_left": 13,
    "channel": "DoorDash"
-  },
-  {
-   "order": "o0166496",
-   "amount": 29.15,
-   "reason": "charge is more than any single item on the order",
-   "days_left": 4,
-   "channel": "Grubhub"
   },
   {
    "order": "o0171131",
@@ -164,10 +149,10 @@
    "channel": "DoorDash"
   },
   {
-   "order": "o0170660",
-   "amount": 26.63,
+   "order": "o0171432",
+   "amount": 26.6,
    "reason": "charge is more than any single item on the order",
-   "days_left": 12,
+   "days_left": 13,
    "channel": "DoorDash"
   }
  ],
@@ -175,7 +160,7 @@
   "p50": "590",
   "p10": "532",
   "p90": "678",
-  "rush": "18:00\u201319:30",
+  "rush": "6:00 pm\u20137:30 pm",
   "similar": "Oct 9, May 8, Sep 18",
   "par": 770,
   "old_par": 670,
@@ -208,9 +193,18 @@
   "err": "+11.0%",
   "mape": "7.1%",
   "naive": "8.5%",
-  "source": "a re-run with only last night's data"
+  "source": "last night's stored forecast"
  },
  "generated": "Nov 5 11:10 PM",
  "rebuilt": null,
- "closed_day": false
+ "closed_day": false,
+ "meta": {
+  "net_sales": 14964.0,
+  "orders": 475,
+  "vs_usual_pct": -0.0443,
+  "urgent": 3,
+  "texted": true,
+  "recoverable_usd": 86.4,
+  "closed_day": false
+ }
 }

@@ -15,6 +15,9 @@ from datetime import date, datetime
 TOKEN = re.compile(r"(?<![\w.:/-])(-|\+)?\$?(\d{1,3}(?:,\d{3})+|\d+)(\.\d+)?\s?(%|k\b)?")
 SKIP_KEYS = re.compile(r"(id|date|_at|key|time|order|shift|evidence|uri|url|bin)$", re.I)
 SMALL_INTS = set(range(0, 11))  # bare counts like "3 things", "2 cooks" are allowed
+MONTHS = r"(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Sept|Oct|Nov|Dec)[a-z]*\.?"
+# Calendar dates are not facts to check: ISO dates (2026-10-22) and month-day(-year) ("Oct 22", "October 22, 2026").
+DATES = re.compile(rf"\b\d{{4}}-\d{{2}}-\d{{2}}\b|\b{MONTHS} \d{{1,2}}(?:st|nd|rd|th)?(?:,? \d{{4}})?\b")
 
 
 def facts_from(obj, out: list | None = None, key: str = "") -> list[float]:
@@ -54,6 +57,7 @@ def check_numbers(text: str, tool_outputs: list) -> dict:
         facts_from(o, facts)
     # derived differences the templates may state (e.g. "$1,556 below usual") must be passed in as facts explicitly
     bad = []
+    text = DATES.sub(lambda m: "D" * len(m.group(0)), text)  # same length, so clock-time lookups still line up
     for m in TOKEN.finditer(text):
         sign, whole, frac, unit = m.group(1), m.group(2), m.group(3) or "", m.group(4) or ""
         raw = m.group(0)
@@ -74,20 +78,26 @@ def enforce(text: str, tool_outputs: list, fallback: str) -> tuple[str, dict]:
     return (text if r["ok"] else fallback), r
 
 
+FALLBACK = "I couldn't verify every number in that answer against the tool results, so I'm not showing it."
+
+
 def after_model_callback(callback_context, llm_response):
-    """ADK hook: block a model reply whose numbers aren't in this session's tool results."""
+    """ADK hook: block a model reply whose numbers aren't in this session's state (seeded facts + tool results,
+    which agents.adk_graph.record_tool_result copies into state). The reply is replaced by a number-free FALLBACK
+    and the block is recorded in state as "guardrail:<agent>" = {"unsupported": [...]}."""
     try:
         parts = llm_response.content.parts if llm_response and llm_response.content else []
-        text = " ".join(p.text for p in parts if getattr(p, "text", None))
-        if not text:
+        text = " ".join(p.text for p in parts if getattr(p, "text", None) and not getattr(p, "thought", False))
+        if not text or any(getattr(p, "function_call", None) for p in parts):
             return None
-        outputs = [v for v in callback_context.state.to_dict().values()]
+        state = callback_context.state.to_dict()
+        outputs = [v for k, v in state.items() if not str(k).startswith("guardrail:")]
         r = check_numbers(text, outputs)
         if r["ok"]:
             return None
         from google.genai import types
-        msg = "I couldn't verify every number in that answer, so here is what the tools returned: " + \
-              ", ".join(f"{k}" for k in callback_context.state.to_dict().keys())
-        return type(llm_response)(content=types.Content(role="model", parts=[types.Part(text=msg)]))
-    except Exception:
+        name = getattr(callback_context, "agent_name", None) or "agent"
+        callback_context.state[f"guardrail:{name}"] = {"unsupported": r["unsupported"], "text": text[:500]}
+        return type(llm_response)(content=types.Content(role="model", parts=[types.Part(text=FALLBACK)]))
+    except Exception:  # noqa: BLE001 - a broken check must not break the agent; the pipeline re-checks anyway
         return None

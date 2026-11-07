@@ -59,7 +59,7 @@ def ingest(raw: Path = RAW, db_path: Path = DB, upto: str | None = None) -> Path
     orders["created_at"] = pd.to_datetime(orders.created_at, utc=True).dt.tz_convert("America/New_York").dt.tz_localize(None)
     lines = pd.read_csv(raw / "pos_order_lines.csv")
     payouts = payouts_dedupe(load_payouts(raw))
-    cash = pd.DataFrame(json.loads((raw / "cash_drawer_shifts.json").read_text())["cash_drawer_shifts"])
+    cash = pd.DataFrame(json.loads((raw / "cash_drawer_shifts.json").read_text(encoding="utf-8"))["cash_drawer_shifts"])
     cash["business_date"] = pd.to_datetime(cash.business_date)
     tables = {
         "orders": orders,
@@ -92,6 +92,37 @@ def ingest(raw: Path = RAW, db_path: Path = DB, upto: str | None = None) -> Path
         con.execute(f"CREATE TABLE {name} AS SELECT * FROM tmp")
         con.unregister("tmp")
     con.close()
+    return db_path
+
+
+def cut(upto: str, db_path: Path, src: Path = DB) -> Path:
+    """Same result as `ingest(db_path=..., upto=...)`, but copied from an already-built database instead of re-reading
+    data/raw (about 50x faster). Used by the history backfill to give each past close the data that existed that night.
+    Tables with a business_date keep rows up to `upto`; order lines follow their orders; reference tables are copied."""
+    db_path = Path(db_path)
+    db_path.parent.mkdir(parents=True, exist_ok=True)
+    if db_path.exists():
+        db_path.unlink()
+    con = duckdb.connect(str(db_path))
+    try:
+        con.execute(f"ATTACH '{Path(src).as_posix()}' AS src (READ_ONLY)")
+        tabs = [r[0] for r in con.execute("SELECT table_name FROM information_schema.tables WHERE table_catalog = 'src'").fetchall()]
+        cutoff = str(pd.Timestamp(upto).date())
+        for t in tabs:
+            cols = {r[0] for r in con.execute("SELECT column_name FROM information_schema.columns WHERE table_catalog='src' "
+                                               "AND table_name = ?", [t]).fetchall()}
+            if "business_date" in cols:
+                con.execute(f"CREATE TABLE {t} AS SELECT * FROM src.{t} WHERE business_date <= TIMESTAMP '{cutoff}'")
+            elif t == "order_lines":
+                continue
+            else:
+                con.execute(f"CREATE TABLE {t} AS SELECT * FROM src.{t}")
+        if "order_lines" in tabs:
+            con.execute("CREATE TABLE order_lines AS SELECT l.* FROM src.order_lines l "
+                        "WHERE l.order_id IN (SELECT order_id FROM orders)")
+        con.execute("DETACH src")
+    finally:
+        con.close()
     return db_path
 
 

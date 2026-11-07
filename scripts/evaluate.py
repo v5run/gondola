@@ -289,7 +289,7 @@ def eval_nightly_replay(nights: int = 47):
         if d.day == 1:  # monthly summary for the previous month
             prev = (d - pd.Timedelta(days=1)).strftime("%Y-%m")
             st = Store(db)
-            bucket.put_monthly(prev, monthly_summary(st, prev, json.loads((work / "closes.json").read_text())), d.to_pydatetime())
+            bucket.put_monthly(prev, monthly_summary(st, prev, json.loads((work / "closes.json").read_text(encoding="utf-8"))), d.to_pydatetime())
         prev_db = work / f"night_{(d - pd.Timedelta(days=2)).date()}.duckdb"
         prev_db.unlink(missing_ok=True)
         rows.append({"date": ds, "status": r["status"], "seconds": r["seconds"],
@@ -339,7 +339,7 @@ def eval_robustness():
     nt = Notifier(work / "outbox_idem.jsonl")
     t0 = time.perf_counter(); r1 = pipeline.run_close("2026-11-05", notifier=nt, render=False)
     r2 = pipeline.run_close("2026-11-05", notifier=nt, render=False)
-    res["idempotent_second_tap"] = {"hit": bool(r2.get("idempotent_hit")), "sms_after_two_taps": sum(1 for l in (work / "outbox_idem.jsonl").read_text().splitlines())}
+    res["idempotent_second_tap"] = {"hit": bool(r2.get("idempotent_hit")), "sms_after_two_taps": sum(1 for l in (work / "outbox_idem.jsonl").read_text(encoding="utf-8").splitlines())}
     (work / "closes.json").unlink()
     nq = Notifier(work / "outbox_quiet.jsonl")
     r3 = pipeline.run_close("2026-11-05", notifier=nq, render=False, as_of=datetime(2026, 11, 6, 1, 40))
@@ -381,10 +381,10 @@ def main():
         t = time.perf_counter(); fn(st); print(f"{name:10s} {time.perf_counter() - t:6.1f}s", flush=True)
     eval_guardrails(); eval_adk()
     t = time.perf_counter(); eval_robustness(); print(f"robustness {time.perf_counter() - t:6.1f}s", flush=True)
-    (OUT / "eval.json").write_text(json.dumps(R, indent=1, default=str))
+    (OUT / "eval.json").write_text(json.dumps(R, indent=1, default=str), encoding="utf-8")
     if not a.quick:
         t = time.perf_counter(); eval_nightly_replay(); print(f"replay     {time.perf_counter() - t:6.1f}s", flush=True)
-    (OUT / "eval.json").write_text(json.dumps(R, indent=1, default=str))
+    (OUT / "eval.json").write_text(json.dumps(R, indent=1, default=str), encoding="utf-8")
     print(json.dumps(R, indent=1, default=str)[:6000])
 
 

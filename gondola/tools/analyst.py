@@ -71,10 +71,11 @@ def compare_periods(store: Store, date: str, baseline: str = "usual_weekday", da
     return out
 
 
-def explain_change(store: Store, date: str) -> dict:
-    """Break the change vs a usual weekday into channels and dayparts."""
+def explain_change(store: Store, date: str, daily: pd.DataFrame | None = None, cp: dict | None = None) -> dict:
+    """Break the change vs a usual weekday into channels and dayparts. daily / cp: precomputed daily frame and
+    compare_periods result (optional, to avoid recomputing them)."""
     d = pd.Timestamp(date)
-    cp = compare_periods(store, date)
+    cp = cp or compare_periods(store, date, daily=daily)
     if cp.get("status") == "no_data":
         cal = store.df("SELECT holiday FROM calendar WHERE date = ?", [date])
         h = cal.holiday[0] if len(cal) and cal.holiday[0] is not None and not pd.isna(cal.holiday[0]) else None

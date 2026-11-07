@@ -15,6 +15,7 @@ templates. With an LLM attached, only the wording changes; numbers are checked b
 """
 from __future__ import annotations
 
+from gondola import NP, clock
 import argparse
 import json
 import time
@@ -29,6 +30,7 @@ import pandas as pd
 from .metrics import Store, ROOT
 from .report.render import curve_svg, render_report
 from .storage import Bucket
+from .paths import rel
 from .agents.guardrails import check_numbers
 from .tools import analyst, books, demand, guard, plan, sentinel, stock
 
@@ -42,17 +44,33 @@ class StepError(Exception):
     pass
 
 
+# Optional progress callback (set for the duration of one run_close call). The API uses it to stream steps.
+_EMIT = None
+
+
+def _emit(name: str, payload: dict):
+    cb = _EMIT
+    if cb is not None:
+        try:
+            cb(name, payload)
+        except Exception:  # a broken listener must never break the close
+            pass
+
+
 def _timed(name, fn, log, fail: set):
     t0 = time.perf_counter()
+    _emit("step", {"step": name, "status": "running"})
     try:
         if name in fail:
             raise StepError(f"injected failure in {name}")
         res = fn()
         log.append({"step": name, "status": "done", "seconds": round(time.perf_counter() - t0, 2)})
+        _emit("step", {"step": name, "status": "done", "seconds": round(time.perf_counter() - t0, 2)})
         return res
     except Exception as e:  # fail soft: record, continue
         log.append({"step": name, "status": "failed", "seconds": round(time.perf_counter() - t0, 2), "error": str(e),
                     "trace": traceback.format_exc(limit=2)})
+        _emit("step", {"step": name, "status": "failed", "seconds": round(time.perf_counter() - t0, 2), "message": str(e)})
         return None
 
 
@@ -62,12 +80,12 @@ def _state_path():
 
 def _load_state() -> dict:
     p = _state_path()
-    return json.loads(p.read_text()) if p.exists() else {}
+    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else {}
 
 
 def _save_state(s: dict):
     OUT.mkdir(parents=True, exist_ok=True)
-    _state_path().write_text(json.dumps(s, indent=1, default=str))
+    _state_path().write_text(json.dumps(s, indent=1, default=str), encoding="utf-8")
 
 
 # ------------------------------------------------------------------ steps
@@ -135,14 +153,14 @@ def step_demand(db, date: str, backtest_cache: Path) -> dict:
     if actual is None:
         fc["today_check"] = {"predicted": None, "actual": None, "error_pct": None, "source": "closed"}
     elif stored.exists():
-        p50 = json.loads(stored.read_text())["p50"]
+        p50 = json.loads(stored.read_text(encoding="utf-8"))["p50"]
         fc["today_check"] = {"predicted": p50, "actual": actual, "error_pct": round((p50 - actual) / actual, 4), "source": "stored"}
     else:
         row = bt[bt.date.astype(str) == date]
         fc["today_check"] = ({**row.iloc[0].to_dict(), "source": "re-run"} if len(row) else
                              {"predicted": None, "actual": actual, "error_pct": None, "source": "none"})
     (OUT / "forecasts").mkdir(parents=True, exist_ok=True)
-    (OUT / "forecasts" / f"{tomorrow}.json").write_text(json.dumps({k: fc[k] for k in ("date", "p10", "p50", "p90")}))
+    (OUT / "forecasts" / f"{tomorrow}.json").write_text(json.dumps({k: fc[k] for k in ("date", "p10", "p50", "p90")}), encoding="utf-8")
     fc["naive_mape_60d"] = round(float(bt60.naive_error_pct.abs().mean()), 4) if len(bt60) else None
     fc.setdefault("backtest_mape_60d", round(float(bt60.error_pct.abs().mean()), 4) if len(bt60) else None)
     return fc
@@ -228,8 +246,8 @@ def findings_from(res: dict, date: str) -> list[dict]:
                     n_disp = sum(1 for f in fs if f["impact_usd"] > 0)
                     out.append({"kind": "payout_short", "channel": ch["channel"], "channel_name": CHANNEL_NAME[ch["channel"]],
                                 "fresh": ch.get("fresh", False), "recoverable_usd": rec, "for_date_iso": v["date"], "n_disputable": n_disp,
-                                "for_date": pd.Timestamp(v["date"]).strftime("%a %b %-d"), "impact_usd": round(-diff, 2),
-                                "detail": ", ".join(p for p in parts if p) or "unexplained", "title": f"{CHANNEL_NAME[ch['channel']]} short ${-diff:.2f} for {v['date']}"})
+                                "for_date": pd.Timestamp(v["date"]).strftime(f"%a %b %{NP}d"), "impact_usd": round(-diff, 2),
+                                "detail": ", ".join(p for p in parts if p) or "unexplained", "title": f"{CHANNEL_NAME[ch['channel']]} short ${-diff:,.2f} for {pd.Timestamp(v['date']).strftime(f'%a %b %{NP}d')}"})
     if b and b["cash"].get("status") == "drawer_not_closed":
         out.append({"kind": "drawer_not_closed", "title": "Cash drawer not counted yet", "impact_usd": None})
     so = res.get("sold_out")
@@ -292,7 +310,7 @@ def report_context(res: dict, date: str) -> dict:
             for c in v["channels"]:
                 if not c.get("fresh") and len(fresh_v) > 1:
                     continue
-                payouts.append({"channel": f"{CHANNEL_NAME[c['channel']]} · {pd.Timestamp(v['date']):%a %b %-d}", "status": "Verified",
+                payouts.append({"channel": f"{CHANNEL_NAME[c['channel']]} · {pd.Timestamp(v['date']):%a %b %{NP}d}", "status": "Verified",
                                 "sales": c["sales"], "expected": c["expected"], "reported_s": f"${c['reported']:,.2f}",
                                 "difference": c["difference"], "diff_s": f"{c['difference']:+,.2f}"})
         for c in b["estimate_today"]:
@@ -326,11 +344,11 @@ def report_context(res: dict, date: str) -> dict:
     summary = ""
     if b and cmp_:
         summary = (f"{b['money']['orders']} orders and ${b['money']['net_sales']:,.0f} in net sales ({pct(cmp_['net_sales']['change_pct'])}). "
-                   f"{context_line}. " + (f"Tomorrow looks like {fc['p50']:.0f} orders, with the rush {fc['rush']['start']}–{fc['rush']['end']}." if fc else ""))
+                   f"{context_line}. " + (f"Tomorrow looks like {fc['p50']:.0f} orders, with the rush {clock(fc['rush']['start'])}–{clock(fc['rush']['end'])}." if fc else ""))
     tom = {}
     if fc and p:
-        tom = {"p50": f"{fc['p50']:.0f}", "p10": f"{fc['p10']:.0f}", "p90": f"{fc['p90']:.0f}", "rush": f"{fc['rush']['start']}–{fc['rush']['end']}",
-               "similar": ", ".join(pd.Timestamp(s["date"]).strftime("%b %-d") for s in fc["similar_days"][:3]),
+        tom = {"p50": f"{fc['p50']:.0f}", "p10": f"{fc['p10']:.0f}", "p90": f"{fc['p90']:.0f}", "rush": f"{clock(fc['rush']['start'])}–{clock(fc['rush']['end'])}",
+               "similar": ", ".join(pd.Timestamp(s["date"]).strftime(f"%b %{NP}d") for s in fc["similar_days"][:3]),
                "par": p["newsvendor"]["chashu_portions"], "old_par": p["old_par"],
                "safety": (f"pause chashu on the apps at {p['safety_net']['pause_apps_at']} or {p['safety_net']['trigger']}, keep it for dine-in"
                           if p["safety_net"]["pause_apps_at"] else f"pause chashu on the apps {p['safety_net']['trigger']}"),
@@ -343,22 +361,75 @@ def report_context(res: dict, date: str) -> dict:
                  "mape": f"{fc['backtest_mape_60d']:.1%}", "naive": f"{fc['naive_mape_60d']:.1%}",
                  "source": "last night's stored forecast" if tc_.get("source") == "stored" else "a re-run with only last night's data"}
     lab = b["money"] if b and b["money"].get("labour_pct") is not None else None
-    return {"store_name": STORE_NAME, "date": date, "date_long": d.strftime("%A, %B %-d, %Y"), "dow_name": d.day_name(),
+    return {"store_name": STORE_NAME, "date": date, "date_long": d.strftime(f"%A, %B %{NP}d, %Y"), "dow_name": d.day_name(),
             "headline": headline, "summary": summary, "kpis": kpis, "attention": attention,
             "curve_svg": curve_svg(today_curve, usual_curve) if a else "", "channels": a["explain"]["channel"] if a else [],
             "context_line": context_line, "payouts": payouts,
             "cash": b["cash"] if b and b["cash"].get("difference") is not None else None,
             "labour_line": f"{lab['labour_hours']:.0f} hours, ${lab['labour_cost']:,.0f} ({lab['labour_pct']:.1%} of net sales)" if lab else "n/a",
-            "disputes": disputes, "tomorrow": tom, "check": check, "generated": pd.Timestamp(res["as_of"]).strftime("%b %-d %-I:%M %p"), "rebuilt": None,
+            "disputes": disputes, "tomorrow": tom, "check": check, "generated": pd.Timestamp(res["as_of"]).strftime(f"%b %{NP}d %{NP}I:%M %p"), "rebuilt": None,
             "closed_day": res.get("closed_day", False)}
+
+
+def night_facts(res: dict) -> dict:
+    """One line per night for the Reports list: what the night was and what Gondola did about it."""
+    b, a = res.get("books") or {}, res.get("analyst") or {}
+    money = b.get("money") or {}
+    fnd = res.get("findings") or []
+
+    def sent(x):
+        st_ = x.get("original_status") if x.get("status") == "duplicate_suppressed" else x.get("status")
+        return x.get("channel", "sms") == "sms" and st_ in ("sent", "dry_run")
+    return {"net_sales": money.get("net_sales"), "orders": money.get("orders"),
+            "vs_usual_pct": ((a.get("compare") or {}).get("net_sales") or {}).get("change_pct"),
+            "urgent": sum(1 for f in fnd if f.get("urgency") == "urgent"),
+            "texted": any(sent(x) for x in res.get("alerts") or []),
+            "recoverable_usd": round(sum(f.get("recoverable_usd") or 0 for f in fnd if f.get("kind") == "payout_short"), 2),
+            "closed_day": bool(res.get("closed_day"))}
 
 
 # ------------------------------------------------------------------ coordinator
 def run_close(date: str, db: Path | str = ROOT / "data" / "gondola.duckdb", as_of: datetime | None = None,
               fail: set | None = None, force: bool = False, notifier: sentinel.Notifier | None = None,
               bucket: Bucket | None = None, render: bool = True, approve_plan: bool = True,
-              executor: guard.Executor | None = None, portion_counts: dict | None = None) -> dict:
-    """portion_counts: what the manager confirmed is left of each limited item at close, e.g. {"chashu": 18}."""
+              executor: guard.Executor | None = None, portion_counts: dict | None = None, on_event=None,
+              agent_model=None) -> dict:
+    """portion_counts: what the manager confirmed is left of each limited item at close, e.g. {"chashu": 18}.
+    on_event(name, payload): optional progress callback (steps, findings, agent events).
+    agent_model: run the ADK agent graph for wording with this model (name or BaseLlm). None -> agent mode only if
+    GONDOLA_AGENTS=adk and a model key are set (agents.adk_graph.configured_model); False -> never."""
+    global _EMIT
+    _EMIT = on_event
+    try:
+        return _run_close(date, db, as_of, fail, force, notifier, bucket, render, approve_plan, executor, portion_counts,
+                          agent_model)
+    finally:
+        _EMIT = None
+
+
+def _agent_wording(res: dict, date: str, agent_model) -> dict | None:
+    """Agent mode: the ADK Close Coordinator graph writes the explanations on top of the pipeline's numbers.
+    Fails soft: any error leaves the template wording in place."""
+    if agent_model is False or res.get("closed_day"):
+        return None
+    try:
+        from .agents import adk_graph
+        model = agent_model if agent_model is not None else adk_graph.configured_model()
+        if model is None:
+            return None
+        t0 = time.perf_counter()
+        _emit("agent", {"agent": "close_coordinator", "status": "running"})
+        out = adk_graph.run_close_graph(res, date, model=model, db=res["db"], on_event=_emit)
+        out["seconds"] = round(time.perf_counter() - t0, 2)
+        _emit("agent", {"agent": "close_coordinator", "status": "done", "seconds": out["seconds"]})
+        return out
+    except Exception as e:  # noqa: BLE001
+        _emit("agent", {"agent": "close_coordinator", "status": "failed", "message": str(e)[:200]})
+        return {"mode": "adk", "error": str(e)[:500], "outputs": {}}
+
+
+def _run_close(date, db, as_of, fail, force, notifier, bucket, render, approve_plan, executor, portion_counts,
+               agent_model=None) -> dict:
     fail = fail or set()
     state = _load_state()
     if date in state and state[date].get("status") in ("done", "partial", "closed") and not force:
@@ -394,19 +465,18 @@ def run_close(date: str, db: Path | str = ROOT / "data" / "gondola.duckdb", as_o
                  FROM orders WHERE channel='doordash' AND business_date BETWEEN ? AND ?""",
                [(pd.Timestamp(date) - pd.Timedelta(days=7)).date(), (pd.Timestamp(date) - pd.Timedelta(days=1)).date()])
     res["prev_cancel_rate"] = float(w2.c[0] / w2.n[0]) if w2.n[0] else 0.0
-    canc = st.df("""SELECT MIN(created_at) first_c, MAX(created_at) last_c, COUNT(*) n FROM orders
-                    WHERE business_date = ? AND cancel_reason = 'item_unavailable'""", [date])
-    if canc.n[0] > 0:
-        last_sale = st.df("""SELECT MAX(o.created_at) t FROM orders o JOIN order_lines l USING(order_id) JOIN menu m ON m.item=l.item
-                             WHERE o.business_date = ? AND o.status='completed' AND m.chashu_portions > 0 AND o.created_at <= ?""",
-                          [date, canc.first_c[0]]).t[0]
-        t_so = pd.Timestamp(last_sale if last_sale is not None else canc.first_c[0])
-        res["sold_out"] = {"at": t_so.strftime("%-I:%M %p"), "app_cancels": int(canc.n[0]),
-                           "minutes_live": int((pd.Timestamp(canc.last_c[0]) - t_so).total_seconds() // 60) + 1}
+    so = stock.sold_out_summary(st, date)
+    if so:
+        res["sold_out"] = so
     res["cross_check"] = cross_check(res)
     res["findings"] = findings_from(res, date)
+    for f in res["findings"]:
+        _emit("finding", {"kind": f.get("kind"), "title": f.get("title") or f.get("kind"),
+                          "urgency": sentinel.score_urgency(f)})
 
-    notifier = notifier or sentinel.Notifier()
+    res["agents"] = _agent_wording(res, date, agent_model)  # None in offline mode
+
+    notifier = notifier or sentinel.Notifier(outbox=OUT / "outbox.jsonl")
     alerts = []
     def do_sentinel():
         urgent = []
@@ -416,11 +486,11 @@ def run_close(date: str, db: Path | str = ROOT / "data" / "gondola.duckdb", as_o
             if tier == sentinel.URGENT:
                 urgent.append(f)
         if urgent:
-            body = sentinel.bundle_sms([sentinel.short_text(f) for f in urgent], pd.Timestamp(date).strftime("%a %b %-d"))
+            body = sentinel.bundle_sms([sentinel.short_text(f) for f in urgent], pd.Timestamp(date).strftime(f"%a %b %{NP}d"))
             g = check_numbers(body, [urgent])
             res["guardrail_sms"] = g
             if not g["ok"]:  # never send a number we can't trace to a tool result
-                body = sentinel.bundle_sms([f.get("title", f["kind"]) for f in urgent], pd.Timestamp(date).strftime("%a %b %-d"))
+                body = sentinel.bundle_sms([f.get("title", f["kind"]) for f in urgent], pd.Timestamp(date).strftime(f"%a %b %{NP}d"))
             alerts.append(notifier.send_sms(f"close-{STORE_ID}-{date}", body, as_of))
         failed = [s["step"] for s in log if s["status"] == "failed" and not res["closed_day"]]
         if failed:
@@ -433,15 +503,25 @@ def run_close(date: str, db: Path | str = ROOT / "data" / "gondola.duckdb", as_o
     def do_report():
         ctx = report_context(res, date)
         srcs = [res.get(k) for k in ("books", "analyst", "demand", "plan", "findings", "stock", "older_recoverable_usd")]
+        ag = res.get("agents") or {}
+        agent_summary = (ag.get("outputs") or {}).get("report")
+        if agent_summary and not ag.get("guardrail_blocked", {}).get("report"):
+            g = check_numbers(agent_summary, srcs)  # second check, against the pipeline's own numbers
+            ag["report_check"] = g
+            if g["ok"]:
+                ctx["summary_template"], ctx["summary"], ctx["wording"] = ctx["summary"], agent_summary, "agents"
         res["guardrail_report"] = check_numbers(ctx["summary"] + " " + " ".join(ctx["attention"]), srcs)
+        ctx["meta"] = night_facts(res)  # the Reports list reads these from findings.json (kept 365 days)
         r = render_report(ctx, OUT / "reports", f"{date}") if render else {"pdf": None}
         if render:
-            (bucket or Bucket()).put_daily(date, Path(r["pdf"]), OUT / "reports" / f"{date}.findings.json", created=as_of)
+            (bucket or Bucket(OUT / "bucket")).put_daily(date, Path(r["pdf"]), OUT / "reports" / f"{date}.findings.json", created=as_of,
+                                                         html=Path(r["html"]))
             card = (res.get("plan") or {}).get("card", [])
-            card_txt = " ".join(f"Tomorrow's card: make {c['prep']} {c['item'].lower()}, pause on DoorDash ~{c['pause_at']['doordash'] or c['pause_if_busy']['doordash'] or 'not needed'}"
+            card_txt = " ".join(f"Tomorrow's card: make {c['prep']} {c['item'].lower()}, pause on DoorDash ~{clock(c['pause_at']['doordash'] or c['pause_if_busy']['doordash']) or 'not needed'}"
                                 f"{' if it is busy' if not c['pause_at']['doordash'] else ''}. "
                                 "Approve in Gondola." for c in card)
-            notifier.send_email(f"email-{date}", f"Daily Close Report · {pd.Timestamp(date):%a %b %-d}", ctx["summary"] + " " + card_txt, r["pdf"], as_of)
+            notifier.send_email(f"email-{date}", f"Daily Close Report · {pd.Timestamp(date):%a %b %{NP}d}", ctx["summary"] + " " + card_txt, r["pdf"], as_of,
+                                stored_attachment=rel(r["pdf"], OUT))
         return {**r, "context": ctx}
     res["report"] = _timed("report", do_report, log, fail)
 
@@ -457,14 +537,19 @@ def run_close(date: str, db: Path | str = ROOT / "data" / "gondola.duckdb", as_o
     failed = [s_ for s_ in log if s_["status"] == "failed"]
     res["status"] = ("closed" if res["closed_day"] else "done") if not failed and not res["cross_check"] else "partial"
     res["seconds"] = round(time.perf_counter() - t0, 2)
+    res["run_id"] = f"{date}-{datetime.now():%Y%m%dT%H%M%S%f}"  # approvals are tied to one run of the close
     for pair in (res["books"] or {}).get("verified_pairs", []):
         if pair not in vb or vb[pair] >= date:
             vb[pair] = date
     state["_verified_by"] = vb
     state[date] = {"date": date, "status": res["status"], "seconds": res["seconds"], "log": log, "findings": res["findings"],
-                   "cross_check": res["cross_check"], "pdf": (res["report"] or {}).get("pdf")}
+                   "cross_check": res["cross_check"], "pdf": rel((res["report"] or {}).get("pdf"), OUT)}
     _save_state(state)
-    (OUT / f"close_{date}.json").write_text(json.dumps({k: v for k, v in res.items() if k != "report"}, default=str, indent=1))
+    saved = {k: v for k, v in res.items() if k != "report"}
+    saved["db"] = rel(db)  # never store absolute machine paths
+    if saved.get("agents"):
+        saved["agents"] = {k: v for k, v in saved["agents"].items() if k != "facts"}
+    (OUT / f"close_{date}.json").write_text(json.dumps(saved, default=str, indent=1), encoding="utf-8")
     return res
 
 

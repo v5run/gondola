@@ -14,8 +14,50 @@ from dataclasses import dataclass, field
 
 import pandas as pd
 
+from .. import NP, clock  # noqa: F401  (clock re-exported)
 from ..metrics import DEFS, Store
-from ..tools import analyst, demand
+from ..tools import analyst, demand, stock
+
+SELLOUT = re.compile(r"\b(run|ran|running|sell|sold|selling) ?(out|-out)\b|\bsellout\b|\b86(ed|'d)?\b")
+APP_NAME = {"doordash": "DoorDash", "ubereats": "Uber Eats", "grubhub": "Grubhub"}
+
+
+def _close_record(date: str) -> dict | None:
+    import json
+    from .. import pipeline
+    f = pipeline.OUT / f"close_{date}.json"
+    try:
+        return json.loads(f.read_text(encoding="utf-8")) if f.exists() else None
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def _sellout_answer(store: Store, d: pd.Timestamp, label: str) -> "Answer":
+    ds = str(d.date())
+    so = stock.sold_out_summary(store, ds)
+    calls = [("sold_out_summary", ds)]
+    if not so:
+        prep = stock.chashu_today(store, ds)
+        txt = f"Chashu didn't sell out {label}" + (f": {prep['used']:.0f} of {prep['par']} portions were used." if prep else ".")
+        return Answer(txt, calls, {"sold_out": None, "prep": prep})
+    apps = ", ".join(f"{APP_NAME.get(k, k)} {v}" for k, v in so["by_channel"].items())
+    txt = (f"Chashu sold out at {so['at'].lower()} {label}: you prepped {so['prepped']} portions and used {so['used']:.0f}. "
+           f"It stayed live on the apps for {so['minutes_live']} more minutes, so {so['app_cancels']} app orders were cancelled "
+           f"({apps}), about {so['portions_missed']:.1f} portions of demand we couldn't serve.")
+    rec = _close_record(ds)
+    card = ((rec or {}).get("plan") or {}).get("card") or []
+    if card:
+        c = card[0]
+        pa, pb = c.get("pause_at") or {}, c.get("pause_if_busy") or {}
+        when = pa if any(pa.values()) else pb
+        pauses = ", ".join(f"{APP_NAME[k]} at {clock(v)}" for k, v in sorted(when.items(), key=lambda kv: kv[1] or "") if v)
+        txt += (f" Tomorrow's card: make {c['prep']} chashu ({c['on_hand']:.0f} on hand)"
+                + (f"; {'pause it' if any(pa.values()) else 'if it gets busy, pause it'} on {pauses}, keeping it for dine-in" if pauses else "")
+                + (f"; recount when about {c['recount_at']} portions are left" if c.get("recount_at") else "") + ".")
+        calls.append(("close_card", ds))
+    elif rec is None:
+        txt += " Tap Close shift to get tomorrow's prep card."
+    return Answer(txt, calls, {"sold_out": so, "card": card})
 
 METRIC_WORDS = [  # checked in order: specific before general
     ("avoidable_cancellations", ["avoidable", "store-caused", "sold-out cancel", "item unavailable"]),
@@ -88,7 +130,7 @@ def _dates(ql: str, today: pd.Timestamp, cal: pd.DataFrame):
     if re.search(r"\b(today|tonight)\b", ql):
         return today, today, "today"
     if "this time last year" in ql or "same day last year" in ql:
-        d = today - pd.DateOffset(years=1); return d, d, d.strftime("%b %-d, %Y")
+        d = today - pd.DateOffset(years=1); return d, d, d.strftime(f"%b %{NP}d, %Y")
     m = re.search(r"\b(?:last|past) (\d+|two|three|four) (day|week)s?\b", ql)
     if m:
         n = {"two": 2, "three": 3, "four": 4}.get(m.group(1)) or int(m.group(1))
@@ -106,13 +148,13 @@ def _dates(ql: str, today: pd.Timestamp, cal: pd.DataFrame):
         return today - pd.Timedelta(days=364), today, "the last 365 days"
     m = re.search(r"\b(20\d\d)-(\d\d)-(\d\d)\b", ql)
     if m:
-        d = _day(int(m.group(1)), int(m.group(2)), int(m.group(3))); return d, d, d.strftime("%b %-d, %Y")
+        d = _day(int(m.group(1)), int(m.group(2)), int(m.group(3))); return d, d, d.strftime(f"%b %{NP}d, %Y")
     m = re.search(r"\b(\d{1,2})/(\d{1,2})(?:/(\d{2,4}))?\b", ql)
     if m:
         mo, dy = int(m.group(1)), int(m.group(2))
         y = int(m.group(3)) if m.group(3) else _month_year(mo, None, today)
         y = y + 2000 if y < 100 else y
-        d = _day(y, mo, dy); return d, d, d.strftime("%b %-d, %Y")
+        d = _day(y, mo, dy); return d, d, d.strftime(f"%b %{NP}d, %Y")
     for h, md in HOLIDAYS.items():
         if h in ql:
             if md:
@@ -123,12 +165,12 @@ def _dates(ql: str, today: pd.Timestamp, cal: pd.DataFrame):
                 if hit.empty:
                     raise Unclear(f"I don't have {h.title()} in the calendar for the last year.")
                 d = pd.Timestamp(hit.date.iloc[-1])
-            return d, d, d.strftime("%b %-d, %Y")
+            return d, d, d.strftime(f"%b %{NP}d, %Y")
     for i, name in enumerate(MONTHS):
         m = re.search(rf"\b{name[:3]}[a-z]*\.? (\d{{1,2}})(?:st|nd|rd|th)?\b(?:,? (20\d\d))?", ql)
         if m:
             y = int(m.group(2)) if m.group(2) else _month_year(i + 1, year, today)
-            d = _day(y, i + 1, int(m.group(1))); return d, d, d.strftime("%b %-d, %Y")
+            d = _day(y, i + 1, int(m.group(1))); return d, d, d.strftime(f"%b %{NP}d, %Y")
     for i, name in enumerate(MONTHS):
         if re.search(rf"\b{name}\b", ql) and not (name == "may" and re.search(r"\bmay (we|i|you|have)\b", ql)):
             y = _month_year(i + 1, year, today)
@@ -138,11 +180,11 @@ def _dates(ql: str, today: pd.Timestamp, cal: pd.DataFrame):
     if m:
         dy = int(m.group(1))
         base = today if dy <= today.day else (today.replace(day=1) - pd.Timedelta(days=1))
-        d = _day(base.year, base.month, dy); return d, d, d.strftime("%b %-d, %Y")
+        d = _day(base.year, base.month, dy); return d, d, d.strftime(f"%b %{NP}d, %Y")
     for i, name in enumerate(DOWS):
         if re.search(rf"\b{name}\b", ql):
             back = (today.dayofweek - i) % 7 or 7
-            d = today - pd.Timedelta(days=back); return d, d, f"{name.title()} {d:%b %-d}"
+            d = today - pd.Timedelta(days=back); return d, d, f"{name.title()} {d:%b %{NP}d}"
     return None
 
 
@@ -208,12 +250,12 @@ def _ask(store: Store, question: str, today: str | None) -> Answer:
             or re.search(r"\b(what'?s|whats) the forecast\b|\bforecast for\b", ql):
         target = str((t + pd.Timedelta(days=1)).date())
         fc = demand.run_forecast(store, target)
-        return Answer(f"Tomorrow ({pd.Timestamp(target):%a %b %-d}): about {fc['p50']:.0f} orders (likely {fc['p10']:.0f}–{fc['p90']:.0f}), "
+        return Answer(f"Tomorrow ({pd.Timestamp(target):%a %b %{NP}d}): about {fc['p50']:.0f} orders (likely {fc['p10']:.0f}–{fc['p90']:.0f}), "
                       f"rush {fc['rush']['start']}–{fc['rush']['end']}.", [("run_forecast", target)], fc)
     if "similar" in ql or "days like" in ql or "like tomorrow" in ql:
         target = str((t + pd.Timedelta(days=1)).date()) if "tomorrow" in ql else str((dr[0] if dr else t).date())
         sims = analyst.find_similar_days(store, target, 5)
-        return Answer("Most similar past days: " + "; ".join(f"{pd.Timestamp(x['date']):%a %b %-d} ({x['orders']} orders, "
+        return Answer("Most similar past days: " + "; ".join(f"{pd.Timestamp(x['date']):%a %b %{NP}d} ({x['orders']} orders, "
                       f"{x['why'] or 'closest overall'})" for x in sims), [("find_similar_days", target)], sims)
     if "forecast" in ql:
         if dr and dr[0] == dr[1] and dr[2] != "today":
@@ -233,16 +275,20 @@ def _ask(store: Store, question: str, today: str | None) -> Answer:
         return Answer(f"Tomorrow's rush: {fc['rush']['start']}–{fc['rush']['end']}, peaking near {fc['rush']['peak_per_15min']:.0f} "
                       f"orders per 15 minutes.", [("run_forecast", target)], fc["rush"])
 
+    if SELLOUT.search(ql):
+        d = dr[0] if dr and dr[0] == dr[1] else t
+        return _sellout_answer(store, d, "tonight" if d == t else f"{d:%a %b %{NP}d}")
+
     if dr is None:
-        if re.search(r"(how'd we do|how did we do)", ql):
-            dr = (t, t, "today")
+        if re.search(r"(how'd we do|how did we do)", ql) or ql.startswith("why") or "what happened" in ql:
+            dr = (t, t, "today")  # a question on the close night is about tonight
         else:
             raise Unclear("Which day or period? For example 'yesterday', 'last week' or 'Oct 3'.")
     s, e, label = dr
     if e < first or s > t:
-        raise Unclear(f"I only have data from {first:%b %-d, %Y} to {t:%b %-d, %Y}.")
+        raise Unclear(f"I only have data from {first:%b %{NP}d, %Y} to {t:%b %{NP}d, %Y}.")
     if s < first:
-        s, label = first, f"{label} (data starts {first:%b %-d, %Y})"
+        s, label = first, f"{label} (data starts {first:%b %{NP}d, %Y})"
 
     if ql.startswith("why") or "what happened" in ql or "explain" in ql:
         x = analyst.explain_change(store, str(s.date()))
@@ -299,7 +345,7 @@ def _ask(store: Store, question: str, today: str | None) -> Answer:
         top = re.search(r"\b(best|busiest)\b", ql) is not None
         r = df.nlargest(1, "value") if top else df.nsmallest(1, "value")
         k = pd.Timestamp(r.key.iloc[0])
-        return Answer(f"{'Best' if top else 'Slowest'} day in {label}: {k:%a %b %-d} with {_fmt(m2, r.value.iloc[0])}.",
+        return Answer(f"{'Best' if top else 'Slowest'} day in {label}: {k:%a %b %{NP}d} with {_fmt(m2, r.value.iloc[0])}.",
                       [("query_metric", m2, label)], r.to_dict("records"))
     if re.search(r"\b(compare|compared|vs|versus)\b", ql):
         c = analyst.compare_periods(store, str(s.date()))

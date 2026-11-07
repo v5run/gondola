@@ -1,49 +1,824 @@
 {
  "_verified_by": {
-  "2026-10-22|doordash": "2026-11-05",
-  "2026-10-22|grubhub": "2026-11-05",
-  "2026-10-22|ubereats": "2026-11-05",
-  "2026-10-23|doordash": "2026-11-05",
-  "2026-10-23|grubhub": "2026-11-05",
-  "2026-10-23|ubereats": "2026-11-05",
-  "2026-10-24|doordash": "2026-11-05",
-  "2026-10-24|grubhub": "2026-11-05",
-  "2026-10-24|ubereats": "2026-11-05",
-  "2026-10-25|doordash": "2026-11-05",
-  "2026-10-25|grubhub": "2026-11-05",
-  "2026-10-25|ubereats": "2026-11-05",
-  "2026-10-26|doordash": "2026-11-05",
-  "2026-10-26|grubhub": "2026-11-05",
-  "2026-10-26|ubereats": "2026-11-05",
-  "2026-10-27|doordash": "2026-11-05",
-  "2026-10-27|grubhub": "2026-11-05",
-  "2026-10-27|ubereats": "2026-11-05",
-  "2026-10-28|doordash": "2026-11-05",
-  "2026-10-28|grubhub": "2026-11-05",
-  "2026-10-28|ubereats": "2026-11-05",
-  "2026-10-29|doordash": "2026-11-05",
-  "2026-10-29|grubhub": "2026-11-05",
-  "2026-10-29|ubereats": "2026-11-05",
-  "2026-10-30|doordash": "2026-11-05",
-  "2026-10-30|grubhub": "2026-11-05",
-  "2026-10-30|ubereats": "2026-11-05",
-  "2026-10-31|doordash": "2026-11-05",
-  "2026-10-31|grubhub": "2026-11-05",
-  "2026-10-31|ubereats": "2026-11-05",
-  "2026-11-01|doordash": "2026-11-05",
-  "2026-11-01|grubhub": "2026-11-05",
-  "2026-11-01|ubereats": "2026-11-05",
-  "2026-11-02|doordash": "2026-11-05",
-  "2026-11-02|grubhub": "2026-11-05",
+  "2026-08-09|doordash": "2026-08-23",
+  "2026-08-09|grubhub": "2026-08-23",
+  "2026-08-09|ubereats": "2026-08-23",
+  "2026-08-10|doordash": "2026-08-23",
+  "2026-08-10|grubhub": "2026-08-23",
+  "2026-08-10|ubereats": "2026-08-23",
+  "2026-08-11|doordash": "2026-08-23",
+  "2026-08-11|grubhub": "2026-08-23",
+  "2026-08-11|ubereats": "2026-08-23",
+  "2026-08-12|doordash": "2026-08-23",
+  "2026-08-12|grubhub": "2026-08-23",
+  "2026-08-12|ubereats": "2026-08-23",
+  "2026-08-13|doordash": "2026-08-23",
+  "2026-08-13|grubhub": "2026-08-23",
+  "2026-08-13|ubereats": "2026-08-23",
+  "2026-08-14|doordash": "2026-08-23",
+  "2026-08-14|grubhub": "2026-08-23",
+  "2026-08-14|ubereats": "2026-08-23",
+  "2026-08-15|doordash": "2026-08-23",
+  "2026-08-15|grubhub": "2026-08-23",
+  "2026-08-15|ubereats": "2026-08-23",
+  "2026-08-16|doordash": "2026-08-23",
+  "2026-08-16|grubhub": "2026-08-23",
+  "2026-08-16|ubereats": "2026-08-23",
+  "2026-08-17|doordash": "2026-08-23",
+  "2026-08-17|grubhub": "2026-08-23",
+  "2026-08-17|ubereats": "2026-08-23",
+  "2026-08-18|doordash": "2026-08-23",
+  "2026-08-18|grubhub": "2026-08-23",
+  "2026-08-18|ubereats": "2026-08-23",
+  "2026-08-19|doordash": "2026-08-23",
+  "2026-08-19|grubhub": "2026-08-23",
+  "2026-08-19|ubereats": "2026-08-23",
+  "2026-08-20|doordash": "2026-08-23",
+  "2026-08-20|grubhub": "2026-08-23",
+  "2026-08-20|ubereats": "2026-08-23",
+  "2026-08-21|doordash": "2026-08-23",
+  "2026-08-21|grubhub": "2026-08-23",
+  "2026-08-22|doordash": "2026-08-23",
+  "2026-08-21|ubereats": "2026-08-24",
+  "2026-08-22|grubhub": "2026-08-24",
+  "2026-08-23|doordash": "2026-08-24",
+  "2026-08-22|ubereats": "2026-08-25",
+  "2026-08-23|grubhub": "2026-08-25",
+  "2026-08-24|doordash": "2026-08-25",
+  "2026-08-23|ubereats": "2026-08-26",
+  "2026-08-24|grubhub": "2026-08-26",
+  "2026-08-25|doordash": "2026-08-26",
+  "2026-08-24|ubereats": "2026-08-27",
+  "2026-08-25|grubhub": "2026-08-27",
+  "2026-08-26|doordash": "2026-08-27",
+  "2026-08-25|ubereats": "2026-08-28",
+  "2026-08-26|grubhub": "2026-08-28",
+  "2026-08-27|doordash": "2026-08-28",
+  "2026-08-26|ubereats": "2026-08-29",
+  "2026-08-27|grubhub": "2026-08-29",
+  "2026-08-28|doordash": "2026-08-29",
+  "2026-08-27|ubereats": "2026-08-30",
+  "2026-08-28|grubhub": "2026-08-30",
+  "2026-08-29|doordash": "2026-08-30",
+  "2026-08-28|ubereats": "2026-08-31",
+  "2026-08-29|grubhub": "2026-08-31",
+  "2026-08-30|doordash": "2026-08-31",
+  "2026-08-29|ubereats": "2026-09-01",
+  "2026-08-30|grubhub": "2026-09-01",
+  "2026-08-31|doordash": "2026-09-01",
+  "2026-08-30|ubereats": "2026-09-02",
+  "2026-08-31|grubhub": "2026-09-02",
+  "2026-09-01|doordash": "2026-09-02",
+  "2026-08-31|ubereats": "2026-09-03",
+  "2026-09-01|grubhub": "2026-09-03",
+  "2026-09-02|doordash": "2026-09-03",
+  "2026-09-01|ubereats": "2026-09-04",
+  "2026-09-02|grubhub": "2026-09-04",
+  "2026-09-03|doordash": "2026-09-04",
+  "2026-09-02|ubereats": "2026-09-05",
+  "2026-09-03|grubhub": "2026-09-05",
+  "2026-09-04|doordash": "2026-09-05",
+  "2026-09-03|ubereats": "2026-09-06",
+  "2026-09-04|grubhub": "2026-09-06",
+  "2026-09-05|doordash": "2026-09-06",
+  "2026-09-04|ubereats": "2026-09-07",
+  "2026-09-05|grubhub": "2026-09-07",
+  "2026-09-06|doordash": "2026-09-07",
+  "2026-09-05|ubereats": "2026-09-08",
+  "2026-09-06|grubhub": "2026-09-08",
+  "2026-09-07|doordash": "2026-09-08",
+  "2026-09-06|ubereats": "2026-09-09",
+  "2026-09-07|grubhub": "2026-09-09",
+  "2026-09-08|doordash": "2026-09-09",
+  "2026-09-07|ubereats": "2026-09-10",
+  "2026-09-08|grubhub": "2026-09-10",
+  "2026-09-09|doordash": "2026-09-10",
+  "2026-09-08|ubereats": "2026-09-11",
+  "2026-09-09|grubhub": "2026-09-11",
+  "2026-09-10|doordash": "2026-09-11",
+  "2026-09-09|ubereats": "2026-09-12",
+  "2026-09-10|grubhub": "2026-09-12",
+  "2026-09-11|doordash": "2026-09-12",
+  "2026-09-10|ubereats": "2026-09-13",
+  "2026-09-11|grubhub": "2026-09-13",
+  "2026-09-12|doordash": "2026-09-13",
+  "2026-09-11|ubereats": "2026-09-14",
+  "2026-09-12|grubhub": "2026-09-14",
+  "2026-09-13|doordash": "2026-09-14",
+  "2026-09-12|ubereats": "2026-09-15",
+  "2026-09-13|grubhub": "2026-09-15",
+  "2026-09-14|doordash": "2026-09-15",
+  "2026-09-13|ubereats": "2026-09-16",
+  "2026-09-14|grubhub": "2026-09-16",
+  "2026-09-15|doordash": "2026-09-16",
+  "2026-09-14|ubereats": "2026-09-17",
+  "2026-09-15|grubhub": "2026-09-17",
+  "2026-09-16|doordash": "2026-09-17",
+  "2026-09-15|ubereats": "2026-09-18",
+  "2026-09-16|grubhub": "2026-09-18",
+  "2026-09-17|doordash": "2026-09-18",
+  "2026-09-16|ubereats": "2026-09-19",
+  "2026-09-17|grubhub": "2026-09-19",
+  "2026-09-18|doordash": "2026-09-19",
+  "2026-09-17|ubereats": "2026-09-20",
+  "2026-09-18|grubhub": "2026-09-20",
+  "2026-09-19|doordash": "2026-09-20",
+  "2026-09-18|ubereats": "2026-09-21",
+  "2026-09-19|grubhub": "2026-09-21",
+  "2026-09-20|doordash": "2026-09-21",
+  "2026-09-19|ubereats": "2026-09-22",
+  "2026-09-20|grubhub": "2026-09-22",
+  "2026-09-21|doordash": "2026-09-22",
+  "2026-09-20|ubereats": "2026-09-23",
+  "2026-09-21|grubhub": "2026-09-23",
+  "2026-09-22|doordash": "2026-09-23",
+  "2026-09-21|ubereats": "2026-09-24",
+  "2026-09-22|grubhub": "2026-09-24",
+  "2026-09-23|doordash": "2026-09-24",
+  "2026-09-22|ubereats": "2026-09-25",
+  "2026-09-23|grubhub": "2026-09-25",
+  "2026-09-24|doordash": "2026-09-25",
+  "2026-09-23|ubereats": "2026-09-26",
+  "2026-09-24|grubhub": "2026-09-26",
+  "2026-09-25|doordash": "2026-09-26",
+  "2026-09-24|ubereats": "2026-09-27",
+  "2026-09-25|grubhub": "2026-09-27",
+  "2026-09-26|doordash": "2026-09-27",
+  "2026-09-25|ubereats": "2026-09-28",
+  "2026-09-26|grubhub": "2026-09-28",
+  "2026-09-27|doordash": "2026-09-28",
+  "2026-09-26|ubereats": "2026-09-29",
+  "2026-09-27|grubhub": "2026-09-29",
+  "2026-09-28|doordash": "2026-09-29",
+  "2026-09-27|ubereats": "2026-09-30",
+  "2026-09-28|grubhub": "2026-09-30",
+  "2026-09-29|doordash": "2026-09-30",
+  "2026-09-28|ubereats": "2026-10-01",
+  "2026-09-29|grubhub": "2026-10-01",
+  "2026-09-30|doordash": "2026-10-01",
+  "2026-09-29|ubereats": "2026-10-02",
+  "2026-09-30|grubhub": "2026-10-02",
+  "2026-10-01|doordash": "2026-10-02",
+  "2026-09-30|ubereats": "2026-10-03",
+  "2026-10-01|grubhub": "2026-10-03",
+  "2026-10-02|doordash": "2026-10-03",
+  "2026-10-01|ubereats": "2026-10-04",
+  "2026-10-02|grubhub": "2026-10-04",
+  "2026-10-03|doordash": "2026-10-04",
+  "2026-10-02|ubereats": "2026-10-05",
+  "2026-10-03|grubhub": "2026-10-05",
+  "2026-10-04|doordash": "2026-10-05",
+  "2026-10-03|ubereats": "2026-10-06",
+  "2026-10-04|grubhub": "2026-10-06",
+  "2026-10-05|doordash": "2026-10-06",
+  "2026-10-04|ubereats": "2026-10-07",
+  "2026-10-05|grubhub": "2026-10-07",
+  "2026-10-06|doordash": "2026-10-07",
+  "2026-10-05|ubereats": "2026-10-08",
+  "2026-10-06|grubhub": "2026-10-08",
+  "2026-10-07|doordash": "2026-10-08",
+  "2026-10-06|ubereats": "2026-10-09",
+  "2026-10-07|grubhub": "2026-10-09",
+  "2026-10-08|doordash": "2026-10-09",
+  "2026-10-07|ubereats": "2026-10-10",
+  "2026-10-08|grubhub": "2026-10-10",
+  "2026-10-09|doordash": "2026-10-10",
+  "2026-10-08|ubereats": "2026-10-11",
+  "2026-10-09|grubhub": "2026-10-11",
+  "2026-10-10|doordash": "2026-10-11",
+  "2026-10-09|ubereats": "2026-10-12",
+  "2026-10-10|grubhub": "2026-10-12",
+  "2026-10-11|doordash": "2026-10-12",
+  "2026-10-10|ubereats": "2026-10-13",
+  "2026-10-11|grubhub": "2026-10-13",
+  "2026-10-12|doordash": "2026-10-13",
+  "2026-10-11|ubereats": "2026-10-14",
+  "2026-10-12|grubhub": "2026-10-14",
+  "2026-10-13|doordash": "2026-10-14",
+  "2026-10-12|ubereats": "2026-10-15",
+  "2026-10-13|grubhub": "2026-10-15",
+  "2026-10-14|doordash": "2026-10-15",
+  "2026-10-13|ubereats": "2026-10-16",
+  "2026-10-14|grubhub": "2026-10-16",
+  "2026-10-15|doordash": "2026-10-16",
+  "2026-10-14|ubereats": "2026-10-17",
+  "2026-10-15|grubhub": "2026-10-17",
+  "2026-10-16|doordash": "2026-10-17",
+  "2026-10-15|ubereats": "2026-10-18",
+  "2026-10-16|grubhub": "2026-10-18",
+  "2026-10-17|doordash": "2026-10-18",
+  "2026-10-16|ubereats": "2026-10-19",
+  "2026-10-17|grubhub": "2026-10-19",
+  "2026-10-18|doordash": "2026-10-19",
+  "2026-10-17|ubereats": "2026-10-20",
+  "2026-10-18|grubhub": "2026-10-20",
+  "2026-10-19|doordash": "2026-10-20",
+  "2026-10-18|ubereats": "2026-10-21",
+  "2026-10-19|grubhub": "2026-10-21",
+  "2026-10-20|doordash": "2026-10-21",
+  "2026-10-19|ubereats": "2026-10-22",
+  "2026-10-20|grubhub": "2026-10-22",
+  "2026-10-21|doordash": "2026-10-22",
+  "2026-10-20|ubereats": "2026-10-23",
+  "2026-10-21|grubhub": "2026-10-23",
+  "2026-10-22|doordash": "2026-10-23",
+  "2026-10-21|ubereats": "2026-10-24",
+  "2026-10-22|grubhub": "2026-10-24",
+  "2026-10-23|doordash": "2026-10-24",
+  "2026-10-22|ubereats": "2026-10-25",
+  "2026-10-23|grubhub": "2026-10-25",
+  "2026-10-24|doordash": "2026-10-25",
+  "2026-10-23|ubereats": "2026-10-26",
+  "2026-10-24|grubhub": "2026-10-26",
+  "2026-10-25|doordash": "2026-10-26",
+  "2026-10-24|ubereats": "2026-10-27",
+  "2026-10-25|grubhub": "2026-10-27",
+  "2026-10-26|doordash": "2026-10-27",
+  "2026-10-25|ubereats": "2026-10-28",
+  "2026-10-26|grubhub": "2026-10-28",
+  "2026-10-27|doordash": "2026-10-28",
+  "2026-10-26|ubereats": "2026-10-29",
+  "2026-10-27|grubhub": "2026-10-29",
+  "2026-10-28|doordash": "2026-10-29",
+  "2026-10-27|ubereats": "2026-10-30",
+  "2026-10-28|grubhub": "2026-10-30",
+  "2026-10-29|doordash": "2026-10-30",
+  "2026-10-28|ubereats": "2026-10-31",
+  "2026-10-29|grubhub": "2026-10-31",
+  "2026-10-30|doordash": "2026-10-31",
+  "2026-10-29|ubereats": "2026-11-01",
+  "2026-10-30|grubhub": "2026-11-01",
+  "2026-10-31|doordash": "2026-11-01",
+  "2026-10-30|ubereats": "2026-11-02",
+  "2026-10-31|grubhub": "2026-11-02",
+  "2026-11-01|doordash": "2026-11-02",
+  "2026-10-31|ubereats": "2026-11-03",
+  "2026-11-01|grubhub": "2026-11-03",
+  "2026-11-02|doordash": "2026-11-03",
+  "2026-11-01|ubereats": "2026-11-04",
+  "2026-11-02|grubhub": "2026-11-04",
+  "2026-11-03|doordash": "2026-11-04",
   "2026-11-02|ubereats": "2026-11-05",
-  "2026-11-03|doordash": "2026-11-05",
   "2026-11-03|grubhub": "2026-11-05",
   "2026-11-04|doordash": "2026-11-05"
  },
- "2026-11-05": {
-  "date": "2026-11-05",
+ "2026-08-23": {
+  "date": "2026-08-23",
   "status": "done",
-  "seconds": 1.75,
+  "seconds": 4.61,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.09
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 1.08
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 4.48
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": false,
+    "recoverable_usd": 47.17,
+    "for_date_iso": "2026-08-09",
+    "n_disputable": 2,
+    "for_date": "Sun Aug 9",
+    "impact_usd": 72.15,
+    "detail": "2 disputable charges, 1 valid-looking charge",
+    "title": "DoorDash short $72.15 for Sun Aug 9",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": false,
+    "recoverable_usd": 19.25,
+    "for_date_iso": "2026-08-09",
+    "n_disputable": 1,
+    "for_date": "Sun Aug 9",
+    "impact_usd": 38.5,
+    "detail": "1 disputable charge, 1 valid-looking charge",
+    "title": "Uber Eats short $38.50 for Sun Aug 9",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": false,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-08-09",
+    "n_disputable": 0,
+    "for_date": "Sun Aug 9",
+    "impact_usd": 9.9,
+    "detail": "1 valid-looking charge",
+    "title": "Grubhub short $9.90 for Sun Aug 9",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": false,
+    "recoverable_usd": 73.83,
+    "for_date_iso": "2026-08-10",
+    "n_disputable": 2,
+    "for_date": "Mon Aug 10",
+    "impact_usd": 73.79,
+    "detail": "2 missing orders",
+    "title": "DoorDash short $73.79 for Mon Aug 10",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": false,
+    "recoverable_usd": 26.4,
+    "for_date_iso": "2026-08-10",
+    "n_disputable": 1,
+    "for_date": "Mon Aug 10",
+    "impact_usd": 26.4,
+    "detail": "1 disputable charge",
+    "title": "Grubhub short $26.40 for Mon Aug 10",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": false,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-08-11",
+    "n_disputable": 0,
+    "for_date": "Tue Aug 11",
+    "impact_usd": 4.79,
+    "detail": "unexplained",
+    "title": "DoorDash short $4.79 for Tue Aug 11",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": false,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-08-11",
+    "n_disputable": 0,
+    "for_date": "Tue Aug 11",
+    "impact_usd": 19.25,
+    "detail": "1 valid-looking charge",
+    "title": "Grubhub short $19.25 for Tue Aug 11",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": false,
+    "recoverable_usd": 3.85,
+    "for_date_iso": "2026-08-12",
+    "n_disputable": 1,
+    "for_date": "Wed Aug 12",
+    "impact_usd": 23.1,
+    "detail": "1 disputable charge, 1 valid-looking charge",
+    "title": "Uber Eats short $23.10 for Wed Aug 12",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": false,
+    "recoverable_usd": 28.14,
+    "for_date_iso": "2026-08-13",
+    "n_disputable": 1,
+    "for_date": "Thu Aug 13",
+    "impact_usd": 28.07,
+    "detail": "1 disputable charge",
+    "title": "DoorDash short $28.07 for Thu Aug 13",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": false,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-08-13",
+    "n_disputable": 0,
+    "for_date": "Thu Aug 13",
+    "impact_usd": 17.05,
+    "detail": "1 valid-looking charge",
+    "title": "Uber Eats short $17.05 for Thu Aug 13",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": false,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-08-13",
+    "n_disputable": 0,
+    "for_date": "Thu Aug 13",
+    "impact_usd": 17.05,
+    "detail": "1 valid-looking charge",
+    "title": "Grubhub short $17.05 for Thu Aug 13",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": false,
+    "recoverable_usd": 44.55,
+    "for_date_iso": "2026-08-14",
+    "n_disputable": 3,
+    "for_date": "Fri Aug 14",
+    "impact_usd": 62.64,
+    "detail": "1 disputable charge, 2 missing orders, 1 valid-looking charge",
+    "title": "DoorDash short $62.64 for Fri Aug 14",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": false,
+    "recoverable_usd": 4.95,
+    "for_date_iso": "2026-08-14",
+    "n_disputable": 1,
+    "for_date": "Fri Aug 14",
+    "impact_usd": 7.43,
+    "detail": "1 disputable charge",
+    "title": "Uber Eats short $7.43 for Fri Aug 14",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": false,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-08-14",
+    "n_disputable": 0,
+    "for_date": "Fri Aug 14",
+    "impact_usd": 4.95,
+    "detail": "1 valid-looking charge",
+    "title": "Grubhub short $4.95 for Fri Aug 14",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": false,
+    "recoverable_usd": 18.7,
+    "for_date_iso": "2026-08-15",
+    "n_disputable": 1,
+    "for_date": "Sat Aug 15",
+    "impact_usd": 45.82,
+    "detail": "1 disputable charge, 1 valid-looking charge",
+    "title": "DoorDash short $45.82 for Sat Aug 15",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": false,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-08-15",
+    "n_disputable": 0,
+    "for_date": "Sat Aug 15",
+    "impact_usd": 3.85,
+    "detail": "1 valid-looking charge",
+    "title": "Uber Eats short $3.85 for Sat Aug 15",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": false,
+    "recoverable_usd": 9.9,
+    "for_date_iso": "2026-08-16",
+    "n_disputable": 1,
+    "for_date": "Sun Aug 16",
+    "impact_usd": 14.14,
+    "detail": "1 disputable charge",
+    "title": "DoorDash short $14.14 for Sun Aug 16",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": false,
+    "recoverable_usd": 20.16,
+    "for_date_iso": "2026-08-16",
+    "n_disputable": 1,
+    "for_date": "Sun Aug 16",
+    "impact_usd": 39.41,
+    "detail": "1 disputable charge, 1 valid-looking charge",
+    "title": "Uber Eats short $39.41 for Sun Aug 16",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": false,
+    "recoverable_usd": 22.0,
+    "for_date_iso": "2026-08-16",
+    "n_disputable": 1,
+    "for_date": "Sun Aug 16",
+    "impact_usd": 22.0,
+    "detail": "1 disputable charge",
+    "title": "Grubhub short $22.00 for Sun Aug 16",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": false,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-08-17",
+    "n_disputable": 0,
+    "for_date": "Mon Aug 17",
+    "impact_usd": 54.43,
+    "detail": "3 valid-looking charges",
+    "title": "DoorDash short $54.43 for Mon Aug 17",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": false,
+    "recoverable_usd": 9.35,
+    "for_date_iso": "2026-08-17",
+    "n_disputable": 1,
+    "for_date": "Mon Aug 17",
+    "impact_usd": 9.35,
+    "detail": "1 disputable charge",
+    "title": "Uber Eats short $9.35 for Mon Aug 17",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": false,
+    "recoverable_usd": 26.77,
+    "for_date_iso": "2026-08-18",
+    "n_disputable": 1,
+    "for_date": "Tue Aug 18",
+    "impact_usd": 35.74,
+    "detail": "1 disputable charge",
+    "title": "DoorDash short $35.74 for Tue Aug 18",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": false,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-08-19",
+    "n_disputable": 0,
+    "for_date": "Wed Aug 19",
+    "impact_usd": 36.29,
+    "detail": "2 valid-looking charges",
+    "title": "DoorDash short $36.29 for Wed Aug 19",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": false,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-08-19",
+    "n_disputable": 0,
+    "for_date": "Wed Aug 19",
+    "impact_usd": 38.5,
+    "detail": "2 valid-looking charges",
+    "title": "Uber Eats short $38.50 for Wed Aug 19",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": false,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-08-19",
+    "n_disputable": 0,
+    "for_date": "Wed Aug 19",
+    "impact_usd": 43.72,
+    "detail": "3 valid-looking charges",
+    "title": "Grubhub short $43.72 for Wed Aug 19",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": false,
+    "recoverable_usd": 42.68,
+    "for_date_iso": "2026-08-20",
+    "n_disputable": 2,
+    "for_date": "Thu Aug 20",
+    "impact_usd": 60.86,
+    "detail": "1 disputable charge, 1 missing order, 1 valid-looking charge",
+    "title": "DoorDash short $60.86 for Thu Aug 20",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": false,
+    "recoverable_usd": 98.31,
+    "for_date_iso": "2026-08-21",
+    "n_disputable": 5,
+    "for_date": "Fri Aug 21",
+    "impact_usd": 149.46,
+    "detail": "5 disputable charges, 3 valid-looking charges",
+    "title": "DoorDash short $149.46 for Fri Aug 21",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 6.6,
+    "for_date_iso": "2026-08-22",
+    "n_disputable": 1,
+    "for_date": "Sat Aug 22",
+    "impact_usd": 50.85,
+    "detail": "1 missing order, 2 valid-looking charges",
+    "title": "DoorDash short $50.85 for Sat Aug 22",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.0041356492969396195,
+    "prev_rate": 0.0041876046901172526,
+    "title": "DoorDash 7-day cancellation rate 0.4%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-08-23.pdf"
+ },
+ "2026-08-24": {
+  "date": "2026-08-24",
+  "status": "done",
+  "seconds": 0.62,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.21
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.46
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.08
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-08-22",
+    "n_disputable": 0,
+    "for_date": "Sat Aug 22",
+    "impact_usd": 38.5,
+    "detail": "2 valid-looking charges",
+    "title": "Grubhub short $38.50 for Sat Aug 22",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-08-23",
+    "n_disputable": 0,
+    "for_date": "Sun Aug 23",
+    "impact_usd": 7.06,
+    "detail": "1 valid-looking charge",
+    "title": "DoorDash short $7.06 for Sun Aug 23",
+    "urgency": "important"
+   },
+   {
+    "kind": "sold_out_tonight",
+    "at": "7:21 PM",
+    "app_cancels": 15,
+    "minutes_live": 17,
+    "by_channel": {
+     "doordash": 11,
+     "ubereats": 3,
+     "grubhub": 1
+    },
+    "portions_missed": 23.0,
+    "prepped": 400,
+    "used": 400.0,
+    "impact_usd": null,
+    "title": "Chashu sold out at 7:21 PM; 15 app orders were cancelled while it was still live",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.01249024199843872,
+    "prev_rate": 0.0041356492969396195,
+    "title": "DoorDash 7-day cancellation rate 1.2%",
+    "urgency": "urgent"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-08-24.pdf"
+ },
+ "2026-08-25": {
+  "date": "2026-08-25",
+  "status": "done",
+  "seconds": 0.89,
   "log": [
    {
     "step": "stock",
@@ -53,7 +828,1571 @@
    {
     "step": "books",
     "status": "done",
+    "seconds": 0.29
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.75
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.08
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 31.73,
+    "for_date_iso": "2026-08-22",
+    "n_disputable": 1,
+    "for_date": "Sat Aug 22",
+    "impact_usd": 49.88,
+    "detail": "1 disputable charge, 1 valid-looking charge",
+    "title": "Uber Eats short $49.88 for Sat Aug 22",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 68.64,
+    "for_date_iso": "2026-08-23",
+    "n_disputable": 3,
+    "for_date": "Sun Aug 23",
+    "impact_usd": 106.04,
+    "detail": "1 disputable charge, 2 missing orders, 2 valid-looking charges",
+    "title": "Grubhub short $106.04 for Sun Aug 23",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-08-24",
+    "n_disputable": 0,
+    "for_date": "Mon Aug 24",
+    "impact_usd": 53.76,
+    "detail": "3 valid-looking charges",
+    "title": "DoorDash short $53.76 for Mon Aug 24",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.013008130081300813,
+    "prev_rate": 0.01249024199843872,
+    "title": "DoorDash 7-day cancellation rate 1.3%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-08-25.pdf"
+ },
+ "2026-08-26": {
+  "date": "2026-08-26",
+  "status": "done",
+  "seconds": 0.84,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.08
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.19
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.69
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.08
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 18.15,
+    "for_date_iso": "2026-08-23",
+    "n_disputable": 1,
+    "for_date": "Sun Aug 23",
+    "impact_usd": 35.19,
+    "detail": "1 disputable charge",
+    "title": "Uber Eats short $35.19 for Sun Aug 23",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 8.8,
+    "for_date_iso": "2026-08-25",
+    "n_disputable": 1,
+    "for_date": "Tue Aug 25",
+    "impact_usd": 8.78,
+    "detail": "1 disputable charge",
+    "title": "DoorDash short $8.78 for Tue Aug 25",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.008885298869143781,
+    "prev_rate": 0.013008130081300813,
+    "title": "DoorDash 7-day cancellation rate 0.9%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-08-26.pdf"
+ },
+ "2026-08-27": {
+  "date": "2026-08-27",
+  "status": "done",
+  "seconds": 0.56,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.29
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.4
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-08-24",
+    "n_disputable": 0,
+    "for_date": "Mon Aug 24",
+    "impact_usd": 20.88,
+    "detail": "1 valid-looking charge",
+    "title": "Uber Eats short $20.88 for Mon Aug 24",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 95.56,
+    "for_date_iso": "2026-08-26",
+    "n_disputable": 4,
+    "for_date": "Wed Aug 26",
+    "impact_usd": 141.9,
+    "detail": "3 disputable charges, 1 missing order, 1 valid-looking charge",
+    "title": "DoorDash short $141.90 for Wed Aug 26",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "sold_out_tonight",
+    "at": "8:05 PM",
+    "app_cancels": 17,
+    "minutes_live": 45,
+    "by_channel": {
+     "doordash": 12,
+     "ubereats": 4,
+     "grubhub": 1
+    },
+    "portions_missed": 29.5,
+    "prepped": 490,
+    "used": 489.0,
+    "impact_usd": null,
+    "title": "Chashu sold out at 8:05 PM; 17 app orders were cancelled while it was still live",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.017884914463452566,
+    "prev_rate": 0.008885298869143781,
+    "title": "DoorDash 7-day cancellation rate 1.8%",
+    "urgency": "urgent"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-08-27.pdf"
+ },
+ "2026-08-28": {
+  "date": "2026-08-28",
+  "status": "done",
+  "seconds": 0.62,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.05
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.3
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.44
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.08
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-08-25",
+    "n_disputable": 0,
+    "for_date": "Tue Aug 25",
+    "impact_usd": 15.4,
+    "detail": "1 valid-looking charge",
+    "title": "Uber Eats short $15.40 for Tue Aug 25",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 31.12,
+    "for_date_iso": "2026-08-26",
+    "n_disputable": 1,
+    "for_date": "Wed Aug 26",
+    "impact_usd": 31.12,
+    "detail": "1 disputable charge",
+    "title": "Grubhub short $31.12 for Wed Aug 26",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 96.62,
+    "for_date_iso": "2026-08-27",
+    "n_disputable": 5,
+    "for_date": "Thu Aug 27",
+    "impact_usd": 105.67,
+    "detail": "3 disputable charges, 2 missing orders",
+    "title": "DoorDash short $105.67 for Thu Aug 27",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "sold_out_tonight",
+    "at": "8:24 PM",
+    "app_cancels": 9,
+    "minutes_live": 18,
+    "by_channel": {
+     "doordash": 5,
+     "ubereats": 2,
+     "grubhub": 2
+    },
+    "portions_missed": 10.5,
+    "prepped": 580,
+    "used": 580.0,
+    "impact_usd": null,
+    "title": "Chashu sold out at 8:24 PM; 9 app orders were cancelled while it was still live",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.019957234497505347,
+    "prev_rate": 0.017884914463452566,
+    "title": "DoorDash 7-day cancellation rate 2.0%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-08-28.pdf"
+ },
+ "2026-08-29": {
+  "date": "2026-08-29",
+  "status": "done",
+  "seconds": 0.67,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.32
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.51
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 39.03,
+    "for_date_iso": "2026-08-26",
+    "n_disputable": 2,
+    "for_date": "Wed Aug 26",
+    "impact_usd": 75.88,
+    "detail": "1 disputable charge, 1 missing order, 2 valid-looking charges",
+    "title": "Uber Eats short $75.88 for Wed Aug 26",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 29.19,
+    "for_date_iso": "2026-08-28",
+    "n_disputable": 1,
+    "for_date": "Fri Aug 28",
+    "impact_usd": 37.53,
+    "detail": "1 disputable charge",
+    "title": "DoorDash short $37.53 for Fri Aug 28",
+    "urgency": "important"
+   },
+   {
+    "kind": "sold_out_tonight",
+    "at": "10:03 PM",
+    "app_cancels": 3,
+    "minutes_live": 6,
+    "by_channel": {
+     "doordash": 2,
+     "ubereats": 1
+    },
+    "portions_missed": 4.0,
+    "prepped": 680,
+    "used": 679.0,
+    "impact_usd": null,
+    "title": "Chashu sold out at 10:03 PM; 3 app orders were cancelled while it was still live",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.020134228187919462,
+    "prev_rate": 0.019957234497505347,
+    "title": "DoorDash 7-day cancellation rate 2.0%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-08-29.pdf"
+ },
+ "2026-08-30": {
+  "date": "2026-08-30",
+  "status": "done",
+  "seconds": 0.78,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.05
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.34
+   },
+   {
+    "step": "demand",
+    "status": "done",
     "seconds": 0.64
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 20.04,
+    "for_date_iso": "2026-08-27",
+    "n_disputable": 1,
+    "for_date": "Thu Aug 27",
+    "impact_usd": 60.88,
+    "detail": "1 disputable charge, 2 valid-looking charges",
+    "title": "Uber Eats short $60.88 for Thu Aug 27",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 7.7,
+    "for_date_iso": "2026-08-29",
+    "n_disputable": 2,
+    "for_date": "Sat Aug 29",
+    "impact_usd": 72.72,
+    "detail": "2 disputable charges, 4 valid-looking charges",
+    "title": "DoorDash short $72.72 for Sat Aug 29",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.020026702269692925,
+    "prev_rate": 0.020134228187919462,
+    "title": "DoorDash 7-day cancellation rate 2.0%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-08-30.pdf"
+ },
+ "2026-08-31": {
+  "date": "2026-08-31",
+  "status": "done",
+  "seconds": 0.85,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.27
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.72
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-08-28",
+    "n_disputable": 0,
+    "for_date": "Fri Aug 28",
+    "impact_usd": 9.35,
+    "detail": "1 valid-looking charge",
+    "title": "Uber Eats short $9.35 for Fri Aug 28",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-08-29",
+    "n_disputable": 0,
+    "for_date": "Sat Aug 29",
+    "impact_usd": 8.25,
+    "detail": "1 valid-looking charge",
+    "title": "Grubhub short $8.25 for Sat Aug 29",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.013221990257480862,
+    "prev_rate": 0.020026702269692925,
+    "title": "DoorDash 7-day cancellation rate 1.3%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-08-31.pdf"
+ },
+ "2026-09-01": {
+  "date": "2026-09-01",
+  "status": "done",
+  "seconds": 0.62,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.11
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.25
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.5
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-08-29",
+    "n_disputable": 0,
+    "for_date": "Sat Aug 29",
+    "impact_usd": 24.07,
+    "detail": "1 valid-looking charge",
+    "title": "Uber Eats short $24.07 for Sat Aug 29",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-08-31",
+    "n_disputable": 0,
+    "for_date": "Mon Aug 31",
+    "impact_usd": 38.52,
+    "detail": "1 valid-looking charge",
+    "title": "DoorDash short $38.52 for Mon Aug 31",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.013268156424581005,
+    "prev_rate": 0.013221990257480862,
+    "title": "DoorDash 7-day cancellation rate 1.3%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-01.pdf"
+ },
+ "2026-09-02": {
+  "date": "2026-09-02",
+  "status": "done",
+  "seconds": 0.65,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.04
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.27
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.5
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 19.67,
+    "for_date_iso": "2026-08-30",
+    "n_disputable": 1,
+    "for_date": "Sun Aug 30",
+    "impact_usd": 29.02,
+    "detail": "1 missing order, 1 valid-looking charge",
+    "title": "Uber Eats short $29.02 for Sun Aug 30",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 7.15,
+    "for_date_iso": "2026-09-01",
+    "n_disputable": 1,
+    "for_date": "Tue Sep 1",
+    "impact_usd": 17.0,
+    "detail": "1 disputable charge, 1 valid-looking charge",
+    "title": "DoorDash short $17.00 for Tue Sep 1",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.013221990257480862,
+    "prev_rate": 0.013268156424581005,
+    "title": "DoorDash 7-day cancellation rate 1.3%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-02.pdf"
+ },
+ "2026-09-03": {
+  "date": "2026-09-03",
+  "status": "done",
+  "seconds": 0.65,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.08
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.27
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.52
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-08-31",
+    "n_disputable": 0,
+    "for_date": "Mon Aug 31",
+    "impact_usd": 18.7,
+    "detail": "1 valid-looking charge",
+    "title": "Uber Eats short $18.70 for Mon Aug 31",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 9.35,
+    "for_date_iso": "2026-09-01",
+    "n_disputable": 1,
+    "for_date": "Tue Sep 1",
+    "impact_usd": 9.35,
+    "detail": "1 disputable charge",
+    "title": "Grubhub short $9.35 for Tue Sep 1",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 179.37,
+    "for_date_iso": "2026-09-02",
+    "n_disputable": 6,
+    "for_date": "Wed Sep 2",
+    "impact_usd": 252.14,
+    "detail": "4 disputable charges, 2 missing orders, 3 valid-looking charges",
+    "title": "DoorDash short $252.14 for Wed Sep 2",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.005025125628140704,
+    "prev_rate": 0.013221990257480862,
+    "title": "DoorDash 7-day cancellation rate 0.5%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-03.pdf"
+ },
+ "2026-09-04": {
+  "date": "2026-09-04",
+  "status": "done",
+  "seconds": 0.75,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.09
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.24
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.62
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 9.35,
+    "for_date_iso": "2026-09-01",
+    "n_disputable": 1,
+    "for_date": "Tue Sep 1",
+    "impact_usd": 27.51,
+    "detail": "1 disputable charge, 1 valid-looking charge",
+    "title": "Uber Eats short $27.51 for Tue Sep 1",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 7.15,
+    "for_date_iso": "2026-09-03",
+    "n_disputable": 1,
+    "for_date": "Thu Sep 3",
+    "impact_usd": 25.28,
+    "detail": "1 disputable charge, 1 valid-looking charge",
+    "title": "DoorDash short $25.28 for Thu Sep 3",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.0015313935681470138,
+    "prev_rate": 0.005025125628140704,
+    "title": "DoorDash 7-day cancellation rate 0.2%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-04.pdf"
+ },
+ "2026-09-05": {
+  "date": "2026-09-05",
+  "status": "done",
+  "seconds": 0.6,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.19
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.46
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 19.25,
+    "for_date_iso": "2026-09-02",
+    "n_disputable": 2,
+    "for_date": "Wed Sep 2",
+    "impact_usd": 19.25,
+    "detail": "2 disputable charges",
+    "title": "Uber Eats short $19.25 for Wed Sep 2",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 9.9,
+    "for_date_iso": "2026-09-03",
+    "n_disputable": 1,
+    "for_date": "Thu Sep 3",
+    "impact_usd": 18.7,
+    "detail": "1 disputable charge, 1 valid-looking charge",
+    "title": "Grubhub short $18.70 for Thu Sep 3",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 23.51,
+    "for_date_iso": "2026-09-04",
+    "n_disputable": 2,
+    "for_date": "Fri Sep 4",
+    "impact_usd": 87.79,
+    "detail": "1 disputable charge, 1 missing order, 4 valid-looking charges",
+    "title": "DoorDash short $87.79 for Fri Sep 4",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.0,
+    "prev_rate": 0.0015313935681470138,
+    "title": "DoorDash 7-day cancellation rate 0.0%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-05.pdf"
+ },
+ "2026-09-06": {
+  "date": "2026-09-06",
+  "status": "done",
+  "seconds": 0.66,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.33
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.49
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.09
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.05
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "cash_short",
+    "impact_usd": 21.5,
+    "expected": 1320.4,
+    "counted": 1298.9,
+    "title": "Cash drawer short $21.50",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-09-03",
+    "n_disputable": 0,
+    "for_date": "Thu Sep 3",
+    "impact_usd": 4.95,
+    "detail": "1 valid-looking charge",
+    "title": "Uber Eats short $4.95 for Thu Sep 3",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-09-05",
+    "n_disputable": 0,
+    "for_date": "Sat Sep 5",
+    "impact_usd": 33.02,
+    "detail": "2 valid-looking charges",
+    "title": "DoorDash short $33.02 for Sat Sep 5",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.0,
+    "prev_rate": 0.0,
+    "title": "DoorDash 7-day cancellation rate 0.0%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-06.pdf"
+ },
+ "2026-09-07": {
+  "date": "2026-09-07",
+  "status": "done",
+  "seconds": 0.73,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.09
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.31
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.59
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 22.67,
+    "for_date_iso": "2026-09-06",
+    "n_disputable": 1,
+    "for_date": "Sun Sep 6",
+    "impact_usd": 62.48,
+    "detail": "1 disputable charge, 2 valid-looking charges",
+    "title": "DoorDash short $62.48 for Sun Sep 6",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.0,
+    "prev_rate": 0.0,
+    "title": "DoorDash 7-day cancellation rate 0.0%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-07.pdf"
+ },
+ "2026-09-08": {
+  "date": "2026-09-08",
+  "status": "done",
+  "seconds": 0.7,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.04
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.27
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.52
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.1
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 13.25,
+    "for_date_iso": "2026-09-05",
+    "n_disputable": 1,
+    "for_date": "Sat Sep 5",
+    "impact_usd": 13.26,
+    "detail": "1 missing order",
+    "title": "Uber Eats short $13.26 for Sat Sep 5",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.0,
+    "prev_rate": 0.0,
+    "title": "DoorDash 7-day cancellation rate 0.0%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-08.pdf"
+ },
+ "2026-09-09": {
+  "date": "2026-09-09",
+  "status": "done",
+  "seconds": 0.96,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.05
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.33
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.8
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.08
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 31.53,
+    "for_date_iso": "2026-09-07",
+    "n_disputable": 2,
+    "for_date": "Mon Sep 7",
+    "impact_usd": 50.78,
+    "detail": "2 disputable charges, 1 valid-looking charge",
+    "title": "Grubhub short $50.78 for Mon Sep 7",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 20.43,
+    "for_date_iso": "2026-09-08",
+    "n_disputable": 1,
+    "for_date": "Tue Sep 8",
+    "impact_usd": 20.39,
+    "detail": "1 disputable charge",
+    "title": "DoorDash short $20.39 for Tue Sep 8",
+    "urgency": "important"
+   },
+   {
+    "kind": "sold_out_tonight",
+    "at": "8:14 PM",
+    "app_cancels": 9,
+    "minutes_live": 38,
+    "by_channel": {
+     "doordash": 7,
+     "ubereats": 2
+    },
+    "portions_missed": 14.0,
+    "prepped": 480,
+    "used": 479.0,
+    "impact_usd": null,
+    "title": "Chashu sold out at 8:14 PM; 9 app orders were cancelled while it was still live",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.005443234836702955,
+    "prev_rate": 0.0,
+    "title": "DoorDash 7-day cancellation rate 0.5%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-09.pdf"
+ },
+ "2026-09-10": {
+  "date": "2026-09-10",
+  "status": "done",
+  "seconds": 0.79,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.24
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.65
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 11.24,
+    "for_date_iso": "2026-09-07",
+    "n_disputable": 1,
+    "for_date": "Mon Sep 7",
+    "impact_usd": 11.24,
+    "detail": "1 missing order",
+    "title": "Uber Eats short $11.24 for Mon Sep 7",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 29.6,
+    "for_date_iso": "2026-09-09",
+    "n_disputable": 1,
+    "for_date": "Wed Sep 9",
+    "impact_usd": 34.42,
+    "detail": "1 disputable charge, 1 valid-looking charge",
+    "title": "DoorDash short $34.42 for Wed Sep 9",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.00523168908819133,
+    "prev_rate": 0.005443234836702955,
+    "title": "DoorDash 7-day cancellation rate 0.5%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-10.pdf"
+ },
+ "2026-09-11": {
+  "date": "2026-09-11",
+  "status": "done",
+  "seconds": 0.85,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.05
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.25
    },
    {
     "step": "demand",
@@ -63,7 +2402,2359 @@
    {
     "step": "analyst",
     "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 20.9,
+    "for_date_iso": "2026-09-10",
+    "n_disputable": 1,
+    "for_date": "Thu Sep 10",
+    "impact_usd": 44.34,
+    "detail": "1 disputable charge, 1 valid-looking charge",
+    "title": "DoorDash short $44.34 for Thu Sep 10",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.005279034690799397,
+    "prev_rate": 0.00523168908819133,
+    "title": "DoorDash 7-day cancellation rate 0.5%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-11.pdf"
+ },
+ "2026-09-12": {
+  "date": "2026-09-12",
+  "status": "done",
+  "seconds": 0.74,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
     "seconds": 0.08
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.26
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.59
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 32.45,
+    "for_date_iso": "2026-09-09",
+    "n_disputable": 2,
+    "for_date": "Wed Sep 9",
+    "impact_usd": 61.32,
+    "detail": "2 disputable charges, 1 valid-looking charge",
+    "title": "Uber Eats short $61.32 for Wed Sep 9",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-09-10",
+    "n_disputable": 0,
+    "for_date": "Thu Sep 10",
+    "impact_usd": 7.15,
+    "detail": "1 valid-looking charge",
+    "title": "Grubhub short $7.15 for Thu Sep 10",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 21.59,
+    "for_date_iso": "2026-09-11",
+    "n_disputable": 2,
+    "for_date": "Fri Sep 11",
+    "impact_usd": 45.32,
+    "detail": "1 disputable charge, 1 missing order, 1 valid-looking charge",
+    "title": "DoorDash short $45.32 for Fri Sep 11",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.005090909090909091,
+    "prev_rate": 0.005279034690799397,
+    "title": "DoorDash 7-day cancellation rate 0.5%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-12.pdf"
+ },
+ "2026-09-13": {
+  "date": "2026-09-13",
+  "status": "done",
+  "seconds": 0.85,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.32
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.71
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-09-10",
+    "n_disputable": 0,
+    "for_date": "Thu Sep 10",
+    "impact_usd": 18.15,
+    "detail": "1 valid-looking charge",
+    "title": "Uber Eats short $18.15 for Thu Sep 10",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-09-11",
+    "n_disputable": 0,
+    "for_date": "Fri Sep 11",
+    "impact_usd": 4.67,
+    "detail": "unexplained",
+    "title": "Grubhub short $4.67 for Fri Sep 11",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 21.45,
+    "for_date_iso": "2026-09-12",
+    "n_disputable": 1,
+    "for_date": "Sat Sep 12",
+    "impact_usd": 50.14,
+    "detail": "1 missing order, 1 valid-looking charge",
+    "title": "DoorDash short $50.14 for Sat Sep 12",
+    "urgency": "important"
+   },
+   {
+    "kind": "sold_out_tonight",
+    "at": "7:16 PM",
+    "app_cancels": 11,
+    "minutes_live": 28,
+    "by_channel": {
+     "doordash": 9,
+     "ubereats": 2
+    },
+    "portions_missed": 14.5,
+    "prepped": 480,
+    "used": 480.0,
+    "impact_usd": null,
+    "title": "Chashu sold out at 7:16 PM; 11 app orders were cancelled while it was still live",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.01145311381531854,
+    "prev_rate": 0.005090909090909091,
+    "title": "DoorDash 7-day cancellation rate 1.1%",
+    "urgency": "urgent"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-13.pdf"
+ },
+ "2026-09-14": {
+  "date": "2026-09-14",
+  "status": "done",
+  "seconds": 0.84,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.05
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.27
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.53
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.09
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.17
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 3.85,
+    "for_date_iso": "2026-09-12",
+    "n_disputable": 1,
+    "for_date": "Sat Sep 12",
+    "impact_usd": 8.25,
+    "detail": "1 disputable charge",
+    "title": "Grubhub short $8.25 for Sat Sep 12",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 60.64,
+    "for_date_iso": "2026-09-13",
+    "n_disputable": 3,
+    "for_date": "Sun Sep 13",
+    "impact_usd": 122.71,
+    "detail": "1 disputable charge, 2 missing orders, 4 valid-looking charges",
+    "title": "DoorDash short $122.71 for Sun Sep 13",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.011461318051575931,
+    "prev_rate": 0.01145311381531854,
+    "title": "DoorDash 7-day cancellation rate 1.1%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-14.pdf"
+ },
+ "2026-09-15": {
+  "date": "2026-09-15",
+  "status": "done",
+  "seconds": 0.81,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.05
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.22
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.66
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 29.71,
+    "for_date_iso": "2026-09-12",
+    "n_disputable": 1,
+    "for_date": "Sat Sep 12",
+    "impact_usd": 58.31,
+    "detail": "1 missing order, 2 valid-looking charges",
+    "title": "Uber Eats short $58.31 for Sat Sep 12",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-09-14",
+    "n_disputable": 0,
+    "for_date": "Mon Sep 14",
+    "impact_usd": 15.4,
+    "detail": "1 valid-looking charge",
+    "title": "DoorDash short $15.40 for Mon Sep 14",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.011644832605531296,
+    "prev_rate": 0.011461318051575931,
+    "title": "DoorDash 7-day cancellation rate 1.2%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-15.pdf"
+ },
+ "2026-09-16": {
+  "date": "2026-09-16",
+  "status": "done",
+  "seconds": 0.68,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.1
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.19
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.53
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 31.72,
+    "for_date_iso": "2026-09-13",
+    "n_disputable": 1,
+    "for_date": "Sun Sep 13",
+    "impact_usd": 50.41,
+    "detail": "1 missing order, 1 valid-looking charge",
+    "title": "Uber Eats short $50.41 for Sun Sep 13",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 40.84,
+    "for_date_iso": "2026-09-15",
+    "n_disputable": 1,
+    "for_date": "Tue Sep 15",
+    "impact_usd": 105.13,
+    "detail": "1 missing order, 4 valid-looking charges",
+    "title": "DoorDash short $105.13 for Tue Sep 15",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.0066518847006651885,
+    "prev_rate": 0.011644832605531296,
+    "title": "DoorDash 7-day cancellation rate 0.7%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-16.pdf"
+ },
+ "2026-09-17": {
+  "date": "2026-09-17",
+  "status": "done",
+  "seconds": 0.55,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.11
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.26
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.41
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 8.8,
+    "for_date_iso": "2026-09-15",
+    "n_disputable": 1,
+    "for_date": "Tue Sep 15",
+    "impact_usd": 8.8,
+    "detail": "1 disputable charge",
+    "title": "Grubhub short $8.80 for Tue Sep 15",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 47.02,
+    "for_date_iso": "2026-09-16",
+    "n_disputable": 2,
+    "for_date": "Wed Sep 16",
+    "impact_usd": 80.83,
+    "detail": "2 missing orders, 2 valid-looking charges",
+    "title": "DoorDash short $80.83 for Wed Sep 16",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.00663716814159292,
+    "prev_rate": 0.0066518847006651885,
+    "title": "DoorDash 7-day cancellation rate 0.7%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-17.pdf"
+ },
+ "2026-09-18": {
+  "date": "2026-09-18",
+  "status": "done",
+  "seconds": 0.64,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.12
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.36
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.47
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.08
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-09-15",
+    "n_disputable": 0,
+    "for_date": "Tue Sep 15",
+    "impact_usd": 36.3,
+    "detail": "2 valid-looking charges",
+    "title": "Uber Eats short $36.30 for Tue Sep 15",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 95.84,
+    "for_date_iso": "2026-09-17",
+    "n_disputable": 4,
+    "for_date": "Thu Sep 17",
+    "impact_usd": 133.26,
+    "detail": "1 disputable charge, 3 missing orders, 2 valid-looking charges",
+    "title": "DoorDash short $133.26 for Thu Sep 17",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.0066273932253313695,
+    "prev_rate": 0.00663716814159292,
+    "title": "DoorDash 7-day cancellation rate 0.7%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-18.pdf"
+ },
+ "2026-09-19": {
+  "date": "2026-09-19",
+  "status": "done",
+  "seconds": 0.71,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.29
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.53
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-09-17",
+    "n_disputable": 0,
+    "for_date": "Thu Sep 17",
+    "impact_usd": 19.25,
+    "detail": "1 valid-looking charge",
+    "title": "Grubhub short $19.25 for Thu Sep 17",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 351.86,
+    "for_date_iso": "2026-09-18",
+    "n_disputable": 4,
+    "for_date": "Fri Sep 18",
+    "impact_usd": 380.55,
+    "detail": "3 disputable charges, commission above contract, 2 valid-looking charges",
+    "title": "DoorDash short $380.55 for Fri Sep 18",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "sold_out_tonight",
+    "at": "8:25 PM",
+    "app_cancels": 12,
+    "minutes_live": 19,
+    "by_channel": {
+     "doordash": 10,
+     "grubhub": 1,
+     "ubereats": 1
+    },
+    "portions_missed": 18.0,
+    "prepped": 630,
+    "used": 628.0,
+    "impact_usd": null,
+    "title": "Chashu sold out at 8:25 PM; 12 app orders were cancelled while it was still live",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.01330532212885154,
+    "prev_rate": 0.0066273932253313695,
+    "title": "DoorDash 7-day cancellation rate 1.3%",
+    "urgency": "urgent"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-19.pdf"
+ },
+ "2026-09-20": {
+  "date": "2026-09-20",
+  "status": "done",
+  "seconds": 0.58,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.1
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.31
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.44
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 23.42,
+    "for_date_iso": "2026-09-19",
+    "n_disputable": 1,
+    "for_date": "Sat Sep 19",
+    "impact_usd": 114.13,
+    "detail": "1 disputable charge, 6 valid-looking charges",
+    "title": "DoorDash short $114.13 for Sat Sep 19",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.007178750897343862,
+    "prev_rate": 0.01330532212885154,
+    "title": "DoorDash 7-day cancellation rate 0.7%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-20.pdf"
+ },
+ "2026-09-21": {
+  "date": "2026-09-21",
+  "status": "done",
+  "seconds": 0.82,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.09
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.36
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.68
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 16.86,
+    "for_date_iso": "2026-09-18",
+    "n_disputable": 1,
+    "for_date": "Fri Sep 18",
+    "impact_usd": 16.86,
+    "detail": "1 missing order",
+    "title": "Uber Eats short $16.86 for Fri Sep 18",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-09-19",
+    "n_disputable": 0,
+    "for_date": "Sat Sep 19",
+    "impact_usd": 4.81,
+    "detail": "unexplained",
+    "title": "Grubhub short $4.81 for Sat Sep 19",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 42.9,
+    "for_date_iso": "2026-09-20",
+    "n_disputable": 3,
+    "for_date": "Sun Sep 20",
+    "impact_usd": 47.79,
+    "detail": "3 disputable charges, 1 valid-looking charge",
+    "title": "DoorDash short $47.79 for Sun Sep 20",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.007107320540156361,
+    "prev_rate": 0.007178750897343862,
+    "title": "DoorDash 7-day cancellation rate 0.7%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-21.pdf"
+ },
+ "2026-09-22": {
+  "date": "2026-09-22",
+  "status": "done",
+  "seconds": 0.7,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.22
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.55
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 22.48,
+    "for_date_iso": "2026-09-19",
+    "n_disputable": 1,
+    "for_date": "Sat Sep 19",
+    "impact_usd": 22.48,
+    "detail": "1 missing order",
+    "title": "Uber Eats short $22.48 for Sat Sep 19",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-09-21",
+    "n_disputable": 0,
+    "for_date": "Mon Sep 21",
+    "impact_usd": 55.95,
+    "detail": "2 valid-looking charges",
+    "title": "DoorDash short $55.95 for Mon Sep 21",
+    "urgency": "important"
+   },
+   {
+    "kind": "sold_out_tonight",
+    "at": "8:33 PM",
+    "app_cancels": 13,
+    "minutes_live": 43,
+    "by_channel": {
+     "doordash": 8,
+     "ubereats": 3,
+     "grubhub": 2
+    },
+    "portions_missed": 21.5,
+    "prepped": 450,
+    "used": 449.5,
+    "impact_usd": null,
+    "title": "Chashu sold out at 8:33 PM; 13 app orders were cancelled while it was still live",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.012702893436838392,
+    "prev_rate": 0.007107320540156361,
+    "title": "DoorDash 7-day cancellation rate 1.3%",
+    "urgency": "urgent"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-22.pdf"
+ },
+ "2026-09-23": {
+  "date": "2026-09-23",
+  "status": "done",
+  "seconds": 0.7,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.04
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.22
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.53
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.04
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 9.35,
+    "for_date_iso": "2026-09-20",
+    "n_disputable": 1,
+    "for_date": "Sun Sep 20",
+    "impact_usd": 14.16,
+    "detail": "1 disputable charge",
+    "title": "Uber Eats short $14.16 for Sun Sep 20",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-09-21",
+    "n_disputable": 0,
+    "for_date": "Mon Sep 21",
+    "impact_usd": 28.32,
+    "detail": "1 valid-looking charge",
+    "title": "Grubhub short $28.32 for Mon Sep 21",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-09-22",
+    "n_disputable": 0,
+    "for_date": "Tue Sep 22",
+    "impact_usd": 32.29,
+    "detail": "2 valid-looking charges",
+    "title": "DoorDash short $32.29 for Tue Sep 22",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.012328767123287671,
+    "prev_rate": 0.012702893436838392,
+    "title": "DoorDash 7-day cancellation rate 1.2%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-23.pdf"
+ },
+ "2026-09-24": {
+  "date": "2026-09-24",
+  "status": "done",
+  "seconds": 0.74,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.08
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.2
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.59
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 13.75,
+    "for_date_iso": "2026-09-21",
+    "n_disputable": 2,
+    "for_date": "Mon Sep 21",
+    "impact_usd": 22.82,
+    "detail": "2 disputable charges",
+    "title": "Uber Eats short $22.82 for Mon Sep 21",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 43.98,
+    "for_date_iso": "2026-09-23",
+    "n_disputable": 2,
+    "for_date": "Wed Sep 23",
+    "impact_usd": 43.98,
+    "detail": "2 disputable charges",
+    "title": "DoorDash short $43.98 for Wed Sep 23",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.012747875354107648,
+    "prev_rate": 0.012328767123287671,
+    "title": "DoorDash 7-day cancellation rate 1.3%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-24.pdf"
+ },
+ "2026-09-25": {
+  "date": "2026-09-25",
+  "status": "done",
+  "seconds": 0.53,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.05
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.27
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.4
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 12.45,
+    "for_date_iso": "2026-09-22",
+    "n_disputable": 1,
+    "for_date": "Tue Sep 22",
+    "impact_usd": 30.6,
+    "detail": "1 missing order, 1 valid-looking charge",
+    "title": "Uber Eats short $30.60 for Tue Sep 22",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-09-23",
+    "n_disputable": 0,
+    "for_date": "Wed Sep 23",
+    "impact_usd": 18.15,
+    "detail": "1 valid-looking charge",
+    "title": "Grubhub short $18.15 for Wed Sep 23",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 90.25,
+    "for_date_iso": "2026-09-24",
+    "n_disputable": 4,
+    "for_date": "Thu Sep 24",
+    "impact_usd": 138.06,
+    "detail": "3 disputable charges, 1 missing order, 3 valid-looking charges",
+    "title": "DoorDash short $138.06 for Thu Sep 24",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.012622720897615708,
+    "prev_rate": 0.012747875354107648,
+    "title": "DoorDash 7-day cancellation rate 1.3%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-25.pdf"
+ },
+ "2026-09-26": {
+  "date": "2026-09-26",
+  "status": "done",
+  "seconds": 0.73,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.12
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.3
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.6
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-09-23",
+    "n_disputable": 0,
+    "for_date": "Wed Sep 23",
+    "impact_usd": 9.35,
+    "detail": "1 valid-looking charge",
+    "title": "Uber Eats short $9.35 for Wed Sep 23",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 9.9,
+    "for_date_iso": "2026-09-25",
+    "n_disputable": 1,
+    "for_date": "Fri Sep 25",
+    "impact_usd": 36.77,
+    "detail": "1 disputable charge, 1 valid-looking charge",
+    "title": "DoorDash short $36.77 for Fri Sep 25",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.005718370264474625,
+    "prev_rate": 0.012622720897615708,
+    "title": "DoorDash 7-day cancellation rate 0.6%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-26.pdf"
+ },
+ "2026-09-27": {
+  "date": "2026-09-27",
+  "status": "done",
+  "seconds": 0.57,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.08
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.3
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.42
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-09-24",
+    "n_disputable": 0,
+    "for_date": "Thu Sep 24",
+    "impact_usd": 9.35,
+    "detail": "1 valid-looking charge",
+    "title": "Uber Eats short $9.35 for Thu Sep 24",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 7.7,
+    "for_date_iso": "2026-09-25",
+    "n_disputable": 1,
+    "for_date": "Fri Sep 25",
+    "impact_usd": 26.95,
+    "detail": "1 disputable charge, 1 valid-looking charge",
+    "title": "Grubhub short $26.95 for Fri Sep 25",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 54.77,
+    "for_date_iso": "2026-09-26",
+    "n_disputable": 3,
+    "for_date": "Sat Sep 26",
+    "impact_usd": 72.9,
+    "detail": "2 disputable charges, 1 missing order, 1 valid-looking charge",
+    "title": "DoorDash short $72.90 for Sat Sep 26",
+    "urgency": "important"
+   },
+   {
+    "kind": "sold_out_tonight",
+    "at": "6:56 PM",
+    "app_cancels": 52,
+    "minutes_live": 66,
+    "by_channel": {
+     "doordash": 35,
+     "ubereats": 16,
+     "grubhub": 1
+    },
+    "portions_missed": 83.0,
+    "prepped": 580,
+    "used": 579.0,
+    "impact_usd": null,
+    "title": "Chashu sold out at 6:56 PM; 52 app orders were cancelled while it was still live",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.02836411609498681,
+    "prev_rate": 0.005718370264474625,
+    "title": "DoorDash 7-day cancellation rate 2.8%",
+    "urgency": "urgent"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-27.pdf"
+ },
+ "2026-09-28": {
+  "date": "2026-09-28",
+  "status": "done",
+  "seconds": 0.73,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.09
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.31
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.59
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-09-25",
+    "n_disputable": 0,
+    "for_date": "Fri Sep 25",
+    "impact_usd": 18.7,
+    "detail": "1 valid-looking charge",
+    "title": "Uber Eats short $18.70 for Fri Sep 25",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 17.16,
+    "for_date_iso": "2026-09-27",
+    "n_disputable": 2,
+    "for_date": "Sun Sep 27",
+    "impact_usd": 58.86,
+    "detail": "1 disputable charge, 1 missing order, 3 valid-looking charges",
+    "title": "DoorDash short $58.86 for Sun Sep 27",
+    "urgency": "important"
+   },
+   {
+    "kind": "sold_out_tonight",
+    "at": "8:05 PM",
+    "app_cancels": 1,
+    "minutes_live": 2,
+    "by_channel": {
+     "doordash": 1
+    },
+    "portions_missed": 2.0,
+    "prepped": 420,
+    "used": 419.0,
+    "impact_usd": null,
+    "title": "Chashu sold out at 8:05 PM; 1 app orders were cancelled while it was still live",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.028259473346178548,
+    "prev_rate": 0.02836411609498681,
+    "title": "DoorDash 7-day cancellation rate 2.8%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-28.pdf"
+ },
+ "2026-09-29": {
+  "date": "2026-09-29",
+  "status": "done",
+  "seconds": 0.54,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.09
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.22
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.39
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-09-26",
+    "n_disputable": 0,
+    "for_date": "Sat Sep 26",
+    "impact_usd": 19.25,
+    "detail": "1 valid-looking charge",
+    "title": "Uber Eats short $19.25 for Sat Sep 26",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 31.75,
+    "for_date_iso": "2026-09-28",
+    "n_disputable": 1,
+    "for_date": "Mon Sep 28",
+    "impact_usd": 31.77,
+    "detail": "1 disputable charge",
+    "title": "DoorDash short $31.77 for Mon Sep 28",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.023888520238885203,
+    "prev_rate": 0.028259473346178548,
+    "title": "DoorDash 7-day cancellation rate 2.4%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-29.pdf"
+ },
+ "2026-09-30": {
+  "date": "2026-09-30",
+  "status": "done",
+  "seconds": 0.74,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.1
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.35
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.6
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-09-27",
+    "n_disputable": 0,
+    "for_date": "Sun Sep 27",
+    "impact_usd": 18.15,
+    "detail": "1 valid-looking charge",
+    "title": "Uber Eats short $18.15 for Sun Sep 27",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 18.7,
+    "for_date_iso": "2026-09-29",
+    "n_disputable": 1,
+    "for_date": "Tue Sep 29",
+    "impact_usd": 22.54,
+    "detail": "1 disputable charge, 1 valid-looking charge",
+    "title": "DoorDash short $22.54 for Tue Sep 29",
+    "urgency": "important"
+   },
+   {
+    "kind": "sold_out_tonight",
+    "at": "8:28 PM",
+    "app_cancels": 15,
+    "minutes_live": 48,
+    "by_channel": {
+     "doordash": 10,
+     "ubereats": 4,
+     "grubhub": 1
+    },
+    "portions_missed": 26.5,
+    "prepped": 510,
+    "used": 509.5,
+    "impact_usd": null,
+    "title": "Chashu sold out at 8:28 PM; 15 app orders were cancelled while it was still live",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.03089321692411014,
+    "prev_rate": 0.023888520238885203,
+    "title": "DoorDash 7-day cancellation rate 3.1%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-09-30.pdf"
+ },
+ "2026-10-01": {
+  "date": "2026-10-01",
+  "status": "done",
+  "seconds": 0.68,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.23
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.53
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.08
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 15.4,
+    "for_date_iso": "2026-09-30",
+    "n_disputable": 1,
+    "for_date": "Wed Sep 30",
+    "impact_usd": 30.73,
+    "detail": "1 disputable charge, 1 valid-looking charge",
+    "title": "DoorDash short $30.73 for Wed Sep 30",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.030183727034120734,
+    "prev_rate": 0.03089321692411014,
+    "title": "DoorDash 7-day cancellation rate 3.0%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-01.pdf"
+ },
+ "2026-10-02": {
+  "date": "2026-10-02",
+  "status": "done",
+  "seconds": 0.56,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.05
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.23
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.42
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "cash_short",
+    "impact_usd": 50.75,
+    "expected": 1799.77,
+    "counted": 1749.02,
+    "title": "Cash drawer short $50.75",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 26.5,
+    "for_date_iso": "2026-09-29",
+    "n_disputable": 1,
+    "for_date": "Tue Sep 29",
+    "impact_usd": 26.5,
+    "detail": "1 missing order",
+    "title": "Uber Eats short $26.50 for Tue Sep 29",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 8.8,
+    "for_date_iso": "2026-09-30",
+    "n_disputable": 1,
+    "for_date": "Wed Sep 30",
+    "impact_usd": 8.8,
+    "detail": "1 disputable charge",
+    "title": "Grubhub short $8.80 for Wed Sep 30",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 3.85,
+    "for_date_iso": "2026-10-01",
+    "n_disputable": 1,
+    "for_date": "Thu Oct 1",
+    "impact_usd": 29.13,
+    "detail": "1 disputable charge, 2 valid-looking charges",
+    "title": "DoorDash short $29.13 for Thu Oct 1",
+    "urgency": "important"
+   },
+   {
+    "kind": "sold_out_tonight",
+    "at": "7:49 PM",
+    "app_cancels": 48,
+    "minutes_live": 74,
+    "by_channel": {
+     "doordash": 31,
+     "grubhub": 9,
+     "ubereats": 8
+    },
+    "portions_missed": 73.0,
+    "prepped": 610,
+    "used": 608.0,
+    "impact_usd": null,
+    "title": "Chashu sold out at 7:49 PM; 48 app orders were cancelled while it was still live",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.047619047619047616,
+    "prev_rate": 0.030183727034120734,
+    "title": "DoorDash 7-day cancellation rate 4.8%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-02.pdf"
+ },
+ "2026-10-03": {
+  "date": "2026-10-03",
+  "status": "done",
+  "seconds": 0.6,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.08
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.34
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.47
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "cash_short",
+    "impact_usd": 48.0,
+    "expected": 1821.71,
+    "counted": 1773.71,
+    "title": "Cash drawer short $48.00",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 4.95,
+    "for_date_iso": "2026-09-30",
+    "n_disputable": 1,
+    "for_date": "Wed Sep 30",
+    "impact_usd": 4.95,
+    "detail": "1 disputable charge",
+    "title": "Uber Eats short $4.95 for Wed Sep 30",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-10-01",
+    "n_disputable": 0,
+    "for_date": "Thu Oct 1",
+    "impact_usd": 8.8,
+    "detail": "1 valid-looking charge",
+    "title": "Grubhub short $8.80 for Thu Oct 1",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 51.47,
+    "for_date_iso": "2026-10-02",
+    "n_disputable": 3,
+    "for_date": "Fri Oct 2",
+    "impact_usd": 94.41,
+    "detail": "3 disputable charges, 2 valid-looking charges",
+    "title": "DoorDash short $94.41 for Fri Oct 2",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.048982188295165395,
+    "prev_rate": 0.047619047619047616,
+    "title": "DoorDash 7-day cancellation rate 4.9%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-03.pdf"
+ },
+ "2026-10-04": {
+  "date": "2026-10-04",
+  "status": "done",
+  "seconds": 0.69,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.09
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.33
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.5
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.08
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.04
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 3.85,
+    "for_date_iso": "2026-10-01",
+    "n_disputable": 1,
+    "for_date": "Thu Oct 1",
+    "impact_usd": 3.85,
+    "detail": "1 disputable charge",
+    "title": "Uber Eats short $3.85 for Thu Oct 1",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 67.94,
+    "for_date_iso": "2026-10-03",
+    "n_disputable": 3,
+    "for_date": "Sat Oct 3",
+    "impact_usd": 83.2,
+    "detail": "3 disputable charges, 2 valid-looking charges",
+    "title": "DoorDash short $83.20 for Sat Oct 3",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.028455284552845527,
+    "prev_rate": 0.048982188295165395,
+    "title": "DoorDash 7-day cancellation rate 2.8%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-04.pdf"
+ },
+ "2026-10-05": {
+  "date": "2026-10-05",
+  "status": "done",
+  "seconds": 0.55,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.3
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.42
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-10-02",
+    "n_disputable": 0,
+    "for_date": "Fri Oct 2",
+    "impact_usd": 29.95,
+    "detail": "2 valid-looking charges",
+    "title": "Uber Eats short $29.95 for Fri Oct 2",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 73.52,
+    "for_date_iso": "2026-10-04",
+    "n_disputable": 3,
+    "for_date": "Sun Oct 4",
+    "impact_usd": 96.4,
+    "detail": "3 disputable charges, 1 valid-looking charge",
+    "title": "DoorDash short $96.40 for Sun Oct 4",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.028120713305898493,
+    "prev_rate": 0.028455284552845527,
+    "title": "DoorDash 7-day cancellation rate 2.8%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-05.pdf"
+ },
+ "2026-10-06": {
+  "date": "2026-10-06",
+  "status": "done",
+  "seconds": 0.72,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.1
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.36
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.53
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.07
    },
    {
     "step": "plan",
@@ -78,7 +4769,2841 @@
    {
     "step": "report",
     "status": "done",
-    "seconds": 0.87
+    "seconds": 0.04
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 19.25,
+    "for_date_iso": "2026-10-03",
+    "n_disputable": 1,
+    "for_date": "Sat Oct 3",
+    "impact_usd": 28.87,
+    "detail": "1 disputable charge",
+    "title": "Uber Eats short $28.87 for Sat Oct 3",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-10-05",
+    "n_disputable": 0,
+    "for_date": "Mon Oct 5",
+    "impact_usd": 17.03,
+    "detail": "1 valid-looking charge",
+    "title": "DoorDash short $17.03 for Mon Oct 5",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.027683997299122215,
+    "prev_rate": 0.028120713305898493,
+    "title": "DoorDash 7-day cancellation rate 2.8%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-06.pdf"
+ },
+ "2026-10-07": {
+  "date": "2026-10-07",
+  "status": "done",
+  "seconds": 0.68,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.1
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.24
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.51
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.1
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 6.6,
+    "for_date_iso": "2026-10-05",
+    "n_disputable": 1,
+    "for_date": "Mon Oct 5",
+    "impact_usd": 6.6,
+    "detail": "1 disputable charge",
+    "title": "Grubhub short $6.60 for Mon Oct 5",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 30.8,
+    "for_date_iso": "2026-10-06",
+    "n_disputable": 3,
+    "for_date": "Tue Oct 6",
+    "impact_usd": 68.2,
+    "detail": "3 disputable charges, 2 valid-looking charges",
+    "title": "DoorDash short $68.20 for Tue Oct 6",
+    "urgency": "important"
+   },
+   {
+    "kind": "sold_out_tonight",
+    "at": "9:10 PM",
+    "app_cancels": 6,
+    "minutes_live": 17,
+    "by_channel": {
+     "doordash": 4,
+     "ubereats": 1,
+     "grubhub": 1
+    },
+    "portions_missed": 8.5,
+    "prepped": 610,
+    "used": 610.0,
+    "impact_usd": null,
+    "title": "Chashu sold out at 9:10 PM; 6 app orders were cancelled while it was still live",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.02298095863427446,
+    "prev_rate": 0.027683997299122215,
+    "title": "DoorDash 7-day cancellation rate 2.3%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-07.pdf"
+ },
+ "2026-10-08": {
+  "date": "2026-10-08",
+  "status": "done",
+  "seconds": 0.53,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.08
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.22
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.38
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-10-05",
+    "n_disputable": 0,
+    "for_date": "Mon Oct 5",
+    "impact_usd": 11.14,
+    "detail": "1 valid-looking charge",
+    "title": "Uber Eats short $11.14 for Mon Oct 5",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 7.48,
+    "for_date_iso": "2026-10-06",
+    "n_disputable": 1,
+    "for_date": "Tue Oct 6",
+    "impact_usd": 14.63,
+    "detail": "1 missing order, 1 valid-looking charge",
+    "title": "Grubhub short $14.63 for Tue Oct 6",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 52.8,
+    "for_date_iso": "2026-10-07",
+    "n_disputable": 4,
+    "for_date": "Wed Oct 7",
+    "impact_usd": 57.52,
+    "detail": "3 disputable charges, 1 missing order",
+    "title": "DoorDash short $57.52 for Wed Oct 7",
+    "urgency": "important"
+   },
+   {
+    "kind": "sold_out_tonight",
+    "at": "9:23 PM",
+    "app_cancels": 7,
+    "minutes_live": 20,
+    "by_channel": {
+     "doordash": 5,
+     "grubhub": 1,
+     "ubereats": 1
+    },
+    "portions_missed": 10.0,
+    "prepped": 580,
+    "used": 580.0,
+    "impact_usd": null,
+    "title": "Chashu sold out at 9:23 PM; 7 app orders were cancelled while it was still live",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.02607561929595828,
+    "prev_rate": 0.02298095863427446,
+    "title": "DoorDash 7-day cancellation rate 2.6%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-08.pdf"
+ },
+ "2026-10-09": {
+  "date": "2026-10-09",
+  "status": "done",
+  "seconds": 0.7,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.37
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.55
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.04
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-10-06",
+    "n_disputable": 0,
+    "for_date": "Tue Oct 6",
+    "impact_usd": 19.25,
+    "detail": "1 valid-looking charge",
+    "title": "Uber Eats short $19.25 for Tue Oct 6",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-10-07",
+    "n_disputable": 0,
+    "for_date": "Wed Oct 7",
+    "impact_usd": 28.6,
+    "detail": "2 valid-looking charges",
+    "title": "Grubhub short $28.60 for Wed Oct 7",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 8.8,
+    "for_date_iso": "2026-10-08",
+    "n_disputable": 1,
+    "for_date": "Thu Oct 8",
+    "impact_usd": 95.6,
+    "detail": "1 disputable charge, 5 valid-looking charges",
+    "title": "DoorDash short $95.60 for Thu Oct 8",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.0061433447098976105,
+    "prev_rate": 0.02607561929595828,
+    "title": "DoorDash 7-day cancellation rate 0.6%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-09.pdf"
+ },
+ "2026-10-10": {
+  "date": "2026-10-10",
+  "status": "done",
+  "seconds": 0.89,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.29
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.76
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 28.24,
+    "for_date_iso": "2026-10-07",
+    "n_disputable": 1,
+    "for_date": "Wed Oct 7",
+    "impact_usd": 43.64,
+    "detail": "1 disputable charge, 1 valid-looking charge",
+    "title": "Uber Eats short $43.64 for Wed Oct 7",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-10-08",
+    "n_disputable": 0,
+    "for_date": "Thu Oct 8",
+    "impact_usd": 29.47,
+    "detail": "1 valid-looking charge",
+    "title": "Grubhub short $29.47 for Thu Oct 8",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 32.59,
+    "for_date_iso": "2026-10-09",
+    "n_disputable": 1,
+    "for_date": "Fri Oct 9",
+    "impact_usd": 69.67,
+    "detail": "1 missing order, 2 valid-looking charges",
+    "title": "DoorDash short $69.67 for Fri Oct 9",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.00597609561752988,
+    "prev_rate": 0.0061433447098976105,
+    "title": "DoorDash 7-day cancellation rate 0.6%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-10.pdf"
+ },
+ "2026-10-11": {
+  "date": "2026-10-11",
+  "status": "done",
+  "seconds": 0.73,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.27
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.57
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.04
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 15.4,
+    "for_date_iso": "2026-10-08",
+    "n_disputable": 1,
+    "for_date": "Thu Oct 8",
+    "impact_usd": 34.65,
+    "detail": "1 disputable charge, 1 valid-looking charge",
+    "title": "Uber Eats short $34.65 for Thu Oct 8",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-10-10",
+    "n_disputable": 0,
+    "for_date": "Sat Oct 10",
+    "impact_usd": 73.94,
+    "detail": "4 valid-looking charges",
+    "title": "DoorDash short $73.94 for Sat Oct 10",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.00587467362924282,
+    "prev_rate": 0.00597609561752988,
+    "title": "DoorDash 7-day cancellation rate 0.6%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-11.pdf"
+ },
+ "2026-10-12": {
+  "date": "2026-10-12",
+  "status": "done",
+  "seconds": 0.96,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.09
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.44
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.78
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.04
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.05
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 18.7,
+    "for_date_iso": "2026-10-09",
+    "n_disputable": 1,
+    "for_date": "Fri Oct 9",
+    "impact_usd": 28.06,
+    "detail": "1 disputable charge, 1 valid-looking charge",
+    "title": "Uber Eats short $28.06 for Fri Oct 9",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 15.4,
+    "for_date_iso": "2026-10-10",
+    "n_disputable": 1,
+    "for_date": "Sat Oct 10",
+    "impact_usd": 15.4,
+    "detail": "1 missing order",
+    "title": "Grubhub short $15.40 for Sat Oct 10",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 22.75,
+    "for_date_iso": "2026-10-11",
+    "n_disputable": 1,
+    "for_date": "Sun Oct 11",
+    "impact_usd": 88.16,
+    "detail": "1 missing order, 4 valid-looking charges",
+    "title": "DoorDash short $88.16 for Sun Oct 11",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.005897771952817824,
+    "prev_rate": 0.00587467362924282,
+    "title": "DoorDash 7-day cancellation rate 0.6%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-12.pdf"
+ },
+ "2026-10-13": {
+  "date": "2026-10-13",
+  "status": "done",
+  "seconds": 0.57,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.3
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.43
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 95.48,
+    "for_date_iso": "2026-10-10",
+    "n_disputable": 3,
+    "for_date": "Sat Oct 10",
+    "impact_usd": 95.48,
+    "detail": "1 disputable charge, 2 missing orders",
+    "title": "Uber Eats short $95.48 for Sat Oct 10",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 66.28,
+    "for_date_iso": "2026-10-12",
+    "n_disputable": 2,
+    "for_date": "Mon Oct 12",
+    "impact_usd": 84.36,
+    "detail": "1 disputable charge, 1 missing order, 2 valid-looking charges",
+    "title": "DoorDash short $84.36 for Mon Oct 12",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.005901639344262295,
+    "prev_rate": 0.005897771952817824,
+    "title": "DoorDash 7-day cancellation rate 0.6%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-13.pdf"
+ },
+ "2026-10-14": {
+  "date": "2026-10-14",
+  "status": "done",
+  "seconds": 0.75,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.09
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.39
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.59
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.04
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 26.5,
+    "for_date_iso": "2026-10-11",
+    "n_disputable": 1,
+    "for_date": "Sun Oct 11",
+    "impact_usd": 30.08,
+    "detail": "1 missing order",
+    "title": "Uber Eats short $30.08 for Sun Oct 11",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 40.71,
+    "for_date_iso": "2026-10-13",
+    "n_disputable": 2,
+    "for_date": "Tue Oct 13",
+    "impact_usd": 126.49,
+    "detail": "1 disputable charge, 1 missing order, 4 valid-looking charges",
+    "title": "DoorDash short $126.49 for Tue Oct 13",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.0034036759700476512,
+    "prev_rate": 0.005901639344262295,
+    "title": "DoorDash 7-day cancellation rate 0.3%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-14.pdf"
+ },
+ "2026-10-15": {
+  "date": "2026-10-15",
+  "status": "done",
+  "seconds": 0.51,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.24
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.39
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-10-13",
+    "n_disputable": 0,
+    "for_date": "Tue Oct 13",
+    "impact_usd": 9.62,
+    "detail": "unexplained",
+    "title": "Grubhub short $9.62 for Tue Oct 13",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-10-14",
+    "n_disputable": 0,
+    "for_date": "Wed Oct 14",
+    "impact_usd": 19.2,
+    "detail": "1 valid-looking charge",
+    "title": "DoorDash short $19.20 for Wed Oct 14",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.0,
+    "prev_rate": 0.0034036759700476512,
+    "title": "DoorDash 7-day cancellation rate 0.0%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-15.pdf"
+ },
+ "2026-10-16": {
+  "date": "2026-10-16",
+  "status": "done",
+  "seconds": 1.02,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.34
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.9
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 51.53,
+    "for_date_iso": "2026-10-13",
+    "n_disputable": 2,
+    "for_date": "Tue Oct 13",
+    "impact_usd": 60.33,
+    "detail": "1 disputable charge, 1 missing order, 1 valid-looking charge",
+    "title": "Uber Eats short $60.33 for Tue Oct 13",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-10-15",
+    "n_disputable": 0,
+    "for_date": "Thu Oct 15",
+    "impact_usd": 7.12,
+    "detail": "1 valid-looking charge",
+    "title": "DoorDash short $7.12 for Thu Oct 15",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.0,
+    "prev_rate": 0.0,
+    "title": "DoorDash 7-day cancellation rate 0.0%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-16.pdf"
+ },
+ "2026-10-17": {
+  "date": "2026-10-17",
+  "status": "done",
+  "seconds": 0.71,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.1
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.25
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.54
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.09
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.04
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-10-14",
+    "n_disputable": 0,
+    "for_date": "Wed Oct 14",
+    "impact_usd": 15.4,
+    "detail": "1 valid-looking charge",
+    "title": "Uber Eats short $15.40 for Wed Oct 14",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-10-15",
+    "n_disputable": 0,
+    "for_date": "Thu Oct 15",
+    "impact_usd": 4.95,
+    "detail": "1 valid-looking charge",
+    "title": "Grubhub short $4.95 for Thu Oct 15",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 18.7,
+    "for_date_iso": "2026-10-16",
+    "n_disputable": 2,
+    "for_date": "Fri Oct 16",
+    "impact_usd": 36.79,
+    "detail": "2 disputable charges, 1 valid-looking charge",
+    "title": "DoorDash short $36.79 for Fri Oct 16",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.0,
+    "prev_rate": 0.0,
+    "title": "DoorDash 7-day cancellation rate 0.0%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-17.pdf"
+ },
+ "2026-10-18": {
+  "date": "2026-10-18",
+  "status": "done",
+  "seconds": 0.79,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.33
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.62
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.04
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 28.16,
+    "for_date_iso": "2026-10-16",
+    "n_disputable": 1,
+    "for_date": "Fri Oct 16",
+    "impact_usd": 28.16,
+    "detail": "1 missing order",
+    "title": "Grubhub short $28.16 for Fri Oct 16",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 52.39,
+    "for_date_iso": "2026-10-17",
+    "n_disputable": 4,
+    "for_date": "Sat Oct 17",
+    "impact_usd": 79.33,
+    "detail": "2 disputable charges, 2 missing orders, 2 valid-looking charges",
+    "title": "DoorDash short $79.33 for Sat Oct 17",
+    "urgency": "important"
+   },
+   {
+    "kind": "sold_out_tonight",
+    "at": "8:29 PM",
+    "app_cancels": 6,
+    "minutes_live": 27,
+    "by_channel": {
+     "ubereats": 4,
+     "doordash": 2
+    },
+    "portions_missed": 10.5,
+    "prepped": 590,
+    "used": 589.5,
+    "impact_usd": null,
+    "title": "Chashu sold out at 8:29 PM; 6 app orders were cancelled while it was still live",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.0014104372355430183,
+    "prev_rate": 0.0,
+    "title": "DoorDash 7-day cancellation rate 0.1%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-18.pdf"
+ },
+ "2026-10-19": {
+  "date": "2026-10-19",
+  "status": "done",
+  "seconds": 0.59,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.09
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.28
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.45
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 9.35,
+    "for_date_iso": "2026-10-16",
+    "n_disputable": 1,
+    "for_date": "Fri Oct 16",
+    "impact_usd": 44.0,
+    "detail": "1 disputable charge, 2 valid-looking charges",
+    "title": "Uber Eats short $44.00 for Fri Oct 16",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-10-17",
+    "n_disputable": 0,
+    "for_date": "Sat Oct 17",
+    "impact_usd": 6.6,
+    "detail": "1 valid-looking charge",
+    "title": "Grubhub short $6.60 for Sat Oct 17",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 18.98,
+    "for_date_iso": "2026-10-18",
+    "n_disputable": 1,
+    "for_date": "Sun Oct 18",
+    "impact_usd": 84.64,
+    "detail": "1 missing order, 2 valid-looking charges",
+    "title": "DoorDash short $84.64 for Sun Oct 18",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.001444043321299639,
+    "prev_rate": 0.0014104372355430183,
+    "title": "DoorDash 7-day cancellation rate 0.1%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-19.pdf"
+ },
+ "2026-10-20": {
+  "date": "2026-10-20",
+  "status": "done",
+  "seconds": 0.89,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.1
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.41
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.72
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.09
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-10-17",
+    "n_disputable": 0,
+    "for_date": "Sat Oct 17",
+    "impact_usd": 23.79,
+    "detail": "1 valid-looking charge",
+    "title": "Uber Eats short $23.79 for Sat Oct 17",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-10-18",
+    "n_disputable": 0,
+    "for_date": "Sun Oct 18",
+    "impact_usd": 9.9,
+    "detail": "1 valid-looking charge",
+    "title": "Grubhub short $9.90 for Sun Oct 18",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-10-19",
+    "n_disputable": 0,
+    "for_date": "Mon Oct 19",
+    "impact_usd": 21.99,
+    "detail": "2 valid-looking charges",
+    "title": "DoorDash short $21.99 for Mon Oct 19",
+    "urgency": "important"
+   },
+   {
+    "kind": "sold_out_tonight",
+    "at": "7:42 PM",
+    "app_cancels": 9,
+    "minutes_live": 16,
+    "by_channel": {
+     "doordash": 6,
+     "ubereats": 3
+    },
+    "portions_missed": 15.0,
+    "prepped": 470,
+    "used": 468.5,
+    "impact_usd": null,
+    "title": "Chashu sold out at 7:42 PM; 9 app orders were cancelled while it was still live",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.005563282336578581,
+    "prev_rate": 0.001444043321299639,
+    "title": "DoorDash 7-day cancellation rate 0.6%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-20.pdf"
+ },
+ "2026-10-21": {
+  "date": "2026-10-21",
+  "status": "done",
+  "seconds": 0.51,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.09
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.26
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.39
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 17.05,
+    "for_date_iso": "2026-10-18",
+    "n_disputable": 1,
+    "for_date": "Sun Oct 18",
+    "impact_usd": 19.54,
+    "detail": "1 disputable charge",
+    "title": "Uber Eats short $19.54 for Sun Oct 18",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 26.57,
+    "for_date_iso": "2026-10-19",
+    "n_disputable": 1,
+    "for_date": "Mon Oct 19",
+    "impact_usd": 26.57,
+    "detail": "1 disputable charge",
+    "title": "Grubhub short $26.57 for Mon Oct 19",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 17.05,
+    "for_date_iso": "2026-10-20",
+    "n_disputable": 1,
+    "for_date": "Tue Oct 20",
+    "impact_usd": 36.24,
+    "detail": "1 disputable charge, 1 valid-looking charge",
+    "title": "DoorDash short $36.24 for Tue Oct 20",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.005344021376085505,
+    "prev_rate": 0.005563282336578581,
+    "title": "DoorDash 7-day cancellation rate 0.5%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-21.pdf"
+ },
+ "2026-10-22": {
+  "date": "2026-10-22",
+  "status": "done",
+  "seconds": 0.83,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.08
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.4
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.69
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-10-20",
+    "n_disputable": 0,
+    "for_date": "Tue Oct 20",
+    "impact_usd": 19.25,
+    "detail": "1 valid-looking charge",
+    "title": "Grubhub short $19.25 for Tue Oct 20",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-10-21",
+    "n_disputable": 0,
+    "for_date": "Wed Oct 21",
+    "impact_usd": 37.1,
+    "detail": "2 valid-looking charges",
+    "title": "DoorDash short $37.10 for Wed Oct 21",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.005082592121982211,
+    "prev_rate": 0.005344021376085505,
+    "title": "DoorDash 7-day cancellation rate 0.5%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-22.pdf"
+ },
+ "2026-10-23": {
+  "date": "2026-10-23",
+  "status": "done",
+  "seconds": 0.64,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.04
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.35
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.52
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 35.73,
+    "for_date_iso": "2026-10-20",
+    "n_disputable": 1,
+    "for_date": "Tue Oct 20",
+    "impact_usd": 63.5,
+    "detail": "1 missing order, 1 valid-looking charge",
+    "title": "Uber Eats short $63.50 for Tue Oct 20",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-10-21",
+    "n_disputable": 0,
+    "for_date": "Wed Oct 21",
+    "impact_usd": 12.1,
+    "detail": "unexplained",
+    "title": "Grubhub short $12.10 for Wed Oct 21",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 40.15,
+    "for_date_iso": "2026-10-22",
+    "n_disputable": 3,
+    "for_date": "Thu Oct 22",
+    "impact_usd": 84.86,
+    "detail": "2 disputable charges, 1 missing order, 2 valid-looking charges",
+    "title": "DoorDash short $84.86 for Thu Oct 22",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.005044136191677175,
+    "prev_rate": 0.005082592121982211,
+    "title": "DoorDash 7-day cancellation rate 0.5%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-23.pdf"
+ },
+ "2026-10-24": {
+  "date": "2026-10-24",
+  "status": "done",
+  "seconds": 0.89,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.09
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.41
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.74
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-10-21",
+    "n_disputable": 0,
+    "for_date": "Wed Oct 21",
+    "impact_usd": 9.62,
+    "detail": "unexplained",
+    "title": "Uber Eats short $9.62 for Wed Oct 21",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-10-22",
+    "n_disputable": 0,
+    "for_date": "Thu Oct 22",
+    "impact_usd": 19.25,
+    "detail": "1 valid-looking charge",
+    "title": "Grubhub short $19.25 for Thu Oct 22",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 14.3,
+    "for_date_iso": "2026-10-23",
+    "n_disputable": 2,
+    "for_date": "Fri Oct 23",
+    "impact_usd": 42.01,
+    "detail": "2 disputable charges, 1 valid-looking charge",
+    "title": "DoorDash short $42.01 for Fri Oct 23",
+    "urgency": "important"
+   },
+   {
+    "kind": "sold_out_tonight",
+    "at": "9:28 PM",
+    "app_cancels": 10,
+    "minutes_live": 25,
+    "by_channel": {
+     "doordash": 7,
+     "grubhub": 2,
+     "ubereats": 1
+    },
+    "portions_missed": 14.5,
+    "prepped": 750,
+    "used": 749.5,
+    "impact_usd": null,
+    "title": "Chashu sold out at 9:28 PM; 10 app orders were cancelled while it was still live",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.009014423076923076,
+    "prev_rate": 0.005044136191677175,
+    "title": "DoorDash 7-day cancellation rate 0.9%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-24.pdf"
+ },
+ "2026-10-25": {
+  "date": "2026-10-25",
+  "status": "done",
+  "seconds": 0.78,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.3
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.62
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.09
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 18.15,
+    "for_date_iso": "2026-10-22",
+    "n_disputable": 1,
+    "for_date": "Thu Oct 22",
+    "impact_usd": 53.9,
+    "detail": "1 disputable charge, 2 valid-looking charges",
+    "title": "Uber Eats short $53.90 for Thu Oct 22",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 45.24,
+    "for_date_iso": "2026-10-24",
+    "n_disputable": 3,
+    "for_date": "Sat Oct 24",
+    "impact_usd": 79.04,
+    "detail": "3 disputable charges, 2 valid-looking charges",
+    "title": "DoorDash short $79.04 for Sat Oct 24",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.007912355447352405,
+    "prev_rate": 0.009014423076923076,
+    "title": "DoorDash 7-day cancellation rate 0.8%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-25.pdf"
+ },
+ "2026-10-26": {
+  "date": "2026-10-26",
+  "status": "done",
+  "seconds": 0.65,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.3
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.53
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-10-23",
+    "n_disputable": 0,
+    "for_date": "Fri Oct 23",
+    "impact_usd": 9.62,
+    "detail": "unexplained",
+    "title": "Uber Eats short $9.62 for Fri Oct 23",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 15.4,
+    "for_date_iso": "2026-10-24",
+    "n_disputable": 1,
+    "for_date": "Sat Oct 24",
+    "impact_usd": 34.1,
+    "detail": "1 disputable charge, 1 valid-looking charge",
+    "title": "Grubhub short $34.10 for Sat Oct 24",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 25.22,
+    "for_date_iso": "2026-10-25",
+    "n_disputable": 1,
+    "for_date": "Sun Oct 25",
+    "impact_usd": 82.32,
+    "detail": "1 missing order, 3 valid-looking charges",
+    "title": "DoorDash short $82.32 for Sun Oct 25",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.007611241217798595,
+    "prev_rate": 0.007912355447352405,
+    "title": "DoorDash 7-day cancellation rate 0.8%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-26.pdf"
+ },
+ "2026-10-27": {
+  "date": "2026-10-27",
+  "status": "done",
+  "seconds": 0.54,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.26
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.41
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-10-26",
+    "n_disputable": 0,
+    "for_date": "Mon Oct 26",
+    "impact_usd": 19.22,
+    "detail": "1 valid-looking charge",
+    "title": "DoorDash short $19.22 for Mon Oct 26",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.004151838671411625,
+    "prev_rate": 0.007611241217798595,
+    "title": "DoorDash 7-day cancellation rate 0.4%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-27.pdf"
+ },
+ "2026-10-28": {
+  "date": "2026-10-28",
+  "status": "done",
+  "seconds": 0.77,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.12
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.32
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.64
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 29.15,
+    "for_date_iso": "2026-10-26",
+    "n_disputable": 1,
+    "for_date": "Mon Oct 26",
+    "impact_usd": 29.15,
+    "detail": "1 disputable charge",
+    "title": "Grubhub short $29.15 for Mon Oct 26",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 28.43,
+    "for_date_iso": "2026-10-27",
+    "n_disputable": 2,
+    "for_date": "Tue Oct 27",
+    "impact_usd": 47.7,
+    "detail": "1 disputable charge, 1 missing order, 1 valid-looking charge",
+    "title": "DoorDash short $47.70 for Tue Oct 27",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.00425273390036452,
+    "prev_rate": 0.004151838671411625,
+    "title": "DoorDash 7-day cancellation rate 0.4%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-28.pdf"
+ },
+ "2026-10-29": {
+  "date": "2026-10-29",
+  "status": "done",
+  "seconds": 0.94,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.27
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.77
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.07
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 27.79,
+    "for_date_iso": "2026-10-28",
+    "n_disputable": 2,
+    "for_date": "Wed Oct 28",
+    "impact_usd": 52.09,
+    "detail": "2 disputable charges, 1 valid-looking charge",
+    "title": "DoorDash short $52.09 for Wed Oct 28",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.004419191919191919,
+    "prev_rate": 0.00425273390036452,
+    "title": "DoorDash 7-day cancellation rate 0.4%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-29.pdf"
+ },
+ "2026-10-30": {
+  "date": "2026-10-30",
+  "status": "done",
+  "seconds": 0.59,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.05
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.22
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.45
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 12.1,
+    "for_date_iso": "2026-10-28",
+    "n_disputable": 2,
+    "for_date": "Wed Oct 28",
+    "impact_usd": 12.1,
+    "detail": "2 disputable charges",
+    "title": "Grubhub short $12.10 for Wed Oct 28",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 7.15,
+    "for_date_iso": "2026-10-29",
+    "n_disputable": 1,
+    "for_date": "Thu Oct 29",
+    "impact_usd": 24.05,
+    "detail": "1 disputable charge, 1 valid-looking charge",
+    "title": "DoorDash short $24.05 for Thu Oct 29",
+    "urgency": "important"
+   },
+   {
+    "kind": "sold_out_tonight",
+    "at": "8:16 PM",
+    "app_cancels": 15,
+    "minutes_live": 22,
+    "by_channel": {
+     "doordash": 8,
+     "ubereats": 5,
+     "grubhub": 2
+    },
+    "portions_missed": 26.0,
+    "prepped": 660,
+    "used": 659.5,
+    "impact_usd": null,
+    "title": "Chashu sold out at 8:16 PM; 15 app orders were cancelled while it was still live",
+    "urgency": "urgent"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.009140767824497258,
+    "prev_rate": 0.004419191919191919,
+    "title": "DoorDash 7-day cancellation rate 0.9%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-30.pdf"
+ },
+ "2026-10-31": {
+  "date": "2026-10-31",
+  "status": "done",
+  "seconds": 0.65,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.08
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.36
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.52
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 18.15,
+    "for_date_iso": "2026-10-28",
+    "n_disputable": 1,
+    "for_date": "Wed Oct 28",
+    "impact_usd": 18.15,
+    "detail": "1 disputable charge",
+    "title": "Uber Eats short $18.15 for Wed Oct 28",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 22.0,
+    "for_date_iso": "2026-10-30",
+    "n_disputable": 2,
+    "for_date": "Fri Oct 30",
+    "impact_usd": 40.69,
+    "detail": "2 disputable charges, 2 valid-looking charges",
+    "title": "DoorDash short $40.69 for Fri Oct 30",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.0050062578222778474,
+    "prev_rate": 0.009140767824497258,
+    "title": "DoorDash 7-day cancellation rate 0.5%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-10-31.pdf"
+ },
+ "2026-11-01": {
+  "date": "2026-11-01",
+  "status": "done",
+  "seconds": 0.77,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.41
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.59
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.05
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 9.9,
+    "for_date_iso": "2026-10-29",
+    "n_disputable": 1,
+    "for_date": "Thu Oct 29",
+    "impact_usd": 9.9,
+    "detail": "1 disputable charge",
+    "title": "Uber Eats short $9.90 for Thu Oct 29",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 13.64,
+    "for_date_iso": "2026-10-30",
+    "n_disputable": 1,
+    "for_date": "Fri Oct 30",
+    "impact_usd": 13.64,
+    "detail": "1 missing order",
+    "title": "Grubhub short $13.64 for Fri Oct 30",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 26.35,
+    "for_date_iso": "2026-10-31",
+    "n_disputable": 2,
+    "for_date": "Sat Oct 31",
+    "impact_usd": 102.54,
+    "detail": "2 disputable charges, 5 valid-looking charges",
+    "title": "DoorDash short $102.54 for Sat Oct 31",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.004962779156327543,
+    "prev_rate": 0.0050062578222778474,
+    "title": "DoorDash 7-day cancellation rate 0.5%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-11-01.pdf"
+ },
+ "2026-11-02": {
+  "date": "2026-11-02",
+  "status": "done",
+  "seconds": 0.55,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.21
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.42
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 33.69,
+    "for_date_iso": "2026-11-01",
+    "n_disputable": 2,
+    "for_date": "Sun Nov 1",
+    "impact_usd": 37.31,
+    "detail": "1 disputable charge, 1 missing order",
+    "title": "DoorDash short $37.31 for Sun Nov 1",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.005018820577164366,
+    "prev_rate": 0.004962779156327543,
+    "title": "DoorDash 7-day cancellation rate 0.5%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-11-02.pdf"
+ },
+ "2026-11-03": {
+  "date": "2026-11-03",
+  "status": "done",
+  "seconds": 0.55,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.08
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.28
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.41
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.05
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 66.31,
+    "for_date_iso": "2026-10-31",
+    "n_disputable": 3,
+    "for_date": "Sat Oct 31",
+    "impact_usd": 89.55,
+    "detail": "2 disputable charges, 1 missing order, 1 valid-looking charge",
+    "title": "Uber Eats short $89.55 for Sat Oct 31",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-11-01",
+    "n_disputable": 0,
+    "for_date": "Sun Nov 1",
+    "impact_usd": 9.62,
+    "detail": "unexplained",
+    "title": "Grubhub short $9.62 for Sun Nov 1",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 10.45,
+    "for_date_iso": "2026-11-02",
+    "n_disputable": 2,
+    "for_date": "Mon Nov 2",
+    "impact_usd": 19.74,
+    "detail": "2 disputable charges, 1 valid-looking charge",
+    "title": "DoorDash short $19.74 for Mon Nov 2",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.005047318611987382,
+    "prev_rate": 0.005018820577164366,
+    "title": "DoorDash 7-day cancellation rate 0.5%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-11-03.pdf"
+ },
+ "2026-11-04": {
+  "date": "2026-11-04",
+  "status": "done",
+  "seconds": 0.38,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.17
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.28
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.05
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.02
+   },
+   {
+    "step": "guard",
+    "status": "done",
+    "seconds": 0.0
+   }
+  ],
+  "findings": [
+   {
+    "kind": "payout_short",
+    "channel": "ubereats",
+    "channel_name": "Uber Eats",
+    "fresh": true,
+    "recoverable_usd": 36.3,
+    "for_date_iso": "2026-11-01",
+    "n_disputable": 2,
+    "for_date": "Sun Nov 1",
+    "impact_usd": 54.43,
+    "detail": "2 disputable charges",
+    "title": "Uber Eats short $54.43 for Sun Nov 1",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "grubhub",
+    "channel_name": "Grubhub",
+    "fresh": true,
+    "recoverable_usd": 0,
+    "for_date_iso": "2026-11-02",
+    "n_disputable": 0,
+    "for_date": "Mon Nov 2",
+    "impact_usd": 9.07,
+    "detail": "unexplained",
+    "title": "Grubhub short $9.07 for Mon Nov 2",
+    "urgency": "important"
+   },
+   {
+    "kind": "payout_short",
+    "channel": "doordash",
+    "channel_name": "DoorDash",
+    "fresh": true,
+    "recoverable_usd": 57.22,
+    "for_date_iso": "2026-11-03",
+    "n_disputable": 3,
+    "for_date": "Tue Nov 3",
+    "impact_usd": 76.42,
+    "detail": "2 disputable charges, 1 missing order, 1 valid-looking charge",
+    "title": "DoorDash short $76.42 for Tue Nov 3",
+    "urgency": "important"
+   },
+   {
+    "kind": "cancel_rate",
+    "rate": 0.004929143561306223,
+    "prev_rate": 0.005047318611987382,
+    "title": "DoorDash 7-day cancellation rate 0.5%",
+    "urgency": "important"
+   }
+  ],
+  "cross_check": [],
+  "pdf": "reports/2026-11-04.pdf"
+ },
+ "2026-11-05": {
+  "date": "2026-11-05",
+  "status": "done",
+  "seconds": 1.51,
+  "log": [
+   {
+    "step": "stock",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "books",
+    "status": "done",
+    "seconds": 0.28
+   },
+   {
+    "step": "demand",
+    "status": "done",
+    "seconds": 0.44
+   },
+   {
+    "step": "analyst",
+    "status": "done",
+    "seconds": 0.06
+   },
+   {
+    "step": "plan",
+    "status": "done",
+    "seconds": 0.03
+   },
+   {
+    "step": "sentinel",
+    "status": "done",
+    "seconds": 0.0
+   },
+   {
+    "step": "report",
+    "status": "done",
+    "seconds": 0.94
    },
    {
     "step": "guard",
@@ -99,370 +7624,6 @@
     "kind": "payout_short",
     "channel": "doordash",
     "channel_name": "DoorDash",
-    "fresh": false,
-    "recoverable_usd": 40.15,
-    "for_date_iso": "2026-10-22",
-    "n_disputable": 3,
-    "for_date": "Thu Oct 22",
-    "impact_usd": 84.86,
-    "detail": "2 disputable charges, 1 missing order, 2 valid-looking charges",
-    "title": "DoorDash short $84.86 for 2026-10-22",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "ubereats",
-    "channel_name": "Uber Eats",
-    "fresh": false,
-    "recoverable_usd": 18.15,
-    "for_date_iso": "2026-10-22",
-    "n_disputable": 1,
-    "for_date": "Thu Oct 22",
-    "impact_usd": 53.9,
-    "detail": "1 disputable charge, 2 valid-looking charges",
-    "title": "Uber Eats short $53.90 for 2026-10-22",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "grubhub",
-    "channel_name": "Grubhub",
-    "fresh": false,
-    "recoverable_usd": 0,
-    "for_date_iso": "2026-10-22",
-    "n_disputable": 0,
-    "for_date": "Thu Oct 22",
-    "impact_usd": 19.25,
-    "detail": "1 valid-looking charge",
-    "title": "Grubhub short $19.25 for 2026-10-22",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "doordash",
-    "channel_name": "DoorDash",
-    "fresh": false,
-    "recoverable_usd": 14.3,
-    "for_date_iso": "2026-10-23",
-    "n_disputable": 2,
-    "for_date": "Fri Oct 23",
-    "impact_usd": 42.01,
-    "detail": "2 disputable charges, 1 valid-looking charge",
-    "title": "DoorDash short $42.01 for 2026-10-23",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "ubereats",
-    "channel_name": "Uber Eats",
-    "fresh": false,
-    "recoverable_usd": 0,
-    "for_date_iso": "2026-10-23",
-    "n_disputable": 0,
-    "for_date": "Fri Oct 23",
-    "impact_usd": 9.62,
-    "detail": "unexplained",
-    "title": "Uber Eats short $9.62 for 2026-10-23",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "doordash",
-    "channel_name": "DoorDash",
-    "fresh": false,
-    "recoverable_usd": 45.24,
-    "for_date_iso": "2026-10-24",
-    "n_disputable": 3,
-    "for_date": "Sat Oct 24",
-    "impact_usd": 79.04,
-    "detail": "3 disputable charges, 2 valid-looking charges",
-    "title": "DoorDash short $79.04 for 2026-10-24",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "grubhub",
-    "channel_name": "Grubhub",
-    "fresh": false,
-    "recoverable_usd": 15.4,
-    "for_date_iso": "2026-10-24",
-    "n_disputable": 1,
-    "for_date": "Sat Oct 24",
-    "impact_usd": 34.1,
-    "detail": "1 disputable charge, 1 valid-looking charge",
-    "title": "Grubhub short $34.10 for 2026-10-24",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "doordash",
-    "channel_name": "DoorDash",
-    "fresh": false,
-    "recoverable_usd": 25.22,
-    "for_date_iso": "2026-10-25",
-    "n_disputable": 1,
-    "for_date": "Sun Oct 25",
-    "impact_usd": 82.32,
-    "detail": "1 missing order, 3 valid-looking charges",
-    "title": "DoorDash short $82.32 for 2026-10-25",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "doordash",
-    "channel_name": "DoorDash",
-    "fresh": false,
-    "recoverable_usd": 0,
-    "for_date_iso": "2026-10-26",
-    "n_disputable": 0,
-    "for_date": "Mon Oct 26",
-    "impact_usd": 19.22,
-    "detail": "1 valid-looking charge",
-    "title": "DoorDash short $19.22 for 2026-10-26",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "grubhub",
-    "channel_name": "Grubhub",
-    "fresh": false,
-    "recoverable_usd": 29.15,
-    "for_date_iso": "2026-10-26",
-    "n_disputable": 1,
-    "for_date": "Mon Oct 26",
-    "impact_usd": 29.15,
-    "detail": "1 disputable charge",
-    "title": "Grubhub short $29.15 for 2026-10-26",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "doordash",
-    "channel_name": "DoorDash",
-    "fresh": false,
-    "recoverable_usd": 28.43,
-    "for_date_iso": "2026-10-27",
-    "n_disputable": 2,
-    "for_date": "Tue Oct 27",
-    "impact_usd": 47.7,
-    "detail": "1 disputable charge, 1 missing order, 1 valid-looking charge",
-    "title": "DoorDash short $47.70 for 2026-10-27",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "doordash",
-    "channel_name": "DoorDash",
-    "fresh": false,
-    "recoverable_usd": 27.79,
-    "for_date_iso": "2026-10-28",
-    "n_disputable": 2,
-    "for_date": "Wed Oct 28",
-    "impact_usd": 52.09,
-    "detail": "2 disputable charges, 1 valid-looking charge",
-    "title": "DoorDash short $52.09 for 2026-10-28",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "ubereats",
-    "channel_name": "Uber Eats",
-    "fresh": false,
-    "recoverable_usd": 18.15,
-    "for_date_iso": "2026-10-28",
-    "n_disputable": 1,
-    "for_date": "Wed Oct 28",
-    "impact_usd": 18.15,
-    "detail": "1 disputable charge",
-    "title": "Uber Eats short $18.15 for 2026-10-28",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "grubhub",
-    "channel_name": "Grubhub",
-    "fresh": false,
-    "recoverable_usd": 12.1,
-    "for_date_iso": "2026-10-28",
-    "n_disputable": 2,
-    "for_date": "Wed Oct 28",
-    "impact_usd": 12.1,
-    "detail": "2 disputable charges",
-    "title": "Grubhub short $12.10 for 2026-10-28",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "doordash",
-    "channel_name": "DoorDash",
-    "fresh": false,
-    "recoverable_usd": 7.15,
-    "for_date_iso": "2026-10-29",
-    "n_disputable": 1,
-    "for_date": "Thu Oct 29",
-    "impact_usd": 24.05,
-    "detail": "1 disputable charge, 1 valid-looking charge",
-    "title": "DoorDash short $24.05 for 2026-10-29",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "ubereats",
-    "channel_name": "Uber Eats",
-    "fresh": false,
-    "recoverable_usd": 9.9,
-    "for_date_iso": "2026-10-29",
-    "n_disputable": 1,
-    "for_date": "Thu Oct 29",
-    "impact_usd": 9.9,
-    "detail": "1 disputable charge",
-    "title": "Uber Eats short $9.90 for 2026-10-29",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "doordash",
-    "channel_name": "DoorDash",
-    "fresh": false,
-    "recoverable_usd": 22.0,
-    "for_date_iso": "2026-10-30",
-    "n_disputable": 2,
-    "for_date": "Fri Oct 30",
-    "impact_usd": 40.69,
-    "detail": "2 disputable charges, 2 valid-looking charges",
-    "title": "DoorDash short $40.69 for 2026-10-30",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "grubhub",
-    "channel_name": "Grubhub",
-    "fresh": false,
-    "recoverable_usd": 13.64,
-    "for_date_iso": "2026-10-30",
-    "n_disputable": 1,
-    "for_date": "Fri Oct 30",
-    "impact_usd": 13.64,
-    "detail": "1 missing order",
-    "title": "Grubhub short $13.64 for 2026-10-30",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "doordash",
-    "channel_name": "DoorDash",
-    "fresh": false,
-    "recoverable_usd": 26.35,
-    "for_date_iso": "2026-10-31",
-    "n_disputable": 2,
-    "for_date": "Sat Oct 31",
-    "impact_usd": 102.54,
-    "detail": "2 disputable charges, 5 valid-looking charges",
-    "title": "DoorDash short $102.54 for 2026-10-31",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "ubereats",
-    "channel_name": "Uber Eats",
-    "fresh": false,
-    "recoverable_usd": 66.31,
-    "for_date_iso": "2026-10-31",
-    "n_disputable": 3,
-    "for_date": "Sat Oct 31",
-    "impact_usd": 89.55,
-    "detail": "2 disputable charges, 1 missing order, 1 valid-looking charge",
-    "title": "Uber Eats short $89.55 for 2026-10-31",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "doordash",
-    "channel_name": "DoorDash",
-    "fresh": false,
-    "recoverable_usd": 33.69,
-    "for_date_iso": "2026-11-01",
-    "n_disputable": 2,
-    "for_date": "Sun Nov 1",
-    "impact_usd": 37.31,
-    "detail": "1 disputable charge, 1 missing order",
-    "title": "DoorDash short $37.31 for 2026-11-01",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "ubereats",
-    "channel_name": "Uber Eats",
-    "fresh": false,
-    "recoverable_usd": 36.3,
-    "for_date_iso": "2026-11-01",
-    "n_disputable": 2,
-    "for_date": "Sun Nov 1",
-    "impact_usd": 54.43,
-    "detail": "2 disputable charges",
-    "title": "Uber Eats short $54.43 for 2026-11-01",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "grubhub",
-    "channel_name": "Grubhub",
-    "fresh": false,
-    "recoverable_usd": 0,
-    "for_date_iso": "2026-11-01",
-    "n_disputable": 0,
-    "for_date": "Sun Nov 1",
-    "impact_usd": 9.62,
-    "detail": "unexplained",
-    "title": "Grubhub short $9.62 for 2026-11-01",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "doordash",
-    "channel_name": "DoorDash",
-    "fresh": false,
-    "recoverable_usd": 10.45,
-    "for_date_iso": "2026-11-02",
-    "n_disputable": 2,
-    "for_date": "Mon Nov 2",
-    "impact_usd": 19.74,
-    "detail": "2 disputable charges, 1 valid-looking charge",
-    "title": "DoorDash short $19.74 for 2026-11-02",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "grubhub",
-    "channel_name": "Grubhub",
-    "fresh": false,
-    "recoverable_usd": 0,
-    "for_date_iso": "2026-11-02",
-    "n_disputable": 0,
-    "for_date": "Mon Nov 2",
-    "impact_usd": 9.07,
-    "detail": "unexplained",
-    "title": "Grubhub short $9.07 for 2026-11-02",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "doordash",
-    "channel_name": "DoorDash",
-    "fresh": false,
-    "recoverable_usd": 57.22,
-    "for_date_iso": "2026-11-03",
-    "n_disputable": 3,
-    "for_date": "Tue Nov 3",
-    "impact_usd": 76.42,
-    "detail": "2 disputable charges, 1 missing order, 1 valid-looking charge",
-    "title": "DoorDash short $76.42 for 2026-11-03",
-    "urgency": "important"
-   },
-   {
-    "kind": "payout_short",
-    "channel": "doordash",
-    "channel_name": "DoorDash",
     "fresh": true,
     "recoverable_usd": 86.4,
     "for_date_iso": "2026-11-04",
@@ -470,7 +7631,7 @@
     "for_date": "Wed Nov 4",
     "impact_usd": 86.38,
     "detail": "3 disputable charges",
-    "title": "DoorDash short $86.38 for 2026-11-04",
+    "title": "DoorDash short $86.38 for Wed Nov 4",
     "urgency": "urgent"
    },
    {
@@ -478,6 +7639,14 @@
     "at": "8:39 PM",
     "app_cancels": 12,
     "minutes_live": 45,
+    "by_channel": {
+     "doordash": 9,
+     "ubereats": 2,
+     "grubhub": 1
+    },
+    "portions_missed": 18.5,
+    "prepped": 479,
+    "used": 479.0,
     "impact_usd": null,
     "title": "Chashu sold out at 8:39 PM; 12 app orders were cancelled while it was still live",
     "urgency": "urgent"
@@ -491,6 +7660,6 @@
    }
   ],
   "cross_check": [],
-  "pdf": "/home/claude/gondola-test/out/reports/2026-11-05.pdf"
+  "pdf": "reports/2026-11-05.pdf"
  }
 }

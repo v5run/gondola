@@ -34,7 +34,9 @@ def features(daily: pd.DataFrame, calendar_extra: pd.DataFrame | None = None) ->
     df["doy_sin"], df["doy_cos"] = np.sin(2 * np.pi * doy / 365), np.cos(2 * np.pi * doy / 365)
     s = df.set_index("business_date").orders
     lag7 = s.shift(7, freq="D").reindex(df.business_date).values
-    wk = np.nanmean(np.vstack([s.shift(7 * k, freq="D").reindex(df.business_date).values for k in (1, 2, 3, 4)]), axis=0)
+    with warnings.catch_warnings():  # the first weeks have no history yet: NaN is expected there
+        warnings.simplefilter("ignore", RuntimeWarning)
+        wk = np.nanmean(np.vstack([s.shift(7 * k, freq="D").reindex(df.business_date).values for k in (1, 2, 3, 4)]), axis=0)
     df["lag_7"], df["lag_wk_mean"] = lag7, wk
     return df
 

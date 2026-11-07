@@ -185,7 +185,7 @@ if __name__ == "__main__":
     st = Store()
     res = {"allocation": allocation_study(st), "capacity": capacity_study(st)}
     (ROOT / "out").mkdir(exist_ok=True)
-    (ROOT / "out" / "pivot_sim.json").write_text(json.dumps(res, indent=1, default=str))
+    (ROOT / "out" / "pivot_sim.json").write_text(json.dumps(res, indent=1, default=str), encoding="utf-8")
     print(pd.DataFrame(res["allocation"]["table"]).to_string())
     print(json.dumps(res["capacity"], indent=1))
 
@@ -227,7 +227,7 @@ def guard_sensitivity(st: Store) -> list[dict]:
 if __name__ == "__main__" and "--sens" in sys.argv:
     r = guard_sensitivity(Store())
     p = ROOT / "out" / "pivot_sim.json"
-    j = json.loads(p.read_text()); j["guard_sensitivity"] = r; p.write_text(json.dumps(j, indent=1, default=str))
+    j = json.loads(p.read_text(encoding="utf-8")); j["guard_sensitivity"] = r; p.write_text(json.dumps(j, indent=1, default=str), encoding="utf-8")
     print(pd.DataFrame(r).pivot_table(index=["count_error_sd", "pause_delay_min"], columns="buffer_portions", values="cancels_90d"))
 
 
@@ -268,5 +268,5 @@ def guard_with_recount(st: Store) -> list[dict]:
 if __name__ == "__main__" and "--recount" in sys.argv:
     r = guard_with_recount(Store())
     p = ROOT / "out" / "pivot_sim.json"
-    j = json.loads(p.read_text()); j["guard_with_recount"] = r; p.write_text(json.dumps(j, indent=1, default=str))
+    j = json.loads(p.read_text(encoding="utf-8")); j["guard_with_recount"] = r; p.write_text(json.dumps(j, indent=1, default=str), encoding="utf-8")
     print(pd.DataFrame(r).to_string())

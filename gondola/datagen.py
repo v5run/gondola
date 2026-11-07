@@ -534,7 +534,7 @@ def main() -> None:
     cs2 = cs.copy()
     for c in ("business_date", "opened_at", "ended_at"):
         cs2[c] = cs2[c].astype(str)
-    (RAW / "cash_drawer_shifts.json").write_text(json.dumps({"cash_drawer_shifts": cs2.to_dict("records")}, indent=1))
+    (RAW / "cash_drawer_shifts.json").write_text(json.dumps({"cash_drawer_shifts": cs2.to_dict("records")}, indent=1), encoding="utf-8")
     pd.DataFrame(labour).to_csv(RAW / "labour_shifts.csv", index=False)
     pd.DataFrame(inv_rows).to_csv(RAW / "invoices.csv", index=False)
     pd.DataFrame(waste_rows).to_csv(RAW / "waste_log.csv", index=False)

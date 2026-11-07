@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Monthly Summary {{ month }}</title>
+<style>
+{{ font_face | safe }}
+@page { size: Letter; margin: 0 }
+* { box-sizing: border-box }
+body { margin: 0; font-family: "Inter", "Segoe UI", -apple-system, "Helvetica Neue", Arial, sans-serif; color: #14201c; background: #f6f3ec; font-size: 10.5pt; line-height: 1.45 }
+.page { width: 8.5in; height: 11in; padding: 0.55in 0.6in; page-break-after: always; position: relative; overflow: hidden }
+.top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px }
+.brand { font-weight: 700; color: #0f4d40; font-size: 13pt }
+.meta { color: #56605b; font-size: 9.5pt }
+h1 { font-size: 24pt; margin: 0 0 6px; font-weight: 650; letter-spacing: 0 }
+h2 { font-size: 13pt; margin: 16px 0 6px; font-weight: 650 }
+.lead { color: #56605b; margin: 0 0 18px; max-width: 6.4in }
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px }
+.kpi { background: #fff; border-radius: 12px; padding: 12px 14px }
+.kpi .v { font-size: 18pt; font-weight: 650 }
+.kpi .l { color: #56605b; font-size: 9pt }
+.kpi .d { font-size: 9pt; color: #0f4d40 }
+.kpi .d.neg { color: #d03b3b }
+.att { background: #0f4d40; color: #fff; border-radius: 14px; padding: 14px 18px; margin-top: 14px }
+.att h2 { color: #b8e986; margin: 0 0 6px }
+.att .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px }
+.att .big { font-size: 17pt; font-weight: 650 }
+.att .sm { color: #cfe3d9; font-size: 9pt }
+table { width: 100%; font-size: 9.5pt; border-spacing: 0 4px; border-collapse: separate }
+th { text-align: left; color: #56605b; font-weight: 500; padding: 5px 6px }
+td { padding: 6px; background: #fff }
+tr td:first-child { border-radius: 8px 0 0 8px } tr td:last-child { border-radius: 0 8px 8px 0 }
+.num { text-align: right; font-variant-numeric: tabular-nums }
+.neg { color: #d03b3b } .pos { color: #0ca30c }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 18px }
+.card { background: #fff; border-radius: 12px; padding: 12px 14px }
+.card .big { font-size: 15pt; font-weight: 650 }
+.small { font-size: 9pt; color: #56605b }
+.key { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin: 0 4px 0 10px; vertical-align: -1px }
+.foot { position: absolute; bottom: 0.4in; left: 0.6in; right: 0.6in; display: flex; justify-content: space-between; color: #8b938e; font-size: 8.5pt }
+</style></head>
+<body>
+<div class="page">
+  <div class="top"><div class="brand">Gondola</div><div class="meta">{{ store_name }} · {{ month_name }}{% if rebuilt %} · rebuilt {{ rebuilt }}{% endif %}</div></div>
+  <h1>{{ headline }}</h1>
+  <p class="lead">{{ summary }}</p>
+  <div class="kpis">
+    {% for k in kpis %}<div class="kpi"><div class="l">{{ k.label }}</div><div class="v">{{ k.value }}</div><div class="d {{ 'neg' if k.bad else '' }}">{{ k.delta }}</div></div>{% endfor %}
+  </div>
+  <div class="att"><h2>What Gondola did this month</h2>
+    <div class="row">
+      <div><div class="big">${{ "{:,.0f}".format(money.recoverable_flagged_usd or 0) }}</div><div class="sm">flagged to recover from the apps ({{ money.disputable_charges or 0 }} charges to dispute across {{ money.payout_reports_short or 0 }} short payout reports)</div></div>
+      <div><div class="big">{{ sold_out.avoided }}</div><div class="sm">app cancellations avoidable with Guard on {{ sold_out.days }} sell-out night{{ '' if sold_out.days == 1 else 's' }} ({{ sold_out.app_cancels }} happened; {{ sold_out.with_guard }} in the replay)</div></div>
+      <div><div class="big">{{ alerts.texts or 0 }}</div><div class="sm">texts sent ({{ alerts.urgent_items or 0 }} urgent items), {{ alerts.emails or 0 }} nightly emails; {{ alerts.quiet_nights or 0 }} nights needed nothing</div></div>
+    </div>
+  </div>
+  <h2>Net sales by day</h2>
+  <div class="card">{{ chart_svg | safe }}
+    <div class="small"><span class="key" style="background:#0f4d40;margin-left:0"></span>best day<span class="key" style="background:#d03b3b"></span>worst day<span class="key" style="background:#7fa89b"></span>other days<span class="key" style="background:#e0a526;border-radius:50%"></span>chashu sold out<span class="key" style="background:#e4e1d9"></span>closed</div>
+  </div>
+  <div class="two" style="margin-top:12px">
+    <div class="card"><div class="small">Best day</div><div class="big">{{ best.label }} · {{ best.net_sales }}</div>
+      {{ best.orders }} orders · {{ best.vs }}<br><span class="small">{{ best.context | capitalize }}</span></div>
+    <div class="card"><div class="small">Worst day</div><div class="big">{{ worst.label }} · {{ worst.net_sales }}</div>
+      {{ worst.orders }} orders · {{ worst.vs }}<br><span class="small">{{ worst.context | capitalize }}</span></div>
+  </div>
+  <div class="foot"><span>Monthly Summary</span><span>1</span></div>
+</div>
+<div class="page">
+  <div class="top"><div class="brand">Gondola</div><div class="meta">{{ store_name }} · {{ month_name }}</div></div>
+  <h2 style="margin-top:0">Channels</h2>
+  <table><tr><th>Channel</th><th class="num">Net sales</th><th class="num">Share</th><th class="num">vs {{ prev_name }}</th></tr>
+    {% for c in channels %}<tr><td>{{ c.name }}</td><td class="num">{{ c.value }}</td><td class="num">{{ "{:.0%}".format(c.share) }}</td><td class="num">{{ c.delta }}</td></tr>{% endfor %}
+  </table>
+  <h2>Money</h2>
+  <div class="two">
+    <div class="card"><b>App payouts</b><br>{{ money.payout_reports_short or 0 }} reports paid less than expected, ${{ "{:,.2f}".format(money.payout_short_usd or 0) }} in all;
+      <b>${{ "{:,.2f}".format(money.recoverable_flagged_usd or 0) }}</b> looks recoverable.
+      {% if money.top %}<div class="small" style="margin-top:4px">{% for t in money.top %}{{ t.title }} (${{ "{:,.2f}".format(t.recoverable_usd or 0) }} recoverable){% if not loop.last %}<br>{% endif %}{% endfor %}</div>{% endif %}</div>
+    <div class="card"><b>Cash drawer</b><br>{% if money.cash_short_nights %}Short on {{ money.cash_short_nights }} night{{ '' if money.cash_short_nights == 1 else 's' }}, ${{ "{:,.2f}".format(money.cash_short_usd) }} in all.{% else %}No short nights flagged.{% endif %}</div>
+  </div>
+  <h2>Chashu and cancellations</h2>
+  <div class="two">
+    <div class="card"><b>Sold out on {{ sold_out.days }} night{{ '' if sold_out.days == 1 else 's' }}</b>{% if sold_out.dates %} ({{ sold_out.dates }}){% endif %}<br>
+      {{ sold_out.app_cancels }} app orders were cancelled while chashu was still live on the apps. Replayed with Guard pausing the apps first: {{ sold_out.with_guard }}.</div>
+    <div class="card"><b>{{ cancels }} cancellations</b> in the month, {{ avoidable_cancels }} of them for an unavailable item (the kind DoorDash counts against the store).</div>
+  </div>
+  <h2>Forecast accuracy</h2>
+  {% if forecast %}<div class="card">Average error {{ forecast.mape }} over {{ forecast.days }} days{% if forecast.naive %}, against {{ forecast.naive }} for "same weekday last month"{% endif %}.
+    {% if forecast.within %}The actual count landed inside the forecast range on {{ forecast.within }} of the {{ forecast.stored }} nights with a stored forecast.{% endif %}
+    Biggest miss: {{ forecast.worst }}.</div>{% else %}<div class="small">No forecasts to score this month.</div>{% endif %}
+  <h2>Closes and alerts</h2>
+  <div class="card">{% if closes.nights %}{{ closes.nights }} closes ({{ closes.done }} complete{% if closes.partial %}, {{ closes.partial }} partial{% endif %}). {% endif %}{{ alerts.texts or 0 }} texts, {{ alerts.emails or 0 }} emails with the nightly report.
+    {% if coverage %}<div class="small" style="margin-top:4px">{{ coverage }}</div>{% endif %}</div>
+  <div class="foot"><span>Numbers come from the store's own POS, payout reports and the nightly closes. Generated {{ generated }}.</span><span>2</span></div>
+</div>
+</body></html>

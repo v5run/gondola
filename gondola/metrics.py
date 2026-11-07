@@ -9,7 +9,7 @@ import pandas as pd
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFS = yaml.safe_load((Path(__file__).parent / "metrics.yaml").read_text())
+DEFS = yaml.safe_load((Path(__file__).parent / "metrics.yaml").read_text(encoding="utf-8"))
 GRAINS = {"day": "business_date", "channel": "channel", "hour": "hour", "item": "item", "dow": "dow"}
 
 

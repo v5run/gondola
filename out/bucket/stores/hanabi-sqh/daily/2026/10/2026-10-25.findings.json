@@ -1,0 +1,215 @@
+{
+ "store_name": "Hanabi Ramen, Squirrel Hill",
+ "date": "2026-10-25",
+ "date_long": "Sunday, October 25, 2026",
+ "dow_name": "Sunday",
+ "headline": "A steady night, Sunday",
+ "summary": "516 orders and $16,797 in net sales (-2% vs a usual Sunday). No weather or events of note. Tomorrow looks like 394 orders, with the rush 5:45 pm\u20138:00 pm.",
+ "kpis": [
+  {
+   "label": "Net sales",
+   "value": "$16,797",
+   "delta": "-2% vs a usual Sunday",
+   "bad": true
+  },
+  {
+   "label": "Orders",
+   "value": "516",
+   "delta": "-4% vs a usual Sunday",
+   "bad": true
+  },
+  {
+   "label": "Average ticket",
+   "value": "$32.55",
+   "delta": "+2% vs a usual Sunday",
+   "bad": false
+  },
+  {
+   "label": "Labour",
+   "value": "23.0%",
+   "delta": "of net sales",
+   "bad": false
+  }
+ ],
+ "attention": [
+  "2 older payout reports checked: $63.39 looks recoverable (checklist on page 2)",
+  "Tomorrow needs +2 cook 11:45\u201312:45"
+ ],
+ "curve_svg": "<svg viewBox=\"0 0 300 124\" width=\"100%\"><path d=\"M0.0,84.0 L6.4,83.0 L12.8,84.0 L19.1,60.6 L25.5,50.8 L31.9,52.8 L38.3,28.4 L44.7,33.3 L51.1,44.0 L57.4,42.1 L63.8,57.7 L70.2,64.5 L76.6,79.1 L83.0,94.7 L89.4,96.6 L95.7,110.3 L102.1,114.2 L108.5,113.5 L114.9,114.8 L121.3,108.3 L127.7,112.2 L134.0,107.3 L140.4,104.4 L146.8,88.8 L153.2,75.2 L159.6,61.6 L166.0,50.8 L172.3,36.2 L178.7,19.7 L185.1,17.7 L191.5,17.7 L197.9,10.9 L204.3,20.6 L210.6,29.4 L217.0,51.8 L223.4,62.5 L229.8,85.9 L236.2,87.9 L242.6,88.8 L248.9,84.9 L255.3,92.7 L261.7,84.0 L268.1,97.6 L274.5,100.5 L280.9,120.0 L287.2,120.0 L293.6,120.0 L300.0,120.0\" fill=\"none\" stroke=\"#c9ccc6\" stroke-width=\"2\"/><path d=\"M0.0,81.0 L6.4,108.3 L12.8,73.2 L19.1,65.5 L25.5,69.4 L31.9,42.1 L38.3,49.9 L44.7,14.8 L51.1,26.5 L57.4,49.9 L63.8,81.0 L70.2,81.0 L76.6,61.6 L83.0,96.6 L89.4,108.3 L95.7,112.2 L102.1,112.2 L108.5,116.1 L114.9,108.3 L121.3,120.0 L127.7,116.1 L134.0,112.2 L140.4,104.4 L146.8,96.6 L153.2,73.2 L159.6,69.4 L166.0,69.4 L172.3,30.4 L178.7,14.8 L185.1,18.7 L191.5,18.7 L197.9,22.6 L204.3,46.0 L210.6,30.4 L217.0,22.6 L223.4,84.9 L229.8,104.4 L236.2,84.9 L242.6,96.6 L248.9,92.7 L255.3,88.8 L261.7,88.8 L268.1,100.5 L274.5,100.5 L280.9,120.0 L287.2,120.0 L293.6,120.0 L300.0,120.0\" fill=\"none\" stroke=\"#0f4d40\" stroke-width=\"2.4\"/></svg>",
+ "channels": [
+  {
+   "key": "in_store",
+   "today": 5116.0,
+   "usual": 5493.75,
+   "change": -377.75
+  },
+  {
+   "key": "doordash",
+   "today": 7308.95,
+   "usual": 7553.7,
+   "change": -244.75
+  },
+  {
+   "key": "grubhub",
+   "today": 1203.4,
+   "usual": 1377.2,
+   "change": -173.8
+  },
+  {
+   "key": "ubereats",
+   "today": 3169.1,
+   "usual": 2786.99,
+   "change": 382.11
+  }
+ ],
+ "context_line": "No weather or events of note",
+ "payouts": [
+  {
+   "channel": "Uber Eats \u00b7 Thu Oct 22",
+   "status": "Verified",
+   "sales": 3069.0,
+   "expected": 2240.3,
+   "reported_s": "$2,186.40",
+   "difference": -53.9,
+   "diff_s": "-53.90"
+  },
+  {
+   "channel": "Grubhub \u00b7 Fri Oct 23",
+   "status": "Verified",
+   "sales": 1641.75,
+   "expected": 1313.4,
+   "reported_s": "$1,313.40",
+   "difference": 0.0,
+   "diff_s": "+0.00"
+  },
+  {
+   "channel": "DoorDash \u00b7 Sat Oct 24",
+   "status": "Verified",
+   "sales": 10811.35,
+   "expected": 8108.66,
+   "reported_s": "$8,029.62",
+   "difference": -79.04,
+   "diff_s": "-79.04"
+  },
+  {
+   "channel": "DoorDash \u00b7 tonight",
+   "status": "Estimated",
+   "sales": 7308.95,
+   "expected": 5299.71,
+   "reported_s": "arrives later",
+   "difference": null,
+   "diff_s": ""
+  },
+  {
+   "channel": "Uber Eats \u00b7 tonight",
+   "status": "Estimated",
+   "sales": 3169.1,
+   "expected": 2313.44,
+   "reported_s": "arrives later",
+   "difference": null,
+   "diff_s": ""
+  },
+  {
+   "channel": "Grubhub \u00b7 tonight",
+   "status": "Estimated",
+   "sales": 1203.4,
+   "expected": 962.72,
+   "reported_s": "arrives later",
+   "difference": null,
+   "diff_s": ""
+  }
+ ],
+ "cash": {
+  "date": "2026-10-25",
+  "status": "closed",
+  "shift_id": "cds-20261025",
+  "state": "CLOSED",
+  "shifts": 1,
+  "expected": 1747.34,
+  "counted": 1747.84,
+  "difference": 0.5,
+  "flag": false
+ },
+ "labour_line": "219 hours, $3,866 (23.0% of net sales)",
+ "disputes": [
+  {
+   "order": "o0165563",
+   "amount": 33.14,
+   "reason": "charge is more than any single item on the order",
+   "days_left": 13,
+   "channel": "DoorDash"
+  },
+  {
+   "order": "o0164476",
+   "amount": 18.15,
+   "reason": "charge equals the price of a menu item that wasn't on the order",
+   "days_left": 11,
+   "channel": "Uber Eats"
+  },
+  {
+   "order": "o0165799",
+   "amount": 7.15,
+   "reason": "charge equals the price of a menu item that wasn't on the order",
+   "days_left": 13,
+   "channel": "DoorDash"
+  },
+  {
+   "order": "o0165676",
+   "amount": 4.95,
+   "reason": "charge equals the price of a menu item that wasn't on the order",
+   "days_left": 13,
+   "channel": "DoorDash"
+  }
+ ],
+ "tomorrow": {
+  "p50": "394",
+  "p10": "349",
+  "p90": "458",
+  "rush": "5:45 pm\u20138:00 pm",
+  "similar": "Dec 1, Sep 14, Oct 12",
+  "par": 520,
+  "old_par": 450,
+  "safety": "pause chashu on the apps only if fewer than 6 portions remain",
+  "card": [
+   {
+    "item": "Chashu",
+    "target": 520,
+    "on_hand": 22.0,
+    "prep": 500,
+    "pause_at": {
+     "doordash": null,
+     "ubereats": null,
+     "grubhub": null
+    },
+    "pause_if_busy": {
+     "doordash": "20:45",
+     "ubereats": "20:45",
+     "grubhub": "20:45"
+    },
+    "recount_at": 120,
+    "warnings": []
+   }
+  ],
+  "staff": "+2 cook 11:45\u201312:45"
+ },
+ "check": {
+  "predicted": "528",
+  "actual": "516",
+  "err": "+2.2%",
+  "mape": "8.3%",
+  "naive": "9.8%",
+  "source": "last night's stored forecast"
+ },
+ "generated": "Oct 25 11:10 PM",
+ "rebuilt": null,
+ "closed_day": false,
+ "meta": {
+  "net_sales": 16797.45,
+  "orders": 516,
+  "vs_usual_pct": -0.0241,
+  "urgent": 0,
+  "texted": false,
+  "recoverable_usd": 63.39,
+  "closed_day": false
+ }
+}

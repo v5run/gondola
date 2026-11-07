@@ -101,7 +101,7 @@ def test_ask_answers_with_tool_calls(st, q):
 def test_bucket_lifecycle(tmp_path):
     b = Bucket(tmp_path)
     pdf = tmp_path / "r.pdf"; pdf.write_bytes(b"%PDF-1.4 test")
-    fj = tmp_path / "r.json"; fj.write_text(json.dumps({"x": 1}))
+    fj = tmp_path / "r.json"; fj.write_text(json.dumps({"x": 1}), encoding="utf-8")
     b.put_daily("2026-09-01", pdf, fj, created=datetime(2026, 9, 1, 23))
     b.put_daily("2026-11-01", pdf, fj, created=datetime(2026, 11, 1, 23))
     r = b.apply_lifecycle(datetime(2026, 11, 5, 23))
@@ -146,7 +146,7 @@ def test_closed_day_and_rerun(tmp_path):
         a = pipeline.run_close(D, render=False, notifier=n)
         b = pipeline.run_close(D, render=False, notifier=n, force=True)
         assert len(a["findings"]) == len(b["findings"])
-        assert len((tmp_path / "o2.jsonl").read_text().splitlines()) == 1  # one text per close, however many taps
+        assert len((tmp_path / "o2.jsonl").read_text(encoding="utf-8").splitlines()) == 1  # one text per close, however many taps
     finally:
         pipeline.OUT = old
 
