@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useApp, useClock, useLive } from "../state";
-import { PlaybackControls, usePlayback } from "../playback";
+import { PlaybackControls, speedLabel, usePlayback } from "../playback";
 import { sectionOf } from "../nav";
 import { D, iso } from "../lib/dates";
 import { Icon, Segmented, clock } from "./ui";
@@ -18,6 +18,7 @@ export function Page({ title, actions, children, live = true, date = true }: { t
           <h1>{sec ? sec.name : title}</h1>
           {sec && <nav className="tabs" aria-label={`${sec.name} views`}>
             {sec.tabs.map(([to, label]) => <NavLink key={to} to={to} end className={({ isActive }) => (isActive ? "on" : "")}>{label}</NavLink>)}
+            {sec.details.length > 0 && <NavLink to={`${sec.base}/details`} className={() => `tab-details${loc.pathname === `${sec.base}/details` || sec.details.some((d) => d.to === loc.pathname) ? " on" : ""}`}>Details</NavLink>}
           </nav>}
         </div>
         {(date || active) && <DateControl />}
@@ -95,7 +96,7 @@ export function LiveControl() {
       {view === "live" && isToday && <span className={`livedot${on ? " on" : ""}`} aria-hidden="true" />}
       {view === "live" && isToday && <span className="livec-clock num" aria-live="off" title={now ? `${now.tz.replace("_", " ")} time` : undefined}>
         {inService ? (t ? clock(t.slice(0, 5)) : "") : "Closed"}</span>}
-      {playback.active && <span className="livec-clock num" data-testid="playback-clock">Playback · {playback.at} · {playback.speed} min/s</span>}
+      {playback.active && <span className="livec-clock num" data-testid="playback-clock">Playback · {playback.at} · {speedLabel(playback.speed)}</span>}
       <Segmented label="View" value={view} onChange={(next) => {
         if (next === "live") backToLive(); else setView(next);
       }} options={[["live", "Live"], ["playback", "Playback"]]} />
