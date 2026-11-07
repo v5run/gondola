@@ -1,0 +1,19 @@
+{
+  "checks": [
+    "Shared timeline, three channels, checked offer and five measured baselines",
+    "Switching baselines changes the observed offer and reservations",
+    "Replay and courier revision preserve original customer promises",
+    "Overload remains visible and no accepted orders disappear",
+    "Zero campaign budget is respected across all controllers",
+    "Real Gemini refuses unsafe offers and produces a confirmed pause receipt",
+    "Real saved policy experiment reloads with independent rejection and conventional-search comparator",
+    "Tablet and narrow browser layouts fit without page overflow",
+    "Provider error remains an error, with no invented successful receipt",
+    "Unavailable backend does not silently fabricate a simulation or AI result",
+    "No browser JavaScript errors"
+  ],
+  "passed": 11,
+  "javascript_errors": [],
+  "real_model_calls": "One overload pause check plus one recorded intervention; other data/actions synthetic",
+  "additional_check": "Durable action reload restores scenario, staffing and confirmed receipt after server restart"
+}

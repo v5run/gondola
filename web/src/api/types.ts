@@ -10,7 +10,7 @@ export interface Integrations {
 }
 export interface Point { time: string; orders: number }
 export interface Overview {
-  date: string; closed?: boolean;
+  date: string; closed?: boolean; not_open_yet?: boolean; opens?: string | null; as_of?: string | null;
   kpis: { net_sales: number; orders: number; avg_ticket: number; labour_pct: number; cancels: number; avoidable_cancels: number };
   vs_usual: Record<string, number | null>;
   context: { rain: boolean; events: string[] };
@@ -66,9 +66,11 @@ export interface GuardDone { cancels: number; held_back: number; status_quo_canc
 
 /* ---------- V3 ---------- */
 export type ByChannel = Record<Channel, number>;
-export interface LiveOrder { t: string; id: string; channel: Channel; items: string[]; subtotal: number; status: string }
+export interface LiveOrder { t: string; id: string; channel: Channel; items: string[]; subtotal: number; status: string; chashu?: number; cancel_reason?: string | null; catchup?: boolean }
+/** The store clock (GET /api/now): real time in America/New_York mapped onto the data. */
+export interface NowInfo { today: string; now: string; tz: string; mapped: boolean; business_date?: string; open: string; close: string; phase: "before_open" | "open" | "closed"; cutoff: string | null }
 export interface LiveTick { t: string; orders: number; placed?: number; net_sales: number; by_channel: ByChannel; by_channel_sales?: ByChannel; chashu_left: number; cancels: number }
-export interface LiveEvent { t: string; kind: "sold_out" | "pause" | "rush_start" | "rush_end" | string; text: string; app?: string; chashu_left?: number }
+export interface LiveEvent { t: string; kind: "sold_out" | "pause" | "rush_start" | "rush_end" | string; text: string; app?: string; chashu_left?: number; catchup?: boolean }
 export interface IntradayBin { time: string; orders: number; by_channel: ByChannel; net_sales: number }
 export interface Intraday { date: string; bins: IntradayBin[]; usual: Point[] }
 export interface ItemRow { item: string; sold: number; net_sales: number; share: number }

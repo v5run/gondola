@@ -1,202 +1,126 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { api } from "../api/client";
+import { tri, type DayCard, type FutureDay } from "../api/tri";
 import type { CardItem, Point } from "../api/types";
 import { Page } from "../components/Page";
-import { useWidth } from "../components/charts";
-import { ErrorBox, FoodIcon, NumberField, Skeleton, Tween, appName, clock, shortDate, useLoad } from "../components/ui";
-import { addDays, dowName, fmtMonthDay, fromMin, toMin } from "../lib/dates";
-import { FALLBACK_PPO, PAUSE_DELAY, pauseTimes, portionsUntil, runOutMin } from "../lib/plan";
+import { Info } from "../components/Info";
+import { DriverList } from "../components/future";
+import { PauseCell, PrepCurve } from "../components/prep";
+import { ErrorBox, NumberField, Skeleton, appName, clock, shortDate } from "../components/ui";
+import { addDays, dowName } from "../lib/dates";
+import { pauseTimes } from "../lib/plan";
 import { useApp, useToast } from "../state";
 import { Own, useAgents } from "../agents";
-import { useWhy, WhySlot } from "../why";
 
 const APPS = ["doordash", "ubereats", "grubhub"] as const;
 
+/** Future › Tomorrow: forward only (never a past day). Tomorrow's prep card is approved here. */
 export default function Tomorrow() {
-  const { date } = useApp();
+  const { now } = useApp();
   const toast = useToast();
-  const why = useWhy();
   const { pulse } = useAgents();
-  const next = date ? addDays(date, 1) : "";
-  const fc = useLoad(() => (next ? api.forecast(next) : new Promise<never>(() => {})), [next]);
-  const cl = useLoad(() => (date ? api.close(date).catch(() => null) : new Promise<never>(() => {})), [date]);
-  const [card, setCard] = useState<CardItem[]>([]);
+  const today = now?.today || "";
+  const start = today ? addDays(today, 1) : "";
+  const [days, setDays] = useState<FutureDay[] | null>(null);
+  const [err, setErr] = useState<string | null>(null);
+  const [cards, setCards] = useState<Record<string, DayCard[]>>({});
+  const [itemK, setItemK] = useState(0);
+  const [shape, setShape] = useState<{ p50: number; curve: Point[] } | null>(null);
   const [approved, setApproved] = useState(false);
   const [saving, setSaving] = useState(false);
-  useEffect(() => { setCard(cl.data?.card || []); setApproved(!!cl.data?.approved); }, [cl.data]);
-  const f = fc.data && fc.data.date === next ? fc.data : null;
-  const dow = next ? dowName(next) : "Tomorrow";
-  const c0 = card[0];
-  const ppo = c0?.portions_per_order ?? cl.data?.portions_per_order ?? FALLBACK_PPO;
-  const busyRatio = f && f.p50 ? (f.p90 / f.p50) * 1.1 : 1.2;
-  const busy = useMemo(() => (f ? f.curve.map((p) => ({ ...p, orders: p.orders * busyRatio })) : []), [f, busyRatio]);
-  const have = c0 ? c0.prep + (c0.on_hand || 0) : 0;
-  const pz = useMemo(() => (f && c0 ? pauseTimes(f.curve, have, ppo) : null), [f, c0, have, ppo]);
-  const pzBusy = useMemo(() => (f && c0 ? pauseTimes(busy, have, ppo) : null), [busy, f, c0, have, ppo]);
-  const setPrep = (v: number) => setCard((cc) => cc.map((x, j) => (j === 0 ? { ...x, prep: Math.max(0, Math.round(v)) } : x)));
-  const edited = !!cl.data?.card?.[0] && c0 && cl.data.card[0].prep !== c0.prep;
-
+  useEffect(() => {
+    if (!start) return;
+    tri.future.days(start, 1).then((d) => { setDays(d.filter((x) => x.date >= start).slice(0, 1)); setErr(null); }).catch((e) => setErr(String(e.message)));
+    // tomorrow's 15-minute curve gives the shape; other days scale it to their own expected orders
+    api.forecast(start).then((f) => setShape({ p50: f.p50, curve: f.curve })).catch(() => setShape(null));
+    api.close(today).then((c) => setApproved(!!c?.approved)).catch(() => {});
+  }, [start, today]);
+  const day = days?.[0] || null;
+  const list = day ? cards[day.date] || day.cards : [];
+  const card = list[Math.min(itemK, list.length - 1)];
+  const curve = useMemo(() => (day && shape ? shape.curve.map((p) => ({ ...p, orders: (p.orders * day.p50) / Math.max(1, shape.p50) })) : []), [day, shape]);
+  const busy = useMemo(() => (day ? curve.map((p) => ({ ...p, orders: (p.orders * day.p90 * 1.1) / Math.max(1, day.p50) })) : []), [curve, day]);
+  const ppoOf = (c: DayCard) => c.per_order || (day && day.p50 ? Math.max(0.01, c.target / day.p50) : 1);
+  const timesOf = (c: DayCard) => {
+    if (!curve.length) return { pz: c.pause_at, pzb: c.pause_if_busy };
+    const have = c.prep + (c.on_hand || 0), ppo = ppoOf(c);
+    return { pz: pauseTimes(curve, have, ppo, ppo * 8), pzb: pauseTimes(busy, have, ppo, ppo * 8) };
+  };
+  const setPrep = (k: number, v: number) => {
+    if (!day) return;
+    setCards((m) => ({ ...m, [day.date]: (m[day.date] || day.cards).map((c, j) => (j === k ? { ...c, prep: Math.max(0, Math.round(v)) } : c)) }));
+  };
+  const lock = approved;
   const approve = async () => {
-    if (!date || !card.length) return;
-    const prev = approved;
-    setApproved(true); setSaving(true); // optimistic
+    if (!day) return;
+    setSaving(true);
     try {
-      const withTimes = card.map((c, i) => (i === 0 && pz && pzBusy ? { ...c, pause_at: pz, pause_if_busy: pzBusy } : c));
-      const r = await api.approve(date, withTimes);
-      setCard(r.card); pulse("plan", `${dow}'s plan approved`); setTimeout(() => pulse("guard", `armed for ${dow}`), 250); toast(`${dow}'s plan approved · ${r.card[0]?.prep ?? ""} chashu`, "good");
-    } catch (e) {
-      setApproved(prev); toast(`Couldn't approve: ${(e as Error).message}`, "crit");
-    } finally { setSaving(false); }
+      const out: CardItem[] = list.map((c) => { const t = timesOf(c); return { item: c.item, target: c.target, on_hand: c.on_hand, prep: c.prep, recount_at: Number(c.recount_at) || 0,
+        pause_at: { doordash: t.pz.doordash ?? null, ubereats: t.pz.ubereats ?? null, grubhub: t.pz.grubhub ?? null },
+        pause_if_busy: { doordash: t.pzb.doordash ?? null, ubereats: t.pzb.ubereats ?? null, grubhub: t.pzb.grubhub ?? null } }; });
+      await api.approve(today, out);
+      setApproved(true);
+      pulse("forecaster", `${dowName(day.date)}'s prep approved`); setTimeout(() => pulse("controller", `pause times armed for ${dowName(day.date)}`), 250);
+      toast(`${dowName(day.date)}'s prep approved`, "good");
+    } catch (e) { toast(`Couldn't approve: ${(e as Error).message}`, "crit"); }
+    finally { setSaving(false); }
   };
-
-  const actions = <>
-    {approved && <button className="btn light" onClick={() => setApproved(false)}>Edit plan</button>}
-    <button className="btn" onClick={approve} disabled={!card.length || approved}>
-      {approved ? (saving ? "Approving" : "Approved") : `Approve ${dow}'s plan`}
-    </button>
-  </>;
-
+  const actions = day ? <>
+    {approved && <button className="btn light" onClick={() => setApproved(false)}>Edit</button>}
+    <button className="btn" onClick={approve} disabled={approved || saving || !list.length} data-testid="approve-prep">{approved ? "Approved" : saving ? "Approving" : `Approve ${dowName(day.date)}'s prep`}</button>
+  </> : null;
   return (
-    <Page title="Tomorrow" actions={actions}>
-      {fc.error && <ErrorBox error={fc.error} retry={fc.reload} />}
-      {!f && !fc.error && <Skeleton h={340} />}
-      {f && (
-        <section className="hero tonight-hero"><Own a="demand" dark />
-          <div>
-            <div className="lab">{shortDate(next)} · expected orders</div>
-            <div className="big"><Tween value={f.p50} /><span className="num rng">{Math.round(f.p10)}–{Math.round(f.p90)}</span></div>
-            <div className="drv">
-              <div><span>Rush</span><b>{clock(f.rush.start)}–{clock(f.rush.end)}</b></div>
-              <div><span>Peak</span><b>{Math.round(f.rush.peak_per_15min)} per 15 min</b></div>
-              {c0 && <div><span>Chashu</span><b><Tween value={have} /> portions</b></div>}
-            </div>
+    <Page title="Future" date={false} live={false} actions={actions}>
+      {err && <ErrorBox error={err} />}
+      {!days && !err && <Skeleton h={330} />}
+      {day && <section className="hero tonight-hero" aria-label={`Forecast for ${day.date}`}><Own a="forecaster" dark /><Info k="day_forecast" dark />
+        <div>
+          <div className="lab">{shortDate(day.date)} · expected orders</div>
+          <div className="big" data-testid="day-p50">{Math.round(day.p50)}<span className="num rng">{Math.round(day.p10)}–{Math.round(day.p90)}</span></div>
+          <div className="drv">
+            {day.rush && <div><span>Rush</span><b>{clock(day.rush.start)}–{clock(day.rush.end)}</b></div>}
+            <div><span>Weather</span><b>{day.weather_known ? "Forecast" : "Typical for the date"}</b></div>
+            {card && <div><span>{card.item}</span><b className="num">{Math.round(card.prep + (card.on_hand || 0))} {card.unit || ""}</b></div>}
           </div>
-          <div>
-            <div className="legend-inline"><span><i className="sw" style={{ background: "#b8e986" }} />Expected</span><span><i className="sw" style={{ background: "#8cc8ff" }} />Busy night</span>{c0 && <span><i className="sw" style={{ background: "#fbf0d6" }} />Pause</span>}</div>
-            <PrepCurve curve={f.curve} busy={busy} have={c0 ? have : null} ppo={ppo} pause={pz} disabled={approved}
-              onHave={(h) => c0 && setPrep(Math.max(0, Math.ceil((h - (c0.on_hand || 0)) / 10) * 10))} />
-          </div>
-        </section>
-      )}
+        </div>
+        <div>
+          <div className="legend-inline"><span><i className="sw" style={{ background: "#b8e986" }} />Expected</span><span><i className="sw" style={{ background: "#8cc8ff" }} />Busy night</span>{card && <span><i className="sw" style={{ background: "#fbf0d6" }} />Pause</span>}</div>
+          {curve.length && card ? <PrepCurve curve={curve} busy={busy} have={card.prep + (card.on_hand || 0)} ppo={ppoOf(card)} pause={timesOf(card).pz as Record<string, string | null>} disabled={lock}
+            item={card.item.toLowerCase()} step={card.batch || 10} H={280}
+            onHave={(h) => setPrep(Math.min(itemK, list.length - 1), Math.max(0, Math.ceil((h - (card.on_hand || 0)) / (card.batch || 10)) * (card.batch || 10)))} />
+            : <Skeleton h={280} />}
+        </div>
+      </section>}
 
-      <div style={{ display: "grid", gridTemplateColumns: "1.5fr 1fr", gap: 22, alignItems: "start" }}>
-        <div className="card">
-          <Own a="plan" />
-          <div className="cardhead"><h3>Card</h3>{edited && !approved && <span className="ink2" style={{ fontSize: 14 }}>Edited from {cl.data!.card[0].prep}</span>}</div>
-          {cl.loading && <Skeleton h={160} />}
-          {!cl.loading && !cl.data && <div className="empty">No close for {fmtMonthDay(date)}</div>}
-          {c0 && (
-            <div className="prepline">
-              <FoodIcon kind="chashu" size={44} />
-              <div style={{ minWidth: 0 }}>
-                <div style={{ fontWeight: 700, fontSize: 17 }}>{c0.item}</div>
-                <div className="ink2 num" style={{ fontSize: 14 }}>Target {c0.target} · on hand {Math.round(c0.on_hand)} · recount at {c0.recount_at}</div>
-                {c0.warnings?.map((w) => <div key={w} className="crit" style={{ fontSize: 13.5 }}>{w}</div>)}
-                <input type="range" className="range light" aria-label="Prep" min={0} max={Math.max(200, Math.ceil((c0.target * 1.4) / 10) * 10)} step={10}
-                  value={c0.prep} disabled={approved} onChange={(e) => setPrep(Number(e.target.value))} style={{ marginTop: 12 }} />
-              </div>
-              <div style={{ textAlign: "right" }}>
-                <label htmlFor="prep-0" className="ink2" style={{ fontSize: 13 }}>Make</label>
-                <NumberField id="prep-0" value={c0.prep} onChange={setPrep} step={10} disabled={approved}
-                  style={{ width: 120, fontSize: 26, fontWeight: 700, textAlign: "right" }} />
-              </div>
-            </div>
-          )}
-          {c0 && pz && pzBusy && (
-            <table className="tbl" style={{ marginTop: 12 }}>
-              <thead><tr><th>App</th><th>Pause, expected</th><th>Pause, busy night</th><th className="r">Lead</th></tr></thead>
-              <tbody>
-                {APPS.map((a) => (
-                  <tr key={a} data-app={a}>
-                    <td style={{ fontWeight: 600 }}>{appName[a]}</td>
-                    <td className="pz"><PauseCell t={pz[a]} /></td>
-                    <td><PauseCell t={pzBusy[a]} /></td>
-                    <td className="r ink2">{PAUSE_DELAY[a]} min</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          )}
+      {day && <div className="days-grid">
+        <div className="card"><Own a="forecaster" /><Info k="prep_card" />
+          <div className="cardhead"><h3>Prep</h3></div>
+          <div className="prepcards" data-testid="prep-cards">
+            {list.map((c, k) => {
+              const t = timesOf(c);
+              const on = k === Math.min(itemK, list.length - 1);
+              return (
+                <div key={c.item} className={`prepc${on ? " on" : ""}`} onClick={() => setItemK(k)} data-item={c.item}>
+                  <div className="pc-name"><b>{c.item}</b><span className="ink2 num">Target {Math.round(c.target)} · on hand {Math.round(c.on_hand)} · recount at {c.recount_at ?? "–"}</span></div>
+                  <div className="pc-make">
+                    <input type="range" className="range light" aria-label={`${c.item} prep`} min={0} max={Math.max(c.batch || 10, Math.ceil((c.target * 1.5) / (c.batch || 10)) * (c.batch || 10))} step={c.batch || 10}
+                      value={c.prep} disabled={lock} onChange={(e) => setPrep(k, Number(e.target.value))} onFocus={() => setItemK(k)} />
+                    <NumberField value={c.prep} step={c.batch || 10} onChange={(v) => setPrep(k, v)} disabled={lock} label={`${c.item} make`} style={{ width: 92, fontSize: 20, fontWeight: 700, textAlign: "right" }} />
+                    <span className="ink2 pc-unit">{c.unit || ""}</span>
+                  </div>
+                  <div className="pc-pz">
+                    {APPS.map((a) => <span key={a} data-app={a}><span className="ink2">{appName[a]}</span> <PauseCell t={t.pz[a] ?? null} /><span className="muted"> · busy {t.pzb[a] ? clock(t.pzb[a]!) : "–"}</span></span>)}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
-        <div className="card">
-          <Own a="demand" />
-          <div className="cardhead"><h3>Days like {dow}</h3></div>
-          {!f && <Skeleton h={200} />}
-          {f?.similar_days.map((s) => (
-            <button className="clickrow" key={s.date} data-why onMouseEnter={() => why.prefetch({ kind: "day", date: s.date })} onClick={() => why.open({ kind: "day", date: s.date }, "tomorrow")}>
-              <span><b style={{ fontWeight: 600 }}>{shortDate(s.date)}</b><span className="ink2" style={{ fontSize: 13.5, display: "block" }}>{s.why}</span></span>
-              <b className="num">{s.orders}</b>
-            </button>
-          ))}
+        <div className="card"><Own a="forecaster" /><Info k="drivers" />
+          <div className="cardhead"><h3>Why</h3></div>
+          <DriverList drivers={day.drivers} testid="day-drivers" />
         </div>
-      </div>
-      <WhySlot anchor="tomorrow" />
+      </div>}
     </Page>
-  );
-}
-
-function PauseCell({ t }: { t: string | null }) {
-  const [flash, setFlash] = useState(false);
-  const first = useRef(true);
-  useEffect(() => { if (first.current) { first.current = false; return; } setFlash(true); const x = setTimeout(() => setFlash(false), 260); return () => clearTimeout(x); }, [t]);
-  return <span className={`num${flash ? " flash" : ""}`} style={{ fontWeight: t ? 700 : 400, color: t ? undefined : "var(--ink2)" }}>{t ? clock(t) : "Lasts the night"}</span>;
-}
-
-/** Forecast curve with a handle you drag to where chashu should run out; pause markers move with it. */
-function PrepCurve({ curve, busy, have, ppo, pause, onHave, disabled, H = 300 }: {
-  curve: Point[]; busy: Point[]; have: number | null; ppo: number; pause: Record<string, string | null> | null;
-  onHave: (h: number) => void; disabled?: boolean; H?: number;
-}) {
-  const [ref, W] = useWidth<HTMLDivElement>();
-  const [drag, setDrag] = useState(false);
-  const L = 34, R = 16, T = 40, B = 30;
-  const pw = W - L - R, ph = H - T - B;
-  const t0 = toMin(curve[0]?.time || "11:00"), t1 = toMin(curve[curve.length - 1]?.time || "22:15") + 15;
-  const ymax = Math.max(4, ...busy.map((p) => p.orders), ...curve.map((p) => p.orders)) * 1.1;
-  const x = (m: number) => L + (pw * (m - t0)) / (t1 - t0);
-  const y = (v: number) => T + ph * (1 - v / ymax);
-  const path = (pts: Point[]) => "M" + pts.map((p) => `${x(toMin(p.time) + 7.5).toFixed(1)},${y(p.orders).toFixed(1)}`).join("L");
-  const ro = have !== null ? runOutMin(curve, have, ppo) : null;
-  const hx = have === null ? null : ro === null ? x(t1) : x(ro);
-  const toHave = (px: number) => {
-    const m = t0 + ((px - L) / pw) * (t1 - t0);
-    return m >= t1 - 1 ? portionsUntil(curve, t1, ppo) + 10 : portionsUntil(curve, Math.max(t0, m), ppo);
-  };
-  const ev = (e: React.PointerEvent) => { const r = (e.currentTarget as SVGElement).ownerSVGElement!.getBoundingClientRect(); return e.clientX - r.left; };
-  // group apps that pause at the same time
-  const marks = new Map<string, string[]>();
-  if (pause) for (const [a, t] of Object.entries(pause)) if (t) marks.set(t, [...(marks.get(t) || []), appName[a]]);
-  const area = `${path(curve)}L${x(toMin(curve[curve.length - 1].time) + 7.5)},${y(0)}L${x(toMin(curve[0].time) + 7.5)},${y(0)}Z`;
-  return (
-    <div ref={ref} className="chartwrap" style={{ height: H }}>
-      <svg width={W} height={H} role="img" aria-label="Forecast and chashu run-out">
-        {hx !== null && ro !== null && <rect x={hx} y={T} width={Math.max(0, x(t1) - hx)} height={ph} fill="#0b3d33" />}
-        <path d={area} fill="#16614f" />
-        <path d={path(busy)} fill="none" stroke="#8cc8ff" strokeWidth="2" strokeDasharray="1 5" strokeLinecap="round" />
-        <path d={path(curve)} fill="none" stroke="#b8e986" strokeWidth="2.6" strokeLinejoin="round" />
-        <line x1={L} x2={L + pw} y1={y(0)} y2={y(0)} stroke="#3d7a6c" />
-        {[12, 14, 16, 18, 20, 22].map((h) => <text key={h} x={x(h * 60)} y={H - 8} fontSize="12" fill="#9fc2b8" textAnchor="middle">{h % 12 === 0 ? 12 : h % 12} {h >= 12 ? "pm" : "am"}</text>)}
-        {[...marks].map(([t, apps], i) => (
-          <g key={t} className="pmark" style={{ transform: `translateX(${x(toMin(t))}px)` }}>
-            <line x1={0} x2={0} y1={T + 14 + i * 16} y2={y(0)} stroke="#fbf0d6" strokeWidth="1.5" strokeDasharray="3 3" />
-            <text x={-6} y={T + 10 + i * 16} fontSize="12" fill="#fbf0d6" textAnchor="end" fontWeight="600">{apps.join(", ")} {clock(t)}</text>
-          </g>
-        ))}
-        {hx !== null && (
-          <g className={`handle${drag ? " on" : ""}`} style={{ cursor: disabled ? "default" : "ew-resize" }}
-            role="slider" tabIndex={disabled ? -1 : 0} aria-label="Runs out at" aria-valuenow={Math.round(have!)} aria-valuetext={ro === null ? "Lasts the night" : clock(fromMin(ro))}
-            onKeyDown={(e) => { if (disabled) return; if (e.key === "ArrowLeft" || e.key === "ArrowRight") { e.preventDefault(); onHave(have! + (e.key === "ArrowRight" ? 10 : -10)); } }}
-            onPointerDown={(e) => { if (disabled) return; (e.currentTarget as SVGGElement).setPointerCapture(e.pointerId); setDrag(true); }}
-            onPointerMove={(e) => { if (drag) onHave(toHave(ev(e))); }}
-            onPointerUp={() => setDrag(false)} data-testid="prep-handle">
-            <line x1={hx} x2={hx} y1={T - 8} y2={y(0)} stroke="#b8e986" strokeWidth="2" />
-            <rect x={hx - 16} y={y(0) - ph / 2 - 20} width="32" height="40" fill="transparent" />
-            <rect x={hx - 5} y={y(0) - ph / 2 - 16} width="10" height="32" rx="5" fill="#b8e986" stroke="#0f4d40" strokeWidth="2" />
-            <text x={hx + (hx > W - 160 ? -10 : 10)} y={T - 16} fontSize="13" fill="#b8e986" fontWeight="700" textAnchor={hx > W - 160 ? "end" : "start"}>
-              {ro === null ? "Lasts the night" : `Runs out ${clock(fromMin(ro))}`}</text>
-          </g>
-        )}
-      </svg>
-    </div>
   );
 }

@@ -16,9 +16,32 @@ GRAINS = {"day": "business_date", "channel": "channel", "hour": "hour", "item": 
 class Store:
     """Read-only access to one store's normalized database."""
 
-    def __init__(self, db_path: Path | str = ROOT / "data" / "gondola.duckdb"):
+    def __init__(self, db_path: Path | str = ROOT / "data" / "gondola.duckdb", cut: tuple[str, str | None] | None = None):
+        """cut=(today, "HH:MM" or None): see the data as of that moment. Later days are hidden; today keeps only the
+        orders created before the cutoff (None: the whole day), with today's labour prorated to the hours open so far
+        and today's sell-out flag hidden until the day is over."""
         self.db_path = str(db_path)
         self.con = duckdb.connect(self.db_path, read_only=True)
+        self.cut = cut
+        if cut:
+            day, hm = str(pd.Timestamp(cut[0]).date()), cut[1]
+            cat = self.con.execute("SELECT current_database()").fetchone()[0]
+            if hm is None:
+                keep, frac, so = f"business_date <= DATE '{day}'", 1.0, "sold_out"
+            else:
+                h, m = (int(x) for x in hm.split(":")[:2])
+                ts = f"{day} {h:02d}:{m:02d}:00"
+                keep = f"business_date < DATE '{day}' OR (business_date = DATE '{day}' AND created_at < TIMESTAMP '{ts}')"
+                close = 23 * 60 if pd.Timestamp(day).dayofweek in (4, 5) else 22 * 60
+                frac = min(max((h * 60 + m - 660) / (close - 660), 0.0), 1.0)
+                so = f"CASE WHEN business_date = DATE '{day}' THEN false ELSE sold_out END AS sold_out"
+            q = f'"{cat}".main'
+            self.con.execute(f"CREATE TEMP VIEW orders AS SELECT * FROM {q}.orders WHERE {keep}")
+            self.con.execute(f"""CREATE TEMP VIEW labour AS SELECT business_date, role,
+                CASE WHEN business_date = DATE '{day}' THEN hours * {frac} ELSE hours END AS hours, wage
+                FROM {q}.labour WHERE business_date <= DATE '{day}'""")
+            self.con.execute(f"""CREATE TEMP VIEW prep_log AS SELECT business_date, par, used, {so}
+                FROM {q}.prep_log WHERE business_date <= DATE '{day}'""")
 
     def df(self, sql: str, params: list | None = None) -> pd.DataFrame:
         return self.con.execute(sql, params or []).df()

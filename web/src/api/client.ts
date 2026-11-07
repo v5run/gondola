@@ -1,6 +1,6 @@
 import type {
   DayDetail, Intraday, ItemRow, RangeMetrics, ReportEntry,
-  AskAnswer, CardItem, CloseDetail, CloseSummary, DailyMetric, Forecast, Integrations, OutboxMsg, Overview, Store,
+  AskAnswer, CardItem, NowInfo, CloseDetail, CloseSummary, DailyMetric, Forecast, Integrations, OutboxMsg, Overview, Store,
 } from "./types";
 import { mock } from "./mock";
 
@@ -21,7 +21,7 @@ export async function apiMode(): Promise<"live" | "mock"> {
   return probing;
 }
 
-async function req<T>(path: string, init?: RequestInit): Promise<T> {
+export async function req<T>(path: string, init?: RequestInit): Promise<T> {
   if ((await apiMode()) === "mock") return mock.request(path, init) as Promise<T>;
   const r = await fetch(`/api${path}`, {
     ...init, headers: { "Content-Type": "application/json", ...(init?.headers || {}) },
@@ -70,6 +70,7 @@ const post = (body: unknown): RequestInit => ({ method: "POST", body: JSON.strin
 
 export const api = {
   store: () => req<Store>("/store"),
+  now: () => req<NowInfo>("/now"),
   integrations: () => req<Integrations>("/integrations"),
   overview: (date?: string) => req<Overview>(`/overview${date ? `?date=${date}` : ""}`),
   metrics: (start: string, end: string) => req<DailyMetric[]>(`/metrics/daily?start=${start}&end=${end}`),

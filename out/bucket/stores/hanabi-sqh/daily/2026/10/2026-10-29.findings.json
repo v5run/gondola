@@ -92,15 +92,6 @@
    "diff_s": "-52.09"
   },
   {
-   "channel": "DoorDash \u00b7 tonight",
-   "status": "Estimated",
-   "sales": 6364.6,
-   "expected": 4773.45,
-   "reported_s": "arrives later",
-   "difference": null,
-   "diff_s": ""
-  },
-  {
    "channel": "Uber Eats \u00b7 tonight",
    "status": "Estimated",
    "sales": 2687.85,
@@ -114,6 +105,15 @@
    "status": "Estimated",
    "sales": 1108.8,
    "expected": 887.04,
+   "reported_s": "arrives later",
+   "difference": null,
+   "diff_s": ""
+  },
+  {
+   "channel": "DoorDash \u00b7 tonight",
+   "status": "Estimated",
+   "sales": 6364.6,
+   "expected": 4773.45,
    "reported_s": "arrives later",
    "difference": null,
    "diff_s": ""

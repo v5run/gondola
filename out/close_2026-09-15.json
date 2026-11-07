@@ -10,12 +10,12 @@
   {
    "step": "books",
    "status": "done",
-   "seconds": 0.22
+   "seconds": 0.26
   },
   {
    "step": "demand",
    "status": "done",
-   "seconds": 0.66
+   "seconds": 0.57
   },
   {
    "step": "analyst",
@@ -25,7 +25,7 @@
   {
    "step": "plan",
    "status": "done",
-   "seconds": 0.03
+   "seconds": 0.02
   },
   {
    "step": "sentinel",
@@ -35,7 +35,7 @@
   {
    "step": "report",
    "status": "done",
-   "seconds": 0.03
+   "seconds": 0.02
   },
   {
    "step": "guard",
@@ -1146,6 +1146,6 @@
   "note": "Rule armed; executor fires during service when the trigger is met."
  },
  "status": "done",
- "seconds": 0.81,
- "run_id": "2026-09-15-20261105T214436732150"
+ "seconds": 0.67,
+ "run_id": "2026-09-15-20261107T065621026020"
 }

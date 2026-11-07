@@ -93,15 +93,6 @@
    "diff_s": "-57.52"
   },
   {
-   "channel": "DoorDash \u00b7 tonight",
-   "status": "Estimated",
-   "sales": 7359.0,
-   "expected": 5519.25,
-   "reported_s": "arrives later",
-   "difference": null,
-   "diff_s": ""
-  },
-  {
    "channel": "Grubhub \u00b7 tonight",
    "status": "Estimated",
    "sales": 1064.25,
@@ -115,6 +106,15 @@
    "status": "Estimated",
    "sales": 2768.7,
    "expected": 2021.15,
+   "reported_s": "arrives later",
+   "difference": null,
+   "diff_s": ""
+  },
+  {
+   "channel": "DoorDash \u00b7 tonight",
+   "status": "Estimated",
+   "sales": 7359.0,
+   "expected": 5519.25,
    "reported_s": "arrives later",
    "difference": null,
    "diff_s": ""

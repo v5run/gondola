@@ -5,17 +5,17 @@
   {
    "step": "stock",
    "status": "done",
-   "seconds": 0.06
+   "seconds": 0.04
   },
   {
    "step": "books",
    "status": "done",
-   "seconds": 0.28
+   "seconds": 0.19
   },
   {
    "step": "demand",
    "status": "done",
-   "seconds": 0.44
+   "seconds": 0.37
   },
   {
    "step": "analyst",
@@ -25,7 +25,7 @@
   {
    "step": "plan",
    "status": "done",
-   "seconds": 0.03
+   "seconds": 0.02
   },
   {
    "step": "sentinel",
@@ -35,7 +35,7 @@
   {
    "step": "report",
    "status": "done",
-   "seconds": 0.94
+   "seconds": 0.02
   },
   {
    "step": "guard",
@@ -1150,7 +1150,7 @@
    }
   ],
   "portion_counts": {
-   "chashu": 0
+   "chashu": 0.0
   }
  },
  "cancel_rate": 0.010191846522781775,
@@ -1224,14 +1224,14 @@
  },
  "alerts": [
   {
-   "status": "duplicate_suppressed",
    "key": "close-hanabi-sqh-2026-11-05",
    "channel": "sms",
+   "to": [
+    "+1-412-555-0142 (manager)"
+   ],
    "body": "Gondola close Thu Nov 5: 3 things need you. 1) Cash drawer $23.50 short 2) DoorDash Wed: $86.40 looks recoverable (3 charges to dispute) 3) Chashu sold out 8:39 pm, still live on apps 45 min (12 cancels) Reply with a number for details. Reply STOP to opt out.",
-   "subject": null,
-   "sent_at": "2026-11-05T23:10:00",
-   "ts": "2026-11-05T23:10:00",
-   "original_status": "dry_run"
+   "status": "dry_run",
+   "ts": "2026-11-05T23:10:00"
   }
  ],
  "guardrail_report": {
@@ -1248,6 +1248,6 @@
   "note": "Rule armed; executor fires during service when the trigger is met."
  },
  "status": "done",
- "seconds": 1.51,
- "run_id": "2026-11-05-20261105T221255739499"
+ "seconds": 0.5,
+ "run_id": "2026-11-05-20261107T065708052026"
 }

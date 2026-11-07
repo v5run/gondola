@@ -2,6 +2,7 @@
  *  generated from the real demo year by web/scripts/make_fixtures.py, so the numbers match the backend. */
 import fx from "./fixtures.json";
 import type { CardItem, Channel, CloseDetail, OutboxMsg } from "./types";
+import { initTri, sampleNow, triRequest, triStream } from "./mockTri";
 
 type Handlers = Record<string, (data: any) => void>;
 const wait = (ms: number) => new Promise((r) => setTimeout(r, ms));
@@ -37,6 +38,14 @@ function overviewFor(d: string) {
     curve_usual: fx.overview.curve_usual.map((p) => ({ ...p, orders: (p.orders * uo) / fx.overview.kpis.orders })),
     channels: CHS.map((c) => ({ key: c, today: m.net_sales * SHARE[c], usual: u * SHARE[c] })), last_close: null };
 }
+initTri((d) => (overviewFor(d) as { curve_today: { time: string; orders: number }[] }).curve_today || [], fx.store.today);
+/** Expected orders for any date: the average of the last four same weekdays in the sample year. */
+function p50Of(d: string) {
+  const dow = new Date(`${d}T12:00:00`).getDay();
+  const same = fx.metrics.filter((m) => m.orders > 0 && new Date(`${m.date}T12:00:00`).getDay() === dow).slice(-4);
+  return same.length ? same.reduce((a, m) => a + m.orders, 0) / same.length : 180;
+}
+
 function intraday(d: string) {
   const o = overviewFor(d) as { curve_today: { time: string; orders: number }[]; curve_usual: { time: string; orders: number }[]; kpis: { avg_ticket: number } | null };
   return { date: d, usual: o.curve_usual, bins: o.curve_today.map((p) => ({ time: p.time, orders: p.orders, net_sales: p.orders * (o.kpis?.avg_ticket || 30),
@@ -170,6 +179,9 @@ export const mock = {
     const body = init?.body ? JSON.parse(String(init.body)) : {};
     if (p === "/health") return { ok: true, version: "mock" };
     if (p === "/store") return fx.store;
+    if (p === "/now") { const n = sampleNow(); return { today: fx.store.today, now: n.now, tz: "America/New_York", mapped: true, open: "11:00", close: "22:00", phase: n.phase, cutoff: n.phase === "open" ? n.now.slice(0, 5) : null }; }
+    const tr = triRequest(p, q, init?.method || "GET", body, p50Of);
+    if (tr !== undefined) return clone(tr);
     if (p === "/integrations") return { twilio: { live: false }, sendgrid: { live: false }, llm: { live: false }, square: { live: false }, doordash: { live: false } };
     if (p === "/overview") return overviewFor(q.get("date") || fx.store.today);
     if (p === "/metrics/daily") return metricsRange(q.get("start") || "0000", q.get("end") || "9999");
@@ -218,7 +230,7 @@ export const mock = {
     if (path.startsWith("/close/")) return closeStream(on);
     if (path.startsWith("/guard/")) return guardStream(path.split("/")[2], on);
     if (path.startsWith("/live/stream")) return liveStream(new URLSearchParams(path.split("?")[1] || ""), on);
-    return () => {};
+    return triStream(path, on) || (() => {});
   },
 };
 

@@ -91,7 +91,7 @@ export default function Alerts() {
                 <div style={{ width: 40, height: 50, background: "var(--crit)", borderRadius: 3 }} />
                 <div><div style={{ fontWeight: 700 }}>Daily Close Report · {reportDate}.pdf</div><div className="ink2" style={{ fontSize: 14 }}>2 pages</div></div>
               </a>}
-              <Link className="btn" to="/tomorrow" style={{ display: "inline-block", marginTop: 16, textDecoration: "none" }}>Approve tomorrow's plan</Link>
+              <Link className="btn" to="/future/tomorrow" style={{ display: "inline-block", marginTop: 16, textDecoration: "none" }}>Approve tomorrow's plan</Link>
             </div>
           )}
         </div>

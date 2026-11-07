@@ -199,6 +199,11 @@ def step_plan(db, date: str, fc: dict, stock_res: dict | None, portion_counts: d
              {"name": "Karaage marinade", "minutes": 25, "deadline": rush_start - 90}]
     leftover = (portion_counts or {}).get("chashu", 0)
     card = [plan.close_card("Chashu", nv["chashu_portions"], leftover, fc["curve"], ppo, busy_ratio=fc["p90"] / fc["p50"] * 1.1)]
+    try:  # Future: the other limited items (ajitama egg, gyoza, tonkotsu broth) after chashu; additive, fails soft
+        from .future.items import extra_cards
+        card += extra_cards(st, fc, portion_counts)
+    except Exception:  # noqa: BLE001
+        pass
     return {"portions_per_order": round(ppo, 3), "newsvendor": nv, "old_par": old_par, "old_runout": old_runout,
             "safety_net": safety, "staff_gaps": gaps, "prep_schedule": plan.prep_schedule(tasks, cooks=2), "card": card,
             "portion_counts": portion_counts or {}}
@@ -530,11 +535,15 @@ def _run_close(date, db, as_of, fail, force, notifier, bucket, render, approve_p
         sn = res["plan"]["safety_net"]
         res["guard"] = _timed("guard", lambda: {"armed_rule": sn, "approved": True,
                                                  "note": "Rule armed; executor fires during service when the trigger is met."}, log, fail)
+    # --- tri-workflow close hook (Ledger + Review team): the Review agent runs last, after every deterministic step.
+    # It is additive: its failure is logged but never changes the close's status.
+    if REVIEW_IN_CLOSE and not res["closed_day"]:
+        res["review"] = _timed("review", lambda: _review_step(res, date, db, agent_model), log, fail)
     if res["closed_day"]:
         for s_ in log:
             if s_["status"] == "failed" and "injected" in s_.get("error", ""):
                 s_["status"], s_["error"] = "skipped", "store closed"
-    failed = [s_ for s_ in log if s_["status"] == "failed"]
+    failed = [s_ for s_ in log if s_["status"] == "failed" and s_["step"] != "review"]
     res["status"] = ("closed" if res["closed_day"] else "done") if not failed and not res["cross_check"] else "partial"
     res["seconds"] = round(time.perf_counter() - t0, 2)
     res["run_id"] = f"{date}-{datetime.now():%Y%m%dT%H%M%S%f}"  # approvals are tied to one run of the close
@@ -551,6 +560,22 @@ def _run_close(date, db, as_of, fail, force, notifier, bucket, render, approve_p
         saved["agents"] = {k: v for k, v in saved["agents"].items() if k != "facts"}
     (OUT / f"close_{date}.json").write_text(json.dumps(saved, default=str, indent=1), encoding="utf-8")
     return res
+
+
+REVIEW_IN_CLOSE = True  # tri-workflow: run gondola.review.agent at the end of the close (GONDOLA_REVIEW_IN_CLOSE=0 skips)
+
+
+def _review_step(res: dict, date: str, db, agent_model) -> dict:
+    """Ledger for the night, exception scan, Review agent, digests and knowledge base (gondola/review/agent.py).
+    Stores live next to this close's out/ folder (gondola.ledger.out_dir follows OUT)."""
+    import os
+    if os.getenv("GONDOLA_REVIEW_IN_CLOSE", "1") == "0":
+        return {"skipped": "GONDOLA_REVIEW_IN_CLOSE=0"}
+    from .review.agent import run_review
+    r = run_review(date, db=db, close_res=res, model=agent_model)
+    return {"digest_id": r["digest_id"], "mode": r["mode"], "well": len(r["well"]), "wrong": len(r["wrong"]),
+            "actions": [a["id"] for a in r["actions"]], "kb_changes": len(r["kb_changes"]),
+            "context_tokens": r["context"]["tokens"]}
 
 
 def morning_pass(date: str, db: Path | str = ROOT / "data" / "gondola.duckdb") -> dict:

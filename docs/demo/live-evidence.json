@@ -1,0 +1,5404 @@
+{
+  "source": "Fresh real Gemini calls against synthetic restaurant state on November 6, 2026. Repeat runs can differ.",
+  "controller_initial": {
+    "id": "0b13d4fb6a3d4199a07663d34fa924c5",
+    "created": "2026-11-06T11:28:49.445313+00:00",
+    "kind": "controller",
+    "status": "done",
+    "inputs": {
+      "scenario": "rush",
+      "seed": 7,
+      "incident": "fryer_slowdown",
+      "incident_at": 12,
+      "budget_cents": 1200,
+      "cooks": 3,
+      "forecast_pressure": 1.15,
+      "policy": {
+        "name": "Protect the rush",
+        "load_weight": 7.0,
+        "minimum_margin_cents": 350,
+        "reserve_minutes": 3,
+        "discount_cents": 100,
+        "max_station_load": 0.9
+      },
+      "minute": 12
+    },
+    "model": "gemini-3.1-flash-lite",
+    "agent_mode": "live_model",
+    "data_mode": "synthetic",
+    "usage": [
+      {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 10,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 432,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 432
+          }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 442,
+        "traffic_type": null
+      },
+      {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 12,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 1548,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 1548
+          }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 1560,
+        "traffic_type": null
+      },
+      {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 26,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 2058,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 2058
+          }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 2084,
+        "traffic_type": null
+      },
+      {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 29,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 2216,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 2216
+          }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 2245,
+        "traffic_type": null
+      },
+      {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 54,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 2449,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 2449
+          }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 2503,
+        "traffic_type": null
+      }
+    ],
+    "tools": [
+      {
+        "kind": "tool",
+        "tool": "inspect_kitchen",
+        "args": {},
+        "result": {
+          "minute": 12,
+          "clock": "17:42",
+          "source_mode": "synthetic",
+          "orders": [
+            {
+              "id": "UB-119",
+              "item": "don",
+              "channel": "ubereats",
+              "promise": 45,
+              "eta": 45,
+              "ready": null
+            },
+            {
+              "id": "UB-121",
+              "item": "karaage",
+              "channel": "ubereats",
+              "promise": 53,
+              "eta": 54,
+              "ready": null
+            },
+            {
+              "id": "DO-101",
+              "item": "karaage",
+              "channel": "doordash",
+              "promise": 42,
+              "eta": 44,
+              "ready": null
+            },
+            {
+              "id": "DO-106",
+              "item": "gyoza",
+              "channel": "doordash",
+              "promise": 51,
+              "eta": 53,
+              "ready": null
+            },
+            {
+              "id": "DO-109",
+              "item": "don",
+              "channel": "doordash",
+              "promise": 45,
+              "eta": 43,
+              "ready": null
+            },
+            {
+              "id": "DO-110",
+              "item": "gyoza",
+              "channel": "doordash",
+              "promise": 49,
+              "eta": 52,
+              "ready": null
+            },
+            {
+              "id": "PI-126",
+              "item": "tonkotsu",
+              "channel": "pickup",
+              "promise": 39,
+              "eta": null,
+              "ready": null
+            },
+            {
+              "id": "UB-117",
+              "item": "tonkotsu",
+              "channel": "ubereats",
+              "promise": 48,
+              "eta": 48,
+              "ready": null
+            },
+            {
+              "id": "DO-112",
+              "item": "gyoza",
+              "channel": "doordash",
+              "promise": 36,
+              "eta": 37,
+              "ready": null
+            },
+            {
+              "id": "UB-120",
+              "item": "tonkotsu",
+              "channel": "ubereats",
+              "promise": 37,
+              "eta": 37,
+              "ready": null
+            },
+            {
+              "id": "UB-122",
+              "item": "gyoza",
+              "channel": "ubereats",
+              "promise": 43,
+              "eta": 45,
+              "ready": null
+            },
+            {
+              "id": "DO-104",
+              "item": "tonkotsu",
+              "channel": "doordash",
+              "promise": 36,
+              "eta": 34,
+              "ready": null
+            },
+            {
+              "id": "DO-105",
+              "item": "tonkotsu",
+              "channel": "doordash",
+              "promise": 35,
+              "eta": 38,
+              "ready": null
+            },
+            {
+              "id": "PI-123",
+              "item": "karaage",
+              "channel": "pickup",
+              "promise": 40,
+              "eta": null,
+              "ready": null
+            },
+            {
+              "id": "PI-127",
+              "item": "gyoza",
+              "channel": "pickup",
+              "promise": 31,
+              "eta": null,
+              "ready": null
+            },
+            {
+              "id": "UB-115",
+              "item": "karaage",
+              "channel": "ubereats",
+              "promise": 46,
+              "eta": 45,
+              "ready": null
+            },
+            {
+              "id": "UB-118",
+              "item": "don",
+              "channel": "ubereats",
+              "promise": 44,
+              "eta": 45,
+              "ready": null
+            },
+            {
+              "id": "DO-102",
+              "item": "tonkotsu",
+              "channel": "doordash",
+              "promise": 39,
+              "eta": 38,
+              "ready": null
+            },
+            {
+              "id": "DO-103",
+              "item": "gyoza",
+              "channel": "doordash",
+              "promise": 42,
+              "eta": 39,
+              "ready": null
+            },
+            {
+              "id": "UB-114",
+              "item": "gyoza",
+              "channel": "ubereats",
+              "promise": 49,
+              "eta": 52,
+              "ready": null
+            },
+            {
+              "id": "WEB-201",
+              "item": "karaage",
+              "channel": "pickup",
+              "promise": 25,
+              "eta": null,
+              "ready": null
+            }
+          ],
+          "stock": {
+            "tonkotsu": 48,
+            "karaage": 39,
+            "gyoza": 37,
+            "don": 33
+          },
+          "station_speed": {
+            "fryer": 0.5,
+            "noodles": 1.0,
+            "assembly": 1.0,
+            "packing": 1.0
+          },
+          "blocked_until": {},
+          "estimated_cook_minutes": {
+            "tonkotsu": 4.188,
+            "karaage": 5.25,
+            "gyoza": 3.25,
+            "don": 2.497
+          },
+          "completed_samples": {
+            "tonkotsu": 2,
+            "karaage": 1,
+            "gyoza": 1,
+            "don": 4
+          },
+          "budget_remaining_cents": 1200,
+          "cooks": 3,
+          "forecast": {
+            "source": "declared scenario plus configurable forecast reserve",
+            "expected_visitors_next_10m": 5.8,
+            "context": "Evening event and rain",
+            "uncertainty": "Customer response and task durations are modeled, not merchant measurements"
+          },
+          "menu": {
+            "tonkotsu": {
+              "name": "Tonkotsu ramen",
+              "station": "noodles",
+              "minutes": 4,
+              "price": 1925,
+              "cost": 620,
+              "stock": 55
+            },
+            "karaage": {
+              "name": "Chicken karaage",
+              "station": "fryer",
+              "minutes": 5,
+              "price": 1450,
+              "cost": 330,
+              "stock": 45
+            },
+            "gyoza": {
+              "name": "Crispy gyoza",
+              "station": "fryer",
+              "minutes": 3,
+              "price": 950,
+              "cost": 240,
+              "stock": 45
+            },
+            "don": {
+              "name": "Chashu rice bowl",
+              "station": "assembly",
+              "minutes": 2,
+              "price": 1540,
+              "cost": 510,
+              "stock": 40
+            }
+          }
+        }
+      },
+      {
+        "kind": "tool",
+        "tool": "compare_approved_offers",
+        "args": {},
+        "result": {
+          "offers": [
+            {
+              "item": "tonkotsu",
+              "name": "Tonkotsu ramen",
+              "allowed": false,
+              "reason": "Insufficient lead-time reserve for the new order",
+              "discount_cents": 100,
+              "contribution_cents": 1147,
+              "station": "noodles",
+              "station_load": 1.0,
+              "predicted_ready_minute": 38,
+              "promise_minute": 27,
+              "forecast_reserve_minutes": 4,
+              "affected_commitments": [],
+              "score": 4.47,
+              "limits": "Feasibility uses current observations and estimated durations; future disruptions can cause misses"
+            },
+            {
+              "item": "karaage",
+              "name": "Chicken karaage",
+              "allowed": false,
+              "reason": "Insufficient lead-time reserve for the new order",
+              "discount_cents": 100,
+              "contribution_cents": 976,
+              "station": "fryer",
+              "station_load": 1.0,
+              "predicted_ready_minute": 119,
+              "promise_minute": 27,
+              "forecast_reserve_minutes": 4,
+              "affected_commitments": [],
+              "score": 2.76,
+              "limits": "Feasibility uses current observations and estimated durations; future disruptions can cause misses"
+            },
+            {
+              "item": "gyoza",
+              "name": "Crispy gyoza",
+              "allowed": false,
+              "reason": "Insufficient lead-time reserve for the new order",
+              "discount_cents": 100,
+              "contribution_cents": 582,
+              "station": "fryer",
+              "station_load": 1.0,
+              "predicted_ready_minute": 115,
+              "promise_minute": 27,
+              "forecast_reserve_minutes": 4,
+              "affected_commitments": [],
+              "score": -1.18,
+              "limits": "Feasibility uses current observations and estimated durations; future disruptions can cause misses"
+            },
+            {
+              "item": "don",
+              "name": "Chashu rice bowl",
+              "allowed": true,
+              "reason": "Fits shared station, cook, stock and promise reservations",
+              "discount_cents": 100,
+              "contribution_cents": 884,
+              "station": "assembly",
+              "station_load": 0.467,
+              "predicted_ready_minute": 23,
+              "promise_minute": 27,
+              "forecast_reserve_minutes": 4,
+              "affected_commitments": [],
+              "score": 5.573,
+              "limits": "Feasibility uses current observations and estimated durations; future disruptions can cause misses"
+            }
+          ]
+        }
+      },
+      {
+        "kind": "tool",
+        "tool": "check_offer",
+        "args": {
+          "item_id": "don",
+          "discount_cents": 100
+        },
+        "result": {
+          "item": "don",
+          "name": "Chashu rice bowl",
+          "allowed": true,
+          "reason": "Fits shared station, cook, stock and promise reservations",
+          "discount_cents": 100,
+          "contribution_cents": 884,
+          "station": "assembly",
+          "station_load": 0.467,
+          "predicted_ready_minute": 23,
+          "promise_minute": 27,
+          "forecast_reserve_minutes": 4,
+          "affected_commitments": [],
+          "score": 5.573,
+          "limits": "Feasibility uses current observations and estimated durations; future disruptions can cause misses"
+        }
+      },
+      {
+        "kind": "tool",
+        "tool": "publish_simulated_offer",
+        "args": {
+          "item_id": "don",
+          "discount_cents": 100
+        },
+        "result": {
+          "status": "applied",
+          "action": "feature_item",
+          "source_mode": "simulation",
+          "minute": 12,
+          "source": "gemini",
+          "item": "don",
+          "discount_cents": 100,
+          "evidence": {
+            "item": "don",
+            "name": "Chashu rice bowl",
+            "allowed": true,
+            "reason": "Fits shared station, cook, stock and promise reservations",
+            "discount_cents": 100,
+            "contribution_cents": 884,
+            "station": "assembly",
+            "station_load": 0.467,
+            "predicted_ready_minute": 23,
+            "promise_minute": 27,
+            "forecast_reserve_minutes": 4,
+            "affected_commitments": [],
+            "score": 5.573,
+            "limits": "Feasibility uses current observations and estimated durations; future disruptions can cause misses"
+          },
+          "receipt_id": "b57f07996c93"
+        }
+      }
+    ],
+    "receipt": {
+      "status": "applied",
+      "action": "feature_item",
+      "source_mode": "simulation",
+      "minute": 12,
+      "source": "gemini",
+      "item": "don",
+      "discount_cents": 100,
+      "evidence": {
+        "item": "don",
+        "name": "Chashu rice bowl",
+        "allowed": true,
+        "reason": "Fits shared station, cook, stock and promise reservations",
+        "discount_cents": 100,
+        "contribution_cents": 884,
+        "station": "assembly",
+        "station_load": 0.467,
+        "predicted_ready_minute": 23,
+        "promise_minute": 27,
+        "forecast_reserve_minutes": 4,
+        "affected_commitments": [],
+        "score": 5.573,
+        "limits": "Feasibility uses current observations and estimated durations; future disruptions can cause misses"
+      },
+      "receipt_id": "b57f07996c93"
+    },
+    "qualification": null,
+    "trials": null
+  },
+  "policy_lab": {
+    "id": "4245eb0e850140799d9d651d4b55cf35",
+    "created": "2026-11-06T11:29:20.473109+00:00",
+    "kind": "policy_lab",
+    "status": "done",
+    "inputs": {
+      "objective": "Improve contribution while protecting accepted pickup promises."
+    },
+    "model": "gemini-3.1-flash-lite",
+    "agent_mode": "live_model",
+    "data_mode": "synthetic",
+    "usage": [
+      {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 10,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 420,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 420
+          }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 430,
+        "traffic_type": null
+      },
+      {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 58,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 1329,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 1329
+          }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 1387,
+        "traffic_type": null
+      },
+      {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 58,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 2178,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 2178
+          }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 2236,
+        "traffic_type": null
+      },
+      {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 59,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 3028,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 3028
+          }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 3087,
+        "traffic_type": null
+      },
+      {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 61,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 3879,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 3879
+          }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 3940,
+        "traffic_type": null
+      },
+      {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 19,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 4734,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 4734
+          }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 4753,
+        "traffic_type": null
+      },
+      {
+        "cache_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 2003
+          }
+        ],
+        "cached_content_token_count": 2003,
+        "candidates_token_count": 137,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 4776,
+        "prompt_tokens_details": [
+          {
+            "modality": "TEXT",
+            "token_count": 4776
+          }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 4913,
+        "traffic_type": null
+      }
+    ],
+    "tools": [
+      {
+        "kind": "tool",
+        "tool": "training_brief",
+        "result": {
+          "cases": [
+            {
+              "scenario": "rush",
+              "incident": "fryer_slowdown",
+              "cooks": 3
+            },
+            {
+              "scenario": "balanced",
+              "incident": "none",
+              "cooks": 3
+            },
+            {
+              "scenario": "quiet",
+              "incident": "none",
+              "cooks": 3
+            }
+          ],
+          "baseline": {
+            "policy": {
+              "name": "Protect the rush",
+              "load_weight": 7.0,
+              "minimum_margin_cents": 350,
+              "reserve_minutes": 3,
+              "discount_cents": 100,
+              "max_station_load": 0.9
+            },
+            "cases": [
+              {
+                "scenario": "rush",
+                "seed": 11,
+                "incident": "fryer_slowdown",
+                "metrics": {
+                  "accepted": 34,
+                  "completed": 34,
+                  "unresolved": 0,
+                  "on_time": 32,
+                  "late": 2,
+                  "existing_orders": 27,
+                  "existing_on_time": 26,
+                  "visitor_orders": 7,
+                  "contribution_cents": 27717,
+                  "promo_spend_cents": 500,
+                  "courier_wait_minutes": 6,
+                  "avg_courier_wait_minutes": 0.27,
+                  "worst_pickup_wait_minutes": 34,
+                  "avg_wait_minutes": 1.18,
+                  "food_hold_minutes": 536,
+                  "worst_lateness_minutes": 34,
+                  "late_minutes": 41,
+                  "schedule_changes": 63,
+                  "by_channel": {
+                    "doordash": {
+                      "accepted": 12,
+                      "late": 1
+                    },
+                    "ubereats": {
+                      "accepted": 10,
+                      "late": 0
+                    },
+                    "pickup": {
+                      "accepted": 12,
+                      "late": 1
+                    }
+                  },
+                  "service_score": 209.69
+                },
+                "budget_ok": true,
+                "accounted_for": true
+              },
+              {
+                "scenario": "balanced",
+                "seed": 19,
+                "incident": "none",
+                "metrics": {
+                  "accepted": 39,
+                  "completed": 39,
+                  "unresolved": 0,
+                  "on_time": 36,
+                  "late": 3,
+                  "existing_orders": 27,
+                  "existing_on_time": 24,
+                  "visitor_orders": 12,
+                  "contribution_cents": 31697,
+                  "promo_spend_cents": 1200,
+                  "courier_wait_minutes": 8,
+                  "avg_courier_wait_minutes": 0.36,
+                  "worst_pickup_wait_minutes": 0,
+                  "avg_wait_minutes": 0.21,
+                  "food_hold_minutes": 584,
+                  "worst_lateness_minutes": 6,
+                  "late_minutes": 13,
+                  "schedule_changes": 54,
+                  "by_channel": {
+                    "doordash": {
+                      "accepted": 12,
+                      "late": 1
+                    },
+                    "ubereats": {
+                      "accepted": 10,
+                      "late": 2
+                    },
+                    "pickup": {
+                      "accepted": 17,
+                      "late": 0
+                    }
+                  },
+                  "service_score": 262.45
+                },
+                "budget_ok": true,
+                "accounted_for": true
+              },
+              {
+                "scenario": "quiet",
+                "seed": 29,
+                "incident": "none",
+                "metrics": {
+                  "accepted": 24,
+                  "completed": 24,
+                  "unresolved": 0,
+                  "on_time": 23,
+                  "late": 1,
+                  "existing_orders": 10,
+                  "existing_on_time": 10,
+                  "visitor_orders": 14,
+                  "contribution_cents": 21811,
+                  "promo_spend_cents": 1200,
+                  "courier_wait_minutes": 0,
+                  "avg_courier_wait_minutes": 0.0,
+                  "worst_pickup_wait_minutes": 2,
+                  "avg_wait_minutes": 0.08,
+                  "food_hold_minutes": 468,
+                  "worst_lateness_minutes": 2,
+                  "late_minutes": 2,
+                  "schedule_changes": 8,
+                  "by_channel": {
+                    "doordash": {
+                      "accepted": 10,
+                      "late": 0
+                    },
+                    "ubereats": {
+                      "accepted": 0,
+                      "late": 0
+                    },
+                    "pickup": {
+                      "accepted": 14,
+                      "late": 1
+                    }
+                  },
+                  "service_score": 179.47
+                },
+                "budget_ok": true,
+                "accounted_for": true
+              }
+            ],
+            "mean_score": 217.2,
+            "mean_contribution_cents": 27075,
+            "mean_existing_on_time": 20.0,
+            "checks_pass": true
+          },
+          "maximum_tests": 6,
+          "objective": "Fixed score = modeled contribution minus 0.60 per late minute and 0.08 per holding minute. Preserve existing-order service. Held-out cases are unavailable."
+        }
+      },
+      {
+        "kind": "tool",
+        "tool": "test_policy",
+        "result": {
+          "policy": {
+            "name": "Protect the rush",
+            "load_weight": 7.0,
+            "minimum_margin_cents": 350,
+            "reserve_minutes": 3,
+            "discount_cents": 100,
+            "max_station_load": 0.9
+          },
+          "cases": [
+            {
+              "scenario": "rush",
+              "seed": 11,
+              "incident": "fryer_slowdown",
+              "metrics": {
+                "accepted": 34,
+                "completed": 34,
+                "unresolved": 0,
+                "on_time": 32,
+                "late": 2,
+                "existing_orders": 27,
+                "existing_on_time": 26,
+                "visitor_orders": 7,
+                "contribution_cents": 27717,
+                "promo_spend_cents": 500,
+                "courier_wait_minutes": 6,
+                "avg_courier_wait_minutes": 0.27,
+                "worst_pickup_wait_minutes": 34,
+                "avg_wait_minutes": 1.18,
+                "food_hold_minutes": 536,
+                "worst_lateness_minutes": 34,
+                "late_minutes": 41,
+                "schedule_changes": 63,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 12,
+                    "late": 1
+                  },
+                  "ubereats": {
+                    "accepted": 10,
+                    "late": 0
+                  },
+                  "pickup": {
+                    "accepted": 12,
+                    "late": 1
+                  }
+                },
+                "service_score": 209.69
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            },
+            {
+              "scenario": "balanced",
+              "seed": 19,
+              "incident": "none",
+              "metrics": {
+                "accepted": 39,
+                "completed": 39,
+                "unresolved": 0,
+                "on_time": 36,
+                "late": 3,
+                "existing_orders": 27,
+                "existing_on_time": 24,
+                "visitor_orders": 12,
+                "contribution_cents": 31697,
+                "promo_spend_cents": 1200,
+                "courier_wait_minutes": 8,
+                "avg_courier_wait_minutes": 0.36,
+                "worst_pickup_wait_minutes": 0,
+                "avg_wait_minutes": 0.21,
+                "food_hold_minutes": 584,
+                "worst_lateness_minutes": 6,
+                "late_minutes": 13,
+                "schedule_changes": 54,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 12,
+                    "late": 1
+                  },
+                  "ubereats": {
+                    "accepted": 10,
+                    "late": 2
+                  },
+                  "pickup": {
+                    "accepted": 17,
+                    "late": 0
+                  }
+                },
+                "service_score": 262.45
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            },
+            {
+              "scenario": "quiet",
+              "seed": 29,
+              "incident": "none",
+              "metrics": {
+                "accepted": 24,
+                "completed": 24,
+                "unresolved": 0,
+                "on_time": 23,
+                "late": 1,
+                "existing_orders": 10,
+                "existing_on_time": 10,
+                "visitor_orders": 14,
+                "contribution_cents": 21811,
+                "promo_spend_cents": 1200,
+                "courier_wait_minutes": 0,
+                "avg_courier_wait_minutes": 0.0,
+                "worst_pickup_wait_minutes": 2,
+                "avg_wait_minutes": 0.08,
+                "food_hold_minutes": 468,
+                "worst_lateness_minutes": 2,
+                "late_minutes": 2,
+                "schedule_changes": 8,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 10,
+                    "late": 0
+                  },
+                  "ubereats": {
+                    "accepted": 0,
+                    "late": 0
+                  },
+                  "pickup": {
+                    "accepted": 14,
+                    "late": 1
+                  }
+                },
+                "service_score": 179.47
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            }
+          ],
+          "mean_score": 217.2,
+          "mean_contribution_cents": 27075,
+          "mean_existing_on_time": 20.0,
+          "checks_pass": true
+        }
+      },
+      {
+        "kind": "tool",
+        "tool": "test_policy",
+        "result": {
+          "policy": {
+            "name": "Aggressive Protect Pickup",
+            "load_weight": 8.0,
+            "minimum_margin_cents": 400,
+            "reserve_minutes": 5,
+            "discount_cents": 50,
+            "max_station_load": 0.8
+          },
+          "cases": [
+            {
+              "scenario": "rush",
+              "seed": 11,
+              "incident": "fryer_slowdown",
+              "metrics": {
+                "accepted": 34,
+                "completed": 34,
+                "unresolved": 0,
+                "on_time": 32,
+                "late": 2,
+                "existing_orders": 27,
+                "existing_on_time": 26,
+                "visitor_orders": 7,
+                "contribution_cents": 27704,
+                "promo_spend_cents": 250,
+                "courier_wait_minutes": 6,
+                "avg_courier_wait_minutes": 0.27,
+                "worst_pickup_wait_minutes": 34,
+                "avg_wait_minutes": 1.18,
+                "food_hold_minutes": 539,
+                "worst_lateness_minutes": 34,
+                "late_minutes": 41,
+                "schedule_changes": 63,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 12,
+                    "late": 1
+                  },
+                  "ubereats": {
+                    "accepted": 10,
+                    "late": 0
+                  },
+                  "pickup": {
+                    "accepted": 12,
+                    "late": 1
+                  }
+                },
+                "service_score": 209.32
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            },
+            {
+              "scenario": "balanced",
+              "seed": 19,
+              "incident": "none",
+              "metrics": {
+                "accepted": 38,
+                "completed": 38,
+                "unresolved": 0,
+                "on_time": 35,
+                "late": 3,
+                "existing_orders": 27,
+                "existing_on_time": 24,
+                "visitor_orders": 11,
+                "contribution_cents": 31363,
+                "promo_spend_cents": 550,
+                "courier_wait_minutes": 8,
+                "avg_courier_wait_minutes": 0.36,
+                "worst_pickup_wait_minutes": 0,
+                "avg_wait_minutes": 0.21,
+                "food_hold_minutes": 603,
+                "worst_lateness_minutes": 6,
+                "late_minutes": 13,
+                "schedule_changes": 53,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 12,
+                    "late": 1
+                  },
+                  "ubereats": {
+                    "accepted": 10,
+                    "late": 2
+                  },
+                  "pickup": {
+                    "accepted": 16,
+                    "late": 0
+                  }
+                },
+                "service_score": 257.59
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            },
+            {
+              "scenario": "quiet",
+              "seed": 29,
+              "incident": "none",
+              "metrics": {
+                "accepted": 20,
+                "completed": 20,
+                "unresolved": 0,
+                "on_time": 19,
+                "late": 1,
+                "existing_orders": 10,
+                "existing_on_time": 10,
+                "visitor_orders": 10,
+                "contribution_cents": 18349,
+                "promo_spend_cents": 450,
+                "courier_wait_minutes": 0,
+                "avg_courier_wait_minutes": 0.0,
+                "worst_pickup_wait_minutes": 12,
+                "avg_wait_minutes": 0.6,
+                "food_hold_minutes": 451,
+                "worst_lateness_minutes": 12,
+                "late_minutes": 12,
+                "schedule_changes": 5,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 10,
+                    "late": 0
+                  },
+                  "ubereats": {
+                    "accepted": 0,
+                    "late": 0
+                  },
+                  "pickup": {
+                    "accepted": 10,
+                    "late": 1
+                  }
+                },
+                "service_score": 140.21
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            }
+          ],
+          "mean_score": 202.37,
+          "mean_contribution_cents": 25805,
+          "mean_existing_on_time": 20.0,
+          "checks_pass": true
+        }
+      },
+      {
+        "kind": "tool",
+        "tool": "test_policy",
+        "result": {
+          "policy": {
+            "name": "Balanced Yield Optimization",
+            "load_weight": 6.0,
+            "minimum_margin_cents": 300,
+            "reserve_minutes": 2,
+            "discount_cents": 125,
+            "max_station_load": 0.95
+          },
+          "cases": [
+            {
+              "scenario": "rush",
+              "seed": 11,
+              "incident": "fryer_slowdown",
+              "metrics": {
+                "accepted": 34,
+                "completed": 34,
+                "unresolved": 0,
+                "on_time": 32,
+                "late": 2,
+                "existing_orders": 27,
+                "existing_on_time": 26,
+                "visitor_orders": 7,
+                "contribution_cents": 27592,
+                "promo_spend_cents": 625,
+                "courier_wait_minutes": 6,
+                "avg_courier_wait_minutes": 0.27,
+                "worst_pickup_wait_minutes": 34,
+                "avg_wait_minutes": 1.18,
+                "food_hold_minutes": 536,
+                "worst_lateness_minutes": 34,
+                "late_minutes": 41,
+                "schedule_changes": 63,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 12,
+                    "late": 1
+                  },
+                  "ubereats": {
+                    "accepted": 10,
+                    "late": 0
+                  },
+                  "pickup": {
+                    "accepted": 12,
+                    "late": 1
+                  }
+                },
+                "service_score": 208.44
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            },
+            {
+              "scenario": "balanced",
+              "seed": 19,
+              "incident": "none",
+              "metrics": {
+                "accepted": 37,
+                "completed": 37,
+                "unresolved": 0,
+                "on_time": 34,
+                "late": 3,
+                "existing_orders": 27,
+                "existing_on_time": 24,
+                "visitor_orders": 10,
+                "contribution_cents": 29804,
+                "promo_spend_cents": 1125,
+                "courier_wait_minutes": 8,
+                "avg_courier_wait_minutes": 0.36,
+                "worst_pickup_wait_minutes": 0,
+                "avg_wait_minutes": 0.22,
+                "food_hold_minutes": 558,
+                "worst_lateness_minutes": 6,
+                "late_minutes": 13,
+                "schedule_changes": 55,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 12,
+                    "late": 1
+                  },
+                  "ubereats": {
+                    "accepted": 10,
+                    "late": 2
+                  },
+                  "pickup": {
+                    "accepted": 15,
+                    "late": 0
+                  }
+                },
+                "service_score": 245.6
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            },
+            {
+              "scenario": "quiet",
+              "seed": 29,
+              "incident": "none",
+              "metrics": {
+                "accepted": 23,
+                "completed": 23,
+                "unresolved": 0,
+                "on_time": 22,
+                "late": 1,
+                "existing_orders": 10,
+                "existing_on_time": 10,
+                "visitor_orders": 13,
+                "contribution_cents": 20547,
+                "promo_spend_cents": 1125,
+                "courier_wait_minutes": 0,
+                "avg_courier_wait_minutes": 0.0,
+                "worst_pickup_wait_minutes": 2,
+                "avg_wait_minutes": 0.09,
+                "food_hold_minutes": 468,
+                "worst_lateness_minutes": 2,
+                "late_minutes": 2,
+                "schedule_changes": 9,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 10,
+                    "late": 0
+                  },
+                  "ubereats": {
+                    "accepted": 0,
+                    "late": 0
+                  },
+                  "pickup": {
+                    "accepted": 13,
+                    "late": 1
+                  }
+                },
+                "service_score": 166.83
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            }
+          ],
+          "mean_score": 206.96,
+          "mean_contribution_cents": 25981,
+          "mean_existing_on_time": 20.0,
+          "checks_pass": true
+        }
+      },
+      {
+        "kind": "tool",
+        "tool": "test_policy",
+        "result": {
+          "policy": {
+            "name": "Refined Protect Rush",
+            "load_weight": 7.5,
+            "minimum_margin_cents": 375,
+            "reserve_minutes": 4,
+            "discount_cents": 80,
+            "max_station_load": 0.85
+          },
+          "cases": [
+            {
+              "scenario": "rush",
+              "seed": 11,
+              "incident": "fryer_slowdown",
+              "metrics": {
+                "accepted": 34,
+                "completed": 34,
+                "unresolved": 0,
+                "on_time": 32,
+                "late": 2,
+                "existing_orders": 27,
+                "existing_on_time": 26,
+                "visitor_orders": 7,
+                "contribution_cents": 27554,
+                "promo_spend_cents": 400,
+                "courier_wait_minutes": 6,
+                "avg_courier_wait_minutes": 0.27,
+                "worst_pickup_wait_minutes": 34,
+                "avg_wait_minutes": 1.18,
+                "food_hold_minutes": 539,
+                "worst_lateness_minutes": 34,
+                "late_minutes": 41,
+                "schedule_changes": 63,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 12,
+                    "late": 1
+                  },
+                  "ubereats": {
+                    "accepted": 10,
+                    "late": 0
+                  },
+                  "pickup": {
+                    "accepted": 12,
+                    "late": 1
+                  }
+                },
+                "service_score": 207.82
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            },
+            {
+              "scenario": "balanced",
+              "seed": 19,
+              "incident": "none",
+              "metrics": {
+                "accepted": 39,
+                "completed": 39,
+                "unresolved": 0,
+                "on_time": 36,
+                "late": 3,
+                "existing_orders": 27,
+                "existing_on_time": 24,
+                "visitor_orders": 12,
+                "contribution_cents": 31937,
+                "promo_spend_cents": 960,
+                "courier_wait_minutes": 8,
+                "avg_courier_wait_minutes": 0.36,
+                "worst_pickup_wait_minutes": 0,
+                "avg_wait_minutes": 0.21,
+                "food_hold_minutes": 599,
+                "worst_lateness_minutes": 6,
+                "late_minutes": 13,
+                "schedule_changes": 55,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 12,
+                    "late": 1
+                  },
+                  "ubereats": {
+                    "accepted": 10,
+                    "late": 2
+                  },
+                  "pickup": {
+                    "accepted": 17,
+                    "late": 0
+                  }
+                },
+                "service_score": 263.65
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            },
+            {
+              "scenario": "quiet",
+              "seed": 29,
+              "incident": "none",
+              "metrics": {
+                "accepted": 24,
+                "completed": 24,
+                "unresolved": 0,
+                "on_time": 23,
+                "late": 1,
+                "existing_orders": 10,
+                "existing_on_time": 10,
+                "visitor_orders": 14,
+                "contribution_cents": 21878,
+                "promo_spend_cents": 1120,
+                "courier_wait_minutes": 0,
+                "avg_courier_wait_minutes": 0.0,
+                "worst_pickup_wait_minutes": 2,
+                "avg_wait_minutes": 0.08,
+                "food_hold_minutes": 489,
+                "worst_lateness_minutes": 2,
+                "late_minutes": 2,
+                "schedule_changes": 8,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 10,
+                    "late": 0
+                  },
+                  "ubereats": {
+                    "accepted": 0,
+                    "late": 0
+                  },
+                  "pickup": {
+                    "accepted": 14,
+                    "late": 1
+                  }
+                },
+                "service_score": 178.46
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            }
+          ],
+          "mean_score": 216.64,
+          "mean_contribution_cents": 27123,
+          "mean_existing_on_time": 20.0,
+          "checks_pass": true
+        }
+      },
+      {
+        "kind": "tool",
+        "tool": "submit_policy",
+        "result": {
+          "status": "submitted",
+          "name": "Refined Protect Rush"
+        }
+      }
+    ],
+    "receipt": null,
+    "qualification": {
+      "candidate": {
+        "policy": {
+          "name": "Refined Protect Rush",
+          "load_weight": 7.5,
+          "minimum_margin_cents": 375,
+          "reserve_minutes": 4,
+          "discount_cents": 80,
+          "max_station_load": 0.85
+        },
+        "cases": [
+          {
+            "scenario": "rush",
+            "seed": 101,
+            "incident": "courier_delay",
+            "metrics": {
+              "accepted": 37,
+              "completed": 37,
+              "unresolved": 0,
+              "on_time": 32,
+              "late": 5,
+              "existing_orders": 27,
+              "existing_on_time": 26,
+              "visitor_orders": 10,
+              "contribution_cents": 30752,
+              "promo_spend_cents": 320,
+              "courier_wait_minutes": 0,
+              "avg_courier_wait_minutes": 0.0,
+              "worst_pickup_wait_minutes": 23,
+              "avg_wait_minutes": 0.89,
+              "food_hold_minutes": 763,
+              "worst_lateness_minutes": 23,
+              "late_minutes": 34,
+              "schedule_changes": 42,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 12,
+                  "late": 1
+                },
+                "ubereats": {
+                  "accepted": 10,
+                  "late": 0
+                },
+                "pickup": {
+                  "accepted": 15,
+                  "late": 4
+                }
+              },
+              "service_score": 226.08
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          },
+          {
+            "scenario": "rush",
+            "seed": 103,
+            "incident": "station_outage",
+            "metrics": {
+              "accepted": 38,
+              "completed": 38,
+              "unresolved": 0,
+              "on_time": 33,
+              "late": 5,
+              "existing_orders": 27,
+              "existing_on_time": 23,
+              "visitor_orders": 11,
+              "contribution_cents": 29862,
+              "promo_spend_cents": 720,
+              "courier_wait_minutes": 23,
+              "avg_courier_wait_minutes": 1.05,
+              "worst_pickup_wait_minutes": 17,
+              "avg_wait_minutes": 1.18,
+              "food_hold_minutes": 643,
+              "worst_lateness_minutes": 17,
+              "late_minutes": 48,
+              "schedule_changes": 69,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 12,
+                  "late": 1
+                },
+                "ubereats": {
+                  "accepted": 10,
+                  "late": 2
+                },
+                "pickup": {
+                  "accepted": 16,
+                  "late": 2
+                }
+              },
+              "service_score": 218.38
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          },
+          {
+            "scenario": "balanced",
+            "seed": 107,
+            "incident": "none",
+            "metrics": {
+              "accepted": 38,
+              "completed": 38,
+              "unresolved": 0,
+              "on_time": 34,
+              "late": 4,
+              "existing_orders": 27,
+              "existing_on_time": 24,
+              "visitor_orders": 11,
+              "contribution_cents": 29936,
+              "promo_spend_cents": 800,
+              "courier_wait_minutes": 28,
+              "avg_courier_wait_minutes": 1.27,
+              "worst_pickup_wait_minutes": 23,
+              "avg_wait_minutes": 1.34,
+              "food_hold_minutes": 549,
+              "worst_lateness_minutes": 23,
+              "late_minutes": 55,
+              "schedule_changes": 46,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 12,
+                  "late": 2
+                },
+                "ubereats": {
+                  "accepted": 10,
+                  "late": 1
+                },
+                "pickup": {
+                  "accepted": 16,
+                  "late": 1
+                }
+              },
+              "service_score": 222.44
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          },
+          {
+            "scenario": "quiet",
+            "seed": 109,
+            "incident": "none",
+            "metrics": {
+              "accepted": 19,
+              "completed": 19,
+              "unresolved": 0,
+              "on_time": 17,
+              "late": 2,
+              "existing_orders": 10,
+              "existing_on_time": 10,
+              "visitor_orders": 9,
+              "contribution_cents": 17404,
+              "promo_spend_cents": 240,
+              "courier_wait_minutes": 0,
+              "avg_courier_wait_minutes": 0.0,
+              "worst_pickup_wait_minutes": 6,
+              "avg_wait_minutes": 0.53,
+              "food_hold_minutes": 403,
+              "worst_lateness_minutes": 6,
+              "late_minutes": 10,
+              "schedule_changes": 5,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 10,
+                  "late": 0
+                },
+                "ubereats": {
+                  "accepted": 0,
+                  "late": 0
+                },
+                "pickup": {
+                  "accepted": 9,
+                  "late": 2
+                }
+              },
+              "service_score": 135.8
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          },
+          {
+            "scenario": "overload",
+            "seed": 113,
+            "incident": "fryer_slowdown",
+            "metrics": {
+              "accepted": 45,
+              "completed": 45,
+              "unresolved": 0,
+              "on_time": 14,
+              "late": 31,
+              "existing_orders": 42,
+              "existing_on_time": 14,
+              "visitor_orders": 3,
+              "contribution_cents": 37605,
+              "promo_spend_cents": 0,
+              "courier_wait_minutes": 829,
+              "avg_courier_wait_minutes": 37.68,
+              "worst_pickup_wait_minutes": 136,
+              "avg_wait_minutes": 31.04,
+              "food_hold_minutes": 181,
+              "worst_lateness_minutes": 136,
+              "late_minutes": 1392,
+              "schedule_changes": 230,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 12,
+                  "late": 9
+                },
+                "ubereats": {
+                  "accepted": 10,
+                  "late": 9
+                },
+                "pickup": {
+                  "accepted": 23,
+                  "late": 13
+                }
+              },
+              "service_score": -473.63
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          },
+          {
+            "scenario": "rush",
+            "seed": 127,
+            "incident": "fryer_slowdown",
+            "metrics": {
+              "accepted": 39,
+              "completed": 39,
+              "unresolved": 0,
+              "on_time": 28,
+              "late": 11,
+              "existing_orders": 27,
+              "existing_on_time": 17,
+              "visitor_orders": 12,
+              "contribution_cents": 32970,
+              "promo_spend_cents": 880,
+              "courier_wait_minutes": 187,
+              "avg_courier_wait_minutes": 8.5,
+              "worst_pickup_wait_minutes": 69,
+              "avg_wait_minutes": 6.69,
+              "food_hold_minutes": 526,
+              "worst_lateness_minutes": 69,
+              "late_minutes": 262,
+              "schedule_changes": 64,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 12,
+                  "late": 4
+                },
+                "ubereats": {
+                  "accepted": 10,
+                  "late": 4
+                },
+                "pickup": {
+                  "accepted": 17,
+                  "late": 3
+                }
+              },
+              "service_score": 130.42
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          }
+        ],
+        "mean_score": 76.58,
+        "mean_contribution_cents": 29755,
+        "mean_existing_on_time": 19.0,
+        "checks_pass": true
+      },
+      "default": {
+        "policy": {
+          "name": "Protect the rush",
+          "load_weight": 7.0,
+          "minimum_margin_cents": 350,
+          "reserve_minutes": 3,
+          "discount_cents": 100,
+          "max_station_load": 0.9
+        },
+        "cases": [
+          {
+            "scenario": "rush",
+            "seed": 101,
+            "incident": "courier_delay",
+            "metrics": {
+              "accepted": 37,
+              "completed": 37,
+              "unresolved": 0,
+              "on_time": 34,
+              "late": 3,
+              "existing_orders": 27,
+              "existing_on_time": 26,
+              "visitor_orders": 10,
+              "contribution_cents": 30180,
+              "promo_spend_cents": 800,
+              "courier_wait_minutes": 0,
+              "avg_courier_wait_minutes": 0.0,
+              "worst_pickup_wait_minutes": 23,
+              "avg_wait_minutes": 0.65,
+              "food_hold_minutes": 778,
+              "worst_lateness_minutes": 23,
+              "late_minutes": 25,
+              "schedule_changes": 44,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 12,
+                  "late": 1
+                },
+                "ubereats": {
+                  "accepted": 10,
+                  "late": 0
+                },
+                "pickup": {
+                  "accepted": 15,
+                  "late": 2
+                }
+              },
+              "service_score": 224.56
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          },
+          {
+            "scenario": "rush",
+            "seed": 103,
+            "incident": "station_outage",
+            "metrics": {
+              "accepted": 39,
+              "completed": 39,
+              "unresolved": 0,
+              "on_time": 35,
+              "late": 4,
+              "existing_orders": 27,
+              "existing_on_time": 23,
+              "visitor_orders": 12,
+              "contribution_cents": 30637,
+              "promo_spend_cents": 1100,
+              "courier_wait_minutes": 23,
+              "avg_courier_wait_minutes": 1.05,
+              "worst_pickup_wait_minutes": 5,
+              "avg_wait_minutes": 0.72,
+              "food_hold_minutes": 631,
+              "worst_lateness_minutes": 11,
+              "late_minutes": 31,
+              "schedule_changes": 72,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 12,
+                  "late": 1
+                },
+                "ubereats": {
+                  "accepted": 10,
+                  "late": 2
+                },
+                "pickup": {
+                  "accepted": 17,
+                  "late": 1
+                }
+              },
+              "service_score": 237.29
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          },
+          {
+            "scenario": "balanced",
+            "seed": 107,
+            "incident": "none",
+            "metrics": {
+              "accepted": 39,
+              "completed": 39,
+              "unresolved": 0,
+              "on_time": 35,
+              "late": 4,
+              "existing_orders": 27,
+              "existing_on_time": 24,
+              "visitor_orders": 12,
+              "contribution_cents": 30620,
+              "promo_spend_cents": 1100,
+              "courier_wait_minutes": 28,
+              "avg_courier_wait_minutes": 1.27,
+              "worst_pickup_wait_minutes": 23,
+              "avg_wait_minutes": 1.31,
+              "food_hold_minutes": 552,
+              "worst_lateness_minutes": 23,
+              "late_minutes": 55,
+              "schedule_changes": 50,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 12,
+                  "late": 2
+                },
+                "ubereats": {
+                  "accepted": 10,
+                  "late": 1
+                },
+                "pickup": {
+                  "accepted": 17,
+                  "late": 1
+                }
+              },
+              "service_score": 229.04
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          },
+          {
+            "scenario": "quiet",
+            "seed": 109,
+            "incident": "none",
+            "metrics": {
+              "accepted": 19,
+              "completed": 19,
+              "unresolved": 0,
+              "on_time": 17,
+              "late": 2,
+              "existing_orders": 10,
+              "existing_on_time": 10,
+              "visitor_orders": 9,
+              "contribution_cents": 17344,
+              "promo_spend_cents": 300,
+              "courier_wait_minutes": 0,
+              "avg_courier_wait_minutes": 0.0,
+              "worst_pickup_wait_minutes": 6,
+              "avg_wait_minutes": 0.53,
+              "food_hold_minutes": 403,
+              "worst_lateness_minutes": 6,
+              "late_minutes": 10,
+              "schedule_changes": 5,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 10,
+                  "late": 0
+                },
+                "ubereats": {
+                  "accepted": 0,
+                  "late": 0
+                },
+                "pickup": {
+                  "accepted": 9,
+                  "late": 2
+                }
+              },
+              "service_score": 135.2
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          },
+          {
+            "scenario": "overload",
+            "seed": 113,
+            "incident": "fryer_slowdown",
+            "metrics": {
+              "accepted": 45,
+              "completed": 45,
+              "unresolved": 0,
+              "on_time": 14,
+              "late": 31,
+              "existing_orders": 42,
+              "existing_on_time": 14,
+              "visitor_orders": 3,
+              "contribution_cents": 37605,
+              "promo_spend_cents": 0,
+              "courier_wait_minutes": 829,
+              "avg_courier_wait_minutes": 37.68,
+              "worst_pickup_wait_minutes": 136,
+              "avg_wait_minutes": 31.04,
+              "food_hold_minutes": 181,
+              "worst_lateness_minutes": 136,
+              "late_minutes": 1392,
+              "schedule_changes": 230,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 12,
+                  "late": 9
+                },
+                "ubereats": {
+                  "accepted": 10,
+                  "late": 9
+                },
+                "pickup": {
+                  "accepted": 23,
+                  "late": 13
+                }
+              },
+              "service_score": -473.63
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          },
+          {
+            "scenario": "rush",
+            "seed": 127,
+            "incident": "fryer_slowdown",
+            "metrics": {
+              "accepted": 39,
+              "completed": 39,
+              "unresolved": 0,
+              "on_time": 29,
+              "late": 10,
+              "existing_orders": 27,
+              "existing_on_time": 17,
+              "visitor_orders": 12,
+              "contribution_cents": 32558,
+              "promo_spend_cents": 1200,
+              "courier_wait_minutes": 187,
+              "avg_courier_wait_minutes": 8.5,
+              "worst_pickup_wait_minutes": 4,
+              "avg_wait_minutes": 4.92,
+              "food_hold_minutes": 510,
+              "worst_lateness_minutes": 52,
+              "late_minutes": 193,
+              "schedule_changes": 68,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 12,
+                  "late": 4
+                },
+                "ubereats": {
+                  "accepted": 10,
+                  "late": 4
+                },
+                "pickup": {
+                  "accepted": 17,
+                  "late": 2
+                }
+              },
+              "service_score": 168.98
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          }
+        ],
+        "mean_score": 86.91,
+        "mean_contribution_cents": 29824,
+        "mean_existing_on_time": 19.0,
+        "checks_pass": true
+      },
+      "conventional_search": {
+        "policy": {
+          "name": "Search: flexible",
+          "load_weight": 2.0,
+          "minimum_margin_cents": 350,
+          "reserve_minutes": 1,
+          "discount_cents": 100,
+          "max_station_load": 0.9
+        },
+        "cases": [
+          {
+            "scenario": "rush",
+            "seed": 101,
+            "incident": "courier_delay",
+            "metrics": {
+              "accepted": 38,
+              "completed": 38,
+              "unresolved": 0,
+              "on_time": 35,
+              "late": 3,
+              "existing_orders": 27,
+              "existing_on_time": 26,
+              "visitor_orders": 11,
+              "contribution_cents": 31327,
+              "promo_spend_cents": 900,
+              "courier_wait_minutes": 0,
+              "avg_courier_wait_minutes": 0.0,
+              "worst_pickup_wait_minutes": 23,
+              "avg_wait_minutes": 0.63,
+              "food_hold_minutes": 767,
+              "worst_lateness_minutes": 23,
+              "late_minutes": 25,
+              "schedule_changes": 44,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 12,
+                  "late": 1
+                },
+                "ubereats": {
+                  "accepted": 10,
+                  "late": 0
+                },
+                "pickup": {
+                  "accepted": 16,
+                  "late": 2
+                }
+              },
+              "service_score": 236.91
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          },
+          {
+            "scenario": "rush",
+            "seed": 103,
+            "incident": "station_outage",
+            "metrics": {
+              "accepted": 39,
+              "completed": 39,
+              "unresolved": 0,
+              "on_time": 35,
+              "late": 4,
+              "existing_orders": 27,
+              "existing_on_time": 23,
+              "visitor_orders": 12,
+              "contribution_cents": 30537,
+              "promo_spend_cents": 1200,
+              "courier_wait_minutes": 23,
+              "avg_courier_wait_minutes": 1.05,
+              "worst_pickup_wait_minutes": 5,
+              "avg_wait_minutes": 0.72,
+              "food_hold_minutes": 630,
+              "worst_lateness_minutes": 11,
+              "late_minutes": 31,
+              "schedule_changes": 70,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 12,
+                  "late": 1
+                },
+                "ubereats": {
+                  "accepted": 10,
+                  "late": 2
+                },
+                "pickup": {
+                  "accepted": 17,
+                  "late": 1
+                }
+              },
+              "service_score": 236.37
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          },
+          {
+            "scenario": "balanced",
+            "seed": 107,
+            "incident": "none",
+            "metrics": {
+              "accepted": 40,
+              "completed": 40,
+              "unresolved": 0,
+              "on_time": 35,
+              "late": 5,
+              "existing_orders": 27,
+              "existing_on_time": 24,
+              "visitor_orders": 13,
+              "contribution_cents": 31604,
+              "promo_spend_cents": 1100,
+              "courier_wait_minutes": 28,
+              "avg_courier_wait_minutes": 1.27,
+              "worst_pickup_wait_minutes": 25,
+              "avg_wait_minutes": 1.7,
+              "food_hold_minutes": 522,
+              "worst_lateness_minutes": 25,
+              "late_minutes": 72,
+              "schedule_changes": 52,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 12,
+                  "late": 2
+                },
+                "ubereats": {
+                  "accepted": 10,
+                  "late": 1
+                },
+                "pickup": {
+                  "accepted": 18,
+                  "late": 2
+                }
+              },
+              "service_score": 231.08
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          },
+          {
+            "scenario": "quiet",
+            "seed": 109,
+            "incident": "none",
+            "metrics": {
+              "accepted": 19,
+              "completed": 19,
+              "unresolved": 0,
+              "on_time": 17,
+              "late": 2,
+              "existing_orders": 10,
+              "existing_on_time": 10,
+              "visitor_orders": 9,
+              "contribution_cents": 17344,
+              "promo_spend_cents": 300,
+              "courier_wait_minutes": 0,
+              "avg_courier_wait_minutes": 0.0,
+              "worst_pickup_wait_minutes": 6,
+              "avg_wait_minutes": 0.53,
+              "food_hold_minutes": 403,
+              "worst_lateness_minutes": 6,
+              "late_minutes": 10,
+              "schedule_changes": 5,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 10,
+                  "late": 0
+                },
+                "ubereats": {
+                  "accepted": 0,
+                  "late": 0
+                },
+                "pickup": {
+                  "accepted": 9,
+                  "late": 2
+                }
+              },
+              "service_score": 135.2
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          },
+          {
+            "scenario": "overload",
+            "seed": 113,
+            "incident": "fryer_slowdown",
+            "metrics": {
+              "accepted": 45,
+              "completed": 45,
+              "unresolved": 0,
+              "on_time": 14,
+              "late": 31,
+              "existing_orders": 42,
+              "existing_on_time": 14,
+              "visitor_orders": 3,
+              "contribution_cents": 37605,
+              "promo_spend_cents": 0,
+              "courier_wait_minutes": 829,
+              "avg_courier_wait_minutes": 37.68,
+              "worst_pickup_wait_minutes": 136,
+              "avg_wait_minutes": 31.04,
+              "food_hold_minutes": 181,
+              "worst_lateness_minutes": 136,
+              "late_minutes": 1392,
+              "schedule_changes": 230,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 12,
+                  "late": 9
+                },
+                "ubereats": {
+                  "accepted": 10,
+                  "late": 9
+                },
+                "pickup": {
+                  "accepted": 23,
+                  "late": 13
+                }
+              },
+              "service_score": -473.63
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          },
+          {
+            "scenario": "rush",
+            "seed": 127,
+            "incident": "fryer_slowdown",
+            "metrics": {
+              "accepted": 39,
+              "completed": 39,
+              "unresolved": 0,
+              "on_time": 29,
+              "late": 10,
+              "existing_orders": 27,
+              "existing_on_time": 17,
+              "visitor_orders": 12,
+              "contribution_cents": 32558,
+              "promo_spend_cents": 1200,
+              "courier_wait_minutes": 187,
+              "avg_courier_wait_minutes": 8.5,
+              "worst_pickup_wait_minutes": 4,
+              "avg_wait_minutes": 4.92,
+              "food_hold_minutes": 510,
+              "worst_lateness_minutes": 52,
+              "late_minutes": 193,
+              "schedule_changes": 68,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 12,
+                  "late": 4
+                },
+                "ubereats": {
+                  "accepted": 10,
+                  "late": 4
+                },
+                "pickup": {
+                  "accepted": 17,
+                  "late": 2
+                }
+              },
+              "service_score": 168.98
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          }
+        ],
+        "mean_score": 89.15,
+        "mean_contribution_cents": 30162,
+        "mean_existing_on_time": 19.0,
+        "checks_pass": true
+      },
+      "search_training": [
+        {
+          "policy": {
+            "name": "Search: no discount",
+            "load_weight": 7.0,
+            "minimum_margin_cents": 350,
+            "reserve_minutes": 3,
+            "discount_cents": 0,
+            "max_station_load": 0.9
+          },
+          "cases": [
+            {
+              "scenario": "rush",
+              "seed": 11,
+              "incident": "fryer_slowdown",
+              "metrics": {
+                "accepted": 32,
+                "completed": 32,
+                "unresolved": 0,
+                "on_time": 28,
+                "late": 4,
+                "existing_orders": 27,
+                "existing_on_time": 26,
+                "visitor_orders": 5,
+                "contribution_cents": 25776,
+                "promo_spend_cents": 0,
+                "courier_wait_minutes": 6,
+                "avg_courier_wait_minutes": 0.27,
+                "worst_pickup_wait_minutes": 46,
+                "avg_wait_minutes": 3.97,
+                "food_hold_minutes": 513,
+                "worst_lateness_minutes": 46,
+                "late_minutes": 128,
+                "schedule_changes": 67,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 12,
+                    "late": 1
+                  },
+                  "ubereats": {
+                    "accepted": 10,
+                    "late": 0
+                  },
+                  "pickup": {
+                    "accepted": 10,
+                    "late": 3
+                  }
+                },
+                "service_score": 139.92
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            },
+            {
+              "scenario": "balanced",
+              "seed": 19,
+              "incident": "none",
+              "metrics": {
+                "accepted": 31,
+                "completed": 31,
+                "unresolved": 0,
+                "on_time": 27,
+                "late": 4,
+                "existing_orders": 27,
+                "existing_on_time": 24,
+                "visitor_orders": 4,
+                "contribution_cents": 25117,
+                "promo_spend_cents": 0,
+                "courier_wait_minutes": 8,
+                "avg_courier_wait_minutes": 0.36,
+                "worst_pickup_wait_minutes": 31,
+                "avg_wait_minutes": 1.26,
+                "food_hold_minutes": 533,
+                "worst_lateness_minutes": 31,
+                "late_minutes": 44,
+                "schedule_changes": 50,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 12,
+                    "late": 1
+                  },
+                  "ubereats": {
+                    "accepted": 10,
+                    "late": 2
+                  },
+                  "pickup": {
+                    "accepted": 9,
+                    "late": 1
+                  }
+                },
+                "service_score": 182.13
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            },
+            {
+              "scenario": "quiet",
+              "seed": 29,
+              "incident": "none",
+              "metrics": {
+                "accepted": 17,
+                "completed": 17,
+                "unresolved": 0,
+                "on_time": 16,
+                "late": 1,
+                "existing_orders": 10,
+                "existing_on_time": 10,
+                "visitor_orders": 7,
+                "contribution_cents": 15505,
+                "promo_spend_cents": 0,
+                "courier_wait_minutes": 0,
+                "avg_courier_wait_minutes": 0.0,
+                "worst_pickup_wait_minutes": 12,
+                "avg_wait_minutes": 0.71,
+                "food_hold_minutes": 412,
+                "worst_lateness_minutes": 12,
+                "late_minutes": 12,
+                "schedule_changes": 4,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 10,
+                    "late": 0
+                  },
+                  "ubereats": {
+                    "accepted": 0,
+                    "late": 0
+                  },
+                  "pickup": {
+                    "accepted": 7,
+                    "late": 1
+                  }
+                },
+                "service_score": 114.89
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            }
+          ],
+          "mean_score": 145.65,
+          "mean_contribution_cents": 22133,
+          "mean_existing_on_time": 20.0,
+          "checks_pass": true
+        },
+        {
+          "policy": {
+            "name": "Search: small offer",
+            "load_weight": 7.0,
+            "minimum_margin_cents": 350,
+            "reserve_minutes": 3,
+            "discount_cents": 50,
+            "max_station_load": 0.9
+          },
+          "cases": [
+            {
+              "scenario": "rush",
+              "seed": 11,
+              "incident": "fryer_slowdown",
+              "metrics": {
+                "accepted": 34,
+                "completed": 34,
+                "unresolved": 0,
+                "on_time": 31,
+                "late": 3,
+                "existing_orders": 27,
+                "existing_on_time": 26,
+                "visitor_orders": 7,
+                "contribution_cents": 27452,
+                "promo_spend_cents": 200,
+                "courier_wait_minutes": 6,
+                "avg_courier_wait_minutes": 0.27,
+                "worst_pickup_wait_minutes": 35,
+                "avg_wait_minutes": 2.21,
+                "food_hold_minutes": 534,
+                "worst_lateness_minutes": 35,
+                "late_minutes": 76,
+                "schedule_changes": 65,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 12,
+                    "late": 1
+                  },
+                  "ubereats": {
+                    "accepted": 10,
+                    "late": 0
+                  },
+                  "pickup": {
+                    "accepted": 12,
+                    "late": 2
+                  }
+                },
+                "service_score": 186.2
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            },
+            {
+              "scenario": "balanced",
+              "seed": 19,
+              "incident": "none",
+              "metrics": {
+                "accepted": 38,
+                "completed": 38,
+                "unresolved": 0,
+                "on_time": 35,
+                "late": 3,
+                "existing_orders": 27,
+                "existing_on_time": 24,
+                "visitor_orders": 11,
+                "contribution_cents": 31363,
+                "promo_spend_cents": 550,
+                "courier_wait_minutes": 8,
+                "avg_courier_wait_minutes": 0.36,
+                "worst_pickup_wait_minutes": 0,
+                "avg_wait_minutes": 0.21,
+                "food_hold_minutes": 603,
+                "worst_lateness_minutes": 6,
+                "late_minutes": 13,
+                "schedule_changes": 53,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 12,
+                    "late": 1
+                  },
+                  "ubereats": {
+                    "accepted": 10,
+                    "late": 2
+                  },
+                  "pickup": {
+                    "accepted": 16,
+                    "late": 0
+                  }
+                },
+                "service_score": 257.59
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            },
+            {
+              "scenario": "quiet",
+              "seed": 29,
+              "incident": "none",
+              "metrics": {
+                "accepted": 19,
+                "completed": 19,
+                "unresolved": 0,
+                "on_time": 18,
+                "late": 1,
+                "existing_orders": 10,
+                "existing_on_time": 10,
+                "visitor_orders": 9,
+                "contribution_cents": 17557,
+                "promo_spend_cents": 350,
+                "courier_wait_minutes": 0,
+                "avg_courier_wait_minutes": 0.0,
+                "worst_pickup_wait_minutes": 12,
+                "avg_wait_minutes": 0.63,
+                "food_hold_minutes": 423,
+                "worst_lateness_minutes": 12,
+                "late_minutes": 12,
+                "schedule_changes": 4,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 10,
+                    "late": 0
+                  },
+                  "ubereats": {
+                    "accepted": 0,
+                    "late": 0
+                  },
+                  "pickup": {
+                    "accepted": 9,
+                    "late": 1
+                  }
+                },
+                "service_score": 134.53
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            }
+          ],
+          "mean_score": 192.77,
+          "mean_contribution_cents": 25457,
+          "mean_existing_on_time": 20.0,
+          "checks_pass": true
+        },
+        {
+          "policy": {
+            "name": "Search: larger offer",
+            "load_weight": 7.0,
+            "minimum_margin_cents": 350,
+            "reserve_minutes": 3,
+            "discount_cents": 150,
+            "max_station_load": 0.9
+          },
+          "cases": [
+            {
+              "scenario": "rush",
+              "seed": 11,
+              "incident": "fryer_slowdown",
+              "metrics": {
+                "accepted": 34,
+                "completed": 34,
+                "unresolved": 0,
+                "on_time": 33,
+                "late": 1,
+                "existing_orders": 27,
+                "existing_on_time": 26,
+                "visitor_orders": 7,
+                "contribution_cents": 26962,
+                "promo_spend_cents": 900,
+                "courier_wait_minutes": 6,
+                "avg_courier_wait_minutes": 0.27,
+                "worst_pickup_wait_minutes": 0,
+                "avg_wait_minutes": 0.18,
+                "food_hold_minutes": 539,
+                "worst_lateness_minutes": 7,
+                "late_minutes": 7,
+                "schedule_changes": 63,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 12,
+                    "late": 1
+                  },
+                  "ubereats": {
+                    "accepted": 10,
+                    "late": 0
+                  },
+                  "pickup": {
+                    "accepted": 12,
+                    "late": 0
+                  }
+                },
+                "service_score": 222.3
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            },
+            {
+              "scenario": "balanced",
+              "seed": 19,
+              "incident": "none",
+              "metrics": {
+                "accepted": 35,
+                "completed": 35,
+                "unresolved": 0,
+                "on_time": 32,
+                "late": 3,
+                "existing_orders": 27,
+                "existing_on_time": 24,
+                "visitor_orders": 8,
+                "contribution_cents": 27761,
+                "promo_spend_cents": 1200,
+                "courier_wait_minutes": 8,
+                "avg_courier_wait_minutes": 0.36,
+                "worst_pickup_wait_minutes": 0,
+                "avg_wait_minutes": 0.23,
+                "food_hold_minutes": 555,
+                "worst_lateness_minutes": 6,
+                "late_minutes": 13,
+                "schedule_changes": 53,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 12,
+                    "late": 1
+                  },
+                  "ubereats": {
+                    "accepted": 10,
+                    "late": 2
+                  },
+                  "pickup": {
+                    "accepted": 13,
+                    "late": 0
+                  }
+                },
+                "service_score": 225.41
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            },
+            {
+              "scenario": "quiet",
+              "seed": 29,
+              "incident": "none",
+              "metrics": {
+                "accepted": 22,
+                "completed": 22,
+                "unresolved": 0,
+                "on_time": 21,
+                "late": 1,
+                "existing_orders": 10,
+                "existing_on_time": 10,
+                "visitor_orders": 12,
+                "contribution_cents": 19225,
+                "promo_spend_cents": 1200,
+                "courier_wait_minutes": 0,
+                "avg_courier_wait_minutes": 0.0,
+                "worst_pickup_wait_minutes": 2,
+                "avg_wait_minutes": 0.09,
+                "food_hold_minutes": 463,
+                "worst_lateness_minutes": 2,
+                "late_minutes": 2,
+                "schedule_changes": 9,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 10,
+                    "late": 0
+                  },
+                  "ubereats": {
+                    "accepted": 0,
+                    "late": 0
+                  },
+                  "pickup": {
+                    "accepted": 12,
+                    "late": 1
+                  }
+                },
+                "service_score": 154.01
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            }
+          ],
+          "mean_score": 200.57,
+          "mean_contribution_cents": 24649,
+          "mean_existing_on_time": 20.0,
+          "checks_pass": true
+        },
+        {
+          "policy": {
+            "name": "Search: conservative",
+            "load_weight": 7.0,
+            "minimum_margin_cents": 350,
+            "reserve_minutes": 6,
+            "discount_cents": 100,
+            "max_station_load": 0.6
+          },
+          "cases": [
+            {
+              "scenario": "rush",
+              "seed": 11,
+              "incident": "fryer_slowdown",
+              "metrics": {
+                "accepted": 33,
+                "completed": 33,
+                "unresolved": 0,
+                "on_time": 31,
+                "late": 2,
+                "existing_orders": 27,
+                "existing_on_time": 26,
+                "visitor_orders": 6,
+                "contribution_cents": 26570,
+                "promo_spend_cents": 400,
+                "courier_wait_minutes": 6,
+                "avg_courier_wait_minutes": 0.27,
+                "worst_pickup_wait_minutes": 34,
+                "avg_wait_minutes": 1.21,
+                "food_hold_minutes": 538,
+                "worst_lateness_minutes": 34,
+                "late_minutes": 41,
+                "schedule_changes": 63,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 12,
+                    "late": 1
+                  },
+                  "ubereats": {
+                    "accepted": 10,
+                    "late": 0
+                  },
+                  "pickup": {
+                    "accepted": 11,
+                    "late": 1
+                  }
+                },
+                "service_score": 198.06
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            },
+            {
+              "scenario": "balanced",
+              "seed": 19,
+              "incident": "none",
+              "metrics": {
+                "accepted": 39,
+                "completed": 39,
+                "unresolved": 0,
+                "on_time": 36,
+                "late": 3,
+                "existing_orders": 27,
+                "existing_on_time": 24,
+                "visitor_orders": 12,
+                "contribution_cents": 31697,
+                "promo_spend_cents": 1200,
+                "courier_wait_minutes": 8,
+                "avg_courier_wait_minutes": 0.36,
+                "worst_pickup_wait_minutes": 0,
+                "avg_wait_minutes": 0.21,
+                "food_hold_minutes": 615,
+                "worst_lateness_minutes": 6,
+                "late_minutes": 13,
+                "schedule_changes": 55,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 12,
+                    "late": 1
+                  },
+                  "ubereats": {
+                    "accepted": 10,
+                    "late": 2
+                  },
+                  "pickup": {
+                    "accepted": 17,
+                    "late": 0
+                  }
+                },
+                "service_score": 259.97
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            },
+            {
+              "scenario": "quiet",
+              "seed": 29,
+              "incident": "none",
+              "metrics": {
+                "accepted": 24,
+                "completed": 24,
+                "unresolved": 0,
+                "on_time": 23,
+                "late": 1,
+                "existing_orders": 10,
+                "existing_on_time": 10,
+                "visitor_orders": 14,
+                "contribution_cents": 21062,
+                "promo_spend_cents": 1200,
+                "courier_wait_minutes": 0,
+                "avg_courier_wait_minutes": 0.0,
+                "worst_pickup_wait_minutes": 2,
+                "avg_wait_minutes": 0.08,
+                "food_hold_minutes": 488,
+                "worst_lateness_minutes": 2,
+                "late_minutes": 2,
+                "schedule_changes": 8,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 10,
+                    "late": 0
+                  },
+                  "ubereats": {
+                    "accepted": 0,
+                    "late": 0
+                  },
+                  "pickup": {
+                    "accepted": 14,
+                    "late": 1
+                  }
+                },
+                "service_score": 170.38
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            }
+          ],
+          "mean_score": 209.47,
+          "mean_contribution_cents": 26443,
+          "mean_existing_on_time": 20.0,
+          "checks_pass": true
+        },
+        {
+          "policy": {
+            "name": "Search: flexible",
+            "load_weight": 2.0,
+            "minimum_margin_cents": 350,
+            "reserve_minutes": 1,
+            "discount_cents": 100,
+            "max_station_load": 0.9
+          },
+          "cases": [
+            {
+              "scenario": "rush",
+              "seed": 11,
+              "incident": "fryer_slowdown",
+              "metrics": {
+                "accepted": 35,
+                "completed": 35,
+                "unresolved": 0,
+                "on_time": 34,
+                "late": 1,
+                "existing_orders": 27,
+                "existing_on_time": 26,
+                "visitor_orders": 8,
+                "contribution_cents": 28309,
+                "promo_spend_cents": 800,
+                "courier_wait_minutes": 6,
+                "avg_courier_wait_minutes": 0.27,
+                "worst_pickup_wait_minutes": 0,
+                "avg_wait_minutes": 0.17,
+                "food_hold_minutes": 529,
+                "worst_lateness_minutes": 7,
+                "late_minutes": 7,
+                "schedule_changes": 64,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 12,
+                    "late": 1
+                  },
+                  "ubereats": {
+                    "accepted": 10,
+                    "late": 0
+                  },
+                  "pickup": {
+                    "accepted": 13,
+                    "late": 0
+                  }
+                },
+                "service_score": 236.57
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            },
+            {
+              "scenario": "balanced",
+              "seed": 19,
+              "incident": "none",
+              "metrics": {
+                "accepted": 39,
+                "completed": 39,
+                "unresolved": 0,
+                "on_time": 36,
+                "late": 3,
+                "existing_orders": 27,
+                "existing_on_time": 24,
+                "visitor_orders": 12,
+                "contribution_cents": 31697,
+                "promo_spend_cents": 1200,
+                "courier_wait_minutes": 8,
+                "avg_courier_wait_minutes": 0.36,
+                "worst_pickup_wait_minutes": 0,
+                "avg_wait_minutes": 0.21,
+                "food_hold_minutes": 568,
+                "worst_lateness_minutes": 6,
+                "late_minutes": 13,
+                "schedule_changes": 56,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 12,
+                    "late": 1
+                  },
+                  "ubereats": {
+                    "accepted": 10,
+                    "late": 2
+                  },
+                  "pickup": {
+                    "accepted": 17,
+                    "late": 0
+                  }
+                },
+                "service_score": 263.73
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            },
+            {
+              "scenario": "quiet",
+              "seed": 29,
+              "incident": "none",
+              "metrics": {
+                "accepted": 23,
+                "completed": 23,
+                "unresolved": 0,
+                "on_time": 22,
+                "late": 1,
+                "existing_orders": 10,
+                "existing_on_time": 10,
+                "visitor_orders": 13,
+                "contribution_cents": 20998,
+                "promo_spend_cents": 1200,
+                "courier_wait_minutes": 0,
+                "avg_courier_wait_minutes": 0.0,
+                "worst_pickup_wait_minutes": 2,
+                "avg_wait_minutes": 0.09,
+                "food_hold_minutes": 453,
+                "worst_lateness_minutes": 2,
+                "late_minutes": 2,
+                "schedule_changes": 8,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 10,
+                    "late": 0
+                  },
+                  "ubereats": {
+                    "accepted": 0,
+                    "late": 0
+                  },
+                  "pickup": {
+                    "accepted": 13,
+                    "late": 1
+                  }
+                },
+                "service_score": 172.54
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            }
+          ],
+          "mean_score": 224.28,
+          "mean_contribution_cents": 27001,
+          "mean_existing_on_time": 20.0,
+          "checks_pass": true
+        },
+        {
+          "policy": {
+            "name": "Search: high reserve",
+            "load_weight": 12.0,
+            "minimum_margin_cents": 350,
+            "reserve_minutes": 9,
+            "discount_cents": 100,
+            "max_station_load": 0.9
+          },
+          "cases": [
+            {
+              "scenario": "rush",
+              "seed": 11,
+              "incident": "fryer_slowdown",
+              "metrics": {
+                "accepted": 33,
+                "completed": 33,
+                "unresolved": 0,
+                "on_time": 30,
+                "late": 3,
+                "existing_orders": 27,
+                "existing_on_time": 26,
+                "visitor_orders": 6,
+                "contribution_cents": 26762,
+                "promo_spend_cents": 300,
+                "courier_wait_minutes": 6,
+                "avg_courier_wait_minutes": 0.27,
+                "worst_pickup_wait_minutes": 41,
+                "avg_wait_minutes": 2.45,
+                "food_hold_minutes": 533,
+                "worst_lateness_minutes": 41,
+                "late_minutes": 82,
+                "schedule_changes": 65,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 12,
+                    "late": 1
+                  },
+                  "ubereats": {
+                    "accepted": 10,
+                    "late": 0
+                  },
+                  "pickup": {
+                    "accepted": 11,
+                    "late": 2
+                  }
+                },
+                "service_score": 175.78
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            },
+            {
+              "scenario": "balanced",
+              "seed": 19,
+              "incident": "none",
+              "metrics": {
+                "accepted": 39,
+                "completed": 39,
+                "unresolved": 0,
+                "on_time": 35,
+                "late": 4,
+                "existing_orders": 27,
+                "existing_on_time": 24,
+                "visitor_orders": 12,
+                "contribution_cents": 31889,
+                "promo_spend_cents": 1100,
+                "courier_wait_minutes": 8,
+                "avg_courier_wait_minutes": 0.36,
+                "worst_pickup_wait_minutes": 31,
+                "avg_wait_minutes": 1.0,
+                "food_hold_minutes": 625,
+                "worst_lateness_minutes": 31,
+                "late_minutes": 44,
+                "schedule_changes": 49,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 12,
+                    "late": 1
+                  },
+                  "ubereats": {
+                    "accepted": 10,
+                    "late": 2
+                  },
+                  "pickup": {
+                    "accepted": 17,
+                    "late": 1
+                  }
+                },
+                "service_score": 242.49
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            },
+            {
+              "scenario": "quiet",
+              "seed": 29,
+              "incident": "none",
+              "metrics": {
+                "accepted": 22,
+                "completed": 22,
+                "unresolved": 0,
+                "on_time": 21,
+                "late": 1,
+                "existing_orders": 10,
+                "existing_on_time": 10,
+                "visitor_orders": 12,
+                "contribution_cents": 19141,
+                "promo_spend_cents": 1100,
+                "courier_wait_minutes": 0,
+                "avg_courier_wait_minutes": 0.0,
+                "worst_pickup_wait_minutes": 2,
+                "avg_wait_minutes": 0.09,
+                "food_hold_minutes": 483,
+                "worst_lateness_minutes": 2,
+                "late_minutes": 2,
+                "schedule_changes": 3,
+                "by_channel": {
+                  "doordash": {
+                    "accepted": 10,
+                    "late": 0
+                  },
+                  "ubereats": {
+                    "accepted": 0,
+                    "late": 0
+                  },
+                  "pickup": {
+                    "accepted": 12,
+                    "late": 1
+                  }
+                },
+                "service_score": 151.57
+              },
+              "budget_ok": true,
+              "accounted_for": true
+            }
+          ],
+          "mean_score": 189.95,
+          "mean_contribution_cents": 25931,
+          "mean_existing_on_time": 20.0,
+          "checks_pass": true
+        }
+      ],
+      "preserves_each_case": true,
+      "qualified": false,
+      "selected_policy": {
+        "name": "Protect the rush",
+        "load_weight": 7.0,
+        "minimum_margin_cents": 350,
+        "reserve_minutes": 3,
+        "discount_cents": 100,
+        "max_station_load": 0.9
+      },
+      "selection": "default_retained",
+      "explanation": "Default retained: candidate did not meet every independent score/service gate.",
+      "source_mode": "synthetic",
+      "evaluation_scope": "Six held-out modeled cases, not a restaurant pilot"
+    },
+    "trials": [
+      {
+        "policy": {
+          "name": "Protect the rush",
+          "load_weight": 7.0,
+          "minimum_margin_cents": 350,
+          "reserve_minutes": 3,
+          "discount_cents": 100,
+          "max_station_load": 0.9
+        },
+        "cases": [
+          {
+            "scenario": "rush",
+            "seed": 11,
+            "incident": "fryer_slowdown",
+            "metrics": {
+              "accepted": 34,
+              "completed": 34,
+              "unresolved": 0,
+              "on_time": 32,
+              "late": 2,
+              "existing_orders": 27,
+              "existing_on_time": 26,
+              "visitor_orders": 7,
+              "contribution_cents": 27717,
+              "promo_spend_cents": 500,
+              "courier_wait_minutes": 6,
+              "avg_courier_wait_minutes": 0.27,
+              "worst_pickup_wait_minutes": 34,
+              "avg_wait_minutes": 1.18,
+              "food_hold_minutes": 536,
+              "worst_lateness_minutes": 34,
+              "late_minutes": 41,
+              "schedule_changes": 63,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 12,
+                  "late": 1
+                },
+                "ubereats": {
+                  "accepted": 10,
+                  "late": 0
+                },
+                "pickup": {
+                  "accepted": 12,
+                  "late": 1
+                }
+              },
+              "service_score": 209.69
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          },
+          {
+            "scenario": "balanced",
+            "seed": 19,
+            "incident": "none",
+            "metrics": {
+              "accepted": 39,
+              "completed": 39,
+              "unresolved": 0,
+              "on_time": 36,
+              "late": 3,
+              "existing_orders": 27,
+              "existing_on_time": 24,
+              "visitor_orders": 12,
+              "contribution_cents": 31697,
+              "promo_spend_cents": 1200,
+              "courier_wait_minutes": 8,
+              "avg_courier_wait_minutes": 0.36,
+              "worst_pickup_wait_minutes": 0,
+              "avg_wait_minutes": 0.21,
+              "food_hold_minutes": 584,
+              "worst_lateness_minutes": 6,
+              "late_minutes": 13,
+              "schedule_changes": 54,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 12,
+                  "late": 1
+                },
+                "ubereats": {
+                  "accepted": 10,
+                  "late": 2
+                },
+                "pickup": {
+                  "accepted": 17,
+                  "late": 0
+                }
+              },
+              "service_score": 262.45
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          },
+          {
+            "scenario": "quiet",
+            "seed": 29,
+            "incident": "none",
+            "metrics": {
+              "accepted": 24,
+              "completed": 24,
+              "unresolved": 0,
+              "on_time": 23,
+              "late": 1,
+              "existing_orders": 10,
+              "existing_on_time": 10,
+              "visitor_orders": 14,
+              "contribution_cents": 21811,
+              "promo_spend_cents": 1200,
+              "courier_wait_minutes": 0,
+              "avg_courier_wait_minutes": 0.0,
+              "worst_pickup_wait_minutes": 2,
+              "avg_wait_minutes": 0.08,
+              "food_hold_minutes": 468,
+              "worst_lateness_minutes": 2,
+              "late_minutes": 2,
+              "schedule_changes": 8,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 10,
+                  "late": 0
+                },
+                "ubereats": {
+                  "accepted": 0,
+                  "late": 0
+                },
+                "pickup": {
+                  "accepted": 14,
+                  "late": 1
+                }
+              },
+              "service_score": 179.47
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          }
+        ],
+        "mean_score": 217.2,
+        "mean_contribution_cents": 27075,
+        "mean_existing_on_time": 20.0,
+        "checks_pass": true
+      },
+      {
+        "policy": {
+          "name": "Aggressive Protect Pickup",
+          "load_weight": 8.0,
+          "minimum_margin_cents": 400,
+          "reserve_minutes": 5,
+          "discount_cents": 50,
+          "max_station_load": 0.8
+        },
+        "cases": [
+          {
+            "scenario": "rush",
+            "seed": 11,
+            "incident": "fryer_slowdown",
+            "metrics": {
+              "accepted": 34,
+              "completed": 34,
+              "unresolved": 0,
+              "on_time": 32,
+              "late": 2,
+              "existing_orders": 27,
+              "existing_on_time": 26,
+              "visitor_orders": 7,
+              "contribution_cents": 27704,
+              "promo_spend_cents": 250,
+              "courier_wait_minutes": 6,
+              "avg_courier_wait_minutes": 0.27,
+              "worst_pickup_wait_minutes": 34,
+              "avg_wait_minutes": 1.18,
+              "food_hold_minutes": 539,
+              "worst_lateness_minutes": 34,
+              "late_minutes": 41,
+              "schedule_changes": 63,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 12,
+                  "late": 1
+                },
+                "ubereats": {
+                  "accepted": 10,
+                  "late": 0
+                },
+                "pickup": {
+                  "accepted": 12,
+                  "late": 1
+                }
+              },
+              "service_score": 209.32
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          },
+          {
+            "scenario": "balanced",
+            "seed": 19,
+            "incident": "none",
+            "metrics": {
+              "accepted": 38,
+              "completed": 38,
+              "unresolved": 0,
+              "on_time": 35,
+              "late": 3,
+              "existing_orders": 27,
+              "existing_on_time": 24,
+              "visitor_orders": 11,
+              "contribution_cents": 31363,
+              "promo_spend_cents": 550,
+              "courier_wait_minutes": 8,
+              "avg_courier_wait_minutes": 0.36,
+              "worst_pickup_wait_minutes": 0,
+              "avg_wait_minutes": 0.21,
+              "food_hold_minutes": 603,
+              "worst_lateness_minutes": 6,
+              "late_minutes": 13,
+              "schedule_changes": 53,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 12,
+                  "late": 1
+                },
+                "ubereats": {
+                  "accepted": 10,
+                  "late": 2
+                },
+                "pickup": {
+                  "accepted": 16,
+                  "late": 0
+                }
+              },
+              "service_score": 257.59
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          },
+          {
+            "scenario": "quiet",
+            "seed": 29,
+            "incident": "none",
+            "metrics": {
+              "accepted": 20,
+              "completed": 20,
+              "unresolved": 0,
+              "on_time": 19,
+              "late": 1,
+              "existing_orders": 10,
+              "existing_on_time": 10,
+              "visitor_orders": 10,
+              "contribution_cents": 18349,
+              "promo_spend_cents": 450,
+              "courier_wait_minutes": 0,
+              "avg_courier_wait_minutes": 0.0,
+              "worst_pickup_wait_minutes": 12,
+              "avg_wait_minutes": 0.6,
+              "food_hold_minutes": 451,
+              "worst_lateness_minutes": 12,
+              "late_minutes": 12,
+              "schedule_changes": 5,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 10,
+                  "late": 0
+                },
+                "ubereats": {
+                  "accepted": 0,
+                  "late": 0
+                },
+                "pickup": {
+                  "accepted": 10,
+                  "late": 1
+                }
+              },
+              "service_score": 140.21
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          }
+        ],
+        "mean_score": 202.37,
+        "mean_contribution_cents": 25805,
+        "mean_existing_on_time": 20.0,
+        "checks_pass": true
+      },
+      {
+        "policy": {
+          "name": "Balanced Yield Optimization",
+          "load_weight": 6.0,
+          "minimum_margin_cents": 300,
+          "reserve_minutes": 2,
+          "discount_cents": 125,
+          "max_station_load": 0.95
+        },
+        "cases": [
+          {
+            "scenario": "rush",
+            "seed": 11,
+            "incident": "fryer_slowdown",
+            "metrics": {
+              "accepted": 34,
+              "completed": 34,
+              "unresolved": 0,
+              "on_time": 32,
+              "late": 2,
+              "existing_orders": 27,
+              "existing_on_time": 26,
+              "visitor_orders": 7,
+              "contribution_cents": 27592,
+              "promo_spend_cents": 625,
+              "courier_wait_minutes": 6,
+              "avg_courier_wait_minutes": 0.27,
+              "worst_pickup_wait_minutes": 34,
+              "avg_wait_minutes": 1.18,
+              "food_hold_minutes": 536,
+              "worst_lateness_minutes": 34,
+              "late_minutes": 41,
+              "schedule_changes": 63,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 12,
+                  "late": 1
+                },
+                "ubereats": {
+                  "accepted": 10,
+                  "late": 0
+                },
+                "pickup": {
+                  "accepted": 12,
+                  "late": 1
+                }
+              },
+              "service_score": 208.44
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          },
+          {
+            "scenario": "balanced",
+            "seed": 19,
+            "incident": "none",
+            "metrics": {
+              "accepted": 37,
+              "completed": 37,
+              "unresolved": 0,
+              "on_time": 34,
+              "late": 3,
+              "existing_orders": 27,
+              "existing_on_time": 24,
+              "visitor_orders": 10,
+              "contribution_cents": 29804,
+              "promo_spend_cents": 1125,
+              "courier_wait_minutes": 8,
+              "avg_courier_wait_minutes": 0.36,
+              "worst_pickup_wait_minutes": 0,
+              "avg_wait_minutes": 0.22,
+              "food_hold_minutes": 558,
+              "worst_lateness_minutes": 6,
+              "late_minutes": 13,
+              "schedule_changes": 55,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 12,
+                  "late": 1
+                },
+                "ubereats": {
+                  "accepted": 10,
+                  "late": 2
+                },
+                "pickup": {
+                  "accepted": 15,
+                  "late": 0
+                }
+              },
+              "service_score": 245.6
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          },
+          {
+            "scenario": "quiet",
+            "seed": 29,
+            "incident": "none",
+            "metrics": {
+              "accepted": 23,
+              "completed": 23,
+              "unresolved": 0,
+              "on_time": 22,
+              "late": 1,
+              "existing_orders": 10,
+              "existing_on_time": 10,
+              "visitor_orders": 13,
+              "contribution_cents": 20547,
+              "promo_spend_cents": 1125,
+              "courier_wait_minutes": 0,
+              "avg_courier_wait_minutes": 0.0,
+              "worst_pickup_wait_minutes": 2,
+              "avg_wait_minutes": 0.09,
+              "food_hold_minutes": 468,
+              "worst_lateness_minutes": 2,
+              "late_minutes": 2,
+              "schedule_changes": 9,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 10,
+                  "late": 0
+                },
+                "ubereats": {
+                  "accepted": 0,
+                  "late": 0
+                },
+                "pickup": {
+                  "accepted": 13,
+                  "late": 1
+                }
+              },
+              "service_score": 166.83
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          }
+        ],
+        "mean_score": 206.96,
+        "mean_contribution_cents": 25981,
+        "mean_existing_on_time": 20.0,
+        "checks_pass": true
+      },
+      {
+        "policy": {
+          "name": "Refined Protect Rush",
+          "load_weight": 7.5,
+          "minimum_margin_cents": 375,
+          "reserve_minutes": 4,
+          "discount_cents": 80,
+          "max_station_load": 0.85
+        },
+        "cases": [
+          {
+            "scenario": "rush",
+            "seed": 11,
+            "incident": "fryer_slowdown",
+            "metrics": {
+              "accepted": 34,
+              "completed": 34,
+              "unresolved": 0,
+              "on_time": 32,
+              "late": 2,
+              "existing_orders": 27,
+              "existing_on_time": 26,
+              "visitor_orders": 7,
+              "contribution_cents": 27554,
+              "promo_spend_cents": 400,
+              "courier_wait_minutes": 6,
+              "avg_courier_wait_minutes": 0.27,
+              "worst_pickup_wait_minutes": 34,
+              "avg_wait_minutes": 1.18,
+              "food_hold_minutes": 539,
+              "worst_lateness_minutes": 34,
+              "late_minutes": 41,
+              "schedule_changes": 63,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 12,
+                  "late": 1
+                },
+                "ubereats": {
+                  "accepted": 10,
+                  "late": 0
+                },
+                "pickup": {
+                  "accepted": 12,
+                  "late": 1
+                }
+              },
+              "service_score": 207.82
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          },
+          {
+            "scenario": "balanced",
+            "seed": 19,
+            "incident": "none",
+            "metrics": {
+              "accepted": 39,
+              "completed": 39,
+              "unresolved": 0,
+              "on_time": 36,
+              "late": 3,
+              "existing_orders": 27,
+              "existing_on_time": 24,
+              "visitor_orders": 12,
+              "contribution_cents": 31937,
+              "promo_spend_cents": 960,
+              "courier_wait_minutes": 8,
+              "avg_courier_wait_minutes": 0.36,
+              "worst_pickup_wait_minutes": 0,
+              "avg_wait_minutes": 0.21,
+              "food_hold_minutes": 599,
+              "worst_lateness_minutes": 6,
+              "late_minutes": 13,
+              "schedule_changes": 55,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 12,
+                  "late": 1
+                },
+                "ubereats": {
+                  "accepted": 10,
+                  "late": 2
+                },
+                "pickup": {
+                  "accepted": 17,
+                  "late": 0
+                }
+              },
+              "service_score": 263.65
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          },
+          {
+            "scenario": "quiet",
+            "seed": 29,
+            "incident": "none",
+            "metrics": {
+              "accepted": 24,
+              "completed": 24,
+              "unresolved": 0,
+              "on_time": 23,
+              "late": 1,
+              "existing_orders": 10,
+              "existing_on_time": 10,
+              "visitor_orders": 14,
+              "contribution_cents": 21878,
+              "promo_spend_cents": 1120,
+              "courier_wait_minutes": 0,
+              "avg_courier_wait_minutes": 0.0,
+              "worst_pickup_wait_minutes": 2,
+              "avg_wait_minutes": 0.08,
+              "food_hold_minutes": 489,
+              "worst_lateness_minutes": 2,
+              "late_minutes": 2,
+              "schedule_changes": 8,
+              "by_channel": {
+                "doordash": {
+                  "accepted": 10,
+                  "late": 0
+                },
+                "ubereats": {
+                  "accepted": 0,
+                  "late": 0
+                },
+                "pickup": {
+                  "accepted": 14,
+                  "late": 1
+                }
+              },
+              "service_score": 178.46
+            },
+            "budget_ok": true,
+            "accounted_for": true
+          }
+        ],
+        "mean_score": 216.64,
+        "mean_contribution_cents": 27123,
+        "mean_existing_on_time": 20.0,
+        "checks_pass": true
+      }
+    ]
+  },
+  "browser_interventions": [
+    {
+      "id": "12d5e69ac8e04a2b8ff8b16b78431658",
+      "created": "2026-11-06T11:43:05.740716+00:00",
+      "kind": "controller",
+      "status": "done",
+      "inputs": {
+        "scenario": "rush",
+        "seed": 7,
+        "incident": "fryer_slowdown",
+        "incident_at": 12,
+        "budget_cents": 1200,
+        "cooks": 3,
+        "forecast_pressure": 1.15,
+        "policy": {
+          "name": "Protect the rush",
+          "load_weight": 7.0,
+          "minimum_margin_cents": 350,
+          "reserve_minutes": 3,
+          "discount_cents": 100,
+          "max_station_load": 0.9
+        },
+        "minute": 12
+      },
+      "model": "gemini-3.1-flash-lite",
+      "agent_mode": "live_model",
+      "data_mode": "synthetic",
+      "usage": [
+        {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 10,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 432,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 432
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 442,
+          "traffic_type": null
+        },
+        {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 12,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 1548,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 1548
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 1560,
+          "traffic_type": null
+        },
+        {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 26,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 2058,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 2058
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 2084,
+          "traffic_type": null
+        },
+        {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 29,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 2216,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 2216
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 2245,
+          "traffic_type": null
+        },
+        {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 75,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 2449,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 2449
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 2524,
+          "traffic_type": null
+        }
+      ],
+      "tools": [
+        {
+          "kind": "tool",
+          "tool": "inspect_kitchen",
+          "args": {},
+          "result": {
+            "minute": 12,
+            "clock": "17:42",
+            "source_mode": "synthetic",
+            "orders": [
+              {
+                "id": "UB-119",
+                "item": "don",
+                "channel": "ubereats",
+                "promise": 45,
+                "eta": 45,
+                "ready": null
+              },
+              {
+                "id": "UB-121",
+                "item": "karaage",
+                "channel": "ubereats",
+                "promise": 53,
+                "eta": 54,
+                "ready": null
+              },
+              {
+                "id": "DO-101",
+                "item": "karaage",
+                "channel": "doordash",
+                "promise": 42,
+                "eta": 44,
+                "ready": null
+              },
+              {
+                "id": "DO-106",
+                "item": "gyoza",
+                "channel": "doordash",
+                "promise": 51,
+                "eta": 53,
+                "ready": null
+              },
+              {
+                "id": "DO-109",
+                "item": "don",
+                "channel": "doordash",
+                "promise": 45,
+                "eta": 43,
+                "ready": null
+              },
+              {
+                "id": "DO-110",
+                "item": "gyoza",
+                "channel": "doordash",
+                "promise": 49,
+                "eta": 52,
+                "ready": null
+              },
+              {
+                "id": "PI-126",
+                "item": "tonkotsu",
+                "channel": "pickup",
+                "promise": 39,
+                "eta": null,
+                "ready": null
+              },
+              {
+                "id": "UB-117",
+                "item": "tonkotsu",
+                "channel": "ubereats",
+                "promise": 48,
+                "eta": 48,
+                "ready": null
+              },
+              {
+                "id": "DO-112",
+                "item": "gyoza",
+                "channel": "doordash",
+                "promise": 36,
+                "eta": 37,
+                "ready": null
+              },
+              {
+                "id": "UB-120",
+                "item": "tonkotsu",
+                "channel": "ubereats",
+                "promise": 37,
+                "eta": 37,
+                "ready": null
+              },
+              {
+                "id": "UB-122",
+                "item": "gyoza",
+                "channel": "ubereats",
+                "promise": 43,
+                "eta": 45,
+                "ready": null
+              },
+              {
+                "id": "DO-104",
+                "item": "tonkotsu",
+                "channel": "doordash",
+                "promise": 36,
+                "eta": 34,
+                "ready": null
+              },
+              {
+                "id": "DO-105",
+                "item": "tonkotsu",
+                "channel": "doordash",
+                "promise": 35,
+                "eta": 38,
+                "ready": null
+              },
+              {
+                "id": "PI-123",
+                "item": "karaage",
+                "channel": "pickup",
+                "promise": 40,
+                "eta": null,
+                "ready": null
+              },
+              {
+                "id": "PI-127",
+                "item": "gyoza",
+                "channel": "pickup",
+                "promise": 31,
+                "eta": null,
+                "ready": null
+              },
+              {
+                "id": "UB-115",
+                "item": "karaage",
+                "channel": "ubereats",
+                "promise": 46,
+                "eta": 45,
+                "ready": null
+              },
+              {
+                "id": "UB-118",
+                "item": "don",
+                "channel": "ubereats",
+                "promise": 44,
+                "eta": 45,
+                "ready": null
+              },
+              {
+                "id": "DO-102",
+                "item": "tonkotsu",
+                "channel": "doordash",
+                "promise": 39,
+                "eta": 38,
+                "ready": null
+              },
+              {
+                "id": "DO-103",
+                "item": "gyoza",
+                "channel": "doordash",
+                "promise": 42,
+                "eta": 39,
+                "ready": null
+              },
+              {
+                "id": "UB-114",
+                "item": "gyoza",
+                "channel": "ubereats",
+                "promise": 49,
+                "eta": 52,
+                "ready": null
+              },
+              {
+                "id": "WEB-201",
+                "item": "karaage",
+                "channel": "pickup",
+                "promise": 25,
+                "eta": null,
+                "ready": null
+              }
+            ],
+            "stock": {
+              "tonkotsu": 48,
+              "karaage": 39,
+              "gyoza": 37,
+              "don": 33
+            },
+            "station_speed": {
+              "fryer": 0.5,
+              "noodles": 1.0,
+              "assembly": 1.0,
+              "packing": 1.0
+            },
+            "blocked_until": {},
+            "estimated_cook_minutes": {
+              "tonkotsu": 4.188,
+              "karaage": 5.25,
+              "gyoza": 3.25,
+              "don": 2.497
+            },
+            "completed_samples": {
+              "tonkotsu": 2,
+              "karaage": 1,
+              "gyoza": 1,
+              "don": 4
+            },
+            "budget_remaining_cents": 1200,
+            "cooks": 3,
+            "forecast": {
+              "source": "declared scenario plus configurable forecast reserve",
+              "expected_visitors_next_10m": 5.8,
+              "context": "Evening event and rain",
+              "uncertainty": "Customer response and task durations are modeled, not merchant measurements"
+            },
+            "menu": {
+              "tonkotsu": {
+                "name": "Tonkotsu ramen",
+                "station": "noodles",
+                "minutes": 4,
+                "price": 1925,
+                "cost": 620,
+                "stock": 55
+              },
+              "karaage": {
+                "name": "Chicken karaage",
+                "station": "fryer",
+                "minutes": 5,
+                "price": 1450,
+                "cost": 330,
+                "stock": 45
+              },
+              "gyoza": {
+                "name": "Crispy gyoza",
+                "station": "fryer",
+                "minutes": 3,
+                "price": 950,
+                "cost": 240,
+                "stock": 45
+              },
+              "don": {
+                "name": "Chashu rice bowl",
+                "station": "assembly",
+                "minutes": 2,
+                "price": 1540,
+                "cost": 510,
+                "stock": 40
+              }
+            }
+          }
+        },
+        {
+          "kind": "tool",
+          "tool": "compare_approved_offers",
+          "args": {},
+          "result": {
+            "offers": [
+              {
+                "item": "tonkotsu",
+                "name": "Tonkotsu ramen",
+                "allowed": false,
+                "reason": "Insufficient lead-time reserve for the new order",
+                "discount_cents": 100,
+                "contribution_cents": 1147,
+                "station": "noodles",
+                "station_load": 1.0,
+                "predicted_ready_minute": 38,
+                "promise_minute": 27,
+                "forecast_reserve_minutes": 4,
+                "affected_commitments": [],
+                "score": 4.47,
+                "limits": "Feasibility uses current observations and estimated durations; future disruptions can cause misses"
+              },
+              {
+                "item": "karaage",
+                "name": "Chicken karaage",
+                "allowed": false,
+                "reason": "Insufficient lead-time reserve for the new order",
+                "discount_cents": 100,
+                "contribution_cents": 976,
+                "station": "fryer",
+                "station_load": 1.0,
+                "predicted_ready_minute": 119,
+                "promise_minute": 27,
+                "forecast_reserve_minutes": 4,
+                "affected_commitments": [],
+                "score": 2.76,
+                "limits": "Feasibility uses current observations and estimated durations; future disruptions can cause misses"
+              },
+              {
+                "item": "gyoza",
+                "name": "Crispy gyoza",
+                "allowed": false,
+                "reason": "Insufficient lead-time reserve for the new order",
+                "discount_cents": 100,
+                "contribution_cents": 582,
+                "station": "fryer",
+                "station_load": 1.0,
+                "predicted_ready_minute": 115,
+                "promise_minute": 27,
+                "forecast_reserve_minutes": 4,
+                "affected_commitments": [],
+                "score": -1.18,
+                "limits": "Feasibility uses current observations and estimated durations; future disruptions can cause misses"
+              },
+              {
+                "item": "don",
+                "name": "Chashu rice bowl",
+                "allowed": true,
+                "reason": "Fits shared station, cook, stock and promise reservations",
+                "discount_cents": 100,
+                "contribution_cents": 884,
+                "station": "assembly",
+                "station_load": 0.467,
+                "predicted_ready_minute": 23,
+                "promise_minute": 27,
+                "forecast_reserve_minutes": 4,
+                "affected_commitments": [],
+                "score": 5.573,
+                "limits": "Feasibility uses current observations and estimated durations; future disruptions can cause misses"
+              }
+            ]
+          }
+        },
+        {
+          "kind": "tool",
+          "tool": "check_offer",
+          "args": {
+            "item_id": "don",
+            "discount_cents": 100
+          },
+          "result": {
+            "item": "don",
+            "name": "Chashu rice bowl",
+            "allowed": true,
+            "reason": "Fits shared station, cook, stock and promise reservations",
+            "discount_cents": 100,
+            "contribution_cents": 884,
+            "station": "assembly",
+            "station_load": 0.467,
+            "predicted_ready_minute": 23,
+            "promise_minute": 27,
+            "forecast_reserve_minutes": 4,
+            "affected_commitments": [],
+            "score": 5.573,
+            "limits": "Feasibility uses current observations and estimated durations; future disruptions can cause misses"
+          }
+        },
+        {
+          "kind": "tool",
+          "tool": "publish_simulated_offer",
+          "args": {
+            "item_id": "don",
+            "discount_cents": 100
+          },
+          "result": {
+            "status": "applied",
+            "action": "feature_item",
+            "source_mode": "simulation",
+            "minute": 12,
+            "source": "gemini",
+            "item": "don",
+            "discount_cents": 100,
+            "evidence": {
+              "item": "don",
+              "name": "Chashu rice bowl",
+              "allowed": true,
+              "reason": "Fits shared station, cook, stock and promise reservations",
+              "discount_cents": 100,
+              "contribution_cents": 884,
+              "station": "assembly",
+              "station_load": 0.467,
+              "predicted_ready_minute": 23,
+              "promise_minute": 27,
+              "forecast_reserve_minutes": 4,
+              "affected_commitments": [],
+              "score": 5.573,
+              "limits": "Feasibility uses current observations and estimated durations; future disruptions can cause misses"
+            },
+            "receipt_id": "b57f07996c93"
+          }
+        }
+      ],
+      "receipt": {
+        "status": "applied",
+        "action": "feature_item",
+        "source_mode": "simulation",
+        "minute": 12,
+        "source": "gemini",
+        "item": "don",
+        "discount_cents": 100,
+        "evidence": {
+          "item": "don",
+          "name": "Chashu rice bowl",
+          "allowed": true,
+          "reason": "Fits shared station, cook, stock and promise reservations",
+          "discount_cents": 100,
+          "contribution_cents": 884,
+          "station": "assembly",
+          "station_load": 0.467,
+          "predicted_ready_minute": 23,
+          "promise_minute": 27,
+          "forecast_reserve_minutes": 4,
+          "affected_commitments": [],
+          "score": 5.573,
+          "limits": "Feasibility uses current observations and estimated durations; future disruptions can cause misses"
+        },
+        "receipt_id": "b57f07996c93"
+      },
+      "qualification": null,
+      "trials": null
+    },
+    {
+      "id": "8f29d35bed5b443082f68f8c0a9cb14f",
+      "created": "2026-11-06T11:42:20.220833+00:00",
+      "kind": "controller",
+      "status": "done",
+      "inputs": {
+        "scenario": "overload",
+        "seed": 7,
+        "incident": "courier_delay",
+        "incident_at": 12,
+        "budget_cents": 0,
+        "cooks": 1,
+        "forecast_pressure": 1.15,
+        "policy": {
+          "name": "Protect the rush",
+          "load_weight": 7.0,
+          "minimum_margin_cents": 350,
+          "reserve_minutes": 3,
+          "discount_cents": 100,
+          "max_station_load": 0.9
+        },
+        "minute": 12
+      },
+      "model": "gemini-3.1-flash-lite",
+      "agent_mode": "live_model",
+      "data_mode": "synthetic",
+      "usage": [
+        {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 10,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 432,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 432
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 442,
+          "traffic_type": null
+        },
+        {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 24,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 2065,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 2065
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 2089,
+          "traffic_type": null
+        },
+        {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 26,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 2219,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 2219
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 2245,
+          "traffic_type": null
+        },
+        {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 25,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 2375,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 2375
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 2400,
+          "traffic_type": null
+        },
+        {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 26,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 2528,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 2528
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 2554,
+          "traffic_type": null
+        },
+        {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 13,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 2686,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 2686
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 2699,
+          "traffic_type": null
+        },
+        {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 106,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 2760,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 2760
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 2866,
+          "traffic_type": null
+        }
+      ],
+      "tools": [
+        {
+          "kind": "tool",
+          "tool": "inspect_kitchen",
+          "args": {},
+          "result": {
+            "minute": 12,
+            "clock": "17:42",
+            "source_mode": "synthetic",
+            "orders": [
+              {
+                "id": "UB-113",
+                "item": "don",
+                "channel": "ubereats",
+                "promise": 47,
+                "eta": 45,
+                "ready": null
+              },
+              {
+                "id": "DO-111",
+                "item": "don",
+                "channel": "doordash",
+                "promise": 47,
+                "eta": 56,
+                "ready": null
+              },
+              {
+                "id": "UB-119",
+                "item": "don",
+                "channel": "ubereats",
+                "promise": 45,
+                "eta": 45,
+                "ready": null
+              },
+              {
+                "id": "UB-121",
+                "item": "karaage",
+                "channel": "ubereats",
+                "promise": 53,
+                "eta": 54,
+                "ready": null
+              },
+              {
+                "id": "DO-101",
+                "item": "karaage",
+                "channel": "doordash",
+                "promise": 42,
+                "eta": 52,
+                "ready": null
+              },
+              {
+                "id": "PI-135",
+                "item": "tonkotsu",
+                "channel": "pickup",
+                "promise": 30,
+                "eta": null,
+                "ready": null
+              },
+              {
+                "id": "PI-138",
+                "item": "tonkotsu",
+                "channel": "pickup",
+                "promise": 21,
+                "eta": null,
+                "ready": null
+              },
+              {
+                "id": "PI-140",
+                "item": "gyoza",
+                "channel": "pickup",
+                "promise": 25,
+                "eta": null,
+                "ready": null
+              },
+              {
+                "id": "PI-141",
+                "item": "tonkotsu",
+                "channel": "pickup",
+                "promise": 30,
+                "eta": null,
+                "ready": null
+              },
+              {
+                "id": "UB-116",
+                "item": "tonkotsu",
+                "channel": "ubereats",
+                "promise": 52,
+                "eta": 55,
+                "ready": null
+              },
+              {
+                "id": "DO-106",
+                "item": "gyoza",
+                "channel": "doordash",
+                "promise": 51,
+                "eta": 61,
+                "ready": null
+              },
+              {
+                "id": "DO-108",
+                "item": "karaage",
+                "channel": "doordash",
+                "promise": 32,
+                "eta": 41,
+                "ready": null
+              },
+              {
+                "id": "DO-109",
+                "item": "don",
+                "channel": "doordash",
+                "promise": 45,
+                "eta": 51,
+                "ready": null
+              },
+              {
+                "id": "DO-110",
+                "item": "gyoza",
+                "channel": "doordash",
+                "promise": 49,
+                "eta": 60,
+                "ready": null
+              },
+              {
+                "id": "PI-126",
+                "item": "tonkotsu",
+                "channel": "pickup",
+                "promise": 39,
+                "eta": null,
+                "ready": null
+              },
+              {
+                "id": "PI-131",
+                "item": "tonkotsu",
+                "channel": "pickup",
+                "promise": 23,
+                "eta": null,
+                "ready": null
+              },
+              {
+                "id": "PI-136",
+                "item": "don",
+                "channel": "pickup",
+                "promise": 32,
+                "eta": null,
+                "ready": null
+              },
+              {
+                "id": "UB-117",
+                "item": "tonkotsu",
+                "channel": "ubereats",
+                "promise": 48,
+                "eta": 48,
+                "ready": null
+              },
+              {
+                "id": "DO-112",
+                "item": "gyoza",
+                "channel": "doordash",
+                "promise": 36,
+                "eta": 45,
+                "ready": null
+              },
+              {
+                "id": "PI-128",
+                "item": "don",
+                "channel": "pickup",
+                "promise": 20,
+                "eta": null,
+                "ready": null
+              },
+              {
+                "id": "PI-129",
+                "item": "don",
+                "channel": "pickup",
+                "promise": 25,
+                "eta": null,
+                "ready": null
+              },
+              {
+                "id": "PI-142",
+                "item": "gyoza",
+                "channel": "pickup",
+                "promise": 24,
+                "eta": null,
+                "ready": null
+              },
+              {
+                "id": "UB-120",
+                "item": "tonkotsu",
+                "channel": "ubereats",
+                "promise": 37,
+                "eta": 37,
+                "ready": null
+              },
+              {
+                "id": "UB-122",
+                "item": "gyoza",
+                "channel": "ubereats",
+                "promise": 43,
+                "eta": 45,
+                "ready": null
+              },
+              {
+                "id": "DO-104",
+                "item": "tonkotsu",
+                "channel": "doordash",
+                "promise": 36,
+                "eta": 42,
+                "ready": null
+              },
+              {
+                "id": "DO-105",
+                "item": "tonkotsu",
+                "channel": "doordash",
+                "promise": 35,
+                "eta": 46,
+                "ready": null
+              },
+              {
+                "id": "PI-132",
+                "item": "don",
+                "channel": "pickup",
+                "promise": 33,
+                "eta": null,
+                "ready": null
+              },
+              {
+                "id": "PI-134",
+                "item": "tonkotsu",
+                "channel": "pickup",
+                "promise": 38,
+                "eta": null,
+                "ready": null
+              },
+              {
+                "id": "PI-137",
+                "item": "don",
+                "channel": "pickup",
+                "promise": 28,
+                "eta": null,
+                "ready": null
+              },
+              {
+                "id": "PI-123",
+                "item": "karaage",
+                "channel": "pickup",
+                "promise": 40,
+                "eta": null,
+                "ready": null
+              },
+              {
+                "id": "PI-125",
+                "item": "don",
+                "channel": "pickup",
+                "promise": 24,
+                "eta": null,
+                "ready": null
+              },
+              {
+                "id": "PI-127",
+                "item": "gyoza",
+                "channel": "pickup",
+                "promise": 31,
+                "eta": null,
+                "ready": null
+              },
+              {
+                "id": "PI-130",
+                "item": "gyoza",
+                "channel": "pickup",
+                "promise": 23,
+                "eta": null,
+                "ready": null
+              },
+              {
+                "id": "PI-133",
+                "item": "don",
+                "channel": "pickup",
+                "promise": 24,
+                "eta": null,
+                "ready": null
+              },
+              {
+                "id": "UB-115",
+                "item": "karaage",
+                "channel": "ubereats",
+                "promise": 46,
+                "eta": 45,
+                "ready": null
+              },
+              {
+                "id": "UB-118",
+                "item": "don",
+                "channel": "ubereats",
+                "promise": 44,
+                "eta": 45,
+                "ready": null
+              },
+              {
+                "id": "DO-102",
+                "item": "tonkotsu",
+                "channel": "doordash",
+                "promise": 39,
+                "eta": 46,
+                "ready": null
+              },
+              {
+                "id": "DO-103",
+                "item": "gyoza",
+                "channel": "doordash",
+                "promise": 42,
+                "eta": 47,
+                "ready": null
+              },
+              {
+                "id": "UB-114",
+                "item": "gyoza",
+                "channel": "ubereats",
+                "promise": 49,
+                "eta": 52,
+                "ready": null
+              }
+            ],
+            "stock": {
+              "tonkotsu": 42,
+              "karaage": 40,
+              "gyoza": 34,
+              "don": 27
+            },
+            "station_speed": {
+              "fryer": 1.0,
+              "noodles": 1.0,
+              "assembly": 1.0,
+              "packing": 1.0
+            },
+            "blocked_until": {},
+            "estimated_cook_minutes": {
+              "tonkotsu": 4.0,
+              "karaage": 5.0,
+              "gyoza": 3.25,
+              "don": 2.25
+            },
+            "completed_samples": {
+              "tonkotsu": 1,
+              "karaage": 0,
+              "gyoza": 1,
+              "don": 1
+            },
+            "budget_remaining_cents": 0,
+            "cooks": 1,
+            "forecast": {
+              "source": "declared scenario plus configurable forecast reserve",
+              "expected_visitors_next_10m": 5.8,
+              "context": "overload",
+              "uncertainty": "Customer response and task durations are modeled, not merchant measurements"
+            },
+            "menu": {
+              "tonkotsu": {
+                "name": "Tonkotsu ramen",
+                "station": "noodles",
+                "minutes": 4,
+                "price": 1925,
+                "cost": 620,
+                "stock": 55
+              },
+              "karaage": {
+                "name": "Chicken karaage",
+                "station": "fryer",
+                "minutes": 5,
+                "price": 1450,
+                "cost": 330,
+                "stock": 45
+              },
+              "gyoza": {
+                "name": "Crispy gyoza",
+                "station": "fryer",
+                "minutes": 3,
+                "price": 950,
+                "cost": 240,
+                "stock": 45
+              },
+              "don": {
+                "name": "Chashu rice bowl",
+                "station": "assembly",
+                "minutes": 2,
+                "price": 1540,
+                "cost": 510,
+                "stock": 40
+              }
+            }
+          }
+        },
+        {
+          "kind": "tool",
+          "tool": "check_offer",
+          "args": {
+            "item_id": "don",
+            "discount_cents": 0
+          },
+          "result": {
+            "item": "don",
+            "name": "Chashu rice bowl",
+            "allowed": false,
+            "reason": "Insufficient lead-time reserve for the new order",
+            "discount_cents": 0,
+            "contribution_cents": 984,
+            "station": "assembly",
+            "station_load": 0.133,
+            "predicted_ready_minute": 150,
+            "promise_minute": 27,
+            "forecast_reserve_minutes": 4,
+            "affected_commitments": [],
+            "score": 8.907,
+            "limits": "Feasibility uses current observations and estimated durations; future disruptions can cause misses"
+          }
+        },
+        {
+          "kind": "tool",
+          "tool": "check_offer",
+          "args": {
+            "item_id": "gyoza",
+            "discount_cents": 0
+          },
+          "result": {
+            "item": "gyoza",
+            "name": "Crispy gyoza",
+            "allowed": false,
+            "reason": "Insufficient lead-time reserve for the new order",
+            "discount_cents": 0,
+            "contribution_cents": 682,
+            "station": "fryer",
+            "station_load": 0.4,
+            "predicted_ready_minute": 151,
+            "promise_minute": 27,
+            "forecast_reserve_minutes": 4,
+            "affected_commitments": [],
+            "score": 4.02,
+            "limits": "Feasibility uses current observations and estimated durations; future disruptions can cause misses"
+          }
+        },
+        {
+          "kind": "tool",
+          "tool": "check_offer",
+          "args": {
+            "item_id": "karaage",
+            "discount_cents": 0
+          },
+          "result": {
+            "item": "karaage",
+            "name": "Chicken karaage",
+            "allowed": false,
+            "reason": "Insufficient lead-time reserve for the new order",
+            "discount_cents": 0,
+            "contribution_cents": 1076,
+            "station": "fryer",
+            "station_load": 0.4,
+            "predicted_ready_minute": 152,
+            "promise_minute": 27,
+            "forecast_reserve_minutes": 4,
+            "affected_commitments": [],
+            "score": 7.96,
+            "limits": "Feasibility uses current observations and estimated durations; future disruptions can cause misses"
+          }
+        },
+        {
+          "kind": "tool",
+          "tool": "check_offer",
+          "args": {
+            "item_id": "tonkotsu",
+            "discount_cents": 0
+          },
+          "result": {
+            "item": "tonkotsu",
+            "name": "Tonkotsu ramen",
+            "allowed": false,
+            "reason": "Insufficient lead-time reserve for the new order",
+            "discount_cents": 0,
+            "contribution_cents": 1247,
+            "station": "noodles",
+            "station_load": 0.467,
+            "predicted_ready_minute": 151,
+            "promise_minute": 27,
+            "forecast_reserve_minutes": 4,
+            "affected_commitments": [],
+            "score": 9.203,
+            "limits": "Feasibility uses current observations and estimated durations; future disruptions can cause misses"
+          }
+        },
+        {
+          "kind": "tool",
+          "tool": "pause_simulated_offers",
+          "args": {},
+          "result": {
+            "status": "applied",
+            "action": "pause_offer",
+            "source_mode": "simulation",
+            "minute": 12,
+            "source": "gemini",
+            "receipt_id": "ce5ff0df0a06"
+          }
+        }
+      ],
+      "receipt": {
+        "status": "applied",
+        "action": "pause_offer",
+        "source_mode": "simulation",
+        "minute": 12,
+        "source": "gemini",
+        "receipt_id": "ce5ff0df0a06"
+      },
+      "qualification": null,
+      "trials": null
+    },
+    {
+      "id": "38531b379b0248169b8365839d8a94e2",
+      "created": "2026-11-06T11:36:11.420466+00:00",
+      "kind": "controller",
+      "status": "done",
+      "inputs": {
+        "scenario": "rush",
+        "seed": 7,
+        "incident": "fryer_slowdown",
+        "incident_at": 12,
+        "budget_cents": 1200,
+        "cooks": 3,
+        "forecast_pressure": 1.15,
+        "policy": {
+          "name": "Protect the rush",
+          "load_weight": 7.0,
+          "minimum_margin_cents": 350,
+          "reserve_minutes": 3,
+          "discount_cents": 100,
+          "max_station_load": 0.9
+        },
+        "minute": 12
+      },
+      "model": "gemini-3.1-flash-lite",
+      "agent_mode": "live_model",
+      "data_mode": "synthetic",
+      "usage": [
+        {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 10,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 432,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 432
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 442,
+          "traffic_type": null
+        },
+        {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 12,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 1548,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 1548
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 1560,
+          "traffic_type": null
+        },
+        {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 26,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 2058,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 2058
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 2084,
+          "traffic_type": null
+        },
+        {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 29,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 2216,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 2216
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 2245,
+          "traffic_type": null
+        },
+        {
+          "cache_tokens_details": null,
+          "cached_content_token_count": null,
+          "candidates_token_count": 76,
+          "candidates_tokens_details": null,
+          "prompt_token_count": 2449,
+          "prompt_tokens_details": [
+            {
+              "modality": "TEXT",
+              "token_count": 2449
+            }
+          ],
+          "thoughts_token_count": null,
+          "tool_use_prompt_token_count": null,
+          "tool_use_prompt_tokens_details": null,
+          "total_token_count": 2525,
+          "traffic_type": null
+        }
+      ],
+      "tools": [
+        {
+          "kind": "tool",
+          "tool": "inspect_kitchen",
+          "args": {},
+          "result": {
+            "minute": 12,
+            "clock": "17:42",
+            "source_mode": "synthetic",
+            "orders": [
+              {
+                "id": "UB-119",
+                "item": "don",
+                "channel": "ubereats",
+                "promise": 45,
+                "eta": 45,
+                "ready": null
+              },
+              {
+                "id": "UB-121",
+                "item": "karaage",
+                "channel": "ubereats",
+                "promise": 53,
+                "eta": 54,
+                "ready": null
+              },
+              {
+                "id": "DO-101",
+                "item": "karaage",
+                "channel": "doordash",
+                "promise": 42,
+                "eta": 44,
+                "ready": null
+              },
+              {
+                "id": "DO-106",
+                "item": "gyoza",
+                "channel": "doordash",
+                "promise": 51,
+                "eta": 53,
+                "ready": null
+              },
+              {
+                "id": "DO-109",
+                "item": "don",
+                "channel": "doordash",
+                "promise": 45,
+                "eta": 43,
+                "ready": null
+              },
+              {
+                "id": "DO-110",
+                "item": "gyoza",
+                "channel": "doordash",
+                "promise": 49,
+                "eta": 52,
+                "ready": null
+              },
+              {
+                "id": "PI-126",
+                "item": "tonkotsu",
+                "channel": "pickup",
+                "promise": 39,
+                "eta": null,
+                "ready": null
+              },
+              {
+                "id": "UB-117",
+                "item": "tonkotsu",
+                "channel": "ubereats",
+                "promise": 48,
+                "eta": 48,
+                "ready": null
+              },
+              {
+                "id": "DO-112",
+                "item": "gyoza",
+                "channel": "doordash",
+                "promise": 36,
+                "eta": 37,
+                "ready": null
+              },
+              {
+                "id": "UB-120",
+                "item": "tonkotsu",
+                "channel": "ubereats",
+                "promise": 37,
+                "eta": 37,
+                "ready": null
+              },
+              {
+                "id": "UB-122",
+                "item": "gyoza",
+                "channel": "ubereats",
+                "promise": 43,
+                "eta": 45,
+                "ready": null
+              },
+              {
+                "id": "DO-104",
+                "item": "tonkotsu",
+                "channel": "doordash",
+                "promise": 36,
+                "eta": 34,
+                "ready": null
+              },
+              {
+                "id": "DO-105",
+                "item": "tonkotsu",
+                "channel": "doordash",
+                "promise": 35,
+                "eta": 38,
+                "ready": null
+              },
+              {
+                "id": "PI-123",
+                "item": "karaage",
+                "channel": "pickup",
+                "promise": 40,
+                "eta": null,
+                "ready": null
+              },
+              {
+                "id": "PI-127",
+                "item": "gyoza",
+                "channel": "pickup",
+                "promise": 31,
+                "eta": null,
+                "ready": null
+              },
+              {
+                "id": "UB-115",
+                "item": "karaage",
+                "channel": "ubereats",
+                "promise": 46,
+                "eta": 45,
+                "ready": null
+              },
+              {
+                "id": "UB-118",
+                "item": "don",
+                "channel": "ubereats",
+                "promise": 44,
+                "eta": 45,
+                "ready": null
+              },
+              {
+                "id": "DO-102",
+                "item": "tonkotsu",
+                "channel": "doordash",
+                "promise": 39,
+                "eta": 38,
+                "ready": null
+              },
+              {
+                "id": "DO-103",
+                "item": "gyoza",
+                "channel": "doordash",
+                "promise": 42,
+                "eta": 39,
+                "ready": null
+              },
+              {
+                "id": "UB-114",
+                "item": "gyoza",
+                "channel": "ubereats",
+                "promise": 49,
+                "eta": 52,
+                "ready": null
+              },
+              {
+                "id": "WEB-201",
+                "item": "karaage",
+                "channel": "pickup",
+                "promise": 25,
+                "eta": null,
+                "ready": null
+              }
+            ],
+            "stock": {
+              "tonkotsu": 48,
+              "karaage": 39,
+              "gyoza": 37,
+              "don": 33
+            },
+            "station_speed": {
+              "fryer": 0.5,
+              "noodles": 1.0,
+              "assembly": 1.0,
+              "packing": 1.0
+            },
+            "blocked_until": {},
+            "estimated_cook_minutes": {
+              "tonkotsu": 4.188,
+              "karaage": 5.25,
+              "gyoza": 3.25,
+              "don": 2.497
+            },
+            "completed_samples": {
+              "tonkotsu": 2,
+              "karaage": 1,
+              "gyoza": 1,
+              "don": 4
+            },
+            "budget_remaining_cents": 1200,
+            "cooks": 3,
+            "forecast": {
+              "source": "declared scenario plus configurable forecast reserve",
+              "expected_visitors_next_10m": 5.8,
+              "context": "Evening event and rain",
+              "uncertainty": "Customer response and task durations are modeled, not merchant measurements"
+            },
+            "menu": {
+              "tonkotsu": {
+                "name": "Tonkotsu ramen",
+                "station": "noodles",
+                "minutes": 4,
+                "price": 1925,
+                "cost": 620,
+                "stock": 55
+              },
+              "karaage": {
+                "name": "Chicken karaage",
+                "station": "fryer",
+                "minutes": 5,
+                "price": 1450,
+                "cost": 330,
+                "stock": 45
+              },
+              "gyoza": {
+                "name": "Crispy gyoza",
+                "station": "fryer",
+                "minutes": 3,
+                "price": 950,
+                "cost": 240,
+                "stock": 45
+              },
+              "don": {
+                "name": "Chashu rice bowl",
+                "station": "assembly",
+                "minutes": 2,
+                "price": 1540,
+                "cost": 510,
+                "stock": 40
+              }
+            }
+          }
+        },
+        {
+          "kind": "tool",
+          "tool": "compare_approved_offers",
+          "args": {},
+          "result": {
+            "offers": [
+              {
+                "item": "tonkotsu",
+                "name": "Tonkotsu ramen",
+                "allowed": false,
+                "reason": "Insufficient lead-time reserve for the new order",
+                "discount_cents": 100,
+                "contribution_cents": 1147,
+                "station": "noodles",
+                "station_load": 1.0,
+                "predicted_ready_minute": 38,
+                "promise_minute": 27,
+                "forecast_reserve_minutes": 4,
+                "affected_commitments": [],
+                "score": 4.47,
+                "limits": "Feasibility uses current observations and estimated durations; future disruptions can cause misses"
+              },
+              {
+                "item": "karaage",
+                "name": "Chicken karaage",
+                "allowed": false,
+                "reason": "Insufficient lead-time reserve for the new order",
+                "discount_cents": 100,
+                "contribution_cents": 976,
+                "station": "fryer",
+                "station_load": 1.0,
+                "predicted_ready_minute": 119,
+                "promise_minute": 27,
+                "forecast_reserve_minutes": 4,
+                "affected_commitments": [],
+                "score": 2.76,
+                "limits": "Feasibility uses current observations and estimated durations; future disruptions can cause misses"
+              },
+              {
+                "item": "gyoza",
+                "name": "Crispy gyoza",
+                "allowed": false,
+                "reason": "Insufficient lead-time reserve for the new order",
+                "discount_cents": 100,
+                "contribution_cents": 582,
+                "station": "fryer",
+                "station_load": 1.0,
+                "predicted_ready_minute": 115,
+                "promise_minute": 27,
+                "forecast_reserve_minutes": 4,
+                "affected_commitments": [],
+                "score": -1.18,
+                "limits": "Feasibility uses current observations and estimated durations; future disruptions can cause misses"
+              },
+              {
+                "item": "don",
+                "name": "Chashu rice bowl",
+                "allowed": true,
+                "reason": "Fits shared station, cook, stock and promise reservations",
+                "discount_cents": 100,
+                "contribution_cents": 884,
+                "station": "assembly",
+                "station_load": 0.467,
+                "predicted_ready_minute": 23,
+                "promise_minute": 27,
+                "forecast_reserve_minutes": 4,
+                "affected_commitments": [],
+                "score": 5.573,
+                "limits": "Feasibility uses current observations and estimated durations; future disruptions can cause misses"
+              }
+            ]
+          }
+        },
+        {
+          "kind": "tool",
+          "tool": "check_offer",
+          "args": {
+            "item_id": "don",
+            "discount_cents": 100
+          },
+          "result": {
+            "item": "don",
+            "name": "Chashu rice bowl",
+            "allowed": true,
+            "reason": "Fits shared station, cook, stock and promise reservations",
+            "discount_cents": 100,
+            "contribution_cents": 884,
+            "station": "assembly",
+            "station_load": 0.467,
+            "predicted_ready_minute": 23,
+            "promise_minute": 27,
+            "forecast_reserve_minutes": 4,
+            "affected_commitments": [],
+            "score": 5.573,
+            "limits": "Feasibility uses current observations and estimated durations; future disruptions can cause misses"
+          }
+        },
+        {
+          "kind": "tool",
+          "tool": "publish_simulated_offer",
+          "args": {
+            "item_id": "don",
+            "discount_cents": 100
+          },
+          "result": {
+            "status": "applied",
+            "action": "feature_item",
+            "source_mode": "simulation",
+            "minute": 12,
+            "source": "gemini",
+            "item": "don",
+            "discount_cents": 100,
+            "evidence": {
+              "item": "don",
+              "name": "Chashu rice bowl",
+              "allowed": true,
+              "reason": "Fits shared station, cook, stock and promise reservations",
+              "discount_cents": 100,
+              "contribution_cents": 884,
+              "station": "assembly",
+              "station_load": 0.467,
+              "predicted_ready_minute": 23,
+              "promise_minute": 27,
+              "forecast_reserve_minutes": 4,
+              "affected_commitments": [],
+              "score": 5.573,
+              "limits": "Feasibility uses current observations and estimated durations; future disruptions can cause misses"
+            },
+            "receipt_id": "b57f07996c93"
+          }
+        }
+      ],
+      "receipt": {
+        "status": "applied",
+        "action": "feature_item",
+        "source_mode": "simulation",
+        "minute": 12,
+        "source": "gemini",
+        "item": "don",
+        "discount_cents": 100,
+        "evidence": {
+          "item": "don",
+          "name": "Chashu rice bowl",
+          "allowed": true,
+          "reason": "Fits shared station, cook, stock and promise reservations",
+          "discount_cents": 100,
+          "contribution_cents": 884,
+          "station": "assembly",
+          "station_load": 0.467,
+          "predicted_ready_minute": 23,
+          "promise_minute": 27,
+          "forecast_reserve_minutes": 4,
+          "affected_commitments": [],
+          "score": 5.573,
+          "limits": "Feasibility uses current observations and estimated durations; future disruptions can cause misses"
+        },
+        "receipt_id": "b57f07996c93"
+      },
+      "qualification": null,
+      "trials": null
+    }
+  ]
+}

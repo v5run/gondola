@@ -269,7 +269,7 @@ def run_coro(coro):
     return box["v"]
 
 
-async def run_agent(agent, state: dict, message: str, on_event=None) -> dict:
+async def run_agent(agent, state: dict, message: str, on_event=None, max_llm_calls: int | None = None) -> dict:
     """Run any ADK agent once with Runner + InMemorySessionService. Returns final texts, the agents that
     spoke, the tool calls they made, guardrail blocks and the final session state."""
     from google.adk.runners import Runner
@@ -283,8 +283,12 @@ async def run_agent(agent, state: dict, message: str, on_event=None) -> dict:
     invoked: list[str] = []
     tool_calls: list[dict] = []
     finals: dict[str, str] = {}
+    options = {}
+    if max_llm_calls is not None:
+        from google.adk.agents.run_config import RunConfig
+        options["run_config"] = RunConfig(max_llm_calls=max_llm_calls)
     async for ev in runner.run_async(user_id="manager", session_id=sid,
-                                     new_message=types.Content(role="user", parts=[types.Part(text=message)])):
+                                     new_message=types.Content(role="user", parts=[types.Part(text=message)]), **options):
         who = ev.author
         if who and who != "user" and who not in invoked:
             invoked.append(who)
